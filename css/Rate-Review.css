@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FAFAFA;
+}
+
+#Rate-Review{
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.Rate-Review-content {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.Rate-Review-content h4 {
+    color: #000000;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 !important;
+}
+
+.Rate-Review-content p {
+    padding-top: 10px;
+    padding-bottom: 40px;
+    color: #6A6A6A;
+    font-size: 18px;
+    font-weight: 400;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.Trip-Summary{
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.summary{
+    background-color: #6A6A6A1F;
+
+}
+
+.summary h2{
+    padding: 15px 0px 15px 30px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 !important;
+}
+
+.trip{
+    display: flex;
+    border-bottom: 0.8px solid #6A6A6A4D
+}
+
+.trip-start h3{
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 !important;
+    padding-top: 20px;
+}
+
+.trip-start p{
+    color: #6A6A6A;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 !important;
+    padding-top: 6px;
+    padding-bottom: 20px;
+}
+
+.trip-end{
+    text-align: end !important;
+}
+
+.trip-end h3{
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 !important;
+    padding-top: 20px;
+}
+
+.trip-end p{
+    color: #6A6A6A;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 !important;
+    padding-top: 6px;
+    padding-bottom: 20px;
+}
+
+.booking-id{
+    padding: 20px 0px 0px ;
+}
+
+.booking-id p{
+    color: #6A6A6A;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 !important;
+    padding-bottom: 20px;
+}
+
+.booking-id p span{
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 !important;
+    padding-left: 24px;
+}
+
+.date-time span{
+    padding-left: 16px !important;
+}
+
+.date-time{
+    border-bottom: 0.8px solid #6A6A6A4D
+
+}
+
+.bus-operator{
+    padding: 20px 0px 0px 0px;
+}
+
+.bus-operator p{
+    color: #6A6A6A;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 !important;
+    padding-bottom: 14px;
+}
+
+.bus-operator p span{
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 !important;
+    padding-left: 24px;
+}
+
+.operator span{
+    padding-left: 16px !important;
+}
+

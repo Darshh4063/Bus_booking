@@ -1,0 +1,202 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FAFAFA;
+}
+
+
+/* -------------we are bus bookimg------------- */
+
+#About-us{
+ padding: 80px 0px 80px;
+}
+
+.about {
+    padding-bottom: 60px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.about h4 {
+    color: #000000;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 !important;
+}
+
+.about p {
+    padding-top: 10px;
+    color: #6A6A6A;
+    font-size: 18px;
+    font-weight: 400;
+    width: 58%;
+    margin: 0 auto;
+}
+
+.bus-booking {
+    align-self: center;
+    text-align: start;
+}
+
+.booking-content{
+    padding-left: 50px;
+}
+
+.booking-content h4 {
+    line-height: 24px;
+    color: #C16C49;
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 5px;
+    margin: 0 !important;
+}
+
+.booking-content h2 {
+    line-height: 39px;
+    color: #000000;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.booking-content p {
+    width: 90%;
+    line-height: 28px;
+    color: #6A6A6A;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.experience {
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.Travellers {
+    padding-left: 18px !important;
+}
+
+.Travellers h4 {
+    line-height: 40px;
+    color: #000000;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.Travellers p {
+    line-height: 20px;
+    color: #6A6A6A;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+/* --------------What We Offer------------- */
+
+#we-offer {
+    padding: 80px 0;
+    background: #6A6A6A0A;
+
+}
+
+.BENEFITS {
+    text-align: center;
+}
+
+.BENEFITS h4 {
+    line-height: 25px;
+    color: #C16C49;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.BENEFITS h2 {
+    line-height: 48px;
+    color: #000000;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.what-we-offer {
+    justify-content: center;
+    gap: 30px;
+    padding-top: 2rem;
+}
+
+.benefits-image {
+    padding: 20px 0px 15px 0px;
+}
+
+.benefits-image img {
+    width: 60px;
+    background-color: #FBF6F1;
+    padding: 8px 10px;
+    border: 1px solid #FBF6F1;
+}
+
+
+.offer {
+    width: 23% !important;
+    border: 1px solid #FFFFFF;
+    background-color: #FFFFFF;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.offer h4 {
+    width: 62%;
+    line-height: 26px;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 auto;
+}
+
+.offer p {
+    width: 90%;
+    line-height: 22px;
+    color: #6A6A6A;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 auto;
+    padding: 10px 0px 20px 0px;
+}
+
+/* --------------Our Vision------------------ */
+
+#our-vision{
+    padding: 80px 0;
+}
+
+.Our {
+    justify-content: end;
+}
+
+.vision-image img{
+    width: 100%;
+    position: relative;
+} 
+
+
+.vision-content {
+    position: absolute;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background-color: #FFFFFF;
+    padding: 30px 30px !important;
+    left: 10%;
+    align-self: center;
+}
+
+.vision-content h2 {
+    line-height: 37.5px;
+    color: #000000;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.vision-content p { 
+    line-height: 28px;
+    color: #6A6A6A;
+    font-size: 18px;
+    font-weight: 300;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/contact-us.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+        
+</head>
+<body>
+
+    <section id="contect">
+
+        <div class="container">
+
+            <div class="contact-content">
+                <h4>Contact us</h4>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                    the
+                    industry's standard dummy text ever since the 1500s,</p>
+            </div>
+
+            <div class="row contect-us">
+
+                <div class="col-3 Contact-information">
+
+                    <div class="contact-info">
+                        <div class="contact-image">
+                            <img src="./image/Frame (5).png" alt="">
+                        </div>
+                        <div class="info-content">
+                            <h4>Phone</h4>
+                            <h2>(629) 555-0129</h2>
+                        </div>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="contact-image">
+                            <img src="./image/Frame (6).png" alt="">
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <h2>robertfox123@gmail.com</h2>
+                        </div>
+                    </div>
+
+                    <div class="contact-info">
+                        <div class="contact-image">
+                            <img src="./image/Frame (7).png" alt="">
+                        </div>
+                        <div class="info-content">
+                            <h4>Address</h4>
+                            <h2>2715 Ash Dr. San Jose, South Dakota 83475</h2>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-8 contect-form">
+
+                    <div class="leave-us">
+                        <h4>Leave us a message</h4>
+                        <p>We aim to reply to most support requests within 1 business day.</p>
+                    </div>
+
+                    <div class="details">
+                        <div class="col-6 details-box">
+                            <h2>First Name</h2>
+                            <input type="Name" name="Fname" placeholder="Enter First Name">
+                        </div>
+                        <div class="col-6 details-box">
+                            <h2>Last Name</h2>
+                            <input type="name" name="Lname" placeholder="Enter Last Name">
+                        </div>
+                        
+                    </div>
+
+                    <div class="details">
+                        <div class="col-6 details-box">
+                            <h2>Phone</h2>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your mobile no">
+                        </div>
+                        <div class="col-6 details-box">
+                            <h2>Email</h2>
+                            <input type="email" name="email" placeholder="Enter your email">
+                        </div>
+                    </div>
+
+                    <div class="col-12 subject-box">
+                        <h2>Subject</h2>
+                        <input type="Name" name="subject" placeholder="Enter Subject">
+                    </div>
+                    
+                    <div class="col-12 message-box">
+                        <h2>Message</h2>
+                        <textarea name="Message" id="" placeholder="Enter Message..."></textarea>
+                    </div>
+
+                    <div class="submit-btn">
+                        <a href="#">Submit</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+    
+</body>
+
+<script>
+    const phoneInput = document.querySelector("#phone");
+    window.intlTelInput(phoneInput, {
+        initialCountry: "in",  // Set default country (India)
+        separateDialCode: true, // Shows separate dial code
+        preferredCountries: ["in", "us", "gb"], // Preferred countries
+    });
+</script>
+</html>

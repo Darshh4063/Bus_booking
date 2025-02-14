@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FAFAFA;
+}
+
+#Privacy-Policy{
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.privacy {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.privacy h4 {
+    color: #000000;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 !important;
+}
+
+.privacy p {
+    padding-top: 10px;
+    padding-bottom: 40px;
+    color: #6A6A6A;
+    font-size: 18px;
+    font-weight: 400;
+    width: 58%;
+    margin: 0 auto;
+}
+
+.privacy-content{
+    row-gap: 50px;
+    padding: 20px;
+}
+
+.policy-content h2{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 !important;
+}
+
+.policy-content p{
+    color: #6A6A6A;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 !important;
+    padding-top: 20px;
+}
+
+.policy-content ul li{
+    color: #6A6A6A;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 !important;
+    padding-top: 20px;
+    list-style-type: none;
+}
+
+.Registration{
+    padding: 10px;
+}
