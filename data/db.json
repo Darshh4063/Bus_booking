@@ -1,0 +1,1008 @@
+{
+  "passengerdetail": [
+    {
+      "id": "c2fd",
+      "name": "demo",
+      "phone": "1478523690",
+      "email": "demo@gmail.com",
+      "age": "23",
+      "gender": "Female",
+      "state": "Bihar",
+      "gstin": "12365897JDSJDJDGDF",
+      "bname": "abc",
+      "baddress": "13,xyz",
+      "bemail": "abc@gmail.com",
+      "pickup": null,
+      "drop": null,
+      "busdeatils": {
+        "id": 1,
+        "bus_name": "Rajwadi Travels",
+        "bus_type": "Non AC Seater",
+        "bus_seat": "2+1",
+        "pickup_point": "surat (GJ)",
+        "pickup_time": "19:15 AM",
+        "pickup_date": "24 Feb 2023",
+        "drop_point": "Ahmedabad (GJ)",
+        "drop_time": "00:35 AM",
+        "drop_date": "25 Feb 2023",
+        "duration": "4h 55m",
+        "price": "779.58",
+        "status": "completed",
+        "discount": "5",
+        "pickup": [
+          {
+            "time": "23:00",
+            "date": "24 Feb",
+            "location": "Podar Market",
+            "area": "Varachha"
+          },
+          {
+            "time": "23:15",
+            "date": "24 Feb",
+            "location": "Varachha (Hirabaug)",
+            "area": "Hirabaug"
+          },
+          {
+            "time": "23:25",
+            "date": "24 Feb",
+            "location": "Nana Varachha Dhal",
+            "area": "Nana Varachha"
+          },
+          {
+            "time": "23:40",
+            "date": "24 Feb",
+            "location": "Sarthana Jakatnaka",
+            "area": "Sarthana"
+          },
+          {
+            "time": "23:50",
+            "date": "24 Feb",
+            "location": "Shyamdham Mandir",
+            "area": "Katargam"
+          },
+          {
+            "time": "23:56",
+            "date": "24 Feb",
+            "location": "Pasodara Patiya",
+            "area": "Pasodara"
+          },
+          {
+            "time": "00:10",
+            "date": "25 Feb",
+            "location": "Laskana",
+            "area": "Laskana"
+          },
+          {
+            "time": "00:20",
+            "date": "25 Feb",
+            "location": "Kamrej",
+            "area": "Kamrej Highway"
+          },
+          {
+            "time": "01:05",
+            "date": "25 Feb",
+            "location": "Raj Hotel",
+            "area": "Kamrej Highway Road"
+          }
+        ],
+        "droppoint": [
+          {
+            "time": "05:00",
+            "date": "25 Feb",
+            "location": "CTM Char Rasta",
+            "area": "CTM Highway"
+          },
+          {
+            "time": "05:02",
+            "date": "25 Feb",
+            "location": "Virat Nagar",
+            "area": "Virat Nagar"
+          },
+          {
+            "time": "05:05",
+            "date": "25 Feb",
+            "location": "Thhakkar Nagar",
+            "area": "Thhakkar Nagar Approach"
+          },
+          {
+            "time": "05:10",
+            "date": "25 Feb",
+            "location": "Nikol",
+            "area": "Nikol Khodiyar Mandir"
+          },
+          {
+            "time": "05:17",
+            "date": "25 Feb",
+            "location": "UttamNagar",
+            "area": "Uttamnagar"
+          },
+          {
+            "time": "05:20",
+            "date": "25 Feb",
+            "location": "BapuNagar",
+            "area": "Bapunagar"
+          },
+          {
+            "time": "05:30",
+            "date": "25 Feb",
+            "location": "Geeta Mandir Bus Stop",
+            "area": "Bus Stop (GeetaMandir)"
+          },
+          {
+            "time": "05:35",
+            "date": "25 Feb",
+            "location": "Paldi",
+            "area": "Paldi"
+          },
+          {
+            "time": "05:50",
+            "date": "25 Feb",
+            "location": "Satellite",
+            "area": "Satellite"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3741",
+      "name": "vivek",
+      "phone": "1234567890",
+      "email": "111abc@gmail.com",
+      "age": "21",
+      "gender": "Female",
+      "state": "Gujarat",
+      "gstin": "",
+      "bname": "",
+      "baddress": "",
+      "bemail": "",
+      "seatNumber": "01,06",
+      "price": 1679.16,
+      "pickup": {
+        "location": "Varachha (Hirabaug)",
+        "area": "Hirabaug"
+      },
+      "drop": {
+        "location": "Nikol",
+        "area": "Nikol Khodiyar Mandir"
+      },
+      "busdeatils": {
+        "id": 1,
+        "bus_name": "Rajwadi Travels",
+        "bus_type": "Non AC Seater",
+        "bus_seat": "2+1",
+        "pickup_point": "surat (GJ)",
+        "pickup_time": "19:15 AM",
+        "pickup_date": "24 Feb 2023",
+        "drop_point": "Ahmedabad (GJ)",
+        "drop_time": "00:35 AM",
+        "drop_date": "25 Feb 2023",
+        "duration": "4h 55m",
+        "price": "779.58",
+        "status": "completed",
+        "discount": "5",
+        "pickup": [
+          {
+            "time": "23:00",
+            "date": "24 Feb",
+            "location": "Podar Market",
+            "area": "Varachha"
+          },
+          {
+            "time": "23:15",
+            "date": "24 Feb",
+            "location": "Varachha (Hirabaug)",
+            "area": "Hirabaug"
+          },
+          {
+            "time": "23:25",
+            "date": "24 Feb",
+            "location": "Nana Varachha Dhal",
+            "area": "Nana Varachha"
+          },
+          {
+            "time": "23:40",
+            "date": "24 Feb",
+            "location": "Sarthana Jakatnaka",
+            "area": "Sarthana"
+          },
+          {
+            "time": "23:50",
+            "date": "24 Feb",
+            "location": "Shyamdham Mandir",
+            "area": "Katargam"
+          },
+          {
+            "time": "23:56",
+            "date": "24 Feb",
+            "location": "Pasodara Patiya",
+            "area": "Pasodara"
+          },
+          {
+            "time": "00:10",
+            "date": "25 Feb",
+            "location": "Laskana",
+            "area": "Laskana"
+          },
+          {
+            "time": "00:20",
+            "date": "25 Feb",
+            "location": "Kamrej",
+            "area": "Kamrej Highway"
+          },
+          {
+            "time": "01:05",
+            "date": "25 Feb",
+            "location": "Raj Hotel",
+            "area": "Kamrej Highway Road"
+          }
+        ],
+        "droppoint": [
+          {
+            "time": "05:00",
+            "date": "25 Feb",
+            "location": "CTM Char Rasta",
+            "area": "CTM Highway"
+          },
+          {
+            "time": "05:02",
+            "date": "25 Feb",
+            "location": "Virat Nagar",
+            "area": "Virat Nagar"
+          },
+          {
+            "time": "05:05",
+            "date": "25 Feb",
+            "location": "Thhakkar Nagar",
+            "area": "Thhakkar Nagar Approach"
+          },
+          {
+            "time": "05:10",
+            "date": "25 Feb",
+            "location": "Nikol",
+            "area": "Nikol Khodiyar Mandir"
+          },
+          {
+            "time": "05:17",
+            "date": "25 Feb",
+            "location": "UttamNagar",
+            "area": "Uttamnagar"
+          },
+          {
+            "time": "05:20",
+            "date": "25 Feb",
+            "location": "BapuNagar",
+            "area": "Bapunagar"
+          },
+          {
+            "time": "05:30",
+            "date": "25 Feb",
+            "location": "Geeta Mandir Bus Stop",
+            "area": "Bus Stop (GeetaMandir)"
+          },
+          {
+            "time": "05:35",
+            "date": "25 Feb",
+            "location": "Paldi",
+            "area": "Paldi"
+          },
+          {
+            "time": "05:50",
+            "date": "25 Feb",
+            "location": "Satellite",
+            "area": "Satellite"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ba1d",
+      "name": "asfasd",
+      "phone": "1236547890",
+      "email": "test@gmail.com",
+      "age": "21",
+      "gender": "Female",
+      "state": "Gujarat",
+      "gstin": "",
+      "bname": "",
+      "baddress": "",
+      "bemail": "",
+      "seatNumber": "07,16,21,22,09,17",
+      "price": 4797.4800000000005,
+      "pickup": null,
+      "drop": null,
+      "busdeatils": {
+        "id": 1,
+        "bus_name": "Rajwadi Travels",
+        "bus_type": "Non AC Seater",
+        "bus_seat": "2+1",
+        "pickup_point": "surat (GJ)",
+        "pickup_time": "19:15 AM",
+        "pickup_date": "24 Feb 2023",
+        "drop_point": "Ahmedabad (GJ)",
+        "drop_time": "00:35 AM",
+        "drop_date": "25 Feb 2023",
+        "duration": "4h 55m",
+        "price": "779.58",
+        "status": "completed",
+        "discount": "5",
+        "pickup": [
+          {
+            "time": "23:00",
+            "date": "24 Feb",
+            "location": "Podar Market",
+            "area": "Varachha"
+          },
+          {
+            "time": "23:15",
+            "date": "24 Feb",
+            "location": "Varachha (Hirabaug)",
+            "area": "Hirabaug"
+          },
+          {
+            "time": "23:25",
+            "date": "24 Feb",
+            "location": "Nana Varachha Dhal",
+            "area": "Nana Varachha"
+          },
+          {
+            "time": "23:40",
+            "date": "24 Feb",
+            "location": "Sarthana Jakatnaka",
+            "area": "Sarthana"
+          },
+          {
+            "time": "23:50",
+            "date": "24 Feb",
+            "location": "Shyamdham Mandir",
+            "area": "Katargam"
+          },
+          {
+            "time": "23:56",
+            "date": "24 Feb",
+            "location": "Pasodara Patiya",
+            "area": "Pasodara"
+          },
+          {
+            "time": "00:10",
+            "date": "25 Feb",
+            "location": "Laskana",
+            "area": "Laskana"
+          },
+          {
+            "time": "00:20",
+            "date": "25 Feb",
+            "location": "Kamrej",
+            "area": "Kamrej Highway"
+          },
+          {
+            "time": "01:05",
+            "date": "25 Feb",
+            "location": "Raj Hotel",
+            "area": "Kamrej Highway Road"
+          }
+        ],
+        "droppoint": [
+          {
+            "time": "05:00",
+            "date": "25 Feb",
+            "location": "CTM Char Rasta",
+            "area": "CTM Highway"
+          },
+          {
+            "time": "05:02",
+            "date": "25 Feb",
+            "location": "Virat Nagar",
+            "area": "Virat Nagar"
+          },
+          {
+            "time": "05:05",
+            "date": "25 Feb",
+            "location": "Thhakkar Nagar",
+            "area": "Thhakkar Nagar Approach"
+          },
+          {
+            "time": "05:10",
+            "date": "25 Feb",
+            "location": "Nikol",
+            "area": "Nikol Khodiyar Mandir"
+          },
+          {
+            "time": "05:17",
+            "date": "25 Feb",
+            "location": "UttamNagar",
+            "area": "Uttamnagar"
+          },
+          {
+            "time": "05:20",
+            "date": "25 Feb",
+            "location": "BapuNagar",
+            "area": "Bapunagar"
+          },
+          {
+            "time": "05:30",
+            "date": "25 Feb",
+            "location": "Geeta Mandir Bus Stop",
+            "area": "Bus Stop (GeetaMandir)"
+          },
+          {
+            "time": "05:35",
+            "date": "25 Feb",
+            "location": "Paldi",
+            "area": "Paldi"
+          },
+          {
+            "time": "05:50",
+            "date": "25 Feb",
+            "location": "Satellite",
+            "area": "Satellite"
+          }
+        ]
+      }
+    },
+    {
+      "id": "e8ac",
+      "name": "abc",
+      "phone": "1478523690",
+      "email": "tf@gmail.com",
+      "age": "20",
+      "gender": "Female",
+      "state": "Gujarat",
+      "gstin": "",
+      "bname": "",
+      "baddress": "",
+      "bemail": "",
+      "seatNumber": "",
+      "price": 120,
+      "pickup": null,
+      "drop": null,
+      "busdeatils": {
+        "id": 2,
+        "bus_name": "Aakash Travels",
+        "bus_type": "Non AC seater/sleeper",
+        "bus_type1": "Seater/Sleeper",
+        "bus_seat": "2+1",
+        "pickup_point": "Surat (GJ)",
+        "pickup_time": "22:20 AM",
+        "pickup_date": "24 Feb 2023",
+        "drop_point": "Ahmedabad (GJ)",
+        "drop_time": "03:15 AM",
+        "drop_date": "25 Feb 2023",
+        "duration": "4h 55m",
+        "price": "200.00",
+        "status": "20 Available",
+        "discount": "5",
+        "images": [
+          {
+            "id": 1,
+            "image": "subbus.png"
+          },
+          {
+            "id": 2,
+            "image": "subbus.png"
+          },
+          {
+            "id": 3,
+            "image": "subbus.png"
+          },
+          {
+            "id": 4,
+            "image": "subbus.png"
+          },
+          {
+            "id": 5,
+            "image": "subbus.png"
+          }
+        ],
+        "pickup": [
+          {
+            "time": "23:00",
+            "date": "24 Feb",
+            "location": "Podar Market",
+            "area": "Varachha"
+          },
+          {
+            "time": "23:15",
+            "date": "24 Feb",
+            "location": "Varachha (Hirabaug)",
+            "area": "Hirabaug"
+          },
+          {
+            "time": "23:25",
+            "date": "24 Feb",
+            "location": "Nana Varachha Dhal",
+            "area": "Nana Varachha"
+          },
+          {
+            "time": "23:40",
+            "date": "24 Feb",
+            "location": "Sarthana Jakatnaka",
+            "area": "Sarthana"
+          },
+          {
+            "time": "23:50",
+            "date": "24 Feb",
+            "location": "Shyamdham Mandir",
+            "area": "Katargam"
+          },
+          {
+            "time": "23:56",
+            "date": "24 Feb",
+            "location": "Pasodara Patiya",
+            "area": "Pasodara"
+          },
+          {
+            "time": "00:10",
+            "date": "25 Feb",
+            "location": "Laskana",
+            "area": "Laskana"
+          },
+          {
+            "time": "00:20",
+            "date": "25 Feb",
+            "location": "Kamrej",
+            "area": "Kamrej Highway"
+          },
+          {
+            "time": "01:05",
+            "date": "25 Feb",
+            "location": "Raj Hotel",
+            "area": "Kamrej Highway Road"
+          }
+        ],
+        "droppoint": [
+          {
+            "time": "05:00",
+            "date": "25 Feb",
+            "location": "CTM Char Rasta",
+            "area": "CTM Highway"
+          },
+          {
+            "time": "05:02",
+            "date": "25 Feb",
+            "location": "Virat Nagar",
+            "area": "Virat Nagar"
+          },
+          {
+            "time": "05:05",
+            "date": "25 Feb",
+            "location": "Thhakkar Nagar",
+            "area": "Thhakkar Nagar Approach"
+          },
+          {
+            "time": "05:10",
+            "date": "25 Feb",
+            "location": "Nikol",
+            "area": "Nikol Khodiyar Mandir"
+          },
+          {
+            "time": "05:17",
+            "date": "25 Feb",
+            "location": "UttamNagar",
+            "area": "Uttamnagar"
+          },
+          {
+            "time": "05:20",
+            "date": "25 Feb",
+            "location": "BapuNagar",
+            "area": "Bapunagar"
+          },
+          {
+            "time": "05:30",
+            "date": "25 Feb",
+            "location": "Geeta Mandir Bus Stop",
+            "area": "Bus Stop (GeetaMandir)"
+          },
+          {
+            "time": "05:35",
+            "date": "25 Feb",
+            "location": "Paldi",
+            "area": "Paldi"
+          },
+          {
+            "time": "05:50",
+            "date": "25 Feb",
+            "location": "Satellite",
+            "area": "Satellite"
+          }
+        ]
+      }
+    },
+    {
+      "id": "2833",
+      "name": "demo",
+      "phone": "1234567890",
+      "email": "test@gmail.com",
+      "age": "20",
+      "gender": "Male",
+      "state": "Gujarat",
+      "gstin": "",
+      "bname": "",
+      "baddress": "",
+      "bemail": "",
+      "seatNumber": "",
+      "price": 120,
+      "pickup": null,
+      "drop": null,
+      "busdeatils": {
+        "id": 2,
+        "bus_name": "Aakash Travels",
+        "bus_type": "Non AC seater/sleeper",
+        "bus_type1": "Seater/Sleeper",
+        "bus_seat": "2+1",
+        "pickup_point": "Surat (GJ)",
+        "pickup_time": "22:20 AM",
+        "pickup_date": "24 Feb 2023",
+        "drop_point": "Ahmedabad (GJ)",
+        "drop_time": "03:15 AM",
+        "drop_date": "25 Feb 2023",
+        "duration": "4h 55m",
+        "price": "200.00",
+        "status": "20 Available",
+        "discount": "5",
+        "images": [
+          {
+            "id": 1,
+            "image": "subbus.png"
+          },
+          {
+            "id": 2,
+            "image": "subbus.png"
+          },
+          {
+            "id": 3,
+            "image": "subbus.png"
+          },
+          {
+            "id": 4,
+            "image": "subbus.png"
+          },
+          {
+            "id": 5,
+            "image": "subbus.png"
+          }
+        ],
+        "pickup": [
+          {
+            "time": "23:00",
+            "date": "24 Feb",
+            "location": "Podar Market",
+            "area": "Varachha"
+          },
+          {
+            "time": "23:15",
+            "date": "24 Feb",
+            "location": "Varachha (Hirabaug)",
+            "area": "Hirabaug"
+          },
+          {
+            "time": "23:25",
+            "date": "24 Feb",
+            "location": "Nana Varachha Dhal",
+            "area": "Nana Varachha"
+          },
+          {
+            "time": "23:40",
+            "date": "24 Feb",
+            "location": "Sarthana Jakatnaka",
+            "area": "Sarthana"
+          },
+          {
+            "time": "23:50",
+            "date": "24 Feb",
+            "location": "Shyamdham Mandir",
+            "area": "Katargam"
+          },
+          {
+            "time": "23:56",
+            "date": "24 Feb",
+            "location": "Pasodara Patiya",
+            "area": "Pasodara"
+          },
+          {
+            "time": "00:10",
+            "date": "25 Feb",
+            "location": "Laskana",
+            "area": "Laskana"
+          },
+          {
+            "time": "00:20",
+            "date": "25 Feb",
+            "location": "Kamrej",
+            "area": "Kamrej Highway"
+          },
+          {
+            "time": "01:05",
+            "date": "25 Feb",
+            "location": "Raj Hotel",
+            "area": "Kamrej Highway Road"
+          }
+        ],
+        "droppoint": [
+          {
+            "time": "05:00",
+            "date": "25 Feb",
+            "location": "CTM Char Rasta",
+            "area": "CTM Highway"
+          },
+          {
+            "time": "05:02",
+            "date": "25 Feb",
+            "location": "Virat Nagar",
+            "area": "Virat Nagar"
+          },
+          {
+            "time": "05:05",
+            "date": "25 Feb",
+            "location": "Thhakkar Nagar",
+            "area": "Thhakkar Nagar Approach"
+          },
+          {
+            "time": "05:10",
+            "date": "25 Feb",
+            "location": "Nikol",
+            "area": "Nikol Khodiyar Mandir"
+          },
+          {
+            "time": "05:17",
+            "date": "25 Feb",
+            "location": "UttamNagar",
+            "area": "Uttamnagar"
+          },
+          {
+            "time": "05:20",
+            "date": "25 Feb",
+            "location": "BapuNagar",
+            "area": "Bapunagar"
+          },
+          {
+            "time": "05:30",
+            "date": "25 Feb",
+            "location": "Geeta Mandir Bus Stop",
+            "area": "Bus Stop (GeetaMandir)"
+          },
+          {
+            "time": "05:35",
+            "date": "25 Feb",
+            "location": "Paldi",
+            "area": "Paldi"
+          },
+          {
+            "time": "05:50",
+            "date": "25 Feb",
+            "location": "Satellite",
+            "area": "Satellite"
+          }
+        ]
+      }
+    },
+    {
+      "id": "462a",
+      "name": "asdasd",
+      "phone": "1236547890",
+      "email": "tf@gmail.com",
+      "age": "21",
+      "gender": "Male",
+      "state": "Gujarat",
+      "gstin": "",
+      "bname": "",
+      "baddress": "",
+      "bemail": ""
+    },
+    {
+      "id": "e129",
+      "name": "abc",
+      "phone": "1234567890",
+      "email": "test@gmail.com",
+      "age": "21",
+      "gender": "Male",
+      "state": "Gujarat",
+      "gstin": "",
+      "bname": "",
+      "baddress": "",
+      "bemail": ""
+    },
+    {
+      "id": "135e",
+      "name": "vinay",
+      "phone": "1236547890",
+      "email": "v@gmail.com",
+      "age": "21",
+      "gender": "Male",
+      "state": "Gujarat",
+      "gstin": "",
+      "bname": "",
+      "baddress": "",
+      "bemail": "",
+      "seatNumber": "01,02",
+      "price": 1679.16,
+      "pickup": null,
+      "drop": null,
+      "busdeatils": {
+        "id": 1,
+        "bus_name": "Rajwadi Travels",
+        "bus_type": "Non AC Sleeper",
+        "bus_type1": "Sleeper",
+        "bus_seat": "2+1",
+        "pickup_point": "surat (GJ)",
+        "pickup_time": "19:15 PM",
+        "pickup_date": "24 Feb 2023",
+        "drop_point": "Ahmedabad (GJ)",
+        "drop_time": "00:35 AM",
+        "drop_date": "25 Feb 2023",
+        "duration": "4h 55m",
+        "price": "779.58",
+        "status": "completed",
+        "discount": "5",
+        "images": [
+          {
+            "id": 1,
+            "image": "subbus.png"
+          },
+          {
+            "id": 2,
+            "image": "subbus.png"
+          },
+          {
+            "id": 3,
+            "image": "subbus.png"
+          },
+          {
+            "id": 4,
+            "image": "subbus.png"
+          },
+          {
+            "id": 5,
+            "image": "subbus.png"
+          }
+        ],
+        "pickup": [
+          {
+            "time": "23:00",
+            "date": "24 Feb",
+            "location": "Podar Market",
+            "area": "Varachha"
+          },
+          {
+            "time": "23:15",
+            "date": "24 Feb",
+            "location": "Varachha (Hirabaug)",
+            "area": "Hirabaug"
+          },
+          {
+            "time": "23:25",
+            "date": "24 Feb",
+            "location": "Nana Varachha Dhal",
+            "area": "Nana Varachha"
+          },
+          {
+            "time": "23:40",
+            "date": "24 Feb",
+            "location": "Sarthana Jakatnaka",
+            "area": "Sarthana"
+          },
+          {
+            "time": "23:50",
+            "date": "24 Feb",
+            "location": "Shyamdham Mandir",
+            "area": "Katargam"
+          },
+          {
+            "time": "23:56",
+            "date": "24 Feb",
+            "location": "Pasodara Patiya",
+            "area": "Pasodara"
+          },
+          {
+            "time": "00:10",
+            "date": "25 Feb",
+            "location": "Laskana",
+            "area": "Laskana"
+          },
+          {
+            "time": "00:20",
+            "date": "25 Feb",
+            "location": "Kamrej",
+            "area": "Kamrej Highway"
+          },
+          {
+            "time": "01:05",
+            "date": "25 Feb",
+            "location": "Raj Hotel",
+            "area": "Kamrej Highway Road"
+          }
+        ],
+        "droppoint": [
+          {
+            "time": "05:00",
+            "date": "25 Feb",
+            "location": "CTM Char Rasta",
+            "area": "CTM Highway"
+          },
+          {
+            "time": "05:02",
+            "date": "25 Feb",
+            "location": "Virat Nagar",
+            "area": "Virat Nagar"
+          },
+          {
+            "time": "05:05",
+            "date": "25 Feb",
+            "location": "Thhakkar Nagar",
+            "area": "Thhakkar Nagar Approach"
+          },
+          {
+            "time": "05:10",
+            "date": "25 Feb",
+            "location": "Nikol",
+            "area": "Nikol Khodiyar Mandir"
+          },
+          {
+            "time": "05:17",
+            "date": "25 Feb",
+            "location": "UttamNagar",
+            "area": "Uttamnagar"
+          },
+          {
+            "time": "05:20",
+            "date": "25 Feb",
+            "location": "BapuNagar",
+            "area": "Bapunagar"
+          },
+          {
+            "time": "05:30",
+            "date": "25 Feb",
+            "location": "Geeta Mandir Bus Stop",
+            "area": "Bus Stop (GeetaMandir)"
+          },
+          {
+            "time": "05:35",
+            "date": "25 Feb",
+            "location": "Paldi",
+            "area": "Paldi"
+          },
+          {
+            "time": "05:50",
+            "date": "25 Feb",
+            "location": "Satellite",
+            "area": "Satellite"
+          }
+        ],
+        "feature": [
+          {
+            "icon": "fa-solid fa-ticket-simple",
+            "title": "M-Ticket Supported"
+          },
+          {
+            "icon": "fa-solid fa-charging-station",
+            "title": "USB Charging Point"
+          },
+          {
+            "icon": "fa-solid fa-lightbulb",
+            "title": "Reading Light"
+          },
+          {
+            "icon": "fa-solid fa-mobile-screen-button",
+            "title": "M-Ticket"
+          },
+          {
+            "icon": "fa-solid fa-phone",
+            "title": "Emergency Contact number"
+          },
+          {
+            "icon": "fa-solid fa-bus",
+            "title": "Deep Cleaned bus"
+          },
+          {
+            "icon": "fa-solid fa-location-dot",
+            "title": "Track my bus"
+          },
+          {
+            "icon": "fa-solid fa-battery-half",
+            "title": "Charging Point"
+          }
+        ]
+      }
+    }
+  ],
+  "user": []
+}
