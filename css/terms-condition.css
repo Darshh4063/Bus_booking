@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FAFAFA;
+}
+
+#Terms-Condition{
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.Condition {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.Condition h4 {
+    color: #000000;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 !important;
+}
+
+.Condition p {
+    padding-top: 10px;
+    padding-bottom: 40px;
+    color: #6A6A6A;
+    font-size: 18px;
+    font-weight: 400;
+    width: 58%;
+    margin: 0 auto;
+}
+
+.condition-content{
+    row-gap: 50px;
+    padding: 20px;
+}
+
+.terms-content h2{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 !important;
+}
+
+.terms-content p{
+    color: #6A6A6A;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 !important;
+    padding-top: 20px;
+}
+
+.terms-content ul li{
+    color: #6A6A6A;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 !important;
+    padding-top: 20px;
+}
