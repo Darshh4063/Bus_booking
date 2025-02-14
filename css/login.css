@@ -1,0 +1,377 @@
+.body {
+    font-family: Lexend Deca;
+}
+.row>* {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-top:0 !important;
+}
+.row {
+    margin-top: 0 !important; 
+     margin-right: 0 !important; 
+     margin-left: 0 !important;
+}
+.container-fluid{
+    align-items: flex-start !important;
+    align-content: center !important;
+    padding: 0 !important;
+    
+}
+
+#top-bar {
+    background-color: #b25d3c;
+    color: white;
+    padding: 10px 0;
+}
+
+.our {
+    text-align: start;
+}
+
+.info {
+    text-align: end;
+}
+
+.contact-info {
+    justify-content: space-between !important;
+    display: flex;
+    gap: 20px;
+}
+
+.contact-info span {
+    font-size: 14px;
+}
+.info .padi{
+    padding-right: 9px;
+}
+.info .righty{
+    padding-left: 9px;   
+    border-left: 1px solid white;
+}
+
+
+#header1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 15px 10rem;
+}
+#header2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 15px 10rem;
+}
+
+
+.sec-bar {
+    justify-content: space-between;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b25d3c;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    color: #b25d3c;
+}
+
+.account-btn i {
+    padding: 0 10px 0 0;
+}
+
+
+.account-btn a:hover {
+    background-color: #9e5034;
+    color: white !important;
+}
+
+.navbar-toggler {
+    padding: 7px 9.5px !important;
+    font-size: 16px;
+    line-height: 2 !important;
+}
+
+
+
+
+/* --------------- */
+
+.modal {
+    position: fixed;
+    top: 230px !important;
+    left: -12% !important;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+}
+.sec-bar{
+    align-items: center;
+}
+.account-btn .btn{
+    border: 1px solid #C16C49B2;
+    padding: 9px 21.5px;
+}
+
+.account-btn button a{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-decoration: none;
+    color: #9e5034;
+}
+.account-btn button a i{
+    margin-right: 2px;
+}
+.modal-header img{
+    width: 100%;
+    height: 628px;
+    margin-top: -49px;
+}
+.modal-header{
+    padding: 0 !important;
+}
+.modal-header {
+   border-bottom: none !important;
+    border-top-left-radius:none !important;
+    border-top-right-radius:none !important;
+}
+.modal-content {
+    width: 996px !important;
+    height: 630px !important;
+}
+input{
+    border: none !important;
+}
+select{
+    border: none !important;
+}
+.countr{
+    border: 1px solid #000;
+    padding: 11px ;
+    border-radius: 4px;
+    width: 400px;
+    margin-top: 6px;
+}
+.media_ico img{
+    width: 60px;
+    height: 60px ;
+}
+.modal-body{
+    font-family: Lexend Deca;
+    padding: 33px 49px !important;
+}
+.modal-body h2{
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    color: #c16c49;
+    text-align: center;   
+}
+.modal-body p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6a6a6a;
+    margin-bottom: 6.4rem;
+    text-align: center;
+}
+.inp span{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000;
+}
+.countr select option{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+}
+.countr input{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    width: 84%;
+}
+.modal-body button{
+    background-color: #c16c49;
+    font-size: 16px;
+    color: #fff;
+    line-height: 20px;
+    font-weight: 500;
+    padding: 15px 164px;
+    border: none;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.inp h3{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.5px;
+    color: #000;
+    margin-top: 3rem;
+    margin:0 5rem;
+    display: ruby;
+}
+.media_ico{
+    margin-top: 33px !important;justify-content: center;
+}
+.undo{
+    align-content: baseline;
+}
+.undo h2{
+    font-size: 14px;
+    line-height: 17.5px;
+    font-weight: 500;
+    color: #6d6d6d;
+    text-decoration: none !important;
+    margin-top: 30px;
+}
+.undo span{
+    color: #9e5034;
+    text-decoration: underline;
+}
+.drop{
+    text-align: center;
+}
+.line{
+    width: 125px;
+    opacity: 30;
+    margin: 5px;
+}
+.btn-close {
+    box-sizing: content-box;
+    width: 1em;
+    height: 1em;
+    padding: .25em .25em;
+    color: #000;
+    border: 0;
+    border-radius: .25rem;
+    opacity: .5;
+}
+
+.modal-content .btn-close {
+    padding: 2.5rem 2.5rem;
+    margin: -.5rem 1.5rem -.5rem auto;
+}
+
+
+/* -------- header ------- */
+
+.navbar-nav .nav-item a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    font-size: 16px;
+}
+.navbar-expand-lg .navbar-collapse {
+    display: flex;
+    flex-wrap: wrap !important;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    justify-content: center !important;
+}
+.navbar-nav{
+    gap: 40px;
+}
+.navbar{
+    padding: 0 !important;
+}
+
+.navbar-brand {
+    margin-right: 1rem;
+}
+
+
+/* -------- hero ------ */
+
+.hero_data{
+    width: 100%;
+    height: 838px;
+    background-image: url(../image/BG.png);
+    overflow: hidden;
+   position: relative;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    padding-top: 30rem;
+}
+.hero_data h1{
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 56px;
+    text-align: center;
+    color: #fff;
+    font-family: Lexend Deca;
+}
+.hero_data p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    color: #fff;
+    font-family: Lexend Deca;
+}
+.hero_end{
+    color: #6a6a6a;
+    background-color: #fff;
+    padding: 31px;
+    width: 1148px;
+    align-content: center;
+    justify-content: space-between;
+}
+.from{
+    border-bottom: 1px solid #000;
+}
+.from img{
+    width: 20px;
+    height: 20px;
+}
+.from select{
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #6a6a6a;
+    border: none !important;
+    width: 158px;
+}
+.from input{
+    background-color: transparent;
+    color: #6a6a6a;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    width: 165px;
+}
+.hero_btn button{
+    background-color: #c16c49;
+    font-size: 16px;
+    color: #fff;
+    line-height: 20px;
+    font-weight: 500;
+    padding: 11px 34px;
+    border: none;
+}
