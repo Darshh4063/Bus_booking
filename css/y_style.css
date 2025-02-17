@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/****************************************** common css start  ******************************************/
+* {
+  font-family: "Lexend Deca", serif;
+}
+.row {
+  margin: 0;
+  padding: 0;
+}
+.col {
+  margin: 0;
+  padding: 0;
+}
+
+.y_container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: 1650px) {
+  .y_container {
+    width: 1500px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1649px) {
+  .y_container {
+    width: 1199px;
+    max-width: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .y_container {
+    width: 970px;
+    max-width: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .y_container {
+    width: 720px;
+    max-width: none;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .y_container {
+    max-width: 646px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 450px) {
+  .y_container {
+    max-width: 750px;
+    padding: 0px 10px;
+  }
+}
+
+/* bus list page css start  */
+.y_backColor {
+    background-color: #FAFAFA;
+}
+.y_box{
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px 0px #80808014;
+}
+
+.y_search-container {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    /* padding: 10px; */
+    /* border: 1px solid #ddd; */
+    border-radius: 5px;
+    background: #fff;
+}
+.y_input-group {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #000;
+    position: relative;
+}
+.y_input-group select, .y_input-group input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 5px 30px;
+    background: transparent;
+}
+.y_input-group img {
+    position: absolute;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+}
+.y_search-btn {
+    font-size: 16px;
+    font-weight: 300 !important;
+    background: #C16C49;
+    color: white;
+    border: none;
+    padding: 11px 30px;
+    border-radius: 4px;
+}
+#dateInput::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+
+.y_card {
+    /* border: 1px solid #ddd; */
+    border-radius: 10px;
+    /* padding: 15px; */
+    background: #fff;
+}
+.y_card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.y_rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.y_travel-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+.y_travel-subtitle {
+    color: #888;
+    font-size: 14px;
+}
+.y_travel-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.y_price {
+    font-size: 20px;
+    font-weight: bold;
+}
+.y_discount {
+    color: red;
+    font-size: 14px;
+}
+.y_select-seat {
+    background: #c1775d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+.y_nav {
+    display: flex;
+    gap: 15px;
+    padding-top: 10px;
+    font-size: 14px;
+    align-items: center;
+}
+.y_nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+.y_live-tracking {
+    background: #f4f4f4;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+@media (max-width: 991px) {
+    .y_search-container {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+    .y_input-group {
+        width: 100%;
+    }
+    .y_search-btn {
+        width: 100%;
+        padding: 12px;
+    }
+}
+@media (max-width: 576px) {
+    .y_container {
+        padding: 0 15px;
+    }
+    .y_box {
+        padding: 20px;
+    }
+    .y_search-container {
+        gap: 10px;
+    }
+    .y_input-group {
+        padding: 8px;
+    }
+    .y_search-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
