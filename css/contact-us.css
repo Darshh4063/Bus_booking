@@ -33,6 +33,7 @@ body {
 }
 
 .contect-us{
+    justify-content: center;
     gap: 30px;
 }
 
@@ -162,17 +163,22 @@ body {
 
 }
 
-.submit-btn{
+.submit-button{
     padding-top: 40px;
 }
 
-.submit-btn a{
+.submit-button a{
     border: 1px solid #C16C49;
+    border-radius: 4px;
     text-decoration: none;
-    padding: 11px 47px;
+    padding: 10px 45px;
     text-align: center;
     font-size: 16px;
     font-weight: 400;
+    color: #C16C49 !important;
+}
+
+.submit-button a:hover{
     color: #FFFFFF !important;
     background-color: #C16C49;
 }
