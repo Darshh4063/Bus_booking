@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#booking {
+    padding: 8rem 0;
+}
+
+.user-Details {
+    row-gap: 20px !important;
+}
+
+.user-ofr{
+    row-gap: 20px !important;
+}
+
+.card {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    row-gap: 10px;
+    display: flex;
+}
+
+.card-data {
+    justify-content: space-between;
+    padding: 15px 25px;
+}
+
+.book {
+    background-color: #ededed;
+    padding: 10px 25px;
+}
+
+.book h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.pickup p {
+    margin: 0;
+}
+
+.drop p {
+    margin: 0;
+}
+
+.drop {
+    text-align: end;
+}
+
+.location {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.time {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.point {
+    color: #555;
+}
+
+.route-data {
+    align-content: center;
+}
+
+.route img {
+    width: 36px !important;
+}
+
+.bus {
+    height: 30px !important;
+    width: 30px !important;
+    padding: 0 5px !important;
+}
+
+.route {
+    text-align: center !important;
+    padding-bottom: 5px;
+}
+
+.time h3 {
+    text-align: center !important;
+    color: #6A6A6A;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+hr {
+    margin: 0 !important;
+}
+
+.Operator {
+    padding: 0px 25px 10px 25px !important;
+    margin: 0 0 !important;
+}
+
+.seat {
+    display: flex !important;
+    align-content: center !important;
+    gap: 12px;
+}
+
+.Seat span {
+    color: #6A6A6A;
+    font-size: 14px;
+}
+
+.s-num {
+    display: flex;
+    gap: 10px;
+}
+
+.s-num li {
+    font-size: 14px;
+    color: black;
+    font-weight: 600;
+}
+
+.b-name {
+    font-weight: 700;
+    font-size: 14px;
+    color: #000000;
+}
+
+.bus-opp {
+    text-align: end;
+}
+
+/* ----------------------------------------- */
+
+.ofr-data {
+    background: white;
+    padding: 10px 25px 25px 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.offers h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.offer {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.offer input {
+    margin-top: 5px;
+}
+
+.offer label {
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.offer label strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.coupon-box {
+    display: flex;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.coupon-box input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+}
+
+.coupon-box a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #666 !important;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* ------------------------------------------------------------- */
+
+/* 
+.passenger {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+.passenger:last-child {
+    border-bottom: none;
+}
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+input[type="text"], input[type="number"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 120px;
+}
+.gender-group {
+    display: flex;
+    gap: 5px;
+}
+.gender-group label {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.gender-group input[type="radio"] {
+    display: none;
+}
+.gender-group input[type="radio"]:checked + label {
+    border-color: #f08080;
+    background-color: #fdd;
+    color: black;
+}
+.seat {
+    font-weight: bold;
+    margin-left: auto;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 40px;
+    text-align: center;
+} */
+
+
+.passenger-data{
+    padding: 10px 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+
