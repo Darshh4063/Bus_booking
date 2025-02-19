@@ -1,0 +1,83 @@
+.k-border-bottom {
+  border-bottom: 0.8px solid #6a6a6a4d;
+  margin-bottom: 20px;
+}
+
+.modal {
+  margin-top: 100px;
+}
+
+.modal-content {
+  border-radius: 8px;
+  border: none;
+}
+
+.modal-header {
+  padding: 1rem 1.5rem;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  padding: 1rem 1.5rem;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  border-color: #dee2e6;
+  padding: 0.5rem 0.75rem;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: black !important;
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.form-check-input:focus {
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.k-update {
+  background-color: #8b4513 !important;
+  color: white !important;
+  padding: 0.5rem 1.5rem !important;
+}
+
+.form-check-input:checked {
+  background-color: #8b4513 !important;
+  border-color: #8b4513 !important;
+}
+
+.k-cancel {
+  border: 1px solid #c16c49b2 !important;
+  color: #c16c49 !important;
+  padding: 0.5rem 1.5rem !important;
+}
+
+.btn-close:focus {
+  box-shadow: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modal-dialog {
+    margin: 0.5rem;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  .col-md-6 {
+    padding: 0;
+  }
+}
