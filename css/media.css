@@ -53,7 +53,7 @@
         display: none !important;
     }
 
-    .modal-content {
+    .d-modal-content {
         width: 368px !important;
         height: 502px !important;
     }
@@ -89,7 +89,7 @@
 
 
 @media screen and (max-width: 375px) {
-    .modal-content {
+    .d-modal-content {
         width: 285px !important;
         height: 500px !important;
     }
@@ -106,6 +106,7 @@
     .modal-body button {
         padding: 10px 60px;
         margin: 3rem 3.5rem 2.5rem 3.5rem;
+        width: 192px;
     }
     .modal-body p {
         margin-bottom: 3.4rem;
@@ -182,29 +183,35 @@
         width: 67%;
     }
     .modal-header img {
-        width: 275px;
-        height: 560px;
-        margin-top: -32px;
+        width: 267px;
+        height: 500px;
+        margin-top: -40px;
     }
 
     .modal-body button {
         padding: 15px 67px;
         margin-top: 33px;
         margin-bottom: 22px;
+        width: 203px;
     }
 
     .inp h3 {
         margin: 0 1rem;
     }
 
-    .modal-content {
+    .d-modal-content {
         width: 536px !important;
-        height: 562px !important;
+        height: 502px !important;
     }
 
     .modal-body p {
         font-size: 12px;
         margin-bottom: 3.4rem;
+    }
+
+    .d-modal-content .btn-close {
+        padding: 2.5rem 2.5rem;
+        margin: 0 0 0rem  auto;
     }
 
 
@@ -254,7 +261,7 @@
 
     .modal-header img {
         width: 315px;
-        height: 565px;
+        height: 529px;
         margin-top: -45px;
     }
 
@@ -279,15 +286,16 @@
         padding: 15px 86px;
         margin-top: 33px;
         margin-bottom: 22px;
+        width: 253px;
     }
 
     .inp h3 {
         margin: 0 1rem;
     }
 
-    .modal-content {
+    .d-modal-content {
         width: 633px !important;
-        height: 567px !important;
+        height: 531px !important;
     }
 
 }
@@ -365,7 +373,7 @@
         margin: 0 1rem;
     }
 
-    .modal-content {
+    .d-modal-content {
         width: 690px !important;
         height: 565px !important;
     }
@@ -374,7 +382,7 @@
         padding: 9px 21.5px;
     }
 
-    .modal-content .btn-close {
+    .d-modal-content .btn-close {
         margin: -.5rem -0.5rem -.5rem auto;
     }
 
@@ -390,7 +398,7 @@
         font-size: 14px;
     }
 
-    .modal-content {
+    .d-modal-content {
         width: 820px !important;
         height: 602px !important;
     }
@@ -413,7 +421,7 @@
     }
 
     .modal-header img {
-        width: 100%;
+        width: 410px;
         height: 600px;
         margin-top: -49px;
     }
@@ -442,7 +450,7 @@
     
 
 
-    .modal-content .btn-close {
+    .d-modal-content .btn-close {
         margin: -.5rem 1.5rem -.5rem auto;
     }
 
