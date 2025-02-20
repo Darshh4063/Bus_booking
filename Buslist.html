@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bus List</title>
+
+    <link rel="stylesheet" href="./css/Home.css" />
+    <link rel="stylesheet" href="./css/Buslist.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css "
+    />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+  </head>
+  <body>
+    <section id="top-bar">
+      <div class="container">
+        <div class="row contact-info">
+          <div class="col-12 col-sm-4 col-md-3 our">
+            <span>WELCOME TO OUR BUS!</span>
+          </div>
+
+          <div class="col-12 col-sm-8 col-md-5 info">
+            <span>example123@gmail.com</span>
+            <span>+91 8405820412</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <div class="logo">
+              <h1>LOGO</h1>
+            </div>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="account-btn">
+              <a href="#"><i class="fa-solid fa-user"></i>Accout</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="search-container">
+            <!-- From Location -->
+            <div class="input-group">
+                <i class="fas fa-map-marker-alt"></i>
+                <select>
+                    <option>Surat</option>
+                    <option>Ahmedabad</option>
+                    <option>Vadodara</option>
+                </select>
+            </div>
+    
+            <!-- Swap Icon -->
+            <i class="fas fa-exchange-alt swap-icon"></i>
+    
+            <!-- To Location -->
+            <div class="input-group">
+                <i class="fas fa-map-marker-alt"></i>
+                <select>
+                    <option>Ankleshwar</option>
+                    <option>Rajkot</option>
+                    <option>Bhavnagar</option>
+                </select>
+            </div>
+    
+            <!-- Date Picker -->
+            <div class="input-group">
+                <i class="fas fa-calendar-alt"></i>
+                <input type="date" />
+            </div>
+    
+            <!-- Bus Name (Optional) -->
+            <div class="input-group">
+                <i class="fas fa-bus"></i>
+                <input type="text" placeholder="Bus Name (Opt)">
+            </div>
+    
+            <!-- Search Button -->
+            <button class="search-btn">Search</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="d-flex">
+          <div class="filters-container">
+            <div class="filters-header">
+              <h2>Filters</h2>
+              <a href="#" class="remove-all">Remove All</a>
+            </div>
+
+            <section class="accordion filter-section">
+                <div class="tab">
+                  <input type="checkbox" name="accordion-1" id="cb1" checked>
+                  <label for="cb1" class="tab__label">AC</label>
+                  <div class="tab__content">
+                    <div class="button-group">
+                        <button class="filter-btn">
+                          <span class="icon">❄</span>
+                          AC
+                        </button>
+                        <button class="filter-btn selected">
+                          <span class="icon">❄</span>
+                          Non AC
+                        </button>
+                      </div>
+                  </div>
+                </div>
+            </section>
+
+            <section class="accordion filter-section">
+                <div class="tab">
+                  <input type="checkbox" name="accordion-1" id="cb2" checked>
+                  <label for="cb2" class="tab__label">Seat Type</label>
+                  <div class="tab__content">
+                    <div class="button-group">
+                        <button class="filter-btn">
+                          <span class="icon">💺</span>
+                          Seater
+                        </button>
+                        <button class="filter-btn selected">
+                          <span class="icon">🛏️</span>
+                          Sleeper
+                        </button>
+                      </div>
+                </div>
+            </section>
+
+            <section class="accordion filter-section">
+                <div class="tab">
+                  <input type="checkbox" name="accordion-1" id="cb3" checked>
+                  <label for="cb3" class="tab__label">Amenities</label>
+                  <div class="tab__content">
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          WiFi
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" checked />
+                          <span class="checkbox-custom"></span>
+                          Water Bottle
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          Charging Point
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          Live Tracking
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          Blanket
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" checked />
+                          <span class="checkbox-custom"></span>
+                          Emergency Toilet
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="accordion filter-section">
+                <div class="tab">
+                  <input type="checkbox" name="accordion-1" id="cb4" checked>
+                  <label for="cb4" class="tab__label">Price</label>
+                  <div class="tab__content">
+                    <div class="price-slider">
+                        <input
+                          type="range"
+                          min="800"
+                          max="2500"
+                          value="1650"
+                          class="slider"
+                        />
+                        <div class="price-range">
+                          <span>₹800</span>
+                          <span>₹2500</span>
+                        </div>
+                      </div>
+                </div>
+            </section>
+
+            <!-- <div class="filter-section">
+                <h3>Price</h3>
+                <div class="price-slider">
+                    <input type="range" min="800" max="2500" value="1650" class="slider">
+                    <div class="price-range">
+                        <span>₹800</span>
+                        <span>₹2500</span>
+                    </div>
+                </div>
+            </div> -->
+
+            <section class="accordion filter-section">
+                <div class="tab">
+                  <input type="checkbox" name="accordion-1" id="cb5" checked>
+                  <label for="cb5" class="tab__label">Pick-Up Time (Surat)</label>
+                  <div class="tab__content">
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          Before 6 AM
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" checked />
+                          <span class="checkbox-custom"></span>
+                          6 AM - 12 PM
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          12 PM - 6 PM
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" checked />
+                          <span class="checkbox-custom"></span>
+                          After 6 PM
+                        </label>
+                      </div>
+                </div>
+            </section>
+   
+            <section class="accordion filter-section">
+                <div class="tab">
+                  <input type="checkbox" name="accordion-1" id="cb6" checked>
+                  <label for="cb6" class="tab__label">Drop-Off Time (Ankleshwar)</label>
+                  <div class="tab__content">
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          Before 6 AM
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" checked />
+                          <span class="checkbox-custom"></span>
+                          6 AM - 12 PM
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          12 PM - 6 PM
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" checked />
+                          <span class="checkbox-custom"></span>
+                          After 6 PM
+                        </label>
+                      </div>
+                </div>
+            </section>
+
+            <section class="accordion filter-section">
+                <div class="tab">
+                  <input type="checkbox" name="accordion-1" id="cb7" checked>
+                  <label for="cb7" class="tab__label">Drop-Off Time (Ankleshwar)</label>
+                  <div class="tab__content">
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          Before 6 AM
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" checked />
+                          <span class="checkbox-custom"></span>
+                          6 AM - 12 PM
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          12 PM - 6 PM
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" checked />
+                          <span class="checkbox-custom"></span>
+                          After 6 PM
+                        </label>
+                      </div>
+                </div>
+            </section>
+
+            <section class="accordion filter-section">
+                <div class="tab">
+                  <input type="checkbox" name="accordion-1" id="cb8" checked>
+                  <label for="cb8" class="tab__label">Bus Operator</label>
+                  <div class="tab__content">
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          Before 6 AM
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" checked />
+                          <span class="checkbox-custom"></span>
+                          6 AM - 12 PM
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          12 PM - 6 PM
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" checked />
+                          <span class="checkbox-custom"></span>
+                          After 6 PM
+                        </label>
+                      </div>
+                </div>
+            </section>
+
+            <section class="accordion filter-section">
+                <div class="tab">
+                  <input type="checkbox" name="accordion-1" id="cb9" checked>
+                  <label for="cb9" class="tab__label">Bus Operator</label>
+                  <div class="tab__content">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search Bus Operator" />
+                        <span class="search-icon">🔍</span>
+                      </div>
+                      <div class="checkbox-group">
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          Amar Travels
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" checked />
+                          <span class="checkbox-custom"></span>
+                          B.R. Travels
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          Ankur Travels
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" checked />
+                          <span class="checkbox-custom"></span>
+                          Bapashitaram Travels
+                        </label>
+                      </div>
+                      <a href="#" class="show-more">Show More</a>
+                </div>
+            </section>
+
+            <section class="accordion filter-section">
+                <div class="tab">
+                  <input type="checkbox" name="accordion-1" id="cb10" checked>
+                  <label for="cb10" class="tab__label">Bus Operator</label>
+                  <div class="tab__content">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search Bus Operator" />
+                        <span class="search-icon">🔍</span>
+                      </div>
+                      <div class="checkbox-group">
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          Amar Travels
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" checked />
+                          <span class="checkbox-custom"></span>
+                          B.R. Travels
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          Ankur Travels
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" checked />
+                          <span class="checkbox-custom"></span>
+                          Bapashitaram Travels
+                        </label>
+                      </div>
+                      <a href="#" class="show-more">Show More</a>
+                </div>
+            </section>
+
+            <section class="accordion filter-section">
+                <div class="tab">
+                  <input type="checkbox" name="accordion-1" id="cb11" checked>
+                  <label for="cb11" class="tab__label">Bus Operator</label>
+                  <div class="tab__content">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search Bus Operator" />
+                        <span class="search-icon">🔍</span>
+                    </div>
+                      <div class="checkbox-group">
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          Amar Travels
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" checked />
+                          <span class="checkbox-custom"></span>
+                          B.R. Travels
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          Ankur Travels
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" checked />
+                          <span class="checkbox-custom"></span>
+                          Bapashitaram Travels
+                        </label>
+                      </div>
+                      <a href="#" class="show-more">Show More</a>
+                </div>
+            </section>
+
+            <section class="accordion filter-section">
+                <div class="tab">
+                  <input type="checkbox" name="accordion-1" id="cb12" checked>
+                  <label for="cb12" class="tab__label">Bus Operator</label>
+                  <div class="tab__content">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search Bus Operator" />
+                        <span class="search-icon">🔍</span>
+                      </div>
+                      <div class="checkbox-group">
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          Amar Travels
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" checked />
+                          <span class="checkbox-custom"></span>
+                          B.R. Travels
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          Ankur Travels
+                        </label>
+                        <label class="checkbox-label">
+                          <input type="checkbox" checked />
+                          <span class="checkbox-custom"></span>
+                          Bapashitaram Travels
+                        </label>
+                      </div>
+                      <a href="#" class="show-more">Show More</a>
+                </div>
+            </section>
+          </div>
+          <div style="width: 100%">
+            <div class="travel-list">
+              <div class="travel-card">
+                <div class="travel-info">
+                  <div class="rating">
+                    <span class="star">★</span>
+                    <span class="rating-value">4.5</span>
+                  </div>
+                  <div class="company-name">Shree Nath Travels</div>
+                  <div class="bus-type">Non AC Sleeper</div>
+                </div>
+
+                <div class="journey-details">
+                  <div class="location-time">
+                    <div class="time">10:00 AM</div>
+                    <div class="location">Surat</div>
+                    <div class="date">10 Feb 2025</div>
+                  </div>
+
+                  <div class="journey-duration">
+                    <div class="duration-line">
+                      <span class="bus-icon">🚌</span>
+                    </div>
+                    <div class="duration-text">05h 30m</div>
+                  </div>
+
+                  <div class="location-time">
+                    <div class="time">10:00 AM</div>
+                    <div class="location">Ankleshwar</div>
+                    <div class="date">10 Feb 2025</div>
+                  </div>
+                </div>
+
+                <div class="price-section">
+                  <div class="price">
+                    <span class="currency">₹</span>
+                    <span class="amount">1400</span>
+                  </div>
+                  <div class="discount">Best deal 10% Off</div>
+                  <button class="select-seat">Select Seat</button>
+                </div>
+              </div>
+
+              <div class="travel-links">
+                <a href="#" class="link">Live Tracking</a>
+                <a href="#" class="link">Policies</a>
+                <a href="#" class="link">Amenities</a>
+                <a href="#" class="link">Photos</a>
+                <a href="#" class="link">Pickup & Drop off Point</a>
+                <a href="#" class="link">Reviews</a>
+              </div>
+            </div>
+
+            <div class="travel-list">
+              <div class="travel-card">
+                <div class="travel-info">
+                  <div class="rating">
+                    <span class="star">★</span>
+                    <span class="rating-value">4.5</span>
+                  </div>
+                  <div class="company-name">Shree Nath Travels</div>
+                  <div class="bus-type">Non AC Sleeper</div>
+                </div>
+
+                <div class="journey-details">
+                  <div class="location-time">
+                    <div class="time">10:00 AM</div>
+                    <div class="location">Surat</div>
+                    <div class="date">10 Feb 2025</div>
+                  </div>
+
+                  <div class="journey-duration">
+                    <div class="duration-line">
+                      <span class="bus-icon">🚌</span>
+                    </div>
+                    <div class="duration-text">05h 30m</div>
+                  </div>
+
+                  <div class="location-time">
+                    <div class="time">10:00 AM</div>
+                    <div class="location">Ankleshwar</div>
+                    <div class="date">10 Feb 2025</div>
+                  </div>
+                </div>
+
+                <div class="price-section">
+                  <div class="price">
+                    <span class="currency">₹</span>
+                    <span class="amount">1400</span>
+                  </div>
+                  <div class="discount">Best deal 10% Off</div>
+                  <button class="select-seat">Select Seat</button>
+                </div>
+              </div>
+
+              <div class="travel-links">
+                <a href="#" class="link">Live Tracking</a>
+                <a href="#" class="link">Policies</a>
+                <a href="#" class="link">Amenities</a>
+                <a href="#" class="link">Photos</a>
+                <a href="#" class="link">Pickup & Drop off Point</a>
+                <a href="#" class="link">Reviews</a>
+              </div>
+            </div>
+
+            <div class="travel-list">
+              <div class="travel-card">
+                <div class="travel-info">
+                  <div class="rating">
+                    <span class="star">★</span>
+                    <span class="rating-value">4.5</span>
+                  </div>
+                  <div class="company-name">Shree Nath Travels</div>
+                  <div class="bus-type">Non AC Sleeper</div>
+                </div>
+
+                <div class="journey-details">
+                  <div class="location-time">
+                    <div class="time">10:00 AM</div>
+                    <div class="location">Surat</div>
+                    <div class="date">10 Feb 2025</div>
+                  </div>
+
+                  <div class="journey-duration">
+                    <div class="duration-line">
+                      <span class="bus-icon">🚌</span>
+                    </div>
+                    <div class="duration-text">05h 30m</div>
+                  </div>
+
+                  <div class="location-time">
+                    <div class="time">10:00 AM</div>
+                    <div class="location">Ankleshwar</div>
+                    <div class="date">10 Feb 2025</div>
+                  </div>
+                </div>
+
+                <div class="price-section">
+                  <div class="price">
+                    <span class="currency">₹</span>
+                    <span class="amount">1400</span>
+                  </div>
+                  <div class="discount">Best deal 10% Off</div>
+                  <button class="select-seat">Select Seat</button>
+                </div>
+              </div>
+
+              <div class="travel-links">
+                <a href="#" class="link">Live Tracking</a>
+                <a href="#" class="link">Policies</a>
+                <a href="#" class="link">Amenities</a>
+                <a href="#" class="link">Photos</a>
+                <a href="#" class="link">Pickup & Drop off Point</a>
+                <a href="#" class="link">Reviews</a>
+              </div>
+            </div>
+
+            <div class="travel-list">
+              <div class="travel-card">
+                <div class="travel-info">
+                  <div class="rating">
+                    <span class="star">★</span>
+                    <span class="rating-value">4.5</span>
+                  </div>
+                  <div class="company-name">Shree Nath Travels</div>
+                  <div class="bus-type">Non AC Sleeper</div>
+                </div>
+
+                <div class="journey-details">
+                  <div class="location-time">
+                    <div class="time">10:00 AM</div>
+                    <div class="location">Surat</div>
+                    <div class="date">10 Feb 2025</div>
+                  </div>
+
+                  <div class="journey-duration">
+                    <div class="duration-line">
+                      <span class="bus-icon">🚌</span>
+                    </div>
+                    <div class="duration-text">05h 30m</div>
+                  </div>
+
+                  <div class="location-time">
+                    <div class="time">10:00 AM</div>
+                    <div class="location">Ankleshwar</div>
+                    <div class="date">10 Feb 2025</div>
+                  </div>
+                </div>
+
+                <div class="price-section">
+                  <div class="price">
+                    <span class="currency">₹</span>
+                    <span class="amount">1400</span>
+                  </div>
+                  <div class="discount">Best deal 10% Off</div>
+                  <button class="select-seat">Select Seat</button>
+                </div>
+              </div>
+
+              <div class="travel-links">
+                <a href="#" class="link">Live Tracking</a>
+                <a href="#" class="link">Policies</a>
+                <a href="#" class="link">Amenities</a>
+                <a href="#" class="link">Photos</a>
+                <a href="#" class="link">Pickup & Drop off Point</a>
+                <a href="#" class="link">Reviews</a>
+              </div>
+            </div>
+
+            <div class="travel-list">
+              <div class="travel-card">
+                <div class="travel-info">
+                  <div class="rating">
+                    <span class="star">★</span>
+                    <span class="rating-value">4.5</span>
+                  </div>
+                  <div class="company-name">Shree Nath Travels</div>
+                  <div class="bus-type">Non AC Sleeper</div>
+                </div>
+
+                <div class="journey-details">
+                  <div class="location-time">
+                    <div class="time">10:00 AM</div>
+                    <div class="location">Surat</div>
+                    <div class="date">10 Feb 2025</div>
+                  </div>
+
+                  <div class="journey-duration">
+                    <div class="duration-line">
+                      <span class="bus-icon">🚌</span>
+                    </div>
+                    <div class="duration-text">05h 30m</div>
+                  </div>
+
+                  <div class="location-time">
+                    <div class="time">10:00 AM</div>
+                    <div class="location">Ankleshwar</div>
+                    <div class="date">10 Feb 2025</div>
+                  </div>
+                </div>
+
+                <div class="price-section">
+                  <div class="price">
+                    <span class="currency">₹</span>
+                    <span class="amount">1400</span>
+                  </div>
+                  <div class="discount">Best deal 10% Off</div>
+                  <button class="select-seat">Select Seat</button>
+                </div>
+              </div>
+
+              <div class="travel-links">
+                <a href="#" class="link">Live Tracking</a>
+                <a href="#" class="link">Policies</a>
+                <a href="#" class="link">Amenities</a>
+                <a href="#" class="link">Photos</a>
+                <a href="#" class="link">Pickup & Drop off Point</a>
+                <a href="#" class="link">Reviews</a>
+              </div>
+            </div>
+
+            <div class="travel-list">
+              <div class="travel-card">
+                <div class="travel-info">
+                  <div class="rating">
+                    <span class="star">★</span>
+                    <span class="rating-value">4.5</span>
+                  </div>
+                  <div class="company-name">Shree Nath Travels</div>
+                  <div class="bus-type">Non AC Sleeper</div>
+                </div>
+
+                <div class="journey-details">
+                  <div class="location-time">
+                    <div class="time">10:00 AM</div>
+                    <div class="location">Surat</div>
+                    <div class="date">10 Feb 2025</div>
+                  </div>
+
+                  <div class="journey-duration">
+                    <div class="duration-line">
+                      <span class="bus-icon">🚌</span>
+                    </div>
+                    <div class="duration-text">05h 30m</div>
+                  </div>
+
+                  <div class="location-time">
+                    <div class="time">10:00 AM</div>
+                    <div class="location">Ankleshwar</div>
+                    <div class="date">10 Feb 2025</div>
+                  </div>
+                </div>
+
+                <div class="price-section">
+                  <div class="price">
+                    <span class="currency">₹</span>
+                    <span class="amount">1400</span>
+                  </div>
+                  <div class="discount">Best deal 10% Off</div>
+                  <button class="select-seat">Select Seat</button>
+                </div>
+              </div>
+
+              <div class="travel-links">
+                <a href="#" class="link">Live Tracking</a>
+                <a href="#" class="link">Policies</a>
+                <a href="#" class="link">Amenities</a>
+                <a href="#" class="link">Photos</a>
+                <a href="#" class="link">Pickup & Drop off Point</a>
+                <a href="#" class="link">Reviews</a>
+              </div>
+            </div>
+
+            <div class="travel-list">
+              <div class="travel-card">
+                <div class="travel-info">
+                  <div class="rating">
+                    <span class="star">★</span>
+                    <span class="rating-value">4.5</span>
+                  </div>
+                  <div class="company-name">Shree Nath Travels</div>
+                  <div class="bus-type">Non AC Sleeper</div>
+                </div>
+
+                <div class="journey-details">
+                  <div class="location-time">
+                    <div class="time">10:00 AM</div>
+                    <div class="location">Surat</div>
+                    <div class="date">10 Feb 2025</div>
+                  </div>
+
+                  <div class="journey-duration">
+                    <div class="duration-line">
+                      <span class="bus-icon">🚌</span>
+                    </div>
+                    <div class="duration-text">05h 30m</div>
+                  </div>
+
+                  <div class="location-time">
+                    <div class="time">10:00 AM</div>
+                    <div class="location">Ankleshwar</div>
+                    <div class="date">10 Feb 2025</div>
+                  </div>
+                </div>
+
+                <div class="price-section">
+                  <div class="price">
+                    <span class="currency">₹</span>
+                    <span class="amount">1400</span>
+                  </div>
+                  <div class="discount">Best deal 10% Off</div>
+                  <button class="select-seat">Select Seat</button>
+                </div>
+              </div>
+
+              <div class="travel-links">
+                <a href="#" class="link">Live Tracking</a>
+                <a href="#" class="link">Policies</a>
+                <a href="#" class="link">Amenities</a>
+                <a href="#" class="link">Photos</a>
+                <a href="#" class="link">Pickup & Drop off Point</a>
+                <a href="#" class="link">Reviews</a>
+              </div>
+            </div>
+
+            <div class="travel-list">
+              <div class="travel-card">
+                <div class="travel-info">
+                  <div class="rating">
+                    <span class="star">★</span>
+                    <span class="rating-value">4.5</span>
+                  </div>
+                  <div class="company-name">Shree Nath Travels</div>
+                  <div class="bus-type">Non AC Sleeper</div>
+                </div>
+
+                <div class="journey-details">
+                  <div class="location-time">
+                    <div class="time">10:00 AM</div>
+                    <div class="location">Surat</div>
+                    <div class="date">10 Feb 2025</div>
+                  </div>
+
+                  <div class="journey-duration">
+                    <div class="duration-line">
+                      <span class="bus-icon">🚌</span>
+                    </div>
+                    <div class="duration-text">05h 30m</div>
+                  </div>
+
+                  <div class="location-time">
+                    <div class="time">10:00 AM</div>
+                    <div class="location">Ankleshwar</div>
+                    <div class="date">10 Feb 2025</div>
+                  </div>
+                </div>
+
+                <div class="price-section">
+                  <div class="price">
+                    <span class="currency">₹</span>
+                    <span class="amount">1400</span>
+                  </div>
+                  <div class="discount">Best deal 10% Off</div>
+                  <button class="select-seat">Select Seat</button>
+                </div>
+              </div>
+
+              <div class="travel-links">
+                <a href="#" class="link">Live Tracking</a>
+                <a href="#" class="link">Policies</a>
+                <a href="#" class="link">Amenities</a>
+                <a href="#" class="link">Photos</a>
+                <a href="#" class="link">Pickup & Drop off Point</a>
+                <a href="#" class="link">Reviews</a>
+              </div>
+            </div>
+
+            <div class="travel-list">
+              <div class="travel-card">
+                <div class="travel-info">
+                  <div class="rating">
+                    <span class="star">★</span>
+                    <span class="rating-value">4.5</span>
+                  </div>
+                  <div class="company-name">Shree Nath Travels</div>
+                  <div class="bus-type">Non AC Sleeper</div>
+                </div>
+
+                <div class="journey-details">
+                  <div class="location-time">
+                    <div class="time">10:00 AM</div>
+                    <div class="location">Surat</div>
+                    <div class="date">10 Feb 2025</div>
+                  </div>
+
+                  <div class="journey-duration">
+                    <div class="duration-line">
+                      <span class="bus-icon">🚌</span>
+                    </div>
+                    <div class="duration-text">05h 30m</div>
+                  </div>
+
+                  <div class="location-time">
+                    <div class="time">10:00 AM</div>
+                    <div class="location">Ankleshwar</div>
+                    <div class="date">10 Feb 2025</div>
+                  </div>
+                </div>
+
+                <div class="price-section">
+                  <div class="price">
+                    <span class="currency">₹</span>
+                    <span class="amount">1400</span>
+                  </div>
+                  <div class="discount">Best deal 10% Off</div>
+                  <button class="select-seat">Select Seat</button>
+                </div>
+              </div>
+
+              <div class="travel-links">
+                <a href="#" class="link">Live Tracking</a>
+                <a href="#" class="link">Policies</a>
+                <a href="#" class="link">Amenities</a>
+                <a href="#" class="link">Photos</a>
+                <a href="#" class="link">Pickup & Drop off Point</a>
+                <a href="#" class="link">Reviews</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
