@@ -39,13 +39,13 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     border: 1px solid #FAFAFA !important;
     background-color: #FFFFFF;
-    
 }
 
 .accordion-button:not(.collapsed) {
     color: #000000 !important;
     background-color: #FFFFFF !important;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) !important;
+    
 }
 
 .accordion-button:focus {
