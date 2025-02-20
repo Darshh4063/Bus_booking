@@ -17,6 +17,14 @@ body {
   padding: 0 2rem;
 }
 
+.text-gray {
+  color: #666;
+}
+
+.k .modal-dialog {
+  max-width: 500px;
+}
+
 /* Top Banner */
 .top-banner {
   background-color: #c16c49;
@@ -224,6 +232,16 @@ header {
   .contact-info {
     display: none;
   }
+
+  .import-pro-img {
+    position: absolute;
+    bottom: 10px;
+    right: 40%;
+  }
+
+  .top-banner {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -231,9 +249,24 @@ header {
     padding: 0 1rem;
   }
 
-  .profile-header {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
+  .top-banner {
+    display: none;
   }
+
+  .profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .import-pro-img {
+    position: absolute;
+    bottom: 10px;
+    right: 33%;
+  }
+}
+
+/* upcoming css */
+.k-no-upcoming {
+  padding-top: 150px;
 }

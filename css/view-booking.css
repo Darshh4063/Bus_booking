@@ -1,0 +1,169 @@
+:root {
+  --primary-color: #c67b5c;
+  --text-gray: #666;
+}
+
+.top-banner {
+  background-color: #c16c49;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.contact-info {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Header */
+header {
+  background-color: white;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header-content {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #8b4513;
+  text-decoration: none;
+}
+
+.main-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #666;
+}
+
+.main-nav a.active {
+  color: #8b4513;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.booking-section {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.journey-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.journey-path {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.bus-icon {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  z-index: 3;
+}
+
+.time-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.location {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 5px 0;
+}
+.seat-info {
+  color: var(--text-gray);
+  font-size: 14px;
+}
+
+.primary-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.outline-btn {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background: white;
+  padding: 8px 20px;
+  border-radius: 4px;
+  width: 100%;
+  text-decoration: none;
+}
+
+.fare-details {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.profile-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.start-point,
+.end-point {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #f97d09;
+  position: relative;
+  z-index: 2;
+}
+
+.journey-line {
+  flex-grow: 1;
+  height: 2px;
+  border-top: 2px dotted #ccc;
+  margin: 0 5px;
+}
+
+.time-details {
+  width: 30%;
+}
+
+.location-details {
+  width: 30%;
+  text-align: right;
+}

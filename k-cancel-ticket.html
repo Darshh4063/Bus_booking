@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cancel Ticket</title>
+    <link rel="stylesheet" href="css/k-cancel-ticket.css" />
+    <!-- <link rel="stylesheet" href="css/view-booking.css" /> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css "
+    />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css"
+    />
+  </head>
+  <body>
+    <!-- Top Banner -->
+    <section id="top-bar">
+      <div class="container">
+        <div class="row contact-info">
+          <div class="col-12 col-sm-4 col-md-3 our">
+            <span>WELCOME TO OUR BUS!</span>
+          </div>
+
+          <div class="col-12 col-sm-8 col-md-5 info">
+            <span>example123@gmail.com</span>
+            <span>+91 8405820412</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <div class="logo">
+              <h1>LOGO</h1>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="d-flex d-lg-flex flex-xl-column">
+              <div class="user-info">
+                <i class="fas fa-user-circle"></i>
+                <span>Hi, Johan</span>
+              </div>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <h2 class="text-center mb-3">Cancel Ticket</h2>
+      <p class="text-center text-muted mb-5">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s.
+      </p>
+
+      <select class="form-select">
+        <option selected disabled>Select reason</option>
+        <option>You booked a ticket for the wrong bus or time</option>
+        <option>You can't make it to the boarding point on time</option>
+        <option>You found a better deal on another bus</option>
+        <option>
+          The bus was delayed, didn't pick you up, or the service was canceled
+        </option>
+        <option>You may need to pay a cancellation fee</option>
+        <option>You found a better deal on another bus</option>
+        <option>You can't make it to the boarding point on time</option>
+      </select>
+
+      <textarea
+        class="form-control"
+        rows="4"
+        placeholder="Add Description..."
+      ></textarea>
+
+      <div class="passenger-table">
+        <h5 class="mb-3">Select Passenger</h5>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th><input type="checkbox" /></th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Seat No.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>Shyam Patel</td>
+                <td>Male</td>
+                <td>23</td>
+                <td>32</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>Priya Patel</td>
+                <td>Female</td>
+                <td>32</td>
+                <td>33</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>Shyam Patel</td>
+                <td>Male</td>
+                <td>38</td>
+                <td>34</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <button
+          class="k-cancel-tikcet-btn"
+          data-bs-toggle="modal"
+          data-bs-target="#otpmodel"
+        >
+          Cancel Ticket
+        </button>
+      </div>
+    </div>
+
+    <!-- OTP model -->
+
+    <div
+      class="k modal fade k-modal-padd"
+      id="otpmodel"
+      tabindex="-1"
+      aria-labelledby="otpmodel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header mx-3 k-border-bottom">
+            <h5 class="modal-title ms-auto" id="editProfileModalLabel">
+              Verify OTP
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="k-logout text-center fs-5 text-gray">
+              <p>We’ve sent a verification code to +91 55555 55555</p>
+            </div>
+            <div class="otp-container d-flex justify-content-center gap-2 my-4">
+              <input
+                type="text"
+                class="form-control otp-input"
+                maxlength="1"
+                autocomplete="off"
+                inputmode="numeric"
+                pattern="[0-9]*"
+              />
+              <input
+                type="text"
+                class="form-control otp-input"
+                maxlength="1"
+                autocomplete="off"
+                inputmode="numeric"
+                pattern="[0-9]*"
+              />
+              <input
+                type="text"
+                class="form-control otp-input"
+                maxlength="1"
+                autocomplete="off"
+                inputmode="numeric"
+                pattern="[0-9]*"
+              />
+              <input
+                type="text"
+                class="form-control otp-input"
+                maxlength="1"
+                autocomplete="off"
+                inputmode="numeric"
+                pattern="[0-9]*"
+              />
+            </div>
+          </div>
+          <div
+            class="modal-footer border-top-0 flex-column align-items-center justify-content-center"
+          >
+            <div class="k-verify">
+              <button class="btn">Verify</button>
+            </div>
+            <p class="text-center text-gray">
+              Didn’t receive code? <b class="k-resend">Resend</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- success model -->
+
+    <div
+      class="k modal fade k-modal-padd"
+      id="okmodel"
+      tabindex="-1"
+      aria-labelledby="okmodel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header mx-3 k-border-bottom">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div
+              class="k-tic-can-img w-100 d-flex justify-content-center align-items-center"
+            >
+              <img src="k_images/ticket-cancel.png" alt="" width="150px" />
+            </div>
+            <div class="k-tic-can text-center fs-5">
+              <b>Thank You</b>
+              <p class="text-gray">
+                Your ticket has been successfully canceled
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const otpInputs = document.querySelectorAll(".otp-input");
+        const verifyButton = document.querySelector(".k-verify button");
+        const otpModal = new bootstrap.Modal(
+          document.getElementById("otpmodel")
+        );
+        const successModal = new bootstrap.Modal(
+          document.getElementById("okmodel")
+        );
+        const errorMessageDiv = document.createElement("div");
+
+        // Add error message element (initially hidden)
+        errorMessageDiv.className = "text-danger text-center mt-2 otp-error";
+        errorMessageDiv.style.display = "none";
+        errorMessageDiv.textContent = "Please enter the correct OTP code";
+        document.querySelector(".otp-container").after(errorMessageDiv);
+
+        // Auto focus and move to next input
+        otpInputs.forEach((input, index) => {
+          input.addEventListener("input", function () {
+            if (this.value.length === 1) {
+              if (index < otpInputs.length - 1) {
+                otpInputs[index + 1].focus();
+              }
+            }
+          });
+
+          // Handle backspace
+          input.addEventListener("keydown", function (e) {
+            if (e.key === "Backspace" && this.value.length === 0) {
+              if (index > 0) {
+                otpInputs[index - 1].focus();
+              }
+            }
+          });
+        });
+
+        // Only allow numeric input
+        otpInputs.forEach((input) => {
+          input.addEventListener("input", function () {
+            this.value = this.value.replace(/[^0-9]/g, "");
+          });
+        });
+
+        // Handle verification - IMPORTANT: Remove the data-bs attributes from the button in HTML
+        verifyButton.addEventListener("click", function (e) {
+          e.preventDefault(); // Always prevent default to handle manually
+
+          // Get OTP from inputs
+          let enteredOTP = "";
+          let isComplete = true;
+
+          otpInputs.forEach((input) => {
+            if (input.value.length === 0) {
+              isComplete = false;
+            }
+            enteredOTP += input.value;
+          });
+
+          // For demo purposes, let's say the correct OTP is "1234"
+          const correctOTP = "1234";
+
+          if (!isComplete) {
+            // Show error if OTP is incomplete
+            errorMessageDiv.textContent = "Please enter all 4 digits";
+            errorMessageDiv.style.display = "block";
+          } else if (enteredOTP !== correctOTP) {
+            // Show error for incorrect OTP
+            errorMessageDiv.textContent = "Incorrect OTP. Please try again.";
+            errorMessageDiv.style.display = "block";
+          } else {
+            // OTP is correct, hide error message
+            errorMessageDiv.style.display = "none";
+
+            // Manually handle modal transition
+            otpModal.hide();
+            setTimeout(() => {
+              successModal.show();
+            }, 500); // Short delay to ensure first modal is fully hidden
+          }
+        });
+
+        // Hide error when user starts typing again
+        otpInputs.forEach((input) => {
+          input.addEventListener("input", function () {
+            errorMessageDiv.style.display = "none";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
