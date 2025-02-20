@@ -82,6 +82,7 @@
 
     <!-- -------------------------------- -->
 
+
     <section id="booking">
         <div class="container">
 
@@ -91,9 +92,11 @@
 
                     <div class="row user-Details">
 
-                        <div class="col-12 Booking Details">
+                        <div class="col-12 Booking Details" id="dropdownContent">
                             <div class="book">
                                 <h2>Booking Details</h2>
+                                <img id="toggleDropdown" src="./image/Frame.png" alt="">
+
                             </div>
 
                             <div class="card">
@@ -151,50 +154,123 @@
                             </div>
                         </div>
 
-
-                        <div class="col-12 Passenger Details">
+                        <div class="col-12 Passenger Details" id="dropdownContent">
                             <div class="book">
                                 <h2>Passenger Details</h2>
+                                <img id="toggleDropdown" src="./image/Frame.png" alt="">
                             </div>
 
-                               <!-- <div class="passenger">
-                                    <div class="input-group">
-                                        <label>Name</label>
-                                        <input type="text" placeholder="Enter name">
+
+
+                            <div class="card user-data">
+
+                                <div class="row Passenger-data">
+
+                                    <div class="col-7 Passenger">
+                                        <p>Name</p>
+                                        <input type="text" placeholder="Enter Name">
                                     </div>
-                                    <div class="input-group">
-                                        <label>Age</label>
-                                        <input type="number" placeholder="Enter age">
+
+                                    <div class="col-2 Passenger">
+                                        <p>Age</p>
+                                        <input type="text">
                                     </div>
-                                    <div class="input-group">
-                                        <label>Gender</label>
-                                        <div class="gender-group">
-                                            <input type="radio" id="male2" name="gender2">
-                                            <label for="male2">Male</label>
-                                            <input type="radio" id="female2" name="gender2">
-                                            <label for="female2">Female</label>
+
+                                    <div class="col-2 Passenger">
+                                        <p>Gender</p>
+                                        <div class="input-group">
+                                            <div class="gender-group">
+                                                <input type="radio" id="male" name="gender" checked>
+                                                <label for="male">Male</label>
+                                                <input type="radio" id="female" name="gender">
+                                                <label for="female">Female</label>
+                                            </div>
                                         </div>
+
                                     </div>
-                                    <div class="seat">33</div>
-                                </div> -->
+
+                                    <div class="col-1 Passenger">
+                                        <p>Seat</p>
+                                        <input type="text">
+                                    </div>
 
 
-
-                            <div class="passenger-data">
-
-                                <div class="row">
-                                    
                                 </div>
-                             
-                            </div>
 
+                                <div class="row Passenger-data">
+
+                                    <div class="col-7 Passenger">
+                                        <p>Name</p>
+                                        <input type="text" placeholder="Enter Name">
+                                    </div>
+
+                                    <div class="col-2 Passenger">
+                                        <p>Age</p>
+                                        <input type="text">
+                                    </div>
+
+                                    <div class="col-2 Passenger">
+                                        <p>Gender</p>
+                                        <div class="input-group">
+                                            <div class="gender-group">
+                                                <input type="radio" id="male" name="gender" checked>
+                                                <label for="male">Male</label>
+                                                <input type="radio" id="female" name="gender">
+                                                <label for="female">Female</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-1 Passenger">
+                                        <p>Seat</p>
+                                        <input type="text">
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row Passenger-data">
+
+                                    <div class="col-7 Passenger">
+                                        <p>Name</p>
+                                        <input type="text" placeholder="Enter Name">
+                                    </div>
+
+                                    <div class="col-2 Passenger">
+                                        <p>Age</p>
+                                        <input type="text">
+                                    </div>
+
+                                    <div class="col-2 Passenger">
+                                        <p>Gender</p>
+                                        <div class="input-group">
+                                            <div class="gender-group">
+                                                <input type="radio" id="male" name="gender" checked>
+                                                <label for="male">Male</label>
+                                                <input type="radio" id="female" name="gender">
+                                                <label for="female">Female</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-1 Passenger">
+                                        <p>Seat</p>
+                                        <input type="text">
+                                    </div>
+
+
+                                </div>
+
+                            </div>
 
                         </div>
 
-
-                        <div class="col-12 Contact Details">
+                        <div class="col-12 Contact Details" id="dropdownContent">
                             <div class="book">
                                 <h2>Contact Details</h2>
+                                <img id="toggleDropdown" src="./image/Frame.png" alt="">
                             </div>
                         </div>
 
@@ -328,6 +404,13 @@
     </section>
     <!-- --------------------------- -->
 
+    <script>
+        document.getElementById("toggleDropdown").addEventListener("click", function () {
+            var dropdown = document.getElementById("dropdownContent");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        });
+
+    </script>
 
 </body>
 

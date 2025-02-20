@@ -11,7 +11,7 @@
     row-gap: 20px !important;
 }
 
-.user-ofr{
+.user-ofr {
     row-gap: 20px !important;
 }
 
@@ -30,6 +30,8 @@
 .book {
     background-color: #ededed;
     padding: 10px 25px;
+    justify-content: space-between !important;
+    display: flex;
 }
 
 .book h2 {
@@ -192,69 +194,77 @@ hr {
 }
 
 
-
 /* ------------------------------------------------------------- */
 
-/* 
-.passenger {
-    display: flex;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
+
+.Passenger-data {
+    padding: 10px 25px;
+    justify-content: space-between !important;
+    row-gap: 15px;
 }
-.passenger:last-child {
-    border-bottom: none;
-}
-label {
+
+.Passenger p {
+    margin: 0;
+    padding-bottom: 6px;
+    color: black;
     font-size: 14px;
-    margin-bottom: 5px;
-    display: block;
+    font-weight: 500;
 }
-.input-group {
+
+.Passenger a {
+    border: 1px solid black;
+    padding: 5px 8px;
+    text-decoration: none;
+    color: black !important;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.Passenger a :hover {
+    color: #c16c49 !important;
+    border: 1px solid #c16c49 !important;
+}
+
+.Passenger input {
+    width: 100% !important;
+    padding: 3px 10px;
+}
+
+.Passenger .gender-group {
     display: flex;
-    flex-direction: column;
-    margin-right: 10px;
-}
-input[type="text"], input[type="number"] {
-    padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 120px;
+    overflow: hidden;
 }
-.gender-group {
-    display: flex;
-    gap: 5px;
-}
-.gender-group label {
-    display: inline-block;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+
+.Passenger .gender-group label {
+    padding: 6px 6px;
     cursor: pointer;
+    border-right: 1px solid #ccc;
+    background: #fff;
 }
-.gender-group input[type="radio"] {
+
+.Passenger .gender-group label:last-child {
+    border-right: none;
+}
+
+.Passenger input[type="radio"] {
     display: none;
 }
-.gender-group input[type="radio"]:checked + label {
-    border-color: #f08080;
-    background-color: #fdd;
-    color: black;
+
+.Passenger input[type="radio"]:checked+label {
+    background: #fbf6f1;
+    color: #c44;
 }
-.seat {
-    font-weight: bold;
-    margin-left: auto;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 40px;
-    text-align: center;
+
+.user-data {
+    padding: 20px 0;
+}
+
+
+/* --------- */
+
+/* .dropdown {
+    position: relative;
+    display: inline-block;
 } */
-
-
-.passenger-data{
-    padding: 10px 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: white;
-}
-
-
