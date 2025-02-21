@@ -3,24 +3,24 @@ body {
     background-color: #FAFAFA;
 }
 
-#Terms-Condition{
+#J_Terms-Condition{
     padding-top: 80px;
     padding-bottom: 120px;
 }
 
-.Condition {
+.J_Condition {
     text-align: center;
     margin: 0 auto;
 }
 
-.Condition h4 {
+.J_Condition h4 {
     color: #000000;
     font-size: 30px;
     font-weight: 600;
     margin: 0 !important;
 }
 
-.Condition p {
+.J_Condition p {
     padding-top: 10px;
     padding-bottom: 40px;
     color: #6A6A6A;
@@ -30,19 +30,19 @@ body {
     margin: 0 auto;
 }
 
-.condition-content{
+.J_condition-content{
     row-gap: 50px;
     padding: 20px;
 }
 
-.terms-content h2{
+.J_terms-content h2{
     color: #000000;
     font-size: 20px;
     font-weight: 600;
     margin: 0 !important;
 }
 
-.terms-content p{
+.J_terms-content p{
     color: #6A6A6A;
     font-size: 16px;
     font-weight: 300;
@@ -50,8 +50,8 @@ body {
     padding-top: 20px;
 }
 
-.terms-content ul li{
-    color: #6A6A6A;
+.J_terms-content ul li{
+   color: #6A6A6A;
     font-size: 16px;
     font-weight: 300;
     margin: 0 !important;

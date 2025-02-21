@@ -3,24 +3,24 @@ body {
     background-color: #FAFAFA;
 }
 
-#Privacy-Policy{
+#J_Privacy-Policy{
     padding-top: 80px;
     padding-bottom: 120px;
 }
 
-.privacy {
+.J_privacy {
     text-align: center;
     margin: 0 auto;
 }
 
-.privacy h4 {
+.J_privacy h4 {
     color: #000000;
     font-size: 30px;
     font-weight: 600;
     margin: 0 !important;
 }
 
-.privacy p {
+.J_privacy p {
     padding-top: 10px;
     padding-bottom: 40px;
     color: #6A6A6A;
@@ -30,19 +30,19 @@ body {
     margin: 0 auto;
 }
 
-.privacy-content{
+.J_privacy-content{
     row-gap: 50px;
     padding: 20px;
 }
 
-.policy-content h2{
+.J_policy-content h2{
     color: #000000;
     font-size: 20px;
     font-weight: 600;
     margin: 0 !important;
 }
 
-.policy-content p{
+.J_policy-content p{
     color: #6A6A6A;
     font-size: 16px;
     font-weight: 300;
@@ -50,7 +50,7 @@ body {
     padding-top: 20px;
 }
 
-.policy-content ul li{
+.J_policy-content ul li{
     color: #6A6A6A;
     font-size: 16px;
     font-weight: 300;
@@ -59,6 +59,6 @@ body {
     list-style-type: none;
 }
 
-.Registration{
+.J_Registration{
     padding: 10px;
 }
