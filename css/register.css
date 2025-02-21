@@ -1,0 +1,80 @@
+.registration-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.banner-image {
+  height: 100%;
+  object-fit: cover;
+  min-height: 100%;
+}
+.form-section {
+  padding: 30px;
+}
+.form-title {
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 5px;
+}
+.form-subtitle {
+  color: #6c757d;
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+}
+.form-control {
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 0px !important;
+}
+.btn-register {
+  background-color: #d9754e;
+  border: none;
+  padding: 10px;
+  color: white;
+  font-weight: 500;
+  width: 100%;
+  margin-top: 10px;
+}
+.btn-register:hover {
+  background-color: #c66a45;
+}
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dee2e6;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.social-icon:hover {
+  background-color: #e9ecef;
+}
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+/* Mobile responsiveness adjustments */
+@media (max-width: 767px) {
+  .image-section {
+    display: none;
+  }
+}
