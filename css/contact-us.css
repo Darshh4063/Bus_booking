@@ -182,3 +182,41 @@ body {
     color: #FFFFFF !important;
     background-color: #C16C49;
 }
+
+
+
+/* -------------------------- */
+
+/* xs 0-575px 1rem=8px*/
+@media screen and (max-width: 575px){
+    
+}
+
+@media screen and (max-width: 375px){
+   
+}
+
+/* sm 576-767px 1rem=8px */
+@media screen and (min-width: 576px){
+    
+}
+
+/*-md 768px-991px 1rem=9px */
+@media screen and (min-width: 768px){
+    
+}
+
+/* lg 992px-1199px 1rem=9px*/
+@media screen and (min-width: 5992px){
+    
+}
+
+/* xl 1200px-1399px 1rem=10px*/
+@media screen and (min-width: 1200px){
+    
+}
+
+/* xxl 1400px-any 1rem=10px */
+@media screen and (min-width: 1440px){
+    
+}
