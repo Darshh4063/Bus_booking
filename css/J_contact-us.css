@@ -3,27 +3,27 @@ body {
     background-color: #FAFAFA;
 }
 
-#contect {
+#J_contect {
     background: #6A6A6A0A;
     padding-top: 80px;
     padding-bottom: 120px;
 }
 
 
-.contact-content {
+.J_contact-content {
     padding-bottom: 60px;
     text-align: center;
     margin: 0 auto;
 }
 
-.contact-content h4 {
+.J_contact-content h4 {
     color: #000000;
     font-size: 30px;
     font-weight: 600;
     margin: 0 !important;
 }
 
-.contact-content p {
+.J_contact-content p {
     padding-top: 10px;
     color: #6A6A6A;
     font-size: 18px;
@@ -32,38 +32,38 @@ body {
     margin: 0 auto;
 }
 
-.contect-us{
+.J_contact-us{
     justify-content: center;
     gap: 30px;
 }
 
-.Contact-information {
+.J_Contact-information {
     padding: 30px 30px 0px 30px !important;
     background-color: #FFFFFF;
     height: 280px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.contact-info {
+.J_contact-info {
     display: flex;
 }
 
-.contact-image {
+.J_contact-image {
     padding-bottom: 25px;
 }
 
-.contact-image img {
+.J_contact-image img {
     width: 60px;
     background-color: #FBF6F1;
     padding: 8px 10px;
     border: 1px solid #FBF6F1;
 }
 
-.info-content {
+.J_info-content {
     padding-left: 14px;
 }
 
-.info-content h4 {
+.J_info-content h4 {
     color: #6D6D6D;
     font-size: 14px;
     font-weight: 500;
@@ -71,7 +71,7 @@ body {
     padding-top: 7px;
 }
 
-.info-content h2 {
+.J_info-content h2 {
     padding-top: 5px;
     color: #000000;
     font-size: 14px;
@@ -79,20 +79,20 @@ body {
     margin: 0 !important;
 }
 
-.contect-form {
+.J_contact-form {
     padding: 40px !important;
     background-color: #FFFFFF;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.leave-us h4 {
+.J_leave-us h4 {
     color: #000000;
     font-size: 34px;
     font-weight: 600;
     margin: 0 !important;
 }
 
-.leave-us p {
+.J_leave-us p {
     padding-top: 10px;
     padding-bottom: 26px;
     color: #6A6A6A;
@@ -101,12 +101,12 @@ body {
     margin: 0 !important;
 }
 
-.details {
+.J_details {
     display: flex;
     gap: 20px;
 }
 
-.details-box h2 {
+.J_details-box h2 {
     color: #000000;
     font-size: 14px;
     font-weight: 500;
@@ -115,7 +115,7 @@ body {
     padding-top: 30px;
 }
 
-.details-box input {
+.J_details-box input {
     border: 1px solid #6A6A6A;
     border-radius: 4px;
     width: 95% !important;
@@ -129,7 +129,7 @@ body {
     /* margin-left: 0; */
 }
 
-.subject-box h2 {
+.J_subject-box h2 {
     color: #000000;
     font-size: 14px;
     font-weight: 500;
@@ -138,7 +138,7 @@ body {
     padding-top: 30px;
 }
 
-.subject-box input {
+.J_subject-box input {
     border: 1px solid #6A6A6A;
     border-radius: 4px;
     width: 100%;
@@ -146,7 +146,7 @@ body {
 
 }
 
-.message-box h2 {
+.J_message-box h2 {
     color: #000000;
     font-size: 14px;
     font-weight: 500;
@@ -155,7 +155,7 @@ body {
     padding-top: 30px;
 }
 
-.message-box textarea {
+.J_message-box textarea {
     border: 1px solid #6A6A6A;
     border-radius: 4px;
     width: 100% ;
@@ -163,11 +163,11 @@ body {
 
 }
 
-.submit-button{
+.J_submit-button{
     padding-top: 40px;
 }
 
-.submit-button a{
+.J_submit-button a{
     border: 1px solid #C16C49;
     border-radius: 4px;
     text-decoration: none;
@@ -178,7 +178,7 @@ body {
     color: #C16C49 !important;
 }
 
-.submit-button a:hover{
+.J_submit-button a:hover{
     color: #FFFFFF !important;
     background-color: #C16C49;
 }
