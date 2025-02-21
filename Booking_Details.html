@@ -86,30 +86,29 @@
     <section id="booking">
         <div class="container">
 
-            <div class="row">
 
-                <div class="col-8 book-data">
+            <div class="row booking-Details">
+
+                <div class="col-12 col-xl-8 book-data">
 
                     <div class="row user-Details">
 
-                        <div class="col-12 Booking Details" id="dropdownContent">
+                        <div class="col-12 Booking Details">
                             <div class="book">
                                 <h2>Booking Details</h2>
-                                <img id="toggleDropdown" src="./image/Frame.png" alt="">
-
                             </div>
 
                             <div class="card">
 
                                 <div class="row card-data">
 
-                                    <div class="col-4 pickup">
+                                    <div class="col-12 col-sm-12 col-md-4 pickup">
                                         <h3 class="location">Surat</h3>
                                         <h3 class="time">10:00 AM 10 Feb 2025</h3>
                                         <p class="point">Shyamdham Mandir, Jakatnaka</p>
                                     </div>
 
-                                    <div class="col-3 route-data">
+                                    <div class="col-12 col-sm-12 col-md-3 route-data">
                                         <div class="route">
                                             <img src="./image/route1.png" alt="">
                                             <img class="bus" src="./image/route-bus.png" alt="">
@@ -120,7 +119,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-4 drop">
+                                    <div class="col-12 col-sm-12 col-md-4 drop">
                                         <h3 class="location">Ankleshwar</h3>
                                         <h3 class="time">03:30 PM 10 Feb 2025</h3>
                                         <p class="point">Lalita Chowkdi</p>
@@ -130,9 +129,9 @@
 
                                 <hr>
 
-                                <div class=" row Operator">
+                                <div class="row Operator">
 
-                                    <div class="col-8 seat">
+                                    <div class="col-12 col-sm-12 col-md-8 seat">
                                         <span>Seat Selected :</span>
                                         <span class="s-num">
                                             <li>32</li>
@@ -141,12 +140,9 @@
                                         </span>
                                     </div>
 
-
-                                    <div class="col-4 bus-opp">
+                                    <div class="col-12 col-sm-12 col-md-4 bus-opp">
                                         <span>Bus Operator :</span>
-                                        <span class="b-name">
-                                            Patel Travellers
-                                        </span>
+                                        <span class="b-name">Patel Travellers</span>
                                     </div>
 
                                 </div>
@@ -154,123 +150,155 @@
                             </div>
                         </div>
 
-                        <div class="col-12 Passenger Details" id="dropdownContent">
-                            <div class="book">
-                                <h2>Passenger Details</h2>
-                                <img id="toggleDropdown" src="./image/Frame.png" alt="">
+                        <div class="col-12 accordion-item Passenger Details">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne">
+                                    Passenger Details
+                                </button>
+                            </h2>
+
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#passengerAccordion">
+                                <div class="accordion-body">
+                                    <div class="card user-data">
+
+                                        <div class="row Passenger-data">
+
+                                            <div class="col-12 col-sm-7 Passenger">
+                                                <p>Name</p>
+                                                <input type="text" placeholder="Enter Name">
+                                            </div>
+
+                                            <div class="col-6 col-md-3 col-sm-2 Passenger">
+                                                <p>Age</p>
+                                                <input type="text">
+                                            </div>
+
+                                            <div class="col-12 col-sm-2 Passenger">
+                                                <p>Gender</p>
+                                                <div class="input-group">
+                                                    <div class="gender-group">
+                                                        <input type="radio" id="male" name="gender" checked>
+                                                        <label for="male">Male</label>
+                                                        <input type="radio" id="female" name="gender">
+                                                        <label for="female">Female</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-sm-1 Passenger">
+                                                <p>Seat</p>
+                                                <input type="text">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row Passenger-data">
+
+                                            <div class="col-12 col-sm-7 Passenger">
+                                                <p>Name</p>
+                                                <input type="text" placeholder="Enter Name">
+                                            </div>
+
+                                            <div class="col-6 col-sm-2 Passenger">
+                                                <p>Age</p>
+                                                <input type="text">
+                                            </div>
+
+                                            <div class="col-6 col-sm-2 Passenger">
+                                                <p>Gender</p>
+                                                <div class="input-group">
+                                                    <div class="gender-group">
+                                                        <input type="radio" id="male" name="gender" checked>
+                                                        <label for="male">Male</label>
+                                                        <input type="radio" id="female" name="gender">
+                                                        <label for="female">Female</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-sm-1 Passenger">
+                                                <p>Seat</p>
+                                                <input type="text">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row Passenger-data">
+
+                                            <div class="col-12 col-sm-7 Passenger">
+                                                <p>Name</p>
+                                                <input type="text" placeholder="Enter Name">
+                                            </div>
+
+                                            <div class="col-6 col-sm-2 Passenger">
+                                                <p>Age</p>
+                                                <input type="text">
+                                            </div>
+
+                                            <div class="col-6 col-sm-2 Passenger">
+                                                <p>Gender</p>
+                                                <div class="input-group">
+                                                    <div class="gender-group">
+                                                        <input type="radio" id="male" name="gender" checked>
+                                                        <label for="male">Male</label>
+                                                        <input type="radio" id="female" name="gender">
+                                                        <label for="female">Female</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-sm-1 Passenger">
+                                                <p>Seat</p>
+                                                <input type="text">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
 
-
-
-                            <div class="card user-data">
-
-                                <div class="row Passenger-data">
-
-                                    <div class="col-7 Passenger">
-                                        <p>Name</p>
-                                        <input type="text" placeholder="Enter Name">
-                                    </div>
-
-                                    <div class="col-2 Passenger">
-                                        <p>Age</p>
-                                        <input type="text">
-                                    </div>
-
-                                    <div class="col-2 Passenger">
-                                        <p>Gender</p>
-                                        <div class="input-group">
-                                            <div class="gender-group">
-                                                <input type="radio" id="male" name="gender" checked>
-                                                <label for="male">Male</label>
-                                                <input type="radio" id="female" name="gender">
-                                                <label for="female">Female</label>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-1 Passenger">
-                                        <p>Seat</p>
-                                        <input type="text">
-                                    </div>
-
-
-                                </div>
-
-                                <div class="row Passenger-data">
-
-                                    <div class="col-7 Passenger">
-                                        <p>Name</p>
-                                        <input type="text" placeholder="Enter Name">
-                                    </div>
-
-                                    <div class="col-2 Passenger">
-                                        <p>Age</p>
-                                        <input type="text">
-                                    </div>
-
-                                    <div class="col-2 Passenger">
-                                        <p>Gender</p>
-                                        <div class="input-group">
-                                            <div class="gender-group">
-                                                <input type="radio" id="male" name="gender" checked>
-                                                <label for="male">Male</label>
-                                                <input type="radio" id="female" name="gender">
-                                                <label for="female">Female</label>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-1 Passenger">
-                                        <p>Seat</p>
-                                        <input type="text">
-                                    </div>
-
-
-                                </div>
-
-                                <div class="row Passenger-data">
-
-                                    <div class="col-7 Passenger">
-                                        <p>Name</p>
-                                        <input type="text" placeholder="Enter Name">
-                                    </div>
-
-                                    <div class="col-2 Passenger">
-                                        <p>Age</p>
-                                        <input type="text">
-                                    </div>
-
-                                    <div class="col-2 Passenger">
-                                        <p>Gender</p>
-                                        <div class="input-group">
-                                            <div class="gender-group">
-                                                <input type="radio" id="male" name="gender" checked>
-                                                <label for="male">Male</label>
-                                                <input type="radio" id="female" name="gender">
-                                                <label for="female">Female</label>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-1 Passenger">
-                                        <p>Seat</p>
-                                        <input type="text">
-                                    </div>
-
-
-                                </div>
-
-                            </div>
 
                         </div>
 
-                        <div class="col-12 Contact Details" id="dropdownContent">
-                            <div class="book">
-                                <h2>Contact Details</h2>
-                                <img id="toggleDropdown" src="./image/Frame.png" alt="">
+                        <div class="col-12 accordion-item Contact Details">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo">
+                                    Contact Details
+                                </button>
+                            </h2>
+
+                            <div id="collapseTwo" class="accordion-collapse collapse show"
+                                data-bs-parent="#passengerAccordion">
+                                <div class="accordion-body">
+                                    <div class="card user-data">
+                                        <div class="row user-con">
+                                            <div class="col-12 col-sm-6">
+                                                <label>Email</label>
+                                                <div class="col-12 phone-container">
+                                                    <input type="text" placeholder="Enter your email">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-sm-6">
+                                                <label>Phone No.</label>
+                                                <div class="col-12 phone-container">
+                                                    <select>
+                                                        <option value="+91">+91</option>
+                                                        <option value="+1">+1</option>
+                                                        <option value="+44">+44</option>
+                                                        <option value="+61">+61</option>
+                                                    </select>
+                                                    <input type="text" placeholder="Enter your phone no.">
+                                                </div>
+                                            </div>
+                                            <p>Your ticket will be sent on this contact details</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -278,8 +306,7 @@
 
                 </div>
 
-
-                <div class="col-4 Offers-data">
+                <div class="col-12  col-xl-4 Offers-data">
 
                     <div class="row user-ofr">
 
@@ -292,24 +319,22 @@
                                 <div class="offer">
                                     <input type="radio" name="offer" id="first20-1" checked>
                                     <label for="first20-1">
-                                        <strong>FIRST20</strong>
-                                        Get Flat discount up to 20 % on first booking.
+                                        <strong>FIRST20</strong> Get Flat discount up to 20 % on first booking.
                                     </label>
                                 </div>
 
                                 <div class="offer">
                                     <input type="radio" name="offer" id="megabus">
                                     <label for="megabus">
-                                        <strong>MEGABUS</strong>
-                                        Get Flat discount up to 35 % on first booking with min. billing of ₹5000.
+                                        <strong>MEGABUS</strong> Get Flat discount up to 35 % on first booking with min.
+                                        billing of ₹5000.
                                     </label>
                                 </div>
 
                                 <div class="offer">
-                                    <input type="radio" name="offer" id="first20-2">
-                                    <label for="first20-2">
-                                        <strong>FIRST20</strong>
-                                        Get Flat discount up to 20 % on first booking.
+                                    <input type="radio" name="offer" id="first20-1" checked>
+                                    <label for="first20-1">
+                                        <strong>FIRST20</strong> Get Flat discount up to 20 % on first booking.
                                     </label>
                                 </div>
 
@@ -317,7 +342,6 @@
                                     <input type="text" placeholder="Enter coupon code">
                                     <a href="#">APPLY</a>
                                 </div>
-
                             </div>
 
                         </div>
@@ -326,6 +350,31 @@
                             <div class="book">
                                 <h2>Fare Breakup</h2>
                             </div>
+
+                            <div class="fare-container">
+                                <div class="fare-item">
+                                    <span>Onward Fare</span>
+                                    <span>₹6000</span>
+                                </div>
+                                <div class="fare-item">
+                                    <span>GST</span>
+                                    <span>₹60</span>
+                                </div>
+                                <div class="fare-item">
+                                    <span>Booking Charges</span>
+                                    <span>₹120</span>
+                                </div>
+                                <div class="fare-item">
+                                    <span>Discount</span>
+                                    <span>-₹120</span>
+                                </div>
+                                <div class="fare-item total">
+                                    <span>Total Payable Amount</span>
+                                    <span>₹6060</span>
+                                </div>
+                                <button class="pay-button">Proceed to Pay</button>
+                            </div>
+
                         </div>
 
                     </div>
@@ -334,7 +383,6 @@
 
             </div>
 
-        </div>
     </section>
 
     <!-- ------------------------------ -->
@@ -404,13 +452,7 @@
     </section>
     <!-- --------------------------- -->
 
-    <script>
-        document.getElementById("toggleDropdown").addEventListener("click", function () {
-            var dropdown = document.getElementById("dropdownContent");
-            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-        });
-
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
