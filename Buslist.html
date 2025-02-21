@@ -510,7 +510,7 @@
             </section>
           </div>
           <div style="width: 75%">
-            <div class="travel-list">
+            <div class="travel-list" id="buslist">
               <div class="travel-card">
                 <div class="travel-info">
                   <div class="rating">
@@ -550,20 +550,19 @@
                   <div class="discount">Best deal 10% Off</div>
                 </div>
               </div>
-
-                  <div>
-                    <div class="travel-links">
-                      <a href="#" class="link" data-tab="tracking">Live Tracking</a>
-                      <a href="#" class="link" data-tab="policies">Policies</a>
-                      <a href="#" class="link" data-tab="amenities">Amenities</a>
-                      <a href="#" class="link" data-tab="photos">Photos</a>
-                      <a href="#" class="link" data-tab="pickup">Pickup & Drop off Point</a>
-                      <a href="#" class="link" data-tab="reviews">Reviews</a>
-                      <div class="ms-auto">
-                          <button class="select-seat link" data-tab="selectseat">Select Seat</button>
-                      </div>
-                    </div>    
+              <div>
+                <div class="travel-links">
+                  <a href="#" class="link" data-tab="tracking">Live Tracking</a>
+                  <a href="#" class="link" data-tab="policies">Policies</a>
+                  <a href="#" class="link" data-tab="amenities">Amenities</a>
+                  <a href="#" class="link" data-tab="photos">Photos</a>
+                  <a href="#" class="link" data-tab="pickup">Pickup & Drop off Point</a>
+                  <a href="#" class="link" data-tab="reviews">Reviews</a>
+                  <div class="ms-auto">
+                      <button class="select-seat link" data-tab="selectseat">Select Seat</button>
                   </div>
+                </div>    
+              </div>
 
               <div id="tracking" class="content-section">
                   <div class="placeholder-content">Live Tracking Content Will Appear Here</div>
@@ -857,11 +856,6 @@
                   </div>
               </div>
 
-
-
-
-
-
               <div id="selectseat" class="content-section">
                 <div class="placeholder-content">
                   <div class="seats-container">
@@ -965,7 +959,7 @@
                               <div class="stop-time">10:00 AM</div>
                               <div class="stop-location">Shyamdham Mandir, Jakatnaka</div>
                             </div>
-                            <div class="radio-button selected"></div>
+                            <input type="radio" class="radio-button selected"/>
                           </div>
                           
                           <div class="stop-item">
@@ -973,7 +967,7 @@
                               <div class="stop-time">11:00 AM</div>
                               <div class="stop-location">Pasodara Patiya, Pasodara</div>
                             </div>
-                            <div class="radio-button"></div>
+                            <input type="radio" class="radio-button"/>
                           </div>
                           
                           <div class="stop-item">
@@ -981,7 +975,7 @@
                               <div class="stop-time">11:30 AM</div>
                               <div class="stop-location">Laskana Gam, Laskana</div>
                             </div>
-                            <div class="radio-button"></div>
+                            <input type="radio" class="radio-button"/>
                           </div>
                           
                           <div class="stop-item">
@@ -989,7 +983,7 @@
                               <div class="stop-time">12:10 AM</div>
                               <div class="stop-location">Kamrej Under Bridge, Kamrej</div>
                             </div>
-                            <div class="radio-button"></div>
+                            <input type="radio" class="radio-button"/>
                           </div>
                           
                           <div class="stop-item">
@@ -997,7 +991,7 @@
                               <div class="stop-time">01:00 AM</div>
                               <div class="stop-location">Raj Hotel, Kmarej Highway</div>
                             </div>
-                            <div class="radio-button"></div>
+                            <input type="radio" class="radio-button"/>
                           </div>
                         </div>
                         
@@ -1010,12 +1004,8 @@
                       </div>
                     </div>
                   </div>
-                  
-                  
                 </div>
-            </div>
-
-
+              </div>
             </div>
 
             <div class="travel-list">
@@ -1476,60 +1466,60 @@
       </div>
     </section>
 
+    <script src="./js/Buslist.js"></script>
     <script>
         document.querySelector("input[type='date']").addEventListener("click", function () {
         this.showPicker();
     })
     </script>
 
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-      const tabs = document.querySelectorAll('.link');
-      const contentSections = document.querySelectorAll('.content-section');
-      function showTab(tabId) {
-          contentSections.forEach(section => {
-              section.classList.remove('active');
-          });
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const tabs = document.querySelectorAll('.link');
+          const contentSections = document.querySelectorAll('.content-section');
+          function showTab(tabId) {
+              contentSections.forEach(section => {
+                  section.classList.remove('active');
+              });
+              tabs.forEach(tab => {
+                  tab.classList.remove('active');
+              });
+              document.getElementById(tabId).classList.add('active');
+              document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
+          }
           tabs.forEach(tab => {
-              tab.classList.remove('active');
+              tab.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  const tabId = this.getAttribute('data-tab');
+                  showTab(tabId);
+              });
           });
-          document.getElementById(tabId).classList.add('active');
-          document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
-      }
-      tabs.forEach(tab => {
-          tab.addEventListener('click', function(e) {
-              e.preventDefault();
-              const tabId = this.getAttribute('data-tab');
-              showTab(tabId);
-          });
+          showTab('policies');
       });
-      showTab('policies');
-  });
-</script>
+    </script>
 
-<script src="./js/jquery-3.7.1.min.js"></script>
-<script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
 
-<script>
- $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    dots:true,
-    items:2,
-    nav:true,
-    // responsive:{
-    //     0:{
-    //         items:1
-    //     },
-    //     600:{
-    //         items:3
-    //     },
-    //     1000:{
-    //         items:3
-    //     }
-    // }
-})
-</script>
+    <script>
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        dots:true,
+        items:2,
+        nav:true,
+        // responsive:{
+        //     0:{
+        //         items:1
+        //     },
+        //     600:{
+        //         items:3
+        //     },
+        //     1000:{
+        //         items:3
+        //     }
+        // }
+    })
+    </script>
 </body>
 </html>

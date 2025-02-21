@@ -147,7 +147,7 @@ body {
   margin: 20px;
   border-bottom: 1px solid #eee;
   display: grid;
-  grid-template-columns: 200px 1fr 200px;
+  grid-template-columns: 170px 1fr 170px;
   gap: 20px;
   align-items: center;
 }
@@ -299,10 +299,9 @@ body {
   }
 }
 
-/* dgfjg */
 .filters-container {
   background: white;
-  width: 400px;
+  width: 350px;
   padding: 20px;
   margin-right: 20px;
   border-radius: 8px;
@@ -523,12 +522,12 @@ body {
 
 .table-container {
   flex: 1;
-  min-width: 300px;
+  /* min-width: 300px; */
 }
 
 .info-container {
   flex: 1;
-  min-width: 300px;
+  /* min-width: 300px; */
 }
 
 table {
@@ -561,6 +560,7 @@ tr:nth-child(even) td {
 .info-heading {
   font-size: 24px;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .info-list {
@@ -692,7 +692,6 @@ tr:nth-child(even) td {
   line-height: 1.4;
 }
 
-/* Media query for mobile devices */
 @media (max-width: 768px) {
   .points-grid {
     grid-template-columns: 1fr;
@@ -926,13 +925,15 @@ tr:nth-child(even) td {
 
 .seat-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  /* justify-self: center; */
   gap: 10px;
 }
 
 .seat {
   position: relative;
   height: 95px;
+  width: 50px;
   border: 1px solid #4caf50;
   border-radius: 4px;
   display: flex;
@@ -982,7 +983,6 @@ tr:nth-child(even) td {
 
 .tab {
   flex: 1;
-  padding: 12px;
   text-align: center;
   font-weight: 500;
   cursor: pointer;
