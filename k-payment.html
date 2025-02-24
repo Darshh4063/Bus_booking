@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Success Modal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .success-icon {
+        width: 60px;
+        height: 60px;
+        background-color: #4caf50;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        position: relative;
+      }
+
+      .success-icon::after {
+        content: "";
+        width: 30px;
+        height: 15px;
+        border-left: 3px solid white;
+        border-bottom: 3px solid white;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 18px;
+      }
+
+      .modal-header {
+        border-bottom: none;
+      }
+
+      .modal-header .btn-close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+      }
+
+      .modal-body {
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .success-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #333;
+      }
+
+      .success-message {
+        color: #666;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      /* Custom animation for modal */
+      .modal.fade .modal-dialog {
+        transform: scale(0.8);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .modal.show .modal-dialog {
+        transform: scale(1);
+      }
+
+      .modal-custom {
+        background: #fff;
+        color: white;
+        border-radius: 12px;
+        padding: 30px;
+        text-align: center;
+        max-width: 400px;
+        margin: 20px auto;
+      }
+
+      .hourglass-icon {
+        color: #ffa500;
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+
+      .failed-icon {
+        background: #dc3545;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        margin: 0 auto 20px;
+      }
+
+      .modal-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      .modal-text {
+        color: #888;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .close-btn {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: #888;
+        font-size: 24px;
+        cursor: pointer;
+        background: none;
+        border: none;
+      }
+
+      .w-10 {
+        width: 10%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Button trigger modal -->
+    <button
+      type="button"
+      class="btn btn-primary m-5"
+      data-bs-toggle="modal"
+      data-bs-target="#successModal"
+    >
+      Show Payment Success
+    </button>
+
+    <!-- Success Modal -->
+    <div
+      class="modal fade"
+      id="successModal"
+      tabindex="-1"
+      aria-labelledby="successModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="w-100 d-flex align-items-center justify-content-center">
+              <img src="k_images/payment-success.png" alt="" width="100px">
+            </div>
+            <h5 class="success-title mt-4">Payment Successful!</h5>
+            <p class="success-message">
+              Your transaction has been completed, check your email/SMS for
+              details
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex gap-3 mb-4">
+      <button
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#processingModal"
+      >
+        Show Processing Modal
+      </button>
+      <button
+        class="btn btn-danger"
+        data-bs-toggle="modal"
+        data-bs-target="#failedModal"
+      >
+        Show Failed Modal
+      </button>
+    </div>
+
+    <!-- Processing Modal -->
+    <div class="modal fade" id="processingModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-custom">
+          <button
+            type="button"
+            class="close-btn"
+            data-bs-dismiss="modal"
+          ></button>
+          <div class="w-100 d-flex align-items-center justify-content-center">
+            <img src="k_images/payment-process.png" alt="" width="40px" />
+          </div>
+          <h5 class="modal-title text-dark mt-4">Payment Under Process</h5>
+          <p class="modal-text">
+            Please wait while we complete the transaction, you'll receive
+            confirmation shortly
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Failed Modal -->
+    <div class="modal fade" id="failedModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-custom">
+          <button type="button" class="close-btn" data-bs-dismiss="modal">
+            ×
+          </button>
+          <div class="w-100 d-flex align-items-center justify-content-center">
+            <img src="k_images/payment-failed.png" alt="" width="60px">
+          </div>
+          <h5 class="modal-title text-dark">Payment Failed</h5>
+          <p class="modal-text">
+            Your transaction could not be completed. Please try again with
+            different payment method.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
