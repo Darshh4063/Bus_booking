@@ -3,24 +3,24 @@ body {
     background-color: #FAFAFA;
 }
 
-#Rate-Review{
+#J_Rate-Review{
     padding-top: 80px;
     padding-bottom: 120px;
 }
 
-.Rate-Review-content {
+.J_Rate-Review-content {
     text-align: center;
     margin: 0 auto;
 }
 
-.Rate-Review-content h4 {
+.J_Rate-Review-content h4 {
     color: #000000;
     font-size: 30px;
     font-weight: 600;
     margin: 0 !important;
 }
 
-.Rate-Review-content p {
+.J_Rate-Review-content p {
     padding-top: 10px;
     padding-bottom: 40px;
     color: #6A6A6A;
@@ -30,27 +30,27 @@ body {
     margin: 0 auto;
 }
 
-.summary-rating{
+.J_summary-rating{
     justify-content: center;
     gap: 30px;
 }
 
-.Trip-Summary{
+.J_Trip-Summary{
     background-color: #FFFFFF;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     height: 330px;
     padding: 0 !important;  
 }
 
-.ticket-content{
+.J_ticket-content{
     padding: 0px 30px !important;
 }
 
-.summary{
+.J_summary{
     background-color: #6A6A6A1F;  
 }
 
-.summary h4{
+.J_summary h4{
     padding: 15px 0px 15px 30px;
     color: #000000;
     font-size: 18px;
@@ -58,12 +58,12 @@ body {
     margin: 0 !important;
 }
 
-.trip{
+.J_trip{
     display: flex;
     border-bottom: 0.8px solid #6A6A6A4D
 }
 
-.trip-start h3{
+.J_trip-start h3{
     color: #000000;
     font-size: 18px;
     font-weight: 400;
@@ -71,7 +71,7 @@ body {
     padding-top: 20px;
 }
 
-.trip-start p{
+.J_trip-start p{
     color: #6A6A6A;
     font-size: 16px;
     font-weight: 300;
@@ -80,11 +80,11 @@ body {
     padding-bottom: 20px;
 }
 
-.trip-end{
+.J_trip-end{
     text-align: end !important;
 }
 
-.trip-end h3{
+.J_trip-end h3{
     color: #000000;
     font-size: 18px;
     font-weight: 400;
@@ -92,7 +92,7 @@ body {
     padding-top: 20px;
 }
 
-.trip-end p{
+.J_trip-end p{
     color: #6A6A6A;
     font-size: 16px;
     font-weight: 300;
@@ -101,11 +101,11 @@ body {
     padding-bottom: 20px;
 }
 
-.booking-id{
+.J_ooking-id{
     padding: 20px 0px 0px ;
 }
 
-.booking-id p{
+.J_booking-id p{
     color: #6A6A6A;
     font-size: 16px;
     font-weight: 300;
@@ -113,7 +113,7 @@ body {
     
 }
 
-.booking-id p span{
+.J_booking-id p span{
     color: #000000;
     font-size: 16px;
     font-weight: 400;
@@ -121,33 +121,33 @@ body {
     padding-left: 24px;
 }
 
-.date-time{
+.J_date-time{
     padding-top: 5px;
     padding-bottom: 20px;
 }
 
-.date-time span{
+.J_date-time span{
     padding-left: 16px !important;
   
 }
 
-.date-time{
+.J_date-time{
     border-bottom: 0.8px solid #6A6A6A4D
 
 }
 
-.bus-operator{
+.J_bus-operator{
     padding: 20px 0px 0px 0px;
 }
 
-.bus-operator p{
+.J_bus-operator p{
     color: #6A6A6A;
     font-size: 16px;
     font-weight: 300;
     margin: 0 !important;
 }
 
-.bus-operator p span{
+.J_bus-operator p span{
     color: #000000;
     font-size: 16px;
     font-weight: 400;
@@ -155,18 +155,18 @@ body {
     padding-left: 24px;
 }
 
-.operator span{
+.J_operator span{
     padding-left: 16px !important;
 }
 
-.bus-seats{
+.J_bus-seats{
     padding-top: 5px;
     padding-bottom: 20px;
     display: flex;
     margin: 0 !important;
 }
 
-.seat-content p{
+.J_seat-content p{
     color: #6A6A6A;
     font-size: 16px;
     font-weight: 300;
@@ -174,13 +174,13 @@ body {
     
 }
 
-.seat-number{
+.J_seat-number{
     display: flex;
     gap: 10px;
     padding-left: 62px;
 }
 
-.seat-number li{
+.J_seat-number li{
     color: #000000;
 }
 
@@ -188,18 +188,18 @@ li::marker{
     margin: 0 !important;
 }
 
-.Review-content{
+.J_Review-content{
     padding: 40px !important;
     background-color: #FFFFFF;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 
 }
 
-.rating{
+.J_rating{
     display: flex;
 }
 
-.rating-content h4{
+.J_rating-content h4{
     color: #6A6A6A;
     font-size: 16px;
     font-weight: 400;
@@ -207,21 +207,21 @@ li::marker{
     padding-bottom: 30px !important;
 }
 
-.rating-image{
+.J_rating-image{
     text-align: end !important;
     
 }
 
-.rating-image img{
+.J_rating-image img{
     padding-left: 5px;
 }
 
-.Description-box{
+.J_Description-box{
     padding-top: 10px !important;
 }
 
 
-.Description-box textarea {
+.J_Description-box textarea {
     border: 0.8px solid #6A6A6A;
     border-radius: 4px;
     width: 100% ;
@@ -233,14 +233,14 @@ li::marker{
 
 }
 
-.Rate-Review-btn{
+.J_Rate-Review-btn{
     display: flex;
     justify-content: center ;
     padding-top: 40px;
     gap: 40px;
 }
 
-.cancel-btn a{
+.J_cancel-btn a{
     border: 1px solid #C16C49;
     border-radius: 4px;
     text-decoration: none;
@@ -251,7 +251,7 @@ li::marker{
     color: #C16C49 !important;
 }
 
-.submit-btn a{
+.J_submit-btn a{
     border: 1px solid #C16C49;
     border-radius: 4px;
     text-decoration: none;
@@ -262,17 +262,14 @@ li::marker{
     color: #C16C49 !important;
 }
 
-.cancel-btn a:hover{
+.J_cancel-btn a:hover{
     color: #FFFFFF !important;
     background-color: #C16C49;
 }
 
-.submit-btn a:hover{
+.J_submit-btn a:hover{
     color: #FFFFFF !important;
     background-color: #C16C49;
 }
-
-
-/* ------------------------------------------------------ */
 
      
