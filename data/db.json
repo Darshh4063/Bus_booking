@@ -1066,10 +1066,10 @@
         "Emergency Toilet"
       ],
       "photos": [
-        "u_images/buslist_slider1.png",
-        "u_images/buslist_slider2.png",
-        "u_images/buslist_slider3.png",
-        "u_images/buslist_slider1.png"
+        "buslist_slider1.png",
+        "buslist_slider2.png",
+        "buslist_slider3.png",
+        "buslist_slider1.png"
       ],
       "pickupPoints": [
         { "time": "10:00", "location": "Navjivan Hotel" },
@@ -1098,25 +1098,78 @@
           "name": "Johan Kumar",
           "date": "12 Jun 2024",
           "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
         },
         {
           "name": "Johan Kumar",
           "date": "12 Jun 2024",
           "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
         }
       ],
       "seatInfo": {
-        "lowerDeck": {
-          "total": 18,
-          "booked": 7,
-          "available": 11
+        "legend": [
+          { "type": "available", "label": "Available" },
+          { "type": "booked", "label": "Booked" },
+          { "type": "selected", "label": "Selected" }
+        ],
+        "seating": {
+          "lowerDeck": {
+            "title": "Lower Seat",
+            "seats": [
+              ["booked", "available", "booked"],
+              ["available", "available", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "available", "booked"],
+              ["available", "booked", "available"],
+              ["available", "available", "booked"]
+            ]
+          },
+          "upperDeck": {
+            "title": "Upper Seat",
+            "seats": [
+              ["available", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "booked", "available"],
+              ["available", "available", "available"]
+            ]
+          }
         },
-        "upperDeck": {
-          "total": 18,
-          "booked": 12,
-          "available": 6
+        "sidebar": {
+          "tabs": ["Pick Up Point", "Drop Off Point"],
+          "pickupPoints": [
+            {
+              "time": "10:00 AM",
+              "location": "Shyamdham Mandir, Jakatnaka",
+              "selected": true
+            },
+            {
+              "time": "11:00 AM",
+              "location": "Pasodara Patiya, Pasodara",
+              "selected": false
+            },
+            {
+              "time": "11:30 AM",
+              "location": "Laskana Gam, Laskana",
+              "selected": false
+            },
+            {
+              "time": "12:10 AM",
+              "location": "Kamrej Under Bridge, Kamrej",
+              "selected": false
+            },
+            {
+              "time": "01:00 AM",
+              "location": "Raj Hotel, Kmarej Highway",
+              "selected": false
+            }
+          ]
+        },
+        "bookingSummary": {
+          "selectedSeats": [],
+          "buttonLabel": "Continue"
         }
       }
     }
