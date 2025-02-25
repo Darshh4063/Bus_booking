@@ -1028,12 +1028,30 @@
         "discount": "Best deal 10% Off"
       },
       "travelLinks": [
-        { "name": "Live Tracking", "dataTab": "tracking" },
-        { "name": "Policies", "dataTab": "policies" },
-        { "name": "Amenities", "dataTab": "amenities" },
-        { "name": "Photos", "dataTab": "photos" },
-        { "name": "Pickup & Drop off Point", "dataTab": "pickup" },
-        { "name": "Reviews", "dataTab": "reviews" }
+        {
+          "name": "Live Tracking",
+          "dataTab": "tracking"
+        },
+        {
+          "name": "Policies",
+          "dataTab": "policies"
+        },
+        {
+          "name": "Amenities",
+          "dataTab": "amenities"
+        },
+        {
+          "name": "Photos",
+          "dataTab": "photos"
+        },
+        {
+          "name": "Pickup & Drop off Point",
+          "dataTab": "pickup"
+        },
+        {
+          "name": "Reviews",
+          "dataTab": "reviews"
+        }
       ],
       "selectSeat": {
         "label": "Select Seat",
@@ -1044,10 +1062,22 @@
       },
       "policies": {
         "cancellationPolicies": [
-          { "time": "After Wed 05 Feb 12:44 PM", "charges": "20%" },
-          { "time": "Before Tue 04 Feb 12:44 PM", "charges": "10%" },
-          { "time": "Before Tue 04 Feb 12:44 PM", "charges": "10%" },
-          { "time": "After Wed 05 Feb 12:44 PM", "charges": "20%" }
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          }
         ],
         "info": [
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -1072,16 +1102,40 @@
         "buslist_slider1.png"
       ],
       "pickupPoints": [
-        { "time": "10:00", "location": "Navjivan Hotel" },
-        { "time": "11:00", "location": "Katargam, Unapani Road" },
-        { "time": "01:00", "location": "Kiram Hospital, Nanigam Circle" },
-        { "time": "05:00", "location": "Savera Complex, Udhana" },
-        { "time": "08:00", "location": "Navjivan Hotel" }
+        {
+          "time": "10:00",
+          "location": "Navjivan Hotel"
+        },
+        {
+          "time": "11:00",
+          "location": "Katargam, Unapani Road"
+        },
+        {
+          "time": "01:00",
+          "location": "Kiram Hospital, Nanigam Circle"
+        },
+        {
+          "time": "05:00",
+          "location": "Savera Complex, Udhana"
+        },
+        {
+          "time": "08:00",
+          "location": "Navjivan Hotel"
+        }
       ],
       "dropoffPoints": [
-        { "time": "10:00", "location": "Valiya Chokdi Ashirwad Hotel" },
-        { "time": "10:00", "location": "Valiya Chokdi Ashirwad Hotel" },
-        { "time": "10:00", "location": "Valiya Chokdi Ashirwad Hotel" }
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        },
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        },
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        }
       ],
       "ratings": {
         "overall": "4.5",
@@ -1171,8 +1225,95 @@
           "selectedSeats": [],
           "buttonLabel": "Continue"
         }
-      }
+      },
+      "id": "dfa4"
     }
   ],
-  "user": []
+  "user": [
+    {
+      "id": "1a2b3c",
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "password": "hashed_password1",
+      "phone": "9876543210",
+      "otp": "1234",
+      "image": "k_images/profile-porson.jpg",
+      "dateOfBirth": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "pincode": ""
+    },
+    {
+      "id": "4d5e6f",
+      "name": "Jane Smith",
+      "email": "janesmith@example.com",
+      "password": "hashed_password2",
+      "phone": "8765432109",
+      "otp": "6543",
+      "image": "k_images/jane_smith.jpg",
+      "dateOfBirth": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "pincode": ""
+    },
+    {
+      "id": "7g8h9i",
+      "name": "Robert Brown",
+      "email": "robertbrown@example.com",
+      "password": "hashed_password3",
+      "phone": "7654321098",
+      "otp": "7890",
+      "image": "k_images/robert_brown.jpg",
+      "dateOfBirth": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "pincode": ""
+    },
+    {
+      "id": "0j1k2l",
+      "name": "Emily Johnson",
+      "email": "emilyjohnson@example.com",
+      "password": "hashed_password4",
+      "phone": "6543210987",
+      "otp": "8901",
+      "image": "k_images/emily_johnson.jpg",
+      "dateOfBirth": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "pincode": ""
+    },
+    {
+      "id": "3m4n5o",
+      "name": "Michael Davis",
+      "email": "michaeldavis@example.com",
+      "password": "hashed_password5",
+      "phone": "5432109876",
+      "otp": "9012",
+      "image": "k_images/michael_davis.jpg",
+      "dateOfBirth": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "pincode": ""
+    },
+    {
+      "id": "6p7q8r",
+      "name": "Sarah Wilson",
+      "email": "sarahwilson@example.com",
+      "password": "hashed_password6",
+      "phone": "4321098765",
+      "otp": "0123",
+      "image": "k_images/sarah_wilson.jpg",
+      "dateOfBirth": "22-01-2005",
+      "address": "qwihgftjytj jgftrgf rgegewgdfgrf",
+      "city": "surat",
+      "state": "Gujarat",
+      "pincode": "395010",
+      "gender": "female"
+    }
+  ]
 }

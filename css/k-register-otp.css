@@ -1,0 +1,89 @@
+/* Increase specificity for OTP modal styles */
+#RegisterOtpModel .otp-container {
+  max-width: 320px !important;
+  margin: 0 auto !important;
+}
+
+#RegisterOtpModel .otp-input {
+  width: 60px !important;
+  height: 60px !important;
+  text-align: center !important;
+  font-size: 24px !important;
+  font-weight: 500 !important;
+  border-radius: 4px !important;
+  border: 1px solid #ced4da !important;
+  padding: 0 !important; /* Prevent padding override */
+}
+
+#RegisterOtpModel .otp-input:focus {
+  border-color: #c16c49 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+#RegisterOtpModel .otp-error {
+  color: #dc3545 !important;
+  font-size: 14px !important;
+  margin-top: 8px !important;
+  display: block !important;
+}
+
+/* Preserve the shake animation */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+#RegisterOtpModel .otp-error {
+  animation: shake 0.5s;
+}
+
+/* Additional styles to ensure modal layout */
+#RegisterOtpModel .modal-body {
+  padding: 1.5rem !important;
+}
+
+#RegisterOtpModel .modal-header {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
+#RegisterOtpModel .modal-title {
+  font-weight: 600 !important;
+}
+
+#RegisterOtpModel .text-gray {
+  color: #666 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Style for the verify button */
+#RegisterOtpModel .k-verify .btn {
+  background-color: #d9754e !important;
+  color: white !important;
+  padding: 12px 48px !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+}
+
+/* Resend link styling */
+#RegisterOtpModel .k-resend {
+  color: #d9754e !important;
+  cursor: pointer !important;
+  font-weight: 500 !important;
+}
