@@ -14,13 +14,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
+    
+  
 </head>
 
 <body>
 
 
-    <section id="top-bar">
+    <!-- <section id="top-bar">
         <div class="container">
             <div class="row contact-info">
 
@@ -76,7 +77,96 @@
             </nav>
 
         </div>
-    </section>
+    </section> -->
+
+    <section id="navbar"></section>
+
+    <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="d-modal-content">
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 modal-header">
+                <img src="./image/Rectangle 240648523 (1).png" alt="" />
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 modal-body">
+                <h2>Sign In</h2>
+                <p>Login to an existing account</p>
+      
+                <div class="inp">
+                  <span>Mobile No</span>
+      
+                  <div class="countr">
+                    <select name="" id="" style="font-size: 14px">
+                      <option value="">+ 91</option>
+                      <option value="">+ 1</option>
+                      <option value="">+ 44</option>
+                    </select>
+                    <input type="text" placeholder="Enter Your mobile no" />
+                  </div>
+      
+                  <button type="button" class="btn" onclick="openOtpModal()">
+                    Continue
+                  </button>
+      
+                  <br />
+      
+                  <h3>
+                    <hr class="line" />
+                    OR
+                    <hr class="line" />
+                  </h3>
+      
+                  <div class="row media_ico">
+                    <img src="./image/google logo.png" alt="" />
+                    <img src="./image/fb logo.png" alt="" />
+                    <img src="./image/fb logo (1).png" alt="" />
+      
+                    <div class="undo" data-bs-toggle="modal" data-bs-target="#registerModal">
+                      <h2>
+                        Didn't have any account?
+                        <span>Sign Up</span>
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- OTP Modal -->
+<div class="d-modal fade" id="otpModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <div class="k-modal-header" style="display: inline-block">
+          <h5 class="k-modal-title">Verify OTP</h5>
+          <p>
+            We've sent a verification code to
+            <span> +91 6598264548</span>
+          </p>
+  
+          <div class="otp-container">
+            <input type="text" class="otp-input" placeholder="0" maxlength="1" oninput="moveToNext(this, 0)" />
+            <input type="text" class="otp-input" placeholder="0" maxlength="1" oninput="moveToNext(this, 1)" />
+            <input type="text" class="otp-input" placeholder="0" maxlength="1" oninput="moveToNext(this, 2)" />
+            <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this, 3)" />
+          </div>
+  
+          <button class="veri">Verify</button>
+  
+          <div class="undo">
+            <h2>
+              Didn't receive code?
+              <span>Resend</span>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!-- --------------------------hero section--------------------------- -->
 
@@ -607,11 +697,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
+    
+    <script type="module" src="./js/global-auth.js"></script>
     <script>
         document.getElementById("datePickerIcon").addEventListener("click", function () {
             document.getElementById("dateInput").showPicker();
         });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('login.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+        });
+
     </script>
 
     <script>

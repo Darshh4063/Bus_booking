@@ -1163,36 +1163,96 @@
       ],
       "seatInfo": {
         "legend": [
-          { "type": "available", "label": "Available" },
-          { "type": "booked", "label": "Booked" },
-          { "type": "selected", "label": "Selected" }
+          {
+            "type": "available",
+            "label": "Available"
+          },
+          {
+            "type": "booked",
+            "label": "Booked"
+          },
+          {
+            "type": "selected",
+            "label": "Selected"
+          }
         ],
         "seating": {
           "lowerDeck": {
             "title": "Lower Seat",
             "seats": [
-              ["booked", "available", "booked"],
-              ["available", "available", "available"],
-              ["booked", "booked", "booked"],
-              ["booked", "available", "booked"],
-              ["available", "booked", "available"],
-              ["available", "available", "booked"]
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "booked"
+              ]
             ]
           },
           "upperDeck": {
             "title": "Upper Seat",
             "seats": [
-              ["available", "booked", "available"],
-              ["booked", "booked", "available"],
-              ["booked", "booked", "available"],
-              ["booked", "booked", "booked"],
-              ["booked", "booked", "available"],
-              ["available", "available", "available"]
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ]
             ]
           }
         },
         "sidebar": {
-          "tabs": ["Pick Up Point", "Drop Off Point"],
+          "tabs": [
+            "Pick Up Point",
+            "Drop Off Point"
+          ],
           "pickupPoints": [
             {
               "time": "10:00 AM",
@@ -1270,7 +1330,8 @@
       "address": "",
       "city": "",
       "state": "",
-      "pincode": ""
+      "pincode": "",
+      "lastLogin": "2025-02-25T12:15:18.761Z"
     },
     {
       "id": "0j1k2l",
@@ -1284,7 +1345,8 @@
       "address": "",
       "city": "",
       "state": "",
-      "pincode": ""
+      "pincode": "",
+      "lastLogin": "2025-02-25T10:15:03.813Z"
     },
     {
       "id": "3m4n5o",
@@ -1298,7 +1360,8 @@
       "address": "",
       "city": "",
       "state": "",
-      "pincode": ""
+      "pincode": "",
+      "lastLogin": "2025-02-25T10:26:18.419Z"
     },
     {
       "id": "6p7q8r",
@@ -1306,14 +1369,15 @@
       "email": "sarahwilson@example.com",
       "password": "hashed_password6",
       "phone": "4321098765",
-      "otp": "0123",
+      "otp": "1234",
       "image": "k_images/sarah_wilson.jpg",
       "dateOfBirth": "22-01-2005",
       "address": "qwihgftjytj jgftrgf rgegewgdfgrf",
       "city": "surat",
       "state": "Gujarat",
       "pincode": "395010",
-      "gender": "female"
+      "gender": "female",
+      "lastLogin": "2025-02-25T09:09:02.192Z"
     }
   ]
 }

@@ -10,6 +10,10 @@ class AuthService {
     try {
       // Fetch user with matching phone number
       const response = await fetch(`${this.baseUrl}/user?phone=${phone}`);
+      if (!response.ok) {
+        throw new Error("Server connection failed");
+      }
+
       const users = await response.json();
 
       if (users.length === 0) {
@@ -32,25 +36,27 @@ class AuthService {
         profileImage: user.image || this.defaultProfileImage,
         gender: user.gender || "",
         dateOfBirth: user.dateOfBirth || "",
-        address:
-          user.address ||
-          "-", // Default address
-        city: user.city || "-", // Default city
-        state: user.state || "-", // Default state
-        pincode: user.pincode || "-", // Default pincode
+        address: user.address || "-",
+        city: user.city || "-",
+        state: user.state || "-",
+        pincode: user.pincode || "-",
         createdAt: user.createdAt || new Date().toISOString(),
         lastLogin: new Date().toISOString(),
-        gender: user.gender || "",
       };
 
       // Store complete user info in localStorage
       localStorage.setItem("currentUser", JSON.stringify(userData));
       console.log("Login successful:", userData);
 
+      // Update last login time on the server
+      this.updateProfile(user.id, { lastLogin: userData.lastLogin }).catch(
+        (err) => console.error("Failed to update last login time:", err)
+      );
+
       return { success: true, user: userData };
     } catch (error) {
       console.error("Login error:", error);
-      return { success: false, message: "Login failed" };
+      return { success: false, message: "Login failed: " + error.message };
     }
   }
 
@@ -67,6 +73,9 @@ class AuthService {
         return { success: false, message: "Phone number already registered" };
       }
 
+      // Generate OTP
+      const otp = Math.floor(1000 + Math.random() * 9000).toString();
+
       // Prepare complete user data
       const newUser = {
         id: Math.random().toString(36).substr(2, 6),
@@ -74,16 +83,14 @@ class AuthService {
         email: userData.email || "",
         phone: userData.phone || "",
         password: userData.password || "",
-        profileImage: userData.profileImage || this.defaultProfileImage,
+        image: userData.profileImage || this.defaultProfileImage,
         gender: userData.gender || "",
         dateOfBirth: userData.dateOfBirth || "",
-        address:
-          userData.address ||
-          "D-502, Ravi Nagar, Junction of Milan Subway & SV Road, Santa Cruz (W)", // Default address
-        city: userData.city || "Mumbai", // Default city
-        state: userData.state || "Maharashtra", // Default state
-        pincode: userData.pincode || "400001", // Default pincode
-        otp: Math.floor(1000 + Math.random() * 9000).toString(),
+        address: userData.address || "",
+        city: userData.city || "",
+        state: userData.state || "",
+        pincode: userData.pincode || "",
+        otp: otp,
         createdAt: new Date().toISOString(),
         lastLogin: new Date().toISOString(),
       };
@@ -104,59 +111,80 @@ class AuthService {
       const user = await response.json();
 
       // Store complete user info in localStorage
-      localStorage.setItem("currentUser", JSON.stringify(newUser));
+      localStorage.setItem(
+        "currentUser",
+        JSON.stringify({
+          ...newUser,
+          profileImage: newUser.image,
+        })
+      );
 
       return {
         success: true,
         user: newUser,
-        message: `Registration successful! Your OTP is ${newUser.otp}`,
+        message: `Registration successful! Your OTP is ${otp}`,
       };
     } catch (error) {
       console.error("Registration error:", error);
-      return { success: false, message: "Registration failed" };
+      return {
+        success: false,
+        message: "Registration failed: " + error.message,
+      };
     }
   }
 
   // Update user profile
   async updateProfile(userId, updatedData) {
     try {
-      const currentUser = this.getCurrentUser();
-      if (!currentUser)
-        return { success: false, message: "User not logged in" };
+      // Get current user data from server
+      const response = await fetch(`${this.baseUrl}/user/${userId}`);
+      if (!response.ok) {
+        throw new Error("Failed to fetch user data");
+      }
 
-      // Merge current user data with updates
+      const userData = await response.json();
+
+      // Prepare updated user data
       const updatedUser = {
-        ...currentUser,
+        ...userData,
         ...updatedData,
-        lastUpdated: new Date().toISOString(),
       };
 
       // Update user in backend
-      const response = await fetch(`${this.baseUrl}/user/${userId}`, {
+      const updateResponse = await fetch(`${this.baseUrl}/user/${userId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(updatedUser),
+        body: JSON.stringify(updatedData), // Only send the changed fields
       });
 
-      if (!response.ok) {
+      if (!updateResponse.ok) {
         throw new Error("Failed to update profile");
       }
 
-      // Update local storage
-      localStorage.setItem("currentUser", JSON.stringify(updatedUser));
+      // If the user is logged in, update localStorage
+      const currentUser = this.getCurrentUser();
+      if (currentUser && currentUser.id === userId) {
+        localStorage.setItem(
+          "currentUser",
+          JSON.stringify({
+            ...currentUser,
+            ...updatedData,
+            // Ensure profileImage is properly mapped from image
+            profileImage: updatedData.image || currentUser.profileImage,
+          })
+        );
+      }
 
       return { success: true, user: updatedUser };
     } catch (error) {
       console.error("Update profile error:", error);
-      return { success: false, message: "Failed to update profile" };
+      return {
+        success: false,
+        message: "Failed to update profile: " + error.message,
+      };
     }
-  }
-
-  // Update profile image
-  async updateProfileImage(userId, imageUrl) {
-    return this.updateProfile(userId, { profileImage: imageUrl });
   }
 
   // Check if user is logged in
@@ -167,6 +195,7 @@ class AuthService {
   // Logout user
   logout() {
     localStorage.removeItem("currentUser");
+    window.location.href = "Home.html";
   }
 
   // Get current user

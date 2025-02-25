@@ -101,11 +101,7 @@
             <i class="fa-solid fa-lock"></i>
             Change Password
           </a>
-          <a
-            href="/logout"
-            data-bs-toggle="modal"
-            data-bs-target="#logoutmodel"
-          >
+          <a href="" data-bs-toggle="modal" data-bs-target="#logoutmodel">
             <i class="fas fa-sign-out-alt"></i>
             Logout
           </a>
@@ -503,6 +499,19 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const logoutButton = document.querySelector(".modal-footer .k-update");
+      if (logoutButton) {
+        logoutButton.addEventListener("click", function () {
+          // Call the logout method from auth service
+          authService.logout();
+
+          // Redirect to home.html
+          window.location.href = "Home.html";
+        });
+      }
+    </script>
 
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
