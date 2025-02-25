@@ -1007,8 +1007,8 @@
   "busListings": [
     {
       "companyName": "Shree Nath Travels",
-      "busType": "Non AC Sleeper",
-      "rating": "4.5",
+      "busType": "AC",
+      "rating": "2.5",
       "journey": {
         "departure": {
           "location": "Surat",
@@ -1024,6 +1024,1567 @@
       },
       "price": {
         "amount": 1400,
+        "currency": "₹",
+        "discount": "Best deal 10% Off"
+      },
+      "travelLinks": [
+        {
+          "name": "Live Tracking",
+          "dataTab": "tracking"
+        },
+        {
+          "name": "Policies",
+          "dataTab": "policies"
+        },
+        {
+          "name": "Amenities",
+          "dataTab": "amenities"
+        },
+        {
+          "name": "Photos",
+          "dataTab": "photos"
+        },
+        {
+          "name": "Pickup & Drop off Point",
+          "dataTab": "pickup"
+        },
+        {
+          "name": "Reviews",
+          "dataTab": "reviews"
+        }
+      ],
+      "selectSeat": {
+        "label": "Select Seat",
+        "dataTab": "selectseat"
+      },
+      "tracking": {
+        "content": "Live Tracking Content Will Appear Here"
+      },
+      "policies": {
+        "cancellationPolicies": [
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          }
+        ],
+        "info": [
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Lorem Ipsum is simply dummy text of the printing and",
+          "Lorem Ipsum is simply dummy text of the printing",
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Lorem Ipsum is simply dummy text of the printing and"
+        ]
+      },
+      "amenities": [
+        "WiFi",
+        "Water Bottle",
+        "Charging Point",
+        "Blanket",
+        "Live Tracking",
+        "Emergency Toilet"
+      ],
+      "photos": [
+        "buslist_slider1.png",
+        "buslist_slider2.png",
+        "buslist_slider3.png",
+        "buslist_slider1.png"
+      ],
+      "pickupPoints": [
+        {
+          "time": "10:00",
+          "location": "Navjivan Hotel"
+        },
+        {
+          "time": "11:00",
+          "location": "Katargam, Unapani Road"
+        },
+        {
+          "time": "01:00",
+          "location": "Kiram Hospital, Nanigam Circle"
+        },
+        {
+          "time": "05:00",
+          "location": "Savera Complex, Udhana"
+        },
+        {
+          "time": "08:00",
+          "location": "Navjivan Hotel"
+        }
+      ],
+      "dropoffPoints": [
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        },
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        },
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        }
+      ],
+      "ratings": {
+        "overall": "4.5",
+        "categories": {
+          "busQuality": "3.5",
+          "driving": "4.0",
+          "seatComfort": "3.0",
+          "safetyAndHygiene": "4.1",
+          "cleanliness": "3.2"
+        }
+      },
+      "reviews": [
+        {
+          "name": "Johan Kumar",
+          "date": "12 Jun 2024",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          "name": "Johan Kumar",
+          "date": "12 Jun 2024",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        }
+      ],
+      "seatInfo": {
+        "legend": [
+          { "type": "available", "label": "Available" },
+          { "type": "booked", "label": "Booked" },
+          { "type": "selected", "label": "Selected" }
+        ],
+        "seating": {
+          "lowerDeck": {
+            "title": "Lower Seat",
+            "seats": [
+              ["booked", "available", "booked"],
+              ["available", "available", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "available", "booked"],
+              ["available", "booked", "available"],
+              ["available", "available", "booked"]
+            ]
+          },
+          "upperDeck": {
+            "title": "Upper Seat",
+            "seats": [
+              ["available", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "booked", "available"],
+              ["available", "available", "available"]
+            ]
+          }
+        },
+        "sidebar": {
+          "tabs": ["Pick Up Point", "Drop Off Point"],
+          "pickupPoints": [
+            {
+              "time": "10:00 AM",
+              "location": "Shyamdham Mandir, Jakatnaka",
+              "selected": true
+            },
+            {
+              "time": "11:00 AM",
+              "location": "Pasodara Patiya, Pasodara",
+              "selected": false
+            },
+            {
+              "time": "11:30 AM",
+              "location": "Laskana Gam, Laskana",
+              "selected": false
+            },
+            {
+              "time": "12:10 AM",
+              "location": "Kamrej Under Bridge, Kamrej",
+              "selected": false
+            },
+            {
+              "time": "01:00 AM",
+              "location": "Raj Hotel, Kmarej Highway",
+              "selected": false
+            }
+          ]
+        },
+        "bookingSummary": {
+          "selectedSeats": [],
+          "buttonLabel": "Continue"
+        }
+      },
+      "id": "dfa4"
+    },
+    {
+      "companyName": "Shivay Travels",
+      "busType": "Non AC",
+      "rating": "3.5",
+      "journey": {
+        "departure": {
+          "location": "Surat",
+          "time": "10:00 AM",
+          "date": "10 Feb 2025"
+        },
+        "arrival": {
+          "location": "Ankleshwar",
+          "time": "10:00 AM",
+          "date": "10 Feb 2025"
+        },
+        "duration": "05h 30m"
+      },
+      "price": {
+        "amount": 1400,
+        "currency": "₹",
+        "discount": "Best deal 10% Off"
+      },
+      "travelLinks": [
+        {
+          "name": "Live Tracking",
+          "dataTab": "tracking"
+        },
+        {
+          "name": "Policies",
+          "dataTab": "policies"
+        },
+        {
+          "name": "Amenities",
+          "dataTab": "amenities"
+        },
+        {
+          "name": "Photos",
+          "dataTab": "photos"
+        },
+        {
+          "name": "Pickup & Drop off Point",
+          "dataTab": "pickup"
+        },
+        {
+          "name": "Reviews",
+          "dataTab": "reviews"
+        }
+      ],
+      "selectSeat": {
+        "label": "Select Seat",
+        "dataTab": "selectseat"
+      },
+      "tracking": {
+        "content": "Live Tracking Content Will Appear Here"
+      },
+      "policies": {
+        "cancellationPolicies": [
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          }
+        ],
+        "info": [
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Lorem Ipsum is simply dummy text of the printing and",
+          "Lorem Ipsum is simply dummy text of the printing",
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Lorem Ipsum is simply dummy text of the printing and"
+        ]
+      },
+      "amenities": [
+        "WiFi",
+        "Water Bottle",
+        "Charging Point",
+        "Blanket",
+        "Live Tracking",
+        "Emergency Toilet"
+      ],
+      "photos": [
+        "buslist_slider1.png",
+        "buslist_slider2.png",
+        "buslist_slider3.png",
+        "buslist_slider1.png"
+      ],
+      "pickupPoints": [
+        {
+          "time": "10:00",
+          "location": "Navjivan Hotel"
+        },
+        {
+          "time": "11:00",
+          "location": "Katargam, Unapani Road"
+        },
+        {
+          "time": "01:00",
+          "location": "Kiram Hospital, Nanigam Circle"
+        },
+        {
+          "time": "05:00",
+          "location": "Savera Complex, Udhana"
+        },
+        {
+          "time": "08:00",
+          "location": "Navjivan Hotel"
+        }
+      ],
+      "dropoffPoints": [
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        },
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        },
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        }
+      ],
+      "ratings": {
+        "overall": "4.5",
+        "categories": {
+          "busQuality": "3.5",
+          "driving": "4.0",
+          "seatComfort": "3.0",
+          "safetyAndHygiene": "4.1",
+          "cleanliness": "3.2"
+        }
+      },
+      "reviews": [
+        {
+          "name": "Johan Kumar",
+          "date": "12 Jun 2024",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          "name": "Johan Kumar",
+          "date": "12 Jun 2024",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        }
+      ],
+      "seatInfo": {
+        "legend": [
+          { "type": "available", "label": "Available" },
+          { "type": "booked", "label": "Booked" },
+          { "type": "selected", "label": "Selected" }
+        ],
+        "seating": {
+          "lowerDeck": {
+            "title": "Lower Seat",
+            "seats": [
+              ["booked", "available", "booked"],
+              ["available", "available", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "available", "booked"],
+              ["available", "booked", "available"],
+              ["available", "available", "booked"]
+            ]
+          },
+          "upperDeck": {
+            "title": "Upper Seat",
+            "seats": [
+              ["available", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "booked", "available"],
+              ["available", "available", "available"]
+            ]
+          }
+        },
+        "sidebar": {
+          "tabs": ["Pick Up Point", "Drop Off Point"],
+          "pickupPoints": [
+            {
+              "time": "10:00 AM",
+              "location": "Shyamdham Mandir, Jakatnaka",
+              "selected": true
+            },
+            {
+              "time": "11:00 AM",
+              "location": "Pasodara Patiya, Pasodara",
+              "selected": false
+            },
+            {
+              "time": "11:30 AM",
+              "location": "Laskana Gam, Laskana",
+              "selected": false
+            },
+            {
+              "time": "12:10 AM",
+              "location": "Kamrej Under Bridge, Kamrej",
+              "selected": false
+            },
+            {
+              "time": "01:00 AM",
+              "location": "Raj Hotel, Kmarej Highway",
+              "selected": false
+            }
+          ]
+        },
+        "bookingSummary": {
+          "selectedSeats": [],
+          "buttonLabel": "Continue"
+        }
+      },
+      "id": "dfa4"
+    },
+    {
+      "companyName": "Bhumi Travels",
+      "busType": "Sleeper",
+      "rating": "4.5",
+      "journey": {
+        "departure": {
+          "location": "Surat",
+          "time": "10:00 AM",
+          "date": "10 Feb 2025"
+        },
+        "arrival": {
+          "location": "Ankleshwar",
+          "time": "10:00 AM",
+          "date": "10 Feb 2025"
+        },
+        "duration": "05h 30m"
+      },
+      "price": {
+        "amount": 700,
+        "currency": "₹",
+        "discount": "Best deal 10% Off"
+      },
+      "travelLinks": [
+        {
+          "name": "Live Tracking",
+          "dataTab": "tracking"
+        },
+        {
+          "name": "Policies",
+          "dataTab": "policies"
+        },
+        {
+          "name": "Amenities",
+          "dataTab": "amenities"
+        },
+        {
+          "name": "Photos",
+          "dataTab": "photos"
+        },
+        {
+          "name": "Pickup & Drop off Point",
+          "dataTab": "pickup"
+        },
+        {
+          "name": "Reviews",
+          "dataTab": "reviews"
+        }
+      ],
+      "selectSeat": {
+        "label": "Select Seat",
+        "dataTab": "selectseat"
+      },
+      "tracking": {
+        "content": "Live Tracking Content Will Appear Here"
+      },
+      "policies": {
+        "cancellationPolicies": [
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          }
+        ],
+        "info": [
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Lorem Ipsum is simply dummy text of the printing and",
+          "Lorem Ipsum is simply dummy text of the printing",
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Lorem Ipsum is simply dummy text of the printing and"
+        ]
+      },
+      "amenities": [
+        "WiFi",
+        "Water Bottle",
+        "Charging Point",
+        "Blanket",
+        "Live Tracking",
+        "Emergency Toilet"
+      ],
+      "photos": [
+        "buslist_slider1.png",
+        "buslist_slider2.png",
+        "buslist_slider3.png",
+        "buslist_slider1.png"
+      ],
+      "pickupPoints": [
+        {
+          "time": "10:00",
+          "location": "Navjivan Hotel"
+        },
+        {
+          "time": "11:00",
+          "location": "Katargam, Unapani Road"
+        },
+        {
+          "time": "01:00",
+          "location": "Kiram Hospital, Nanigam Circle"
+        },
+        {
+          "time": "05:00",
+          "location": "Savera Complex, Udhana"
+        },
+        {
+          "time": "08:00",
+          "location": "Navjivan Hotel"
+        }
+      ],
+      "dropoffPoints": [
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        },
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        },
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        }
+      ],
+      "ratings": {
+        "overall": "4.5",
+        "categories": {
+          "busQuality": "3.5",
+          "driving": "4.0",
+          "seatComfort": "3.0",
+          "safetyAndHygiene": "4.1",
+          "cleanliness": "3.2"
+        }
+      },
+      "reviews": [
+        {
+          "name": "Johan Kumar",
+          "date": "12 Jun 2024",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          "name": "Johan Kumar",
+          "date": "12 Jun 2024",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        }
+      ],
+      "seatInfo": {
+        "legend": [
+          { "type": "available", "label": "Available" },
+          { "type": "booked", "label": "Booked" },
+          { "type": "selected", "label": "Selected" }
+        ],
+        "seating": {
+          "lowerDeck": {
+            "title": "Lower Seat",
+            "seats": [
+              ["booked", "available", "booked"],
+              ["available", "available", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "available", "booked"],
+              ["available", "booked", "available"],
+              ["available", "available", "booked"]
+            ]
+          },
+          "upperDeck": {
+            "title": "Upper Seat",
+            "seats": [
+              ["available", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "booked", "available"],
+              ["available", "available", "available"]
+            ]
+          }
+        },
+        "sidebar": {
+          "tabs": ["Pick Up Point", "Drop Off Point"],
+          "pickupPoints": [
+            {
+              "time": "10:00 AM",
+              "location": "Shyamdham Mandir, Jakatnaka",
+              "selected": true
+            },
+            {
+              "time": "11:00 AM",
+              "location": "Pasodara Patiya, Pasodara",
+              "selected": false
+            },
+            {
+              "time": "11:30 AM",
+              "location": "Laskana Gam, Laskana",
+              "selected": false
+            },
+            {
+              "time": "12:10 AM",
+              "location": "Kamrej Under Bridge, Kamrej",
+              "selected": false
+            },
+            {
+              "time": "01:00 AM",
+              "location": "Raj Hotel, Kmarej Highway",
+              "selected": false
+            }
+          ]
+        },
+        "bookingSummary": {
+          "selectedSeats": [],
+          "buttonLabel": "Continue"
+        }
+      },
+      "id": "dfa4"
+    },
+    {
+      "companyName": "Umiya Travels",
+      "busType": "Seater",
+      "rating": "2.0",
+      "journey": {
+        "departure": {
+          "location": "Surat",
+          "time": "10:00 AM",
+          "date": "10 Feb 2025"
+        },
+        "arrival": {
+          "location": "Ankleshwar",
+          "time": "10:00 AM",
+          "date": "10 Feb 2025"
+        },
+        "duration": "05h 30m"
+      },
+      "price": {
+        "amount": 800,
+        "currency": "₹",
+        "discount": "Best deal 10% Off"
+      },
+      "travelLinks": [
+        {
+          "name": "Live Tracking",
+          "dataTab": "tracking"
+        },
+        {
+          "name": "Policies",
+          "dataTab": "policies"
+        },
+        {
+          "name": "Amenities",
+          "dataTab": "amenities"
+        },
+        {
+          "name": "Photos",
+          "dataTab": "photos"
+        },
+        {
+          "name": "Pickup & Drop off Point",
+          "dataTab": "pickup"
+        },
+        {
+          "name": "Reviews",
+          "dataTab": "reviews"
+        }
+      ],
+      "selectSeat": {
+        "label": "Select Seat",
+        "dataTab": "selectseat"
+      },
+      "tracking": {
+        "content": "Live Tracking Content Will Appear Here"
+      },
+      "policies": {
+        "cancellationPolicies": [
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          }
+        ],
+        "info": [
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Lorem Ipsum is simply dummy text of the printing and",
+          "Lorem Ipsum is simply dummy text of the printing",
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Lorem Ipsum is simply dummy text of the printing and"
+        ]
+      },
+      "amenities": [
+        "WiFi",
+        "Water Bottle",
+        "Charging Point",
+        "Blanket",
+        "Live Tracking",
+        "Emergency Toilet"
+      ],
+      "photos": [
+        "buslist_slider1.png",
+        "buslist_slider2.png",
+        "buslist_slider3.png",
+        "buslist_slider1.png"
+      ],
+      "pickupPoints": [
+        {
+          "time": "10:00",
+          "location": "Navjivan Hotel"
+        },
+        {
+          "time": "11:00",
+          "location": "Katargam, Unapani Road"
+        },
+        {
+          "time": "01:00",
+          "location": "Kiram Hospital, Nanigam Circle"
+        },
+        {
+          "time": "05:00",
+          "location": "Savera Complex, Udhana"
+        },
+        {
+          "time": "08:00",
+          "location": "Navjivan Hotel"
+        }
+      ],
+      "dropoffPoints": [
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        },
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        },
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        }
+      ],
+      "ratings": {
+        "overall": "4.5",
+        "categories": {
+          "busQuality": "3.5",
+          "driving": "4.0",
+          "seatComfort": "3.0",
+          "safetyAndHygiene": "4.1",
+          "cleanliness": "3.2"
+        }
+      },
+      "reviews": [
+        {
+          "name": "Johan Kumar",
+          "date": "12 Jun 2024",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          "name": "Johan Kumar",
+          "date": "12 Jun 2024",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        }
+      ],
+      "seatInfo": {
+        "legend": [
+          { "type": "available", "label": "Available" },
+          { "type": "booked", "label": "Booked" },
+          { "type": "selected", "label": "Selected" }
+        ],
+        "seating": {
+          "lowerDeck": {
+            "title": "Lower Seat",
+            "seats": [
+              ["booked", "available", "booked"],
+              ["available", "available", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "available", "booked"],
+              ["available", "booked", "available"],
+              ["available", "available", "booked"]
+            ]
+          },
+          "upperDeck": {
+            "title": "Upper Seat",
+            "seats": [
+              ["available", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "booked", "available"],
+              ["available", "available", "available"]
+            ]
+          }
+        },
+        "sidebar": {
+          "tabs": ["Pick Up Point", "Drop Off Point"],
+          "pickupPoints": [
+            {
+              "time": "10:00 AM",
+              "location": "Shyamdham Mandir, Jakatnaka",
+              "selected": true
+            },
+            {
+              "time": "11:00 AM",
+              "location": "Pasodara Patiya, Pasodara",
+              "selected": false
+            },
+            {
+              "time": "11:30 AM",
+              "location": "Laskana Gam, Laskana",
+              "selected": false
+            },
+            {
+              "time": "12:10 AM",
+              "location": "Kamrej Under Bridge, Kamrej",
+              "selected": false
+            },
+            {
+              "time": "01:00 AM",
+              "location": "Raj Hotel, Kmarej Highway",
+              "selected": false
+            }
+          ]
+        },
+        "bookingSummary": {
+          "selectedSeats": [],
+          "buttonLabel": "Continue"
+        }
+      },
+      "id": "dfa4"
+    },
+    {
+      "companyName": "Maruti Nandan Travels",
+      "busType": "Sleeper",
+      "rating": "4.0",
+      "journey": {
+        "departure": {
+          "location": "Surat",
+          "time": "10:00 AM",
+          "date": "10 Feb 2025"
+        },
+        "arrival": {
+          "location": "Ankleshwar",
+          "time": "10:00 AM",
+          "date": "10 Feb 2025"
+        },
+        "duration": "05h 30m"
+      },
+      "price": {
+        "amount": 1000,
+        "currency": "₹",
+        "discount": "Best deal 10% Off"
+      },
+      "travelLinks": [
+        {
+          "name": "Live Tracking",
+          "dataTab": "tracking"
+        },
+        {
+          "name": "Policies",
+          "dataTab": "policies"
+        },
+        {
+          "name": "Amenities",
+          "dataTab": "amenities"
+        },
+        {
+          "name": "Photos",
+          "dataTab": "photos"
+        },
+        {
+          "name": "Pickup & Drop off Point",
+          "dataTab": "pickup"
+        },
+        {
+          "name": "Reviews",
+          "dataTab": "reviews"
+        }
+      ],
+      "selectSeat": {
+        "label": "Select Seat",
+        "dataTab": "selectseat"
+      },
+      "tracking": {
+        "content": "Live Tracking Content Will Appear Here"
+      },
+      "policies": {
+        "cancellationPolicies": [
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          }
+        ],
+        "info": [
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Lorem Ipsum is simply dummy text of the printing and",
+          "Lorem Ipsum is simply dummy text of the printing",
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Lorem Ipsum is simply dummy text of the printing and"
+        ]
+      },
+      "amenities": [
+        "WiFi",
+        "Water Bottle",
+        "Charging Point",
+        "Blanket",
+        "Live Tracking",
+        "Emergency Toilet"
+      ],
+      "photos": [
+        "buslist_slider1.png",
+        "buslist_slider2.png",
+        "buslist_slider3.png",
+        "buslist_slider1.png"
+      ],
+      "pickupPoints": [
+        {
+          "time": "10:00",
+          "location": "Navjivan Hotel"
+        },
+        {
+          "time": "11:00",
+          "location": "Katargam, Unapani Road"
+        },
+        {
+          "time": "01:00",
+          "location": "Kiram Hospital, Nanigam Circle"
+        },
+        {
+          "time": "05:00",
+          "location": "Savera Complex, Udhana"
+        },
+        {
+          "time": "08:00",
+          "location": "Navjivan Hotel"
+        }
+      ],
+      "dropoffPoints": [
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        },
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        },
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        }
+      ],
+      "ratings": {
+        "overall": "4.5",
+        "categories": {
+          "busQuality": "3.5",
+          "driving": "4.0",
+          "seatComfort": "3.0",
+          "safetyAndHygiene": "4.1",
+          "cleanliness": "3.2"
+        }
+      },
+      "reviews": [
+        {
+          "name": "Johan Kumar",
+          "date": "12 Jun 2024",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          "name": "Johan Kumar",
+          "date": "12 Jun 2024",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        }
+      ],
+      "seatInfo": {
+        "legend": [
+          { "type": "available", "label": "Available" },
+          { "type": "booked", "label": "Booked" },
+          { "type": "selected", "label": "Selected" }
+        ],
+        "seating": {
+          "lowerDeck": {
+            "title": "Lower Seat",
+            "seats": [
+              ["booked", "available", "booked"],
+              ["available", "available", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "available", "booked"],
+              ["available", "booked", "available"],
+              ["available", "available", "booked"]
+            ]
+          },
+          "upperDeck": {
+            "title": "Upper Seat",
+            "seats": [
+              ["available", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "booked", "available"],
+              ["available", "available", "available"]
+            ]
+          }
+        },
+        "sidebar": {
+          "tabs": ["Pick Up Point", "Drop Off Point"],
+          "pickupPoints": [
+            {
+              "time": "10:00 AM",
+              "location": "Shyamdham Mandir, Jakatnaka",
+              "selected": true
+            },
+            {
+              "time": "11:00 AM",
+              "location": "Pasodara Patiya, Pasodara",
+              "selected": false
+            },
+            {
+              "time": "11:30 AM",
+              "location": "Laskana Gam, Laskana",
+              "selected": false
+            },
+            {
+              "time": "12:10 AM",
+              "location": "Kamrej Under Bridge, Kamrej",
+              "selected": false
+            },
+            {
+              "time": "01:00 AM",
+              "location": "Raj Hotel, Kmarej Highway",
+              "selected": false
+            }
+          ]
+        },
+        "bookingSummary": {
+          "selectedSeats": [],
+          "buttonLabel": "Continue"
+        }
+      },
+      "id": "dfa4"
+    },
+    {
+      "companyName": "Delux Travels",
+      "busType": "AC",
+      "rating": "3.0",
+      "journey": {
+        "departure": {
+          "location": "Surat",
+          "time": "10:00 AM",
+          "date": "10 Feb 2025"
+        },
+        "arrival": {
+          "location": "Ankleshwar",
+          "time": "10:00 AM",
+          "date": "10 Feb 2025"
+        },
+        "duration": "05h 30m"
+      },
+      "price": {
+        "amount": 900,
+        "currency": "₹",
+        "discount": "Best deal 10% Off"
+      },
+      "travelLinks": [
+        {
+          "name": "Live Tracking",
+          "dataTab": "tracking"
+        },
+        {
+          "name": "Policies",
+          "dataTab": "policies"
+        },
+        {
+          "name": "Amenities",
+          "dataTab": "amenities"
+        },
+        {
+          "name": "Photos",
+          "dataTab": "photos"
+        },
+        {
+          "name": "Pickup & Drop off Point",
+          "dataTab": "pickup"
+        },
+        {
+          "name": "Reviews",
+          "dataTab": "reviews"
+        }
+      ],
+      "selectSeat": {
+        "label": "Select Seat",
+        "dataTab": "selectseat"
+      },
+      "tracking": {
+        "content": "Live Tracking Content Will Appear Here"
+      },
+      "policies": {
+        "cancellationPolicies": [
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          }
+        ],
+        "info": [
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Lorem Ipsum is simply dummy text of the printing and",
+          "Lorem Ipsum is simply dummy text of the printing",
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Lorem Ipsum is simply dummy text of the printing and"
+        ]
+      },
+      "amenities": [
+        "WiFi",
+        "Water Bottle",
+        "Charging Point",
+        "Blanket",
+        "Live Tracking",
+        "Emergency Toilet"
+      ],
+      "photos": [
+        "buslist_slider1.png",
+        "buslist_slider2.png",
+        "buslist_slider3.png",
+        "buslist_slider1.png"
+      ],
+      "pickupPoints": [
+        {
+          "time": "10:00",
+          "location": "Navjivan Hotel"
+        },
+        {
+          "time": "11:00",
+          "location": "Katargam, Unapani Road"
+        },
+        {
+          "time": "01:00",
+          "location": "Kiram Hospital, Nanigam Circle"
+        },
+        {
+          "time": "05:00",
+          "location": "Savera Complex, Udhana"
+        },
+        {
+          "time": "08:00",
+          "location": "Navjivan Hotel"
+        }
+      ],
+      "dropoffPoints": [
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        },
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        },
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        }
+      ],
+      "ratings": {
+        "overall": "4.5",
+        "categories": {
+          "busQuality": "3.5",
+          "driving": "4.0",
+          "seatComfort": "3.0",
+          "safetyAndHygiene": "4.1",
+          "cleanliness": "3.2"
+        }
+      },
+      "reviews": [
+        {
+          "name": "Johan Kumar",
+          "date": "12 Jun 2024",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          "name": "Johan Kumar",
+          "date": "12 Jun 2024",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        }
+      ],
+      "seatInfo": {
+        "legend": [
+          { "type": "available", "label": "Available" },
+          { "type": "booked", "label": "Booked" },
+          { "type": "selected", "label": "Selected" }
+        ],
+        "seating": {
+          "lowerDeck": {
+            "title": "Lower Seat",
+            "seats": [
+              ["booked", "available", "booked"],
+              ["available", "available", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "available", "booked"],
+              ["available", "booked", "available"],
+              ["available", "available", "booked"]
+            ]
+          },
+          "upperDeck": {
+            "title": "Upper Seat",
+            "seats": [
+              ["available", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "booked", "available"],
+              ["available", "available", "available"]
+            ]
+          }
+        },
+        "sidebar": {
+          "tabs": ["Pick Up Point", "Drop Off Point"],
+          "pickupPoints": [
+            {
+              "time": "10:00 AM",
+              "location": "Shyamdham Mandir, Jakatnaka",
+              "selected": true
+            },
+            {
+              "time": "11:00 AM",
+              "location": "Pasodara Patiya, Pasodara",
+              "selected": false
+            },
+            {
+              "time": "11:30 AM",
+              "location": "Laskana Gam, Laskana",
+              "selected": false
+            },
+            {
+              "time": "12:10 AM",
+              "location": "Kamrej Under Bridge, Kamrej",
+              "selected": false
+            },
+            {
+              "time": "01:00 AM",
+              "location": "Raj Hotel, Kmarej Highway",
+              "selected": false
+            }
+          ]
+        },
+        "bookingSummary": {
+          "selectedSeats": [],
+          "buttonLabel": "Continue"
+        }
+      },
+      "id": "dfa4"
+    },
+    {
+      "companyName": "Shree Nath Travels",
+      "busType": "Sleeper",
+      "rating": "2.5",
+      "journey": {
+        "departure": {
+          "location": "Surat",
+          "time": "10:00 AM",
+          "date": "10 Feb 2025"
+        },
+        "arrival": {
+          "location": "Ankleshwar",
+          "time": "10:00 AM",
+          "date": "10 Feb 2025"
+        },
+        "duration": "05h 30m"
+      },
+      "price": {
+        "amount": 500,
+        "currency": "₹",
+        "discount": "Best deal 10% Off"
+      },
+      "travelLinks": [
+        {
+          "name": "Live Tracking",
+          "dataTab": "tracking"
+        },
+        {
+          "name": "Policies",
+          "dataTab": "policies"
+        },
+        {
+          "name": "Amenities",
+          "dataTab": "amenities"
+        },
+        {
+          "name": "Photos",
+          "dataTab": "photos"
+        },
+        {
+          "name": "Pickup & Drop off Point",
+          "dataTab": "pickup"
+        },
+        {
+          "name": "Reviews",
+          "dataTab": "reviews"
+        }
+      ],
+      "selectSeat": {
+        "label": "Select Seat",
+        "dataTab": "selectseat"
+      },
+      "tracking": {
+        "content": "Live Tracking Content Will Appear Here"
+      },
+      "policies": {
+        "cancellationPolicies": [
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          }
+        ],
+        "info": [
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Lorem Ipsum is simply dummy text of the printing and",
+          "Lorem Ipsum is simply dummy text of the printing",
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Lorem Ipsum is simply dummy text of the printing and"
+        ]
+      },
+      "amenities": [
+        "WiFi",
+        "Water Bottle",
+        "Charging Point",
+        "Blanket",
+        "Live Tracking",
+        "Emergency Toilet"
+      ],
+      "photos": [
+        "buslist_slider1.png",
+        "buslist_slider2.png",
+        "buslist_slider3.png",
+        "buslist_slider1.png"
+      ],
+      "pickupPoints": [
+        {
+          "time": "10:00",
+          "location": "Navjivan Hotel"
+        },
+        {
+          "time": "11:00",
+          "location": "Katargam, Unapani Road"
+        },
+        {
+          "time": "01:00",
+          "location": "Kiram Hospital, Nanigam Circle"
+        },
+        {
+          "time": "05:00",
+          "location": "Savera Complex, Udhana"
+        },
+        {
+          "time": "08:00",
+          "location": "Navjivan Hotel"
+        }
+      ],
+      "dropoffPoints": [
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        },
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        },
+        {
+          "time": "10:00",
+          "location": "Valiya Chokdi Ashirwad Hotel"
+        }
+      ],
+      "ratings": {
+        "overall": "4.5",
+        "categories": {
+          "busQuality": "3.5",
+          "driving": "4.0",
+          "seatComfort": "3.0",
+          "safetyAndHygiene": "4.1",
+          "cleanliness": "3.2"
+        }
+      },
+      "reviews": [
+        {
+          "name": "Johan Kumar",
+          "date": "12 Jun 2024",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          "name": "Johan Kumar",
+          "date": "12 Jun 2024",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        }
+      ],
+      "seatInfo": {
+        "legend": [
+          { "type": "available", "label": "Available" },
+          { "type": "booked", "label": "Booked" },
+          { "type": "selected", "label": "Selected" }
+        ],
+        "seating": {
+          "lowerDeck": {
+            "title": "Lower Seat",
+            "seats": [
+              ["booked", "available", "booked"],
+              ["available", "available", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "available", "booked"],
+              ["available", "booked", "available"],
+              ["available", "available", "booked"]
+            ]
+          },
+          "upperDeck": {
+            "title": "Upper Seat",
+            "seats": [
+              ["available", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "booked", "available"],
+              ["available", "available", "available"]
+            ]
+          }
+        },
+        "sidebar": {
+          "tabs": ["Pick Up Point", "Drop Off Point"],
+          "pickupPoints": [
+            {
+              "time": "10:00 AM",
+              "location": "Shyamdham Mandir, Jakatnaka",
+              "selected": true
+            },
+            {
+              "time": "11:00 AM",
+              "location": "Pasodara Patiya, Pasodara",
+              "selected": false
+            },
+            {
+              "time": "11:30 AM",
+              "location": "Laskana Gam, Laskana",
+              "selected": false
+            },
+            {
+              "time": "12:10 AM",
+              "location": "Kamrej Under Bridge, Kamrej",
+              "selected": false
+            },
+            {
+              "time": "01:00 AM",
+              "location": "Raj Hotel, Kmarej Highway",
+              "selected": false
+            }
+          ]
+        },
+        "bookingSummary": {
+          "selectedSeats": [],
+          "buttonLabel": "Continue"
+        }
+      },
+      "id": "dfa4"
+    },
+    {
+      "companyName": "Shree Nath Travels",
+      "busType": "Seater",
+      "rating": "4.5",
+      "journey": {
+        "departure": {
+          "location": "Surat",
+          "time": "10:00 AM",
+          "date": "10 Feb 2025"
+        },
+        "arrival": {
+          "location": "Ankleshwar",
+          "time": "10:00 AM",
+          "date": "10 Feb 2025"
+        },
+        "duration": "05h 30m"
+      },
+      "price": {
+        "amount": 700,
         "currency": "₹",
         "discount": "Best deal 10% Off"
       },
