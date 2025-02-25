@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#aaa {
+    padding: 5rem 0 !important;
+}
+
+.book {
+    background-color: #ededed;
+    padding: 8px 25px;
+    justify-content: space-between !important;
+    display: flex;
+}
+
+.book h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.card {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0px 25px;
+    display: flex;
+}
+
+.confirmation {
+    row-gap: 15px !important;
+}
+
+.Sleeper-bus {
+    border-bottom: 1px solid rgb(209, 201, 201);
+    padding: 20px 0px;
+}
+
+.Travels h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: black !important;
+    margin: 0 !important;
+}
+
+.Travels p {
+    margin: 0 !important;
+    font-size: 14px;
+    color: grey;
+}
+
+.Travels {
+    align-content: center !important;
+}
+
+.Travels-route {
+    border-bottom: 1px solid rgb(209, 201, 201);
+    padding: 20px 0px;
+}
+
+.route-data {
+    align-content: center;
+}
+
+.route img {
+    width: 36px !important;
+}
+
+.bus {
+    height: 30px !important;
+    width: 30px !important;
+    padding: 0 5px !important;
+}
+
+.route {
+    text-align: center !important;
+    padding-bottom: 5px;
+}
+
+.time h3 {
+    text-align: center !important;
+    color: #6A6A6A;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.pickup {
+    align-content: center;
+    line-height: 25px !important;
+}
+
+.pickup p {
+    margin: 0;
+    font-size: 13px;
+    color: grey;
+}
+
+.pickup h3 {
+    font-size: 14px !important;
+    margin: 0;
+    font-weight: 600;
+}
+
+.drop {
+    align-content: center;
+    text-align: end;
+    line-height: 25px !important;
+}
+
+.drop p {
+    margin: 0;
+    font-size: 13px;
+    color: grey;
+}
+
+.drop h3 {
+    font-size: 14px;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* ------------------- */
+
+.up-off {
+    padding: 20px 0;
+}
+
+
+.loaction {
+    padding: 0 !important;
+    align-content: center;
+}
+
+.pick-area {
+    align-content: center !important;
+    gap: 40px;
+}
+
+.pick-area h3 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.pick-area p {
+    margin: 0;
+    font-size: 13px;
+    color: grey;
+}
+
+.root-loac {
+    display: flex;
+}
+
+.up-off {
+    border-bottom: 1px solid rgb(209, 201, 201);
+    display: flex !important;
+}
+
+.Passenger-pick {
+    row-gap: 40px;
+}
+
+/* -------------------- */
+
+.location-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.location-marker {
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    border-radius: 50%;
+    position: relative;
+}
+
+.location-marker::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dotted-line {
+    width: 2px;
+    height: 50px;
+    border-left: 2px dotted gray;
+}
+
+/* -------------------- */
+
+.Passenger-data{
+    padding: 20px 0;
+}
+
+.p-data h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.p-Details{
+    line-height: 30px;
+}
+
+.p-Details p {
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0;
+}
+
+.p-Details span {
+    color: grey;
+    font-weight: 400;
+    padding-left: 5px;
+}
+
+.Seat{
+    text-align: end;
+    color: grey;
+    font-weight: 400 !important;
+}
+.Seat span{
+    font-size: 13px;
+    font-weight: bold;
+    color: black;
+}
