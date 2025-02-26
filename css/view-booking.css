@@ -111,6 +111,11 @@ header {
   font-size: 14px;
 }
 
+.text-gray {
+  color: #6a6a6a;
+}
+
+
 .primary-btn {
   background-color: var(--primary-color);
   color: white;
@@ -166,4 +171,34 @@ header {
 .location-details {
   width: 30%;
   text-align: right;
+}
+
+.upcoming-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #4788ff;
+  position: relative;
+  z-index: 2;
+  margin-right: 5px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #17ab66;
+  position: relative;
+  z-index: 2;
+  margin-right: 5px;
+}
+
+.k-cancel-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  position: relative;
+  z-index: 2;
+  margin-right: 5px;
 }
