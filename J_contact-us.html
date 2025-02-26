@@ -13,6 +13,8 @@
 </head>
 <body>
 
+    <section id="navbar"></section>
+
     <section id="J_contect">
 
         <div class="container">
@@ -113,7 +115,8 @@
 
     </section>
 
-    
+    <script type="module" src="./js/global-auth.js"></script>
+
 </body>
 
 <script>
@@ -123,5 +126,15 @@
         separateDialCode: true, // Shows separate dial code
         preferredCountries: ["in", "us", "gb"], // Preferred countries
     });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+            fetch('login.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+        });
 </script>
 </html>
