@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bus Booking Details</title>
+    <link rel="stylesheet" href="css/view-booking.css" />
+    <link rel="stylesheet" href="css/Home.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css "
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css"
+    />
+  </head>
+  <body>
+    <section id="top-bar">
+      <div class="container">
+        <div class="row contact-info">
+          <div class="col-12 col-sm-4 col-md-3 our">
+            <span>WELCOME TO OUR BUS!</span>
+          </div>
+
+          <div class="col-12 col-sm-8 col-md-5 info">
+            <span>example123@gmail.com</span>
+            <span>+91 8405820412</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <header>
+      <div class="container header-content">
+        <a href="/" class="logo">LOGO</a>
+        <nav class="main-nav">
+          <a href="Home.html" class="active">Home</a>
+          <a href="about-us.html">About Us</a>
+          <a href="contact-us.html">Contact Us</a>
+        </nav>
+        <div class="user-info">
+          <i class="fas fa-user-circle"></i>
+          <span>Hi, Johan</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="booking-section">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="m-0">Booking Details</h5>
+              <span class="text-danger d-flex align-items-center">
+                <div class="k-cancel-dot"></div>
+                <b>Cancelled</b></span
+              >
+            </div>
+
+            <!-- Updated journey details section with start and end points -->
+            <div class="journey-details">
+              <div class="time-details">
+                <div class="time-label">10:00 AM 10 Feb 2025</div>
+                <div class="location">Surat</div>
+                <div class="text-muted small">Shyamdham Mandir, Jakatnaka</div>
+              </div>
+
+              <div class="journey-path">
+                <div class="start-point"></div>
+                <div class="journey-line"></div>
+                <div class="bus-icon">🚌</div>
+                <div class="journey-line"></div>
+                <div class="end-point"></div>
+                <div
+                  class="time-info text-muted small text-center"
+                  style="position: absolute; bottom: -20px; width: 100%"
+                >
+                  05h 30m
+                </div>
+              </div>
+
+              <div class="location-details">
+                <div class="time-label">03:30 PM 10 Feb 2025</div>
+                <div class="location">Ankleshwar</div>
+                <div class="text-muted small">Lalita Chowkdi</div>
+              </div>
+            </div>
+
+            <div class="seat-info mt-3">
+              Seat Selected: • 32 • 33 • 34
+              <span class="ms-4">Bus Operator: Patel Travellers</span>
+            </div>
+          </div>
+
+          <div class="booking-section">
+            <h5>Passenger Details</h5>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Gender</th>
+                  <th>Age</th>
+                  <th>Seat No.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Shyam Patel</td>
+                  <td>Male</td>
+                  <td>28</td>
+                  <td>32</td>
+                </tr>
+                <tr>
+                  <td>Hina Patel</td>
+                  <td>Female</td>
+                  <td>32</td>
+                  <td>33</td>
+                </tr>
+                <tr>
+                  <td>Shubam Patel</td>
+                  <td>Male</td>
+                  <td>28</td>
+                  <td>34</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="booking-section">
+            <h5>Contact Details</h5>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Email :</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  value="example123@gmail.com"
+                  readonly
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Phone No. :</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  value="+91 95555 55555"
+                  readonly
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="fare-details mb-4">
+            <h5>Fare Details</h5>
+            <div class="d-flex justify-content-between mb-2">
+              <span>Onward Fare</span>
+              <span>₹6000</span>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <span>Others</span>
+              <span>₹60</span>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between fw-bold mb-3">
+              <span>Total Payable Amount</span>
+              <span>₹6060</span>
+            </div>
+          </div>
+          <div class="">
+            <div class="fare-details">
+              <h5>Cancellation Details</h5>
+              <div class="k-cancel-details">
+                <div class="k-cancel-seats">
+                  <p class="text-gray fs-5 mb-2">Cancelled Seats</p>
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <p class="fw-bold">
+                        Shyam Patel
+                        <span class="text-gray fw-normal ps-2">(M,23)</span>
+                      </p>
+                    </div>
+                    <div>
+                      <p class="text-gray">
+                        Seat : <b class="text-black">32</b>
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <p class="m-0 fs-5 text-gray">Reason</p>
+                    </div>
+                    <div>
+                      <p class="k-reason fw-bold">
+                        You booked a ticket for the wrong bus or time
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <p class="m-0 fs-5 text-gray">Description</p>
+                    </div>
+                    <div>
+                      <p class="k-reason fw-bold">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting indutry for demo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4">
+              <a href="k-invoice.html" class="outline-btn d-block mb-2 text-center"
+                >Download Invoice</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

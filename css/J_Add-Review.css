@@ -101,9 +101,11 @@ body {
     padding-bottom: 20px;
 }
 
+
 .J_booking-id{
     padding: 20px 0px 0px 0px;
 }
+
 
 .J_booking-id p{
     color: #6A6A6A;
@@ -112,7 +114,8 @@ body {
     margin: 0 !important;
 }
 
-.J_booking-id span {
+
+.J_booking-id p span{
     color: #000000;
     font-size: 16px;
     font-weight: 400;

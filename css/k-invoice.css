@@ -1,0 +1,43 @@
+body {
+  font-size: 14px;
+}
+.ticket-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.booking-details {
+  margin-bottom: 20px;
+}
+.booking-row {
+  margin-bottom: 8px;
+}
+.passenger-table {
+  margin: 20px 0;
+}
+.fare-details {
+  border-top: 1px solid #dee2e6;
+  padding-top: 15px;
+}
+.fare-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.total-row {
+  font-weight: bold;
+  border-top: 1px solid #dee2e6;
+  padding-top: 8px;
+}
+.thank-you {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #666;
+}

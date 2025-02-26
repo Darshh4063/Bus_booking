@@ -1,0 +1,78 @@
+:root {
+  --primary-color: #b85c38;
+  --secondary-color: #cd7f32;
+}
+
+.top-bar {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.logo {
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: #666;
+}
+
+.nav-link.active {
+  color: var(--primary-color) !important;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.star-rating {
+  color: #ffd700;
+}
+
+.star-empty {
+  color: #ddd;
+}
+
+.k-box-shadow {
+  background: #ffffff;
+  box-shadow: -4px 38px 74px 100px #9a9a9a17;
+  padding: 24px;
+}
+
+.k-submit {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 6px 15px;
+}
+
+.cancel-btn {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background: none;
+  padding: 6px 15px;
+}
+
+.k-border-bottom {
+  border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 768px) and (min-width: 5px) {
+  .top-bar {
+   display: none;
+  }
+}
