@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-#aaa {
+#A-Checkout-Payment {
     padding: 5rem 0 !important;
 }
 
@@ -27,6 +27,126 @@
     display: flex;
 }
 
+
+.Checkout{
+    row-gap: 20px;
+}
+/* ------------------------------- */
+
+.nav {
+    border-bottom: 1px solid rgb(216, 216, 216) !important;
+    text-align: center;
+}
+
+.nav-link {
+    padding: 20px 0 !important;
+    color: black !important;
+    font-weight: 700;
+    font-size: 16px !important;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid #b35e3a !important;
+}
+
+
+.Card-holder {
+    row-gap: 10px;
+    padding: 20px 0;
+}
+
+.Credit-data label {
+    font-weight: 700;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+.Credit-data input {
+    width: 100% !important;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none !important;
+    border: 1px solid grey !important;
+    border-color: grey !important;
+}
+
+
+.Pay-Amount {
+    padding: 20px 0;
+}
+
+.pay {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #c16c49;
+    border-radius: 5px;
+    padding: 5px 0 !important;
+}
+
+.pay a {
+    text-decoration: none;
+    color: white !important;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* -------------------- */
+
+.upi {
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+.upi label {
+    font-size: 14px;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+.upi .input-group {
+    display: flex;
+    border: 1px solid #2e2d2d;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.upi .input-group input {
+    flex: 1;
+    padding: 7px 10px;
+    width: 100%;
+    border: none;
+}
+
+.upi .input-group select {
+    padding: 5px;
+    border: none;
+    border-left: 1px solid grey !important;
+}
+
+/* -------------------- */
+
+.Banking {
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+.Banking select {
+    width: 100%;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+}
+
+.bank {
+    margin: 0 auto;
+}
+
+
+
+/* ------------------------------------------ */
 .confirmation {
     row-gap: 15px !important;
 }
@@ -198,7 +318,7 @@
 
 /* -------------------- */
 
-.Passenger-data{
+.Passenger-data {
     padding: 20px 0;
 }
 
@@ -207,7 +327,7 @@
     font-weight: 700;
 }
 
-.p-Details{
+.p-Details {
     line-height: 30px;
 }
 
@@ -223,13 +343,91 @@
     padding-left: 5px;
 }
 
-.Seat{
+.Seat {
     text-align: end;
     color: grey;
     font-weight: 400 !important;
 }
-.Seat span{
+
+.Seat span {
     font-size: 13px;
     font-weight: bold;
     color: black;
+}
+
+/* ----------------------------- */
+
+
+.Fare-Total {
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(209, 201, 201);
+    row-gap: 5px;
+}
+
+.Total-Amount {
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.Fare {
+    color: grey;
+    font-size: 16px;
+    margin: 0;
+}
+
+.Amount {
+    text-align: end;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0;
+
+}
+
+
+
+
+/* --------------------- */
+
+
+@media (max-width: 425px) {
+
+    .nav-item a{
+        font-size: 12px !important;
+    }
+
+    .Credit-data label {
+        font-size: 12px !important;
+    }
+
+    .Card-holder{
+        flex-wrap: wrap !important;
+    }
+
+    .Credit-data input{
+        width: 100% !important;
+    }
+
+}
+
+
+
+@media (max-width: 375px) {
+
+    .nav-item a{
+        font-size: 12px !important;
+    }
+
+    .Credit-data label {
+        font-size: 12px !important;
+    }
+
+    .Card-holder{
+        flex-wrap: wrap !important;
+    }
+
+    .Credit-data input{
+        width: 100% !important;
+    }
+
 }
