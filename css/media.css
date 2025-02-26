@@ -4,7 +4,7 @@
     html {
         font-size: 50%;
     }
-    #header1{
+    #D-header1{
         padding: 15px 0;
     }
 
@@ -53,34 +53,34 @@
         display: none !important;
     }
 
-    .d-modal-content {
+    .D-modal-content {
         width: 368px !important;
         height: 502px !important;
     }
-    .modal {
+    .D-modal {
         top: 150px !important;
         left: -0% !important;
         justify-items: center;
     }
-    .countr {
+    .D-countr {
        width: 300px;
         margin-top: 6px;
         padding: 8px;
     }
-    .countr input {
+    .D-countr input {
         width: 77%;
     }
-    .modal-body button {
+    .D-modal-body button {
         padding: 10px 100px;
         margin: 4rem 2rem 2.5rem 2rem;
     }
     .line {
         width: 83px;
     }
-    .modal-body {
+    .D-modal-body {
         padding: 19px 32px !important;
     }
-    .modal-body p {
+    .D-modal-body p {
         margin-bottom: 4.4rem;
     }
 
@@ -89,29 +89,29 @@
 
 
 @media screen and (max-width: 375px) {
-    .d-modal-content {
+    .D-modal-content {
         width: 285px !important;
         height: 500px !important;
     }
-    .modal-body {
+    .D-modal-body {
         padding: 20px 16px !important;
     }
-    .countr {
+    .D-countr {
         width: 249px;
         padding: 8px;
     }
-    .countr input {
+    .D-countr input {
         width: 70%;
     }
-    .modal-body button {
+    .D-modal-body button {
         padding: 10px 60px;
         margin: 3rem 3.5rem 2.5rem 3.5rem;
         width: 192px;
     }
-    .modal-body p {
+    .D-modal-body p {
         margin-bottom: 3.4rem;
     }
-    .modal{
+    .D-modal{
         justify-items: center;
     }
     .line {
@@ -146,21 +146,21 @@
         font-size: 13px;
     }
 
-    .modal-body {
+    .D-modal-body {
         font-family: Lexend Deca;
         padding: 21px 31px !important;
     }
 
-    .modal-body p {
+    .D-modal-body p {
         margin-bottom: 3.4rem;
     }
 
-    .countr {
+    .D-countr {
         border: 1px solid #000;
         width: 204px;
     }
 
-    .modal-header img {
+    .D-modal-header img {
         width: 315px;
         height: 628px;
         margin-top: -45px;
@@ -174,21 +174,21 @@
         text-align: start;
     }
 
-    .modal {
+    .D-modal {
         top: 160px !important;
         left: -3% !important;
     }
 
-    .countr input {
+    .D-countr input {
         width: 67%;
     }
-    .modal-header img {
+    .D-modal-header img {
         width: 267px;
         height: 500px;
         margin-top: -40px;
     }
 
-    .modal-body button {
+    .D-modal-body button {
         padding: 15px 67px;
         margin-top: 33px;
         margin-bottom: 22px;
@@ -199,17 +199,17 @@
         margin: 0 1rem;
     }
 
-    .d-modal-content {
+    .D-modal-content {
         width: 536px !important;
         height: 502px !important;
     }
 
-    .modal-body p {
+    .D-modal-body p {
         font-size: 12px;
         margin-bottom: 3.4rem;
     }
 
-    .d-modal-content .btn-close {
+    .D-modal-content .btn-close {
         padding: 2.5rem 2.5rem;
         margin: 0 0 0rem  auto;
     }
@@ -245,21 +245,21 @@
         font-size: 13px;
     }
 
-    .modal-body {
+    .D-modal-body {
         font-family: Lexend Deca;
         padding: 27px 31px !important;
     }
 
-    .modal-body p {
+    .D-modal-body p {
         margin-bottom: 3.4rem;
     }
 
-    .countr {
+    .D-countr {
         border: 1px solid #000;
         width: 250px;
     }
 
-    .modal-header img {
+    .D-modal-header img {
         width: 315px;
         height: 529px;
         margin-top: -45px;
@@ -273,7 +273,7 @@
         text-align: start;
     }
 
-    .modal {
+    .D-modal {
         top: 133px !important;
         left: -9% !important;
     }
@@ -282,7 +282,7 @@
         width: 67%;
     }
 
-    .modal-body button {
+    .D-modal-body button {
         padding: 15px 86px;
         margin-top: 33px;
         margin-bottom: 22px;
@@ -293,7 +293,7 @@
         margin: 0 1rem;
     }
 
-    .d-modal-content {
+    .D-modal-content {
         width: 633px !important;
         height: 531px !important;
     }
@@ -326,21 +326,21 @@
         font-size: 13px;
     }
 
-    .modal-body {
+    .D-modal-body {
         font-family: Lexend Deca;
         padding: 27px 31px !important;
     }
 
-    .modal-body p {
+    .D-modal-body p {
         margin-bottom: 3.4rem;
     }
 
-    .countr {
+    .D-countr {
         border: 1px solid #000;
         width: 280px;
     }
 
-    .modal-header img {
+    .D-modal-header img {
         width: 344px;
         height: 563px;
         margin-top: -45px;
@@ -354,16 +354,16 @@
         text-align: center;
     }
 
-    .modal {
+    .D-modal {
         top: 150px !important;
         left: -9% !important;
     }
 
-    .countr input {
+    .D-countr input {
         width: 67%;
     }
 
-    .modal-body button {
+    .D-modal-body button {
         padding: 15px 104px;
         margin-top: 33px;
         margin-bottom: 22px;
@@ -373,7 +373,7 @@
         margin: 0 1rem;
     }
 
-    .d-modal-content {
+    .D-modal-content {
         width: 690px !important;
         height: 565px !important;
     }
@@ -382,9 +382,12 @@
         padding: 9px 21.5px;
     }
 
-    .d-modal-content .btn-close {
+    .D-modal-content .btn-close {
         margin: -.5rem -0.5rem -.5rem auto;
     }
+
+
+
 
 }
 
@@ -398,7 +401,7 @@
         font-size: 14px;
     }
 
-    .d-modal-content {
+    .D-modal-content {
         width: 820px !important;
         height: 602px !important;
     }
@@ -406,21 +409,21 @@
     .inp{
         text-align: start;
     }
-    .modal-body {
+    .D-modal-body {
         padding: 33px 49px !important;
     }
 
-    .modal-body p {
+    .D-modal-body p {
         margin-bottom: 3.4rem;
         font-size: 16px;
     }
 
-    .countr {
+    .D-countr {
         border: 1px solid #000;
         width: 31rem;
     }
 
-    .modal-header img {
+    .D-modal-header img {
         width: 410px;
         height: 600px;
         margin-top: -49px;
@@ -430,7 +433,7 @@
         width: 84px;
     }
 
-    .modal {
+    .D-modal {
         top: 150px !important;
         left: -12% !important;
     }
@@ -439,7 +442,7 @@
         width: 80%;
     }
 
-    .modal-body button {
+    .D-modal-body button {
         padding: 12px 89px;
         margin: 5rem 3rem 3rem 3rem;
     }
@@ -450,15 +453,20 @@
     
 
 
-    .d-modal-content .btn-close {
+    .D-modal-content .btn-close {
         margin: -.5rem 1.5rem -.5rem auto;
     }
 
+
+    .J_booking-image img{
+        width: 591px;
+    }
 }
 
 
 /* xxl 1400px-any 1rem=10px */
 @media screen and (min-width: 1400px) {
-    
-
+    .J_booking-image img{
+        width: 100%;
+    }
 }

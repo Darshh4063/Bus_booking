@@ -37,9 +37,8 @@
       console.error(
         "JSON Server is not running. Authentication will not work properly."
       );
-      alert(
-        "Authentication server is not available. Please start JSON Server."
-      );
+      console.log( "Authentication server is not available. Please start JSON Server.");
+    
       return;
     }
 

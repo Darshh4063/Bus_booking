@@ -28,12 +28,12 @@
 .info {
     text-align: end;
 }
-.contact-info {
+.D-contact-info {
     justify-content: space-between !important;
     display: flex;
     gap: 20px;
 }
-.contact-info span {
+.D-contact-info span {
     font-size: 14px;
 }
 .info .padi{
@@ -44,7 +44,7 @@
     border-left: 1px solid white;
 }
 
-#header1{
+#D-header1{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,7 +98,7 @@
 
 /* --------------- */
 
-.modal {
+.D-modal {
     position: fixed;
     top: 230px !important;
     left: -12% !important;
@@ -124,10 +124,10 @@
     border: 1px solid #C16C49B2;
     padding: 9px 21.5px;   
 }
-.d-button:hover{
+.D-button:hover{
    color: #9e5034 !important;
 }
-.d-modal-content .d-btn-close{
+.D-modal-content .d-btn-close{
     color: #9e5034;
 }
 .account-btn button a{
@@ -140,23 +140,23 @@
 .account-btn button a i{
     margin-right: 2px;
 }
-.modal-header img{
+.D-modal-header img{
     width: 100%;
     height: 628px;
 }
-.modal-header{
+.D-modal-header{
     padding: 0 !important;
 }
-.modal-header {
+.D-modal-header {
    border-bottom: none !important;
     border-top-left-radius:none !important;
     border-top-right-radius:none !important;
 }
-.d-modal-content {
+.D-modal-content {
     width: 996px !important;
     height: 630px !important;
 }
-.d-modal-content {
+.D-modal-content {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -174,29 +174,29 @@ input{
 select{
     border: none !important;
 }
-.countr{
+.D-countr{
     border: 1px solid #000;
     padding: 11px ;
     border-radius: 4px;
     width: 400px;
     margin-top: 6px;
 }
-.media_ico img{
+.D-media_ico img{
     width: 60px;
     height: 60px ;
 }
-.modal-body{
+.D-modal-body{
     font-family: Lexend Deca;
     padding: 33px 49px !important;
 }
-.modal-body h2{
+.D-modal-body h2{
     font-weight: 600;
     font-size: 22px;
     line-height: 30px;
     color: #c16c49;
     text-align: center;   
 }
-.modal-body p{
+.D-modal-body p{
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -210,19 +210,19 @@ select{
     line-height: 22px;
     color: #000;
 }
-.countr select option{
+.D-countr select option{
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
     text-align: center;
 }
-.countr input{
+.D-countr input{
     font-size: 14px;
     font-weight: 300;
     line-height: 22px;
     width: 84%;
 }
-.modal-body button{
+.D-modal-body button{
     background-color: #c16c49;
     font-size: 16px;
     color: #fff;
@@ -243,13 +243,13 @@ select{
     margin:0 5rem;
     display: ruby;
 }
-.media_ico{
+.D-media_ico{
     margin-top: 33px !important;justify-content: center;
 }
-.undo{
+.D-undo{
     align-content: baseline;
 }
-.undo h2{
+.D-undo h2{
     font-size: 14px;
     line-height: 17.5px;
     font-weight: 500;
@@ -257,7 +257,7 @@ select{
     text-decoration: none !important;
     margin-top: 30px;
 }
-.undo span{
+.D-undo span{
     color: #9e5034;
     text-decoration: underline;
 }
@@ -280,13 +280,18 @@ select{
     opacity: .5;
 }
 
-.d-modal-content .btn-close {
+.D-modal-content .btn-close {
     padding: 2.5rem 2.5rem;
     margin: 0 4.5rem 0 auto;
+}
+.D-contact-info a {
+    color: #FFF !important;
+    text-decoration: none;
 }
 
 
 /* -------- header ------- */
+
 
 .navbar-nav .nav-item a{
     text-decoration: none;

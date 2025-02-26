@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Lexend Deca !important;
     background-color: #FAFAFA;
 }
 
@@ -199,4 +199,11 @@ body {
     color: #6A6A6A;
     font-size: 18px;
     font-weight: 300;
+}
+
+.J_booking-image{
+    width: 100%;
+}
+.J_booking-image image{
+    width: 100%;
 }
