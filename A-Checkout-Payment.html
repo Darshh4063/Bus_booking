@@ -8,19 +8,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css ">
+
     <title>Document</title>
+
 </head>
 
 <body>
 
-
-    <section id="aaa">
+    <section id="A-Checkout-Payment">
 
         <div class="container">
 
-            <div class="row">
+            <div class="row Checkout">
 
-                <div class="col-7 Payment-Option">
+                <div class="col-12 col-xl-7 Payment-Option">
                     <div class="Payment-data">
                         <div class="book">
                             <h2>Payment Option</h2>
@@ -29,13 +30,123 @@
                         <div class="card">
 
 
+                            <div class="Payment-Option">
+
+                                <ul class="row nav">
+                                    <li class="col-6 col-md-4 nav-item">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#card">Credit/Debit
+                                            Card</a>
+                                    </li>
+                                    <li class="col-6 col-md-4 nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#upi">UPI</a>
+                                    </li>
+                                    <li class="col-6 col-md-4 nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#netbanking">Net Banking</a>
+                                    </li>
+                                </ul>
+
+
+                                <div class="tab-content mt-3">
+
+                                    <div id="card" class="tab-pane fade show active">
+
+
+                                        <div class="row Card-holder">
+
+                                            <div class="col-12 col-md-6 Credit-data">
+                                                <label>Card holder Name</label>
+                                                <input type="text" placeholder="Enter name same as on card">
+                                            </div>
+
+                                            <div class="col-12 col-md-6 Credit-data">
+                                                <label>Card No.</label>
+                                                <input type="password" placeholder="**** **** **** ****">
+                                            </div>
+
+                                            <div class="col-12 col-md-6 Credit-data">
+                                                <label>Expiry Date</label>
+                                                <input type="text" placeholder="MM / YYYY">
+                                            </div>
+
+                                            <div class="col-12 col-md-6 Credit-data">
+                                                <label>CVV</label>
+                                                <input type="password" placeholder="***">
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="Pay-Amount">
+                                            <div class="col-12 col-md-6 pay">
+                                                <a href="#">Pay ₹6060</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div id="upi" class="tab-pane fade">
+
+
+                                        <div class="col-12 col-md-6 upi">
+
+                                            <label>UPI ID</label>
+                                            <div class="input-group">
+                                                <input type="text" id="upi-id" placeholder="Enter UPI ID">
+                                                <select>
+                                                    <option>@oksbi</option>
+                                                    <option>@okhdfc</option>
+                                                    <option>@okicici</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="Pay-Amount">
+                                            <div class="col-12 col-md-6 pay">
+                                                <a href="#">Pay ₹6060</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div id="netbanking" class="tab-pane fade">
+
+                                        <div class="Banking">
+                                            <div class="col-12 col-md-6 bank">
+                                                <select>
+                                                    <option selected disabled>Select bank</option>
+                                                    <option value="bank1">Citi Bank</option>
+                                                    <option value="bank2">Wells Fargo Bank</option>
+                                                    <option value="bank3">Capital One Bank</option>
+                                                    <option value="bank4">TD Bank</option>
+                                                    <option value="bank5">Wells Fargo Bank</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="Pay-Amount">
+                                            <div class="col-12 col-md-6 pay">
+                                                <a href="#">Pay ₹6060</a>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
                         </div>
 
                     </div>
                 </div>
 
 
-                <div class="col-5 Booking-Details">
+                <div class="col-12 col-xl-5 Booking-Details">
 
                     <div class="row confirmation">
 
@@ -141,54 +252,37 @@
 
                             <div class="card">
 
+                                <div class="row Fare-Total">
+                                    <h3 class="col-8 Fare">Onward Fare</h3>
+                                    <p class="col-4 Amount">₹6000</p>
+                                    <h3 class="col-8 Fare">Others</h3>
+                                    <p class="col-4 Amount">₹60</p>
+                                </div>
 
+
+                                <div class="row Total-Amount">
+                                    <h3 class="col-8 Fare">Total Payable Amount</h3>
+                                    <p class="col-4 Amount">₹6060</p>
+                                </div>
                             </div>
 
                         </div>
 
                     </div>
 
-
-
-
                 </div>
-
-
 
             </div>
 
         </div>
+
     </section>
 
+
+    <!-- ------------------------------ -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
 </html>
-
-
-
-
-
-<!-- <div class="root-loac">
-                                        <div class="loaction">
-                                            <div class="location-container">
-                                                <img src="./image/loaction.png" alt="">
-                                                <div class="dotted-line"></div>
-                                                <img src="./image/loaction.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-6 pick-area">
-                                            <h3>Pick up</h3>
-                                            <p>Shyamdham Mandir, Jakatnaka</p>
-                                        </div>
-                                    </div> -->
-
-
-<!-- <div class="root-loac">
-                                        <div class="loaction">
-                                        </div>
-                                        <div class="col-6 pick-area">
-                                            <h3>Drop - Off</h3>
-                                            <p>Lalita Chowkdi</p>
-                                        </div>
-                                    </div> -->
