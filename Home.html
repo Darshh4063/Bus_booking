@@ -81,7 +81,7 @@
 
     <section id="navbar"></section>
 
-    <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+    <!-- <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
         <div class="modal-dialog">
           <div class="d-modal-content">
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
@@ -134,10 +134,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- OTP Modal -->
-<div class="d-modal fade" id="otpModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+   <!-- <div class="d-modal fade" id="otpModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
@@ -166,7 +166,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
     <!-- --------------------------hero section--------------------------- -->
 
@@ -229,25 +229,29 @@
 
             <div class="row feature-data">
 
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 feature">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 feature position-relative">
+                    <img src="k_images/hover-box.png" alt="" class="position-absolute k-hover-box" width="100px">
                     <img src="./image/feature1.png" alt="Relax Icon" />
                     <h3>Relax & Have Fun</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 feature">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 feature position-relative">
+                    <img src="k_images/hover-box.png" alt="" class="position-absolute k-hover-box" width="100px">
                     <img src="./image/feature2.png" alt="Relax Icon" />
                     <h3>Explore your destinations</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 feature">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 feature position-relative">
+                    <img src="k_images/hover-box.png" alt="" class="position-absolute k-hover-box" width="100px">
                     <img src="./image/feature3.png" alt="Relax Icon" />
                     <h3>24/7 Support</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 feature">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 feature position-relative">
+                    <img src="k_images/hover-box.png" alt="" class="position-absolute k-hover-box" width="100px">
                     <img src="./image/feature4.png" alt="Relax Icon" />
                     <h3>Enjoy at great price</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -628,7 +632,7 @@
 
     <!-- --------------------footer-------------------------- -->
 
-    <section id="foot">
+    <!-- <section id="foot">
         <div class="container">
             <div class="row footer_data">
                 <div class="col-lg-4 col-md-6  head_logo">
@@ -691,7 +695,9 @@
         <div class="last_line">
             <p>All right reserved @ 2025</p>
         </div>
-    </section>
+    </section> -->
+
+    <section id="foot"></section>
 
     <!-- ------------------------------------------------------ -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -704,6 +710,7 @@
             document.getElementById("dateInput").showPicker();
         });
 
+        // header call
         document.addEventListener('DOMContentLoaded', function () {
             fetch('login.html')
                 .then(response => response.text())
@@ -711,6 +718,16 @@
                     document.getElementById('navbar').innerHTML = data;
                 })
                 .catch(error => console.error('Error loading header:', error));
+        });
+        
+        // footer call
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('Footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('foot').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
         });
 
     </script>
@@ -725,7 +742,9 @@
                 navText: ["<div class='nav-btn prev-slide'>&#10094;</div>", "<div class='nav-btn next-slide'>&#10095;</div>"],
                 responsive: {
                     0: {
-                        items: 1
+                        items: 1,
+                        autoplay: true,
+                        nav: false
                     },
                     768: {
                         items: 2

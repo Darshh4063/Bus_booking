@@ -32,7 +32,7 @@
   </head>
   <body>
     <!-- Top Banner -->
-    <div class="top-banner">
+    <!-- <div class="top-banner">
       <div class="container">
         <div class="d-flex align-items-center justify-content-between">
           <div>
@@ -50,10 +50,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Header -->
-    <header>
+    <!-- <header>
       <div class="container header-content">
         <a href="/" class="logo">LOGO</a>
         <nav class="main-nav">
@@ -66,7 +66,9 @@
           <span>Hi, Johan</span>
         </div>
       </div>
-    </header>
+    </header> -->
+
+    <section id="navbar"></section>
 
     <!-- Main Content -->
     <div class="container main-container">
@@ -511,6 +513,15 @@
           window.location.href = "Home.html";
         });
       }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("login.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading header:", error));
+      });
     </script>
 
     <!-- Bootstrap JS and Popper.js -->
@@ -519,5 +530,6 @@
     <!-- change password js -->
     <script src="js/change-password.js"></script>
     <script type="module" src="./js/profile-handler.js"></script>
+    <script type="module" src="./js/global-auth.js"></script>
   </body>
 </html>

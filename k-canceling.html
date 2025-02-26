@@ -20,7 +20,7 @@
     />
   </head>
   <body>
-    <section id="top-bar">
+    <!-- <section id="top-bar">
       <div class="container">
         <div class="row contact-info">
           <div class="col-12 col-sm-4 col-md-3 our">
@@ -48,7 +48,9 @@
           <span>Hi, Johan</span>
         </div>
       </div>
-    </header>
+    </header> -->
+
+    <section id="navbar"></section>
 
     <div class="container mt-4">
       <div class="row">
@@ -219,7 +221,9 @@
               </div>
             </div>
             <div class="mt-4">
-              <a href="k-invoice.html" class="outline-btn d-block mb-2 text-center"
+              <a
+                href="k-invoice.html"
+                class="outline-btn d-block mb-2 text-center"
                 >Download Invoice</a
               >
             </div>
@@ -229,5 +233,17 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./js/global-auth.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("login.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading header:", error));
+      });
+    </script>
   </body>
 </html>
