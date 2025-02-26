@@ -25,11 +25,11 @@ body {
     width: 58%;
     margin: 0 auto;
 }
-.aaa{
+.Frequently-content{
     padding-top: 24px;
     background-color: #FAFAFA !important;
 }
-.bbb{
+.FAQ-content{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     border: 1px solid #FAFAFA !important;
     background-color: #FFFFFF;
@@ -51,6 +51,10 @@ body {
     outline: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) !important;
    
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0);
 }
 
 /* ------------------- */
@@ -76,7 +80,7 @@ body {
     .Frequently h4 {
         font-size: 24px;
     }
-    .aaa {
+    .Frequently-content {
         padding-top: 18px;
     }
 }

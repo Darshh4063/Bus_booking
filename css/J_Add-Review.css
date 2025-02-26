@@ -101,17 +101,19 @@ body {
     padding-bottom: 20px;
 }
 
-.J_ooking-id{
-    padding: 20px 0px 0px ;
+
+.J_booking-id{
+    padding: 20px 0px 0px 0px;
 }
+
 
 .J_booking-id p{
     color: #6A6A6A;
     font-size: 16px;
     font-weight: 300;
     margin: 0 !important;
-    
 }
+
 
 .J_booking-id p span{
     color: #000000;
@@ -218,6 +220,7 @@ li::marker{
 
 .J_Description-box{
     padding-top: 10px !important;
+    padding-bottom: 40px;
 }
 
 
@@ -236,7 +239,6 @@ li::marker{
 .J_Rate-Review-btn{
     display: flex;
     justify-content: center ;
-    padding-top: 40px;
     gap: 40px;
 }
 

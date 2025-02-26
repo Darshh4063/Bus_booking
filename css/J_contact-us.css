@@ -32,7 +32,7 @@ body {
     margin: 0 auto;
 }
 
-.J_contact-us{
+.J_contact-us {
     justify-content: center;
     gap: 30px;
 }
@@ -116,18 +116,40 @@ body {
 }
 
 .J_details-box input {
-    border: 1px solid #6A6A6A;
+
+    outline: none;
+    border: 2px solid #ccc;
     border-radius: 4px;
     width: 95% !important;
     padding: 6px 10px;
 
 }
 
-.iti--allow-dropdown input, .iti--allow-dropdown input[type=text], .iti--allow-dropdown input[type=tel], .iti--separate-dial-code input, .iti--separate-dial-code input[type=text], .iti--separate-dial-code input[type=tel] {
-    padding-right: 131px !important;
-    /* padding-left: 52px; */
-    /* margin-left: 0; */
+.J_phone-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 95% !important;
 }
+
+.J_phone-container select {
+    border: none;
+    background: none;
+    font-size: 16px;
+    outline: none;
+    
+}
+
+.J_phone-container input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex: 1;
+    padding-left: 5px;
+    width: 100%;
+}
+
 
 .J_subject-box h2 {
     color: #000000;
@@ -139,7 +161,8 @@ body {
 }
 
 .J_subject-box input {
-    border: 1px solid #6A6A6A;
+    outline: none;
+    border: 2px solid #ccc;
     border-radius: 4px;
     width: 100%;
     padding: 6px 10px;
@@ -156,29 +179,30 @@ body {
 }
 
 .J_message-box textarea {
-    border: 1px solid #6A6A6A;
+    outline: none;
+    border: 2px solid #ccc;
     border-radius: 4px;
-    width: 100% ;
+    width: 100%;
     padding: 6px 10px;
 
 }
 
-.J_submit-button{
+.J_submit-button {
     padding-top: 40px;
 }
 
-.J_submit-button a{
-    border: 1px solid #C16C49;
+.J_submit-button a {
+    border: 2px solid #C16C49;
     border-radius: 4px;
     text-decoration: none;
-    padding: 10px 45px;
+    padding: 8px 43px;
     text-align: center;
     font-size: 16px;
     font-weight: 400;
     color: #C16C49 !important;
 }
 
-.J_submit-button a:hover{
+.J_submit-button a:hover {
     color: #FFFFFF !important;
     background-color: #C16C49;
 }
@@ -188,35 +212,21 @@ body {
 /* -------------------------- */
 
 /* xs 0-575px 1rem=8px*/
-@media screen and (max-width: 575px){
-    
-}
+@media screen and (max-width: 575px) {}
 
-@media screen and (max-width: 375px){
-   
-}
+@media screen and (max-width: 375px) {}
 
 /* sm 576-767px 1rem=8px */
-@media screen and (min-width: 576px){
-    
-}
+@media screen and (min-width: 576px) {}
 
 /*-md 768px-991px 1rem=9px */
-@media screen and (min-width: 768px){
-    
-}
+@media screen and (min-width: 768px) {}
 
 /* lg 992px-1199px 1rem=9px*/
-@media screen and (min-width: 5992px){
-    
-}
+@media screen and (min-width: 5992px) {}
 
 /* xl 1200px-1399px 1rem=10px*/
-@media screen and (min-width: 1200px){
-    
-}
+@media screen and (min-width: 1200px) {}
 
 /* xxl 1400px-any 1rem=10px */
-@media screen and (min-width: 1440px){
-    
-}
+@media screen and (min-width: 1440px) {}

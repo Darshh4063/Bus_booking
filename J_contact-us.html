@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-        
+
 </head>
+
 <body>
 
     <section id="navbar"></section>
@@ -78,14 +79,23 @@
                             <h2>Last Name</h2>
                             <input type="name" name="Lname" placeholder="Enter Last Name">
                         </div>
-                        
+
                     </div>
 
                     <div class="J_details">
-                        <div class="col-6 J_details-box">
+                        <div class="col-6 J_contact-details J_details-box">
                             <h2>Phone</h2>
-                            <input type="tel" id="J_phone" name="phone" placeholder="Enter your mobile no">
+                            <div class="col-12 J_phone-container">
+                                <select>
+                                    <option value="+91">+91</option>
+                                    <option value="+1">+1</option>
+                                    <option value="+44">+44</option>
+                                    <option value="+61">+61</option>
+                                </select>
+                                <input type="text" placeholder="Enter your mobile no.">
+                            </div>
                         </div>
+
                         <div class="col-6 J_details-box">
                             <h2>Email</h2>
                             <input type="email" name="email" placeholder="Enter your email">
@@ -96,7 +106,7 @@
                         <h2>Subject</h2>
                         <input type="Name" name="subject" placeholder="Enter Subject">
                     </div>
-                    
+
                     <div class="col-12 J_message-box">
                         <h2>Message</h2>
                         <textarea name="Message" placeholder="Enter Message..."></textarea>
