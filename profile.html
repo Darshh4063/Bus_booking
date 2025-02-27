@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/model.css" />
     <!-- change password css -->
     <link rel="stylesheet" href="css/password-change.css" />
+    <!-- header login css -->
+    <link rel="stylesheet" href="css/k-login.css" />
+    <link rel="stylesheet" href="css/Home.css">
     <!-- Include Font Awesome for icons -->
     <link
       rel="stylesheet"
@@ -31,44 +34,407 @@
     />
   </head>
   <body>
-    <!-- Top Banner -->
-    <!-- <div class="top-banner">
+    <section id="top-bar">
       <div class="container">
-        <div class="d-flex align-items-center justify-content-between">
-          <div>
-            <p class="m-0">WELCOME TO OUR BUS!</p>
+        <div class="row contact-info">
+          <div class="col-12 col-sm-4 col-md-3 our">
+            <span>WELCOME TO OUR BUS!</span>
           </div>
-          <div class="contact-info">
-            <a href="mailto:example123@gmail.com">
-              <i class="fas fa-envelope"></i>
-              example123@gmail.com
-            </a>
-            <a href="tel:+919854255555">
-              <i class="fas fa-phone"></i>
-              +91 98542 55555
-            </a>
+
+          <div class="col-12 col-sm-8 col-md-5 info">
+            <span>example123@gmail.com</span>
+            <span>+91 8405820412</span>
           </div>
         </div>
       </div>
-    </div> -->
+    </section>
+    <!-- Header Section -->
+    <section id="header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <div class="logo">
+              <h1>LOGO</h1>
+            </div>
 
-    <!-- Header -->
-    <!-- <header>
-      <div class="container header-content">
-        <a href="/" class="logo">LOGO</a>
-        <nav class="main-nav">
-          <a href="Home.html" class="active">Home</a>
-          <a href="/about">About Us</a>
-          <a href="/contact">Contact Us</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="Home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="J_about-us.html">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="J_contact-us.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="d-flex d-lg-flex flex-xl-column">
+              <div class="text-end">
+                
+                <div class="account-btn">
+                  <button><i class="fa-solid fa-user"></i> Account</button>
+                </div>
+              </div>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
         </nav>
-        <div class="user-info">
-          <i class="fas fa-user-circle"></i>
-          <span>Hi, Johan</span>
+      </div>
+    </section>
+    <!-- Login Modal -->
+    <div
+      class="ke modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="k-modal-content">
+              <!-- Left Side - Bus Image -->
+              <div class="k-modal-image">
+                <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+              </div>
+
+              <!-- Right Side - Sign In Form -->
+              <div class="k-modal-form">
+                <!-- Close Button -->
+                <button
+                  type="button"
+                  class="k-close-btn"
+                  data-bs-dismiss="modal"
+                >
+                  &times;
+                </button>
+
+                <!-- Form Header -->
+                <div class="k-form-header">
+                  <h2 class="k-title">Sign In</h2>
+                  <p class="k-subtitle">Login to an existing account</p>
+                </div>
+
+                <!-- Form Fields -->
+                <form class="k-login-form inp">
+                  <div class="k-form-group">
+                    <label for="mobile" class="k-label">Mobile No</label>
+                    <div class="k-input-group">
+                      <div class="k-country-code">+91</div>
+                      <input
+                        type="text"
+                        class="k-input"
+                        id="mobile"
+                        placeholder="Enter your mobile no"
+                      />
+                    </div>
+                  </div>
+
+                  <button type="button" class="k-submit-btn">Continue</button>
+
+                  <!-- OR Divider -->
+                  <div class="k-divider">
+                    <span>OR</span>
+                  </div>
+
+                  <!-- Social Login -->
+                  <div class="k-social-login">
+                    <button type="button" class="k-social-btn k-google">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                        alt="Google"
+                      />
+                    </button>
+                    <button type="button" class="k-social-btn k-facebook">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                        alt="Facebook"
+                      />
+                    </button>
+                    <button type="button" class="k-social-btn k-apple">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                        alt="Apple"
+                      />
+                    </button>
+                  </div>
+
+                  <!-- Sign Up Link -->
+                  <div class="k-signup-link">
+                    Didn't have any account?
+                    <a href="#" id="showRegisterModal">Sign up</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </header> -->
+    </div>
 
-    <section id="navbar"></section>
+    <!-- OTP Modal -->
+    <div
+      class="modal fade"
+      id="otpModal"
+      tabindex="-1"
+      aria-labelledby="otpModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="k-modal-content">
+              <!-- Left Side - Bus Image -->
+              <div class="k-modal-image">
+                <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+              </div>
+
+              <!-- Right Side - OTP Form -->
+              <div class="k-modal-form">
+                <!-- Close Button -->
+                <button
+                  type="button"
+                  class="k-close-btn"
+                  data-bs-dismiss="modal"
+                >
+                  &times;
+                </button>
+
+                <!-- Form Header -->
+                <div class="k-form-header">
+                  <h2 class="k-title">Verify OTP</h2>
+                  <p class="k-subtitle">
+                    Enter the verification code sent to
+                    <span>+91 XXXXXXXXXX</span>
+                  </p>
+                </div>
+
+                <!-- OTP Fields -->
+                <div class="k">
+                  <div class="otp-container">
+                    <input
+                      type="text"
+                      maxlength="1"
+                      class="otp-input"
+                      autofocus
+                    />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                  </div>
+
+                  <div class="k-verify">
+                    <button type="button" class="veri">Verify</button>
+                  </div>
+
+                  <div class="undo k-resend">
+                    Didn't receive the code? <span>Resend</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register OTP Modal -->
+    <div
+      class="modal fade"
+      id="RegisterOtpModel"
+      tabindex="-1"
+      aria-labelledby="registerOtpModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="k-modal-content">
+              <!-- Left Side - Bus Image -->
+              <div class="k-modal-image">
+                <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+              </div>
+
+              <!-- Right Side - OTP Form -->
+              <div class="k-modal-form">
+                <!-- Close Button -->
+                <button
+                  type="button"
+                  class="k-close-btn"
+                  data-bs-dismiss="modal"
+                >
+                  &times;
+                </button>
+
+                <!-- Form Header -->
+                <div class="k-form-header">
+                  <h2 class="k-title">Verify OTP</h2>
+                  <p class="k-subtitle">
+                    Enter the verification code sent to
+                    <span class="register-phone">+91 XXXXXXXXXX</span>
+                  </p>
+                </div>
+
+                <!-- OTP Fields -->
+                <div class="k">
+                  <div class="otp-container">
+                    <input
+                      type="text"
+                      maxlength="1"
+                      class="otp-input"
+                      autofocus
+                    />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                  </div>
+
+                  <div class="k-verify">
+                    <button type="button">Verify</button>
+                  </div>
+
+                  <div class="k-resend">
+                    Didn't receive the code? <span>Resend</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div
+      class="modal fade"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="registerModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="k-modal-content">
+              <!-- Left Side - Bus Image -->
+              <div class="k-modal-image">
+                <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+              </div>
+
+              <!-- Right Side - Register Form -->
+              <div class="k-modal-form">
+                <!-- Close Button -->
+                <button
+                  type="button"
+                  class="k-close-btn"
+                  data-bs-dismiss="modal"
+                >
+                  &times;
+                </button>
+
+                <!-- Form Header -->
+                <div class="k-form-header">
+                  <h2 class="k-title">Sign Up</h2>
+                  <p class="k-subtitle">Create a new account</p>
+                </div>
+
+                <!-- Form Fields -->
+                <form class="k-login-form" id="registerForm">
+                  <div class="k-form-group">
+                    <label for="regName" class="k-label">Name</label>
+                    <input
+                      type="text"
+                      class="k-input"
+                      id="regName"
+                      placeholder="Enter your full name"
+                      required
+                    />
+                  </div>
+
+                  <div class="k-form-group">
+                    <label for="regEmail" class="k-label">Email</label>
+                    <input
+                      type="email"
+                      class="k-input"
+                      id="regEmail"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+
+                  <div class="k-form-group">
+                    <label for="regMobile" class="k-label">Mobile No</label>
+                    <div class="k-input-group">
+                      <div class="k-country-code">+91</div>
+                      <input
+                        type="tel"
+                        class="k-input"
+                        id="regMobile"
+                        placeholder="Enter your mobile no"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="k-submit-btn"
+                    id="registerButton"
+                  >
+                    Register
+                  </button>
+
+                  <!-- OR Divider -->
+                  <div class="k-divider">
+                    <span>OR</span>
+                  </div>
+
+                  <!-- Social Login -->
+                  <div class="k-social-login">
+                    <button type="button" class="k-social-btn k-google">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                        alt="Google"
+                      />
+                    </button>
+                    <button type="button" class="k-social-btn k-facebook">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                        alt="Facebook"
+                      />
+                    </button>
+                    <button type="button" class="k-social-btn k-apple">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                        alt="Apple"
+                      />
+                    </button>
+                  </div>
+
+                  <!-- Login Link -->
+                  <div class="k-signup-link">
+                    Already have an account?
+                    <a href="#" id="showLoginModal">Sign in</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Main Content -->
     <div class="container main-container">
@@ -320,7 +686,7 @@
             <button type="button" class="btn k-cancel" data-bs-dismiss="modal">
               Cancel
             </button>
-            <button type="button" class="btn k-update">Update</button>
+            <button type="button" class="k-updated">Update</button>
           </div>
         </div>
       </div>
@@ -361,7 +727,9 @@
             <button type="button" class="btn k-cancel" data-bs-dismiss="modal">
               Cancel
             </button>
-            <button type="button" class="btn k-update">Logout</button>
+            <button type="button" class="btn k-update" onclick="logout(event)">
+              Logout
+            </button>
           </div>
         </div>
       </div>
@@ -508,20 +876,8 @@
         logoutButton.addEventListener("click", function () {
           // Call the logout method from auth service
           authService.logout();
-
-          // Redirect to home.html
-          window.location.href = "Home.html";
         });
       }
-
-      document.addEventListener("DOMContentLoaded", function () {
-        fetch("login.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("navbar").innerHTML = data;
-          })
-          .catch((error) => console.error("Error loading header:", error));
-      });
     </script>
 
     <!-- Bootstrap JS and Popper.js -->
@@ -531,5 +887,12 @@
     <script src="js/change-password.js"></script>
     <script type="module" src="./js/profile-handler.js"></script>
     <script type="module" src="./js/global-auth.js"></script>
+    <script>
+      function logout(event) {
+        event.preventDefault();
+        localStorage.removeItem("currentUser");
+        window.location.replace("/Home.html");
+      }
+    </script>
   </body>
 </html>
