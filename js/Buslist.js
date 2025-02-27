@@ -15,7 +15,7 @@ async function busListData() {
     let filteredBuses = [...data];
 
     const filterControls = `
-      <div class="filter-section">
+      <div class="filtersection">
         <div class="search-filters">
           <input type="text" id="searchInput" placeholder="Search by bus name or type..." class="search-input">
           
@@ -46,12 +46,10 @@ async function busListData() {
       </div>
     `;
 
-    // Insert filter controls before the bus list
     document
       .getElementById("buslist")
       .insertAdjacentHTML("beforebegin", filterControls);
 
-    // Add event listeners for filters
     document
       .getElementById("searchInput")
       .addEventListener("input", updateFilters);
@@ -118,9 +116,7 @@ async function busListData() {
 
     const style = document.createElement("style");
     style.textContent = `
-      .filter-section {
-        padding: 15px;
-        background: #f5f5f5;
+      .filtersection {
         border-radius: 8px;
       }
 
@@ -158,428 +154,424 @@ async function busListData() {
     const buslist = data.buslist;
     console.log(data);
 
-    const buslistHtml = data
-      .map(
-        (bus, busIndex) => `
-      <div class="travel-card">
-        <div class="travel-info">
-          <div class="rating">
-            <span class="star">★</span>
-            <span class="rating-value">${bus.rating}</span>
-          </div>
-          <div class="company-name">${bus.companyName}</div>
-          <div class="bus-type">${bus.busType}</div>
-        </div>
+    // const buslistHtml = data
+    //   .map(
+    //     (bus, busIndex) => `
+    //   <div class="travel-card">
+    //     <div class="travel-info">
+    //       <div class="rating">
+    //         <span class="star">★</span>
+    //         <span class="rating-value">${bus.rating}</span>
+    //       </div>
+    //       <div class="company-name">${bus.companyName}</div>
+    //       <div class="bus-type">${bus.busType}</div>
+    //     </div>
 
-        <div class="journey-details">
-          <div class="location-time">
-            <div class="time">${bus.journey.departure.time}</div>
-            <div class="location">${bus.journey.departure.location}</div>
-            <div class="date">${bus.journey.departure.date}</div>
-          </div>
+    //     <div class="journey-details">
+    //       <div class="location-time">
+    //         <div class="time">${bus.journey.departure.time}</div>
+    //         <div class="location">${bus.journey.departure.location}</div>
+    //         <div class="date">${bus.journey.departure.date}</div>
+    //       </div>
 
-          <div class="journey-duration">
-            <div class="duration-line">
-              <span class="bus-icon">🚌</span>
-            </div>
-            <div class="duration-text">${bus.journey.duration}</div>
-          </div>
+    //       <div class="journey-duration">
+    //         <div class="duration-line">
+    //           <span class="bus-icon">🚌</span>
+    //         </div>
+    //         <div class="duration-text">${bus.journey.duration}</div>
+    //       </div>
 
-          <div class="location-time">
-            <div class="time">${bus.journey.arrival.time}</div>
-            <div class="location">${bus.journey.arrival.location}</div>
-            <div class="date">${bus.journey.arrival.date}</div>
-          </div>
-        </div>
+    //       <div class="location-time">
+    //         <div class="time">${bus.journey.arrival.time}</div>
+    //         <div class="location">${bus.journey.arrival.location}</div>
+    //         <div class="date">${bus.journey.arrival.date}</div>
+    //       </div>
+    //     </div>
 
-        <div class="price-section">
-          <div class="price">
-            <span class="currency">${bus.price.currency}</span>
-            <span class="amount">${bus.price.amount}</span>
-          </div>
-          <div class="discount">${bus.price.discount}</div>
-        </div>
-      </div>
+    //     <div class="price-section">
+    //       <div class="price">
+    //         <span class="currency">${bus.price.currency}</span>
+    //         <span class="amount">${bus.price.amount}</span>
+    //       </div>
+    //       <div class="discount">${bus.price.discount}</div>
+    //     </div>
+    //   </div>
 
-      <div class="travel-links">
-          ${bus.travelLinks
-            .map(
-              (link) => `
-            <a href="#" class="link" data-tab="${link.dataTab}" data-bus="${busIndex}">${link.name}</a>
-          `
-            )
-            .join("")}
-          <div class="ms-auto">
-            <button class="select-seat link" data-tab="selectseat" data-bus="${busIndex}">${
-          bus.selectSeat.label
-        }</button>
-          </div>
-        </div>
+    //   <div class="travel-links">
+    //       ${bus.travelLinks
+    //         .map(
+    //           (link) => `
+    //         <a href="#" class="link" data-tab="${link.dataTab}" data-bus="${busIndex}">${link.name}</a>
+    //       `
+    //         )
+    //         .join("")}
+    //       <div class="ms-auto">
+    //         <button class="select-seat link" data-tab="selectseat" data-bus="${busIndex}">${
+    //       bus.selectSeat.label
+    //     }</button>
+    //       </div>
+    //     </div>
 
-        <div class="content-sections" id="bus-${busIndex}-content">
-          <div id="tracking-${busIndex}" class="content-section" style="display: none;">
-            <div class="placeholder-content">${bus.tracking.content}</div>
-          </div>
+    //     <div class="content-sections" id="bus-${busIndex}-content">
+    //       <div id="tracking-${busIndex}" class="content-section" style="display: none;">
+    //         <div class="placeholder-content">${bus.tracking.content}</div>
+    //       </div>
 
-          <div id="policies-${busIndex}" class="content-section" style="display: none;">
-            <div class="container d-flex">
-              <div class="table-container">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Cancellation Time</th>
-                      <th>Charges</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    ${bus.policies.cancellationPolicies
-                      .map(
-                        (policy) => `
-                      <tr>
-                        <td>${policy.time}</td>
-                        <td class="charges">${policy.charges}</td>
-                      </tr>
-                    `
-                      )
-                      .join("")}
-                  </tbody>
-                </table>
-              </div>
-              <div class="info-container">
-                <h2 class="info-heading">Info</h2>
-                <ul class="info-list">
-                  ${bus.policies.info
-                    .map(
-                      (info) => `
-                    <li>${info}</li>
-                  `
-                    )
-                    .join("")}
-                </ul>
-              </div>
-            </div>
-          </div>
+    //       <div id="policies-${busIndex}" class="content-section" style="display: none;">
+    //         <div class="container d-flex">
+    //           <div class="table-container">
+    //             <table>
+    //               <thead>
+    //                 <tr>
+    //                   <th>Cancellation Time</th>
+    //                   <th>Charges</th>
+    //                 </tr>
+    //               </thead>
+    //               <tbody>
+    //                 ${bus.policies.cancellationPolicies
+    //                   .map(
+    //                     (policy) => `
+    //                   <tr>
+    //                     <td>${policy.time}</td>
+    //                     <td class="charges">${policy.charges}</td>
+    //                   </tr>
+    //                 `
+    //                   )
+    //                   .join("")}
+    //               </tbody>
+    //             </table>
+    //           </div>
+    //           <div class="info-container">
+    //             <h2 class="info-heading">Info</h2>
+    //             <ul class="info-list">
+    //               ${bus.policies.info
+    //                 .map(
+    //                   (info) => `
+    //                 <li>${info}</li>
+    //               `
+    //                 )
+    //                 .join("")}
+    //             </ul>
+    //           </div>
+    //         </div>
+    //       </div>
 
-          <div id="amenities-${busIndex}" class="content-section" style="display: none;">
-            <div class="placeholder-content">
-              <div class="amenities-container">
-                <h2 class="amenities-title">Bus Amenities</h2>
-                <div class="amenities-list">
-                  ${bus.amenities
-                    .map(
-                      (amenity) => `
-                    <div class="amenity-item">
-                      <div class="amenity-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
-                        <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
-                        <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
-                        <line x1="12" y1="20" x2="12" y2="20"></line>
-                      </svg>
-                      </div>
-                      <div class="amenity-text">${amenity}</div>
-                    </div>
-                  `
-                    )
-                    .join("")}
-                </div>
-              </div>
-            </div>
-          </div>
+    //       <div id="amenities-${busIndex}" class="content-section" style="display: none;">
+    //         <div class="placeholder-content">
+    //           <div class="amenities-container">
+    //             <h2 class="amenities-title">Bus Amenities</h2>
+    //             <div class="amenities-list">
+    //               ${bus.amenities
+    //                 .map(
+    //                   (amenity) => `
+    //                 <div class="amenity-item">
+    //                   <div class="amenity-icon">
+    //                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+    //                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    //                     <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+    //                     <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+    //                     <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+    //                     <line x1="12" y1="20" x2="12" y2="20"></line>
+    //                   </svg>
+    //                   </div>
+    //                   <div class="amenity-text">${amenity}</div>
+    //                 </div>
+    //               `
+    //                 )
+    //                 .join("")}
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </div>
 
-          <div id="photos-${busIndex}" class="content-section" style="display: none;">
-            <div class="placeholder-content">
-              <div class="owl-carousel owl-theme">
-                ${bus.photos
-                  .map(
-                    (photos) => `
-                  <div class="item">
-                    <img src="./image/u_images/${photos}" alt="" />
-                  </div>
-                `
-                  )
-                  .join("")}
-              </div>
-            </div>
-          </div>
+    //       <div id="photos-${busIndex}" class="content-section" style="display: none;">
+    //         <div class="placeholder-content">
+    //           <div class="owl-carousel owl-theme">
+    //             ${bus.photos
+    //               .map(
+    //                 (photos) => `
+    //               <div class="item">
+    //                 <img src="./image/u_images/${photos}" alt="" />
+    //               </div>
+    //             `
+    //               )
+    //               .join("")}
+    //           </div>
+    //         </div>
+    //       </div>
 
-          <div id="pickup-${busIndex}" class="content-section" style="display: none;">
-            <div class="placeholder-content">
-              <div class="pickup-dropoff-container">
-                <div class="points-grid">
-                  <div class="pickup-section text-start">
-                    <h5 class="section-title">Pick up Point</h5>
-                    <div class="point-list">
-                      ${bus.pickupPoints
-                        .map(
-                          (point) => `
-                        <div class="point-item">
-                          <div class="point-time">${point.time}</div>
-                          <div class="point-location">${point.location}</div>
-                        </div>
-                      `
-                        )
-                        .join("")}
-                    </div>
-                  </div>
-                  <div class="dropoff-section text-start">
-                    <h2 class="section-title">Drop off Point</h2>
-                    <div class="point-list">
-                      ${bus.dropoffPoints
-                        .map(
-                          (point) => `
-                        <div class="point-item">
-                          <div class="point-time">${point.time}</div>
-                          <div class="point-location">${point.location}</div>
-                        </div>
-                      `
-                        )
-                        .join("")}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    //       <div id="pickup-${busIndex}" class="content-section" style="display: none;">
+    //         <div class="placeholder-content">
+    //           <div class="pickup-dropoff-container">
+    //             <div class="points-grid">
+    //               <div class="pickup-section text-start">
+    //                 <h5 class="section-title">Pick up Point</h5>
+    //                 <div class="point-list">
+    //                   ${bus.pickupPoints
+    //                     .map(
+    //                       (point) => `
+    //                     <div class="point-item">
+    //                       <div class="point-time">${point.time}</div>
+    //                       <div class="point-location">${point.location}</div>
+    //                     </div>
+    //                   `
+    //                     )
+    //                     .join("")}
+    //                 </div>
+    //               </div>
+    //               <div class="dropoff-section text-start">
+    //                 <h2 class="section-title">Drop off Point</h2>
+    //                 <div class="point-list">
+    //                   ${bus.dropoffPoints
+    //                     .map(
+    //                       (point) => `
+    //                     <div class="point-item">
+    //                       <div class="point-time">${point.time}</div>
+    //                       <div class="point-location">${point.location}</div>
+    //                     </div>
+    //                   `
+    //                     )
+    //                     .join("")}
+    //                 </div>
+    //               </div>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </div>
 
-          <div id="reviews-${busIndex}" class="content-section" style="display: none;">
-            <div class="placeholder-content">
-              <div class="reviews-grid">
-                <div class="rating-summary">
-                  <div class="overall-rating">
-                    <span class="star">★</span>
-                    <span class="rating-number">${bus.ratings.overall}</span>
-                    <span class="rating-text">Rating</span>
-                  </div>
-                  <div class="category-ratings">
-                    <h4>People like</h4>
-                    <div class="rating-item">
-                      <span class="category">Bus quality</span>
-                      <div class="rating-value">
-                        <span class="star">★</span>
-                        <span>${bus.ratings.categories.busQuality}</span>
-                      </div>
-                    </div>
-                    <!-- Add other rating categories similarly -->
-                  </div>
-                </div>
-                <div class="user-reviews">
-                  ${bus.reviews
-                    .map(
-                      (review) => `
-                    <div class="review-card">
-                      <div class="review-header">
-                        <div class="user-info">
-                          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-aw6GYkNqBu9RHKV6YRCYTefLhtSz9r.png" 
-                            alt="${review.name}" class="avatar">
-                          <div class="user-details text-start">
-                            <h4>${review.name}</h4>
-                            <span class="review-date">${review.date}</span>
-                          </div>
-                        </div>
-                        <div class="star-rating">
-                          ${Array(5)
-                            .fill()
-                            .map(
-                              (_, i) => `
-                            <span class="star ${
-                              i < review.rating ? "filled" : ""
-                            }">★</span>
-                          `
-                            )
-                            .join("")}
-                        </div>
-                      </div>
-                      <p class="review-text">${review.comment}</p>
-                    </div>
-                  `
-                    )
-                    .join("")}
-                  <a href="#" class="show-more">Show More</a>
-                </div>
-              </div>
-            </div>
-          </div>
+    //       <div id="reviews-${busIndex}" class="content-section" style="display: none;">
+    //         <div class="placeholder-content">
+    //           <div class="reviews-grid">
+    //             <div class="rating-summary">
+    //               <div class="overall-rating">
+    //                 <span class="star">★</span>
+    //                 <span class="rating-number">${bus.ratings.overall}</span>
+    //                 <span class="rating-text">Rating</span>
+    //               </div>
+    //               <div class="category-ratings">
+    //                 <h4>People like</h4>
+    //                 <div class="rating-item">
+    //                   <span class="category">Bus quality</span>
+    //                   <div class="rating-value">
+    //                     <span class="star">★</span>
+    //                     <span>${bus.ratings.categories.busQuality}</span>
+    //                   </div>
+    //                 </div>
+    //                 <!-- Add other rating categories similarly -->
+    //               </div>
+    //             </div>
+    //             <div class="user-reviews">
+    //               ${bus.reviews
+    //                 .map(
+    //                   (review) => `
+    //                 <div class="review-card">
+    //                   <div class="review-header">
+    //                     <div class="user-info">
+    //                       <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-aw6GYkNqBu9RHKV6YRCYTefLhtSz9r.png"
+    //                         alt="${review.name}" class="avatar">
+    //                       <div class="user-details text-start">
+    //                         <h4>${review.name}</h4>
+    //                         <span class="review-date">${review.date}</span>
+    //                       </div>
+    //                     </div>
+    //                     <div class="star-rating">
+    //                       ${Array(5)
+    //                         .fill()
+    //                         .map(
+    //                           (_, i) => `
+    //                         <span class="star ${
+    //                           i < review.rating ? "filled" : ""
+    //                         }">★</span>
+    //                       `
+    //                         )
+    //                         .join("")}
+    //                     </div>
+    //                   </div>
+    //                   <p class="review-text">${review.comment}</p>
+    //                 </div>
+    //               `
+    //                 )
+    //                 .join("")}
+    //               <a href="#" class="show-more">Show More</a>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </div>
 
-          <div id="selectseat-${busIndex}" class="content-section" style="display: none;">
-            <div class="placeholder-content">
-              <div class="seats-container">
-                <div class="legend">
-                  <div class="legend-item">
-                    <input type="checkbox" class="legend-box available" />
-                    <span>Available</span>
-                  </div>
-                  <div class="legend-item">
-                    <input type="checkbox" class="legend-box booked" />
-                    <span>Booked</span>
-                  </div>
-                  <div class="legend-item">
-                    <input type="checkbox" class="legend-box selected" />
-                    <span>Selected</span>
-                  </div>
-                </div>
+    //       <div id="selectseat-${busIndex}" class="content-section" style="display: none;">
+    //         <div class="placeholder-content">
+    //           <div class="seats-container">
+    //             <div class="legend">
+    //               <div class="legend-item">
+    //                 <input type="checkbox" class="legend-box available" />
+    //                 <span>Available</span>
+    //               </div>
+    //               <div class="legend-item">
+    //                 <input type="checkbox" class="legend-box booked" />
+    //                 <span>Booked</span>
+    //               </div>
+    //               <div class="legend-item">
+    //                 <input type="checkbox" class="legend-box selected" />
+    //                 <span>Selected</span>
+    //               </div>
+    //             </div>
 
-                <div class="seat-selection">
-                  <div class="seat-section">
-                    <div class="section-title">
-                      Lower Seat
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <circle cx="12" cy="12" r="4"></circle>
-                        <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
-                        <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
-                        <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
-                        <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
-                      </svg>
-                    </div>
+    //             <div class="seat-selection">
+    //               <div class="seat-section">
+    //                 <div class="section-title">
+    //                   Lower Seat
+    //                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+    //                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    //                     <circle cx="12" cy="12" r="10"></circle>
+    //                     <circle cx="12" cy="12" r="4"></circle>
+    //                     <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+    //                     <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+    //                     <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+    //                     <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+    //                   </svg>
+    //                 </div>
 
-                    <div class="seat-grid">
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat booked booked-seat"></div>
+    //                 <div class="seat-grid">
+    //                   <div class="seat"></div>
+    //                   <div class="seat"></div>
+    //                   <div class="seat booked booked-seat"></div>
 
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
+    //                   <div class="seat"></div>
+    //                   <div class="seat"></div>
+    //                   <div class="seat"></div>
 
-                      <div class="seat"></div>
-                      <div class="seat booked booked-seat"></div>
-                      <div class="seat"></div>
+    //                   <div class="seat"></div>
+    //                   <div class="seat booked booked-seat"></div>
+    //                   <div class="seat"></div>
 
-                      <div class="seat booked booked-seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
+    //                   <div class="seat booked booked-seat"></div>
+    //                   <div class="seat"></div>
+    //                   <div class="seat"></div>
 
-                      <div class="seat"></div>
-                      <div class="seat booked booked-seat"></div>
-                      <div class="seat"></div>
+    //                   <div class="seat"></div>
+    //                   <div class="seat booked booked-seat"></div>
+    //                   <div class="seat"></div>
 
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                    </div>
-                  </div>
+    //                   <div class="seat"></div>
+    //                   <div class="seat"></div>
+    //                   <div class="seat"></div>
+    //                 </div>
+    //               </div>
 
-                  <div class="seat-section">
-                    <div class="section-title">
-                      Upper Seat
-                    </div>
+    //               <div class="seat-section">
+    //                 <div class="section-title">
+    //                   Upper Seat
+    //                 </div>
 
-                    <div class="seat-grid">
-                      <div class="seat"></div>
-                      <div class="seat booked booked-seat"></div>
-                      <div class="seat"></div>
+    //                 <div class="seat-grid">
+    //                   <div class="seat"></div>
+    //                   <div class="seat booked booked-seat"></div>
+    //                   <div class="seat"></div>
 
-                      <div class="seat booked booked-seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
+    //                   <div class="seat booked booked-seat"></div>
+    //                   <div class="seat"></div>
+    //                   <div class="seat"></div>
 
-                      <div class="seat booked booked-seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
+    //                   <div class="seat booked booked-seat"></div>
+    //                   <div class="seat"></div>
+    //                   <div class="seat"></div>
 
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat booked booked-seat"></div>
+    //                   <div class="seat"></div>
+    //                   <div class="seat"></div>
+    //                   <div class="seat booked booked-seat"></div>
 
-                      <div class="seat booked booked-seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
+    //                   <div class="seat booked booked-seat"></div>
+    //                   <div class="seat"></div>
+    //                   <div class="seat"></div>
 
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                      <div class="seat"></div>
-                    </div>
-                  </div>
+    //                   <div class="seat"></div>
+    //                   <div class="seat"></div>
+    //                   <div class="seat"></div>
+    //                 </div>
+    //               </div>
 
-                  <div class="sidebar">
-                    <div class="tabs">
-                      <div class="tab active">Pick Up Point</div>
-                      <div class="tab">Drop Off Point</div>
-                    </div>
+    //               <div class="sidebar">
+    //                 <div class="tabs">
+    //                   <div class="tab active">Pick Up Point</div>
+    //                   <div class="tab">Drop Off Point</div>
+    //                 </div>
 
-                    <div class="stops-list">
-                      <div class="stop-item">
-                        <div class="stop-info">
-                          <div class="stop-time">10:00 AM</div>
-                          <div class="stop-location">Shyamdham Mandir, Jakatnaka</div>
-                        </div>
-                        <input type="radio" name="name" class="radio-button"></input>
-                      </div>
+    //                 <div class="stops-list">
+    //                   <div class="stop-item">
+    //                     <div class="stop-info">
+    //                       <div class="stop-time">10:00 AM</div>
+    //                       <div class="stop-location">Shyamdham Mandir, Jakatnaka</div>
+    //                     </div>
+    //                     <input type="radio" name="name" class="radio-button"></input>
+    //                   </div>
 
-                      <div class="stop-item">
-                        <div class="stop-info">
-                          <div class="stop-time">11:00 AM</div>
-                          <div class="stop-location">Pasodara Patiya, Pasodara</div>
-                        </div>
-                        <input type="radio" name="name" class="radio-button"></input>
-                      </div>
+    //                   <div class="stop-item">
+    //                     <div class="stop-info">
+    //                       <div class="stop-time">11:00 AM</div>
+    //                       <div class="stop-location">Pasodara Patiya, Pasodara</div>
+    //                     </div>
+    //                     <input type="radio" name="name" class="radio-button"></input>
+    //                   </div>
 
-                      <div class="stop-item">
-                        <div class="stop-info">
-                          <div class="stop-time">11:30 AM</div>
-                          <div class="stop-location">Laskana Gam, Laskana</div>
-                        </div>
-                        <input type="radio" name="name" class="radio-button"></input>
-                      </div>
+    //                   <div class="stop-item">
+    //                     <div class="stop-info">
+    //                       <div class="stop-time">11:30 AM</div>
+    //                       <div class="stop-location">Laskana Gam, Laskana</div>
+    //                     </div>
+    //                     <input type="radio" name="name" class="radio-button"></input>
+    //                   </div>
 
-                      <div class="stop-item">
-                        <div class="stop-info">
-                          <div class="stop-time">12:10 AM</div>
-                          <div class="stop-location">Kamrej Under Bridge, Kamrej</div>
-                        </div>
-                        <input type="radio" name="name" class="radio-button"></input>
-                      </div>
+    //                   <div class="stop-item">
+    //                     <div class="stop-info">
+    //                       <div class="stop-time">12:10 AM</div>
+    //                       <div class="stop-location">Kamrej Under Bridge, Kamrej</div>
+    //                     </div>
+    //                     <input type="radio" name="name" class="radio-button"></input>
+    //                   </div>
 
-                      <div class="stop-item">
-                        <div class="stop-info">
-                          <div class="stop-time">01:00 AM</div>
-                          <div class="stop-location">Raj Hotel, Kmarej Highway</div>
-                        </div>
-                        <input type="radio" name="name" class="radio-button"></input>
-                      </div>
-                    </div>
+    //                   <div class="stop-item">
+    //                     <div class="stop-info">
+    //                       <div class="stop-time">01:00 AM</div>
+    //                       <div class="stop-location">Raj Hotel, Kmarej Highway</div>
+    //                     </div>
+    //                     <input type="radio" name="name" class="radio-button"></input>
+    //                   </div>
+    //                 </div>
 
-                    <div class="booking-summary">
-                      <div class="summary-title">Selected Seats</div>
-                      <div id="seatselected"></div>
-                      <div class="no-seats">No Seats Selected</div>
-                      <button class="continue-btn" onclick="window.location.href='Booking_Details.html'">Continue</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    `
-      )
-      .join("");
+    //                 <div class="booking-summary">
+    //                   <div class="summary-title">Selected Seats</div>
+    //                   <div id="seatselected"></div>
+    //                   <div class="no-seats">No Seats Selected</div>
+    //                   <button class="continue-btn" onclick="window.location.href='Booking_Details.html'">Continue</button>
+    //                 </div>
+    //               </div>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </div>
+    // `
+    //   )
+    //   .join("");
     initializeSeatSelection();
 
     document.getElementById("buslist").innerHTML = buslistHtml;
 
-    // Add click event listeners for tabs
     document.querySelectorAll(".link").forEach((link) => {
       link.addEventListener("click", (e) => {
         e.preventDefault();
         const busIndex = e.target.dataset.bus;
         const tabId = e.target.dataset.tab;
 
-        // Hide all content sections for this bus
         document
           .querySelectorAll(`#bus-${busIndex}-content .content-section`)
           .forEach((section) => {
             section.style.display = "none";
           });
 
-        // Show selected content section
         document.getElementById(`${tabId}-${busIndex}`).style.display = "block";
 
-        // Update active tab styling
         document.querySelectorAll(`[data-bus="${busIndex}"]`).forEach((tab) => {
           tab.classList.remove("active");
         });
@@ -1242,7 +1234,9 @@ function renderBusList(buses) {
                     <div class="summary-title">Selected Seats</div>
                     <div id="seatselected"></div>
                     <div class="no-seats">No Seats Selected</div>
-                    <button class="continue-btn" onclick="window.location.href='Booking_Details.html'">Continue</button>
+                      <button class="continue-btn" onclick='handleBookingDetail(${JSON.stringify(
+                        bus
+                      )})'>Continue</button>
                   </div>
                 </div>
               </div>
@@ -1257,24 +1251,20 @@ function renderBusList(buses) {
 
   document.getElementById("buslist").innerHTML = buslistHtml;
 
-  // Add click event listeners for tabs
   document.querySelectorAll(".link").forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       const busIndex = e.target.dataset.bus;
       const tabId = e.target.dataset.tab;
 
-      // Hide all content sections for this bus
       document
         .querySelectorAll(`#bus-${busIndex}-content .content-section`)
         .forEach((section) => {
           section.style.display = "none";
         });
 
-      // Show selected content section
       document.getElementById(`${tabId}-${busIndex}`).style.display = "block";
 
-      // Update active tab styling
       document.querySelectorAll(`[data-bus="${busIndex}"]`).forEach((tab) => {
         tab.classList.remove("active");
       });
@@ -1283,4 +1273,9 @@ function renderBusList(buses) {
   });
 
   initializeSeatSelection();
+}
+
+async function handleBookingDetail(bus) {
+  localStorage.setItem("busdata", JSON.stringify(bus));
+  window.location.href = "Booking_Details.html";
 }
