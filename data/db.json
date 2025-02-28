@@ -1011,12 +1011,12 @@
       "rating": "2.5",
       "journey": {
         "departure": {
-          "location": "Surat",
+          "location": "Vadodara",
           "time": "10:00 AM",
           "date": "10 Feb 2025"
         },
         "arrival": {
-          "location": "Ankleshwar",
+          "location": "surat",
           "time": "10:00 AM",
           "date": "10 Feb 2025"
         },
@@ -1243,7 +1243,7 @@
       "rating": "3.5",
       "journey": {
         "departure": {
-          "location": "Surat",
+          "location": "Ahemadabad",
           "time": "10:00 AM",
           "date": "10 Feb 2025"
         },
@@ -2171,12 +2171,12 @@
       "rating": "3.0",
       "journey": {
         "departure": {
-          "location": "Surat",
+          "location": "Amreli",
           "time": "10:00 AM",
           "date": "10 Feb 2025"
         },
         "arrival": {
-          "location": "Ankleshwar",
+          "location": "Dhasa",
           "time": "10:00 AM",
           "date": "10 Feb 2025"
         },

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   await busListData();
   initializeSeatSelection();
 });
-
+let data = [];
 async function busListData() {
   try {
     const response = await fetch("http://localhost:3000/busListings");
@@ -11,7 +11,7 @@ async function busListData() {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-    const data = await response.json();
+    data = await response.json();
     let filteredBuses = [...data];
 
     const filterControls = `
@@ -604,152 +604,148 @@ async function busListData() {
   }
 }
 
+let selectedSeats = [];
 function initializeSeatSelection() {
-  const seatContainer = document.querySelector(".seat-selection");
-  if (!seatContainer) return;
+  // Remove the single container query since we'll handle multiple buses
+  const seatContainers = document.querySelectorAll(".seat-selection");
+  if (!seatContainers.length) return;
 
-  let selectedSeats = [];
-  const summaryElement = document.querySelector(".booking-summary");
-  const continueBtn = summaryElement.querySelector(".continue-btn");
+  seatContainers.forEach((seatContainer, containerIndex) => {
+    const summaryElement = seatContainer.querySelector(".booking-summary");
+    const continueBtn = summaryElement.querySelector(".continue-btn");
+    const seatSelectedElement = seatContainer.querySelector("#seatselected");
+    const noSeatsElement = summaryElement.querySelector(".no-seats");
 
-  const pickupDropTabs = document.querySelectorAll(".sidebar .tabs .tab");
-  const stopsList = document.querySelector(".stops-list");
+    const pickupDropTabs = seatContainer.querySelectorAll(
+      ".sidebar .tabs .tab"
+    );
+    const stopsList = seatContainer.querySelector(".stops-list");
 
-  const pickupPoints = [
-    { time: "10:00 AM", location: "Shyamdham Mandir, Jakatnaka" },
-    { time: "11:00 AM", location: "Pasodara Patiya, Pasodara" },
-    { time: "11:30 AM", location: "Laskana Gam, Laskana" },
-    { time: "12:10 AM", location: "Kamrej Under Bridge, Kamrej" },
-    { time: "01:00 AM", location: "Raj Hotel, Kmarej Highway" },
-  ];
+    const pickupPoints = [
+      { time: "10:00 AM", location: "Shyamdham Mandir, Jakatnaka" },
+      { time: "11:00 AM", location: "Pasodara Patiya, Pasodara" },
+      { time: "11:30 AM", location: "Laskana Gam, Laskana" },
+      { time: "12:10 AM", location: "Kamrej Under Bridge, Kamrej" },
+      { time: "01:00 AM", location: "Raj Hotel, Kmarej Highway" },
+    ];
 
-  const dropoffPoints = [
-    { time: "06:00 PM", location: "Central Bus Station" },
-    { time: "06:30 PM", location: "City Mall Stop" },
-    { time: "07:00 PM", location: "Airport Terminal" },
-    { time: "07:30 PM", location: "Railway Station" },
-  ];
+    const dropoffPoints = [
+      { time: "06:00 PM", location: "Central Bus Station" },
+      { time: "06:30 PM", location: "City Mall Stop" },
+      { time: "07:00 PM", location: "Airport Terminal" },
+      { time: "07:30 PM", location: "Railway Station" },
+    ];
 
-  function updateStopsList(points) {
-    stopsList.innerHTML = points
-      .map(
-        (point) => `
-      <div class="stop-item">
-        <div class="stop-info">
-          <div class="stop-time">${point.time}</div>
-          <div class="stop-location">${point.location}</div>
+    function updateStopsList(points) {
+      stopsList.innerHTML = points
+        .map(
+          (point) => `
+        <div class="stop-item">
+          <div class="stop-info">
+            <div class="stop-time">${point.time}</div>
+            <div class="stop-location">${point.location}</div>
+          </div>
+          <input type="radio" name="stop-point" class="radio-button">
         </div>
-        <input type="radio" name="stop-point" class="radio-button">
-      </div>
-    `
-      )
-      .join("");
-  }
+      `
+        )
+        .join("");
+    }
 
-  pickupDropTabs.forEach((tab, index) => {
-    tab.addEventListener("click", () => {
-      pickupDropTabs.forEach((t) => t.classList.remove("active"));
-      tab.classList.add("active");
-      if (index === 0) {
-        updateStopsList(pickupPoints);
+    pickupDropTabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        pickupDropTabs.forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+        if (index === 0) {
+          updateStopsList(pickupPoints);
+        } else {
+          updateStopsList(dropoffPoints);
+        }
+      });
+    });
+
+    updateStopsList(pickupPoints);
+
+    // Attach click handler to this specific container's seats
+    seatContainer.addEventListener("click", (e) => {
+      const seatElement = e.target.closest(".seat");
+      if (!seatElement || seatElement.classList.contains("booked-seat")) return;
+
+      const isSelected = seatElement.classList.toggle("selected");
+
+      const seatGrid = seatElement.closest(".seat-grid");
+      const seats = Array.from(seatGrid.querySelectorAll(".seat"));
+      const seatIndex = seats.indexOf(seatElement) + 1;
+      const deckType = seatElement
+        .closest(".seat-section")
+        .querySelector(".section-title")
+        .textContent.includes("Upper")
+        ? "Upper"
+        : "Lower";
+      const seatId = `${deckType}-${seatIndex}`;
+
+      if (isSelected) {
+        selectedSeats.push(seatId);
       } else {
-        updateStopsList(dropoffPoints);
+        selectedSeats = selectedSeats.filter((id) => id !== seatId);
       }
+
+      // Update the specific bus's seat selection display
+      if (seatSelectedElement) {
+        seatSelectedElement.innerHTML =
+          selectedSeats.length > 0 ? selectedSeats.join(", ") : "";
+      }
+
+      // Update this specific bus's booking summary
+      updateBookingSummary(selectedSeats, noSeatsElement);
+    });
+
+    // Handle legend checkboxes for this specific container
+    const legendCheckboxes = seatContainer.querySelectorAll(".legend-box");
+    legendCheckboxes.forEach((checkbox) => {
+      checkbox.addEventListener("change", () =>
+        updateSeatVisibility(seatContainer)
+      );
     });
   });
-
-  updateStopsList(pickupPoints);
-
-  seatContainer.addEventListener("click", (e) => {
-    const seatElement = e.target.closest(".seat");
-    if (!seatElement || seatElement.classList.contains("booked-seat")) return;
-
-    const isSelected = seatElement.classList.toggle("selected");
-
-    const seatGrid = seatElement.closest(".seat-grid");
-    const seats = Array.from(seatGrid.querySelectorAll(".seat"));
-    const seatIndex = seats.indexOf(seatElement) + 1;
-    const deckType = seatElement
-      .closest(".seat-section")
-      .querySelector(".section-title")
-      .textContent.includes("Upper")
-      ? "Upper"
-      : "Lower";
-    const seatId = `${deckType}-${seatIndex}`;
-
-    if (isSelected) {
-      selectedSeats.push(seatId);
-    } else {
-      selectedSeats = selectedSeats.filter((id) => id !== seatId);
-    }
-
-    // console.log(selectedSeats)
-    const seatSelectedElement = document.getElementById("seatselected");
-    if (seatSelectedElement) {
-      seatSelectedElement.innerHTML =
-        selectedSeats.length > 0
-          ? selectedSeats.join(", ")
-          : "No seats selected";
-    } else {
-      console.warn("seatselected element not found");
-    }
-
-    updateBookingSummary(selectedSeats);
-  });
-
-  continueBtn.addEventListener("click", () => {
-    if (selectedSeats.length === 0) {
-      alert("Please select at least one seat to continue.");
-      return;
-    }
-    console.log("Selected seats:", selectedSeats);
-  });
-
-  const legendCheckboxes = document.querySelectorAll(".legend-box");
-  legendCheckboxes.forEach((checkbox) => {
-    checkbox.addEventListener("change", updateSeatVisibility);
-  });
-
-  function updateSeatVisibility() {
-    const availableChecked = document.querySelector(
-      ".legend-box.available"
-    ).checked;
-    const bookedChecked = document.querySelector(".legend-box.booked").checked;
-    const selectedChecked = document.querySelector(
-      ".legend-box.selected"
-    ).checked;
-
-    const anyCheckboxChecked =
-      availableChecked || bookedChecked || selectedChecked;
-
-    const allSeats = document.querySelectorAll(".seat");
-    allSeats.forEach((seat) => {
-      if (!anyCheckboxChecked) {
-        seat.style.display = "block";
-        return;
-      }
-
-      seat.style.display = "none";
-
-      const isBooked = seat.classList.contains("booked");
-      const isSelected = seat.classList.contains("selected");
-      const isAvailable = !isBooked && !isSelected;
-
-      if (
-        (isAvailable && availableChecked) ||
-        (isBooked && bookedChecked) ||
-        (isSelected && selectedChecked)
-      ) {
-        seat.style.display = "block";
-      }
-    });
-  }
 }
 
-function updateBookingSummary(selectedSeats) {
-  const summaryElement = document.querySelector(".booking-summary");
-  const noSeatsElement = summaryElement.querySelector(".no-seats");
+function updateSeatVisibility(container) {
+  const availableChecked = container.querySelector(
+    ".legend-box.available"
+  ).checked;
+  const bookedChecked = container.querySelector(".legend-box.booked").checked;
+  const selectedChecked = container.querySelector(
+    ".legend-box.selected"
+  ).checked;
 
+  const anyCheckboxChecked =
+    availableChecked || bookedChecked || selectedChecked;
+
+  const allSeats = container.querySelectorAll(".seat");
+  allSeats.forEach((seat) => {
+    if (!anyCheckboxChecked) {
+      seat.style.display = "block";
+      return;
+    }
+
+    seat.style.display = "none";
+
+    const isBooked = seat.classList.contains("booked");
+    const isSelected = seat.classList.contains("selected");
+    const isAvailable = !isBooked && !isSelected;
+
+    if (
+      (isAvailable && availableChecked) ||
+      (isBooked && bookedChecked) ||
+      (isSelected && selectedChecked)
+    ) {
+      seat.style.display = "block";
+    }
+  });
+}
+
+function updateBookingSummary(selectedSeats, noSeatsElement) {
   if (selectedSeats.length === 0) {
     noSeatsElement.style.display = "block";
     noSeatsElement.textContent = "No Seats Selected";
@@ -760,6 +756,7 @@ function updateBookingSummary(selectedSeats) {
         <h4>Selected Seats:</h4>
         ${selectedSeats
           .map((seat) => `<div class="selected-seat-item">${seat}</div>`)
+
           .join("")}
         <div class="total-amount">
           <span>Total Amount:</span>
@@ -768,6 +765,7 @@ function updateBookingSummary(selectedSeats) {
       </div>
     `;
   }
+  localStorage.setItem("selectedData", selectedSeats);
 }
 
 const style = document.createElement("style");
@@ -778,7 +776,7 @@ style.textContent = `
   }
   
   .seat.selected {
-    background-color: #4CAF50 !important;
+    // background-color: #4CAF50 !important;
   }
   
   .seat.booked-seat {
@@ -825,12 +823,12 @@ style.textContent = `
 
   .legend-box.booked {
     background-color: #ff0000;
-    border: 1px solid #ff0000;
+    border:none;
   }
 
   .legend-box.selected {
     background-color: #4CAF50;
-    border: 1px solid #4CAF50;
+    border: none;
   }
 
   .link.active {
@@ -856,7 +854,7 @@ function renderBusList(buses) {
           <span class="rating-value">${bus.rating}</span>
         </div>
         <div class="company-name">${bus.companyName}</div>
-        <div class="bus-type">${bus.busType}</div>
+        <div class="bus-type">${bus.busType}</div>  
       </div>
 
       <div class="journey-details">
@@ -1095,15 +1093,15 @@ function renderBusList(buses) {
             <div class="seats-container">
               <div class="legend">
                 <div class="legend-item">
-                  <input type="checkbox" class="legend-box available" />
+                  <input style="border: 1px solid green" class="legend-box available" />
                   <span>Available</span>
                 </div>
                 <div class="legend-item">
-                  <input type="checkbox" class="legend-box booked" />
+                  <input style="background-color: #6A6A6A66" class="legend-box booked" />
                   <span>Booked</span>
                 </div>
                 <div class="legend-item">
-                  <input type="checkbox" class="legend-box selected" />
+                  <input style="background-color: #C16C49" class="legend-box selected" />
                   <span>Selected</span>
                 </div>
               </div>
@@ -1251,6 +1249,25 @@ function renderBusList(buses) {
 
   document.getElementById("buslist").innerHTML = buslistHtml;
 
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    dots: true,
+    items: 2,
+    nav: true,
+    // responsive:{
+    //     0:{
+    //         items:1
+    //     },
+    //     600:{
+    //         items:3
+    //     },
+    //     1000:{
+    //         items:3
+    //     }
+    // }
+  });
+
   document.querySelectorAll(".link").forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
@@ -1276,6 +1293,38 @@ function renderBusList(buses) {
 }
 
 async function handleBookingDetail(bus) {
-  localStorage.setItem("busdata", JSON.stringify(bus));
-  window.location.href = "Booking_Details.html";
+  console.log(bus);
+  const selectSeat = localStorage.getItem("selectedData");
+
+  console.log("heloo", selectSeat);
+  // console.log("dfjdf", selectedSeats);
+  // console.log("dbhdg",noSeatsElement);
+
+  let dt = JSON.parse(localStorage.getItem("busdata")) || [];
+  if (!Array.isArray(dt)) dt = [];
+
+  // Add new bus data
+  dt.push(bus);
+  localStorage.setItem("busdata", JSON.stringify(dt));
+  // window.location.href = "Booking_Details.html";
+}
+
+function searchData() {
+  const from = document.getElementById("from-city").value;
+  const to = document.getElementById("to-city").value;
+  const date = document.getElementById("journey-date").value;
+  const busName = document.getElementById("bus-name").value;
+
+  const busFilterData = data.filter((ele) => {
+    console.log(ele.journey.departure.location);
+    console.log(ele.journey.arrival.location);
+
+    return (
+      ele.journey.departure.location.toLowerCase() == from.toLowerCase() &&
+      ele.journey.arrival.location.toLowerCase() == to.toLowerCase() &&
+      ele.companyName.toLowerCase().includes(busName.toLowerCase())
+    );
+  });
+  renderBusList(busFilterData);
+  console.log(busFilterData);
 }

@@ -81,35 +81,39 @@
       <div class="search-container">
         <div class="input-group">
           <i class="fas fa-map-marker-alt"></i>
-          <select>
-            <option>Surat</option>
-            <option>Ahmedabad</option>
-            <option>Vadodara</option>
+          <select id="from-city">
+            <option value="">From City</option>
+            <option value="Surat">Surat</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Vadodara">Vadodara</option>
+            <option value="Rajkot">Rajkot</option>
           </select>
         </div>
 
-        <i class="fas fa-exchange-alt swap-icon"></i>
+        <i class="fas fa-exchange-alt swap-icon" id="swap-button"></i>
 
         <div class="input-group">
           <i class="fas fa-map-marker-alt"></i>
-          <select>
-            <option>Ankleshwar</option>
-            <option>Rajkot</option>
-            <option>Bhavnagar</option>
+          <select id="to-city">
+            <option value="">To City</option>
+            <option value="Surat">Surat</option>
+            <option value="Ankleshwar">Ankleshwar</option>
+            <option value="Rajkot">Rajkot</option>
+            <option value="Bhavnagar">Bhavnagar</option>
           </select>
         </div>
 
         <div class="input-group">
           <i class="fas fa-calendar-alt"></i>
-          <input type="date" />
+          <input type="date"  id="journey-date" min="2025-02-28"/>
         </div>
 
         <div class="input-group">
           <i class="fas fa-bus"></i>
-          <input type="text" placeholder="Bus Name (Opt)">
+          <input type="text" id="bus-name" placeholder="Bus Name (Opt)">
         </div>
 
-        <button class="search-btn">Search</button>
+        <button class="search-btn" onclick="searchData()"  id="search-button">Search</button>
       </div>
     </div>
   </section>
@@ -1527,6 +1531,7 @@
     //   });
 
   </script>
+
 </body>
 
 </html> 

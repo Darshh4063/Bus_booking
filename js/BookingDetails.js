@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 async function bookingDetails() {
   try {
     const response = await fetch("http://localhost:3000/BookingDetails");
+    const busdata = JSON.parse(localStorage.getItem("busdata"));
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -24,15 +25,19 @@ async function bookingDetails() {
               <div class="card">
                 <div class="row card-data">
                   <div class="col-12 col-sm-12 col-md-4 pickup">
-                    <h3 class="location">${
-                      bookingDetailsData.booking.pickup.location
-                    }</h3>
-                    <h3 class="time">${
-                      bookingDetailsData.booking.pickup.time
-                    }</h3>
-                    <p class="point">${
-                      bookingDetailsData.booking.pickup.point
-                    }</p>
+                      ${busdata.map((ele) => {
+                        return (
+                          `<h3 class="location">${
+                            bookingDetailsData.booking.pickup.location
+                          }</h3>
+                          <h3 class="time">${
+                            bookingDetailsData.booking.pickup.time
+                          }</h3>
+                          <p class="point">${
+                            bookingDetailsData.booking.pickup.point
+                          }</p>`
+                        )
+                      }) }
                   </div>
   
                   <div class="col-12 col-sm-12 col-md-3 route-data">
