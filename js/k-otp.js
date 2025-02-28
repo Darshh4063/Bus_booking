@@ -1,146 +1,90 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const otpInputs = document.querySelectorAll(".k .otp-input");
-  const verifyButton = document.querySelector(".k-verify button");
-  const otpModal = new bootstrap.Modal(
-    document.getElementById("RegisterOtpModel")
-  );
+function moveToNext(currentInput, index) {
+  const maxLength = parseInt(currentInput.getAttribute("maxlength"));
+  const currentLength = currentInput.value.length;
 
-  // Create error message container and add it to DOM
-  const errorMessageDiv = document.createElement("div");
-  errorMessageDiv.className = "text-danger text-center mt-2 otp-error";
-  errorMessageDiv.style.display = "none";
-  const otpContainer = document.querySelector(".otp-container");
-  otpContainer.insertAdjacentElement("afterend", errorMessageDiv);
+  // Only allow numeric input
+  currentInput.value = currentInput.value.replace(/[^0-9]/g, "");
 
-  // Function to show error message
-  const showError = (message) => {
-    errorMessageDiv.textContent = message;
-    errorMessageDiv.style.display = "block";
-  };
+  // Auto-advance to next input field
+  if (currentLength >= maxLength) {
+    const nextInput = currentInput.nextElementSibling;
+    if (nextInput) {
+      nextInput.focus();
+    }
+  }
 
-  // Function to hide error message
-  const hideError = () => {
-    errorMessageDiv.style.display = "none";
-  };
-
-  // Function to check if OTP is complete
-  const isOTPComplete = () => {
-    return [...otpInputs].every((input) => input.value.length === 1);
-  };
-
-  // Function to get entered OTP
-  const getEnteredOTP = () => {
-    return [...otpInputs].map((input) => input.value).join("");
-  };
-
-  // Focus first input when modal opens
-  document
-    .getElementById("RegisterOtpModel")
-    .addEventListener("shown.bs.modal", function () {
-      otpInputs[0].focus();
-      hideError();
-    });
-
-  // Handle input for each OTP field
-  otpInputs.forEach((input, index) => {
-    input.addEventListener("input", function (e) {
-      // Ensure only numbers
-      this.value = this.value.replace(/[^0-9]/g, "");
-
-      if (this.value.length === 1) {
-        if (index < otpInputs.length - 1) {
-          otpInputs[index + 1].focus();
-        } else {
-          verifyButton.focus();
-        }
+  // Handle backspace to go to previous field
+  currentInput.addEventListener("keydown", function (e) {
+    if (e.key === "Backspace" && currentInput.value.length === 0) {
+      const prevInput = currentInput.previousElementSibling;
+      if (prevInput) {
+        prevInput.focus();
       }
+    }
+  });
 
-      // Hide error when user starts typing
-      hideError();
+  // Check if all OTP fields are filled
+  const otpContainer = currentInput.closest(".otp-container");
+  if (otpContainer) {
+    const allInputs = otpContainer.querySelectorAll(".otp-input");
+    const allFilled = Array.from(allInputs).every(
+      (input) => input.value.length === maxLength
+    );
+
+    // If all fields are filled, enable the verify button
+    const verifyButton = otpContainer.parentElement.querySelector(".veri");
+    if (verifyButton) {
+      verifyButton.disabled = !allFilled;
+    }
+  }
+}
+
+// Initialize OTP fields on page load
+document.addEventListener("DOMContentLoaded", function () {
+  // Set up OTP input fields
+  const otpInputs = document.querySelectorAll(".otp-input");
+  otpInputs.forEach((input, index) => {
+    // Clear any existing values
+    input.value = "";
+
+    // Add event listeners
+    input.addEventListener("input", function () {
+      moveToNext(this, index);
     });
 
-    // Handle paste event
-    input.addEventListener("paste", function (e) {
-      e.preventDefault();
-      const pastedData = e.clipboardData
-        .getData("text")
-        .replace(/[^0-9]/g, "")
-        .slice(0, 4);
+    // Focus first input field
+    if (index === 0) {
+      setTimeout(() => {
+        const otpModal = document.getElementById("otpModal");
+        if (otpModal && otpModal.classList.contains("show")) {
+          input.focus();
+        }
+      }, 500);
+    }
+  });
 
-      if (pastedData) {
-        [...pastedData].forEach((digit, i) => {
-          if (otpInputs[i]) {
-            otpInputs[i].value = digit;
+  // Handle pasting OTP codes
+  document.querySelectorAll(".otp-container").forEach((container) => {
+    container.addEventListener("paste", function (e) {
+      e.preventDefault();
+      const clipboardData = e.clipboardData || window.clipboardData;
+      const pastedData = clipboardData.getData("Text").trim();
+
+      // If pasted data is numeric and has correct length
+      if (/^\d+$/.test(pastedData) && pastedData.length === 4) {
+        const inputs = container.querySelectorAll(".otp-input");
+        [...pastedData].forEach((char, index) => {
+          if (inputs[index]) {
+            inputs[index].value = char;
           }
         });
 
-        if (pastedData.length < 4) {
-          showError("Please enter all 4 digits");
-        }
-
-        const nextEmptyIndex = [...otpInputs].findIndex(
-          (input) => !input.value
-        );
-        if (nextEmptyIndex === -1) {
-          verifyButton.focus();
-        } else {
-          otpInputs[nextEmptyIndex].focus();
+        // Enable verify button
+        const verifyButton = container.parentElement.querySelector(".veri");
+        if (verifyButton) {
+          verifyButton.disabled = false;
         }
       }
     });
-
-    // Handle backspace and arrow keys
-    input.addEventListener("keydown", function (e) {
-      if (e.key === "Backspace") {
-        if (this.value.length === 0 && index > 0) {
-          otpInputs[index - 1].focus();
-        } else {
-          this.value = "";
-        }
-      } else if (e.key === "ArrowLeft" && index > 0) {
-        otpInputs[index - 1].focus();
-      } else if (e.key === "ArrowRight" && index < otpInputs.length - 1) {
-        otpInputs[index + 1].focus();
-      }
-    });
   });
-
-  // Handle verification button click
-  verifyButton.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    // For demo purposes, correct OTP is "1234"
-    const correctOTP = "1234";
-    const enteredOTP = getEnteredOTP();
-
-    if (!isOTPComplete()) {
-      showError("Please enter all 4 digits");
-      return;
-    }
-
-    if (enteredOTP !== correctOTP) {
-      showError("Incorrect OTP. Please try again.");
-      // Clear inputs for retry
-      otpInputs.forEach((input) => (input.value = ""));
-      otpInputs[0].focus();
-      return;
-    }
-
-    // OTP is correct
-    hideError();
-    otpModal.hide();
-    alert("OTP verified successfully!");
-  });
-
-  // Handle Resend OTP
-  const resendButton = document.querySelector(".k-resend");
-  if (resendButton) {
-    resendButton.addEventListener("click", function () {
-      otpInputs.forEach((input) => (input.value = ""));
-      otpInputs[0].focus();
-      hideError();
-      // Here you would typically call your API to resend OTP
-      alert("New OTP has been sent!");
-    });
-  }
 });

@@ -187,6 +187,38 @@ class AuthService {
     }
   }
 
+  // Update profile image
+  async updateProfileImage(userId, imageData, imageName) {
+    try {
+      // Update the image field on the server
+      const result = await this.updateProfile(userId, { image: imageData });
+
+      if (!result.success) {
+        throw new Error(result.message || "Failed to update profile image");
+      }
+
+      // Update the local storage
+      const currentUser = this.getCurrentUser();
+      if (currentUser && currentUser.id === userId) {
+        currentUser.profileImage = imageData;
+        localStorage.setItem("currentUser", JSON.stringify(currentUser));
+      }
+
+      return {
+        success: true,
+        message: "Profile image updated successfully",
+        imageData: imageData,
+        imageName: imageName,
+      };
+    } catch (error) {
+      console.error("Update profile image error:", error);
+      return {
+        success: false,
+        message: "Failed to update profile image: " + error.message,
+      };
+    }
+  }
+
   // Check if user is logged in
   isLoggedIn() {
     return localStorage.getItem("currentUser") !== null;
@@ -194,8 +226,9 @@ class AuthService {
 
   // Logout user
   logout() {
+    // window.location.replace("/home.html");
     localStorage.removeItem("currentUser");
-    window.location.href = "Home.html";
+    window.location.href = "../Home.html";
   }
 
   // Get current user

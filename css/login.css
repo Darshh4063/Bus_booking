@@ -1,12 +1,12 @@
 .body {
     font-family: Lexend Deca;
 }
-.row>* {
+.D .row>* {
     padding-right: 0 !important;
     padding-left: 0 !important;
     margin-top:0 !important;
 }
-.row {
+.D .row {
     margin-top: 0 !important; 
      margin-right: 0 !important; 
      margin-left: 0 !important;
@@ -168,10 +168,10 @@
     border-radius: .3rem;
     outline: 0;
 }
-input{
+.D input{
     border: none !important;
 }
-select{
+.D select{
     border: none !important;
 }
 .D-countr{

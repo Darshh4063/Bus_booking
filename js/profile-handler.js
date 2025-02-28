@@ -34,6 +34,7 @@ function populateUserProfile(user) {
   const profileImage = document.querySelector(".profile-image");
   if (profileImage) {
     profileImage.src = user.profileImage || authService.defaultProfileImage;
+    console.log("Setting profile image src to:", user.profileImage);
   }
 
   // Define profile fields mapping
@@ -68,6 +69,7 @@ function populateUserProfile(user) {
 function setupProfileImageUpload() {
   const imageContainer = document.querySelector(".profile-image-container");
   const imageUploadIcon = imageContainer?.querySelector(".import-pro-img");
+  const profileImage = document.querySelector(".profile-image");
 
   if (imageUploadIcon) {
     imageUploadIcon.addEventListener("click", () => {
@@ -78,16 +80,53 @@ function setupProfileImageUpload() {
       input.onchange = async (e) => {
         const file = e.target.files[0];
         if (file) {
-          const imageUrl = URL.createObjectURL(file);
-          const user = authService.getCurrentUser();
+          // Convert the file to base64 for storage
+          const reader = new FileReader();
+          reader.onload = async function (event) {
+            const base64Image = event.target.result;
+            const user = authService.getCurrentUser();
 
-          const result = await authService.updateProfileImage(
-            user.id,
-            imageUrl
-          );
-          if (result.success) {
-            document.querySelector(".profile-image").src = imageUrl;
-          }
+            if (!user) {
+              alert("Error: User not logged in");
+              return;
+            }
+
+            try {
+              // Create a filename for the image
+              const fileName = `profile_${user.id}_${Date.now()}.${file.name
+                .split(".")
+                .pop()}`;
+
+              // Update the image on the server
+              const result = await authService.updateProfileImage(
+                user.id,
+                base64Image,
+                fileName
+              );
+
+              if (result.success) {
+                // Update the image in the UI
+                if (profileImage) {
+                  profileImage.src = base64Image;
+                }
+
+                console.log("Profile image updated successfully!");
+                console.log(
+                  "Image data:",
+                  base64Image.substring(0, 50) + "..."
+                );
+
+                alert("Profile image updated successfully!");
+              } else {
+                alert(result.message || "Failed to update profile image");
+              }
+            } catch (error) {
+              console.error("Error updating profile image:", error);
+              alert("An error occurred while updating the profile image.");
+            }
+          };
+
+          reader.readAsDataURL(file);
         }
       };
 
@@ -135,7 +174,6 @@ function populateEditForm(user) {
     e.preventDefault();
 
     const updatedData = {
-      ...user,
       name: form.querySelector("#name").value,
       email: form.querySelector("#email").value,
       phone: form.querySelector("#mobile").value,
@@ -147,20 +185,39 @@ function populateEditForm(user) {
       gender: form.querySelector('input[name="gender"]:checked')?.value,
     };
 
-    // Update user data in localStorage
-    localStorage.setItem("currentUser", JSON.stringify(updatedData));
+    try {
+      // Update profile on the server
+      const result = await authService.updateProfile(user.id, updatedData);
 
-    // Refresh profile display
-    populateUserProfile(updatedData);
+      if (result.success) {
+        // Refresh profile display
+        populateUserProfile(authService.getCurrentUser());
 
-    // Close modal
-    const modal = bootstrap.Modal.getInstance(
-      document.getElementById("editProfileModal")
-    );
-    if (modal) {
-      modal.hide();
+        // Close modal
+        const modal = bootstrap.Modal.getInstance(
+          document.getElementById("editProfileModal")
+        );
+        if (modal) {
+          modal.hide();
+        }
+
+        alert("Profile updated successfully!");
+      } else {
+        alert(result.message || "Failed to update profile");
+      }
+    } catch (error) {
+      console.error("Error updating profile:", error);
+      alert("An error occurred while updating the profile.");
     }
   });
+
+  // Add event listener to the update button
+  const updateButton = document.querySelector(".k-updated");
+  if (updateButton) {
+    updateButton.addEventListener("click", () => {
+      form.dispatchEvent(new Event("submit"));
+    });
+  }
 }
 
 function setupLogout() {

@@ -198,5 +198,41 @@ document.addEventListener("DOMContentLoaded", () => {
   window.initAuthListeners();
 });
 
+window.updateUIForLoggedInUser = function (user) {
+  const accountBtnContainer = document.querySelector(".account-btn");
+  if (accountBtnContainer) {
+    // Replace the button with a dropdown
+    accountBtnContainer.innerHTML = `
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="display: flex; align-items: center;">
+          <img 
+            src="${user.profileImage || authService.defaultProfileImage}" 
+            alt="${user.name}" 
+            style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover; margin-right: 8px;"
+          /> 
+          <span>Hi, ${user.name}</span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
+          <li><a class="dropdown-item" href="mybooking.html">My Bookings</a></li>
+          <li><a class="dropdown-item" href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+      </div>
+    `;
+
+    // Add logout functionality to the logout button
+    const logoutBtn = document.getElementById("logoutBtn");
+    if (logoutBtn) {
+      logoutBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (confirm("Are you sure you want to logout?")) {
+          authService.logout();
+          // window.location.reload();
+        }
+      });
+    }
+  }
+};
+
 // Export auth service to global scope
 window.authService = authService;
