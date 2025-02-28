@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Bookings</title>
     <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/Home.css" />
     <!-- model css -->
     <link rel="stylesheet" href="css/mybooking.css" />
     <!-- Include Font Awesome for icons -->
@@ -28,44 +29,67 @@
     />
   </head>
   <body>
-    <!-- Top Banner -->
-    <!-- <div class="top-banner">
+    <!-- Top Bar Section -->
+    <section id="top-bar">
       <div class="container">
-        <div class="d-flex align-items-center justify-content-between">
-          <div>
-            <p class="m-0">WELCOME TO OUR BUS!</p>
+        <div class="row contact-info">
+          <div class="col-12 col-sm-4 col-md-3 our">
+            <span>WELCOME TO OUR BUS!</span>
           </div>
-          <div class="contact-info">
-            <a href="mailto:example123@gmail.com">
-              <i class="fas fa-envelope"></i>
-              example123@gmail.com
-            </a>
-            <a href="tel:+919854255555">
-              <i class="fas fa-phone"></i>
-              +91 98542 55555
-            </a>
+
+          <div class="col-12 col-sm-8 col-md-5 info">
+            <span>example123@gmail.com</span>
+            <span>+91 8405820412</span>
           </div>
         </div>
       </div>
-    </div> -->
+    </section>
+    <!-- Header Section -->
+    <section id="header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <div class="logo">
+              <h1>LOGO</h1>
+            </div>
 
-    <!-- Header -->
-    <!-- <header>
-      <div class="container header-content">
-        <a href="/" class="logo">LOGO</a>
-        <nav class="main-nav">
-          <a href="Home.html" class="active">Home</a>
-          <a href="about-us.html">About Us</a>
-          <a href="contact-us.html">Contact Us</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="Home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="J_about-us.html">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="J_contact-us.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="d-flex d-lg-flex flex-xl-column">
+              <div class="text-end">
+                
+                <div class="account-btn">
+                  <button><i class="fa-solid fa-user"></i> Account</button>
+                </div>
+              </div>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
         </nav>
-        <div class="user-info">
-          <i class="fas fa-user-circle"></i>
-          <span>Hi, Johan</span>
-        </div>
       </div>
-    </header> -->
-
-    <section id="navbar"></section>
+    </section>
 
     <!-- Main Content -->
     <div class="container main-container">

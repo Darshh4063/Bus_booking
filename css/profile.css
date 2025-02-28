@@ -270,3 +270,8 @@ header {
 .k-no-upcoming {
   padding-top: 150px;
 }
+
+.form-control:focus {
+  border-color: none;
+  box-shadow: none !important;
+}
