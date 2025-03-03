@@ -4,7 +4,7 @@ import authService from "./auth.js";
 document.addEventListener("DOMContentLoaded", function () {
   // Check if user is logged in
   if (!authService.isLoggedIn()) {
-    window.location.href = "home.html";
+    window.location.href = "Home.html";
     return;
   }
 
