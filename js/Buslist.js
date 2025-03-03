@@ -666,7 +666,6 @@ function initializeSeatSelection() {
 
     updateStopsList(pickupPoints);
 
-    // Attach click handler to this specific container's seats
     seatContainer.addEventListener("click", (e) => {
       const seatElement = e.target.closest(".seat");
       if (!seatElement || seatElement.classList.contains("booked-seat")) return;
@@ -690,17 +689,14 @@ function initializeSeatSelection() {
         selectedSeats = selectedSeats.filter((id) => id !== seatId);
       }
 
-      // Update the specific bus's seat selection display
       if (seatSelectedElement) {
         seatSelectedElement.innerHTML =
           selectedSeats.length > 0 ? selectedSeats.join(", ") : "";
       }
 
-      // Update this specific bus's booking summary
       updateBookingSummary(selectedSeats, noSeatsElement);
     });
 
-    // Handle legend checkboxes for this specific container
     const legendCheckboxes = seatContainer.querySelectorAll(".legend-box");
     legendCheckboxes.forEach((checkbox) => {
       checkbox.addEventListener("change", () =>
@@ -765,7 +761,7 @@ function updateBookingSummary(selectedSeats, noSeatsElement) {
       </div>
     `;
   }
-  localStorage.setItem("selectedData", selectedSeats);
+  localStorage.setItem("selectedData", JSON.stringify(selectedSeats));
 }
 
 const style = document.createElement("style");
@@ -1185,49 +1181,36 @@ function renderBusList(buses) {
                     <div class="tab active">Pick Up Point</div>
                     <div class="tab">Drop Off Point</div>
                   </div>
-
-                  <div class="stops-list">
-                    <div class="stop-item">
-                      <div class="stop-info">
-                        <div class="stop-time">10:00 AM</div>
-                        <div class="stop-location">Shyamdham Mandir, Jakatnaka</div>
+                  ${bus.pickupPoints
+                    .map((e) => {
+                      return `
+                      <div class="stops-list">
+                        <div class="stop-item">
+                          <div class="stop-info">
+                            <div class="stop-time">${e.time}</div>
+                            <div class="stop-location">${e.location}</div>
+                          </div>
+                          <input type="radio" name="xyz" class="radio-button"></input>
+                        </div>
                       </div>
-                      <input type="radio" name="name" class="radio-button"></input>
-                    </div>
-
-                    <div class="stop-item">
-                      <div class="stop-info">
-                        <div class="stop-time">11:00 AM</div>
-                        <div class="stop-location">Pasodara Patiya, Pasodara</div>
+                    `;
+                    })
+                    .join("")}
+                  ${bus.dropoffPoints
+                    .map((e) => {
+                      return `
+                      <div class="stops-list">
+                      <div class="stop-item">
+                        <div class="stop-info">
+                          <div class="stop-time">${e.time}</div>
+                          <div class="stop-location">${e.location}</div>
+                        </div>
+                        <input type="radio" name="abc" class="radio-button"></input>
                       </div>
-                      <input type="radio" name="name" class="radio-button"></input>
                     </div>
-
-                    <div class="stop-item">
-                      <div class="stop-info">
-                        <div class="stop-time">11:30 AM</div>
-                        <div class="stop-location">Laskana Gam, Laskana</div>
-                      </div>
-                      <input type="radio" name="name" class="radio-button"></input>
-                    </div>
-
-                    <div class="stop-item">
-                      <div class="stop-info">
-                        <div class="stop-time">12:10 AM</div>
-                        <div class="stop-location">Kamrej Under Bridge, Kamrej</div>
-                      </div>
-                      <input type="radio" name="name" class="radio-button"></input>
-                    </div>
-
-                    <div class="stop-item">
-                      <div class="stop-info">
-                        <div class="stop-time">01:00 AM</div>
-                        <div class="stop-location">Raj Hotel, Kmarej Highway</div>
-                      </div>
-                      <input type="radio" name="name" class="radio-button"></input>
-                    </div>
-                  </div>
-
+                  `;
+                    })
+                    .join("")}
                   <div class="booking-summary">
                     <div class="summary-title">Selected Seats</div>
                     <div id="seatselected"></div>
@@ -1235,6 +1218,7 @@ function renderBusList(buses) {
                       <button class="continue-btn" onclick='handleBookingDetail(${JSON.stringify(
                         bus
                       )})'>Continue</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1242,7 +1226,6 @@ function renderBusList(buses) {
           </div>
         </div>
       </div>
-    </div>
   `
     )
     .join("");
@@ -1306,7 +1289,7 @@ async function handleBookingDetail(bus) {
   // Add new bus data
   dt.push(bus);
   localStorage.setItem("busdata", JSON.stringify(dt));
-  // window.location.href = "Booking_Details.html";
+  window.location.href = "Booking_Details.html";
 }
 
 function searchData() {
