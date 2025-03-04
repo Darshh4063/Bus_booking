@@ -7,8 +7,10 @@ async function bookingDetails() {
     const response = await fetch("http://localhost:3000/BookingDetails");
     const busdata = JSON.parse(localStorage.getItem("busdata"));
     const selectSeatData = JSON.parse(localStorage.getItem("selectedData"));
+    const bookingDetails = JSON.parse(localStorage.getItem("bookingDetails"));
 
     console.log("seat", selectSeatData);
+    console.log("Booking Details", bookingDetails);
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -16,6 +18,7 @@ async function bookingDetails() {
 
     const data = await response.json();
     const bookingDetailsData = data[0];
+    // console.log(bookingDetailsData);
 
     const bookingDetailsHtml = `
         <div class="col-12 col-xl-8 book-data">
@@ -28,11 +31,11 @@ async function bookingDetails() {
               <div class="card">
                 <div class="row card-data">
                   <div class="col-12 col-sm-12 col-md-4 pickup">
-                      ${busdata.map((ele) => {
-                        return `<h3 class="location">${bookingDetailsData.booking.pickup.location}</h3>
-                          <h3 class="time">${bookingDetailsData.booking.pickup.time}</h3>
-                          <p class="point">${bookingDetailsData.booking.pickup.point}</p>`;
-                      })}
+                         <h3 class="location">${
+                           bookingDetails.pickupLocation
+                         }</h3>
+                          <h3 class="time">${bookingDetails.pickupTime}</h3>
+                          <p class="point">${bookingDetails.pickupLocation}</p>
                   </div>
   
                   <div class="col-12 col-sm-12 col-md-3 route-data">
@@ -42,20 +45,14 @@ async function bookingDetails() {
                       <img src="./image/route2.png" alt="">
                     </div>
                     <div class="time" id="time">
-                      <h3>${bookingDetailsData.booking.duration}</h3>
+                      <h3>${bookingDetails.duration}</h3>
                     </div>
                   </div>
   
                   <div class="col-12 col-sm-12 col-md-4 drop">
-                    <h3 class="location">${
-                      bookingDetailsData.booking.drop.location
-                    }</h3>
-                    <h3 class="time">${
-                      bookingDetailsData.booking.drop.time
-                    }</h3>
-                    <p class="point">${
-                      bookingDetailsData.booking.drop.point
-                    }</p>
+                    <h3 class="location">${bookingDetails.dropLocation}</h3>
+                    <h3 class="time">${bookingDetails.dropTime}</h3>
+                    <p class="point">${bookingDetails.dropLocation}</p>
                   </div>
                 </div>
                 <hr>
@@ -63,25 +60,18 @@ async function bookingDetails() {
                   <div class="col-12 col-sm-12 col-md-8 seat">
                     <span>Seat Selected :</span>
                     <span class="s-num">
-                      ${selectSeatData
-                        .map(
-                          (seat) =>
-                            `<li style="list-style-type:none">${seat}</li>`
-                        )
-                        .join("")}
+                    
+                            <li style="list-style-type:none">${
+                              bookingDetails.selectedSeats
+                            }</li>
+                    
                     </span>
                   </div>
   
                   <div class="col-12 col-sm-12 col-md-4 bus-opp">
                     <span>Bus Operator :</span>
-                    ${busdata.map((e) => {
-                      return `
-                         <span class="b-name">${e.companyName}</span>
-                        `;
-                    })}
-
-                      <span class="b-name">${busdata.companyName}</span>
-                   
+              
+                         <span class="b-name">${bookingDetails.busName}</span>
                   </div>
                 </div>
               </div>
@@ -267,7 +257,7 @@ async function bookingDetails() {
               <div class="fare-container">
                 <div class="fare-item">
                   <span>Onward Fare</span>
-                  <span>₹${bookingDetailsData.fareBreakup.onwardFare}</span>
+                  <span>₹${busPriceData.busPrice.amount}</span>
                 </div>
                 <div class="fare-item">
                   <span>GST</span>
@@ -287,7 +277,7 @@ async function bookingDetails() {
                   <span>Total Payable Amount</span>
                   <span>₹${bookingDetailsData.fareBreakup.totalAmount}</span>
                 </div>
-                <button class="pay-button" onclick="window.location.href='A-Checkout-Payment.html'">Proceed to Pay</button>
+                <button class="pay-button" onclick="proceedToPay()" >Proceed to Pay</button>
               </div>
             </div>
           </div>
@@ -298,6 +288,63 @@ async function bookingDetails() {
   } catch (error) {
     console.error("Error loading booking details:", error);
   }
+}
+
+const busPriceData = JSON.parse(localStorage.getItem("bookingDetails"));
+console.log("prise", busPriceData.busPrice);
+function proceedToPay() {
+  const passengers = document.querySelectorAll(".Passenger-data");
+  const passengerDetails = Array.from(passengers).map((passenger) => ({
+    name: passenger.querySelector("input[placeholder='Enter Name']").value,
+    age: passenger.querySelector("input[type='text'][value='']").value,
+    gender:
+      passenger.querySelector("input[name^='gender']:checked")?.value || "",
+    seat: passenger.querySelector("input[type='text'][value='']").value,
+  }));
+
+  const contactDetails = {
+    email: document.querySelector("input[placeholder='Enter your email']")
+      .value,
+    phone: {
+      countryCode: document.querySelector(".phone-container select").value,
+      number: document.querySelector(".phone-container input[type='text']")
+        .value,
+    },
+  };
+
+  // Retrieve existing booking details from local storage
+  const existingBookingDetails =
+    JSON.parse(localStorage.getItem("bookingDetails")) || {};
+
+  // Add new passenger details and contact details to the existing object
+  existingBookingDetails.passengers = existingBookingDetails.passengers || [];
+  existingBookingDetails.passengers.push(...passengerDetails);
+  existingBookingDetails.contactDetails = contactDetails;
+
+  // Calculate fare breakup values
+
+  const onwardFare = busPriceData.busPrice; // Example value, replace with actual data
+  const gst = 60; // Example value, replace with actual data
+  const bookingCharges = 120; // Example value, replace with actual data
+  const discount = -120; // Example value, replace with actual data
+
+  const totalPayableAmount = onwardFare + gst + bookingCharges + discount;
+
+  // Store fare breakup in booking details
+  existingBookingDetails.fareBreakup = {
+    onwardFare,
+    gst,
+    bookingCharges,
+    discount,
+    totalPayableAmount,
+  };
+
+  // Store the updated booking details back in local storage
+  localStorage.setItem(
+    "bookingDetails",
+    JSON.stringify(existingBookingDetails)
+  );
+  window.location.href = "A-Checkout-Payment.html";
 }
 
 window.onload = () => {

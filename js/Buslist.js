@@ -621,50 +621,50 @@ function initializeSeatSelection() {
     );
     const stopsList = seatContainer.querySelector(".stops-list");
 
-    const pickupPoints = [
-      { time: "10:00 AM", location: "Shyamdham Mandir, Jakatnaka" },
-      { time: "11:00 AM", location: "Pasodara Patiya, Pasodara" },
-      { time: "11:30 AM", location: "Laskana Gam, Laskana" },
-      { time: "12:10 AM", location: "Kamrej Under Bridge, Kamrej" },
-      { time: "01:00 AM", location: "Raj Hotel, Kmarej Highway" },
-    ];
+    // const pickupPoints = [
+    //   { time: "10:00 AM", location: "Shyamdham Mandir, Jakatnaka" },
+    //   { time: "11:00 AM", location: "Pasodara Patiya, Pasodara" },
+    //   { time: "11:30 AM", location: "Laskana Gam, Laskana" },
+    //   { time: "12:10 AM", location: "Kamrej Under Bridge, Kamrej" },
+    //   { time: "01:00 AM", location: "Raj Hotel, Kmarej Highway" },
+    // ];
 
-    const dropoffPoints = [
-      { time: "06:00 PM", location: "Central Bus Station" },
-      { time: "06:30 PM", location: "City Mall Stop" },
-      { time: "07:00 PM", location: "Airport Terminal" },
-      { time: "07:30 PM", location: "Railway Station" },
-    ];
+    // const dropoffPoints = [
+    //   { time: "06:00 PM", location: "Central Bus Station" },
+    //   { time: "06:30 PM", location: "City Mall Stop" },
+    //   { time: "07:00 PM", location: "Airport Terminal" },
+    //   { time: "07:30 PM", location: "Railway Station" },
+    // ];
 
-    function updateStopsList(points) {
-      stopsList.innerHTML = points
-        .map(
-          (point) => `
-        <div class="stop-item">
-          <div class="stop-info">
-            <div class="stop-time">${point.time}</div>
-            <div class="stop-location">${point.location}</div>
-          </div>
-          <input type="radio" name="stop-point" class="radio-button">
-        </div>
-      `
-        )
-        .join("");
-    }
+    // function updateStopsList(points) {
+    //   stopsList.innerHTML = points
+    //     .map(
+    //       (point) => `
+    //     <div class="stop-item">
+    //       <div class="stop-info">
+    //         <div class="stop-time">${point.time}</div>
+    //         <div class="stop-location">${point.location}</div>
+    //       </div>
+    //       <input type="radio" name="stop-point" class="radio-button">
+    //     </div>
+    //   `
+    //     )
+    //     .join("");
+    // }
 
-    pickupDropTabs.forEach((tab, index) => {
-      tab.addEventListener("click", () => {
-        pickupDropTabs.forEach((t) => t.classList.remove("active"));
-        tab.classList.add("active");
-        if (index === 0) {
-          updateStopsList(pickupPoints);
-        } else {
-          updateStopsList(dropoffPoints);
-        }
-      });
-    });
+    // pickupDropTabs.forEach((tab, index) => {
+    //   tab.addEventListener("click", () => {
+    //     pickupDropTabs.forEach((t) => t.classList.remove("active"));
+    //     tab.classList.add("active");
+    //     if (index === 0) {
+    //       // updateStopsList(pickupPoints);
+    //     } else {
+    //       updateStopsList(dropoffPoints);
+    //     }
+    //   });
+    // });
 
-    updateStopsList(pickupPoints);
+    // updateStopsList(pickupPoints);
 
     seatContainer.addEventListener("click", (e) => {
       const seatElement = e.target.closest(".seat");
@@ -752,7 +752,6 @@ function updateBookingSummary(selectedSeats, noSeatsElement) {
         <h4>Selected Seats:</h4>
         ${selectedSeats
           .map((seat) => `<div class="selected-seat-item">${seat}</div>`)
-
           .join("")}
         <div class="total-amount">
           <span>Total Amount:</span>
@@ -1178,39 +1177,46 @@ function renderBusList(buses) {
 
                 <div class="sidebar">
                   <div class="tabs">
-                    <div class="tab active">Pick Up Point</div>
-                    <div class="tab">Drop Off Point</div>
+                    <div class="tab ${
+                      selectedtype === "pick" ? "active" : ""
+                    }"  active" onclick=handlelocation('pick',${busIndex})>Pick Up Point</div>
+                    <div class="tab ${
+                      selectedtype === "drop" ? "active" : ""
+                    }"  onclick=handlelocation('drop',${busIndex})>Drop Off Point</div>
                   </div>
-                  ${bus.pickupPoints
-                    .map((e) => {
-                      return `
+                  ${
+                    selectedtype == "pick"
+                      ? bus.pickupPoints
+                          .map((e) => {
+                            return `
                       <div class="stops-list">
                         <div class="stop-item">
                           <div class="stop-info">
                             <div class="stop-time">${e.time}</div>
                             <div class="stop-location">${e.location}</div>
                           </div>
-                          <input type="radio" name="xyz" class="radio-button"></input>
+                          <input type="radio" name="pickupStop" class="radio-button" value="${e.location}"></input>
                         </div>
                       </div>
                     `;
-                    })
-                    .join("")}
-                  ${bus.dropoffPoints
-                    .map((e) => {
-                      return `
+                          })
+                          .join("")
+                      : bus.dropoffPoints
+                          .map((e) => {
+                            return `
                       <div class="stops-list">
                       <div class="stop-item">
                         <div class="stop-info">
                           <div class="stop-time">${e.time}</div>
                           <div class="stop-location">${e.location}</div>
                         </div>
-                        <input type="radio" name="abc" class="radio-button"></input>
+                        <input type="radio" name="pickupStop" class="radio-button" value="${e.location}"></input>
                       </div>
                     </div>
                   `;
-                    })
-                    .join("")}
+                          })
+                          .join("")
+                  }
                   <div class="booking-summary">
                     <div class="summary-title">Selected Seats</div>
                     <div id="seatselected"></div>
@@ -1273,15 +1279,35 @@ function renderBusList(buses) {
   });
 
   initializeSeatSelection();
+
+  // Add this event listener after rendering the stops
+  document.querySelectorAll('input[name="pickupStop"]').forEach((radio) => {
+    radio.addEventListener("change", (e) => {
+      const selectedPickupLocation = e.target.value;
+      let bookingDetails =
+        JSON.parse(localStorage.getItem("bookingDetails")) || {}; // Initialize or get existing bookingDetails
+      bookingDetails.pickupLocation = selectedPickupLocation; // Update the pickup location
+      localStorage.setItem("bookingDetails", JSON.stringify(bookingDetails)); // Store updated booking details
+    });
+  });
 }
 
 async function handleBookingDetail(bus) {
   console.log(bus);
   const selectSeat = localStorage.getItem("selectedData");
 
-  console.log("heloo", selectSeat);
-  // console.log("dfjdf", selectedSeats);
-  // console.log("dbhdg",noSeatsElement);
+  const bookingDetails = {
+    busName: bus.companyName,
+    pickupLocation: bus.journey.departure.location,
+    pickupTime: bus.journey.departure.time,
+    dropLocation: bus.journey.arrival.location,
+    dropTime: bus.journey.arrival.time,
+    duration: bus.journey.duration,
+    selectedSeats: selectSeat,
+    busPrice: bus.price,
+  };
+
+  localStorage.setItem("bookingDetails", JSON.stringify(bookingDetails));
 
   let dt = JSON.parse(localStorage.getItem("busdata")) || [];
   if (!Array.isArray(dt)) dt = [];
@@ -1310,4 +1336,25 @@ function searchData() {
   });
   renderBusList(busFilterData);
   console.log(busFilterData);
+}
+
+let selectedtype = "pick";
+function handlelocation(value, busIndex) {
+  console.log(value);
+
+  selectedtype = value;
+  console.log(selectedtype);
+
+  const filteredBuses =
+    selectedtype === "pick"
+      ? data.filter((bus) => bus.pickupPoints.length > 0)
+      : data.filter((bus) => bus.dropoffPoints.length > 0);
+
+  renderBusList(filteredBuses);
+
+  document.getElementById(`selectseat-${busIndex}`).style.display = "block";
+
+  document.querySelectorAll(`[data-bus="${busIndex}"]`).forEach((tab) => {
+    tab.classList.remove("active");
+  });
 }
