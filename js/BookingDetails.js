@@ -6,6 +6,9 @@ async function bookingDetails() {
   try {
     const response = await fetch("http://localhost:3000/BookingDetails");
     const busdata = JSON.parse(localStorage.getItem("busdata"));
+    const selectSeatData = JSON.parse(localStorage.getItem("selectedData"));
+
+    console.log("seat", selectSeatData);
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -26,18 +29,10 @@ async function bookingDetails() {
                 <div class="row card-data">
                   <div class="col-12 col-sm-12 col-md-4 pickup">
                       ${busdata.map((ele) => {
-                        return (
-                          `<h3 class="location">${
-                            bookingDetailsData.booking.pickup.location
-                          }</h3>
-                          <h3 class="time">${
-                            bookingDetailsData.booking.pickup.time
-                          }</h3>
-                          <p class="point">${
-                            bookingDetailsData.booking.pickup.point
-                          }</p>`
-                        )
-                      }) }
+                        return `<h3 class="location">${bookingDetailsData.booking.pickup.location}</h3>
+                          <h3 class="time">${bookingDetailsData.booking.pickup.time}</h3>
+                          <p class="point">${bookingDetailsData.booking.pickup.point}</p>`;
+                      })}
                   </div>
   
                   <div class="col-12 col-sm-12 col-md-3 route-data">
@@ -68,17 +63,25 @@ async function bookingDetails() {
                   <div class="col-12 col-sm-12 col-md-8 seat">
                     <span>Seat Selected :</span>
                     <span class="s-num">
-                      ${bookingDetailsData.booking.seatsSelected
-                        .map((seat) => `<li>${seat}</li>`)
+                      ${selectSeatData
+                        .map(
+                          (seat) =>
+                            `<li style="list-style-type:none">${seat}</li>`
+                        )
                         .join("")}
                     </span>
                   </div>
   
                   <div class="col-12 col-sm-12 col-md-4 bus-opp">
                     <span>Bus Operator :</span>
-                    <span class="b-name">${
-                      bookingDetailsData.booking.busOperator
-                    }</span>
+                    ${busdata.map((e) => {
+                      return `
+                         <span class="b-name">${e.companyName}</span>
+                        `;
+                    })}
+
+                      <span class="b-name">${busdata.companyName}</span>
+                   
                   </div>
                 </div>
               </div>
