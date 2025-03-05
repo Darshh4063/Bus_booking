@@ -79,8 +79,10 @@
     margin: 0 auto;
     text-align: center;
     background-color: #c16c49;
+    border: none;
     border-radius: 5px;
-    padding: 5px 0 !important;
+    padding: 15px  !important;
+    color: white;
 }
 
 .pay a {
