@@ -9,8 +9,8 @@ async function bookingDetails() {
     const selectSeatData = JSON.parse(localStorage.getItem("selectedData"));
     const bookingDetails = JSON.parse(localStorage.getItem("bookingDetails"));
 
-    console.log("seat", selectSeatData);
-    console.log("Booking Details", bookingDetails);
+    // console.log("seat", selectSeatData);
+    // console.log("Booking Details", bookingDetails);
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -35,7 +35,7 @@ async function bookingDetails() {
                            bookingDetails.pickupLocation
                          }</h3>
                           <h3 class="time">${bookingDetails.pickupTime}</h3>
-                          <p class="point">${bookingDetails.pickupLocation}</p>
+                          <p class="point">${bookingDetails.pickupPoints}</p>
                   </div>
   
                   <div class="col-12 col-sm-12 col-md-3 route-data">
@@ -52,22 +52,11 @@ async function bookingDetails() {
                   <div class="col-12 col-sm-12 col-md-4 drop">
                     <h3 class="location">${bookingDetails.dropLocation}</h3>
                     <h3 class="time">${bookingDetails.dropTime}</h3>
-                    <p class="point">${bookingDetails.dropLocation}</p>
+                    <p class="point">${bookingDetails.dropoffPoints}</p>
                   </div>
                 </div>
                 <hr>
                 <div class="row Operator">
-                  <div class="col-12 col-sm-12 col-md-8 seat">
-                    <span>Seat Selected :</span>
-                    <span class="s-num">
-                    
-                            <li style="list-style-type:none">${
-                              bookingDetails.selectedSeats
-                            }</li>
-                    
-                    </span>
-                  </div>
-  
                   <div class="col-12 col-sm-12 col-md-4 bus-opp">
                     <span>Bus Operator :</span>
               
@@ -101,7 +90,7 @@ async function bookingDetails() {
                             }">
                           </div>
   
-                          <div class="col-6 col-sm-2 Passenger">
+                          <div class="col-6 col-sm-2 Passenger agePick">
                             <p>Age</p>
                             <input type="text" value="${passenger.age || ""}">
                           </div>
@@ -132,15 +121,6 @@ async function bookingDetails() {
                                 }_female">Female</label>
                               </div>
                             </div>
-                          </div>
-  
-                          <div class="col-12 col-sm-1 Passenger">
-                            <p>Seat</p>
-                            <input type="text" value="${
-                              passenger.seat ||
-                              bookingDetailsData.booking.seatsSelected[index] ||
-                              ""
-                            }">
                           </div>
                         </div>
                       </div>
@@ -257,11 +237,11 @@ async function bookingDetails() {
               <div class="fare-container">
                 <div class="fare-item">
                   <span>Onward Fare</span>
-                  <span>₹${busPriceData.busPrice.amount}</span>
+                  <span>₹${bookingDetails.onwardFare}</span>
                 </div>
                 <div class="fare-item">
                   <span>GST</span>
-                  <span>₹${bookingDetailsData.fareBreakup.GST}</span>
+                  <span>₹${bookingDetails.gst}</span>
                 </div>
                 <div class="fare-item">
                   <span>Booking Charges</span>
@@ -269,13 +249,11 @@ async function bookingDetails() {
                 </div>
                 <div class="fare-item">
                   <span>Discount</span>
-                  <span>-₹${Math.abs(
-                    bookingDetailsData.fareBreakup.discount
-                  )}</span>
+                  <span>-₹${Math.abs(bookingDetails.discount)}</span>
                 </div>
                 <div class="fare-item total">
                   <span>Total Payable Amount</span>
-                  <span>₹${bookingDetailsData.fareBreakup.totalAmount}</span>
+                  <span>₹${bookingDetails.totalPrice}</span>
                 </div>
                 <button class="pay-button" onclick="proceedToPay()" >Proceed to Pay</button>
               </div>
@@ -291,46 +269,41 @@ async function bookingDetails() {
 }
 
 const busPriceData = JSON.parse(localStorage.getItem("bookingDetails"));
-console.log("prise", busPriceData.busPrice);
+// console.log("prise", busPriceData.busPrice);
 function proceedToPay() {
   const passengers = document.querySelectorAll(".Passenger-data");
   const passengerDetails = Array.from(passengers).map((passenger) => ({
     name: passenger.querySelector("input[placeholder='Enter Name']").value,
-    age: passenger.querySelector("input[type='text'][value='']").value,
+    age: document.querySelector(".agePick input").value,
     gender:
       passenger.querySelector("input[name^='gender']:checked")?.value || "",
-    seat: passenger.querySelector("input[type='text'][value='']").value,
+    // seat: passenger.querySelector("input[type='text'][value='']").value,
   }));
-
+  // agePick
   const contactDetails = {
-    email: document.querySelector("input[placeholder='Enter your email']")
-      .value,
+    email: document.querySelector(".phone-container input[type='text']").value,
+
     phone: {
       countryCode: document.querySelector(".phone-container select").value,
-      number: document.querySelector(".phone-container input[type='text']")
-        .value,
+      number: document.querySelector(
+        "input[placeholder='Enter your phone no.']"
+      ).value,
     },
   };
 
-  // Retrieve existing booking details from local storage
   const existingBookingDetails =
     JSON.parse(localStorage.getItem("bookingDetails")) || {};
 
-  // Add new passenger details and contact details to the existing object
   existingBookingDetails.passengers = existingBookingDetails.passengers || [];
   existingBookingDetails.passengers.push(...passengerDetails);
   existingBookingDetails.contactDetails = contactDetails;
 
-  // Calculate fare breakup values
-
-  const onwardFare = busPriceData.busPrice; // Example value, replace with actual data
-  const gst = 60; // Example value, replace with actual data
-  const bookingCharges = 120; // Example value, replace with actual data
-  const discount = -120; // Example value, replace with actual data
-
+  var onwardFare = busPriceData.busPrice;
+  var gst = onwardFare * 0.18 * 100;
+  const bookingCharges = 120;
+  const discount = -120;
   const totalPayableAmount = onwardFare + gst + bookingCharges + discount;
 
-  // Store fare breakup in booking details
   existingBookingDetails.fareBreakup = {
     onwardFare,
     gst,
@@ -339,7 +312,6 @@ function proceedToPay() {
     totalPayableAmount,
   };
 
-  // Store the updated booking details back in local storage
   localStorage.setItem(
     "bookingDetails",
     JSON.stringify(existingBookingDetails)
