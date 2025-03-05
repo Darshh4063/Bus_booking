@@ -3346,83 +3346,6 @@
       "id": "7ee0"
     }
   ],
-  "checkoutPayment": [
-    {
-      "CheckoutPayment": {
-        "paymentOptions": [
-          {
-            "method": "Credit/Debit Card",
-            "cardHolderName": "",
-            "cardNumber": "",
-            "expiryDate": "",
-            "cvv": ""
-          },
-          {
-            "method": "UPI",
-            "upiID": "",
-            "provider": [
-              "@oksbi",
-              "@okhdfc",
-              "@okicici"
-            ]
-          },
-          {
-            "method": "Net Banking",
-            "selectedBank": "",
-            "availableBanks": [
-              "Citi Bank",
-              "Wells Fargo Bank",
-              "Capital One Bank",
-              "TD Bank"
-            ]
-          }
-        ],
-        "bookingDetails": {
-          "busOperator": "Shree Nath Travels",
-          "busType": "Non AC Sleeper",
-          "pickup": {
-            "time": "10:00 AM",
-            "date": "10 Feb 2025",
-            "location": "Surat",
-            "point": "Shyamdham Mandir, Jakatnaka"
-          },
-          "drop": {
-            "time": "06:00 PM",
-            "date": "10 Feb 2025",
-            "location": "Ankleshwar",
-            "point": "Lalita Chowkdi"
-          },
-          "duration": "05h 30m",
-          "passengers": [
-            {
-              "name": "Shyam Patel",
-              "gender": "Male",
-              "age": 23,
-              "seat": 32
-            },
-            {
-              "name": "Mina Patel",
-              "gender": "Female",
-              "age": 32,
-              "seat": 33
-            },
-            {
-              "name": "Shubham Patel",
-              "gender": "Male",
-              "age": 38,
-              "seat": 34
-            }
-          ]
-        },
-        "fareDetails": {
-          "onwardFare": 6000,
-          "others": 60,
-          "totalAmount": 6060
-        }
-      },
-      "id": "6205"
-    }
-  ],
   "user": [
     {
       "id": "1a2b3c",
@@ -3544,39 +3467,147 @@
   ],
   "payments": [
     {
-      "id": "7b0d",
+      "id": "14ac",
+      "upiId": "john.doe@oksbi",
+      "amount": 6060,
+      "timestamp": "2025-03-05T04:25:27.115Z"
+    },
+    {
+      "id": "6a36",
+      "upiId": "demo@okhdfc",
+      "amount": 6060,
+      "timestamp": "2025-03-05T04:26:37.590Z"
+    },
+    {
+      "id": "96f3",
+      "cardHolder": "raj",
+      "cardNumber": "789456321456122",
+      "expiryDate": "02/2028",
+      "cvv": "142"
+    },
+    {
+      "id": "dzy4",
+      "paymentBy": "UPI",
+      "upiId": "john.doe@oksbi",
+      "amount": 6060,
+      "timestamp": "2025-03-05T04:53:45.388Z"
+    },
+    {
+      "id": "jsv7",
+      "paymentBy": "Card",
       "cardHolder": "John Doe",
       "cardNumber": "4111111111111111",
-      "expiryDate": "12/2028",
-      "cvv": "123"
+      "expiryDate": "02/2028",
+      "cvv": "145",
+      "amount": 6060,
+      "timestamp": "2025-03-05T04:59:01.536Z"
     },
     {
-      "id": "1f23",
+      "id": "pap0",
+      "paymentBy": "UPI",
+      "upiId": "demo456@oksbi",
+      "amount": 6060,
+      "timestamp": "2025-03-05T05:02:26.726Z"
+    },
+    {
+      "id": "ztk5",
+      "paymentBy": "Card",
+      "cardHolder": "parth",
+      "cardNumber": "4112555211112222",
+      "expiryDate": "02/2029",
+      "cvv": "189",
+      "amount": 6060,
+      "timestamp": "2025-03-05T05:22:12.799Z"
+    },
+    {
+      "id": "oej3",
+      "paymentBy": "UPI",
+      "upiId": "admin12@okhdfc",
+      "amount": 6060,
+      "timestamp": "2025-03-05T05:50:41.823Z"
+    },
+    {
+      "id": "lxha",
+      "paymentBy": "UPI",
+      "upiId": "umang13@okicici",
+      "amount": 6060,
+      "timestamp": "2025-03-05T06:12:33.816Z"
+    },
+    {
+      "id": "iwj8",
+      "paymentBy": "NetBanking",
+      "bank": "Capital One Bank",
+      "amount": 6060,
+      "timestamp": "2025-03-05T06:18:45.956Z"
+    },
+    {
+      "id": "18s9",
+      "paymentBy": "Card",
       "cardHolder": "umang jogani",
       "cardNumber": "5555555555554444",
-      "expiryDate": "12/2028",
-      "cvv": "123"
+      "expiryDate": "02/2030",
+      "cvv": "152",
+      "amount": 6060,
+      "timestamp": "2025-03-05T09:31:31.357Z"
     },
     {
-      "id": "b149",
-      "cardHolder": "admin",
+      "id": "7yym",
+      "paymentBy": "Card",
+      "cardHolder": "emily doe",
+      "cardNumber": "378282246310005",
+      "expiryDate": "02/2088",
+      "cvv": "369",
+      "amount": 6060,
+      "timestamp": "2025-03-05T09:33:55.051Z"
+    },
+    {
+      "id": "b2hq",
+      "paymentBy": "Card",
+      "cardHolder": "vasu",
       "cardNumber": "6011111111111117",
-      "expiryDate": "02/2028",
-      "cvv": "123"
+      "expiryDate": "02/2099",
+      "cvv": "258",
+      "amount": 6060,
+      "timestamp": "2025-03-05T09:34:29.009Z"
     },
     {
-      "id": "2bbb",
-      "cardHolder": "viral bhai",
-      "cardNumber": "1234567891011425",
-      "expiryDate": "02/2028",
-      "cvv": "123"
+      "id": "j2j0",
+      "paymentBy": "UPI",
+      "upiId": "demo2530@oksbi",
+      "amount": 6060,
+      "timestamp": "2025-03-05T09:35:08.504Z"
     },
     {
-      "id": "7414",
-      "cardHolder": "t-rex",
-      "cardNumber": "123456789101124",
-      "expiryDate": "02/2028",
-      "cvv": "123"
+      "id": "2d8y",
+      "paymentBy": "NetBanking",
+      "bank": "TD Bank",
+      "amount": 6060,
+      "timestamp": "2025-03-05T09:35:26.361Z"
+    },
+    {
+      "id": "7euw",
+      "paymentBy": "Check",
+      "checkNumber": "123456789",
+      "accountNumber": "987654321012",
+      "amount": 6060,
+      "timestamp": "2025-03-05T10:00:46.989Z"
+    },
+    {
+      "id": "40eb",
+      "paymentBy": "Card",
+      "cardHolder": "sujal",
+      "cardNumber": "5555555555554444",
+      "expiryDate": "02/2065",
+      "cvv": "558",
+      "amount": 6060,
+      "timestamp": "2025-03-05T10:53:23.974Z"
+    },
+    {
+      "id": "8ijtx9",
+      "paymentBy": "Check",
+      "accountNumber": "987654321012",
+      "amount": 6060,
+      "timestamp": "2025-03-05T11:09:31.625Z"
     }
   ]
 }

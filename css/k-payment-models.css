@@ -1,0 +1,114 @@
+.success-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #4caf50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  position: relative;
+}
+
+.success-icon::after {
+  content: "";
+  width: 30px;
+  height: 15px;
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 18px;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-header .btn-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.modal-body {
+  padding: 2rem;
+  text-align: center;
+}
+
+.success-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.success-message {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Custom animation for modal */
+.modal.fade .modal-dialog {
+  transform: scale(0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+.modal.show .modal-dialog {
+  transform: scale(1);
+}
+
+.modal-custom {
+  background: #fff;
+  color: white;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.hourglass-icon {
+  color: #ffa500;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.failed-icon {
+  background: #dc3545;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin: 0 auto 20px;
+}
+
+.modal-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.modal-text {
+  color: #888;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #888;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.w-10 {
+  width: 10%;
+}

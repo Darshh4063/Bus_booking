@@ -81,7 +81,8 @@
     background-color: #c16c49;
     border: none;
     border-radius: 5px;
-    padding: 15px  !important;
+    padding: 10px  !important;
+    width: 350px;
     color: white;
 }
 
@@ -97,7 +98,7 @@
 
 .upi {
     margin: 0 auto;
-    padding-bottom: 3rem;
+    /* padding-bottom: 3rem; */
 }
 
 .upi label {
@@ -432,4 +433,14 @@
         width: 100% !important;
     }
 
+}
+
+@media (min-width: 5px) and (max-width: 425px) {
+    .pay{
+        width: 150px;
+    }
+
+    #A-Checkout-Payment {
+        padding: 0 !important;
+    }
 }
