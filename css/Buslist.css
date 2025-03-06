@@ -1083,3 +1083,8 @@ tr:nth-child(even) td {
 .continue-btn:hover {
   background-color: #c27761;
 }
+
+
+.margin_left {
+  margin-left: 25px;
+}

@@ -1023,7 +1023,7 @@
         "duration": "05h 30m"
       },
       "price": {
-        "amount": 1400,
+        "amount": "30,000",
         "currency": "₹",
         "discount": "Best deal 10% Off"
       },
@@ -1180,79 +1180,28 @@
           "lowerDeck": {
             "title": "Lower Seat",
             "seats": [
-              [
-                "booked",
-                "available",
-                "booked"
-              ],
-              [
-                "available",
-                "available",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "booked"
-              ],
-              [
-                "booked",
-                "available",
-                "booked"
-              ],
-              [
-                "available",
-                "booked",
-                "available"
-              ],
-              [
-                "available",
-                "available",
-                "booked"
-              ]
+              ["booked", "available", "booked"],
+              ["available", "available", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "available", "booked"],
+              ["available", "booked", "available"],
+              ["available", "available", "booked"]
             ]
           },
           "upperDeck": {
             "title": "Upper Seat",
             "seats": [
-              [
-                "available",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "booked"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "available",
-                "available",
-                "available"
-              ]
+              ["available", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "booked", "available"],
+              ["available", "available", "available"]
             ]
           }
         },
         "sidebar": {
-          "tabs": [
-            "Pick Up Point",
-            "Drop Off Point"
-          ],
+          "tabs": ["Pick Up Point", "Drop Off Point"],
           "pickupPoints": [
             {
               "time": "10:00 AM",
@@ -1306,7 +1255,7 @@
         "duration": "05h 30m"
       },
       "price": {
-        "amount": 1400,
+        "amount": "32,000",
         "currency": "₹",
         "discount": "Best deal 10% Off"
       },
@@ -1463,79 +1412,28 @@
           "lowerDeck": {
             "title": "Lower Seat",
             "seats": [
-              [
-                "booked",
-                "available",
-                "booked"
-              ],
-              [
-                "available",
-                "available",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "booked"
-              ],
-              [
-                "booked",
-                "available",
-                "booked"
-              ],
-              [
-                "available",
-                "booked",
-                "available"
-              ],
-              [
-                "available",
-                "available",
-                "booked"
-              ]
+              ["booked", "available", "booked"],
+              ["available", "available", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "available", "booked"],
+              ["available", "booked", "available"],
+              ["available", "available", "booked"]
             ]
           },
           "upperDeck": {
             "title": "Upper Seat",
             "seats": [
-              [
-                "available",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "booked"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "available",
-                "available",
-                "available"
-              ]
+              ["available", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "booked", "available"],
+              ["available", "available", "available"]
             ]
           }
         },
         "sidebar": {
-          "tabs": [
-            "Pick Up Point",
-            "Drop Off Point"
-          ],
+          "tabs": ["Pick Up Point", "Drop Off Point"],
           "pickupPoints": [
             {
               "time": "10:00 AM",
@@ -1589,7 +1487,7 @@
         "duration": "05h 30m"
       },
       "price": {
-        "amount": 700,
+        "amount": "35,000",
         "currency": "₹",
         "discount": "Best deal 10% Off"
       },
@@ -1746,79 +1644,28 @@
           "lowerDeck": {
             "title": "Lower Seat",
             "seats": [
-              [
-                "booked",
-                "available",
-                "booked"
-              ],
-              [
-                "available",
-                "available",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "booked"
-              ],
-              [
-                "booked",
-                "available",
-                "booked"
-              ],
-              [
-                "available",
-                "booked",
-                "available"
-              ],
-              [
-                "available",
-                "available",
-                "booked"
-              ]
+              ["booked", "available", "booked"],
+              ["available", "available", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "available", "booked"],
+              ["available", "booked", "available"],
+              ["available", "available", "booked"]
             ]
           },
           "upperDeck": {
             "title": "Upper Seat",
             "seats": [
-              [
-                "available",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "booked"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "available",
-                "available",
-                "available"
-              ]
+              ["available", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "booked", "available"],
+              ["available", "available", "available"]
             ]
           }
         },
         "sidebar": {
-          "tabs": [
-            "Pick Up Point",
-            "Drop Off Point"
-          ],
+          "tabs": ["Pick Up Point", "Drop Off Point"],
           "pickupPoints": [
             {
               "time": "10:00 AM",
@@ -1872,7 +1719,7 @@
         "duration": "05h 30m"
       },
       "price": {
-        "amount": 800,
+        "amount": "37,000",
         "currency": "₹",
         "discount": "Best deal 10% Off"
       },
@@ -2029,79 +1876,28 @@
           "lowerDeck": {
             "title": "Lower Seat",
             "seats": [
-              [
-                "booked",
-                "available",
-                "booked"
-              ],
-              [
-                "available",
-                "available",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "booked"
-              ],
-              [
-                "booked",
-                "available",
-                "booked"
-              ],
-              [
-                "available",
-                "booked",
-                "available"
-              ],
-              [
-                "available",
-                "available",
-                "booked"
-              ]
+              ["booked", "available", "booked"],
+              ["available", "available", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "available", "booked"],
+              ["available", "booked", "available"],
+              ["available", "available", "booked"]
             ]
           },
           "upperDeck": {
             "title": "Upper Seat",
             "seats": [
-              [
-                "available",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "booked"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "available",
-                "available",
-                "available"
-              ]
+              ["available", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "booked", "available"],
+              ["available", "available", "available"]
             ]
           }
         },
         "sidebar": {
-          "tabs": [
-            "Pick Up Point",
-            "Drop Off Point"
-          ],
+          "tabs": ["Pick Up Point", "Drop Off Point"],
           "pickupPoints": [
             {
               "time": "10:00 AM",
@@ -2155,7 +1951,7 @@
         "duration": "05h 30m"
       },
       "price": {
-        "amount": 1000,
+        "amount": "28,000",
         "currency": "₹",
         "discount": "Best deal 10% Off"
       },
@@ -2312,79 +2108,28 @@
           "lowerDeck": {
             "title": "Lower Seat",
             "seats": [
-              [
-                "booked",
-                "available",
-                "booked"
-              ],
-              [
-                "available",
-                "available",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "booked"
-              ],
-              [
-                "booked",
-                "available",
-                "booked"
-              ],
-              [
-                "available",
-                "booked",
-                "available"
-              ],
-              [
-                "available",
-                "available",
-                "booked"
-              ]
+              ["booked", "available", "booked"],
+              ["available", "available", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "available", "booked"],
+              ["available", "booked", "available"],
+              ["available", "available", "booked"]
             ]
           },
           "upperDeck": {
             "title": "Upper Seat",
             "seats": [
-              [
-                "available",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "booked"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "available",
-                "available",
-                "available"
-              ]
+              ["available", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "booked", "available"],
+              ["available", "available", "available"]
             ]
           }
         },
         "sidebar": {
-          "tabs": [
-            "Pick Up Point",
-            "Drop Off Point"
-          ],
+          "tabs": ["Pick Up Point", "Drop Off Point"],
           "pickupPoints": [
             {
               "time": "10:00 AM",
@@ -2438,7 +2183,7 @@
         "duration": "05h 30m"
       },
       "price": {
-        "amount": 900,
+        "amount": "35,000",
         "currency": "₹",
         "discount": "Best deal 10% Off"
       },
@@ -2595,79 +2340,28 @@
           "lowerDeck": {
             "title": "Lower Seat",
             "seats": [
-              [
-                "booked",
-                "available",
-                "booked"
-              ],
-              [
-                "available",
-                "available",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "booked"
-              ],
-              [
-                "booked",
-                "available",
-                "booked"
-              ],
-              [
-                "available",
-                "booked",
-                "available"
-              ],
-              [
-                "available",
-                "available",
-                "booked"
-              ]
+              ["booked", "available", "booked"],
+              ["available", "available", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "available", "booked"],
+              ["available", "booked", "available"],
+              ["available", "available", "booked"]
             ]
           },
           "upperDeck": {
             "title": "Upper Seat",
             "seats": [
-              [
-                "available",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "booked"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "available",
-                "available",
-                "available"
-              ]
+              ["available", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "booked", "available"],
+              ["available", "available", "available"]
             ]
           }
         },
         "sidebar": {
-          "tabs": [
-            "Pick Up Point",
-            "Drop Off Point"
-          ],
+          "tabs": ["Pick Up Point", "Drop Off Point"],
           "pickupPoints": [
             {
               "time": "10:00 AM",
@@ -2721,7 +2415,7 @@
         "duration": "05h 30m"
       },
       "price": {
-        "amount": 500,
+        "amount": "33,000",
         "currency": "₹",
         "discount": "Best deal 10% Off"
       },
@@ -2878,79 +2572,28 @@
           "lowerDeck": {
             "title": "Lower Seat",
             "seats": [
-              [
-                "booked",
-                "available",
-                "booked"
-              ],
-              [
-                "available",
-                "available",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "booked"
-              ],
-              [
-                "booked",
-                "available",
-                "booked"
-              ],
-              [
-                "available",
-                "booked",
-                "available"
-              ],
-              [
-                "available",
-                "available",
-                "booked"
-              ]
+              ["booked", "available", "booked"],
+              ["available", "available", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "available", "booked"],
+              ["available", "booked", "available"],
+              ["available", "available", "booked"]
             ]
           },
           "upperDeck": {
             "title": "Upper Seat",
             "seats": [
-              [
-                "available",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "booked"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "available",
-                "available",
-                "available"
-              ]
+              ["available", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "booked", "available"],
+              ["available", "available", "available"]
             ]
           }
         },
         "sidebar": {
-          "tabs": [
-            "Pick Up Point",
-            "Drop Off Point"
-          ],
+          "tabs": ["Pick Up Point", "Drop Off Point"],
           "pickupPoints": [
             {
               "time": "10:00 AM",
@@ -3004,7 +2647,7 @@
         "duration": "05h 30m"
       },
       "price": {
-        "amount": 700,
+        "amount": "40,000",
         "currency": "₹",
         "discount": "Best deal 10% Off"
       },
@@ -3161,79 +2804,28 @@
           "lowerDeck": {
             "title": "Lower Seat",
             "seats": [
-              [
-                "booked",
-                "available",
-                "booked"
-              ],
-              [
-                "available",
-                "available",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "booked"
-              ],
-              [
-                "booked",
-                "available",
-                "booked"
-              ],
-              [
-                "available",
-                "booked",
-                "available"
-              ],
-              [
-                "available",
-                "available",
-                "booked"
-              ]
+              ["booked", "available", "booked"],
+              ["available", "available", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "available", "booked"],
+              ["available", "booked", "available"],
+              ["available", "available", "booked"]
             ]
           },
           "upperDeck": {
             "title": "Upper Seat",
             "seats": [
-              [
-                "available",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "booked",
-                "booked",
-                "booked"
-              ],
-              [
-                "booked",
-                "booked",
-                "available"
-              ],
-              [
-                "available",
-                "available",
-                "available"
-              ]
+              ["available", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "available"],
+              ["booked", "booked", "booked"],
+              ["booked", "booked", "available"],
+              ["available", "available", "available"]
             ]
           }
         },
         "sidebar": {
-          "tabs": [
-            "Pick Up Point",
-            "Drop Off Point"
-          ],
+          "tabs": ["Pick Up Point", "Drop Off Point"],
           "pickupPoints": [
             {
               "time": "10:00 AM",
@@ -3285,25 +2877,9 @@
         },
         "duration": "05h 30m",
         "busOperator": "Patel Travellers",
-        "seatsSelected": [
-          32,
-          33,
-          34
-        ]
+        "seatsSelected": [32, 33, 34]
       },
       "passengers": [
-        {
-          "name": "",
-          "age": "",
-          "gender": "",
-          "seat": ""
-        },
-        {
-          "name": "",
-          "age": "",
-          "gender": "",
-          "seat": ""
-        },
         {
           "name": "",
           "age": "",

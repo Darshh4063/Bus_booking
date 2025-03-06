@@ -1118,27 +1118,27 @@ function renderBusList(buses) {
 
                   <div class="seat-grid">
                     <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat booked booked-seat"></div>
-
-                    <div class="seat"></div>
-                    <div class="seat"></div>
+                    <div class="seat margin_left"></div>
                     <div class="seat"></div>
 
                     <div class="seat"></div>
-                    <div class="seat booked booked-seat"></div>
-                    <div class="seat"></div>
-
-                    <div class="seat booked booked-seat"></div>
-                    <div class="seat"></div>
+                    <div class="seat margin_left"></div>
                     <div class="seat"></div>
 
                     <div class="seat"></div>
-                    <div class="seat booked booked-seat"></div>
+                    <div class="seat margin_left"></div>
+                    <div class="seat"></div>
+
+                    <div class="seat "></div>
+                    <div class="seat margin_left"></div>
                     <div class="seat"></div>
 
                     <div class="seat"></div>
+                    <div class="seat margin_left"></div>
                     <div class="seat"></div>
+
+                    <div class="seat"></div>
+                    <div class="seat margin_left"></div>
                     <div class="seat"></div>
                   </div>
                 </div>
@@ -1150,27 +1150,27 @@ function renderBusList(buses) {
 
                   <div class="seat-grid">
                     <div class="seat"></div>
-                    <div class="seat booked booked-seat"></div>
-                    <div class="seat"></div>
-
-                    <div class="seat booked booked-seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat"></div>
-
-                    <div class="seat booked booked-seat"></div>
-                    <div class="seat"></div>
+                    <div class="seat margin_left"></div>
                     <div class="seat"></div>
 
                     <div class="seat"></div>
-                    <div class="seat"></div>
-                    <div class="seat booked booked-seat"></div>
-
-                    <div class="seat booked booked-seat"></div>
-                    <div class="seat"></div>
+                    <div class="seat margin_left"></div>
                     <div class="seat"></div>
 
                     <div class="seat"></div>
+                    <div class="seat margin_left"></div>
                     <div class="seat"></div>
+
+                    <div class="seat"></div>
+                    <div class="seat margin_left"></div>
+                    <div class="seat"></div>
+
+                    <div class="seat"></div>
+                    <div class="seat margin_left"></div>
+                    <div class="seat"></div>
+
+                    <div class="seat"></div>
+                    <div class="seat margin_left"></div>
                     <div class="seat"></div>
                   </div>
                 </div>
@@ -1210,7 +1210,7 @@ function renderBusList(buses) {
                           <div class="stop-time">${e.time}</div>
                           <div class="stop-location">${e.location}</div>
                         </div>
-                        <input type="radio" name="pickupStop" class="radio-button" value="${e.location}"></input>
+                        <input type="radio" name="dropoffStop" class="radio-button" value="${e.location}"></input>
                       </div>
                     </div>
                   `;
@@ -1280,21 +1280,49 @@ function renderBusList(buses) {
 
   initializeSeatSelection();
 
-  // Add this event listener after rendering the stops
   document.querySelectorAll('input[name="pickupStop"]').forEach((radio) => {
     radio.addEventListener("change", (e) => {
       const selectedPickupLocation = e.target.value;
       let bookingDetails =
-        JSON.parse(localStorage.getItem("bookingDetails")) || {}; // Initialize or get existing bookingDetails
-      bookingDetails.pickupLocation = selectedPickupLocation; // Update the pickup location
-      localStorage.setItem("bookingDetails", JSON.stringify(bookingDetails)); // Store updated booking details
+        JSON.parse(localStorage.getItem("bookingDetails")) || {};
+      bookingDetails.pickupLocation = selectedPickupLocation;
+      localStorage.setItem("bookingDetails", JSON.stringify(bookingDetails));
     });
   });
 }
 
 async function handleBookingDetail(bus) {
   console.log(bus);
-  const selectSeat = localStorage.getItem("selectedData");
+  const selectSeat = JSON.parse(localStorage.getItem("selectedData")) || [];
+
+  const selectedPickupLocation =
+    document.querySelector('input[name="pickupStop"]:checked')?.value || "";
+  const selectedDropoffLocation =
+    document.querySelector('input[name="dropoffStop"]:checked')?.value || "";
+
+  const existingBookingDetails =
+    JSON.parse(localStorage.getItem("bookingDetails")) || {};
+
+  if (selectedPickupLocation) {
+    existingBookingDetails.pickupLocation =
+      existingBookingDetails.pickupLocation
+        ? existingBookingDetails.pickupLocation + ", " + selectedPickupLocation
+        : selectedPickupLocation;
+  }
+
+  if (selectedDropoffLocation) {
+    existingBookingDetails.dropLocation = existingBookingDetails.dropLocation
+      ? existingBookingDetails.dropLocation + ", " + selectedDropoffLocation
+      : selectedDropoffLocation;
+  }
+
+  const pricePerSeat = 1400;
+  const onwardFare = selectSeat.length * pricePerSeat;
+  const discount = 120;
+  const gst = onwardFare * 0.18;
+  const totalPrice = onwardFare + gst - discount;
+  const pickupTime = bus.journey.departure.time;
+  const dropoffTime = bus.journey.arrival.time;
 
   const bookingDetails = {
     busName: bus.companyName,
@@ -1305,6 +1333,14 @@ async function handleBookingDetail(bus) {
     duration: bus.journey.duration,
     selectedSeats: selectSeat,
     busPrice: bus.price,
+    onwardFare: onwardFare,
+    discount: discount,
+    gst: gst,
+    totalPrice: totalPrice,
+    pickupPoints: existingBookingDetails.pickupLocation,
+    dropoffPoints: existingBookingDetails.dropLocation,
+    pickupTimeData: pickupTime,
+    dropTimeData: dropoffTime,
   };
 
   localStorage.setItem("bookingDetails", JSON.stringify(bookingDetails));
