@@ -1,446 +1,430 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #A-Checkout-Payment {
-    padding: 5rem 0 !important;
+  padding: 5rem 0 !important;
 }
 
 .book {
-    background-color: #ededed;
-    padding: 8px 25px;
-    justify-content: space-between !important;
-    display: flex;
+  background-color: #ededed;
+  padding: 8px 25px;
+  justify-content: space-between !important;
+  display: flex;
 }
 
 .book h2 {
-    font-size: 16px;
-    font-weight: 700;
-    margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
 }
 
 .card {
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 0px 25px;
-    display: flex;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0px 25px;
+  display: flex;
 }
 
-
-.Checkout{
-    row-gap: 20px;
+.Checkout {
+  row-gap: 20px;
 }
 /* ------------------------------- */
 
 .nav {
-    border-bottom: 1px solid rgb(216, 216, 216) !important;
-    text-align: center;
+  border-bottom: 1px solid rgb(216, 216, 216) !important;
+  text-align: center;
 }
 
 .nav-link {
-    padding: 20px 0 !important;
-    color: black !important;
-    font-weight: 700;
-    font-size: 16px !important;
+  padding: 20px 0 !important;
+  color: black !important;
+  font-weight: 700;
+  font-size: 16px !important;
 }
 
 .nav-link:hover {
-    border-bottom: 2px solid #b35e3a !important;
+  border-bottom: 2px solid #b35e3a !important;
 }
 
-
 .Card-holder {
-    row-gap: 10px;
-    padding: 20px 0;
+  row-gap: 10px;
+  padding: 20px 0;
 }
 
 .Credit-data label {
-    font-weight: 700;
-    font-size: 16px;
-    padding-bottom: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  padding-bottom: 5px;
 }
 
 .Credit-data input {
-    width: 100% !important;
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: none !important;
-    border: 1px solid grey !important;
-    border-color: grey !important;
+  width: 100% !important;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none !important;
+  border: 1px solid grey !important;
+  border-color: grey !important;
 }
 
-
 .Pay-Amount {
-    padding: 20px 0;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pay {
-    margin: 0 auto;
-    text-align: center;
-    background-color: #c16c49;
-    border: none;
-    border-radius: 5px;
-    padding: 10px  !important;
-    width: 350px;
-    color: white;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #c16c49;
+  border: none;
+  border-radius: 5px;
+  padding: 10px !important;
+  width: 350px;
+  color: white;
 }
 
 .pay a {
-    text-decoration: none;
-    color: white !important;
-    font-size: 16px;
-    font-weight: 600;
+  text-decoration: none;
+  color: white !important;
+  font-size: 16px;
+  font-weight: 600;
 }
-
 
 /* -------------------- */
 
 .upi {
-    margin: 0 auto;
-    /* padding-bottom: 3rem; */
+  margin: 0 auto;
+  /* padding-bottom: 3rem; */
 }
 
 .upi label {
-    font-size: 14px;
-    font-weight: 700;
-    padding-bottom: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom: 5px;
 }
 
 .upi .input-group {
-    display: flex;
-    border: 1px solid #2e2d2d;
-    border-radius: 5px;
-    overflow: hidden;
+  display: flex;
+  border: 1px solid #2e2d2d;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .upi .input-group input {
-    flex: 1;
-    padding: 7px 10px;
-    width: 100%;
-    border: none;
+  flex: 1;
+  padding: 7px 10px;
+  width: 100%;
+  border: none;
 }
 
 .upi .input-group select {
-    padding: 5px;
-    border: none;
-    border-left: 1px solid grey !important;
+  padding: 5px;
+  border: none;
+  border-left: 1px solid grey !important;
 }
 
 /* -------------------- */
 
 .Banking {
-    margin: 0 auto;
-    padding-bottom: 3rem;
+  margin: 0 auto;
+  padding-bottom: 3rem;
 }
 
 .Banking select {
-    width: 100%;
-    padding: 7px 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-    cursor: pointer;
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
 }
 
 .bank {
-    margin: 0 auto;
+  margin: 0 auto;
 }
-
-
 
 /* ------------------------------------------ */
 .confirmation {
-    row-gap: 15px !important;
+  row-gap: 15px !important;
 }
 
 .Sleeper-bus {
-    border-bottom: 1px solid rgb(209, 201, 201);
-    padding: 20px 0px;
+  border-bottom: 1px solid rgb(209, 201, 201);
+  padding: 20px 0px;
 }
 
 .Travels h3 {
-    font-size: 16px;
-    font-weight: 600;
-    color: black !important;
-    margin: 0 !important;
+  font-size: 16px;
+  font-weight: 600;
+  color: black !important;
+  margin: 0 !important;
 }
 
 .Travels p {
-    margin: 0 !important;
-    font-size: 14px;
-    color: grey;
+  margin: 0 !important;
+  font-size: 14px;
+  color: grey;
 }
 
 .Travels {
-    align-content: center !important;
+  align-content: center !important;
 }
 
 .Travels-route {
-    border-bottom: 1px solid rgb(209, 201, 201);
-    padding: 20px 0px;
+  border-bottom: 1px solid rgb(209, 201, 201);
+  padding: 20px 0px;
 }
 
 .route-data {
-    align-content: center;
+  align-content: center;
 }
 
 .route img {
-    width: 36px !important;
+  width: 36px !important;
 }
 
 .bus {
-    height: 30px !important;
-    width: 30px !important;
-    padding: 0 5px !important;
+  height: 30px !important;
+  width: 30px !important;
+  padding: 0 5px !important;
 }
 
 .route {
-    text-align: center !important;
-    padding-bottom: 5px;
+  text-align: center !important;
+  padding-bottom: 5px;
 }
 
 .time h3 {
-    text-align: center !important;
-    color: #6A6A6A;
-    font-weight: 100;
-    font-size: 14px;
+  text-align: center !important;
+  color: #6a6a6a;
+  font-weight: 100;
+  font-size: 14px;
 }
 
 .pickup {
-    align-content: center;
-    line-height: 25px !important;
+  align-content: center;
+  line-height: 25px !important;
 }
 
 .pickup p {
-    margin: 0;
-    font-size: 13px;
-    color: grey;
+  margin: 0;
+  font-size: 13px;
+  color: grey;
 }
 
 .pickup h3 {
-    font-size: 14px !important;
-    margin: 0;
-    font-weight: 600;
+  font-size: 14px !important;
+  margin: 0;
+  font-weight: 600;
 }
 
 .drop {
-    align-content: center;
-    text-align: end;
-    line-height: 25px !important;
+  align-content: center;
+  text-align: end;
+  line-height: 25px !important;
 }
 
 .drop p {
-    margin: 0;
-    font-size: 13px;
-    color: grey;
+  margin: 0;
+  font-size: 13px;
+  color: grey;
 }
 
 .drop h3 {
-    font-size: 14px;
-    margin: 0;
-    font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 600;
 }
 
 /* ------------------- */
 
 .up-off {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
-
 .loaction {
-    padding: 0 !important;
-    align-content: center;
+  padding: 0 !important;
+  align-content: center;
 }
 
 .pick-area {
-    align-content: center !important;
-    gap: 40px;
+  align-content: center !important;
+  gap: 40px;
 }
 
 .pick-area h3 {
-    font-size: 16px;
-    margin: 0;
-    font-weight: 500;
+  font-size: 16px;
+  margin: 0;
+  font-weight: 500;
 }
 
 .pick-area p {
-    margin: 0;
-    font-size: 13px;
-    color: grey;
+  margin: 0;
+  font-size: 13px;
+  color: grey;
 }
 
 .root-loac {
-    display: flex;
+  display: flex;
 }
 
 .up-off {
-    border-bottom: 1px solid rgb(209, 201, 201);
-    display: flex !important;
+  border-bottom: 1px solid rgb(209, 201, 201);
+  display: flex !important;
 }
 
 .Passenger-pick {
-    row-gap: 40px;
+  row-gap: 40px;
 }
 
 /* -------------------- */
 
 .location-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .location-marker {
-    width: 20px;
-    height: 20px;
-    background-color: gray;
-    border-radius: 50%;
-    position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  border-radius: 50%;
+  position: relative;
 }
 
 .location-marker::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    background-color: white;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .dotted-line {
-    width: 2px;
-    height: 50px;
-    border-left: 2px dotted gray;
+  width: 2px;
+  height: 50px;
+  border-left: 2px dotted gray;
 }
 
 /* -------------------- */
 
 .Passenger-data {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 .p-data h3 {
-    font-size: 16px;
-    font-weight: 700;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .p-Details {
-    line-height: 30px;
+  line-height: 30px;
 }
 
 .p-Details p {
-    font-weight: 500;
-    font-size: 14px;
-    margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0;
 }
 
 .p-Details span {
-    color: grey;
-    font-weight: 400;
-    padding-left: 5px;
+  color: grey;
+  font-weight: 400;
+  padding-left: 5px;
 }
 
 .Seat {
-    text-align: end;
-    color: grey;
-    font-weight: 400 !important;
+  text-align: end;
+  color: grey;
+  font-weight: 400 !important;
 }
 
 .Seat span {
-    font-size: 13px;
-    font-weight: bold;
-    color: black;
+  font-size: 13px;
+  font-weight: bold;
+  color: black;
 }
 
 /* ----------------------------- */
 
-
 .Fare-Total {
-    justify-content: space-between;
-    padding: 20px 0;
-    border-bottom: 1px solid rgb(209, 201, 201);
-    row-gap: 5px;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid rgb(209, 201, 201);
+  row-gap: 5px;
 }
 
 .Total-Amount {
-    justify-content: space-between;
-    padding: 20px 0;
+  justify-content: space-between;
+  padding: 20px 0;
 }
 
 .Fare {
-    color: grey;
-    font-size: 16px;
-    margin: 0;
+  color: grey;
+  font-size: 16px;
+  margin: 0;
 }
 
 .Amount {
-    text-align: end;
-    font-weight: 700;
-    font-size: 16px;
-    margin: 0;
-
+  text-align: end;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0;
 }
-
-
-
 
 /* --------------------- */
 
-
 @media (max-width: 425px) {
+  .nav-item a {
+    font-size: 12px !important;
+  }
 
-    .nav-item a{
-        font-size: 12px !important;
-    }
+  .Credit-data label {
+    font-size: 12px !important;
+  }
 
-    .Credit-data label {
-        font-size: 12px !important;
-    }
+  .Card-holder {
+    flex-wrap: wrap !important;
+  }
 
-    .Card-holder{
-        flex-wrap: wrap !important;
-    }
-
-    .Credit-data input{
-        width: 100% !important;
-    }
-
+  .Credit-data input {
+    width: 100% !important;
+  }
 }
 
-
-
 @media (max-width: 375px) {
+  .nav-item a {
+    font-size: 12px !important;
+  }
 
-    .nav-item a{
-        font-size: 12px !important;
-    }
+  .Credit-data label {
+    font-size: 12px !important;
+  }
 
-    .Credit-data label {
-        font-size: 12px !important;
-    }
+  .Card-holder {
+    flex-wrap: wrap !important;
+  }
 
-    .Card-holder{
-        flex-wrap: wrap !important;
-    }
-
-    .Credit-data input{
-        width: 100% !important;
-    }
-
+  .Credit-data input {
+    width: 100% !important;
+  }
 }
 
 @media (min-width: 5px) and (max-width: 425px) {
-    .pay{
-        width: 150px;
-    }
+  .pay {
+    width: 150px;
+  }
 
-    #A-Checkout-Payment {
-        padding: 0 !important;
-    }
+  #A-Checkout-Payment {
+    padding: 0 !important;
+  }
 }
