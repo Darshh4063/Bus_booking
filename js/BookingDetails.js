@@ -263,6 +263,7 @@ async function bookingDetails() {
       `;
 
     document.getElementById("bookingDetails").innerHTML = bookingDetailsHtml;
+    initPage();
   } catch (error) {
     console.error("Error loading booking details:", error);
   }
@@ -279,7 +280,6 @@ function proceedToPay() {
       passenger.querySelector("input[name^='gender']:checked")?.value || "",
     // seat: passenger.querySelector("input[type='text'][value='']").value,
   }));
-  // agePick
   const contactDetails = {
     email: document.querySelector(".phone-container input[type='text']").value,
 
@@ -301,8 +301,8 @@ function proceedToPay() {
   var onwardFare = busPriceData.busPrice;
   var gst = onwardFare * 0.18 * 100;
   const bookingCharges = 120;
-  const discount = -120;
-  const totalPayableAmount = onwardFare + gst + bookingCharges + discount;
+  const discount = 120;
+  const totalPayableAmount = onwardFare + gst + bookingCharges - discount;
 
   existingBookingDetails.fareBreakup = {
     onwardFare,
@@ -325,4 +325,34 @@ window.onload = () => {
 
 function getData() {
   bookingDetails();
+}
+
+// Function to initialize the page
+function initPage() {
+  // Add event listeners to all offer radio buttons
+  const offerRadios = document.querySelectorAll('.offer input[type="radio"]');
+  offerRadios.forEach((radio) => {
+    radio.addEventListener("change", function () {
+      if (this.checked) {
+        // Extract the offer code from the radio button id
+        const offerId = this.id.split("-")[0];
+
+        // Set the coupon input value to the selected offer code
+        document.querySelector(".coupon-box input").value = offerId;
+      }
+    });
+  });
+
+  // Add this function to handle the apply button click
+  function applyDiscount() {
+    const onwardFare = bookingDetails.onwardFare;
+    const coupenDiscountPrice = onwardFare * 0.20; // Calculate 20% discount
+    console.log(`Discount applied: ₹${coupenDiscountPrice}`); // Print discount to console
+  }
+
+  // Add event listener to the "APPLY" button
+  document.querySelector(".coupon-box a").addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent default link behavior
+    applyDiscount(); // Call the discount function
+  });
 }

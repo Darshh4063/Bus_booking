@@ -889,9 +889,9 @@ tr:nth-child(even) td {
   background-color: #bdbdbd;
 }
 
-.selected {
+/* .selected {
   background-color: #d2846b;
-}
+} */
 
 .seats-container {
   flex: 2;
@@ -950,10 +950,10 @@ tr:nth-child(even) td {
   cursor: not-allowed;
 }
 
-.seat.selected {
+/* .seat.selected {
   background-color: #d2846b;
   border-color: #d2846b;
-}
+} */
 
 .seat::after {
   content: "";

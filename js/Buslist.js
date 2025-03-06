@@ -1315,15 +1315,27 @@ async function handleBookingDetail(bus) {
       ? existingBookingDetails.dropLocation + ", " + selectedDropoffLocation
       : selectedDropoffLocation;
   }
-
-  const pricePerSeat = 1400;
-  const onwardFare = selectSeat.length * pricePerSeat;
+  var price = bus.price.amount.replace(",", "");
+  const pricePerSeat = parseFloat(price);
+  // console.log(typeof pricePerSeat);
+  const onwardFare = pricePerSeat;
   const discount = 120;
+  const bookingCharges = 120;
   const gst = onwardFare * 0.18;
-  const totalPrice = onwardFare + gst - discount;
+  const totalPrice = onwardFare + gst + bookingCharges - discount;
   const pickupTime = bus.journey.departure.time;
   const dropoffTime = bus.journey.arrival.time;
 
+  console.log(
+    "data",
+    pricePerSeat,
+    onwardFare,
+    discount,
+    gst,
+    totalPrice,
+    pickupTime,
+    dropoffTime
+  );
   const bookingDetails = {
     busName: bus.companyName,
     pickupLocation: bus.journey.departure.location,
