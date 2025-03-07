@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  await bookingDetails();
+  await bookingDetailsData();
 });
 
-async function bookingDetails() {
+const bookingDetails = JSON.parse(localStorage.getItem("bookingDetails"));
+async function bookingDetailsData() {
   try {
     const response = await fetch("http://localhost:3000/BookingDetails");
     const busdata = JSON.parse(localStorage.getItem("busdata"));
     const selectSeatData = JSON.parse(localStorage.getItem("selectedData"));
-    const bookingDetails = JSON.parse(localStorage.getItem("bookingDetails"));
 
     // console.log("seat", selectSeatData);
     // console.log("Booking Details", bookingDetails);
@@ -120,6 +120,20 @@ async function bookingDetails() {
                                   index + 1
                                 }_female">Female</label>
                               </div>
+                            </div>
+                          </div>
+                          <div class="d-flex">
+                            <div class="w-50 me-3 Passenger">
+                              <p>Aadhaar Card Number</p>
+                              <input type="text" placeholder="Enter Aadhaar Card" value="${
+                                passenger.AadhaarCard || ""
+                              }">
+                            </div>
+                            <div class="w-50 Passenger">
+                              <p>Pancard Number (Optional)</p>
+                              <input type="text" placeholder="Enter Pan Card" value="${
+                                passenger.panCard || ""
+                              }">
                             </div>
                           </div>
                         </div>
@@ -247,7 +261,7 @@ async function bookingDetails() {
                   <span>Booking Charges</span>
                   <span>₹${bookingDetailsData.fareBreakup.bookingCharges}</span>
                 </div>
-                <div class="fare-item">
+                <div class="fare-item disc">
                   <span>Discount</span>
                   <span>-₹${Math.abs(bookingDetails.discount)}</span>
                 </div>
@@ -279,6 +293,12 @@ function proceedToPay() {
     gender:
       passenger.querySelector("input[name^='gender']:checked")?.value || "",
     // seat: passenger.querySelector("input[type='text'][value='']").value,
+    AadhaarCard: document.querySelector(
+      ".Passenger-data input[placeholder='Enter Aadhaar Card' ]"
+    ).value,
+    panCard: document.querySelector(
+      ".Passenger-data input[placeholder='Enter Pan Card' ]"
+    ).value,
   }));
   const contactDetails = {
     email: document.querySelector(".phone-container input[type='text']").value,
@@ -324,35 +344,63 @@ window.onload = () => {
 };
 
 function getData() {
-  bookingDetails();
+  bookingDetailsData();
 }
 
-// Function to initialize the page
 function initPage() {
-  // Add event listeners to all offer radio buttons
   const offerRadios = document.querySelectorAll('.offer input[type="radio"]');
   offerRadios.forEach((radio) => {
     radio.addEventListener("change", function () {
       if (this.checked) {
-        // Extract the offer code from the radio button id
         const offerId = this.id.split("-")[0];
 
-        // Set the coupon input value to the selected offer code
         document.querySelector(".coupon-box input").value = offerId;
       }
     });
   });
 
-  // Add this function to handle the apply button click
+  let couponApplied = false;
   function applyDiscount() {
-    const onwardFare = bookingDetails.onwardFare;
-    const coupenDiscountPrice = onwardFare * 0.20; // Calculate 20% discount
-    console.log(`Discount applied: ₹${coupenDiscountPrice}`); // Print discount to console
+    if (couponApplied) {
+      alert("Coupon has already been applied."); // Alert the user
+      return; // Exit the function if the coupon is already applied
+    }
+    var onwardFare = bookingDetails.onwardFare;
+    var discount = bookingDetails.discount;
+
+    const couponDiscountPercentage = 0.2;
+    const coupenDiscountPrice = onwardFare * couponDiscountPercentage;
+    const bookingCharges = 120;
+
+    console.log(`Discount applied: ₹${coupenDiscountPrice}`);
+
+    discount += coupenDiscountPrice;
+
+    bookingDetails.discount = discount;
+
+    const totalPayableAmount =
+      onwardFare + bookingDetails.gst + bookingCharges - discount;
+
+    const discountElement = document.querySelector(".disc span:nth-child(2)");
+    if (discountElement) {
+      discountElement.textContent = `-₹${Math.abs(discount).toFixed(2)}`;
+    } else {
+      console.error("Discount element not found in the DOM.");
+    }
+
+    const totalAmountElement = document.querySelector(
+      ".total span:nth-child(2)"
+    );
+    if (totalAmountElement) {
+      totalAmountElement.textContent = `₹${totalPayableAmount.toFixed(2)}`;
+    } else {
+      console.error("Total amount element not found in the DOM.");
+    }
+    couponApplied = true;
   }
 
-  // Add event listener to the "APPLY" button
   document.querySelector(".coupon-box a").addEventListener("click", (e) => {
-    e.preventDefault(); // Prevent default link behavior
-    applyDiscount(); // Call the discount function
+    e.preventDefault();
+    applyDiscount();
   });
 }
