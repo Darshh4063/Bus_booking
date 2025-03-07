@@ -88,21 +88,24 @@
 
             <div class="card">
               <div class="Payment-Option">
-                <ul class="row nav">
-                  <li class="col-3 nav-item">
-                    <a class="nav-link active" data-bs-toggle="tab" href="#card">Credit/Debit Card</a>
+                <ul class="row nav align-items-center">
+                  <li class="col nav-item">
+                    <a class="nav-link active text-nowrap" data-bs-toggle="tab" href="#card">Credit/Debit Card</a>
                   </li>
-                  <li class="col-3 nav-item">
+                  <li class="col nav-item">
                     <a class="nav-link" data-bs-toggle="tab" href="#upi">UPI</a>
                   </li>
-                  <li class="col-3 nav-item">
+                  <li class="col nav-item">
                     <a class="nav-link" data-bs-toggle="tab" href="#netbanking">Net Banking</a>
                   </li>
-                  <li class="col-3 nav-item">
+                  <li class="col nav-item">
                     <a class="nav-link" data-bs-toggle="tab" href="#checkPaymentForm" id="check-pay-button">Pay via Check</a>
                   </li>
+                  <li class="col nav-item d-flex align-items-center">
+                    <input type="checkbox" name="pay-fifty" id="pay-fifty" class="pe-3"> <span class="fw-bold text-nowrap">pay 50% After</span>
+                  </li>
                 </ul>
-
+            
                 <div class="tab-content mt-3">
                   <div id="card" class="tab-pane fade show active">
                     <div class="row Card-holder">
@@ -113,36 +116,36 @@
                             <input type="text" id="cardHolder" placeholder="Enter name same as on card" />
                             <small class="error"></small>
                           </div>
-
+            
                           <div class="col-12 col-md-6 Credit-data">
                             <label>Card Number</label>
-                            <input type="text" id="cardNumber" placeholder="**** **** **** ****" />
+                            <input type="text" id="cardNumber" placeholder="1234 5678 9101 1121" />
                             <small class="error"></small>
                           </div>
                         </div>
-
+            
                         <div class="d-md-flex">
                           <div class="col-12 col-md-6 Credit-data me-2">
                             <label>Expiry Date</label>
                             <input type="text" id="expiryDate" placeholder="MM / YYYY" />
                             <small class="error"></small>
                           </div>
-
+            
                           <div class="col-12 col-md-6 Credit-data">
                             <label>CVV</label>
-                            <input type="password" id="cvv" placeholder="***" />
+                            <input type="password" id="cvv" placeholder="123" />
                             <small class="error"></small>
                           </div>
                         </div>
                     </div>
-
+            
                     <div class="Pay-Amount text-center">
                       <button type="submit" class="pay">Pay 6060</button>
                     </div>
                     </form>
                     <p id="message"></p>
                   </div>
-
+            
                   <!-- UPI Payment Section -->
                   <div id="upi" class="tab-pane fade">
                     <div class="col-12 col-md-6 upi">
@@ -157,14 +160,14 @@
                       </div>
                       <p id="upi-error" class="error"></p>
                     </div>
-
+            
                     <div class="Pay-Amount">
-                      <div class="col-12 col-md-6 pay">
-                        <a href="#" id="upi-pay-button">Pay ₹6060</a>
+                      <div class="col-12 col-md-6">
+                        <button id="upi-pay-button" class="pay">Pay 6060</button>
                       </div>
                     </div>
                   </div>
-
+            
                   <!-- Net Banking Payment Section -->
                   <div id="netbanking" class="tab-pane fade">
                     <div class="Banking">
@@ -179,28 +182,86 @@
                         <p id="bank-error" class="error"></p>
                       </div>
                     </div>
-
+            
                     <div class="Pay-Amount">
-                      <div class="col-6 pay">
-                        <a href="#" id="bank-pay-button">Pay ₹6060</a>
+                      <div class="col-6">
+                        <button id="bank-pay-button" class="pay">Pay ₹6060</button>
                       </div>
                     </div>
-
-
-                    
                   </div>
-                    <!-- Check Payment Form -->
-                  <div id="checkPaymentForm"  class="tab-pane fade p-4">
+                    
+                  <!-- Check Payment Form -->
+                  <div id="checkPaymentForm" class="tab-pane fade p-4">
                     <div class="d-flex flex-column Credit-data">
                       <label>Account Number</label>
                       <input type="text" id="accountNumber" class="k-check-input" placeholder="Enter Account Number" required>
                       <small class="error"></small>
                     </div>
-
+            
                     <button class="pay mt-3 text-center d-block" id="confirm-check-payment">Pay 6060</button>
                   </div>
                 </div>
-              
+              </div>
+            </div>
+            
+            <!-- Processing Modal -->
+            <div class="modal fade" id="processingModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-body text-center p-4">
+                    <div class="spinner-border text-primary mb-3" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <h5>Processing Payment...</h5>
+                    <p>Please wait while we process your transaction.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Success Modal -->
+            <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Payment Successful</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-center">
+                    <div class="success-icon mb-3">
+                      <i class="bi bi-check-circle-fill text-success" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5>Thank You!</h5>
+                    <p>Your payment has been processed successfully.</p>
+                    <p id="transactionDetails"></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Failed Modal -->
+            <div class="modal fade" id="failedModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Payment Failed</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-center">
+                    <div class="failed-icon mb-3">
+                      <i class="bi bi-x-circle-fill text-danger" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5>Oops!</h5>
+                    <p id="failedMessage">Your payment could not be processed.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Try Again</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

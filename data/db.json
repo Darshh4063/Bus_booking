@@ -1180,28 +1180,79 @@
           "lowerDeck": {
             "title": "Lower Seat",
             "seats": [
-              ["booked", "available", "booked"],
-              ["available", "available", "available"],
-              ["booked", "booked", "booked"],
-              ["booked", "available", "booked"],
-              ["available", "booked", "available"],
-              ["available", "available", "booked"]
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "booked"
+              ]
             ]
           },
           "upperDeck": {
             "title": "Upper Seat",
             "seats": [
-              ["available", "booked", "available"],
-              ["booked", "booked", "available"],
-              ["booked", "booked", "available"],
-              ["booked", "booked", "booked"],
-              ["booked", "booked", "available"],
-              ["available", "available", "available"]
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ]
             ]
           }
         },
         "sidebar": {
-          "tabs": ["Pick Up Point", "Drop Off Point"],
+          "tabs": [
+            "Pick Up Point",
+            "Drop Off Point"
+          ],
           "pickupPoints": [
             {
               "time": "10:00 AM",
@@ -1412,28 +1463,79 @@
           "lowerDeck": {
             "title": "Lower Seat",
             "seats": [
-              ["booked", "available", "booked"],
-              ["available", "available", "available"],
-              ["booked", "booked", "booked"],
-              ["booked", "available", "booked"],
-              ["available", "booked", "available"],
-              ["available", "available", "booked"]
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "booked"
+              ]
             ]
           },
           "upperDeck": {
             "title": "Upper Seat",
             "seats": [
-              ["available", "booked", "available"],
-              ["booked", "booked", "available"],
-              ["booked", "booked", "available"],
-              ["booked", "booked", "booked"],
-              ["booked", "booked", "available"],
-              ["available", "available", "available"]
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ]
             ]
           }
         },
         "sidebar": {
-          "tabs": ["Pick Up Point", "Drop Off Point"],
+          "tabs": [
+            "Pick Up Point",
+            "Drop Off Point"
+          ],
           "pickupPoints": [
             {
               "time": "10:00 AM",
@@ -1644,28 +1746,79 @@
           "lowerDeck": {
             "title": "Lower Seat",
             "seats": [
-              ["booked", "available", "booked"],
-              ["available", "available", "available"],
-              ["booked", "booked", "booked"],
-              ["booked", "available", "booked"],
-              ["available", "booked", "available"],
-              ["available", "available", "booked"]
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "booked"
+              ]
             ]
           },
           "upperDeck": {
             "title": "Upper Seat",
             "seats": [
-              ["available", "booked", "available"],
-              ["booked", "booked", "available"],
-              ["booked", "booked", "available"],
-              ["booked", "booked", "booked"],
-              ["booked", "booked", "available"],
-              ["available", "available", "available"]
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ]
             ]
           }
         },
         "sidebar": {
-          "tabs": ["Pick Up Point", "Drop Off Point"],
+          "tabs": [
+            "Pick Up Point",
+            "Drop Off Point"
+          ],
           "pickupPoints": [
             {
               "time": "10:00 AM",
@@ -1876,28 +2029,79 @@
           "lowerDeck": {
             "title": "Lower Seat",
             "seats": [
-              ["booked", "available", "booked"],
-              ["available", "available", "available"],
-              ["booked", "booked", "booked"],
-              ["booked", "available", "booked"],
-              ["available", "booked", "available"],
-              ["available", "available", "booked"]
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "booked"
+              ]
             ]
           },
           "upperDeck": {
             "title": "Upper Seat",
             "seats": [
-              ["available", "booked", "available"],
-              ["booked", "booked", "available"],
-              ["booked", "booked", "available"],
-              ["booked", "booked", "booked"],
-              ["booked", "booked", "available"],
-              ["available", "available", "available"]
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ]
             ]
           }
         },
         "sidebar": {
-          "tabs": ["Pick Up Point", "Drop Off Point"],
+          "tabs": [
+            "Pick Up Point",
+            "Drop Off Point"
+          ],
           "pickupPoints": [
             {
               "time": "10:00 AM",
@@ -2108,28 +2312,79 @@
           "lowerDeck": {
             "title": "Lower Seat",
             "seats": [
-              ["booked", "available", "booked"],
-              ["available", "available", "available"],
-              ["booked", "booked", "booked"],
-              ["booked", "available", "booked"],
-              ["available", "booked", "available"],
-              ["available", "available", "booked"]
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "booked"
+              ]
             ]
           },
           "upperDeck": {
             "title": "Upper Seat",
             "seats": [
-              ["available", "booked", "available"],
-              ["booked", "booked", "available"],
-              ["booked", "booked", "available"],
-              ["booked", "booked", "booked"],
-              ["booked", "booked", "available"],
-              ["available", "available", "available"]
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ]
             ]
           }
         },
         "sidebar": {
-          "tabs": ["Pick Up Point", "Drop Off Point"],
+          "tabs": [
+            "Pick Up Point",
+            "Drop Off Point"
+          ],
           "pickupPoints": [
             {
               "time": "10:00 AM",
@@ -2340,28 +2595,79 @@
           "lowerDeck": {
             "title": "Lower Seat",
             "seats": [
-              ["booked", "available", "booked"],
-              ["available", "available", "available"],
-              ["booked", "booked", "booked"],
-              ["booked", "available", "booked"],
-              ["available", "booked", "available"],
-              ["available", "available", "booked"]
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "booked"
+              ]
             ]
           },
           "upperDeck": {
             "title": "Upper Seat",
             "seats": [
-              ["available", "booked", "available"],
-              ["booked", "booked", "available"],
-              ["booked", "booked", "available"],
-              ["booked", "booked", "booked"],
-              ["booked", "booked", "available"],
-              ["available", "available", "available"]
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ]
             ]
           }
         },
         "sidebar": {
-          "tabs": ["Pick Up Point", "Drop Off Point"],
+          "tabs": [
+            "Pick Up Point",
+            "Drop Off Point"
+          ],
           "pickupPoints": [
             {
               "time": "10:00 AM",
@@ -2572,28 +2878,79 @@
           "lowerDeck": {
             "title": "Lower Seat",
             "seats": [
-              ["booked", "available", "booked"],
-              ["available", "available", "available"],
-              ["booked", "booked", "booked"],
-              ["booked", "available", "booked"],
-              ["available", "booked", "available"],
-              ["available", "available", "booked"]
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "booked"
+              ]
             ]
           },
           "upperDeck": {
             "title": "Upper Seat",
             "seats": [
-              ["available", "booked", "available"],
-              ["booked", "booked", "available"],
-              ["booked", "booked", "available"],
-              ["booked", "booked", "booked"],
-              ["booked", "booked", "available"],
-              ["available", "available", "available"]
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ]
             ]
           }
         },
         "sidebar": {
-          "tabs": ["Pick Up Point", "Drop Off Point"],
+          "tabs": [
+            "Pick Up Point",
+            "Drop Off Point"
+          ],
           "pickupPoints": [
             {
               "time": "10:00 AM",
@@ -2804,28 +3161,79 @@
           "lowerDeck": {
             "title": "Lower Seat",
             "seats": [
-              ["booked", "available", "booked"],
-              ["available", "available", "available"],
-              ["booked", "booked", "booked"],
-              ["booked", "available", "booked"],
-              ["available", "booked", "available"],
-              ["available", "available", "booked"]
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "booked"
+              ]
             ]
           },
           "upperDeck": {
             "title": "Upper Seat",
             "seats": [
-              ["available", "booked", "available"],
-              ["booked", "booked", "available"],
-              ["booked", "booked", "available"],
-              ["booked", "booked", "booked"],
-              ["booked", "booked", "available"],
-              ["available", "available", "available"]
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ]
             ]
           }
         },
         "sidebar": {
-          "tabs": ["Pick Up Point", "Drop Off Point"],
+          "tabs": [
+            "Pick Up Point",
+            "Drop Off Point"
+          ],
           "pickupPoints": [
             {
               "time": "10:00 AM",
@@ -2877,7 +3285,11 @@
         },
         "duration": "05h 30m",
         "busOperator": "Patel Travellers",
-        "seatsSelected": [32, 33, 34]
+        "seatsSelected": [
+          32,
+          33,
+          34
+        ]
       },
       "passengers": [
         {
@@ -2936,7 +3348,7 @@
       "city": "Surat",
       "state": "Gujarat",
       "pincode": "395011",
-      "lastLogin": "2025-03-04T11:14:59.060Z",
+      "lastLogin": "2025-03-06T06:50:10.433Z",
       "gender": "male",
       "lastUpdated": "2025-02-28T09:11:36.514Z"
     },
@@ -3018,7 +3430,7 @@
       "state": "Gujarat",
       "pincode": "395010",
       "gender": "female",
-      "lastLogin": "2025-03-03T04:35:40.939Z"
+      "lastLogin": "2025-03-06T10:39:33.037Z"
     },
     {
       "id": "g0dxi1",
@@ -3184,6 +3596,92 @@
       "accountNumber": "987654321012",
       "amount": 6060,
       "timestamp": "2025-03-05T11:09:31.625Z"
+    },
+    {
+      "id": "jbel78",
+      "paymentBy": "UPI",
+      "upiId": "jay2425@okicici",
+      "paidAmount": 6060,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-06T05:00:31.527Z"
+    },
+    {
+      "id": "jy03rd",
+      "paymentBy": "UPI",
+      "upiId": "beru2345@okhdfc",
+      "paidAmount": 3030,
+      "remainingAmount": 3030,
+      "timestamp": "2025-03-06T05:00:59.987Z"
+    },
+    {
+      "id": "TXNGL01TLLL",
+      "paymentBy": "UPI",
+      "upiId": "demo34566@okhdfc",
+      "paidAmount": 6060,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-06T06:20:44.877Z"
+    },
+    {
+      "id": "TXNDNX8TURK",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 6060,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-06T06:21:56.057Z"
+    },
+    {
+      "id": "TXN6WR59EW0",
+      "paymentBy": "UPI",
+      "upiId": "john.doe23@oksbi",
+      "paidAmount": 6060,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-06T06:39:11.651Z"
+    },
+    {
+      "id": "TXN9HAMYEHQ",
+      "paymentBy": "Card",
+      "cardHolder": "chirag",
+      "cardNumber": "4111 **** **** 1111",
+      "expiryDate": "02/2030",
+      "paidAmount": 6060,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-06T06:39:57.868Z"
+    },
+    {
+      "id": "TXNQ42ES1SC",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 3030,
+      "remainingAmount": 3030,
+      "timestamp": "2025-03-06T06:41:12.456Z"
+    },
+    {
+      "id": "TXN2BZE8W2D",
+      "paymentBy": "NetBanking",
+      "bank": "TD Bank",
+      "paidAmount": 6060,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-06T06:41:30.415Z"
+    },
+    {
+      "id": "TXNKXOA50H7",
+      "paymentBy": "Card",
+      "cardHolder": "google",
+      "cardNumber": "5555 **** **** 4444",
+      "expiryDate": "02/2040",
+      "paidAmount": 6060,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-06T06:45:11.685Z"
+    },
+    {
+      "id": "TXNXJYPQY18",
+      "paymentBy": "Card",
+      "cardHolder": "Dankort",
+      "cardNumber": "5019 **** **** 5555",
+      "expiryDate": "02/2044",
+      "paidAmount": 6060,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-06T09:26:12.914Z"
     }
   ]
 }
