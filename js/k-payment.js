@@ -392,91 +392,100 @@ function processCheckPayment() {
 // Complete Payment (Card, UPI, NetBanking)
 function completePayment(method) {
   console.log(`Completing ${method} payment...`);
-  const transactionId = generateTransactionId();
-  const isPayFifty = document.getElementById("pay-fifty")?.checked || false;
-  const totalAmount = 6060;
-  const paidAmount = isPayFifty ? totalAmount / 2 : totalAmount;
-  const remainingAmount = isPayFifty ? totalAmount / 2 : 0;
-  let data;
+  var user = JSON.parse(localStorage.getItem("currentUser"));
+  console.log("user", user);
+  if (user) {
+    const transactionId = generateTransactionId();
+    const isPayFifty = document.getElementById("pay-fifty")?.checked || false;
+    const totalAmount = 6060;
+    const paidAmount = isPayFifty ? totalAmount / 2 : totalAmount;
+    const remainingAmount = isPayFifty ? totalAmount / 2 : 0;
+    let data;
 
-  if (method === "UPI") {
-    const upiInput = document.getElementById("upi-id").value.trim();
-    const upiHandle = document.getElementById("upi-handle").value;
+    if (method === "UPI") {
+      const upiInput = document.getElementById("upi-id").value.trim();
+      const upiHandle = document.getElementById("upi-handle").value;
 
-    if (!upiInput) {
-      showFailedModal("Invalid UPI ID");
-      return;
+      if (!upiInput) {
+        showFailedModal("Invalid UPI ID");
+        return;
+      }
+
+      data = {
+        id: transactionId,
+        paymentBy: "UPI",
+        upiId: `${upiInput}${upiHandle}`,
+        paidAmount: paidAmount,
+        remainingAmount: remainingAmount,
+        timestamp: new Date().toISOString(),
+      };
+    } else if (method === "NetBanking") {
+      const selectedBank = document.getElementById("bank-select").value;
+
+      if (!selectedBank) {
+        showFailedModal("Please select a bank");
+        return;
+      }
+
+      data = {
+        id: transactionId,
+        paymentBy: "NetBanking",
+        bank: selectedBank,
+        paidAmount: paidAmount,
+        remainingAmount: remainingAmount,
+        timestamp: new Date().toISOString(),
+      };
+    } else if (method === "Card") {
+      const cardHolder = document.getElementById("cardHolder").value.trim();
+      const cardNumber = document
+        .getElementById("cardNumber")
+        .value.replace(/\s/g, "");
+      const expiryDate = document.getElementById("expiryDate").value.trim();
+      const cvv = document.getElementById("cvv").value.trim();
+
+      if (
+        !cardHolder ||
+        !validateCardNumber(cardNumber) ||
+        !validateExpiryDate(expiryDate) ||
+        !/^\d{3}$/.test(cvv)
+      ) {
+        showFailedModal("Invalid card details");
+        return;
+      }
+
+      data = {
+        id: transactionId,
+        paymentBy: "Card",
+        cardHolder: cardHolder,
+        cardNumber: maskCardNumber(cardNumber),
+        expiryDate: expiryDate,
+        paidAmount: paidAmount,
+        remainingAmount: remainingAmount,
+        timestamp: new Date().toISOString(),
+      };
     }
 
-    data = {
-      id: transactionId,
-      paymentBy: "UPI",
-      upiId: `${upiInput}${upiHandle}`,
-      paidAmount: paidAmount,
-      remainingAmount: remainingAmount,
-      timestamp: new Date().toISOString(),
-    };
-  } else if (method === "NetBanking") {
-    const selectedBank = document.getElementById("bank-select").value;
+    console.log("Payment data:", data);
 
-    if (!selectedBank) {
-      showFailedModal("Please select a bank");
-      return;
+    // Update transaction details in success modal
+    const transactionDetails = document.getElementById("transactionDetails");
+    if (transactionDetails) {
+      transactionDetails.innerHTML = `Transaction ID: ${transactionId}<br>Amount: ₹${paidAmount}`;
     }
 
-    data = {
-      id: transactionId,
-      paymentBy: "NetBanking",
-      bank: selectedBank,
-      paidAmount: paidAmount,
-      remainingAmount: remainingAmount,
-      timestamp: new Date().toISOString(),
-    };
-  } else if (method === "Card") {
-    const cardHolder = document.getElementById("cardHolder").value.trim();
-    const cardNumber = document
-      .getElementById("cardNumber")
-      .value.replace(/\s/g, "");
-    const expiryDate = document.getElementById("expiryDate").value.trim();
-    const cvv = document.getElementById("cvv").value.trim();
-
-    if (
-      !cardHolder ||
-      !validateCardNumber(cardNumber) ||
-      !validateExpiryDate(expiryDate) ||
-      !/^\d{3}$/.test(cvv)
-    ) {
-      showFailedModal("Invalid card details");
-      return;
+    // Try to send payment data to server
+    try {
+      sendPaymentData(data);
+    } catch (e) {
+      console.log("Error sending payment data:", e);
+      // Still show success modal even if server communication fails
+      showSuccessModal();
     }
-
-    data = {
-      id: transactionId,
-      paymentBy: "Card",
-      cardHolder: cardHolder,
-      cardNumber: maskCardNumber(cardNumber),
-      expiryDate: expiryDate,
-      paidAmount: paidAmount,
-      remainingAmount: remainingAmount,
-      timestamp: new Date().toISOString(),
-    };
-  }
-
-  console.log("Payment data:", data);
-
-  // Update transaction details in success modal
-  const transactionDetails = document.getElementById("transactionDetails");
-  if (transactionDetails) {
-    transactionDetails.innerHTML = `Transaction ID: ${transactionId}<br>Amount: ₹${paidAmount}`;
-  }
-
-  // Try to send payment data to server
-  try {
-    sendPaymentData(data);
-  } catch (e) {
-    console.log("Error sending payment data:", e);
-    // Still show success modal even if server communication fails
-    showSuccessModal();
+  } else {
+    const loginModal = new bootstrap.Modal(
+      document.getElementById("loginModal")
+    );
+    loginModal.show();
   }
 }
 
@@ -533,6 +542,7 @@ function sendPaymentData(data) {
       .then((response) => {
         console.log("Server response:", response.ok ? "Success" : "Failed");
         showSuccessModal();
+        localStorage.setItem("paymentData", JSON.stringify(data));
       })
       .catch((error) => {
         console.log("Server error:", error);
