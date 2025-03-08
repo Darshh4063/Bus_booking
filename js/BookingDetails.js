@@ -83,18 +83,20 @@ async function bookingDetailsData() {
                         (passenger, index) => `
                       <div class="row Passenger-data">
                         <div class="row Passenger-data-sec">
-                          <div class="col-12 col-sm-7 Passenger">
+                         <div class="col-12 col-sm-7 Passenger">
                             <p>Name</p>
                             <input type="text" placeholder="Enter Name" value="${
                               passenger.name || ""
-                            }">
+                            }" 
+                                  oninput="validateNameInput(this)">
                           </div>
-  
+                        
                           <div class="col-6 col-sm-2 Passenger agePick">
                             <p>Age</p>
-                            <input type="text" value="${passenger.age || ""}">
+                            <input type="text" value="${passenger.age || ""}" 
+                                  oninput="validateAgeInput(this)">
                           </div>
-  
+
                           <div class="col-6 col-sm-2 Passenger">
                             <p>Gender</p>
                             <div class="input-group">
@@ -127,13 +129,17 @@ async function bookingDetailsData() {
                               <p>Aadhaar Card Number</p>
                               <input type="text" placeholder="Enter Aadhaar Card" value="${
                                 passenger.AadhaarCard || ""
-                              }">
+                              }" 
+                                    oninput="validateAadhaarInput(this)">
+                              <div class="error-message" style="color: red; font-size: 0.9em; display: none;"></div> 
                             </div>
                             <div class="w-50 Passenger">
                               <p>Pancard Number (Optional)</p>
                               <input type="text" placeholder="Enter Pan Card" value="${
                                 passenger.panCard || ""
-                              }">
+                              }" 
+                                    oninput="validatePanInput(this)">
+                              <div class="error-message" style="color: red; font-size: 0.9em; display: none;"></div> 
                             </div>
                           </div>
                         </div>
@@ -164,7 +170,9 @@ async function bookingDetailsData() {
                         <div class="col-12 phone-container">
                           <input type="text" placeholder="Enter your email" value="${
                             bookingDetailsData.contactDetails.email
-                          }">
+                          }" 
+                          oninput="validateEmailInput(this)">
+                          <div class="error-message" style="color: red; font-size: 0.9em; display: none;"></div> 
                         </div>
                       </div>
   
@@ -199,7 +207,9 @@ async function bookingDetailsData() {
                           </select>
                           <input type="text" placeholder="Enter your phone no." value="${
                             bookingDetailsData.contactDetails.phone.number
-                          }">
+                          }" 
+                          oninput="validatePhoneInput(this)">
+                          <div class="error-message" style="color: red; font-size: 0.9em; display: none;"></div>
                         </div>
                       </div>
                       <p>Your ticket will be sent on this contact details</p>
@@ -285,8 +295,164 @@ async function bookingDetailsData() {
 
 const busPriceData = JSON.parse(localStorage.getItem("bookingDetails"));
 // console.log("prise", busPriceData.busPrice);
+// start
+function validateAgeInput(input) {
+  const originalValue = input.value;
+  input.value = input.value.replace(/[^0-9]/g, "");
+
+  if (originalValue !== input.value) {
+    alert("Please enter only numbers.");
+  }
+}
+
+function validateNameInput(input) {
+  const originalValue = input.value;
+  input.value = input.value.replace(/[^a-zA-Z\s]/g, "");
+
+  if (originalValue !== input.value) {
+    alert("Please enter only letters.");
+  }
+}
+
+function validateEmailInput(input) {
+  const errorMessage = input.nextElementSibling;
+
+  const emailPattern = /\S+@\S+\.\S+/;
+
+  if (!emailPattern.test(input.value)) {
+    errorMessage.textContent = "Please enter a valid email address.";
+    errorMessage.style.display = "block";
+  } else {
+    errorMessage.style.display = "none";
+  }
+}
+
+function validatePhoneInput(input) {
+  const originalValue = input.value;
+  input.value = input.value.replace(/[^0-9]/g, "");
+
+  const errorMessage = input.nextElementSibling;
+
+  if (input.value.length > 10) {
+    errorMessage.textContent = "Phone number must be 10 digits.";
+    errorMessage.style.display = "block";
+    input.value = input.value.slice(0, 10);
+  } else if (input.value.length === 0) {
+    errorMessage.textContent = "Phone number is required.";
+    errorMessage.style.display = "block";
+  } else {
+    errorMessage.style.display = "none";
+  }
+}
+
+function validateAadhaarInput(input) {
+  const errorMessage = input.nextElementSibling;
+  const aadhaarPattern = /^\d{12}$/;
+
+  if (!aadhaarPattern.test(input.value)) {
+    errorMessage.textContent = "Aadhaar Card Number must be 12 digits.";
+    errorMessage.style.display = "block";
+  } else {
+    errorMessage.style.display = "none";
+  }
+}
+
+function validatePanInput(input) {
+  const errorMessage = input.nextElementSibling;
+  const panPattern = /^[A-Z]{5}\d{4}[A-Z]{1}$/;
+
+  if (input.value && !panPattern.test(input.value)) {
+    errorMessage.textContent =
+      "PAN Card Number must be in the format: ABCD1234E.";
+    errorMessage.style.display = "block";
+  } else {
+    errorMessage.style.display = "none";
+  }
+}
+
+// end
 function proceedToPay() {
   const passengers = document.querySelectorAll(".Passenger-data");
+
+  // start
+  document.querySelectorAll(".error-message").forEach((msg) => msg.remove());
+
+  let isValid = true;
+
+  for (const passenger of passengers) {
+    const nameInput = passenger.querySelector(
+      "input[placeholder='Enter Name']"
+    );
+    const ageInput = passenger.querySelector(".agePick input");
+    const aadhaarCardInput = passenger.querySelector(
+      "input[placeholder='Enter Aadhaar Card']"
+    );
+
+    const emailInput = document.querySelector(
+      ".phone-container input[type='text']"
+    );
+    const phoneSelect = document.querySelector(".phone-container select");
+    const phoneNumberInput = document.querySelector(
+      "input[placeholder='Enter your phone no.']"
+    );
+
+    nameInput.nextElementSibling?.remove();
+    ageInput.nextElementSibling?.remove();
+    aadhaarCardInput.nextElementSibling?.remove();
+    emailInput.nextElementSibling?.remove();
+    phoneNumberInput.nextElementSibling?.remove();
+
+    if (!nameInput.value) {
+      const errorMsg = document.createElement("div");
+      errorMsg.className = "error-message";
+      errorMsg.textContent = "Name is required.";
+      errorMsg.style.color = "red";
+      nameInput.parentNode.appendChild(errorMsg);
+      isValid = false;
+    }
+    if (!ageInput.value) {
+      const errorMsg = document.createElement("div");
+      errorMsg.className = "error-message";
+      errorMsg.textContent = "Age is required.";
+      errorMsg.style.color = "red";
+      ageInput.parentNode.appendChild(errorMsg);
+      isValid = false;
+    }
+    if (!aadhaarCardInput.value) {
+      const errorMsg = document.createElement("div");
+      errorMsg.className = "error-message";
+      errorMsg.textContent = "Aadhaar Card Number is required.";
+      errorMsg.style.color = "red";
+      aadhaarCardInput.parentNode.appendChild(errorMsg);
+      isValid = false;
+    }
+    if (!emailInput.value) {
+      const errorMsg = document.createElement("div");
+      errorMsg.className = "error-message";
+      errorMsg.textContent = "Email is required.";
+      errorMsg.style.color = "red";
+      emailInput.parentNode.appendChild(errorMsg);
+      isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(emailInput.value)) {
+      const errorMsg = document.createElement("div");
+      errorMsg.className = "error-message";
+      errorMsg.textContent = "Please enter a valid email address.";
+      errorMsg.style.color = "red";
+      emailInput.parentNode.appendChild(errorMsg);
+      isValid = false;
+    }
+    if (!phoneNumberInput.value) {
+      const errorMsg = document.createElement("div");
+      errorMsg.className = "error-message";
+      errorMsg.textContent = "Phone number is required.";
+      errorMsg.style.color = "red";
+      phoneNumberInput.parentNode.appendChild(errorMsg);
+      isValid = false;
+    }
+  }
+
+  if (!isValid) return;
+  // end
   const passengerDetails = Array.from(passengers).map((passenger) => ({
     name: passenger.querySelector("input[placeholder='Enter Name']").value,
     age: document.querySelector(".agePick input").value,
@@ -362,8 +528,8 @@ function initPage() {
   let couponApplied = false;
   function applyDiscount() {
     if (couponApplied) {
-      alert("Coupon has already been applied."); // Alert the user
-      return; // Exit the function if the coupon is already applied
+      alert("Coupon has already been applied.");
+      return;
     }
     var onwardFare = bookingDetails.onwardFare;
     var discount = bookingDetails.discount;
@@ -373,6 +539,7 @@ function initPage() {
     const bookingCharges = 120;
 
     console.log(`Discount applied: ₹${coupenDiscountPrice}`);
+    // console.log(coupenDiscountPrice);
 
     discount += coupenDiscountPrice;
 
@@ -380,6 +547,11 @@ function initPage() {
 
     const totalPayableAmount =
       onwardFare + bookingDetails.gst + bookingCharges - discount;
+
+      const existingBookingDetails = JSON.parse(localStorage.getItem("bookingDetails")) || {};
+    existingBookingDetails.discount = discount;
+    existingBookingDetails.totalPayableAmount = totalPayableAmount;
+    localStorage.setItem("bookingDetails", JSON.stringify(existingBookingDetails));
 
     const discountElement = document.querySelector(".disc span:nth-child(2)");
     if (discountElement) {
