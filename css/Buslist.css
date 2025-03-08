@@ -79,7 +79,100 @@ body {
   }
 }
 
-.search-container {
+/* seasrch bus css */
+#Search {
+  padding: 2rem 0;
+}
+
+.card {
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  margin: 0 auto !important;
+  padding: 20px 12px;
+  border: none !important;
+}
+
+.Search-data {
+  justify-content: space-between;
+  padding: 0px 25px;
+  row-gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.city {
+  width: 100%;
+  padding: 0 !important;
+}
+
+.chang-city {
+  text-align: center !important;
+}
+
+.input-group img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #333;
+}
+
+.input-group select,
+.input-group input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #333;
+  padding: 5px 5px 5px 30px;
+  font-size: 14px;
+  outline: none;
+  background: transparent;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.input-group a {
+  text-decoration: none !important;
+  border: none;
+  padding: 3px 20px;
+  background-color: #c16c49;
+  color: white !important;
+  border-radius: 4px;
+}
+
+.Remove {
+  justify-content: space-between !important;
+  padding: 0 12px;
+}
+
+.Filters {
+  border-bottom: 1px solid rgb(221, 219, 219);
+  padding: 10px 0;
+}
+
+.fill {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: start;
+  padding: 0 !important;
+}
+
+.remo a {
+  color: grey !important;
+  font-size: 14px;
+  text-align: end;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* .search-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -135,7 +228,7 @@ body {
   font-size: 16px;
   color: #666;
   cursor: pointer;
-}
+} */
 .travel-list {
   background: white;
   border-radius: 8px;

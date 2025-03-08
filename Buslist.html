@@ -478,47 +478,73 @@
   </div>
 
 
-  <section>
+  <section id="Search">
     <div class="container">
-      <div class="search-container">
-        <div class="input-group">
-          <i class="fas fa-map-marker-alt"></i>
-          <select id="from-city">
-            <option value="">From City</option>
-            <option value="Surat">Surat</option>
-            <option value="Ahmedabad">Ahmedabad</option>
-            <option value="Vadodara">Vadodara</option>
-            <option value="Rajkot">Rajkot</option>
-          </select>
+
+        <div class="card">
+
+            <div class="row Search-data">
+
+                <div class="col-12 col-md-4 col-lg-2 city">
+                    <div class="input-group">
+                        <img src="./image/u_images/loac.png" alt="">
+                        <select id="city1">
+                            <option>Surat</option>
+                            <option>Ahmedabad</option>
+                            <option>Vadodara</option>
+                            <option>Ankleshwar</option>
+                            <option>Rajkot</option>
+                            <option>Bhavnagar</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-1 col-lg-1 city">
+                    <div class="chang-city" id="changeBtn">
+                        <img src="./image/u_images/chang.png" alt="">
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-2 city">
+                    <div class="input-group">
+                        <img src="./image/loac.png" alt="">
+                        <select id="city2">
+                            <option>Ankleshwar</option>
+                            <option>Surat</option>
+                            <option>Ahmedabad</option>
+                            <option>Vadodara</option>
+                            <option>Rajkot</option>
+                            <option>Bhavnagar</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-2 city">
+                    <div class="input-group">
+                        <img src="./image/u_images/date.png" alt="" id="datePickerIcon">
+                        <input type="date" id="dateInput" placeholder="Date">
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-2 city">
+                    <div class="input-group">
+                        <img src="./image/u_images/bus.png" alt="">
+                        <input type="text" placeholder="Bus Name (Opt)">
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12  col-lg-1 city">
+                    <div class="input-group Search-btn">
+                        <a href="#">Search</a>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
-        <i class="fas fa-exchange-alt swap-icon" id="swap-button"></i>
-
-        <div class="input-group">
-          <i class="fas fa-map-marker-alt"></i>
-          <select id="to-city">
-            <option value="">To City</option>
-            <option value="Surat">Surat</option>
-            <option value="Ankleshwar">Ankleshwar</option>
-            <option value="Rajkot">Rajkot</option>
-            <option value="Bhavnagar">Bhavnagar</option>
-          </select>
-        </div>
-
-        <div class="input-group">
-          <i class="fas fa-calendar-alt"></i>
-          <input type="date"  id="journey-date" min="2025-02-28"/>
-        </div>
-
-        <div class="input-group">
-          <i class="fas fa-bus"></i>
-          <input type="text" id="bus-name" placeholder="Bus Name (Opt)">
-        </div>
-
-        <button class="search-btn" onclick="searchData()"  id="search-button">Search</button>
-      </div>
     </div>
-  </section>
+</section>
 
   <section>
     <div class="container">
@@ -1925,6 +1951,92 @@
       // }
     })
   </script>
+
+<script>
+document.getElementById("removeAll").addEventListener("click", function (event) {
+    event.preventDefault();
+    document.querySelectorAll("input[type='checkbox']").forEach(filter => {
+        filter.checked = false;
+    });
+});
+</script>
+
+<script>
+document.getElementById("datePickerIcon").addEventListener("click", function () {
+    document.getElementById("dateInput").showPicker(); // Opens the date picker
+});
+</script>
+
+<script>
+document.getElementById("changeBtn").addEventListener("click", function () {
+    let city1 = document.getElementById("city1");
+    let city2 = document.getElementById("city2");
+
+    let temp = city1.value;
+    city1.value = city2.value;
+    city2.value = temp;
+});
+</script>
+
+<script>
+function toggleSelection(button) {
+    let parent = button.parentElement;
+    let buttons = parent.getElementsByClassName("filter-btn");
+
+    for (let btn of buttons) {
+        btn.classList.remove("selected");
+    }
+    button.classList.add("selected");
+}
+
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("#showMore").forEach(function (button) {
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
+            let moreCheckboxes = this.previousElementSibling;
+            if (moreCheckboxes.style.display === "none" || moreCheckboxes.style.display === "") {
+                moreCheckboxes.style.display = "block";
+                this.textContent = "Show Less";
+            } else {
+                moreCheckboxes.style.display = "none";
+                this.textContent = "Show More";
+            }
+        });
+    });
+});
+</script>
+
+<script>
+const minRange = document.getElementById("minRange");
+const maxRange = document.getElementById("maxRange");
+const minPrice = document.getElementById("minPrice");
+const maxPrice = document.getElementById("maxPrice");
+
+minRange.addEventListener("input", () => {
+    if (parseInt(minRange.value) >= parseInt(maxRange.value)) {
+        minRange.value = maxRange.value - 100;
+    }
+    minPrice.textContent = "₹" + minRange.value;
+});
+
+maxRange.addEventListener("input", () => {
+    if (parseInt(maxRange.value) <= parseInt(minRange.value)) {
+        maxRange.value = parseInt(minRange.value) + 100;
+    }
+    maxPrice.textContent = "₹" + maxRange.value;
+});
+</script>
+
+<script>
+function toggleSelection(button) {
+    let buttons = button.parentElement.querySelectorAll(".filter-btn");
+    buttons.forEach(btn => btn.classList.remove("selected"));
+    button.classList.add("selected");
+}
+</script>
 
 </body>
 

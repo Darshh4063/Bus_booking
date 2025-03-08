@@ -1326,18 +1326,11 @@ async function handleBookingDetail(bus) {
   const pickupTime = bus.journey.departure.time;
   const dropoffTime = bus.journey.arrival.time;
 
-  console.log(
-    "data",
-    pricePerSeat,
-    onwardFare,
-    discount,
-    gst,
-    totalPrice,
-    pickupTime,
-    dropoffTime
-  );
   const bookingDetails = {
     busName: bus.companyName,
+    busType: bus.busType,
+    busDateArrival: bus.journey.arrival.date,
+    busdateDepature: bus.journey.departure.date,
     pickupLocation: bus.journey.departure.location,
     pickupTime: bus.journey.departure.time,
     dropLocation: bus.journey.arrival.location,
