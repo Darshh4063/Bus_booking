@@ -532,7 +532,16 @@ function completeCheckPayment(accountNumber) {
 function sendPaymentData(data) {
   console.log("Sending payment data to server...");
 
+  const Bookings = JSON.parse(localStorage.getItem("bookingDetails"));
+  console.log("Bookings", Bookings);
+  const user = JSON.parse(localStorage.getItem("currentUser"));
+  console.log("User", user);
+
+  const AllDetails = { Bookings, user, payment: data };
+  console.log("AllDetails", AllDetails);
+
   // Try to send to server, but don't fail if server isn't available
+
   try {
     fetch("http://localhost:3000/payments", {
       method: "POST",
@@ -554,6 +563,15 @@ function sendPaymentData(data) {
     );
     showSuccessModal();
   }
+
+  // Update user data with payment details and Booking Details
+
+  fetch(`http://localhost:3000/user/${user.id}`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ Bookings, payment: data }),
+  });
+  // console.log(body);
 }
 
 // Show Error Message
@@ -686,3 +704,136 @@ function validateExpiryDate(expiry) {
   console.log("Expiry date validation result:", isValid);
   return isValid;
 }
+
+// k-payment-data.js
+document.addEventListener("DOMContentLoaded", function () {
+  // Get booking details from localStorage
+  const bookingDetailsString = localStorage.getItem("bookingDetails");
+
+  if (!bookingDetailsString) {
+    console.error("No booking details found in localStorage");
+    return;
+  }
+
+  // Parse the JSON data
+  const bookingDetails = JSON.parse(bookingDetailsString);
+
+  // Update bus details
+  document.querySelector(".Travels h3").textContent =
+    bookingDetails.busName || "Shree Nath Travels";
+
+  // Update pickup and drop times/locations
+  const pickupTimeElements = document.querySelectorAll(".pickup p:first-child");
+  const pickupDateElements = document.querySelectorAll(".pickup h3");
+  const pickupLocationElements = document.querySelectorAll(
+    ".pickup p:last-child"
+  );
+
+  if (pickupTimeElements.length > 0)
+    pickupTimeElements[0].textContent = bookingDetails.pickupTime || "10:00 AM";
+  if (pickupLocationElements.length > 0)
+    pickupLocationElements[0].textContent =
+      bookingDetails.pickupLocation || "Surat";
+
+  const dropTimeElements = document.querySelectorAll(".drop p:first-child");
+  const dropDateElements = document.querySelectorAll(".drop h3");
+  const dropLocationElements = document.querySelectorAll(".drop p:last-child");
+
+  if (dropTimeElements.length > 0)
+    dropTimeElements[0].textContent = bookingDetails.dropTime || "06:00 PM";
+  if (dropLocationElements.length > 0)
+    dropLocationElements[0].textContent =
+      bookingDetails.dropLocation || "Ankleshwar";
+
+  // Update duration
+  const durationElement = document.querySelector("#time h3");
+  if (durationElement)
+    durationElement.textContent = bookingDetails.duration || "05h 30m";
+
+  // Update pickup and dropoff points
+  const pickupPointElement = document.querySelector(".pick-area:first-child p");
+  if (pickupPointElement)
+    pickupPointElement.textContent =
+      bookingDetails.pickupPoints || "Shyamdham Mandir, Jakatnaka";
+
+  const dropPointElement = document.querySelector(".pick-area:last-child p");
+  if (dropPointElement)
+    dropPointElement.textContent =
+      bookingDetails.dropoffPoints || "Lalita Chowkdi";
+
+  // Update passenger details
+  const passengersContainer = document.querySelector(".p-Details");
+  if (
+    passengersContainer &&
+    bookingDetails.passengers &&
+    bookingDetails.passengers.length > 0
+  ) {
+    // Clear existing passengers
+    passengersContainer.innerHTML = "";
+
+    // Add passengers from localStorage
+    bookingDetails.passengers.forEach((passenger, index) => {
+      const genderShort = passenger.gender === "Male" ? "M" : "F";
+      const seatNumber = bookingDetails.selectedSeats[index] || index + 32;
+
+      const passengerNameElement = document.createElement("p");
+      passengerNameElement.className = "col-8";
+      passengerNameElement.innerHTML = `${passenger.name} <span>(${genderShort},${passenger.age})</span>`;
+
+      passengersContainer.appendChild(passengerNameElement);
+    });
+  }
+
+  // Update fare details using the specific class names
+
+  // Onward Fare
+  const onwardFareElement = document.querySelector(".Amount");
+  if (onwardFareElement) {
+    onwardFareElement.textContent = `₹${
+      bookingDetails.onwardFare
+        ? bookingDetails.onwardFare.toLocaleString()
+        : "37,000"
+    }`;
+  }
+
+  // GST
+  const gstElement = document.querySelector(".Amount-gst");
+  if (gstElement) {
+    gstElement.textContent = `₹${
+      bookingDetails.gst ? bookingDetails.gst.toLocaleString() : "6,660"
+    }`;
+  }
+
+  // Booking Charges
+  const bookingChargesElement = document.querySelector(".Amount-b-charges");
+  if (bookingChargesElement) {
+    const bookingCharges = bookingDetails.fareBreakup.bookingCharges || 60;
+    bookingChargesElement.textContent = `₹${bookingCharges}`;
+  }
+
+  // Discount
+  const discountElement = document.querySelector(".Amount-discount");
+  if (discountElement) {
+    const discount = bookingDetails.discount || 120;
+    discountElement.textContent = `-₹${discount}`; // Adding minus sign to show it's a discount
+  }
+
+  // Update total amount
+  const totalAmountElement = document.querySelector(".Total-Amount .Amount");
+  if (totalAmountElement) {
+    totalAmountElement.textContent = `₹${
+      bookingDetails.totalPrice
+        ? bookingDetails.totalPrice.toLocaleString()
+        : "43,660"
+    }`;
+  }
+
+  // Format dates if needed (assuming current date if not provided)
+  const currentDate = new Date();
+  const formattedDate = `${currentDate.getDate()} Feb ${currentDate.getFullYear()}`;
+
+  if (pickupDateElements.length > 0)
+    pickupDateElements[0].textContent = formattedDate;
+  if (dropDateElements.length > 0)
+    dropDateElements[0].textContent = formattedDate;
+});
