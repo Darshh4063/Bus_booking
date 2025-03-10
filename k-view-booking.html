@@ -61,7 +61,6 @@
 
             <div class="d-flex d-lg-flex flex-xl-column">
               <div class="text-end">
-                
                 <div class="account-btn">
                   <button><i class="fa-solid fa-user"></i> Account</button>
                 </div>
@@ -82,7 +81,7 @@
         </nav>
       </div>
     </section>
-    
+
     <div class="container mt-4">
       <div class="row">
         <div class="col-md-8">
@@ -125,7 +124,6 @@
             </div>
 
             <div class="seat-info mt-3">
-              Seat Selected: • 32 • 33 • 34
               <span class="ms-4">Bus Operator: Patel Travellers</span>
             </div>
           </div>
@@ -192,23 +190,48 @@
         <div class="col-md-4">
           <div class="fare-details">
             <h5>Fare Details</h5>
-            <div class="d-flex justify-content-between mb-2">
+            <div class="d-flex bus-price justify-content-between mb-2">
               <span>Onward Fare</span>
               <span>₹6000</span>
             </div>
-            <div class="d-flex justify-content-between mb-2">
-              <span>Others</span>
+            <div class="d-flex discount justify-content-between mb-2">
+              <span>Discount</span>
               <span>₹60</span>
             </div>
+            <div class="d-flex gst justify-content-between mb-2">
+              <span>GST</span>
+              <span>₹60</span>
+            </div>
+            <div class="d-flex b-charge justify-content-between mb-2">
+              <span>Booking Charges</span>
+              <span>₹60</span>
+            </div>
+
             <hr />
-            <div class="d-flex justify-content-between fw-bold mb-3">
+            <div class="d-flex total-price justify-content-between fw-bold mb-3">
               <span>Total Payable Amount</span>
               <span>₹6060</span>
             </div>
-            <a href="k-invoice.html" class="outline-btn d-block mb-2 text-center"
+            <a
+              href="k-invoice.html"
+              class="outline-btn d-block mb-2 text-center k-invoice-btn"
               >Download Invoice</a
             >
-            <button class="primary-btn"><a href="k-cancel-ticket.html" class="text-white text-decoration-none">Cancel Ticket</a></button>
+            <button class="primary-btn">
+              <a
+                href="k-cancel-ticket.html"
+                class="text-white text-decoration-none"
+                >Cancel Ticket</a
+              >
+            </button>
+
+            <button class="primary-btn">
+              <a
+                href="k-add-review.html"
+                class="text-white text-decoration-none"
+                >Submit Review</a
+              >
+            </button>
           </div>
         </div>
       </div>
@@ -218,5 +241,6 @@
     <script type="module" src="./js/global-auth.js"></script>
     <script src="js/k-otp.js"></script>
     <script src="js/k-model-open.js"></script>
+    <script src="js/k-view-booking.js"></script>
   </body>
 </html>

@@ -1286,7 +1286,7 @@
           "buttonLabel": "Continue"
         }
       },
-      "id": "dfa4"
+      "id": "dfa43"
     },
     {
       "companyName": "Shivay Travels",
@@ -1569,7 +1569,7 @@
           "buttonLabel": "Continue"
         }
       },
-      "id": "dfa4"
+      "id": "dfa42"
     },
     {
       "companyName": "Bhumi Travels",
@@ -1852,7 +1852,7 @@
           "buttonLabel": "Continue"
         }
       },
-      "id": "dfa4"
+      "id": "dfa41"
     },
     {
       "companyName": "Umiya Travels",
@@ -2135,7 +2135,7 @@
           "buttonLabel": "Continue"
         }
       },
-      "id": "dfa4"
+      "id": "dfa44"
     },
     {
       "companyName": "Maruti Nandan Travels",
@@ -2418,7 +2418,7 @@
           "buttonLabel": "Continue"
         }
       },
-      "id": "dfa4"
+      "id": "dfa45"
     },
     {
       "companyName": "Delux Travels",
@@ -2701,7 +2701,7 @@
           "buttonLabel": "Continue"
         }
       },
-      "id": "dfa4"
+      "id": "dfa46"
     },
     {
       "companyName": "Shree Nath Travels",
@@ -2984,7 +2984,7 @@
           "buttonLabel": "Continue"
         }
       },
-      "id": "dfa4"
+      "id": "dfa47"
     },
     {
       "companyName": "Shree Nath Travels",
@@ -3267,7 +3267,290 @@
           "buttonLabel": "Continue"
         }
       },
-      "id": "dfa4"
+      "id": "dfa48"
+    },
+    {
+      "companyName": "New Dharti travels",
+      "busType": "AC",
+      "rating": "4.5",
+      "journey": {
+        "departure": {
+          "location": "Surat",
+          "time": "10:00 AM",
+          "date": "15 march 2025"
+        },
+        "arrival": {
+          "location": "Ankleshwar",
+          "time": "6:00 PM",
+          "date": "10 Feb 2025"
+        },
+        "duration": "11h 00m"
+      },
+      "price": {
+        "amount": "28,000",
+        "currency": "₹",
+        "discount": "Best deal 10% Off"
+      },
+      "travelLinks": [
+        {
+          "name": "Live Tracking",
+          "dataTab": "tracking"
+        },
+        {
+          "name": "Policies",
+          "dataTab": "policies"
+        },
+        {
+          "name": "Amenities",
+          "dataTab": "amenities"
+        },
+        {
+          "name": "Photos",
+          "dataTab": "photos"
+        },
+        {
+          "name": "Pickup & Drop off Point",
+          "dataTab": "pickup"
+        },
+        {
+          "name": "Reviews",
+          "dataTab": "reviews"
+        }
+      ],
+      "selectSeat": {
+        "label": "Select Seat",
+        "dataTab": "selectseat"
+      },
+      "tracking": {
+        "content": "Live Tracking Content Will Appear Here"
+      },
+      "policies": {
+        "cancellationPolicies": [
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          }
+        ],
+        "info": [
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Lorem Ipsum is simply dummy text of the printing and",
+          "Lorem Ipsum is simply dummy text of the printing",
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Lorem Ipsum is simply dummy text of the printing and"
+        ]
+      },
+      "amenities": [
+        "WiFi",
+        "Water Bottle",
+        "Charging Point",
+        "Blanket",
+        "Live Tracking",
+        "Emergency Toilet"
+      ],
+      "photos": [
+        "buslist_slider1.png",
+        "buslist_slider2.png",
+        "buslist_slider3.png",
+        "buslist_slider1.png"
+      ],
+      "pickupPoints": [
+        {
+          "time": "10:00",
+          "location": "Navjivan Hotel"
+        },
+        {
+          "time": "11:00",
+          "location": "Katargam, Unapani Road"
+        },
+        {
+          "time": "01:00",
+          "location": "Kiram Hospital, Nanigam Circle"
+        },
+        {
+          "time": "05:00",
+          "location": "Savera Complex, Udhana"
+        },
+        {
+          "time": "08:00",
+          "location": "Navjivan Hotel"
+        }
+      ],
+      "dropoffPoints": [
+        {
+          "time": "10:00",
+          "location": "Majevdi Gate"
+        },
+        {
+          "time": "10:30",
+          "location": "Gandhi Chowk"
+        },
+        {
+          "time": "11:00",
+          "location": "Motibaug"
+        }
+      ],
+      "ratings": {
+        "overall": "4.5",
+        "categories": {
+          "busQuality": "3.5",
+          "driving": "4.0",
+          "seatComfort": "3.0",
+          "safetyAndHygiene": "4.1",
+          "cleanliness": "3.2"
+        }
+      },
+      "reviews": [
+        {
+          "name": "Johan Kumar",
+          "date": "12 Jun 2024",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          "name": "Johan Kumar",
+          "date": "12 Jun 2024",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        }
+      ],
+      "seatInfo": {
+        "legend": [
+          {
+            "type": "available",
+            "label": "Available"
+          },
+          {
+            "type": "booked",
+            "label": "Booked"
+          },
+          {
+            "type": "selected",
+            "label": "Selected"
+          }
+        ],
+        "seating": {
+          "lowerDeck": {
+            "title": "Lower Seat",
+            "seats": [
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "booked"
+              ]
+            ]
+          },
+          "upperDeck": {
+            "title": "Upper Seat",
+            "seats": [
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ]
+            ]
+          }
+        },
+        "sidebar": {
+          "tabs": [
+            "Pick Up Point",
+            "Drop Off Point"
+          ],
+          "pickupPoints": [
+            {
+              "time": "10:00 AM",
+              "location": "Shyamdham Mandir, Jakatnaka",
+              "selected": true
+            },
+            {
+              "time": "11:00 AM",
+              "location": "Pasodara Patiya, Pasodara",
+              "selected": false
+            },
+            {
+              "time": "11:30 AM",
+              "location": "Laskana Gam, Laskana",
+              "selected": false
+            },
+            {
+              "time": "12:10 AM",
+              "location": "Kamrej Under Bridge, Kamrej",
+              "selected": false
+            },
+            {
+              "time": "01:00 AM",
+              "location": "Raj Hotel, Kmarej Highway",
+              "selected": false
+            }
+          ]
+        },
+        "bookingSummary": {
+          "selectedSeats": [],
+          "buttonLabel": "Continue"
+        }
+      },
+      "id": "dfa49"
     }
   ],
   "BookingDetails": [
@@ -3350,66 +3633,139 @@
       "city": "Surat",
       "state": "Gujarat",
       "pincode": "395011",
-      "lastLogin": "2025-03-07T04:56:05.003Z",
+      "lastLogin": "2025-03-10T06:43:45.862Z",
       "gender": "male",
       "lastUpdated": "2025-02-28T09:11:36.514Z",
-      "Bookings": {
-        "busName": "Shivay Travels",
-        "pickupLocation": "Ahemadabad",
-        "pickupTime": "10:00 AM",
-        "dropLocation": "Ankleshwar",
-        "dropTime": "10:00 AM",
-        "duration": "05h 30m",
-        "selectedSeats": [],
-        "busPrice": {
-          "amount": "32,000",
-          "currency": "₹",
-          "discount": "Best deal 10% Off"
-        },
-        "onwardFare": 32000,
-        "discount": 120,
-        "gst": 5760,
-        "totalPrice": 37760,
-        "pickupPoints": "Navjivan Hotel",
-        "dropoffPoints": "Valiya Chokdi Ashirwad Hotel",
-        "pickupTimeData": "10:00 AM",
-        "dropTimeData": "10:00 AM",
-        "passengers": [
-          {
-            "name": "john Doe",
-            "age": "20",
-            "gender": "Male",
-            "AadhaarCard": "1234567890112",
-            "panCard": "1230456789"
-          }
-        ],
-        "contactDetails": {
-          "email": "johndoe@gmail.com",
-          "phone": {
-            "countryCode": "+91",
-            "number": "1323155142"
-          }
-        },
-        "fareBreakup": {
-          "onwardFare": {
-            "amount": "32,000",
+      "Bookings": [
+        {
+          "busName": "Bhumi Travels",
+          "busType": "Sleeper",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "35,000",
             "currency": "₹",
             "discount": "Best deal 10% Off"
           },
-          "gst": null,
-          "bookingCharges": 120,
-          "discount": 120,
-          "totalPayableAmount": null
+          "onwardFare": 35000,
+          "discount": 7120,
+          "gst": 6300,
+          "totalPrice": 41300,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Ankleshwar, Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 34300,
+          "passengers": [
+            {
+              "name": "john Doe",
+              "age": "32",
+              "gender": "Male",
+              "AadhaarCard": "458712544232",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "johndoe@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "7788994455"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "35,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "upcoming",
+          "bookingId": "BK9INDWBAR"
+        },
+        {
+          "busName": "Delux Travels",
+          "busType": "AC",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Amreli",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Dhasa",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "35,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 35000,
+          "discount": 7120,
+          "gst": 6300,
+          "totalPrice": 41300,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Ankleshwar, Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 34300,
+          "passengers": [
+            {
+              "name": "scscds",
+              "age": "23",
+              "gender": "Male",
+              "AadhaarCard": "213442343433",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "dfsd@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "7869844110"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "35,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "upcoming",
+          "bookingId": "BK1FR5TWJM"
         }
-      },
-      "payment": {
-        "id": "TXN9NNU5MHM",
-        "paymentBy": "NetBanking",
-        "bank": "Capital One Bank",
-        "paidAmount": 6060,
-        "remainingAmount": 0,
-        "timestamp": "2025-03-07T11:19:31.298Z"
-      }
+      ],
+      "payments": [
+        {
+          "id": "TXN7YJ5P0TY",
+          "paymentBy": "NetBanking",
+          "bank": "Citi Bank",
+          "paidAmount": 17150,
+          "remainingAmount": 17150,
+          "timestamp": "2025-03-10T06:45:01.395Z"
+        },
+        {
+          "id": "TXN5JHMQJQC",
+          "paymentBy": "UPI",
+          "upiId": "john.doe12@okhdfc",
+          "paidAmount": 34300,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-10T06:46:09.552Z"
+        }
+      ]
     },
     {
       "id": "4d5e6f",
@@ -3426,64 +3782,7 @@
       "pincode": "123456",
       "lastLogin": "2025-03-08T03:54:12.308Z",
       "gender": "male",
-      "lastUpdated": "2025-02-28T09:21:21.431Z",
-      "Bookings": {
-        "busName": "Umiya Travels",
-        "pickupLocation": "Surat",
-        "pickupTime": "10:00 AM",
-        "dropLocation": "Ankleshwar",
-        "dropTime": "10:00 AM",
-        "duration": "05h 30m",
-        "selectedSeats": [],
-        "busPrice": {
-          "amount": "37,000",
-          "currency": "₹",
-          "discount": "Best deal 10% Off"
-        },
-        "onwardFare": 37000,
-        "discount": 120,
-        "gst": 6660,
-        "totalPrice": 43660,
-        "pickupPoints": "Katargam, Unapani Road",
-        "dropoffPoints": "Valiya Chokdi Ashirwad Hotel",
-        "pickupTimeData": "10:00 AM",
-        "dropTimeData": "10:00 AM",
-        "passengers": [
-          {
-            "name": "smith",
-            "age": "20",
-            "gender": "Male",
-            "AadhaarCard": "147852369012",
-            "panCard": "KGD7854120"
-          }
-        ],
-        "contactDetails": {
-          "email": "smith@gmail.com",
-          "phone": {
-            "countryCode": "+91",
-            "number": "7852146930"
-          }
-        },
-        "fareBreakup": {
-          "onwardFare": {
-            "amount": "37,000",
-            "currency": "₹",
-            "discount": "Best deal 10% Off"
-          },
-          "gst": null,
-          "bookingCharges": 120,
-          "discount": 120,
-          "totalPayableAmount": null
-        }
-      },
-      "payment": {
-        "id": "TXN5KUVZ1M6",
-        "paymentBy": "UPI",
-        "upiId": "smith3454@okicici",
-        "paidAmount": 3030,
-        "remainingAmount": 3030,
-        "timestamp": "2025-03-08T03:56:34.312Z"
-      }
+      "lastUpdated": "2025-02-28T09:21:21.431Z"
     },
     {
       "id": "7g8h9i",
@@ -3498,7 +3797,199 @@
       "city": "",
       "state": "",
       "pincode": "",
-      "lastLogin": "2025-02-25T12:15:18.761Z"
+      "lastLogin": "2025-03-10T09:12:55.902Z",
+      "Bookings": [
+        {
+          "busName": "Umiya Travels",
+          "busType": "Seater",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "37,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 37000,
+          "discount": 7520,
+          "gst": 6660,
+          "totalPrice": 43660,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Dhasa, Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 36260,
+          "passengers": [
+            {
+              "name": "robert",
+              "age": "32",
+              "gender": "Male",
+              "AadhaarCard": "123654789521",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "robert@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "7788554499"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "37,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKYMW3RZJR"
+        },
+        {
+          "busName": "Shree Nath Travels",
+          "busType": "Seater",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "40,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 40000,
+          "discount": 120,
+          "gst": 7200,
+          "totalPrice": 47200,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Ankleshwar, Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "passengers": [
+            {
+              "name": "robert",
+              "age": "32",
+              "gender": "Male",
+              "AadhaarCard": "123045698702",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "robert@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "7412589630"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "40,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKE63XQH4N"
+        },
+        {
+          "busName": "New Dharti travels",
+          "busType": "AC",
+          "busDateArrival": "14 march 2025",
+          "busdateDepature": "15 march 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 PM",
+          "dropLocation": "Junagadh",
+          "dropTime": "6:00 PM",
+          "duration": "11h 00m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "28,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 28000,
+          "discount": 5720,
+          "gst": 5040,
+          "totalPrice": 33040,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Ankleshwar, Majevdi Gate",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "6:00 PM",
+          "totalPayableAmount": 27440,
+          "passengers": [
+            {
+              "name": "kevin",
+              "age": "20",
+              "gender": "Male",
+              "AadhaarCard": "778855221144",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "kevin@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "7744112255"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "28,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "upcoming",
+          "bookingId": "BKJ4ZDIWLJ"
+        }
+      ],
+      "payments": [
+        {
+          "id": "TXNYYTT3AYK",
+          "paymentBy": "NetBanking",
+          "bank": "TD Bank",
+          "paidAmount": 36260,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-10T09:16:49.938Z"
+        },
+        {
+          "id": "TXNEYYM7TPX",
+          "paymentBy": "UPI",
+          "upiId": "robart1290@okicici",
+          "paidAmount": 47200,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-10T09:19:36.273Z"
+        },
+        {
+          "id": "TXNRBU0C286",
+          "paymentBy": "UPI",
+          "upiId": "kevin44@okicici",
+          "paidAmount": 27440,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-10T09:51:50.757Z"
+        }
+      ]
     },
     {
       "id": "0j1k2l",
@@ -3513,7 +4004,7 @@
       "city": "Rajkot",
       "state": "Gujarat",
       "pincode": "874510",
-      "lastLogin": "2025-02-28T09:27:32.219Z",
+      "lastLogin": "2025-03-10T06:34:27.667Z",
       "gender": "female",
       "lastUpdated": "2025-02-28T09:29:08.966Z"
     },
@@ -3916,6 +4407,174 @@
       "paidAmount": 3030,
       "remainingAmount": 3030,
       "timestamp": "2025-03-08T03:56:34.312Z"
+    },
+    {
+      "id": "TXNLX6LER77",
+      "paymentBy": "UPI",
+      "upiId": "robart1290@okicici",
+      "paidAmount": 36260,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-08T07:26:04.672Z"
+    },
+    {
+      "id": "TXNQYB45OAF",
+      "paymentBy": "UPI",
+      "upiId": "robart435@okicici",
+      "paidAmount": 15680,
+      "remainingAmount": 15680,
+      "timestamp": "2025-03-10T03:46:13.481Z"
+    },
+    {
+      "id": "TXN3VC71IGB",
+      "paymentBy": "UPI",
+      "upiId": "robart567@okicici",
+      "paidAmount": 31360,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-10T04:02:27.397Z"
+    },
+    {
+      "id": "TXN1Y79N806",
+      "paymentBy": "NetBanking",
+      "bank": "Capital One Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-10T04:05:17.210Z"
+    },
+    {
+      "id": "TXNLT8WWPLB",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-10T04:14:32.908Z"
+    },
+    {
+      "id": "TXNJ6J682ME",
+      "paymentBy": "NetBanking",
+      "bank": "Citi Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-10T04:18:45.757Z"
+    },
+    {
+      "id": "TXN52U6PEJB",
+      "paymentBy": "NetBanking",
+      "bank": "TD Bank",
+      "paidAmount": 34300,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-10T04:20:06.177Z"
+    },
+    {
+      "id": "TXN32KA079E",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 16170,
+      "remainingAmount": 16170,
+      "timestamp": "2025-03-10T04:41:07.451Z"
+    },
+    {
+      "id": "TXN4WZ1JGGU",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 34300,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-10T04:43:50.610Z"
+    },
+    {
+      "id": "TXNZS04JUE8",
+      "paymentBy": "NetBanking",
+      "bank": "Capital One Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-10T04:48:59.632Z"
+    },
+    {
+      "id": "TXNI3BU61DX",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 34300,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-10T05:01:43.108Z"
+    },
+    {
+      "id": "TXNGNFVU6PO",
+      "paymentBy": "UPI",
+      "upiId": "robart1290@okicici",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-10T05:04:21.142Z"
+    },
+    {
+      "id": "TXNTJIEY1KN",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 41300,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-10T06:03:12.602Z"
+    },
+    {
+      "id": "TXNKW5HX0KS",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 20650,
+      "remainingAmount": 20650,
+      "timestamp": "2025-03-10T06:03:56.057Z"
+    },
+    {
+      "id": "TXNAKJ068Z2",
+      "paymentBy": "UPI",
+      "upiId": "john.patel@okhdfc",
+      "paidAmount": 34300,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-10T06:27:44.657Z"
+    },
+    {
+      "id": "TXNOELUBWRZ",
+      "paymentBy": "NetBanking",
+      "bank": "Capital One Bank",
+      "paidAmount": 19600,
+      "remainingAmount": 19600,
+      "timestamp": "2025-03-10T06:36:01.906Z"
+    },
+    {
+      "id": "TXN7YJ5P0TY",
+      "paymentBy": "NetBanking",
+      "bank": "Citi Bank",
+      "paidAmount": 17150,
+      "remainingAmount": 17150,
+      "timestamp": "2025-03-10T06:45:01.395Z"
+    },
+    {
+      "id": "TXN5JHMQJQC",
+      "paymentBy": "UPI",
+      "upiId": "john.doe12@okhdfc",
+      "paidAmount": 34300,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-10T06:46:09.552Z"
+    },
+    {
+      "id": "TXNYYTT3AYK",
+      "paymentBy": "NetBanking",
+      "bank": "TD Bank",
+      "paidAmount": 36260,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-10T09:16:49.938Z"
+    },
+    {
+      "id": "TXNEYYM7TPX",
+      "paymentBy": "UPI",
+      "upiId": "robart1290@okicici",
+      "paidAmount": 47200,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-10T09:19:36.273Z"
+    },
+    {
+      "id": "TXNRBU0C286",
+      "paymentBy": "UPI",
+      "upiId": "kevin44@okicici",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-10T09:51:50.757Z"
     }
   ]
 }
