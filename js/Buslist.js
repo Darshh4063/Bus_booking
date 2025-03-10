@@ -1327,6 +1327,7 @@ async function handleBookingDetail(bus) {
   const dropoffTime = bus.journey.arrival.time;
 
   const bookingDetails = {
+    busId: bus.id,
     busName: bus.companyName,
     busType: bus.busType,
     busDateArrival: bus.journey.arrival.date,
@@ -1399,3 +1400,9 @@ function handlelocation(value, busIndex) {
     tab.classList.remove("active");
   });
 }
+
+
+
+
+
+

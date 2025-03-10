@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bus List</title>
 
-  <link rel="stylesheet" href="./css/Home.css" />
+  <!-- <link rel="stylesheet" href="./css/Home.css" /> -->
   <link rel="stylesheet" href="./css/Buslist.css" />
   <link rel="stylesheet" href="css/k-login.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -557,22 +557,22 @@
 
           <section class="accordion filter-section">
             <div class="tab">
-              <input type="checkbox" class="invisible" name="accordion-1" id="cb1">
-              <label for="cb1" class="tab__label">AC</label>
-              <div class="tab__content">
-                <div class="button-group">
-                  <button class="filter-btn">
-                    <span class="icon">❄</span>
-                    AC
-                  </button>
-                  <button class="filter-btn selected">
-                    <span class="icon">❄</span>
-                    Non AC
-                  </button>
+                <input type="checkbox" class="invisible" name="accordion-1" id="cb1">
+                <label for="cb1" class="tab__label">AC</label>
+                <div class="tab__content">
+                    <div class="button-group">
+                        <button class="filter-btn" data-type="AC" onclick="toggleSelection(this)">
+                            <span class="icon">❄</span>
+                            AC
+                        </button>
+                        <button class="filter-btn selected" data-type="Non AC" onclick="toggleSelection(this)">
+                            <span class="icon">❄</span>
+                            Non AC
+                        </button>
+                    </div>
                 </div>
-              </div>
             </div>
-          </section>
+        </section>
 
           <section class="accordion filter-section">
             <div class="tab">
@@ -580,11 +580,11 @@
               <label for="cb2" class="tab__label">Seat Type</label>
               <div class="tab__content">
                 <div class="button-group">
-                  <button class="filter-btn">
+                  <button class="filter-btn" onclick="toggleSelection(this)">
                     <span class="icon">💺</span>
                     Seater
                   </button>
-                  <button class="filter-btn selected">
+                  <button class="filter-btn selected" onclick="toggleSelection(this)">
                     <span class="icon">🛏️</span>
                     Sleeper
                   </button>
@@ -808,8 +808,21 @@
                     <span class="checkbox-custom"></span>
                     Bapashitaram Travels
                   </label>
+                  <!-- Additional content to show/hide -->
+                  <div class="additional-content" style="display: none;">
+                      <label class="checkbox-label mb-2">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          New Travels
+                      </label>
+                      <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          Another Travels
+                      </label>
+                  </div>
+                  <a href="#" class="show-more" id="toggleContent9">Show More</a>
                 </div>
-                <a href="#" class="show-more">Show More</a>
               </div>
           </section>
 
@@ -843,8 +856,20 @@
                     <span class="checkbox-custom"></span>
                     Bapashitaram Travels
                   </label>
+                  <div class="additional-content" style="display: none;">
+                      <label class="checkbox-label mb-2">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          New Travels
+                      </label>
+                      <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          Another Travels
+                      </label>
+                  </div>
+                  <a href="#" class="show-more" id="toggleContent10">Show More</a>
                 </div>
-                <a href="#" class="show-more">Show More</a>
               </div>
           </section>
 
@@ -878,45 +903,72 @@
                     <span class="checkbox-custom"></span>
                     Bapashitaram Travels
                   </label>
+                  <div class="additional-content" style="display: none;">
+                      <label class="checkbox-label mb-2">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          New Travels
+                      </label>
+                      <label class="checkbox-label">
+                          <input type="checkbox" />
+                          <span class="checkbox-custom"></span>
+                          Another Travels
+                      </label>
+                  </div>
+                  <a href="#" class="show-more" id="toggleContent11">Show More</a>
                 </div>
-                <a href="#" class="show-more">Show More</a>
               </div>
           </section>
 
           <section class="accordion filter-section">
             <div class="tab">
-              <input type="checkbox" class="invisible" name="accordion-1" id="cb12">
-              <label for="cb12" class="tab__label">Bus Operator</label>
-              <div class="tab__content">
-                <div class="search-box">
-                  <input type="text" placeholder="Search Bus Operator" />
-                  <span class="search-icon">🔍</span>
+                <input type="checkbox" class="invisible" name="accordion-1" id="cb12">
+                <label for="cb12" class="tab__label">Bus Operator</label>
+                <div class="tab__content">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search Bus Operator" />
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" />
+                            <span class="checkbox-custom"></span>
+                            Amar Travels
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" checked />
+                            <span class="checkbox-custom"></span>
+                            B.R. Travels
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" />
+                            <span class="checkbox-custom"></span>
+                            Ankur Travels
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" checked />
+                            <span class="checkbox-custom"></span>
+                            Bapashitaram Travels
+                        </label>
+                        <!-- Additional content to show/hide -->
+                        <div class="additional-content" style="display: none;">
+                            <label class="checkbox-label mb-2">
+                                <input type="checkbox" />
+                                <span class="checkbox-custom"></span>
+                                New Travels
+                            </label>
+                            
+                            <label class="checkbox-label">
+                                <input type="checkbox" />
+                                <span class="checkbox-custom"></span>
+                                Another Travels
+                            </label>
+                        </div>
+                        <a href="#" class="show-more" id="toggleContent">Show More</a>
+                    </div>
                 </div>
-                <div class="checkbox-group">
-                  <label class="checkbox-label">
-                    <input type="checkbox" />
-                    <span class="checkbox-custom"></span>
-                    Amar Travels
-                  </label>
-                  <label class="checkbox-label">
-                    <input type="checkbox" checked />
-                    <span class="checkbox-custom"></span>
-                    B.R. Travels
-                  </label>
-                  <label class="checkbox-label">
-                    <input type="checkbox" />
-                    <span class="checkbox-custom"></span>
-                    Ankur Travels
-                  </label>
-                  <label class="checkbox-label">
-                    <input type="checkbox" checked />
-                    <span class="checkbox-custom"></span>
-                    Bapashitaram Travels
-                  </label>
-                </div>
-                <a href="#" class="show-more">Show More</a>
-              </div>
-          </section>
+            </div>
+        </section>
         </div>
         <div style="width: 75%">
           <div class="travel-list" id="buslist">
@@ -2037,6 +2089,50 @@ function toggleSelection(button) {
     button.classList.add("selected");
 }
 </script>
+
+<!-- sidebar  -->
+<script>
+  function toggleSelection(button) {
+      let buttons = button.parentElement.querySelectorAll(".filter-btn");
+      buttons.forEach(btn => btn.classList.remove("selected"));
+      button.classList.add("selected");
+  }
+  </script>
+
+
+<script>
+    document.getElementById('toggleContent').addEventListener('click', function(e) {
+        e.preventDefault();
+        const additionalContent = document.querySelector('.additional-content');
+        if (additionalContent.style.display === 'none') {
+            additionalContent.style.display = 'block';
+            this.textContent = 'Show Less';
+        } else {
+            additionalContent.style.display = 'none';
+            this.textContent = 'Show More';
+        }
+    });
+
+    // New toggle functionality for additional content in other sections
+    document.querySelectorAll('.show-more').forEach(function(button) {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const additionalContent = this.previousElementSibling;
+            if (additionalContent.style.display === 'none') {
+                additionalContent.style.display = 'block';
+                this.textContent = 'Show Less';
+            } else {
+                additionalContent.style.display = 'none';
+                this.textContent = 'Show More';
+            }
+        });
+    });
+</script>
+
+
+
+
+
 
 </body>
 
