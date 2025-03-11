@@ -8,7 +8,11 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-   <link rel="stylesheet" href="css/k-invoice.css">
+    <link rel="stylesheet" href="css/k-invoice.css" />
+
+     <!-- pdf format -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
   </head>
   <body>
     <div class="container ticket-container">
@@ -16,27 +20,36 @@
 
       <div class="row booking-details">
         <div class="col-md-6">
-          <div class="booking-row">
-            <strong>Booking ID:</strong> GKJ1564674JV1U552
+          <div class="booking-row booking-id">
+            <strong>Booking ID:</strong> 
+            <span></span>
           </div>
-          <div class="booking-row">
-            <strong>Invoice Date:</strong> 08 Feb 2025
+          <div class="booking-row booking-date">
+            <strong>Invoice Date:</strong>
+            <span></span>
           </div>
-          <div class="booking-row">
-            <strong>Invoice No:</strong> BHUG656216GUIG565
+          <div class="booking-row invoice-id">
+            <strong>Invoice No:</strong> 
+            <span></span>
           </div>
-          <div class="booking-row">
-            <strong>Travel Date:</strong> 10 Feb 2025
+          <div class="booking-row travel-date">
+            <strong>Travel Date:</strong> 
+            <span></span>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="booking-row">
-            <strong>Bus Operator:</strong> Shree Nath Travels
+          <div class="booking-row bus-operator">
+            <strong>Bus Operator:</strong> 
+            <span></span>
           </div>
-          <div class="booking-row"><strong>From:</strong> Surat</div>
-          <div class="booking-row"><strong>To:</strong> Ankleshwar</div>
-          <div class="booking-row">
-            <strong>Mobile No:</strong> +91 55555 55555
+          <div class="booking-row location-a"><strong>From:</strong> <span></span> </div>
+          <div class="booking-row location-b">
+            <strong>To:</strong>
+            <span></span>
+          </div>
+          <div class="booking-row contact-number">
+            <strong>Mobile No:</strong>
+            <span></span>
           </div>
         </div>
       </div>
@@ -142,5 +155,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/k-invoice.js"></script>
   </body>
 </html>

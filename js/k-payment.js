@@ -1,3 +1,13 @@
+const bookingDetailsString = localStorage.getItem("bookingDetails");
+
+if (!bookingDetailsString) {
+  console.error("No booking details found in localStorage");
+}
+
+// Parse the JSON data
+const bookingDetails = JSON.parse(bookingDetailsString);
+console.log("Booking details:", bookingDetails);
+
 document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM loaded, initializing payment system");
 
@@ -57,7 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function setupPaymentAmountToggle() {
     const payButtons = document.querySelectorAll(".pay");
-    const fullAmount = 6060;
+    const fullAmount =
+      bookingDetails.totalPayableAmount || bookingDetails.totalPrice;
     const halfAmount = fullAmount / 2;
 
     console.log("Setting up payment buttons:", payButtons.length);
@@ -397,7 +408,10 @@ function completePayment(method) {
   if (user) {
     const transactionId = generateTransactionId();
     const isPayFifty = document.getElementById("pay-fifty")?.checked || false;
-    const totalAmount = 6060;
+    const totalAmount =
+      bookingDetails.totalPayableAmount || bookingDetails.totalPrice;
+    console.log("totalAmount", totalAmount);
+
     const paidAmount = isPayFifty ? totalAmount / 2 : totalAmount;
     const remainingAmount = isPayFifty ? totalAmount / 2 : 0;
     let data;
@@ -499,7 +513,8 @@ function completeCheckPayment(accountNumber) {
   console.log("Completing check payment...");
   const transactionId = generateTransactionId();
   const isPayFifty = document.getElementById("pay-fifty")?.checked || false;
-  const totalAmount = 6060;
+  const totalAmount =
+    bookingDetails.totalPayableAmount || bookingDetails.totalPrice;
   const paidAmount = isPayFifty ? totalAmount / 2 : totalAmount;
   const remainingAmount = isPayFifty ? totalAmount / 2 : 0;
 
@@ -532,16 +547,20 @@ function completeCheckPayment(accountNumber) {
 function sendPaymentData(data) {
   console.log("Sending payment data to server...");
 
-  const Bookings = JSON.parse(localStorage.getItem("bookingDetails"));
-  console.log("Bookings", Bookings);
+  const newBooking = JSON.parse(localStorage.getItem("bookingDetails"));
+
+  // Add status "upcoming" to the booking
+  newBooking.status = "upcoming";
+
+  // Generate and add a unique bookingId
+  newBooking.bookingId =
+    "BK" + Math.random().toString(36).substr(2, 8).toUpperCase();
+
+  console.log("New Booking with status and ID:", newBooking);
   const user = JSON.parse(localStorage.getItem("currentUser"));
   console.log("User", user);
 
-  const AllDetails = { Bookings, user, payment: data };
-  console.log("AllDetails", AllDetails);
-
-  // Try to send to server, but don't fail if server isn't available
-
+  // First, save the payment data
   try {
     fetch("http://localhost:3000/payments", {
       method: "POST",
@@ -549,29 +568,83 @@ function sendPaymentData(data) {
       body: JSON.stringify(data),
     })
       .then((response) => {
-        console.log("Server response:", response.ok ? "Success" : "Failed");
-        showSuccessModal();
+        console.log(
+          "Payment data server response:",
+          response.ok ? "Success" : "Failed"
+        );
         localStorage.setItem("paymentData", JSON.stringify(data));
       })
       .catch((error) => {
-        console.log("Server error:", error);
-        showSuccessModal(); // Still show success since we've logged the data
+        console.log("Payment server error:", error);
       });
   } catch (e) {
-    console.log(
-      "Failed to connect to server, but payment was processed locally"
-    );
-    showSuccessModal();
+    console.log("Failed to connect to payment server, processing locally");
   }
 
-  // Update user data with payment details and Booking Details
+  // Now get existing user data and update it
+  fetch(`http://localhost:3000/user/${user.id}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to fetch user data");
+      }
+      return response.json();
+    })
+    .then((userData) => {
+      console.log("Retrieved user data:", userData);
 
-  fetch(`http://localhost:3000/user/${user.id}`, {
-    method: "PATCH",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ Bookings, payment: data }),
-  });
-  // console.log(body);
+      // Initialize bookings array if it doesn't exist
+      let updatedBookings = [];
+
+      // If user already has bookings, add them to the array
+      if (userData.Bookings && Array.isArray(userData.Bookings)) {
+        updatedBookings = [...userData.Bookings];
+      } else if (userData.Bookings) {
+        // If Bookings exists but isn't an array, convert it to an array with the existing booking
+        updatedBookings = [userData.Bookings];
+      }
+
+      // Add the new booking to the array
+      updatedBookings.push(newBooking);
+
+      // Initialize payments array if it doesn't exist
+      let updatedPayments = [];
+
+      // If user already has payments, add them to the array
+      if (userData.payments && Array.isArray(userData.payments)) {
+        updatedPayments = [...userData.payments];
+      } else if (userData.payment) {
+        // If payment exists but isn't in a payments array, add it
+        updatedPayments = [userData.payment];
+      }
+
+      // Add the new payment to the array
+      updatedPayments.push(data);
+
+      console.log("Updating user with bookings:", updatedBookings);
+      console.log("Updating user with payments:", updatedPayments);
+
+      // Update the user data with the new bookings and payments
+      return fetch(`http://localhost:3000/user/${user.id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          Bookings: updatedBookings,
+          payments: updatedPayments,
+        }),
+      });
+    })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to update user data");
+      }
+      console.log("User update successful");
+      showSuccessModal();
+    })
+    .catch((error) => {
+      console.log("Error updating user data:", error);
+      // Still show success modal since we've processed the payment locally
+      showSuccessModal();
+    });
 }
 
 // Show Error Message
@@ -721,8 +794,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Update bus details
   document.querySelector(".Travels h3").textContent =
     bookingDetails.busName || "Shree Nath Travels";
+  document.querySelector(".Travels p").textContent =
+    bookingDetails.busType || "Non AC Sleeper";
 
-  // Update pickup and drop times/locations
+  // Update pickup and drop times/locations with dynamic dates
   const pickupTimeElements = document.querySelectorAll(".pickup p:first-child");
   const pickupDateElements = document.querySelectorAll(".pickup h3");
   const pickupLocationElements = document.querySelectorAll(
@@ -731,6 +806,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (pickupTimeElements.length > 0)
     pickupTimeElements[0].textContent = bookingDetails.pickupTime || "10:00 AM";
+  if (pickupDateElements.length > 0)
+    pickupDateElements[0].textContent =
+      bookingDetails.busdateDepature || "10 Feb 2025";
   if (pickupLocationElements.length > 0)
     pickupLocationElements[0].textContent =
       bookingDetails.pickupLocation || "Surat";
@@ -741,6 +819,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (dropTimeElements.length > 0)
     dropTimeElements[0].textContent = bookingDetails.dropTime || "06:00 PM";
+  if (dropDateElements.length > 0)
+    dropDateElements[0].textContent =
+      bookingDetails.busDateArrival || "10 Feb 2025";
   if (dropLocationElements.length > 0)
     dropLocationElements[0].textContent =
       bookingDetails.dropLocation || "Ankleshwar";
@@ -792,7 +873,7 @@ document.addEventListener("DOMContentLoaded", function () {
     onwardFareElement.textContent = `₹${
       bookingDetails.onwardFare
         ? bookingDetails.onwardFare.toLocaleString()
-        : "37,000"
+        : "35,000"
     }`;
   }
 
@@ -800,40 +881,29 @@ document.addEventListener("DOMContentLoaded", function () {
   const gstElement = document.querySelector(".Amount-gst");
   if (gstElement) {
     gstElement.textContent = `₹${
-      bookingDetails.gst ? bookingDetails.gst.toLocaleString() : "6,660"
+      bookingDetails.gst ? bookingDetails.gst.toLocaleString() : "6,300"
     }`;
   }
 
   // Booking Charges
   const bookingChargesElement = document.querySelector(".Amount-b-charges");
   if (bookingChargesElement) {
-    const bookingCharges = bookingDetails.fareBreakup.bookingCharges || 60;
+    const bookingCharges = bookingDetails.fareBreakup?.bookingCharges || 120;
     bookingChargesElement.textContent = `₹${bookingCharges}`;
   }
 
   // Discount
   const discountElement = document.querySelector(".Amount-discount");
   if (discountElement) {
-    const discount = bookingDetails.discount || 120;
-    discountElement.textContent = `-₹${discount}`; // Adding minus sign to show it's a discount
+    const discount = bookingDetails.discount || 7120;
+    discountElement.textContent = `-₹${discount.toLocaleString()}`; // Adding minus sign to show it's a discount
   }
 
   // Update total amount
   const totalAmountElement = document.querySelector(".Total-Amount .Amount");
   if (totalAmountElement) {
-    totalAmountElement.textContent = `₹${
-      bookingDetails.totalPrice
-        ? bookingDetails.totalPrice.toLocaleString()
-        : "43,660"
-    }`;
+    const total =
+      bookingDetails.totalPayableAmount || bookingDetails.totalPrice || 34300;
+    totalAmountElement.textContent = `₹${total.toLocaleString()}`;
   }
-
-  // Format dates if needed (assuming current date if not provided)
-  const currentDate = new Date();
-  const formattedDate = `${currentDate.getDate()} Feb ${currentDate.getFullYear()}`;
-
-  if (pickupDateElements.length > 0)
-    pickupDateElements[0].textContent = formattedDate;
-  if (dropDateElements.length > 0)
-    dropDateElements[0].textContent = formattedDate;
 });
