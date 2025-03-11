@@ -1042,21 +1042,63 @@ function renderBusList(buses) {
                       <span>${bus.ratings.categories.busQuality}</span>
                     </div>
                   </div>
-                  <!-- Add other rating categories similarly -->
+                  <div class="rating-item">
+                    <span class="category">Driving</span>
+                    <div class="rating-value">
+                      <span class="star">★</span>
+                      <span>${bus.ratings.categories.driving}</span>
+                    </div>
+                  </div>
+                  <div class="rating-item">
+                    <span class="category">Seat Comfort</span>
+                    <div class="rating-value">
+                      <span class="star">★</span>
+                      <span>${bus.ratings.categories.seatComfort}</span>
+                    </div>
+                  </div>
+                  <div class="rating-item">
+                    <span class="category">Safety and Hygiene</span>
+                    <div class="rating-value">
+                      <span class="star">★</span>
+                      <span>${bus.ratings.categories.safetyAndHygiene}</span>
+                    </div>
+                  </div>
+                  <div class="rating-item">
+                    <span class="category">Cleanliness</span>
+                    <div class="rating-value">
+                      <span class="star">★</span>
+                      <span>${bus.ratings.categories.cleanliness}</span>
+                    </div>
+                  </div>
+                  <div class="rating-item">
+                    <span class="category">Female Friendly</span>
+                    <div class="rating-value">
+                      <span class="star">★</span>
+                      <span>${bus.ratings.categories.femaleFriendly}</span>
+                    </div>
+                  </div>
+                  <div class="rating-item">
+                    <span class="category">Punctuality</span>
+                    <div class="rating-value">
+                      <span class="star">★</span>
+                      <span>${bus.ratings.categories.punctuality}</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="user-reviews">
                 ${bus.reviews
+                  .slice(0, 3)
                   .map(
-                    (review) => `
+                    (e) => `
                   <div class="review-card">
                     <div class="review-header">
                       <div class="user-info">
                         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-aw6GYkNqBu9RHKV6YRCYTefLhtSz9r.png" 
-                          alt="${review.name}" class="avatar">
+                          alt="${e.name}" class="avatar">
                         <div class="user-details text-start">
-                          <h4>${review.name}</h4>
-                          <span class="review-date">${review.date}</span>
+                          <h4>${e.name}</h4>
+                          <span class="review-date">${e.date}</span>
                         </div>
                       </div>
                       <div class="star-rating">
@@ -1065,19 +1107,53 @@ function renderBusList(buses) {
                           .map(
                             (_, i) => `
                           <span class="star ${
-                            i < review.rating ? "filled" : ""
+                            i < e.rating ? "filled" : ""
                           }">★</span>
                         `
                           )
                           .join("")}
                       </div>
                     </div>
-                    <p class="review-text">${review.comment}</p>
+                    <p class="review-text">${e.comment}</p>
                   </div>
                 `
                   )
                   .join("")}
-                <a href="#" class="show-more">Show More</a>
+                <div class="additional-reviews" style="display: none;">
+                  ${bus.reviews
+                    .slice(3)
+                    .map(
+                      (e) => `
+                    <div class="review-card">
+                      <div class="review-header">
+                        <div class="user-info">
+                          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-aw6GYkNqBu9RHKV6YRCYTefLhtSz9r.png" 
+                            alt="${e.name}" class="avatar">
+                          <div class="user-details text-start">
+                            <h4>${e.name}</h4>
+                            <span class="review-date">${e.date}</span>
+                          </div>
+                        </div>
+                        <div class="star-rating">
+                          ${Array(5)
+                            .fill()
+                            .map(
+                              (_, i) => `
+                            <span class="star ${
+                              i < e.rating ? "filled" : ""
+                            }">★</span>
+                          `
+                            )
+                            .join("")}
+                        </div>
+                      </div>
+                      <p class="review-text">${e.comment}</p>
+                    </div>
+                  `
+                    )
+                    .join("")}
+                </div>
+                <a href="#" class="show-more" onclick="toggleReviews(this)">Show More</a>
               </div>
             </div>
           </div>
@@ -1399,4 +1475,16 @@ function handlelocation(value, busIndex) {
   document.querySelectorAll(`[data-bus="${busIndex}"]`).forEach((tab) => {
     tab.classList.remove("active");
   });
+}
+
+
+function toggleReviews(button) {
+  const additionalReviews = button.previousElementSibling; 
+  if (additionalReviews.style.display === "none") {
+    additionalReviews.style.display = "block"; 
+    button.textContent = "Show Less"; 
+  } else {
+    additionalReviews.style.display = "none"; 
+    button.textContent = "Show More"; 
+  }
 }

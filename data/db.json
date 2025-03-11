@@ -1138,27 +1138,45 @@
         }
       ],
       "ratings": {
-        "overall": "4.5",
+        "overall": "3.4",
         "categories": {
-          "busQuality": "3.5",
-          "driving": "4.0",
+          "busQuality": "2.5",
+          "driving": "1.8",
           "seatComfort": "3.0",
-          "safetyAndHygiene": "4.1",
-          "cleanliness": "3.2"
+          "safetyAndHygiene": "4.0",
+          "cleanliness": "3.2",
+          "femaleFriendly": "2.3",
+          "punctuality": "1.8"
         }
       },
       "reviews": [
         {
-          "name": "Johan Kumar",
-          "date": "12 Jun 2024",
-          "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+          "name": "John Doe",
+          "date": "11 Mar 2025",
+          "rating": 4,
+          "comment": "loremfdgfdgdfb",
+          "userId": "1a2b3c"
         },
         {
-          "name": "Johan Kumar",
-          "date": "12 Jun 2024",
+          "name": "John Doe",
+          "date": "11 Mar 2025",
           "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+          "comment": "gadhpur",
+          "userId": "1a2b3c"
+        },
+        {
+          "name": "John Doe",
+          "date": "11 Mar 2025",
+          "rating": 3,
+          "comment": "qqqqqqqqq",
+          "userId": "1a2b3c"
+        },
+        {
+          "name": "John Doe",
+          "date": "11 Mar 2025",
+          "rating": 4,
+          "comment": "me",
+          "userId": "1a2b3c"
         }
       ],
       "seatInfo": {
@@ -1421,36 +1439,24 @@
         }
       ],
       "ratings": {
-        "overall": "3.9",
+        "overall": "3.7",
         "categories": {
-          "busQuality": "4.0",
-          "driving": "3.3",
+          "busQuality": "3.0",
+          "driving": "3.0",
           "seatComfort": "3.0",
-          "safetyAndHygiene": "3.7",
-          "cleanliness": "2.8",
-          "femaleFriendly": "0.7",
-          "punctuality": "0.7"
+          "safetyAndHygiene": "0.0",
+          "cleanliness": "4.0",
+          "femaleFriendly": "4.0",
+          "punctuality": "5.0"
         }
       },
       "reviews": [
         {
-          "name": "Johan Kumar",
-          "date": "12 Jun 2024",
-          "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-          "name": "Johan Kumar",
-          "date": "12 Jun 2024",
-          "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-          "name": "Jane Smith",
+          "name": "John Doe",
           "date": "11 Mar 2025",
-          "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
-          "userId": "4d5e6f"
+          "rating": 4,
+          "comment": "parth ",
+          "userId": "1a2b3c"
         }
       ],
       "seatInfo": {
@@ -1713,57 +1719,31 @@
         }
       ],
       "ratings": {
-        "overall": "3.6",
+        "overall": "2.6",
         "categories": {
-          "busQuality": "4.5",
-          "driving": "3.8",
-          "seatComfort": "2.8",
-          "safetyAndHygiene": "2.7",
-          "cleanliness": "2.4",
-          "femaleFriendly": "2.0",
-          "punctuality": "2.7"
+          "busQuality": "0.5",
+          "driving": "1.0",
+          "seatComfort": "2.0",
+          "safetyAndHygiene": "1.5",
+          "cleanliness": "2.0",
+          "femaleFriendly": "3.0",
+          "punctuality": "2.0"
         }
       },
       "reviews": [
         {
-          "name": "Johan Kumar",
-          "date": "12 Jun 2024",
-          "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-          "name": "Johan Kumar",
-          "date": "12 Jun 2024",
-          "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-          "name": "Jane Smith",
+          "name": "John Doe",
           "date": "11 Mar 2025",
           "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
-          "userId": "4d5e6f"
+          "comment": "umangf",
+          "userId": "1a2b3c"
         },
         {
-          "name": "Jane Smith",
+          "name": "John Doe",
           "date": "11 Mar 2025",
           "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
-          "userId": "4d5e6f"
-        },
-        {
-          "name": "Jane Smith",
-          "date": "11 Mar 2025",
-          "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
-          "userId": "4d5e6f"
-        },
-        {
-          "name": "Jane Smith",
-          "date": "11 Mar 2025",
-          "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
-          "userId": "4d5e6f"
+          "comment": "umng",
+          "userId": "1a2b3c"
         }
       ],
       "seatInfo": {
@@ -2037,27 +2017,7 @@
           "punctuality": "1.3"
         }
       },
-      "reviews": [
-        {
-          "name": "Johan Kumar",
-          "date": "12 Jun 2024",
-          "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-          "name": "Johan Kumar",
-          "date": "12 Jun 2024",
-          "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-          "name": "Emily Johnson",
-          "date": "11 Mar 2025",
-          "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
-          "userId": "0j1k2l"
-        }
-      ],
+      "reviews": [],
       "seatInfo": {
         "legend": [
           {
@@ -2318,27 +2278,24 @@
         }
       ],
       "ratings": {
-        "overall": "4.5",
+        "overall": "3.3",
         "categories": {
-          "busQuality": "3.5",
-          "driving": "4.0",
-          "seatComfort": "3.0",
-          "safetyAndHygiene": "4.1",
-          "cleanliness": "3.2"
+          "busQuality": "0.0",
+          "driving": "0.0",
+          "seatComfort": "0.0",
+          "safetyAndHygiene": "0.0",
+          "cleanliness": "4.0",
+          "femaleFriendly": "3.0",
+          "punctuality": "3.0"
         }
       },
       "reviews": [
         {
-          "name": "Johan Kumar",
-          "date": "12 Jun 2024",
+          "name": "John Doe",
+          "date": "11 Mar 2025",
           "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-          "name": "Johan Kumar",
-          "date": "12 Jun 2024",
-          "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+          "comment": "umang",
+          "userId": "1a2b3c"
         }
       ],
       "seatInfo": {
@@ -2601,27 +2558,31 @@
         }
       ],
       "ratings": {
-        "overall": "4.5",
+        "overall": "3.3",
         "categories": {
-          "busQuality": "3.5",
-          "driving": "4.0",
-          "seatComfort": "3.0",
-          "safetyAndHygiene": "4.1",
-          "cleanliness": "3.2"
+          "busQuality": "0.0",
+          "driving": "0.0",
+          "seatComfort": "0.0",
+          "safetyAndHygiene": "2.0",
+          "cleanliness": "3.5",
+          "femaleFriendly": "3.0",
+          "punctuality": "1.5"
         }
       },
       "reviews": [
         {
-          "name": "Johan Kumar",
-          "date": "12 Jun 2024",
+          "name": "John Doe",
+          "date": "11 Mar 2025",
           "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+          "comment": "lorem fihgihjugf",
+          "userId": "1a2b3c"
         },
         {
-          "name": "Johan Kumar",
-          "date": "12 Jun 2024",
+          "name": "John Doe",
+          "date": "11 Mar 2025",
           "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+          "comment": "sujal bro ",
+          "userId": "1a2b3c"
         }
       ],
       "seatInfo": {
@@ -2893,20 +2854,7 @@
           "cleanliness": "3.2"
         }
       },
-      "reviews": [
-        {
-          "name": "Johan Kumar",
-          "date": "12 Jun 2024",
-          "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-          "name": "Johan Kumar",
-          "date": "12 Jun 2024",
-          "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
-        }
-      ],
+      "reviews": [],
       "seatInfo": {
         "legend": [
           {
@@ -3176,20 +3124,7 @@
           "cleanliness": "3.2"
         }
       },
-      "reviews": [
-        {
-          "name": "Johan Kumar",
-          "date": "12 Jun 2024",
-          "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-          "name": "Johan Kumar",
-          "date": "12 Jun 2024",
-          "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
-        }
-      ],
+      "reviews": [],
       "seatInfo": {
         "legend": [
           {
@@ -3459,20 +3394,7 @@
           "cleanliness": "3.2"
         }
       },
-      "reviews": [
-        {
-          "name": "Johan Kumar",
-          "date": "12 Jun 2024",
-          "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-          "name": "Johan Kumar",
-          "date": "12 Jun 2024",
-          "rating": 3,
-          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
-        }
-      ],
+      "reviews": [],
       "seatInfo": {
         "legend": [
           {
@@ -3681,9 +3603,908 @@
       "city": "Surat",
       "state": "Gujarat",
       "pincode": "395011",
-      "lastLogin": "2025-03-10T06:43:45.862Z",
+      "lastLogin": "2025-03-11T11:49:34.398Z",
       "gender": "male",
-      "lastUpdated": "2025-02-28T09:11:36.514Z"
+      "lastUpdated": "2025-02-28T09:11:36.514Z",
+      "Bookings": [
+        {
+          "busId": "dfa43",
+          "busName": "Shree Nath Travels",
+          "busType": "AC",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Vadodara",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "surat",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "30,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 30000,
+          "discount": 6120,
+          "gst": 5400,
+          "totalPrice": 35400,
+          "pickupPoints": "Katargam, Unapani Road",
+          "dropoffPoints": "Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 29400,
+          "passengers": [
+            {
+              "name": "umang",
+              "age": "20",
+              "gender": "Male",
+              "AadhaarCard": "111111111111",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "umang@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "1111111111"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "30,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKE5UXPT9B"
+        },
+        {
+          "busId": "dfa42",
+          "busName": "Shivay Travels",
+          "busType": "Non AC",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Ahemadabad",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "32,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 32000,
+          "discount": 120,
+          "gst": 5760,
+          "totalPrice": 37760,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "passengers": [
+            {
+              "name": "abc",
+              "age": "20",
+              "gender": "Male",
+              "AadhaarCard": "111111111111",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "abc@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "1234567890"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "32,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "upcoming",
+          "bookingId": "BKJHFO0ED9"
+        },
+        {
+          "busId": "dfa43",
+          "busName": "Shree Nath Travels",
+          "busType": "AC",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Vadodara",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "surat",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "30,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 30000,
+          "discount": 6120,
+          "gst": 5400,
+          "totalPrice": 35400,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 29400,
+          "passengers": [
+            {
+              "name": "abc",
+              "age": "12",
+              "gender": "Male",
+              "AadhaarCard": "111111111111",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "abc@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "1234567890"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "30,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BK1R1GTBGF"
+        },
+        {
+          "busId": "dfa49",
+          "busName": "New Dharti travels",
+          "busType": "AC",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "15 march 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "6:00 PM",
+          "duration": "11h 00m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "28,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 28000,
+          "discount": 5720,
+          "gst": 5040,
+          "totalPrice": 33040,
+          "pickupPoints": "Kiram Hospital, Nanigam Circle",
+          "dropoffPoints": "Gandhi Chowk",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "6:00 PM",
+          "totalPayableAmount": 27440,
+          "passengers": [
+            {
+              "name": "umang",
+              "age": "20",
+              "gender": "Male",
+              "AadhaarCard": "111111111111",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "abc@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "1234567890"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "28,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "upcoming",
+          "bookingId": "BKLBNGEN9D"
+        },
+        {
+          "busId": "dfa46",
+          "busName": "Delux Travels",
+          "busType": "AC",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Amreli",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Dhasa",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "35,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 35000,
+          "discount": 7120,
+          "gst": 6300,
+          "totalPrice": 41300,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 34300,
+          "passengers": [
+            {
+              "name": "tfutyi",
+              "age": "10",
+              "gender": "Male",
+              "AadhaarCard": "254354243321",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "abc@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "1254554324"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "35,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKPL4BM570"
+        },
+        {
+          "busId": "dfa41",
+          "busName": "Bhumi Travels",
+          "busType": "Sleeper",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "35,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 35000,
+          "discount": 7120,
+          "gst": 6300,
+          "totalPrice": 41300,
+          "pickupPoints": "Kiram Hospital, Nanigam Circle",
+          "dropoffPoints": "Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 34300,
+          "passengers": [
+            {
+              "name": "ghghjghj",
+              "age": "34",
+              "gender": "Male",
+              "AadhaarCard": "457455453243",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "umang@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "2425425425"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "35,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKI4FGNG9V"
+        },
+        {
+          "busId": "dfa41",
+          "busName": "Bhumi Travels",
+          "busType": "Sleeper",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "35,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 35000,
+          "discount": 7120,
+          "gst": 6300,
+          "totalPrice": 41300,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Ankleshwar, Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 34300,
+          "passengers": [
+            {
+              "name": "tgdrfyh",
+              "age": "02",
+              "gender": "Male",
+              "AadhaarCard": "111111111111",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "zhd@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "1111111111"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "35,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKI35X23SY"
+        },
+        {
+          "busId": "dfa45",
+          "busName": "Maruti Nandan Travels",
+          "busType": "Sleeper",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "28,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 28000,
+          "discount": 5720,
+          "gst": 5040,
+          "totalPrice": 33040,
+          "pickupPoints": "Kiram Hospital, Nanigam Circle",
+          "dropoffPoints": "Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 27440,
+          "passengers": [
+            {
+              "name": "rthgfh",
+              "age": "10",
+              "gender": "Male",
+              "AadhaarCard": "111111111111",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "abc@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "1111111111"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "28,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKE7JCWWD3"
+        },
+        {
+          "busId": "dfa43",
+          "busName": "Shree Nath Travels",
+          "busType": "AC",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Vadodara",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "surat",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "30,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 30000,
+          "discount": 6120,
+          "gst": 5400,
+          "totalPrice": 35400,
+          "pickupPoints": "Kiram Hospital, Nanigam Circle",
+          "dropoffPoints": "surat, Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 29400,
+          "passengers": [
+            {
+              "name": "qqq",
+              "age": "11",
+              "gender": "Male",
+              "AadhaarCard": "111111111111",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "qqq@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "1111111111"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "30,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKPAUXKT6Q"
+        },
+        {
+          "busId": "dfa42",
+          "busName": "Shivay Travels",
+          "busType": "Non AC",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Ahemadabad",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "32,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 32000,
+          "discount": 6520,
+          "gst": 5760,
+          "totalPrice": 37760,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "surat, Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 31360,
+          "passengers": [
+            {
+              "name": "parth",
+              "age": "10",
+              "gender": "Male",
+              "AadhaarCard": "111111111111",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "parth@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "1111111111"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "32,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKTNCW5O3G"
+        },
+        {
+          "busId": "dfa43",
+          "busName": "Shree Nath Travels",
+          "busType": "AC",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Vadodara",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "surat",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "30,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 30000,
+          "discount": 6120,
+          "gst": 5400,
+          "totalPrice": 35400,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Ankleshwar, Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 29400,
+          "passengers": [
+            {
+              "name": "me",
+              "age": "15",
+              "gender": "Male",
+              "AadhaarCard": "111111111111",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "me@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "2222222222"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "30,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKF5N7CL7F"
+        },
+        {
+          "busId": "dfa47",
+          "busName": "Shree Nath Travels",
+          "busType": "Sleeper",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "33,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 33000,
+          "discount": 6720,
+          "gst": 5940,
+          "totalPrice": 38940,
+          "pickupPoints": "Amreli",
+          "dropoffPoints": "Dhasa",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 32340,
+          "passengers": [
+            {
+              "name": "sfgf",
+              "age": "20",
+              "gender": "",
+              "AadhaarCard": "111111111111",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "sdg@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "1111111111"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "33,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "upcoming",
+          "bookingId": "BK3RD4O91V"
+        },
+        {
+          "busId": "dfa43",
+          "busName": "Shree Nath Travels",
+          "busType": "AC",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Vadodara",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "surat",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "30,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 30000,
+          "discount": 6120,
+          "gst": 5400,
+          "totalPrice": 35400,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Ankleshwar, Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 29400,
+          "passengers": [
+            {
+              "name": "bh",
+              "age": "10",
+              "gender": "Male",
+              "AadhaarCard": "111111111111",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "ad@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "1111111111"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "30,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "upcoming",
+          "bookingId": "BKR0YH0ENY"
+        },
+        {
+          "busId": "dfa43",
+          "busName": "Shree Nath Travels",
+          "busType": "AC",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Vadodara",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "surat",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "30,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 30000,
+          "discount": 6120,
+          "gst": 5400,
+          "totalPrice": 35400,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Ankleshwar, Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 29400,
+          "passengers": [
+            {
+              "name": "bh",
+              "age": "10",
+              "gender": "Male",
+              "AadhaarCard": "111111111111",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "ad@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "1111111111"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "30,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "upcoming",
+          "bookingId": "BK5B6FABVH"
+        }
+      ],
+      "payments": [
+        {
+          "id": "TXNZXZ9RK0I",
+          "paymentBy": "NetBanking",
+          "bank": "Wells Fargo Bank",
+          "paidAmount": 29400,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T05:19:28.183Z"
+        },
+        {
+          "id": "TXNBGS70IQL",
+          "paymentBy": "NetBanking",
+          "bank": "Capital One Bank",
+          "paidAmount": 37760,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T05:52:44.335Z"
+        },
+        {
+          "id": "TXNUPMLES67",
+          "paymentBy": "NetBanking",
+          "bank": "Citi Bank",
+          "paidAmount": 29400,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T05:56:43.543Z"
+        },
+        {
+          "id": "TXNYPNN2H5A",
+          "paymentBy": "NetBanking",
+          "bank": "Wells Fargo Bank",
+          "paidAmount": 27440,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T06:05:49.647Z"
+        },
+        {
+          "id": "TXNS9YYIQJF",
+          "paymentBy": "NetBanking",
+          "bank": "Wells Fargo Bank",
+          "paidAmount": 34300,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T06:08:11.062Z"
+        },
+        {
+          "id": "TXN26TSQLVM",
+          "paymentBy": "NetBanking",
+          "bank": "Citi Bank",
+          "paidAmount": 34300,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T06:14:24.309Z"
+        },
+        {
+          "id": "TXNBC3WWTBF",
+          "paymentBy": "NetBanking",
+          "bank": "Citi Bank",
+          "paidAmount": 34300,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T06:17:40.229Z"
+        },
+        {
+          "id": "TXNA3BLUA5D",
+          "paymentBy": "NetBanking",
+          "bank": "Citi Bank",
+          "paidAmount": 27440,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T06:21:13.228Z"
+        },
+        {
+          "id": "TXNLFOMIYKL",
+          "paymentBy": "NetBanking",
+          "bank": "Citi Bank",
+          "paidAmount": 29400,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T06:58:27.473Z"
+        },
+        {
+          "id": "TXNJ0NMMTZS",
+          "paymentBy": "NetBanking",
+          "bank": "Wells Fargo Bank",
+          "paidAmount": 31360,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T07:13:14.732Z"
+        },
+        {
+          "id": "TXNVDGWEKWY",
+          "paymentBy": "NetBanking",
+          "bank": "Citi Bank",
+          "paidAmount": 29400,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T07:15:11.505Z"
+        },
+        {
+          "id": "TXNLRIV537M",
+          "paymentBy": "NetBanking",
+          "bank": "Citi Bank",
+          "paidAmount": 32340,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T09:28:41.129Z"
+        },
+        {
+          "id": "TXN3E8YVCTU",
+          "paymentBy": "NetBanking",
+          "bank": "Capital One Bank",
+          "paidAmount": 29400,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T09:37:06.386Z"
+        },
+        {
+          "id": "TXNWY9E8FRH",
+          "paymentBy": "NetBanking",
+          "bank": "Wells Fargo Bank",
+          "paidAmount": 29400,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T09:37:28.736Z"
+        }
+      ]
     },
     {
       "id": "4d5e6f",
@@ -4601,6 +5422,150 @@
       "paidAmount": 36260,
       "remainingAmount": 0,
       "timestamp": "2025-03-11T04:58:56.786Z"
+    },
+    {
+      "id": "TXNZXZ9RK0I",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T05:19:28.183Z"
+    },
+    {
+      "id": "TXNBGS70IQL",
+      "paymentBy": "NetBanking",
+      "bank": "Capital One Bank",
+      "paidAmount": 37760,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T05:52:44.335Z"
+    },
+    {
+      "id": "TXNUPMLES67",
+      "paymentBy": "NetBanking",
+      "bank": "Citi Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T05:56:43.543Z"
+    },
+    {
+      "id": "TXNYPNN2H5A",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T06:05:49.647Z"
+    },
+    {
+      "id": "TXNS9YYIQJF",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 34300,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T06:08:11.062Z"
+    },
+    {
+      "id": "TXNXQ6EP2PJ",
+      "paymentBy": "NetBanking",
+      "bank": "Citi Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T06:11:10.087Z"
+    },
+    {
+      "id": "TXN26TSQLVM",
+      "paymentBy": "NetBanking",
+      "bank": "Citi Bank",
+      "paidAmount": 34300,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T06:14:24.309Z"
+    },
+    {
+      "id": "TXNBC3WWTBF",
+      "paymentBy": "NetBanking",
+      "bank": "Citi Bank",
+      "paidAmount": 34300,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T06:17:40.229Z"
+    },
+    {
+      "id": "TXNA3BLUA5D",
+      "paymentBy": "NetBanking",
+      "bank": "Citi Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T06:21:13.228Z"
+    },
+    {
+      "id": "TXN6DDAY6TK",
+      "paymentBy": "NetBanking",
+      "bank": "Citi Bank",
+      "paidAmount": 34300,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T06:34:32.730Z"
+    },
+    {
+      "id": "TXNIGKGTMH2",
+      "paymentBy": "NetBanking",
+      "bank": "Citi Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T06:44:02.429Z"
+    },
+    {
+      "id": "TXNLFOMIYKL",
+      "paymentBy": "NetBanking",
+      "bank": "Citi Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T06:58:27.473Z"
+    },
+    {
+      "id": "TXNVUDCQ3N9",
+      "paymentBy": "NetBanking",
+      "bank": "Citi Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T07:11:20.895Z"
+    },
+    {
+      "id": "TXNJ0NMMTZS",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 31360,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T07:13:14.732Z"
+    },
+    {
+      "id": "TXNVDGWEKWY",
+      "paymentBy": "NetBanking",
+      "bank": "Citi Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T07:15:11.505Z"
+    },
+    {
+      "id": "TXNLRIV537M",
+      "paymentBy": "NetBanking",
+      "bank": "Citi Bank",
+      "paidAmount": 32340,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T09:28:41.129Z"
+    },
+    {
+      "id": "TXN3E8YVCTU",
+      "paymentBy": "NetBanking",
+      "bank": "Capital One Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T09:37:06.386Z"
+    },
+    {
+      "id": "TXNWY9E8FRH",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T09:37:28.736Z"
     }
   ]
 }
