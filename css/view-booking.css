@@ -143,6 +143,12 @@ header {
   border-radius: 4px;
 }
 
+.fare-details-cancel {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+}
+
 .profile-img {
   width: 32px;
   height: 32px;

@@ -226,6 +226,16 @@ function populateBookingDetails(booking) {
 
     // Update status (if applicable)
     updateBookingStatusUI(booking.status);
+
+    if (booking.status && booking.status.toLowerCase() === "cancelled") {
+      displayCancellationDetails(booking);
+    } else {
+      // Hide cancellation details section if not cancelled
+      const cancellationSection = document.querySelector("#k-cancel-details");
+      if (cancellationSection) {
+        cancellationSection.style.display = "none";
+      }
+    }
   } catch (error) {
     console.error("Error populating booking details:", error);
     // Continue execution despite errors in populating some fields
@@ -295,11 +305,11 @@ function updateBookingStatusUI(status) {
   }
 }
 
-// New function to create action buttons based on booking status
+// Function to create action buttons based on booking status
 function updateActionButtons(booking) {
   // Get references to both buttons
   const cancelButton = document
-    .querySelector("button.primary-btn a[href='k-cancel-ticket.html']")
+    .querySelector("button.primary-btn a[href='k-cancel-bus.html']")
     .closest("button");
   const reviewButton = document
     .querySelector("button.primary-btn a[href='k-add-review.html']")
@@ -332,11 +342,12 @@ function updateActionButtons(booking) {
       // Update the href to include the booking ID
       const cancelLink = cancelButton.querySelector("a");
       if (cancelLink) {
-        cancelLink.href = `k-cancel-ticket.html?id=${booking.bookingId}`;
+        cancelLink.href = `k-cancel-bus.html?id=${booking.bookingId}`;
       }
     }
+    // No buttons shown for cancelled bookings - we just don't show either button
 
-    // Handle invoice button - this is the fixed part
+    // Handle invoice button - this is available for all booking statuses
     const downloadInvoiceBtn = document.querySelector(".k-invoice-btn");
     if (downloadInvoiceBtn) {
       downloadInvoiceBtn.addEventListener("click", function (event) {
@@ -374,6 +385,12 @@ function updateActionButtons(booking) {
           discount: booking.discount || 0,
           totalPayableAmount:
             booking.totalPayableAmount || booking.totalPrice || 0,
+
+          // Add status to show in invoice
+          status: booking.status || "Upcoming",
+
+          // Pass cancellation details if available
+          cancellationDetails: booking.cancellationDetails || null,
         };
 
         // Store complete and properly formatted data
@@ -399,6 +416,116 @@ function storeBookingForReview(booking) {
   };
 
   localStorage.setItem("currentReviewBooking", JSON.stringify(reviewData));
+}
+
+// Update the displayCancellationDetails function to ensure it only shows for cancelled bookings
+function displayCancellationDetails(booking) {
+  // Check if the booking status is cancelled
+  if (booking.status.toLowerCase() !== 'cancelled') {
+    // Hide cancellation details section
+    const cancelDetailsSection = document.getElementById('k-cancel-details');
+    if (cancelDetailsSection) {
+      cancelDetailsSection.style.display = 'none';
+    }
+    return;
+  }
+
+  // Get or create the cancellation details section
+  let cancelDetailsSection = document.getElementById('k-cancel-details');
+  
+  if (!cancelDetailsSection) {
+    // Create a new cancellation details section if it doesn't exist
+    cancelDetailsSection = document.createElement('div');
+    cancelDetailsSection.id = 'k-cancel-details';
+    
+    // Insert it after fare details section
+    const fareDetailsSection = document.querySelector('.fare-details').closest('.booking-section');
+    if (fareDetailsSection) {
+      fareDetailsSection.parentNode.insertBefore(
+        cancelDetailsSection,
+        fareDetailsSection.nextSibling
+      );
+    } else {
+      // Fallback if fare details section is not found
+      const container = document.querySelector('.container.mt-4');
+      if (container) {
+        container.appendChild(cancelDetailsSection);
+      }
+    }
+  } else {
+    // Show the section if it exists but was hidden
+    cancelDetailsSection.style.display = 'block';
+  }
+
+  // Get cancellation details from the booking object
+  const cancellationDetails = booking.cancellationDetails || {};
+
+  // Build the HTML content
+  let htmlContent = `
+    <div class="fare-details-cancel my-3">
+      <h5>Cancellation Details</h5>
+      <div class="k-cancel-details">
+        <div class="k-cancel-seats">
+  `;
+
+  // Add passenger details
+  if (booking.passengers && booking.passengers.length > 0) {
+    booking.passengers.forEach(passenger => {
+      htmlContent += `
+        <div class="d-flex align-items-center justify-content-between">
+          <div>
+            <p class="fw-bold">
+              ${passenger.name}
+              <span class="text-gray fw-normal ps-2">(${passenger.gender},${passenger.age})</span>
+            </p>
+          </div>
+          <div>
+            <p class="text-gray">
+              Seat : <b class="text-black">${passenger.seatNo}</b>
+            </p>
+          </div>
+        </div>
+      `;
+    });
+  }
+
+  // Add reason section
+  htmlContent += `
+    <div>
+      <div>
+        <p class="m-0 text-gray">Reason</p>
+      </div>
+      <div>
+        <p class="k-reason fw-semibold">
+          ${cancellationDetails.reason || "You booked a ticket for the wrong bus or time"}
+        </p>
+      </div>
+    </div>
+  `;
+
+  // Add description section
+  htmlContent += `
+    <div>
+      <div>
+        <p class="m-0 text-gray">Description</p>
+      </div>
+      <div>
+          <p class="k-reason fw-semibold">
+          ${cancellationDetails.description || "Lorem Ipsum is simply dummy text of the printing and typesetting industry for demo."}
+        </p>
+      </div>
+    </div>
+  `;
+
+  // Close all divs
+  htmlContent += `
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Set the HTML content
+  cancelDetailsSection.innerHTML = htmlContent;
 }
 
 function displayErrorMessage(message) {

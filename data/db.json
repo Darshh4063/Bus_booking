@@ -3930,13 +3930,94 @@
       "city": "Rajkot",
       "state": "Gujarat",
       "pincode": "874510",
-      "lastLogin": "2025-03-11T04:57:17.564Z",
+      "lastLogin": "2025-03-11T06:31:07.513Z",
       "gender": "female",
       "lastUpdated": "2025-02-28T09:29:08.966Z",
       "Bookings": [
         {
-          "busId": "dfa44",
-          "busName": "Umiya Travels",
+          "busId": "dfa49",
+          "busName": "New Dharti travels",
+          "busType": "AC",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "15 march 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "6:00 PM",
+          "duration": "11h 00m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "28,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 28000,
+          "discount": 5720,
+          "gst": 5040,
+          "totalPrice": 33040,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Ankleshwar, Majevdi Gate",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "6:00 PM",
+          "totalPayableAmount": 27440,
+          "passengers": [
+            {
+              "name": "emliy",
+              "age": "63",
+              "gender": "Female",
+              "AadhaarCard": "111111111111",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "emily@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "7412589630"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "28,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "cancelled",
+          "bookingId": "BKGHRF0YK8",
+          "cancellationDetails": {
+            "bookingId": "BKGHRF0YK8",
+            "busName": "New Dharti travels",
+            "pickupLocation": "Surat",
+            "dropLocation": "Ankleshwar",
+            "travelDate": "15 march 2025",
+            "reason": "You can't make it to the boarding point on time",
+            "description": "fefsdmkvsd,vdopvfsdlkvndsmvlidjkvndskmvxcvsd.vdn",
+            "cancelDate": "2025-03-11T09:26:34.475Z",
+            "cancellationTime": "2:56:34 PM",
+            "refundAmount": {
+              "originalAmount": 27440,
+              "refundPerPassenger": 24696,
+              "totalRefund": 0,
+              "cancellationFee": 0
+            },
+            "fullCancellation": false,
+            "contactDetails": {
+              "email": "emily@gmail.com",
+              "phone": {
+                "countryCode": "+91",
+                "number": "7412589630"
+              }
+            }
+          }
+        },
+        {
+          "busId": "dfa48",
+          "busName": "Shree Nath Travels",
           "busType": "Seater",
           "busDateArrival": "10 Feb 2025",
           "busdateDepature": "10 Feb 2025",
@@ -3947,38 +4028,38 @@
           "duration": "05h 30m",
           "selectedSeats": [],
           "busPrice": {
-            "amount": "37,000",
+            "amount": "40,000",
             "currency": "₹",
             "discount": "Best deal 10% Off"
           },
-          "onwardFare": 37000,
-          "discount": 7520,
-          "gst": 6660,
-          "totalPrice": 43660,
+          "onwardFare": 40000,
+          "discount": 8120,
+          "gst": 7200,
+          "totalPrice": 47200,
           "pickupPoints": "Navjivan Hotel",
           "dropoffPoints": "Ankleshwar, Valiya Chokdi Ashirwad Hotel",
           "pickupTimeData": "10:00 AM",
           "dropTimeData": "10:00 AM",
-          "totalPayableAmount": 36260,
+          "totalPayableAmount": 39200,
           "passengers": [
             {
-              "name": "emily",
-              "age": "23",
+              "name": "weds",
+              "age": "12",
               "gender": "Female",
-              "AadhaarCard": "775522336644",
+              "AadhaarCard": "111111111111",
               "panCard": ""
             }
           ],
           "contactDetails": {
-            "email": "emily@gmail.com",
+            "email": "wedasd@gmail.com",
             "phone": {
               "countryCode": "+91",
-              "number": "7744225566"
+              "number": "2225588774"
             }
           },
           "fareBreakup": {
             "onwardFare": {
-              "amount": "37,000",
+              "amount": "40,000",
               "currency": "₹",
               "discount": "Best deal 10% Off"
             },
@@ -3988,17 +4069,180 @@
             "totalPayableAmount": null
           },
           "status": "completed",
-          "bookingId": "BK2MDNJB57"
+          "bookingId": "BKFIHTMQN1"
+        },
+        {
+          "busId": "dfa49",
+          "busName": "New Dharti travels",
+          "busType": "AC",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "15 march 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "6:00 PM",
+          "duration": "11h 00m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "28,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 28000,
+          "discount": 5720,
+          "gst": 5040,
+          "totalPrice": 33040,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Ankleshwar, Majevdi Gate",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "6:00 PM",
+          "totalPayableAmount": 27440,
+          "passengers": [
+            {
+              "name": "kgkdfsf",
+              "age": "21",
+              "gender": "Female",
+              "AadhaarCard": "111111111111",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "dsd@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "6935214252"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "28,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "upcoming",
+          "bookingId": "BKYAHW786D"
+        },
+        {
+          "busId": "dfa45",
+          "busName": "Maruti Nandan Travels",
+          "busType": "Sleeper",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "28,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 28000,
+          "discount": 5720,
+          "gst": 5040,
+          "totalPrice": 33040,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Ankleshwar, Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 27440,
+          "passengers": [
+            {
+              "name": "fsdf",
+              "age": "23",
+              "gender": "Male",
+              "AadhaarCard": "111111111111",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "fef@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "1111111111"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "28,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKZY55QTGN"
         }
       ],
       "payments": [
         {
-          "id": "TXN0J222051",
-          "paymentBy": "UPI",
-          "upiId": "emily234@okicici",
-          "paidAmount": 36260,
+          "id": "TXNCD9AFJ16",
+          "paymentBy": "NetBanking",
+          "bank": "Wells Fargo Bank",
+          "paidAmount": 27440,
           "remainingAmount": 0,
-          "timestamp": "2025-03-11T04:58:56.786Z"
+          "timestamp": "2025-03-11T09:19:41.354Z"
+        },
+        {
+          "id": "TXNOUGCP013",
+          "paymentBy": "NetBanking",
+          "bank": "Capital One Bank",
+          "paidAmount": 39200,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T09:47:14.836Z"
+        },
+        {
+          "id": "TXNI417GO45",
+          "paymentBy": "NetBanking",
+          "bank": "Wells Fargo Bank",
+          "paidAmount": 27440,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T10:01:39.530Z"
+        },
+        {
+          "id": "TXNRWTNRKZZ",
+          "paymentBy": "NetBanking",
+          "bank": "Capital One Bank",
+          "paidAmount": 13720,
+          "remainingAmount": 13720,
+          "timestamp": "2025-03-11T10:47:09.528Z"
+        }
+      ],
+      "cancellations": [
+        {
+          "bookingId": "BKGHRF0YK8",
+          "busName": "New Dharti travels",
+          "pickupLocation": "Surat",
+          "dropLocation": "Ankleshwar",
+          "travelDate": "15 march 2025",
+          "reason": "You can't make it to the boarding point on time",
+          "description": "fefsdmkvsd,vdopvfsdlkvndsmvlidjkvndskmvxcvsd.vdn",
+          "cancelDate": "2025-03-11T09:26:34.475Z",
+          "cancellationTime": "2:56:34 PM",
+          "refundAmount": {
+            "originalAmount": 27440,
+            "refundPerPassenger": 24696,
+            "totalRefund": 0,
+            "cancellationFee": 0
+          },
+          "fullCancellation": false,
+          "contactDetails": {
+            "email": "emily@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "7412589630"
+            }
+          }
         }
       ]
     },
@@ -4015,7 +4259,75 @@
       "city": "",
       "state": "",
       "pincode": "",
-      "lastLogin": "2025-02-25T10:26:18.419Z"
+      "lastLogin": "2025-03-11T12:04:53.132Z",
+      "Bookings": [
+        {
+          "busId": "dfa49",
+          "busName": "New Dharti travels",
+          "busType": "AC",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "15 march 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "6:00 PM",
+          "duration": "11h 00m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "28,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 28000,
+          "discount": 5720,
+          "gst": 5040,
+          "totalPrice": 33040,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Ankleshwar, Majevdi Gate",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "6:00 PM",
+          "totalPayableAmount": 27440,
+          "passengers": [
+            {
+              "name": "Michael",
+              "age": "21",
+              "gender": "Male",
+              "AadhaarCard": "222222222222",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "mic@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "9632541870"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "28,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "upcoming",
+          "bookingId": "BKWFHW9GW0"
+        }
+      ],
+      "payments": [
+        {
+          "id": "TXNHCYT2Q40",
+          "paymentBy": "NetBanking",
+          "bank": "TD Bank",
+          "paidAmount": 27440,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T12:10:51.625Z"
+        }
+      ]
     },
     {
       "id": "6p7q8r",
@@ -4031,7 +4343,75 @@
       "state": "Gujarat",
       "pincode": "395010",
       "gender": "female",
-      "lastLogin": "2025-03-06T10:39:33.037Z"
+      "lastLogin": "2025-03-11T06:22:44.704Z",
+      "Bookings": [
+        {
+          "busId": "dfa49",
+          "busName": "New Dharti travels",
+          "busType": "AC",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "15 march 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "6:00 PM",
+          "duration": "11h 00m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "28,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 28000,
+          "discount": 5720,
+          "gst": 5040,
+          "totalPrice": 33040,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Dhasa, Majevdi Gate",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "6:00 PM",
+          "totalPayableAmount": 27440,
+          "passengers": [
+            {
+              "name": "dwds",
+              "age": "32",
+              "gender": "Female",
+              "AadhaarCard": "123456789101",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "df@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "7744558855"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "28,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "upcoming",
+          "bookingId": "BK3RF769H7"
+        }
+      ],
+      "payments": [
+        {
+          "id": "TXNNMGCIW95",
+          "paymentBy": "NetBanking",
+          "bank": "Wells Fargo Bank",
+          "paidAmount": 27440,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T06:24:17.134Z"
+        }
+      ]
     },
     {
       "id": "g0dxi1",
@@ -4601,6 +4981,142 @@
       "paidAmount": 36260,
       "remainingAmount": 0,
       "timestamp": "2025-03-11T04:58:56.786Z"
+    },
+    {
+      "id": "TXN5JBUK5ZJ",
+      "paymentBy": "NetBanking",
+      "bank": "TD Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T05:46:22.505Z"
+    },
+    {
+      "id": "TXN52WGZP6A",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T06:16:33.389Z"
+    },
+    {
+      "id": "TXN36OBX6JN",
+      "paymentBy": "UPI",
+      "upiId": "eimly2342@okicici",
+      "paidAmount": 34300,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T06:19:40.344Z"
+    },
+    {
+      "id": "TXNNMGCIW95",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T06:24:17.134Z"
+    },
+    {
+      "id": "TXN1484UO4N",
+      "paymentBy": "NetBanking",
+      "bank": "Capital One Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T06:34:23.259Z"
+    },
+    {
+      "id": "TXNM5MWMYKV",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T06:35:56.013Z"
+    },
+    {
+      "id": "TXN8JPHP727",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 34300,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T06:50:29.629Z"
+    },
+    {
+      "id": "TXNUGTQ3KTV",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T06:52:38.931Z"
+    },
+    {
+      "id": "TXNZ8OCJYE6",
+      "paymentBy": "NetBanking",
+      "bank": "Citi Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T06:55:07.688Z"
+    },
+    {
+      "id": "TXN77EEQX7L",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T06:59:22.035Z"
+    },
+    {
+      "id": "TXNMIEEZIGP",
+      "paymentBy": "NetBanking",
+      "bank": "TD Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T07:11:01.316Z"
+    },
+    {
+      "id": "TXNXLAPXVL9",
+      "paymentBy": "NetBanking",
+      "bank": "Capital One Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T07:18:07.360Z"
+    },
+    {
+      "id": "TXNCD9AFJ16",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T09:19:41.354Z"
+    },
+    {
+      "id": "TXNOUGCP013",
+      "paymentBy": "NetBanking",
+      "bank": "Capital One Bank",
+      "paidAmount": 39200,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T09:47:14.836Z"
+    },
+    {
+      "id": "TXNI417GO45",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T10:01:39.530Z"
+    },
+    {
+      "id": "TXNRWTNRKZZ",
+      "paymentBy": "NetBanking",
+      "bank": "Capital One Bank",
+      "paidAmount": 13720,
+      "remainingAmount": 13720,
+      "timestamp": "2025-03-11T10:47:09.528Z"
+    },
+    {
+      "id": "TXNHCYT2Q40",
+      "paymentBy": "NetBanking",
+      "bank": "TD Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T12:10:51.625Z"
     }
   ]
 }
