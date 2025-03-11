@@ -1400,9 +1400,3 @@ function handlelocation(value, busIndex) {
     tab.classList.remove("active");
   });
 }
-
-
-
-
-
-
