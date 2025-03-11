@@ -66,6 +66,140 @@ function initStarRating() {
   });
 }
 
+// Function to format date (DD Mon YYYY)
+function formatDate(date) {
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const day = date.getDate();
+  const month = months[date.getMonth()];
+  const year = date.getFullYear();
+  return `${day} ${month} ${year}`;
+}
+
+// Helper function to get current user ID
+function getCurrentUserId() {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  return currentUser?.id;
+}
+
+// Helper function to get current user's name
+function getCurrentUserName() {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  return currentUser?.name || currentUser?.username;
+}
+
+// Function to save review to localStorage
+function saveReviewToLocalStorage(reviewData) {
+  // Get existing reviews or initialize empty array
+  const allReviews = JSON.parse(localStorage.getItem("busReviews")) || [];
+
+  // Add new review
+  allReviews.push(reviewData);
+
+  // Save back to localStorage
+  localStorage.setItem("busReviews", JSON.stringify(allReviews));
+}
+
+// Function to update bus with the review
+function updateBusWithReview(reviewData) {
+  // Get all buses from localStorage (using busdata as the key)
+  const buses = JSON.parse(localStorage.getItem("busdata")) || [];
+
+  // Find the bus by ID
+  const busIndex = buses.findIndex((bus) => bus.id === reviewData.busId);
+
+  if (busIndex !== -1) {
+    // Bus found, update it
+    const bus = buses[busIndex];
+
+    // Initialize ratings if it doesn't exist
+    if (!bus.ratings) {
+      bus.ratings = {
+        overall: "0.0",
+        categories: {},
+      };
+    }
+
+    // Initialize reviews array if it doesn't exist
+    if (!bus.reviews) {
+      bus.reviews = [];
+    }
+
+    // Update overall rating (recalculate based on all reviews)
+    const totalReviews = bus.reviews.length;
+    const currentOverall = parseFloat(bus.ratings.overall) || 0;
+    const newOverallRating =
+      (currentOverall * totalReviews + parseFloat(reviewData.ratings.overall)) /
+      (totalReviews + 1);
+    bus.ratings.overall = newOverallRating.toFixed(1);
+
+    // Update categories (average with existing values)
+    Object.keys(reviewData.ratings.categories).forEach((category) => {
+      const currentCategoryRating = parseFloat(
+        bus.ratings.categories[category] || "0.0"
+      );
+      const newCategoryRating =
+        (currentCategoryRating * totalReviews +
+          parseFloat(reviewData.ratings.categories[category])) /
+        (totalReviews + 1);
+      bus.ratings.categories[category] = newCategoryRating.toFixed(1);
+    });
+
+    // Add the new review to the bus's reviews array
+    bus.reviews.push(reviewData.review);
+
+    // Update the bus in the buses array
+    buses[busIndex] = bus;
+
+    // Save updated buses back to localStorage (using busdata as the key)
+    localStorage.setItem("busdata", JSON.stringify(buses));
+
+    // Update on JSON server (using busListings as the endpoint)
+    updateBusOnServer(bus);
+
+    console.log("Bus updated with new review:", bus);
+  } else {
+    console.error("Bus not found with ID:", reviewData.busId);
+  }
+}
+
+// Function to update bus on JSON server - using busListings endpoint
+async function updateBusOnServer(bus) {
+  try {
+    // Use busListings as the endpoint for the JSON server
+    const endpoint = `http://localhost:3000/busListings/${bus.id}`;
+
+    const response = await fetch(endpoint, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(bus),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Server returned ${response.status}`);
+    }
+
+    console.log("Bus updated on server successfully");
+  } catch (error) {
+    console.error("Error updating bus on server:", error);
+    // Continue with local storage updates even if server update fails
+  }
+}
+
 // Function to collect all ratings and submit review
 function submitReview() {
   const bookingDataJson = localStorage.getItem("currentReviewBooking");
@@ -81,6 +215,23 @@ function submitReview() {
   if (!userId) {
     alert("You need to be logged in to submit a review");
     return;
+  }
+
+  // Make sure we have a busId
+  if (!bookingData.busId) {
+    // If no busId, try to find it from bus name or other identifiers
+    const buses = JSON.parse(localStorage.getItem("busdata")) || [];
+    const bus = buses.find(
+      (b) =>
+        b.companyName === bookingData.busName || b.name === bookingData.busName
+    );
+
+    if (bus) {
+      bookingData.busId = bus.id;
+    } else {
+      alert("Error: Could not identify which bus to review");
+      return;
+    }
   }
 
   // Convert category names to camelCase for the desired format
@@ -127,7 +278,8 @@ function submitReview() {
     name: userName || "Anonymous User",
     date: formatDate(new Date()),
     rating: Math.round(parseFloat(overallRating)),
-    comment: document.querySelector("textarea").value,
+    comment: document.querySelector("textarea").value || "No comment provided",
+    userId: userId, // Include userId in the review for reference
   };
 
   // Create the complete review data in the desired format
@@ -142,7 +294,7 @@ function submitReview() {
     review: reviewObj,
   };
 
-  console.log("Review data:", reviewData);
+  console.log("Review data to be submitted:", reviewData);
 
   // Save to localStorage and then to the bus object
   saveReviewToLocalStorage(reviewData);
@@ -155,72 +307,14 @@ function submitReview() {
   window.location.href = "mybooking.html";
 }
 
-function formatDate(date) {
-  const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-  const day = date.getDate();
-  const month = months[date.getMonth()];
-  const year = date.getFullYear();
-  return `${day} ${month} ${year}`;
-}
-
-// Initialize when DOM is loaded
-document.addEventListener("DOMContentLoaded", () => {
-  initStarRating();
-
-  // Add event listener to submit button
-  const submitButton = document.querySelector(".k-submit");
-  submitButton.addEventListener("click", submitReview);
-
-  // Add event listener to cancel button
-  const cancelButton = document.querySelector(".cancel-btn");
-  cancelButton.addEventListener("click", () => {
-    if (confirm("Are you sure you want to cancel your review?")) {
-      window.location.href = "profile.html"; // or wherever you want to redirect
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  // Initialize star rating functionality
-  initStarRating();
-
-  // Load booking data from localStorage
-  loadBookingData();
-
-  // Add event listener to submit button
-  const submitButton = document.querySelector(".k-submit");
-  submitButton.addEventListener("click", submitReview);
-
-  // Add event listener to cancel button
-  const cancelButton = document.querySelector(".cancel-btn");
-  cancelButton.addEventListener("click", () => {
-    if (confirm("Are you sure you want to cancel your review?")) {
-      window.location.href = "mybooking.html"; // Back to bookings page
-    }
-  });
-});
-
 function loadBookingData() {
   // Get booking data from localStorage
   const bookingDataJson = localStorage.getItem("currentReviewBooking");
 
   if (!bookingDataJson) {
     // No booking data found, redirect to bookings page
-    alert("No booking found to review");
-    window.location.href = "mybooking.html";
+    // alert("No booking found to review");
+    // window.location.href = "mybooking.html";
     return;
   }
 
@@ -229,8 +323,11 @@ function loadBookingData() {
   // Make sure we have a busId for the review
   if (!bookingData.busId && bookingData.busName) {
     // If no busId but we have a busName, try to find the bus
-    const buses = JSON.parse(localStorage.getItem("buses")) || [];
-    const bus = buses.find(b => b.name === bookingData.busName);
+    const buses = JSON.parse(localStorage.getItem("busdata")) || [];
+    const bus = buses.find(
+      (b) =>
+        b.name === bookingData.busName || b.companyName === bookingData.busName
+    );
     if (bus) {
       bookingData.busId = bus.id;
       // Update in localStorage
@@ -280,115 +377,24 @@ function loadBookingData() {
     ".card-body div:last-child"
   ).innerHTML = `<strong>Seat(s):</strong> ${seatText}`;
 }
-// Helper function to get current user ID
-function getCurrentUserId() {
-  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-  return currentUser?.id;
-}
 
-// Helper function to get current user's name
-function getCurrentUserName() {
-  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-  return currentUser?.name || currentUser?.username;
-}
+// Initialize when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize star rating functionality
+  initStarRating();
 
-// Function to save review to localStorage
-function saveReviewToLocalStorage(reviewData) {
-  // Get existing reviews or initialize empty array
-  const allReviews = JSON.parse(localStorage.getItem("busReviews")) || [];
+  // Load booking data from localStorage
+  loadBookingData();
 
-  // Add new review
-  allReviews.push(reviewData);
+  // Add event listener to submit button
+  const submitButton = document.querySelector(".k-submit");
+  submitButton.addEventListener("click", submitReview);
 
-  // Save back to localStorage
-  localStorage.setItem("busReviews", JSON.stringify(allReviews));
-}
-
-// Function to update bus with the review
-function updateBusWithReview(reviewData) {
-  // Get all buses from localStorage
-  const buses = JSON.parse(localStorage.getItem("buses")) || [];
-
-  // Find the bus by ID
-  const busIndex = buses.findIndex((bus) => bus.id === reviewData.busId);
-
-  if (busIndex !== -1) {
-    // Bus found, update it
-    const bus = buses[busIndex];
-
-    // Initialize ratings and reviews if they don't exist
-    if (!bus.ratings) {
-      bus.ratings = {
-        overall: "0.0",
-        categories: {},
-      };
+  // Add event listener to cancel button
+  const cancelButton = document.querySelector(".cancel-btn");
+  cancelButton.addEventListener("click", () => {
+    if (confirm("Are you sure you want to cancel your review?")) {
+      window.location.href = "mybooking.html"; // Back to bookings page
     }
-
-    if (!bus.reviews) {
-      bus.reviews = [];
-    }
-
-    // Update overall rating (recalculate based on all reviews)
-    const totalReviews = bus.reviews.length;
-    const currentOverall = parseFloat(bus.ratings.overall) || 0;
-    const newOverallRating =
-      (currentOverall * totalReviews + parseFloat(reviewData.ratings.overall)) /
-      (totalReviews + 1);
-    bus.ratings.overall = newOverallRating.toFixed(1);
-
-    // Update categories (average with existing values)
-    Object.keys(reviewData.ratings.categories).forEach((category) => {
-      const currentCategoryRating = parseFloat(
-        bus.ratings.categories[category] || "0.0"
-      );
-      const newCategoryRating =
-        (currentCategoryRating * totalReviews +
-          parseFloat(reviewData.ratings.categories[category])) /
-        (totalReviews + 1);
-      bus.ratings.categories[category] = newCategoryRating.toFixed(1);
-    });
-
-    // Add the new review
-    bus.reviews.push(reviewData.review);
-
-    // Save updated buses back to localStorage
-    buses[busIndex] = bus;
-    localStorage.setItem("buses", JSON.stringify(buses));
-
-    // Optional: Update local server if using json-server
-    updateBusOnServer(bus);
-  } else {
-    console.error("Bus not found with ID:", reviewData.busId);
-  }
-}
-
-// Optional: Function to update bus on server if using json-server
-async function updateBusOnServer(bus) {
-  try {
-    await fetch(`http://localhost:3000/busListings/${bus.id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(bus),
-    });
-    console.log("Bus updated on server");
-  } catch (error) {
-    console.error("Error updating bus on server:", error);
-  }
-}
-
-// Optional: Update bus operator's review data
-async function updateBusOperatorReviews(reviewData) {
-  try {
-    // This implementation will depend on your database structure
-    // For example, you might have a "buses" collection where you store reviews
-    console.log(
-      "Updating bus operator reviews (implement based on your DB structure)"
-    );
-    return true;
-  } catch (error) {
-    console.error("Error updating bus operator reviews:", error);
-    return false;
-  }
-}
+  });
+});

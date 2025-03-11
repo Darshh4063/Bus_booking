@@ -1421,13 +1421,15 @@
         }
       ],
       "ratings": {
-        "overall": "4.5",
+        "overall": "3.9",
         "categories": {
-          "busQuality": "3.5",
-          "driving": "4.0",
+          "busQuality": "4.0",
+          "driving": "3.3",
           "seatComfort": "3.0",
-          "safetyAndHygiene": "4.1",
-          "cleanliness": "3.2"
+          "safetyAndHygiene": "3.7",
+          "cleanliness": "2.8",
+          "femaleFriendly": "0.7",
+          "punctuality": "0.7"
         }
       },
       "reviews": [
@@ -1442,6 +1444,13 @@
           "date": "12 Jun 2024",
           "rating": 3,
           "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          "name": "Jane Smith",
+          "date": "11 Mar 2025",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+          "userId": "4d5e6f"
         }
       ],
       "seatInfo": {
@@ -1704,13 +1713,15 @@
         }
       ],
       "ratings": {
-        "overall": "4.5",
+        "overall": "3.6",
         "categories": {
-          "busQuality": "3.5",
-          "driving": "4.0",
-          "seatComfort": "3.0",
-          "safetyAndHygiene": "4.1",
-          "cleanliness": "3.2"
+          "busQuality": "4.5",
+          "driving": "3.8",
+          "seatComfort": "2.8",
+          "safetyAndHygiene": "2.7",
+          "cleanliness": "2.4",
+          "femaleFriendly": "2.0",
+          "punctuality": "2.7"
         }
       },
       "reviews": [
@@ -1725,6 +1736,34 @@
           "date": "12 Jun 2024",
           "rating": 3,
           "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          "name": "Jane Smith",
+          "date": "11 Mar 2025",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+          "userId": "4d5e6f"
+        },
+        {
+          "name": "Jane Smith",
+          "date": "11 Mar 2025",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+          "userId": "4d5e6f"
+        },
+        {
+          "name": "Jane Smith",
+          "date": "11 Mar 2025",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+          "userId": "4d5e6f"
+        },
+        {
+          "name": "Jane Smith",
+          "date": "11 Mar 2025",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+          "userId": "4d5e6f"
         }
       ],
       "seatInfo": {
@@ -1987,13 +2026,15 @@
         }
       ],
       "ratings": {
-        "overall": "4.5",
+        "  ": "4.0",
         "categories": {
-          "busQuality": "3.5",
+          "busQuality": "4.0",
           "driving": "4.0",
           "seatComfort": "3.0",
-          "safetyAndHygiene": "4.1",
-          "cleanliness": "3.2"
+          "safetyAndHygiene": "3.4",
+          "cleanliness": "2.5",
+          "femaleFriendly": "1.0",
+          "punctuality": "1.3"
         }
       },
       "reviews": [
@@ -2008,6 +2049,13 @@
           "date": "12 Jun 2024",
           "rating": 3,
           "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lm Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          "name": "Emily Johnson",
+          "date": "11 Mar 2025",
+          "rating": 3,
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+          "userId": "0j1k2l"
         }
       ],
       "seatInfo": {
@@ -3635,9 +3683,27 @@
       "pincode": "395011",
       "lastLogin": "2025-03-10T06:43:45.862Z",
       "gender": "male",
-      "lastUpdated": "2025-02-28T09:11:36.514Z",
+      "lastUpdated": "2025-02-28T09:11:36.514Z"
+    },
+    {
+      "id": "4d5e6f",
+      "name": "Jane Smith",
+      "email": "janesmith@example.com",
+      "password": "hashed_password2",
+      "phone": "8765432109",
+      "otp": "6543",
+      "image": "k_images/jane_smith.jpg",
+      "dateOfBirth": "2025-02-28",
+      "address": "dnfdjkd fjfidv vjdvjdf frjhfgirfg fgrifgjk foidfgdigd fgdjgdfgf fdnvfjf riowefjeidfn dveiofgefvds ",
+      "city": "Vadodara",
+      "state": "Gujarat",
+      "pincode": "123456",
+      "lastLogin": "2025-03-11T04:39:08.581Z",
+      "gender": "male",
+      "lastUpdated": "2025-02-28T09:21:21.431Z",
       "Bookings": [
         {
+          "busId": "dfa41",
           "busName": "Bhumi Travels",
           "busType": "Sleeper",
           "busDateArrival": "10 Feb 2025",
@@ -3664,18 +3730,18 @@
           "totalPayableAmount": 34300,
           "passengers": [
             {
-              "name": "john Doe",
+              "name": "jane",
               "age": "32",
               "gender": "Male",
-              "AadhaarCard": "458712544232",
+              "AadhaarCard": "112233445566",
               "panCard": ""
             }
           ],
           "contactDetails": {
-            "email": "johndoe@gmail.com",
+            "email": "jane@gmail.com",
             "phone": {
               "countryCode": "+91",
-              "number": "7788994455"
+              "number": "1144558877"
             }
           },
           "fareBreakup": {
@@ -3689,53 +3755,54 @@
             "discount": 120,
             "totalPayableAmount": null
           },
-          "status": "upcoming",
-          "bookingId": "BK9INDWBAR"
+          "status": "completed",
+          "bookingId": "BKOF4OKEBO"
         },
         {
-          "busName": "Delux Travels",
-          "busType": "AC",
+          "busId": "dfa42",
+          "busName": "Shivay Travels",
+          "busType": "Non AC",
           "busDateArrival": "10 Feb 2025",
           "busdateDepature": "10 Feb 2025",
-          "pickupLocation": "Amreli",
+          "pickupLocation": "Ahemadabad",
           "pickupTime": "10:00 AM",
-          "dropLocation": "Dhasa",
+          "dropLocation": "Ankleshwar",
           "dropTime": "10:00 AM",
           "duration": "05h 30m",
           "selectedSeats": [],
           "busPrice": {
-            "amount": "35,000",
+            "amount": "32,000",
             "currency": "₹",
             "discount": "Best deal 10% Off"
           },
-          "onwardFare": 35000,
-          "discount": 7120,
-          "gst": 6300,
-          "totalPrice": 41300,
+          "onwardFare": 32000,
+          "discount": 6520,
+          "gst": 5760,
+          "totalPrice": 37760,
           "pickupPoints": "Navjivan Hotel",
           "dropoffPoints": "Ankleshwar, Valiya Chokdi Ashirwad Hotel",
           "pickupTimeData": "10:00 AM",
           "dropTimeData": "10:00 AM",
-          "totalPayableAmount": 34300,
+          "totalPayableAmount": 31360,
           "passengers": [
             {
-              "name": "scscds",
-              "age": "23",
+              "name": "jane",
+              "age": "32",
               "gender": "Male",
-              "AadhaarCard": "213442343433",
+              "AadhaarCard": "147852369210",
               "panCard": ""
             }
           ],
           "contactDetails": {
-            "email": "dfsd@gmail.com",
+            "email": "jane@gmail.com",
             "phone": {
               "countryCode": "+91",
-              "number": "7869844110"
+              "number": "1122335566"
             }
           },
           "fareBreakup": {
             "onwardFare": {
-              "amount": "35,000",
+              "amount": "32,000",
               "currency": "₹",
               "discount": "Best deal 10% Off"
             },
@@ -3744,45 +3811,28 @@
             "discount": 120,
             "totalPayableAmount": null
           },
-          "status": "upcoming",
-          "bookingId": "BK1FR5TWJM"
+          "status": "completed",
+          "bookingId": "BK2NG0C9BS"
         }
       ],
       "payments": [
         {
-          "id": "TXN7YJ5P0TY",
-          "paymentBy": "NetBanking",
-          "bank": "Citi Bank",
-          "paidAmount": 17150,
-          "remainingAmount": 17150,
-          "timestamp": "2025-03-10T06:45:01.395Z"
-        },
-        {
-          "id": "TXN5JHMQJQC",
+          "id": "TXNI7Q5IMV5",
           "paymentBy": "UPI",
-          "upiId": "john.doe12@okhdfc",
+          "upiId": "jane2343@okhdfc",
           "paidAmount": 34300,
           "remainingAmount": 0,
-          "timestamp": "2025-03-10T06:46:09.552Z"
+          "timestamp": "2025-03-11T04:40:24.494Z"
+        },
+        {
+          "id": "TXNAXKPWEGJ",
+          "paymentBy": "NetBanking",
+          "bank": "Capital One Bank",
+          "paidAmount": 31360,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T04:54:45.789Z"
         }
       ]
-    },
-    {
-      "id": "4d5e6f",
-      "name": "Jane Smith",
-      "email": "janesmith@example.com",
-      "password": "hashed_password2",
-      "phone": "8765432109",
-      "otp": "6543",
-      "image": "k_images/jane_smith.jpg",
-      "dateOfBirth": "2025-02-28",
-      "address": "dnfdjkd fjfidv vjdvjdf frjhfgirfg fgrifgjk foidfgdigd fgdjgdfgf fdnvfjf riowefjeidfn dveiofgefvds ",
-      "city": "Vadodara",
-      "state": "Gujarat",
-      "pincode": "123456",
-      "lastLogin": "2025-03-08T03:54:12.308Z",
-      "gender": "male",
-      "lastUpdated": "2025-02-28T09:21:21.431Z"
     },
     {
       "id": "7g8h9i",
@@ -3800,6 +3850,92 @@
       "lastLogin": "2025-03-10T09:12:55.902Z",
       "Bookings": [
         {
+          "busId": "dfa48",
+          "busName": "Shree Nath Travels",
+          "busType": "Seater",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "40,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 40000,
+          "discount": 8120,
+          "gst": 7200,
+          "totalPrice": 47200,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Ankleshwar, Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 39200,
+          "passengers": [
+            {
+              "name": "robert",
+              "age": "32",
+              "gender": "Male",
+              "AadhaarCard": "123456789012",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "robert@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "7788994411"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "40,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKEO9IZPI0"
+        }
+      ],
+      "payments": [
+        {
+          "id": "TXNV5C1CUKJ",
+          "paymentBy": "UPI",
+          "upiId": "robart1290@okicici",
+          "paidAmount": 39200,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-11T04:08:44.271Z"
+        }
+      ]
+    },
+    {
+      "id": "0j1k2l",
+      "name": "Emily Johnson",
+      "email": "emilyjohnson@example.com",
+      "password": "emily123",
+      "phone": "6543210987",
+      "otp": "8901",
+      "image": "k_images/emily_johnson.jpg",
+      "dateOfBirth": "2000-01-22",
+      "address": "a aa aaa aaaa aaaaaa aaaaaaa aaaaaaa aaaaaaaa aaaaa aaaa aaaaaa a a  a a  a a a  a a",
+      "city": "Rajkot",
+      "state": "Gujarat",
+      "pincode": "874510",
+      "lastLogin": "2025-03-11T04:57:17.564Z",
+      "gender": "female",
+      "lastUpdated": "2025-02-28T09:29:08.966Z",
+      "Bookings": [
+        {
+          "busId": "dfa44",
           "busName": "Umiya Travels",
           "busType": "Seater",
           "busDateArrival": "10 Feb 2025",
@@ -3820,24 +3956,24 @@
           "gst": 6660,
           "totalPrice": 43660,
           "pickupPoints": "Navjivan Hotel",
-          "dropoffPoints": "Dhasa, Valiya Chokdi Ashirwad Hotel",
+          "dropoffPoints": "Ankleshwar, Valiya Chokdi Ashirwad Hotel",
           "pickupTimeData": "10:00 AM",
           "dropTimeData": "10:00 AM",
           "totalPayableAmount": 36260,
           "passengers": [
             {
-              "name": "robert",
-              "age": "32",
-              "gender": "Male",
-              "AadhaarCard": "123654789521",
+              "name": "emily",
+              "age": "23",
+              "gender": "Female",
+              "AadhaarCard": "775522336644",
               "panCard": ""
             }
           ],
           "contactDetails": {
-            "email": "robert@gmail.com",
+            "email": "emily@gmail.com",
             "phone": {
               "countryCode": "+91",
-              "number": "7788554499"
+              "number": "7744225566"
             }
           },
           "fareBreakup": {
@@ -3852,161 +3988,19 @@
             "totalPayableAmount": null
           },
           "status": "completed",
-          "bookingId": "BKYMW3RZJR"
-        },
-        {
-          "busName": "Shree Nath Travels",
-          "busType": "Seater",
-          "busDateArrival": "10 Feb 2025",
-          "busdateDepature": "10 Feb 2025",
-          "pickupLocation": "Surat",
-          "pickupTime": "10:00 AM",
-          "dropLocation": "Ankleshwar",
-          "dropTime": "10:00 AM",
-          "duration": "05h 30m",
-          "selectedSeats": [],
-          "busPrice": {
-            "amount": "40,000",
-            "currency": "₹",
-            "discount": "Best deal 10% Off"
-          },
-          "onwardFare": 40000,
-          "discount": 120,
-          "gst": 7200,
-          "totalPrice": 47200,
-          "pickupPoints": "Navjivan Hotel",
-          "dropoffPoints": "Ankleshwar, Valiya Chokdi Ashirwad Hotel",
-          "pickupTimeData": "10:00 AM",
-          "dropTimeData": "10:00 AM",
-          "passengers": [
-            {
-              "name": "robert",
-              "age": "32",
-              "gender": "Male",
-              "AadhaarCard": "123045698702",
-              "panCard": ""
-            }
-          ],
-          "contactDetails": {
-            "email": "robert@gmail.com",
-            "phone": {
-              "countryCode": "+91",
-              "number": "7412589630"
-            }
-          },
-          "fareBreakup": {
-            "onwardFare": {
-              "amount": "40,000",
-              "currency": "₹",
-              "discount": "Best deal 10% Off"
-            },
-            "gst": null,
-            "bookingCharges": 120,
-            "discount": 120,
-            "totalPayableAmount": null
-          },
-          "status": "completed",
-          "bookingId": "BKE63XQH4N"
-        },
-        {
-          "busName": "New Dharti travels",
-          "busType": "AC",
-          "busDateArrival": "14 march 2025",
-          "busdateDepature": "15 march 2025",
-          "pickupLocation": "Surat",
-          "pickupTime": "10:00 PM",
-          "dropLocation": "Junagadh",
-          "dropTime": "6:00 PM",
-          "duration": "11h 00m",
-          "selectedSeats": [],
-          "busPrice": {
-            "amount": "28,000",
-            "currency": "₹",
-            "discount": "Best deal 10% Off"
-          },
-          "onwardFare": 28000,
-          "discount": 5720,
-          "gst": 5040,
-          "totalPrice": 33040,
-          "pickupPoints": "Navjivan Hotel",
-          "dropoffPoints": "Ankleshwar, Majevdi Gate",
-          "pickupTimeData": "10:00 AM",
-          "dropTimeData": "6:00 PM",
-          "totalPayableAmount": 27440,
-          "passengers": [
-            {
-              "name": "kevin",
-              "age": "20",
-              "gender": "Male",
-              "AadhaarCard": "778855221144",
-              "panCard": ""
-            }
-          ],
-          "contactDetails": {
-            "email": "kevin@gmail.com",
-            "phone": {
-              "countryCode": "+91",
-              "number": "7744112255"
-            }
-          },
-          "fareBreakup": {
-            "onwardFare": {
-              "amount": "28,000",
-              "currency": "₹",
-              "discount": "Best deal 10% Off"
-            },
-            "gst": null,
-            "bookingCharges": 120,
-            "discount": 120,
-            "totalPayableAmount": null
-          },
-          "status": "upcoming",
-          "bookingId": "BKJ4ZDIWLJ"
+          "bookingId": "BK2MDNJB57"
         }
       ],
       "payments": [
         {
-          "id": "TXNYYTT3AYK",
-          "paymentBy": "NetBanking",
-          "bank": "TD Bank",
+          "id": "TXN0J222051",
+          "paymentBy": "UPI",
+          "upiId": "emily234@okicici",
           "paidAmount": 36260,
           "remainingAmount": 0,
-          "timestamp": "2025-03-10T09:16:49.938Z"
-        },
-        {
-          "id": "TXNEYYM7TPX",
-          "paymentBy": "UPI",
-          "upiId": "robart1290@okicici",
-          "paidAmount": 47200,
-          "remainingAmount": 0,
-          "timestamp": "2025-03-10T09:19:36.273Z"
-        },
-        {
-          "id": "TXNRBU0C286",
-          "paymentBy": "UPI",
-          "upiId": "kevin44@okicici",
-          "paidAmount": 27440,
-          "remainingAmount": 0,
-          "timestamp": "2025-03-10T09:51:50.757Z"
+          "timestamp": "2025-03-11T04:58:56.786Z"
         }
       ]
-    },
-    {
-      "id": "0j1k2l",
-      "name": "Emily Johnson",
-      "email": "emilyjohnson@example.com",
-      "password": "emily123",
-      "phone": "6543210987",
-      "otp": "8901",
-      "image": "k_images/emily_johnson.jpg",
-      "dateOfBirth": "2000-01-22",
-      "address": "a aa aaa aaaa aaaaaa aaaaaaa aaaaaaa aaaaaaaa aaaaa aaaa aaaaaa a a  a a  a a a  a a",
-      "city": "Rajkot",
-      "state": "Gujarat",
-      "pincode": "874510",
-      "lastLogin": "2025-03-10T06:34:27.667Z",
-      "gender": "female",
-      "lastUpdated": "2025-02-28T09:29:08.966Z"
     },
     {
       "id": "3m4n5o",
@@ -4575,6 +4569,38 @@
       "paidAmount": 27440,
       "remainingAmount": 0,
       "timestamp": "2025-03-10T09:51:50.757Z"
+    },
+    {
+      "id": "TXNV5C1CUKJ",
+      "paymentBy": "UPI",
+      "upiId": "robart1290@okicici",
+      "paidAmount": 39200,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T04:08:44.271Z"
+    },
+    {
+      "id": "TXNI7Q5IMV5",
+      "paymentBy": "UPI",
+      "upiId": "jane2343@okhdfc",
+      "paidAmount": 34300,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T04:40:24.494Z"
+    },
+    {
+      "id": "TXNAXKPWEGJ",
+      "paymentBy": "NetBanking",
+      "bank": "Capital One Bank",
+      "paidAmount": 31360,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T04:54:45.789Z"
+    },
+    {
+      "id": "TXN0J222051",
+      "paymentBy": "UPI",
+      "upiId": "emily234@okicici",
+      "paidAmount": 36260,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-11T04:58:56.786Z"
     }
   ]
 }
