@@ -84,10 +84,10 @@ body {
   padding: 2rem 0;
 }
 
-.card {
+.carditem {
   background: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  display: flex;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
+  /* display: flex; */
   margin: 0 auto !important;
   padding: 20px 12px;
   border: none !important;
@@ -97,6 +97,7 @@ body {
   justify-content: space-between;
   padding: 0px 25px;
   row-gap: 20px;
+  align-items: center;
 }
 
 .input-group {
@@ -232,7 +233,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .travel-list {
   background: white;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
 .travel-card {
@@ -354,7 +355,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .travel-links {
-  padding: 12px 20px;
+  /* padding: 12px 20px; */
   display: flex;
   align-items: center;
   gap: 16px;
@@ -398,7 +399,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   padding: 20px;
   margin-right: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
 .filters-header {
@@ -582,8 +583,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #e0e0e0;
+  /* margin-bottom: 20px; */
+  /* border-bottom: 1px solid #e0e0e0; */
   padding-bottom: 10px;
 }
 
@@ -1090,8 +1091,8 @@ tr:nth-child(even) td {
 .stops-list {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  margin-bottom: 20px;
+  /* flex-grow: 1; */
+  /* margin-bottom: 20px; */
 }
 
 .stop-item {
@@ -1145,8 +1146,8 @@ tr:nth-child(even) td {
 
 .booking-summary {
   padding-top: 20px;
-  border-top: 1px solid #eee;
-  margin-top: auto;
+  /* border-top: 1px solid #eee; */
+  /* margin-top: auto; */
   text-align: start;
 }
 

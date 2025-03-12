@@ -891,9 +891,7 @@ function renderBusList(buses) {
           )
           .join("")}
         <div class="ms-auto">
-          <button class="select-seat link" data-tab="selectseat" data-bus="${busIndex}">${
-        bus.selectSeat.label
-      }</button>
+          <button class="select-seat link" data-tab="selectseat" data-bus="${busIndex}"> Select Bus </button>
         </div>
       </div>
 
@@ -1437,20 +1435,26 @@ async function handleBookingDetail(bus) {
 }
 
 function searchData() {
-  const from = document.getElementById("from-city").value;
-  const to = document.getElementById("to-city").value;
-  const date = document.getElementById("journey-date").value;
-  const busName = document.getElementById("bus-name").value;
+  const from = document.getElementById("city1").value.trim().toLowerCase();
+  const to = document.getElementById("city2").value.trim().toLowerCase();
+  const date = document.getElementById("dateInput").value;
+  const busName = document
+    .getElementById("bus-name")
+    .value.trim()
+    .toLowerCase();
 
   const busFilterData = data.filter((ele) => {
-    console.log(ele.journey.departure.location);
-    console.log(ele.journey.arrival.location);
+    const departureLocation = ele.journey.departure.location.toLowerCase();
+    const arrivalLocation = ele.journey.arrival.location.toLowerCase();
+    const journeyDate = ele.journey.date;
+    const companyName = ele.companyName.toLowerCase();
 
-    return (
-      ele.journey.departure.location.toLowerCase() == from.toLowerCase() &&
-      ele.journey.arrival.location.toLowerCase() == to.toLowerCase() &&
-      ele.companyName.toLowerCase().includes(busName.toLowerCase())
-    );
+    // Match cities and date
+    const isCityMatch = departureLocation === from && arrivalLocation === to;
+    const isDateMatch = date ? journeyDate === date : true;
+    const isBusMatch = busName ? companyName.includes(busName) : true;
+
+    return isCityMatch && isDateMatch && isBusMatch;
   });
   renderBusList(busFilterData);
   console.log(busFilterData);
@@ -1477,14 +1481,44 @@ function handlelocation(value, busIndex) {
   });
 }
 
-
 function toggleReviews(button) {
-  const additionalReviews = button.previousElementSibling; 
+  const additionalReviews = button.previousElementSibling;
   if (additionalReviews.style.display === "none") {
-    additionalReviews.style.display = "block"; 
-    button.textContent = "Show Less"; 
+    additionalReviews.style.display = "block";
+    button.textContent = "Show Less";
   } else {
-    additionalReviews.style.display = "none"; 
-    button.textContent = "Show More"; 
+    additionalReviews.style.display = "none";
+    button.textContent = "Show More";
   }
 }
+
+window.onload = () => {
+  var f = JSON.parse(localStorage.getItem("filterData"));
+  // console.log(f);
+
+  if (!f || !f.fromlocation || !f.toValuelocation) {
+    console.log("No valid filter data found. Skipping searchData call.");
+    return;
+  }
+
+  const from = (document.getElementById("city1").value = f.fromlocation);
+  const to = (document.getElementById("city2").value = f.toValuelocation);
+  const date = document.getElementById("dateInput").value;
+  const busName = document
+    .getElementById("bus-name")
+    .value.trim()
+    .toLowerCase();
+
+  searchData();
+};
+
+window.addEventListener("load", () => {
+  let refreshCount = sessionStorage.getItem("refreshCount");
+
+  if (!refreshCount) {
+      sessionStorage.setItem("refreshCount", "1");
+  } else if (refreshCount === "1") {
+      localStorage.clear();
+      sessionStorage.removeItem("refreshCount"); 
+  }
+});

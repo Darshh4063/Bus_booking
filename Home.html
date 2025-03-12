@@ -438,11 +438,10 @@
                         the industry's standard dummy text ever.</p>
                 </div>
 
-                <form class="col-8 search">
-
+                <form class="col-8 search" id="searchForm">
                     <div class="box">
                         <img src="./image/lock.png" alt="">
-                        <input type="text" placeholder="From">
+                        <input type="text" id="fromInput" placeholder="From">
                         <img src="./image/Frame.png" alt="">
                     </div>
 
@@ -452,26 +451,23 @@
 
                     <div class="box">
                         <img src="./image/lock.png" alt="">
-                        <input type="text" placeholder="To">
+                        <input type="text" id="toInput" placeholder="To">
                         <img src="./image/Frame.png" alt="">
                     </div>
 
                     <div class="box">
-                        <img src="./image/Group (3).png" alt="Calendar Icon" id="datePickerIcon">
-                        <input type="date" id="dateInput" placeholder="Date">
+                        <img src="./image/Group (3).png" alt="Calendar Icon" id="datePickerIconHome">
+                        <input type="date" id="dateInputField" placeholder="Date">
                     </div>
 
                     <div class="box">
-                        <img id="dateInput" src="./image/Group (2).png" alt="">
-                        <input type="text" placeholder="Bus Name (Opt)">
+                        <img src="./image/Group (2).png" alt="">
+                        <input type="text" id="busNameInput" placeholder="Bus Name (Opt)">
                     </div>
 
-                    <a href="Buslist.html">
-                      <div class="submit">
-                          Search
-                        </div>
-                      </a>
-
+                    <div style="background-color: chocolate; padding: 7px 30px; border-radius: 7px;" class="submit" id="searchButton" onclick="searchData()">
+                        Search
+                    </div>
                 </form>
             </div>
         </div>
@@ -968,9 +964,10 @@
     <script src="js/k-otp.js"></script>
     <script src="js/k-model-open.js"></script>
     <script src="js/k-dynamic-dropdown.js"></script>
+    <script src="js/Buslist.js"></script>
     <script>
-        document.getElementById("datePickerIcon").addEventListener("click", function () {
-            document.getElementById("dateInput").showPicker();
+        document.getElementById("datePickerIconHome").addEventListener("click", function () {
+            document.getElementById("dateInputField").showPicker();
         });
     </script>
 

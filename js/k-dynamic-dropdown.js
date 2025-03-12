@@ -41,6 +41,7 @@ const locations = {
   cities: {
     Gujarat: [
       "Ahmedabad",
+      "Ankleshwar",
       "Surat",
       "Vadodara",
       "Rajkot",
@@ -65,6 +66,7 @@ const locations = {
       "Botad",
       "Amreli",
       "Dahod",
+      "Dhasa",
       "Palanpur",
       "Jetpur",
       "Vapi",
@@ -141,7 +143,7 @@ function setupAutocomplete(inputElement, locationType) {
           const locationName = this.querySelector("span").textContent;
           inputElement.value = locationName;
           dropdownEl.style.display = "none";
-        }); 
+        });
 
         dropdownEl.appendChild(itemEl);
       });
@@ -228,4 +230,41 @@ document.addEventListener("DOMContentLoaded", function () {
   if (toInput) {
     setupAutocomplete(toInput, "all");
   }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  addStyles();
+
+  // Get the From and To input fields
+  const fromInput = document.querySelector(
+    'input[placeholder="From location"]'
+  );
+  const toInput = document.querySelector('input[placeholder="To location"]');
+
+  // Setup autocomplete for both fields
+  if (fromInput) {
+    setupAutocomplete(fromInput, "all");
+  }
+
+  if (toInput) {
+    setupAutocomplete(toInput, "all");
+  }
+});
+
+document.getElementById("searchButton").addEventListener("click", function () {
+  // Get values from inputs
+  const fromValue = document.getElementById("fromInput").value;
+  const toValue = document.getElementById("toInput").value;
+  const dateValue = document.getElementById("dateInputField").value;
+  const busNameValue = document.getElementById("busNameInput").value;
+  const dta = {
+    fromlocation: fromValue,
+    toValuelocation: toValue,
+    dateValuelocation: dateValue,
+    busNameValuelocation: busNameValue,
+  };
+
+  localStorage.setItem("filterData", JSON.stringify(dta));
+  // Redirect to Buslist.html
+  window.location.href = "Buslist.html";
 });

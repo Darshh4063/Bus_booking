@@ -1125,28 +1125,28 @@
       ],
       "dropoffPoints": [
         {
-          "time": "10:00",
+          "time": "12:00",
           "location": "Valiya Chokdi Ashirwad Hotel"
         },
         {
-          "time": "10:00",
+          "time": "2:00",
           "location": "Valiya Chokdi Ashirwad Hotel"
         },
         {
-          "time": "10:00",
+          "time": "5:00",
           "location": "Valiya Chokdi Ashirwad Hotel"
         }
       ],
       "ratings": {
-        "overall": "3.4",
+        "overall": "3.1",
         "categories": {
-          "busQuality": "2.5",
+          "busQuality": "2.4",
           "driving": "1.8",
-          "seatComfort": "3.0",
-          "safetyAndHygiene": "4.0",
-          "cleanliness": "3.2",
-          "femaleFriendly": "2.3",
-          "punctuality": "1.8"
+          "seatComfort": "2.8",
+          "safetyAndHygiene": "3.6",
+          "cleanliness": "3.0",
+          "femaleFriendly": "2.2",
+          "punctuality": "2.0"
         }
       },
       "reviews": [
@@ -1162,20 +1162,6 @@
           "date": "11 Mar 2025",
           "rating": 3,
           "comment": "gadhpur",
-          "userId": "1a2b3c"
-        },
-        {
-          "name": "John Doe",
-          "date": "11 Mar 2025",
-          "rating": 3,
-          "comment": "qqqqqqqqq",
-          "userId": "1a2b3c"
-        },
-        {
-          "name": "John Doe",
-          "date": "11 Mar 2025",
-          "rating": 4,
-          "comment": "me",
           "userId": "1a2b3c"
         }
       ],
@@ -1312,7 +1298,7 @@
       "rating": "3.5",
       "journey": {
         "departure": {
-          "location": "Ahemadabad",
+          "location": "Ahmedabad",
           "time": "10:00 AM",
           "date": "10 Feb 2025"
         },
@@ -1355,7 +1341,6 @@
         }
       ],
       "selectSeat": {
-        "label": "Select Seat",
         "dataTab": "selectseat"
       },
       "tracking": {
@@ -1426,15 +1411,15 @@
       ],
       "dropoffPoints": [
         {
-          "time": "10:00",
+          "time": "3:00",
           "location": "Valiya Chokdi Ashirwad Hotel"
         },
         {
-          "time": "10:00",
+          "time": "8:00",
           "location": "Valiya Chokdi Ashirwad Hotel"
         },
         {
-          "time": "10:00",
+          "time": "11:00",
           "location": "Valiya Chokdi Ashirwad Hotel"
         }
       ],
@@ -1635,7 +1620,6 @@
         }
       ],
       "selectSeat": {
-        "label": "Select Seat",
         "dataTab": "selectseat"
       },
       "tracking": {
@@ -1710,11 +1694,11 @@
           "location": "Valiya Chokdi Ashirwad Hotel"
         },
         {
-          "time": "10:00",
+          "time": "11:30",
           "location": "Valiya Chokdi Ashirwad Hotel"
         },
         {
-          "time": "10:00",
+          "time": "1:00",
           "location": "Valiya Chokdi Ashirwad Hotel"
         }
       ],
@@ -1922,7 +1906,6 @@
         }
       ],
       "selectSeat": {
-        "label": "Select Seat",
         "dataTab": "selectseat"
       },
       "tracking": {
@@ -1993,15 +1976,15 @@
       ],
       "dropoffPoints": [
         {
-          "time": "10:00",
+          "time": "2:00",
           "location": "Valiya Chokdi Ashirwad Hotel"
         },
         {
-          "time": "10:00",
+          "time": "4:30",
           "location": "Valiya Chokdi Ashirwad Hotel"
         },
         {
-          "time": "10:00",
+          "time": "6:00",
           "location": "Valiya Chokdi Ashirwad Hotel"
         }
       ],
@@ -2194,7 +2177,6 @@
         }
       ],
       "selectSeat": {
-        "label": "Select Seat",
         "dataTab": "selectseat"
       },
       "tracking": {
@@ -2265,15 +2247,15 @@
       ],
       "dropoffPoints": [
         {
-          "time": "10:00",
+          "time": "9:00",
           "location": "Valiya Chokdi Ashirwad Hotel"
         },
         {
-          "time": "10:00",
+          "time": "11:00",
           "location": "Valiya Chokdi Ashirwad Hotel"
         },
         {
-          "time": "10:00",
+          "time": "12:30",
           "location": "Valiya Chokdi Ashirwad Hotel"
         }
       ],
@@ -2474,7 +2456,6 @@
         }
       ],
       "selectSeat": {
-        "label": "Select Seat",
         "dataTab": "selectseat"
       },
       "tracking": {
@@ -2545,7 +2526,7 @@
       ],
       "dropoffPoints": [
         {
-          "time": "10:00",
+          "time": "11:00",
           "location": "Valiya Chokdi Ashirwad Hotel"
         },
         {
@@ -2553,7 +2534,7 @@
           "location": "Valiya Chokdi Ashirwad Hotel"
         },
         {
-          "time": "10:00",
+          "time": "1:30",
           "location": "Valiya Chokdi Ashirwad Hotel"
         }
       ],
@@ -2761,7 +2742,6 @@
         }
       ],
       "selectSeat": {
-        "label": "Select Seat",
         "dataTab": "selectseat"
       },
       "tracking": {
@@ -2832,15 +2812,15 @@
       ],
       "dropoffPoints": [
         {
-          "time": "10:00",
+          "time": "3:00",
           "location": "Valiya Chokdi Ashirwad Hotel"
         },
         {
-          "time": "10:00",
+          "time": "4:00",
           "location": "Valiya Chokdi Ashirwad Hotel"
         },
         {
-          "time": "10:00",
+          "time": "11:00",
           "location": "Valiya Chokdi Ashirwad Hotel"
         }
       ],
@@ -3031,7 +3011,6 @@
         }
       ],
       "selectSeat": {
-        "label": "Select Seat",
         "dataTab": "selectseat"
       },
       "tracking": {
@@ -3106,11 +3085,11 @@
           "location": "Valiya Chokdi Ashirwad Hotel"
         },
         {
-          "time": "10:00",
+          "time": "12:00",
           "location": "Valiya Chokdi Ashirwad Hotel"
         },
         {
-          "time": "10:00",
+          "time": "5:00",
           "location": "Valiya Chokdi Ashirwad Hotel"
         }
       ],
@@ -3301,7 +3280,6 @@
         }
       ],
       "selectSeat": {
-        "label": "Select Seat",
         "dataTab": "selectseat"
       },
       "tracking": {
@@ -3603,7 +3581,7 @@
       "city": "Surat",
       "state": "Gujarat",
       "pincode": "395011",
-      "lastLogin": "2025-03-11T11:49:34.398Z",
+      "lastLogin": "2025-03-12T10:41:16.841Z",
       "gender": "male",
       "lastUpdated": "2025-02-28T09:11:36.514Z",
       "Bookings": [
@@ -3669,7 +3647,7 @@
           "busType": "Non AC",
           "busDateArrival": "10 Feb 2025",
           "busdateDepature": "10 Feb 2025",
-          "pickupLocation": "Ahemadabad",
+          "pickupLocation": "Ahmedabad",
           "pickupTime": "10:00 AM",
           "dropLocation": "Ankleshwar",
           "dropTime": "10:00 AM",
@@ -4116,7 +4094,7 @@
           "busType": "Non AC",
           "busDateArrival": "10 Feb 2025",
           "busdateDepature": "10 Feb 2025",
-          "pickupLocation": "Ahemadabad",
+          "pickupLocation": "Ahmedabad",
           "pickupTime": "10:00 AM",
           "dropLocation": "Ankleshwar",
           "dropTime": "10:00 AM",
@@ -4389,6 +4367,69 @@
           },
           "status": "upcoming",
           "bookingId": "BK5B6FABVH"
+        },
+        {
+          "busId": "dfa43",
+          "busName": "Shree Nath Travels",
+          "busType": "AC",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Vadodara",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "surat",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [
+            "Upper-2",
+            "Upper-5",
+            "Upper-17",
+            "Upper-18",
+            "Upper-15",
+            "Upper-14"
+          ],
+          "busPrice": {
+            "amount": "30,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 30000,
+          "discount": 6120,
+          "gst": 5400,
+          "totalPrice": 35400,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Ankleshwar, Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 29400,
+          "passengers": [
+            {
+              "name": "umang",
+              "age": "20",
+              "gender": "Male",
+              "AadhaarCard": "111111111111",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "umang@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "1111111111"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "30,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKYKHGKO3E"
         }
       ],
       "payments": [
@@ -4503,6 +4544,14 @@
           "paidAmount": 29400,
           "remainingAmount": 0,
           "timestamp": "2025-03-11T09:37:28.736Z"
+        },
+        {
+          "id": "TXN2BWGOCX6",
+          "paymentBy": "NetBanking",
+          "bank": "Citi Bank",
+          "paidAmount": 29400,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-12T10:41:23.170Z"
         }
       ]
     },
@@ -4585,7 +4634,7 @@
           "busType": "Non AC",
           "busDateArrival": "10 Feb 2025",
           "busdateDepature": "10 Feb 2025",
-          "pickupLocation": "Ahemadabad",
+          "pickupLocation": "Ahmedabad",
           "pickupTime": "10:00 AM",
           "dropLocation": "Ankleshwar",
           "dropTime": "10:00 AM",
@@ -5938,6 +5987,14 @@
       "paidAmount": 27440,
       "remainingAmount": 0,
       "timestamp": "2025-03-11T12:10:51.625Z"
+    },
+    {
+      "id": "TXN2BWGOCX6",
+      "paymentBy": "NetBanking",
+      "bank": "Citi Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-12T10:41:23.170Z"
     }
   ]
 }
