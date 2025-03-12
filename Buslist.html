@@ -135,347 +135,357 @@
       </nav>
     </div>
   </section>
-  <!-- Login Modal -->
-  <div
-    class="ke modal fade"
-    id="loginModal"
-    tabindex="-1"
-    aria-labelledby="loginModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body p-0">
-          <div class="k-modal-content">
-            <!-- Left Side - Bus Image -->
-            <div class="k-modal-image">
-              <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+<!-- Login Modal -->
+<div
+class="ke modal fade"
+id="loginModal"
+tabindex="-1"
+aria-labelledby="loginModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-body p-0">
+      <div class="k-modal-content-login">
+        <!-- Left Side - Bus Image -->
+        <div class="k-modal-image">
+          <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+        </div>
+
+        <!-- Right Side - Sign In Form -->
+        <div class="k-modal-form">
+          <!-- Close Button -->
+          <button
+            type="button"
+            class="k-close-btn"
+            data-bs-dismiss="modal"
+            onclick="backdropClose()"
+          >
+            &times;
+          </button>
+
+          <!-- Form Header -->
+          <div class="k-form-header">
+            <h2 class="k-title">Sign In</h2>
+            <p class="k-subtitle">Login to an existing account</p>
+          </div>
+
+          <!-- Form Fields -->
+          <form class="k-login-form inp">
+            <div class="k-form-group">
+              <label for="mobile" class="k-label">Mobile No</label>
+              <div class="k-input-group">
+                <div class="k-country-code">+91</div>
+                <input
+                  type="text"
+                  class="k-input"
+                  id="mobile"
+                  placeholder="Enter your mobile no"
+                />
+              </div>
             </div>
 
-            <!-- Right Side - Sign In Form -->
-            <div class="k-modal-form">
-              <!-- Close Button -->
-              <button
-                type="button"
-                class="k-close-btn"
-                data-bs-dismiss="modal"
-              >
-                &times;
+            <button type="button" class="k-submit-btn">Continue</button>
+
+            <!-- OR Divider -->
+            <div class="k-divider">
+              <span>OR</span>
+            </div>
+
+            <!-- Social Login -->
+            <div class="k-social-login">
+              <button type="button" class="k-social-btn k-google">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                  alt="Google"
+                />
               </button>
+              <button type="button" class="k-social-btn k-facebook">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                  alt="Facebook"
+                />
+              </button>
+              <button type="button" class="k-social-btn k-apple">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                  alt="Apple"
+                />
+              </button>
+            </div>
 
-              <!-- Form Header -->
-              <div class="k-form-header">
-                <h2 class="k-title">Sign In</h2>
-                <p class="k-subtitle">Login to an existing account</p>
-              </div>
+            <!-- Sign Up Link -->
+            <div class="k-signup-link">
+              Didn't have any account?
+              <a href="#" id="showRegisterModal">Sign up</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
-              <!-- Form Fields -->
-              <form class="k-login-form inp">
-                <div class="k-form-group">
-                  <label for="mobile" class="k-label">Mobile No</label>
-                  <div class="k-input-group">
-                    <div class="k-country-code">+91</div>
-                    <input
-                      type="text"
-                      class="k-input"
-                      id="mobile"
-                      placeholder="Enter your mobile no"
-                    />
-                  </div>
-                </div>
+<!-- OTP Modal -->
+<div
+class="modal fade"
+id="otpModal"
+tabindex="-1"
+aria-labelledby="otpModalLabel"
+aria-hidden="true"
+>
+<div class="ke-otp modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-body p-0">
+      <div class="k-modal-content-otp">
+        <!-- Right Side - OTP Form -->
+        <div class="k-modal-form">
+          <!-- Close Button -->
+          <button
+            type="button"
+            class="k-close-btn"
+            data-bs-dismiss="modal"
+            onclick="backdropClose()"
+          >
+            &times;
+          </button>
 
-                <button type="button" class="k-submit-btn">Continue</button>
+          <!-- Form Header -->
+          <div class="k-form-header">
+            <h2 class="k-title">Verify OTP</h2>
+            <p class="k-subtitle">
+              Enter the verification code sent to
+              <span>+91 XXXXXXXXXX</span>
+            </p>
+          </div>
 
-                <!-- OR Divider -->
-                <div class="k-divider">
-                  <span>OR</span>
-                </div>
+          <!-- OTP Fields -->
+          <div class="k">
+            <div class="otp-container">
+              <input
+                type="text"
+                maxlength="1"
+                class="otp-input"
+                autofocus
+              />
+              <input type="text" maxlength="1" class="otp-input" />
+              <input type="text" maxlength="1" class="otp-input" />
+              <input type="text" maxlength="1" class="otp-input" />
+            </div>
 
-                <!-- Social Login -->
-                <div class="k-social-login">
-                  <button type="button" class="k-social-btn k-google">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                      alt="Google"
-                    />
-                  </button>
-                  <button type="button" class="k-social-btn k-facebook">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                      alt="Facebook"
-                    />
-                  </button>
-                  <button type="button" class="k-social-btn k-apple">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-                      alt="Apple"
-                    />
-                  </button>
-                </div>
+            <div class="k-verify">
+              <button type="button" class="veri">Verify</button>
+            </div>
 
-                <!-- Sign Up Link -->
-                <div class="k-signup-link">
-                  Didn't have any account?
-                  <a href="#" id="showRegisterModal">Sign up</a>
-                </div>
-              </form>
+            <div class="undo k-resend d-flex align-items-center justify-content-center">
+             <p class="m-0 pe-2 ke-resend"> Didn't receive the code?</p><span>Resend</span>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+</div>
 
-  <!-- OTP Modal -->
-  <div
-    class="modal fade"
-    id="otpModal"
-    tabindex="-1"
-    aria-labelledby="otpModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body p-0">
-          <div class="k-modal-content">
-            <!-- Left Side - Bus Image -->
-            <div class="k-modal-image">
-              <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+<!-- Register OTP Modal -->
+<div
+class="modal fade"
+id="RegisterOtpModel"
+tabindex="-1"
+aria-labelledby="registerOtpModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-body p-0">
+      <div class="k-modal-content">
+        <!-- Left Side - Bus Image -->
+        <div class="k-modal-image">
+          <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+        </div>
+
+        <!-- Right Side - OTP Form -->
+        <div class="k-modal-form">
+          <!-- Close Button -->
+          <button
+            type="button"
+            class="k-close-btn"
+            data-bs-dismiss="modal"
+            onclick="backdropClose()"
+          >
+            &times;
+          </button>
+
+          <!-- Form Header -->
+          <div class="k-form-header">
+            <h2 class="k-title">Verify OTP</h2>
+            <p class="k-subtitle">
+              Enter the verification code sent to
+              <span class="register-phone">+91 XXXXXXXXXX</span>
+            </p>
+          </div>
+
+          <!-- OTP Fields -->
+          <div class="k">
+            <div class="otp-container">
+              <input
+                type="text"
+                maxlength="1"
+                class="otp-input"
+                autofocus
+              />
+              <input type="text" maxlength="1" class="otp-input" />
+              <input type="text" maxlength="1" class="otp-input" />
+              <input type="text" maxlength="1" class="otp-input" />
             </div>
 
-            <!-- Right Side - OTP Form -->
-            <div class="k-modal-form">
-              <!-- Close Button -->
-              <button
-                type="button"
-                class="k-close-btn"
-                data-bs-dismiss="modal"
-              >
-                &times;
-              </button>
+            <div class="k-verify">
+              <button type="button">Verify</button>
+            </div>
 
-              <!-- Form Header -->
-              <div class="k-form-header">
-                <h2 class="k-title">Verify OTP</h2>
-                <p class="k-subtitle">
-                  Enter the verification code sent to
-                  <span>+91 XXXXXXXXXX</span>
-                </p>
-              </div>
-
-              <!-- OTP Fields -->
-              <div class="k">
-                <div class="otp-container">
-                  <input
-                    type="text"
-                    maxlength="1"
-                    class="otp-input"
-                    autofocus
-                  />
-                  <input type="text" maxlength="1" class="otp-input" />
-                  <input type="text" maxlength="1" class="otp-input" />
-                  <input type="text" maxlength="1" class="otp-input" />
-                </div>
-
-                <div class="k-verify">
-                  <button type="button" class="veri">Verify</button>
-                </div>
-
-                <div class="undo k-resend">
-                  Didn't receive the code? <span>Resend</span>
-                </div>
-              </div>
+            <div class="k-resend">
+              Didn't receive the code? <span>Resend</span>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+</div>
 
-  <!-- Register OTP Modal -->
-  <div
-    class="modal fade"
-    id="RegisterOtpModel"
-    tabindex="-1"
-    aria-labelledby="registerOtpModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body p-0">
-          <div class="k-modal-content">
-            <!-- Left Side - Bus Image -->
-            <div class="k-modal-image">
-              <img src="k_images/register-bus.png" alt="AJ Express Bus" />
-            </div>
+<!-- Register Modal -->
+<div
+class="modal fade"
+id="registerModal"
+tabindex="-1"
+aria-labelledby="registerModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-body p-0">
+      <div class="k-modal-content">
+        <!-- Left Side - Bus Image -->
+        <div class="k-modal-image">
+          <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+        </div>
 
-            <!-- Right Side - OTP Form -->
-            <div class="k-modal-form">
-              <!-- Close Button -->
-              <button
-                type="button"
-                class="k-close-btn"
-                data-bs-dismiss="modal"
-              >
-                &times;
-              </button>
+        <!-- Right Side - Register Form -->
+        <div class="k-modal-form">
+          <!-- Close Button -->
+          <button
+            type="button"
+            class="k-close-btn"
+            data-bs-dismiss="modal"
+            onclick="backdropClose()"
+          >
+            &times;
+          </button>
 
-              <!-- Form Header -->
-              <div class="k-form-header">
-                <h2 class="k-title">Verify OTP</h2>
-                <p class="k-subtitle">
-                  Enter the verification code sent to
-                  <span class="register-phone">+91 XXXXXXXXXX</span>
-                </p>
-              </div>
-
-              <!-- OTP Fields -->
-              <div class="k">
-                <div class="otp-container">
-                  <input
-                    type="text"
-                    maxlength="1"
-                    class="otp-input"
-                    autofocus
-                  />
-                  <input type="text" maxlength="1" class="otp-input" />
-                  <input type="text" maxlength="1" class="otp-input" />
-                  <input type="text" maxlength="1" class="otp-input" />
-                </div>
-
-                <div class="k-verify">
-                  <button type="button">Verify</button>
-                </div>
-
-                <div class="k-resend">
-                  Didn't receive the code? <span>Resend</span>
-                </div>
-              </div>
-            </div>
+          <!-- Form Header -->
+          <div class="k-form-header">
+            <h2 class="k-title">Sign Up</h2>
+            <p class="k-subtitle">Create a new account</p>
           </div>
+
+          <!-- Form Fields -->
+          <form class="k-login-form" id="registerForm">
+            <div class="k-form-group">
+              <label for="regName" class="k-label">Name</label>
+              <input
+                type="text"
+                class="k-input"
+                id="regName"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+
+            <div class="k-form-group">
+              <label for="regEmail" class="k-label">Email</label>
+              <input
+                type="email"
+                class="k-input"
+                id="regEmail"
+                placeholder="Enter your email"
+              />
+            </div>
+
+            <div class="k-form-group">
+              <label for="regPassword" class="k-label">Password</label>
+              <input
+                type="password"
+                class="k-input"
+                id="regPassword"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+
+            <div class="k-form-group">
+              <label for="regMobile" class="k-label">Mobile No</label>
+              <div class="k-input-group">
+                <div class="k-country-code">+91</div>
+                <input
+                  type="tel"
+                  class="k-input"
+                  id="regMobile"
+                  placeholder="Enter your mobile no"
+                  required
+                />
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="k-submit-btn"
+              id="registerButton"
+            >
+              Register
+            </button>
+
+            <!-- OR Divider -->
+            <div class="k-divider">
+              <span>OR</span>
+            </div>
+
+            <!-- Social Login -->
+            <div class="k-social-login">
+              <button type="button" class="k-social-btn k-google">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                  alt="Google"
+                />
+              </button>
+              <button type="button" class="k-social-btn k-facebook">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                  alt="Facebook"
+                />
+              </button>
+              <button type="button" class="k-social-btn k-apple">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                  alt="Apple"
+                />
+              </button>
+            </div>
+
+            <!-- Login Link -->
+            <div class="k-signup-link">
+              Already have an account?
+              <a href="#" id="showLoginModal">Sign in</a>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Register Modal -->
-  <div
-    class="modal fade"
-    id="registerModal"
-    tabindex="-1"
-    aria-labelledby="registerModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body p-0">
-          <div class="k-modal-content">
-            <!-- Left Side - Bus Image -->
-            <div class="k-modal-image">
-              <img src="k_images/register-bus.png" alt="AJ Express Bus" />
-            </div>
-
-            <!-- Right Side - Register Form -->
-            <div class="k-modal-form">
-              <!-- Close Button -->
-              <button
-                type="button"
-                class="k-close-btn"
-                data-bs-dismiss="modal"
-              >
-                &times;
-              </button>
-
-              <!-- Form Header -->
-              <div class="k-form-header">
-                <h2 class="k-title">Sign Up</h2>
-                <p class="k-subtitle">Create a new account</p>
-              </div>
-
-              <!-- Form Fields -->
-              <form class="k-login-form" id="registerForm">
-                <div class="k-form-group">
-                  <label for="regName" class="k-label">Name</label>
-                  <input
-                    type="text"
-                    class="k-input"
-                    id="regName"
-                    placeholder="Enter your full name"
-                    required
-                  />
-                </div>
-
-                <div class="k-form-group">
-                  <label for="regEmail" class="k-label">Email</label>
-                  <input
-                    type="email"
-                    class="k-input"
-                    id="regEmail"
-                    placeholder="Enter your email"
-                  />
-                </div>
-
-                <div class="k-form-group">
-                  <label for="regMobile" class="k-label">Mobile No</label>
-                  <div class="k-input-group">
-                    <div class="k-country-code">+91</div>
-                    <input
-                      type="tel"
-                      class="k-input"
-                      id="regMobile"
-                      placeholder="Enter your mobile no"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <button
-                  type="button"
-                  class="k-submit-btn"
-                  id="registerButton"
-                >
-                  Register
-                </button>
-
-                <!-- OR Divider -->
-                <div class="k-divider">
-                  <span>OR</span>
-                </div>
-
-                <!-- Social Login -->
-                <div class="k-social-login">
-                  <button type="button" class="k-social-btn k-google">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                      alt="Google"
-                    />
-                  </button>
-                  <button type="button" class="k-social-btn k-facebook">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                      alt="Facebook"
-                    />
-                  </button>
-                  <button type="button" class="k-social-btn k-apple">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-                      alt="Apple"
-                    />
-                  </button>
-                </div>
-
-                <!-- Login Link -->
-                <div class="k-signup-link">
-                  Already have an account?
-                  <a href="#" id="showLoginModal">Sign in</a>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
+</div>
 
 
   <section id="Search">
@@ -2128,6 +2138,21 @@ function toggleSelection(button) {
         });
     });
 </script>
+
+
+<script>
+  function backdropClose() {
+   let backdrops = document.querySelectorAll(".modal-backdrop");
+   backdrops.forEach(backdrop => {
+       backdrop.remove(); // Completely remove the backdrop from the DOM
+   });
+
+   // Re-enable scrolling (Bootstrap modals typically disable scrolling when opened)
+   document.body.classList.remove("modal-open");
+   document.body.style.overflow = ""; // Reset overflow style
+}
+
+   </script>
 
 
 
