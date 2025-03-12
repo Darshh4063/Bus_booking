@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact us</title>
-    <link rel="stylesheet" href="./css/Home.css">
+    <link rel="stylesheet" href="./css/Home.css" />
     <link rel="stylesheet" href="./css/J_contact-us.css" />
-    <link rel="stylesheet" href="css/k-login.css">
+    <link rel="stylesheet" href="css/k-login.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,7 +22,6 @@
   <body>
     <!-- <section id="navbar"></section> -->
 
-    
     <!-- <section id="top-bar">
       <div class="container">
           <div class="row contact-info">
@@ -81,407 +80,406 @@
       </div>
   </section> -->
 
-  <section id="top-bar">
-    <div class="container">
-      <div class="row contact-info">
-        <div class="col-12 col-sm-4 col-md-3 our">
-          <span>WELCOME TO OUR BUS!</span>
-        </div>
+    <section id="top-bar">
+      <div class="container">
+        <div class="row contact-info">
+          <div class="col-12 col-sm-4 col-md-3 our">
+            <span>WELCOME TO OUR BUS!</span>
+          </div>
 
-        <div class="col-12 col-sm-8 col-md-5 info">
-          <span>example123@gmail.com</span>
-          <span>+91 8405820412</span>
+          <div class="col-12 col-sm-8 col-md-5 info">
+            <span>example123@gmail.com</span>
+            <span>+91 8405820412</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Header Section -->
+    <section id="header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <div class="logo">
+              <h1>LOGO</h1>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="Home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="J_about-us.html">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="J_contact-us.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="d-flex d-lg-flex flex-xl-column">
+              <div class="text-end">
+                <div class="account-btn">
+                  <button><i class="fa-solid fa-user"></i> Account</button>
+                </div>
+              </div>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <!-- Login Modal -->
+    <div
+      class="ke modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="k-modal-content">
+              <!-- Left Side - Bus Image -->
+              <div class="k-modal-image">
+                <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+              </div>
+
+              <!-- Right Side - Sign In Form -->
+              <div class="k-modal-form">
+                <!-- Close Button -->
+                <button
+                  type="button"
+                  class="k-close-btn"
+                  data-bs-dismiss="modal"
+                >
+                  &times;
+                </button>
+
+                <!-- Form Header -->
+                <div class="k-form-header">
+                  <h2 class="k-title">Sign In</h2>
+                  <p class="k-subtitle">Login to an existing account</p>
+                </div>
+
+                <!-- Form Fields -->
+                <form class="k-login-form inp">
+                  <div class="k-form-group">
+                    <label for="mobile" class="k-label">Mobile No</label>
+                    <div class="k-input-group">
+                      <div class="k-country-code">+91</div>
+                      <input
+                        type="text"
+                        class="k-input"
+                        id="mobile"
+                        placeholder="Enter your mobile no"
+                      />
+                    </div>
+                  </div>
+
+                  <button type="button" class="k-submit-btn">Continue</button>
+
+                  <!-- OR Divider -->
+                  <div class="k-divider">
+                    <span>OR</span>
+                  </div>
+
+                  <!-- Social Login -->
+                  <div class="k-social-login">
+                    <button type="button" class="k-social-btn k-google">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                        alt="Google"
+                      />
+                    </button>
+                    <button type="button" class="k-social-btn k-facebook">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                        alt="Facebook"
+                      />
+                    </button>
+                    <button type="button" class="k-social-btn k-apple">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                        alt="Apple"
+                      />
+                    </button>
+                  </div>
+
+                  <!-- Sign Up Link -->
+                  <div class="k-signup-link">
+                    Didn't have any account?
+                    <a href="#" id="showRegisterModal">Sign up</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
-  <!-- Header Section -->
-  <section id="header">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <div class="logo">
-            <h1>LOGO</h1>
-          </div>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a href="Home.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="J_about-us.html">About Us</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a href="J_contact-us.html">Contact Us</a>
-              </li>
-            </ul>
-          </div>
+    <!-- OTP Modal -->
+    <div
+      class="modal fade"
+      id="otpModal"
+      tabindex="-1"
+      aria-labelledby="otpModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="k-modal-content">
+              <!-- Left Side - Bus Image -->
+              <div class="k-modal-image">
+                <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+              </div>
 
-          <div class="d-flex d-lg-flex flex-xl-column">
-            <div class="text-end">
-              
-              <div class="account-btn">
-                <button><i class="fa-solid fa-user"></i> Account</button>
+              <!-- Right Side - OTP Form -->
+              <div class="k-modal-form">
+                <!-- Close Button -->
+                <button
+                  type="button"
+                  class="k-close-btn"
+                  data-bs-dismiss="modal"
+                >
+                  &times;
+                </button>
+
+                <!-- Form Header -->
+                <div class="k-form-header">
+                  <h2 class="k-title">Verify OTP</h2>
+                  <p class="k-subtitle">
+                    Enter the verification code sent to
+                    <span>+91 XXXXXXXXXX</span>
+                  </p>
+                </div>
+
+                <!-- OTP Fields -->
+                <div class="k">
+                  <div class="otp-container">
+                    <input
+                      type="text"
+                      maxlength="1"
+                      class="otp-input"
+                      autofocus
+                    />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                  </div>
+
+                  <div class="k-verify">
+                    <button type="button" class="veri">Verify</button>
+                  </div>
+
+                  <div class="undo k-resend">
+                    Didn't receive the code? <span>Resend</span>
+                  </div>
+                </div>
               </div>
             </div>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
           </div>
         </div>
-      </nav>
+      </div>
     </div>
-  </section>
-  <!-- Login Modal -->
-  <div
-    class="ke modal fade"
-    id="loginModal"
-    tabindex="-1"
-    aria-labelledby="loginModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body p-0">
-          <div class="k-modal-content">
-            <!-- Left Side - Bus Image -->
-            <div class="k-modal-image">
-              <img src="k_images/register-bus.png" alt="AJ Express Bus" />
-            </div>
 
-            <!-- Right Side - Sign In Form -->
-            <div class="k-modal-form">
-              <!-- Close Button -->
-              <button
-                type="button"
-                class="k-close-btn"
-                data-bs-dismiss="modal"
-              >
-                &times;
-              </button>
-
-              <!-- Form Header -->
-              <div class="k-form-header">
-                <h2 class="k-title">Sign In</h2>
-                <p class="k-subtitle">Login to an existing account</p>
+    <!-- Register OTP Modal -->
+    <div
+      class="modal fade"
+      id="RegisterOtpModel"
+      tabindex="-1"
+      aria-labelledby="registerOtpModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="k-modal-content">
+              <!-- Left Side - Bus Image -->
+              <div class="k-modal-image">
+                <img src="k_images/register-bus.png" alt="AJ Express Bus" />
               </div>
 
-              <!-- Form Fields -->
-              <form class="k-login-form inp">
-                <div class="k-form-group">
-                  <label for="mobile" class="k-label">Mobile No</label>
-                  <div class="k-input-group">
-                    <div class="k-country-code">+91</div>
+              <!-- Right Side - OTP Form -->
+              <div class="k-modal-form">
+                <!-- Close Button -->
+                <button
+                  type="button"
+                  class="k-close-btn"
+                  data-bs-dismiss="modal"
+                >
+                  &times;
+                </button>
+
+                <!-- Form Header -->
+                <div class="k-form-header">
+                  <h2 class="k-title">Verify OTP</h2>
+                  <p class="k-subtitle">
+                    Enter the verification code sent to
+                    <span class="register-phone">+91 XXXXXXXXXX</span>
+                  </p>
+                </div>
+
+                <!-- OTP Fields -->
+                <div class="k">
+                  <div class="otp-container">
+                    <input
+                      type="text"
+                      maxlength="1"
+                      class="otp-input"
+                      autofocus
+                    />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                  </div>
+
+                  <div class="k-verify">
+                    <button type="button">Verify</button>
+                  </div>
+
+                  <div class="k-resend">
+                    Didn't receive the code? <span>Resend</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div
+      class="modal fade"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="registerModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="k-modal-content">
+              <!-- Left Side - Bus Image -->
+              <div class="k-modal-image">
+                <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+              </div>
+
+              <!-- Right Side - Register Form -->
+              <div class="k-modal-form">
+                <!-- Close Button -->
+                <button
+                  type="button"
+                  class="k-close-btn"
+                  data-bs-dismiss="modal"
+                >
+                  &times;
+                </button>
+
+                <!-- Form Header -->
+                <div class="k-form-header">
+                  <h2 class="k-title">Sign Up</h2>
+                  <p class="k-subtitle">Create a new account</p>
+                </div>
+
+                <!-- Form Fields -->
+                <form class="k-login-form" id="registerForm">
+                  <div class="k-form-group">
+                    <label for="regName" class="k-label">Name</label>
                     <input
                       type="text"
                       class="k-input"
-                      id="mobile"
-                      placeholder="Enter your mobile no"
-                    />
-                  </div>
-                </div>
-
-                <button type="button" class="k-submit-btn">Continue</button>
-
-                <!-- OR Divider -->
-                <div class="k-divider">
-                  <span>OR</span>
-                </div>
-
-                <!-- Social Login -->
-                <div class="k-social-login">
-                  <button type="button" class="k-social-btn k-google">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                      alt="Google"
-                    />
-                  </button>
-                  <button type="button" class="k-social-btn k-facebook">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                      alt="Facebook"
-                    />
-                  </button>
-                  <button type="button" class="k-social-btn k-apple">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-                      alt="Apple"
-                    />
-                  </button>
-                </div>
-
-                <!-- Sign Up Link -->
-                <div class="k-signup-link">
-                  Didn't have any account?
-                  <a href="#" id="showRegisterModal">Sign up</a>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- OTP Modal -->
-  <div
-    class="modal fade"
-    id="otpModal"
-    tabindex="-1"
-    aria-labelledby="otpModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body p-0">
-          <div class="k-modal-content">
-            <!-- Left Side - Bus Image -->
-            <div class="k-modal-image">
-              <img src="k_images/register-bus.png" alt="AJ Express Bus" />
-            </div>
-
-            <!-- Right Side - OTP Form -->
-            <div class="k-modal-form">
-              <!-- Close Button -->
-              <button
-                type="button"
-                class="k-close-btn"
-                data-bs-dismiss="modal"
-              >
-                &times;
-              </button>
-
-              <!-- Form Header -->
-              <div class="k-form-header">
-                <h2 class="k-title">Verify OTP</h2>
-                <p class="k-subtitle">
-                  Enter the verification code sent to
-                  <span>+91 XXXXXXXXXX</span>
-                </p>
-              </div>
-
-              <!-- OTP Fields -->
-              <div class="k">
-                <div class="otp-container">
-                  <input
-                    type="text"
-                    maxlength="1"
-                    class="otp-input"
-                    autofocus
-                  />
-                  <input type="text" maxlength="1" class="otp-input" />
-                  <input type="text" maxlength="1" class="otp-input" />
-                  <input type="text" maxlength="1" class="otp-input" />
-                </div>
-
-                <div class="k-verify">
-                  <button type="button" class="veri">Verify</button>
-                </div>
-
-                <div class="undo k-resend">
-                  Didn't receive the code? <span>Resend</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Register OTP Modal -->
-  <div
-    class="modal fade"
-    id="RegisterOtpModel"
-    tabindex="-1"
-    aria-labelledby="registerOtpModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body p-0">
-          <div class="k-modal-content">
-            <!-- Left Side - Bus Image -->
-            <div class="k-modal-image">
-              <img src="k_images/register-bus.png" alt="AJ Express Bus" />
-            </div>
-
-            <!-- Right Side - OTP Form -->
-            <div class="k-modal-form">
-              <!-- Close Button -->
-              <button
-                type="button"
-                class="k-close-btn"
-                data-bs-dismiss="modal"
-              >
-                &times;
-              </button>
-
-              <!-- Form Header -->
-              <div class="k-form-header">
-                <h2 class="k-title">Verify OTP</h2>
-                <p class="k-subtitle">
-                  Enter the verification code sent to
-                  <span class="register-phone">+91 XXXXXXXXXX</span>
-                </p>
-              </div>
-
-              <!-- OTP Fields -->
-              <div class="k">
-                <div class="otp-container">
-                  <input
-                    type="text"
-                    maxlength="1"
-                    class="otp-input"
-                    autofocus
-                  />
-                  <input type="text" maxlength="1" class="otp-input" />
-                  <input type="text" maxlength="1" class="otp-input" />
-                  <input type="text" maxlength="1" class="otp-input" />
-                </div>
-
-                <div class="k-verify">
-                  <button type="button">Verify</button>
-                </div>
-
-                <div class="k-resend">
-                  Didn't receive the code? <span>Resend</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Register Modal -->
-  <div
-    class="modal fade"
-    id="registerModal"
-    tabindex="-1"
-    aria-labelledby="registerModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body p-0">
-          <div class="k-modal-content">
-            <!-- Left Side - Bus Image -->
-            <div class="k-modal-image">
-              <img src="k_images/register-bus.png" alt="AJ Express Bus" />
-            </div>
-
-            <!-- Right Side - Register Form -->
-            <div class="k-modal-form">
-              <!-- Close Button -->
-              <button
-                type="button"
-                class="k-close-btn"
-                data-bs-dismiss="modal"
-              >
-                &times;
-              </button>
-
-              <!-- Form Header -->
-              <div class="k-form-header">
-                <h2 class="k-title">Sign Up</h2>
-                <p class="k-subtitle">Create a new account</p>
-              </div>
-
-              <!-- Form Fields -->
-              <form class="k-login-form" id="registerForm">
-                <div class="k-form-group">
-                  <label for="regName" class="k-label">Name</label>
-                  <input
-                    type="text"
-                    class="k-input"
-                    id="regName"
-                    placeholder="Enter your full name"
-                    required
-                  />
-                </div>
-
-                <div class="k-form-group">
-                  <label for="regEmail" class="k-label">Email</label>
-                  <input
-                    type="email"
-                    class="k-input"
-                    id="regEmail"
-                    placeholder="Enter your email"
-                  />
-                </div>
-
-                <div class="k-form-group">
-                  <label for="regMobile" class="k-label">Mobile No</label>
-                  <div class="k-input-group">
-                    <div class="k-country-code">+91</div>
-                    <input
-                      type="tel"
-                      class="k-input"
-                      id="regMobile"
-                      placeholder="Enter your mobile no"
+                      id="regName"
+                      placeholder="Enter your full name"
                       required
                     />
                   </div>
-                </div>
 
-                <button
-                  type="button"
-                  class="k-submit-btn"
-                  id="registerButton"
-                >
-                  Register
-                </button>
-
-                <!-- OR Divider -->
-                <div class="k-divider">
-                  <span>OR</span>
-                </div>
-
-                <!-- Social Login -->
-                <div class="k-social-login">
-                  <button type="button" class="k-social-btn k-google">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                      alt="Google"
+                  <div class="k-form-group">
+                    <label for="regEmail" class="k-label">Email</label>
+                    <input
+                      type="email"
+                      class="k-input"
+                      id="regEmail"
+                      placeholder="Enter your email"
                     />
-                  </button>
-                  <button type="button" class="k-social-btn k-facebook">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                      alt="Facebook"
-                    />
-                  </button>
-                  <button type="button" class="k-social-btn k-apple">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-                      alt="Apple"
-                    />
-                  </button>
-                </div>
+                  </div>
 
-                <!-- Login Link -->
-                <div class="k-signup-link">
-                  Already have an account?
-                  <a href="#" id="showLoginModal">Sign in</a>
-                </div>
-              </form>
+                  <div class="k-form-group">
+                    <label for="regMobile" class="k-label">Mobile No</label>
+                    <div class="k-input-group">
+                      <div class="k-country-code">+91</div>
+                      <input
+                        type="tel"
+                        class="k-input"
+                        id="regMobile"
+                        placeholder="Enter your mobile no"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="k-submit-btn"
+                    id="registerButton"
+                  >
+                    Register
+                  </button>
+
+                  <!-- OR Divider -->
+                  <div class="k-divider">
+                    <span>OR</span>
+                  </div>
+
+                  <!-- Social Login -->
+                  <div class="k-social-login">
+                    <button type="button" class="k-social-btn k-google">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                        alt="Google"
+                      />
+                    </button>
+                    <button type="button" class="k-social-btn k-facebook">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                        alt="Facebook"
+                      />
+                    </button>
+                    <button type="button" class="k-social-btn k-apple">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                        alt="Apple"
+                      />
+                    </button>
+                  </div>
+
+                  <!-- Login Link -->
+                  <div class="k-signup-link">
+                    Already have an account?
+                    <a href="#" id="showLoginModal">Sign in</a>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
     <section id="J_contect">
       <div class="container">
@@ -542,11 +540,27 @@
                   type="Name"
                   name="Fname"
                   placeholder="Enter First Name"
+                  required
                 />
+                <span
+                  class="error-message"
+                  id="firstNameError"
+                  style="color: red; display: none"
+                ></span>
               </div>
               <div class="col-6 J_details-box">
                 <h2>Last Name</h2>
-                <input type="name" name="Lname" placeholder="Enter Last Name" />
+                <input
+                  type="name"
+                  name="Lname"
+                  placeholder="Enter Last Name"
+                  required
+                />
+                <span
+                  class="error-message"
+                  id="lastNameError"
+                  style="color: red; display: none"
+                ></span>
               </div>
             </div>
 
@@ -560,8 +574,19 @@
                     <option value="+44">+44</option>
                     <option value="+61">+61</option>
                   </select>
-                  <input type="text" placeholder="Enter your mobile no." />
+                  <input
+                    type="text"
+                    placeholder="Enter your mobile no."
+                    maxlength="10"
+                    pattern="\d{10}"
+                    required
+                  />
                 </div>
+                <span
+                  class="error-message"
+                  id="phoneError"
+                  style="color: red; display: none"
+                ></span>
               </div>
 
               <div class="col-6 J_details-box">
@@ -570,13 +595,29 @@
                   type="email"
                   name="email"
                   placeholder="Enter your email"
+                  required
                 />
+                <span
+                  class="error-message"
+                  id="emailError"
+                  style="color: red; display: none"
+                ></span>
               </div>
             </div>
 
             <div class="col-12 J_subject-box">
               <h2>Subject</h2>
-              <input type="Name" name="subject" placeholder="Enter Subject" />
+              <input
+                type="text"
+                name="subject"
+                placeholder="Enter Subject"
+                required
+              />
+              <span
+                class="error-message"
+                id="subjectError"
+                style="color: red; display: none"
+              ></span>
             </div>
 
             <div class="col-12 J_message-box">
@@ -584,11 +625,17 @@
               <textarea
                 name="Message"
                 placeholder="Enter Message..."
+                required
               ></textarea>
+              <span
+                class="error-message"
+                id="messageError"
+                style="color: red; display: none"
+              ></span>
             </div>
 
             <div class="J_submit-button">
-              <a href="#">Submit</a>
+              <a href="#" id="submitButton">Submit</a>
             </div>
           </div>
         </div>
@@ -598,81 +645,199 @@
     <!-- <section id="foot"></section> -->
     <section id="foot">
       <div class="container">
-          <div class="row footer_data">
-              <div class="col-lg-4 col-md-6  head_logo">
-                  <img src="./image/LOGO.png" alt="">
+        <div class="row footer_data">
+          <div class="col-lg-4 col-md-6 head_logo">
+            <img src="./image/LOGO.png" alt="" />
 
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.</p>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum.
+            </p>
 
-                  <div class="foot_data">
-                      <h4><img src="./image/Group.png" alt=""> <span>support.example@gmail.com</span></h4>
-                  </div>
-                  <div class="foot_data">
-                      <h4><img src="./image/call.png" alt=""><span>+91 3698527412</span></h4>
-                  </div>
-              </div>
-
-              <div class="col-lg-2 col-md-6  infor">
-                  <div class="widget_menu">
-                      <ul>
-                          <li class="text"> Information</li>
-                          <li>
-                              <a href="J_about-us.html"> About Us</a>
-                          </li>
-                          <li>
-                              <a href="J_contact-us.html"> Contact Us</a>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6 infor">
-                  <div class="widget_menu">
-                      <ul>
-                          <li class="text"> Support</li>
-                          <li>
-                              <a href="J_FAQs.html"> FAQ's</a>
-                          </li>
-                          <li>
-                              <a href="J_terms-condition.html"> Terms & Condition</a>
-                          </li>
-                          <li>
-                              <a href="J_Privacy-Policy.html"> Privacy Policy</a>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6 infor">
-                  <div class="widget_menu">
-                      <ul>
-                          <li class="text"> Follow us on</li>
-                          <li class="ico">
-                              <a href="#" class="icon_foot"> <i class="fa-brands fa-instagram"></i> </a>
-                              <a href="#" class="icon_foot"> <i class="fa-brands fa-facebook"></i></a>
-                              <a href="#" class="icon_foot"> <i class="fa-brands fa-x-twitter"></i></a>
-                          </li>
-
-                      </ul>
-                  </div>
-              </div>
+            <div class="foot_data">
+              <h4>
+                <img src="./image/Group.png" alt="" />
+                <span>support.example@gmail.com</span>
+              </h4>
+            </div>
+            <div class="foot_data">
+              <h4>
+                <img src="./image/call.png" alt="" /><span>+91 3698527412</span>
+              </h4>
+            </div>
           </div>
+
+          <div class="col-lg-2 col-md-6 infor">
+            <div class="widget_menu">
+              <ul>
+                <li class="text">Information</li>
+                <li>
+                  <a href="J_about-us.html"> About Us</a>
+                </li>
+                <li>
+                  <a href="J_contact-us.html"> Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 infor">
+            <div class="widget_menu">
+              <ul>
+                <li class="text">Support</li>
+                <li>
+                  <a href="J_FAQs.html"> FAQ's</a>
+                </li>
+                <li>
+                  <a href="J_terms-condition.html"> Terms & Condition</a>
+                </li>
+                <li>
+                  <a href="J_Privacy-Policy.html"> Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 infor">
+            <div class="widget_menu">
+              <ul>
+                <li class="text">Follow us on</li>
+                <li class="ico">
+                  <a href="#" class="icon_foot">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="#" class="icon_foot">
+                    <i class="fa-brands fa-facebook"></i
+                  ></a>
+                  <a href="#" class="icon_foot">
+                    <i class="fa-brands fa-x-twitter"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="last_line">
-          <p>All right reserved @ 2025</p>
+        <p>All right reserved @ 2025</p>
       </div>
-  </section>
+    </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="./js/global-auth.js"></script>
     <script>
       const phoneInput = document.querySelector("#J_phone");
       window.intlTelInput(phoneInput, {
-        initialCountry: "in", // Set default country (India)
-        separateDialCode: true, // Shows separate dial code
-        preferredCountries: ["in", "us", "gb"], // Preferred countries
+        initialCountry: "in",
+        separateDialCode: true,
+        preferredCountries: ["in", "us", "gb"],
       });
     </script>
-     <script src="js/k-otp.js"></script>
-     <script src="js/k-model-open.js"></script>
+    <script src="js/k-otp.js"></script>
+    <script src="js/k-model-open.js"></script>
+
+    <script>
+      document
+        .getElementById("submitButton")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          let isValid = true;
+
+          document.getElementById("firstNameError").style.display = "none";
+          document.getElementById("lastNameError").style.display = "none";
+          document.getElementById("phoneError").style.display = "none";
+          document.getElementById("emailError").style.display = "none";
+          document.getElementById("subjectError").style.display = "none";
+          document.getElementById("messageError").style.display = "none";
+          const firstName = document.querySelector('input[name="Fname"]').value;
+          if (firstName.trim() === "") {
+            document.getElementById("firstNameError").innerText =
+              "First Name is required.";
+            document.getElementById("firstNameError").style.display = "block";
+            isValid = false;
+          }
+
+          const lastName = document.querySelector('input[name="Lname"]').value;
+          if (lastName.trim() === "") {
+            document.getElementById("lastNameError").innerText =
+              "Last Name is required.";
+            document.getElementById("lastNameError").style.display = "block";
+            isValid = false;
+          }
+
+          const phone = document.querySelector(
+            'input[type="text"][placeholder="Enter your mobile no."]'
+          ).value;
+          if (phone.trim() === "") {
+            document.getElementById("phoneError").innerText =
+              "Phone number is required.";
+            document.getElementById("phoneError").style.display = "block";
+            isValid = false;
+          } else if (!/^\d{10}$/.test(phone)) {
+            document.getElementById("phoneError").innerText =
+              "Phone number must be 10 digits.";
+            document.getElementById("phoneError").style.display = "block";
+            isValid = false;
+          }
+
+          const email = document.querySelector('input[name="email"]').value;
+          if (email.trim() === "") {
+            document.getElementById("emailError").innerText =
+              "Email is required.";
+            document.getElementById("emailError").style.display = "block";
+            isValid = false;
+          } else if (!/\S+@\S+\.\S+/.test(email)) {
+            document.getElementById("emailError").innerText =
+              "Email is invalid.";
+            document.getElementById("emailError").style.display = "block";
+            isValid = false;
+          }
+
+          const subject = document.querySelector('input[name="subject"]').value;
+          if (subject.trim() === "") {
+            document.getElementById("subjectError").innerText =
+              "Subject is required.";
+            document.getElementById("subjectError").style.display = "block";
+            isValid = false;
+          }
+
+          const message = document.querySelector(
+            'textarea[name="Message"]'
+          ).value;
+          if (message.trim() === "") {
+            document.getElementById("messageError").innerText =
+              "Message is required.";
+            document.getElementById("messageError").style.display = "block";
+            isValid = false;
+          }
+
+          if (isValid) {
+            const formData = {
+              Fname: document.querySelector('input[name="Fname"]').value,
+              Lname: document.querySelector('input[name="Lname"]').value,
+              phone: document.querySelector(
+                'input[type="text"][placeholder="Enter your mobile no."]'
+              ).value,
+              email: document.querySelector('input[name="email"]').value,
+              subject: document.querySelector('input[name="subject"]').value,
+              message: document.querySelector('textarea[name="Message"]').value,
+            };
+
+            fetch("http://localhost:3000/passengerdetail", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(formData),
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                alert("Form submitted successfully!");
+                console.log("Success:", data);
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+              });
+          }
+        });
+    </script>
   </body>
 </html>
-
