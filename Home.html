@@ -94,7 +94,7 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-body p-0">
-              <div class="k-modal-content">
+              <div class="k-modal-content-login">
                 <!-- Left Side - Bus Image -->
                 <div class="k-modal-image">
                   <img src="k_images/register-bus.png" alt="AJ Express Bus" />
@@ -107,6 +107,7 @@
                     type="button"
                     class="k-close-btn"
                     data-bs-dismiss="modal"
+                    onclick="backdropClose()"
                   >
                     &times;
                   </button>
@@ -182,15 +183,10 @@
         aria-labelledby="otpModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="ke-otp modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-body p-0">
-              <div class="k-modal-content">
-                <!-- Left Side - Bus Image -->
-                <div class="k-modal-image">
-                  <img src="k_images/register-bus.png" alt="AJ Express Bus" />
-                </div>
-  
+              <div class="k-modal-content-otp">
                 <!-- Right Side - OTP Form -->
                 <div class="k-modal-form">
                   <!-- Close Button -->
@@ -198,6 +194,7 @@
                     type="button"
                     class="k-close-btn"
                     data-bs-dismiss="modal"
+                    onclick="backdropClose()"
                   >
                     &times;
                   </button>
@@ -229,74 +226,8 @@
                       <button type="button" class="veri">Verify</button>
                     </div>
   
-                    <div class="undo k-resend">
-                      Didn't receive the code? <span>Resend</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Register OTP Modal -->
-      <div
-        class="modal fade"
-        id="RegisterOtpModel"
-        tabindex="-1"
-        aria-labelledby="registerOtpModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-body p-0">
-              <div class="k-modal-content">
-                <!-- Left Side - Bus Image -->
-                <div class="k-modal-image">
-                  <img src="k_images/register-bus.png" alt="AJ Express Bus" />
-                </div>
-  
-                <!-- Right Side - OTP Form -->
-                <div class="k-modal-form">
-                  <!-- Close Button -->
-                  <button
-                    type="button"
-                    class="k-close-btn"
-                    data-bs-dismiss="modal"
-                  >
-                    &times;
-                  </button>
-  
-                  <!-- Form Header -->
-                  <div class="k-form-header">
-                    <h2 class="k-title">Verify OTP</h2>
-                    <p class="k-subtitle">
-                      Enter the verification code sent to
-                      <span class="register-phone">+91 XXXXXXXXXX</span>
-                    </p>
-                  </div>
-  
-                  <!-- OTP Fields -->
-                  <div class="k">
-                    <div class="otp-container">
-                      <input
-                        type="text"
-                        maxlength="1"
-                        class="otp-input"
-                        autofocus
-                      />
-                      <input type="text" maxlength="1" class="otp-input" />
-                      <input type="text" maxlength="1" class="otp-input" />
-                      <input type="text" maxlength="1" class="otp-input" />
-                    </div>
-  
-                    <div class="k-verify">
-                      <button type="button">Verify</button>
-                    </div>
-  
-                    <div class="k-resend">
-                      Didn't receive the code? <span>Resend</span>
+                    <div class="undo k-resend d-flex align-items-center justify-content-center">
+                     <p class="m-0 pe-2 ke-resend"> Didn't receive the code?</p><span>Resend</span>
                     </div>
                   </div>
                 </div>
@@ -330,6 +261,7 @@
                     type="button"
                     class="k-close-btn"
                     data-bs-dismiss="modal"
+                    onclick="backdropClose()"
                   >
                     &times;
                   </button>
@@ -363,6 +295,17 @@
                       />
                     </div>
   
+                    <div class="k-form-group">
+                      <label for="regPassword" class="k-label">Password</label>
+                      <input
+                        type="password"
+                        class="k-input"
+                        id="regPassword"
+                        placeholder="Enter your password"
+                        required
+                      />
+                    </div>
+
                     <div class="k-form-group">
                       <label for="regMobile" class="k-label">Mobile No</label>
                       <div class="k-input-group">
@@ -424,6 +367,74 @@
           </div>
         </div>
       </div>
+
+         <!-- Register OTP Modal -->
+      <div
+        class="modal fade"
+        id="RegisterOtpModel"
+        tabindex="-1"
+        aria-labelledby="registerOtpModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body p-0">
+              <div class="k-modal-content">
+                <!-- Left Side - Bus Image -->
+                <div class="k-modal-image">
+                  <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+                </div>
+  
+                <!-- Right Side - OTP Form -->
+                <div class="k-modal-form">
+                  <!-- Close Button -->
+                  <button
+                    type="button"
+                    class="k-close-btn"
+                    data-bs-dismiss="modal"
+                    onclick="backdropClose()"
+                  >
+                    &times;
+                  </button>
+  
+                  <!-- Form Header -->
+                  <div class="k-form-header">
+                    <h2 class="k-title">Verify OTP</h2>
+                    <p class="k-subtitle">
+                      Enter the verification code sent to
+                      <span class="register-phone">+91 XXXXXXXXXX</span>
+                    </p>
+                  </div>
+  
+                  <!-- OTP Fields -->
+                  <div class="k">
+                    <div class="otp-container">
+                      <input
+                        type="text"
+                        maxlength="1"
+                        class="otp-input"
+                        autofocus
+                      />
+                      <input type="text" maxlength="1" class="otp-input" />
+                      <input type="text" maxlength="1" class="otp-input" />
+                      <input type="text" maxlength="1" class="otp-input" />
+                    </div>
+  
+                    <div class="k-verify">
+                      <button type="button">Verify</button>
+                    </div>
+  
+                    <div class="k-resend">
+                      Didn't receive the code? <span>Resend</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
 
   
     <!-- --------------------------hero section--------------------------- -->
@@ -994,6 +1005,16 @@
                 }
             });
         });
+
+    </script>
+
+    <script>
+   function backdropClose() {
+    let backdrops = document.querySelectorAll(".modal-backdrop");
+    backdrops.forEach(backdrop => {
+        backdrop.remove(); // Completely remove the backdrop from the DOM
+    });
+}
 
     </script>
 

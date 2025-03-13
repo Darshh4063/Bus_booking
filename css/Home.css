@@ -1390,3 +1390,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .feature:hover .k-hover-box {
   display: block;
 }
+
+
+.ke-otp .modal-content {
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+body{
+  overflow: scroll !important;
+  padding-right: 0 !important;
+}

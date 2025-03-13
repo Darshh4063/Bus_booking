@@ -33,6 +33,7 @@ class AuthService {
         name: user.name || "",
         email: user.email || "",
         phone: user.phone || "",
+        password: user.password || "",
         profileImage: user.image || this.defaultProfileImage,
         gender: user.gender || "",
         dateOfBirth: user.dateOfBirth || "",
@@ -63,6 +64,7 @@ class AuthService {
   // Register new user
   async register(userData) {
     try {
+      alert("Registering");
       // Check if user already exists
       const existingUserResponse = await fetch(
         `${this.baseUrl}/user?phone=${userData.phone}`
@@ -110,7 +112,7 @@ class AuthService {
 
       const user = await response.json();
 
-      // Store complete user info in localStorage
+      // Store complete user info in localStorage with password included
       localStorage.setItem(
         "currentUser",
         JSON.stringify({
@@ -171,8 +173,8 @@ class AuthService {
           JSON.stringify({
             ...currentUser,
             ...updatedData,
-            // Ensure profileImage is properly mapped from image
             profileImage: updatedData.image || currentUser.profileImage,
+            password: currentUser.password || "",
           })
         );
       }

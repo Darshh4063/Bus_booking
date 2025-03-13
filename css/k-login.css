@@ -42,16 +42,15 @@
 }
 
 .k-verify {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  text-align: center;
 }
 
+
 .k-verify button {
-  background-color: #007bff;
+  background-color: #C16C49;
   color: white;
   border: none;
-  padding: 10px 30px;
+  padding: 10px 100px;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -127,7 +126,17 @@
 
 .k-modal-content {
   display: flex;
+  height: 735px;
+}
+
+.k-modal-content-login {
+  display: flex;
   height: 500px;
+}
+
+.k-modal-content-otp{
+  display: flex;
+  height: 100%;
 }
 
 /* Trigger Button */
@@ -236,7 +245,7 @@
 .k-input {
   flex: 1;
   padding: 10px 15px;
-  border: none;
+  width: 100%;
   outline: none;
   font-size: 14px;
 }
@@ -330,6 +339,15 @@
   text-decoration: underline;
 }
 
+.ke-resend{
+  color: #6D6D6D;
+}
+
+.modal-dialog {
+  max-width: 800px !important;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .k-modal-content {
@@ -342,4 +360,18 @@
   .k-modal {
     max-width: 400px;
   }
+}
+
+@media (min-width: 5px) and (max-width: 768px) {
+  .k-modal-image {
+    display: none;
+  }
+}
+
+@media (min-width: 5px) and (max-width: 320px) {
+  .k-verify button{
+    width: 100%;
+    padding: 10px 30px;
+    /* text-align: left; */
+  } 
 }
