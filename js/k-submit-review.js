@@ -100,6 +100,11 @@ function getCurrentUserName() {
   return currentUser?.name || currentUser?.username;
 }
 
+function getCurrentUserProfileImage() {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  return currentUser?.profileImage || "default-profile.png"; // Return default if no image exists
+}
+
 // Function to save review to localStorage
 function saveReviewToLocalStorage(reviewData) {
   // Get existing reviews or initialize empty array
@@ -279,7 +284,8 @@ function submitReview() {
     date: formatDate(new Date()),
     rating: Math.round(parseFloat(overallRating)),
     comment: document.querySelector("textarea").value || "No comment provided",
-    userId: userId, // Include userId in the review for reference
+    userId: userId,
+    profileImage: getCurrentUserProfileImage()
   };
 
   // Create the complete review data in the desired format
