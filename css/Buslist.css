@@ -616,6 +616,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .table-container {
   flex: 1;
+  align-self: center;
   /* min-width: 300px; */
 }
 
@@ -653,16 +654,16 @@ tr:nth-child(even) td {
 
 .info-heading {
   font-size: 24px;
-  margin-bottom: 15px;
-  text-align: center;
+  /* margin-bottom: 15px; */
+  /* text-align: center; */
 }
 
 .info-list {
-  padding-left: 20px;
+  /* padding-left: 20px; */
 }
 
 .info-list li {
-  margin-bottom: 12px;
+  margin-bottom: 7px;
   color: #555;
   position: relative;
   padding-left: 5px;
@@ -698,6 +699,8 @@ tr:nth-child(even) td {
   font-weight: bold;
   margin-bottom: 20px;
   color: #222;
+  text-align: start;
+  padding-left: 15px;
 }
 
 .amenities-list {
@@ -915,7 +918,7 @@ tr:nth-child(even) td {
 }
 
 .star {
-  color: #ddd;
+  /* color: #ddd; */
   font-size: 25px;
 }
 
@@ -1181,4 +1184,24 @@ tr:nth-child(even) td {
 
 .margin_left {
   margin-left: 25px;
+}
+
+
+
+
+/* carousel css */
+.owl-theme .owl-dots .owl-dot span {
+  width: 25px !important;
+  height: 8px !important;
+  margin: 5px !important;
+  /* background-color: #c15b3f !important; */
+}
+
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background-color: #a34935 !important;
+}
+
+.owl-items img{
+  width: 200px !important;
 }

@@ -846,7 +846,7 @@ function renderBusList(buses) {
       <div class="travel-info">
         <div class="rating">
           <span class="star">★</span>
-          <span class="rating-value">${bus.rating}</span>
+          <span class="rating-value">${bus.ratings.overall}</span>
         </div>
         <div class="company-name">${bus.companyName}</div>
         <div class="bus-type">${bus.busType}</div>  
@@ -906,17 +906,17 @@ function renderBusList(buses) {
               <table>
                 <thead>
                   <tr>
-                    <th>Cancellation Time</th>
-                    <th>Charges</th>
+                    <th style="border: 1px solid black">Cancellation Time</th>
+                    <th style="border: 1px solid black">Charges</th>
                   </tr>
                 </thead>
                 <tbody>
                   ${bus.policies.cancellationPolicies
                     .map(
                       (policy) => `
-                    <tr>
-                      <td>${policy.time}</td>
-                      <td class="charges">${policy.charges}</td>
+                    <tr style="border: 1px solid black">
+                      <td style="border: 1px solid black">${policy.time}</td>
+                      <td class="charges" style="border: 1px solid black">${policy.charges}</td>
                     </tr>
                   `
                     )
@@ -925,7 +925,7 @@ function renderBusList(buses) {
               </table>
             </div>
             <div class="info-container">
-              <h2 class="info-heading">Info</h2>
+              <h2 class="info-heading m-0 ps-4">Info</h2>
               <ul class="info-list">
                 ${bus.policies.info
                   .map(
@@ -1092,7 +1092,7 @@ function renderBusList(buses) {
                   <div class="review-card">
                     <div class="review-header">
                       <div class="user-info">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-aw6GYkNqBu9RHKV6YRCYTefLhtSz9r.png" 
+                        <img src="${e.profileImage}" 
                           alt="${e.name}" class="avatar">
                         <div class="user-details text-start">
                           <h4>${e.name}</h4>
@@ -1316,7 +1316,7 @@ function renderBusList(buses) {
     loop: true,
     margin: 10,
     dots: true,
-    items: 2,
+    // items: 1,
     nav: true,
     // responsive:{
     //     0:{
@@ -1497,7 +1497,7 @@ window.onload = () => {
   // console.log(f);
 
   if (!f || !f.fromlocation || !f.toValuelocation) {
-    console.log("No valid filter data found. Skipping searchData call.");
+    // console.log("No valid filter data found. Skipping searchData call.");
     return;
   }
 
@@ -1516,9 +1516,9 @@ window.addEventListener("load", () => {
   let refreshCount = sessionStorage.getItem("refreshCount");
 
   if (!refreshCount) {
-      sessionStorage.setItem("refreshCount", "1");
+    sessionStorage.setItem("refreshCount", "1");
   } else if (refreshCount === "1") {
-      localStorage.clear();
-      sessionStorage.removeItem("refreshCount"); 
+    sessionStorage.removeItem("refreshCount");
+    localStorage.removeItem("filterData");
   }
 });
