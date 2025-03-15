@@ -176,109 +176,115 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Process the cancellation
-  async function processCancellation() {
-    try {
-      const userId = getCurrentUserId();
-      if (!userId || !bookingData) {
-        throw new Error("Missing user ID or booking data");
-      }
-
-      // Get selected passengers
-      const selectedPassengers = [];
-      const selectedPassengerDetails = [];
-
-      passengerCheckboxes.forEach((checkbox, index) => {
-        if (checkbox.checked) {
-          selectedPassengers.push(index);
-
-          // Get the passenger details from the row
-          const row = checkbox.closest("tr");
-          const passengerDetail = {
-            name: row.cells[1].textContent,
-            gender: row.cells[2].textContent,
-            age: row.cells[3].textContent,
-            seatNo: row.cells[4].textContent,
-          };
-          selectedPassengerDetails.push(passengerDetail);
-        }
-      });
-
-      // If all passengers are selected, cancel the entire booking
-      const cancelEntireBooking =
-        selectedPassengers.length === passengerCheckboxes.length;
-
-      // Create cancellation object with complete details
-      const cancellationDetails = {
-        bookingId: bookingId,
-        busName: bookingData.busName,
-        pickupLocation: bookingData.pickupLocation,
-        dropLocation: bookingData.dropLocation,
-        travelDate: bookingData.busdateDepature,
-        reason: reasonSelect.value,
-        description: descriptionTextarea.value,
-        cancelDate: new Date().toISOString(),
-        cancellationTime: new Date().toLocaleTimeString(),
-        // selectedPassengers: selectedPassengerDetails,
-        refundAmount: calculateRefundAmount(
-          bookingData,
-          selectedPassengers.length
-        ),
-        fullCancellation: cancelEntireBooking,
-        contactDetails: bookingData.contactDetails || {
-          phone: { number: "" },
-          email: "",
-        },
-      };
-
-      // Store cancellation in localStorage
-      storeCancellationInLocalStorage(cancellationDetails);
-
-      // Update booking status on the server
-      await updateBookingStatusWithCancellation(
-        userId,
-        bookingId,
-        cancelEntireBooking ? "cancelled" : "cancelled",
-        cancellationDetails,
-        selectedPassengers
-      );
-
-      // Release seat reservations for the cancelled seats
-      if (cancelEntireBooking) {
-        await releaseSeatReservations(bookingData);
-      }
-
-      return true;
-    } catch (error) {
-      console.error("Error processing cancellation:", error);
-      throw error;
+// Process the cancellation
+// Modify the processCancellation function in k-cancel-bus.js
+async function processCancellation() {
+  try {
+    const userId = getCurrentUserId();
+    if (!userId || !bookingData) {
+      throw new Error("Missing user ID or booking data");
     }
-  }
 
-  // Calculate refund amount based on booking data and number of passengers
-  function calculateRefundAmount(booking, passengerCount) {
-    // Simple calculation for demo purposes
-    // In a real app, you might have complex rules based on cancellation time, etc.
-    const totalPrice = booking.totalPayableAmount || booking.totalPrice || 0;
-    const perPassengerPrice = totalPrice / (booking.passengers?.length || 1);
+    // Get selected passengers
+    const selectedPassengers = [];
+    const selectedPassengerDetails = [];
 
-    // Apply cancellation fee (e.g., 10%)
-    const cancellationFeePercent = 10;
-    const refundPerPassenger =
-      perPassengerPrice * (1 - cancellationFeePercent / 100);
+    passengerCheckboxes.forEach((checkbox, index) => {
+      if (checkbox.checked) {
+        selectedPassengers.push(index);
 
-    return {
-      originalAmount: totalPrice,
-      refundPerPassenger: Math.round(refundPerPassenger * 100) / 100,
-      totalRefund: Math.round(refundPerPassenger * passengerCount * 100) / 100,
-      cancellationFee:
-        Math.round(
-          ((perPassengerPrice * cancellationFeePercent) / 100) *
-            passengerCount *
-            100
-        ) / 100,
+        // Get the passenger details from the row
+        const row = checkbox.closest("tr");
+        const passengerDetail = {
+          name: row.cells[1].textContent,
+          gender: row.cells[2].textContent,
+          age: row.cells[3].textContent,
+          seatNo: row.cells[4].textContent,
+        };
+        selectedPassengerDetails.push(passengerDetail);
+      }
+    });
+
+    // If all passengers are selected, cancel the entire booking
+    const cancelEntireBooking =
+      selectedPassengers.length === passengerCheckboxes.length;
+
+    // Calculate cancellation charge (20% of the fare)
+    const totalPrice = bookingData.totalPayableAmount || bookingData.totalPrice || 0;
+    const cancellationFeePercent = 20; // Using 20% as per your cancellation policy
+    const cancellationCharge = Math.round((totalPrice * cancellationFeePercent) / 100);
+    const refundAmount = totalPrice - cancellationCharge;
+
+    // Create cancellation object with complete details
+    const cancellationDetails = {
+      bookingId: bookingId,
+      busName: bookingData.busName,
+      pickupLocation: bookingData.pickupLocation,
+      dropLocation: bookingData.dropLocation,
+      travelDate: bookingData.busdateDepature,
+      reason: reasonSelect.value,
+      description: descriptionTextarea.value,
+      cancelDate: new Date().toISOString(),
+      cancellationTime: new Date().toLocaleTimeString(),
+      selectedPassengers: selectedPassengerDetails,
+      cancellationCharge: cancellationCharge,
+      refundAmount: refundAmount,
+      totalPaid: totalPrice,
+      originalFare: totalPrice,
+      fullCancellation: cancelEntireBooking,
+      status: "Cancelled",
+      contactDetails: bookingData.contactDetails || {
+        phone: { number: "" },
+        email: "",
+      },
     };
-  }
 
+    // Store cancellation in localStorage
+    storeCancellationInLocalStorage(cancellationDetails);
+
+    // Update booking status on the server
+    await updateBookingStatusWithCancellation(
+      userId,
+      bookingId,
+      "cancelled",
+      cancellationDetails,
+      selectedPassengers
+    );
+
+    // Release seat reservations for the cancelled seats
+    if (cancelEntireBooking) {
+      await releaseSeatReservations(bookingData);
+    }
+
+    // Important: Store updated booking data for invoice display
+    // Create a new object with all booking data plus cancellation details
+    const updatedBookingData = {
+      ...bookingData,
+      status: "Cancelled",
+      cancellationDetails: cancellationDetails
+    };
+    
+    // Save this updated booking data for the invoice page
+    localStorage.setItem("invoiceBookingData", JSON.stringify(updatedBookingData));
+    
+    // Log for debugging
+    console.log("Saved cancellation data for invoice:", updatedBookingData);
+
+    return true;
+  } catch (error) {
+    console.error("Error processing cancellation:", error);
+    throw error;
+  }
+}
+
+// Also update the success button click handler to redirect to invoice.html
+document
+  .querySelector("#okmodel .btn-primary")
+  .addEventListener("click", function () {
+    // Redirect to invoice page
+    window.location.href = "invoice.html";
+  });
+  
   // Store cancellation details in localStorage
   function storeCancellationInLocalStorage(cancellationDetails) {
     // Get existing cancellations or initialize empty array
@@ -476,3 +482,14 @@ document.addEventListener("DOMContentLoaded", function () {
     return currentUser?.id;
   }
 });
+
+
+// Add event listener for the success button
+document
+  .querySelector("#okmodel .btn-primary")
+  .addEventListener("click", function () {
+    // Clear any temporary booking data from localStorage
+    localStorage.removeItem("tempBookingData");
+    // Redirect to invoice page instead
+    window.location.href = "invoice.html";
+  });

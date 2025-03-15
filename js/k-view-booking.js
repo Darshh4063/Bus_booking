@@ -537,7 +537,7 @@ function displayErrorMessage(message) {
           <p>${message}</p>
           <hr>
           <p class="mb-0">
-            <a href="mybookings.html" class="btn btn-outline-danger">Back to My Bookings</a>
+            <a href="mybooking.html" class="btn btn-outline-danger">Back to My Bookings</a>
           </p>
         </div>
       `;
@@ -550,7 +550,7 @@ function displayErrorMessage(message) {
             <p>${message}</p>
             <hr>
             <p class="mb-0">
-              <a href="mybookings.html" class="btn btn-outline-danger">Back to My Bookings</a>
+              <a href="mybooking.html" class="btn btn-outline-danger">Back to My Bookings</a>
             </p>
           </div>
         </div>

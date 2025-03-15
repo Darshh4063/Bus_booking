@@ -3533,6 +3533,276 @@
         }
       },
       "id": "dfa49"
+    },
+    {
+      "companyName": "New Dharti travels",
+      "busType": "AC",
+      "rating": "4.5",
+      "journey": {
+        "departure": {
+          "location": "Surat",
+          "time": "10:00 AM",
+          "date": "15 march 2025"
+        },
+        "arrival": {
+          "location": "Junagandh",
+          "time": "6:00 PM",
+          "date": "20 march 2025"
+        },
+        "duration": "11h 00m"
+      },
+      "price": {
+        "amount": "30,000",
+        "currency": "₹",
+        "discount": "Best deal 10% Off"
+      },
+      "travelLinks": [
+        {
+          "name": "Live Tracking",
+          "dataTab": "tracking"
+        },
+        {
+          "name": "Policies",
+          "dataTab": "policies"
+        },
+        {
+          "name": "Amenities",
+          "dataTab": "amenities"
+        },
+        {
+          "name": "Photos",
+          "dataTab": "photos"
+        },
+        {
+          "name": "Pickup & Drop off Point",
+          "dataTab": "pickup"
+        },
+        {
+          "name": "Reviews",
+          "dataTab": "reviews"
+        }
+      ],
+      "selectSeat": {
+        "dataTab": "selectseat"
+      },
+      "tracking": {
+        "content": "Live Tracking Content Will Appear Here"
+      },
+      "policies": {
+        "cancellationPolicies": [
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "Before Tue 04 Feb 12:44 PM",
+            "charges": "10%"
+          },
+          {
+            "time": "After Wed 05 Feb 12:44 PM",
+            "charges": "20%"
+          }
+        ],
+        "info": [
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Lorem Ipsum is simply dummy text of the printing and",
+          "Lorem Ipsum is simply dummy text of the printing",
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "Lorem Ipsum is simply dummy text of the printing and"
+        ]
+      },
+      "amenities": [
+        "WiFi",
+        "Water Bottle",
+        "Charging Point",
+        "Blanket",
+        "Live Tracking",
+        "Emergency Toilet"
+      ],
+      "photos": [
+        "buslist_slider1.png",
+        "buslist_slider2.png",
+        "buslist_slider3.png",
+        "buslist_slider4.png",
+        "buslist_slider3.png"
+      ],
+      "pickupPoints": [
+        {
+          "time": "10:00",
+          "location": "Navjivan Hotel"
+        },
+        {
+          "time": "11:00",
+          "location": "Katargam, Unapani Road"
+        },
+        {
+          "time": "01:00",
+          "location": "Kiram Hospital, Nanigam Circle"
+        },
+        {
+          "time": "05:00",
+          "location": "Savera Complex, Udhana"
+        },
+        {
+          "time": "08:00",
+          "location": "Navjivan Hotel"
+        }
+      ],
+      "dropoffPoints": [
+        {
+          "time": "10:00",
+          "location": "Majevdi Gate"
+        },
+        {
+          "time": "10:30",
+          "location": "Gandhi Chowk"
+        },
+        {
+          "time": "11:00",
+          "location": "Motibaug"
+        }
+      ],
+      "ratings": {
+        "overall": "4.5",
+        "categories": {
+          "busQuality": "3.5",
+          "driving": "4.0",
+          "seatComfort": "3.0",
+          "safetyAndHygiene": "4.1",
+          "cleanliness": "3.2"
+        }
+      },
+      "reviews": [],
+      "seatInfo": {
+        "legend": [
+          {
+            "type": "available",
+            "label": "Available"
+          },
+          {
+            "type": "booked",
+            "label": "Booked"
+          },
+          {
+            "type": "selected",
+            "label": "Selected"
+          }
+        ],
+        "seating": {
+          "lowerDeck": {
+            "title": "Lower Seat",
+            "seats": [
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "available",
+                "booked"
+              ],
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "booked"
+              ]
+            ]
+          },
+          "upperDeck": {
+            "title": "Upper Seat",
+            "seats": [
+              [
+                "available",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "booked",
+                "booked",
+                "booked"
+              ],
+              [
+                "booked",
+                "booked",
+                "available"
+              ],
+              [
+                "available",
+                "available",
+                "available"
+              ]
+            ]
+          }
+        },
+        "sidebar": {
+          "tabs": [
+            "Pick Up Point",
+            "Drop Off Point"
+          ],
+          "pickupPoints": [
+            {
+              "time": "10:00 AM",
+              "location": "Shyamdham Mandir, Jakatnaka",
+              "selected": true
+            },
+            {
+              "time": "11:00 AM",
+              "location": "Pasodara Patiya, Pasodara",
+              "selected": false
+            },
+            {
+              "time": "11:30 AM",
+              "location": "Laskana Gam, Laskana",
+              "selected": false
+            },
+            {
+              "time": "12:10 AM",
+              "location": "Kamrej Under Bridge, Kamrej",
+              "selected": false
+            },
+            {
+              "time": "01:00 AM",
+              "location": "Raj Hotel, Kmarej Highway",
+              "selected": false
+            }
+          ]
+        },
+        "bookingSummary": {
+          "selectedSeats": [],
+          "buttonLabel": "Continue"
+        }
+      },
+      "id": "dfa49"
     }
   ],
   "BookingDetails": [
@@ -3615,7 +3885,7 @@
       "city": "Surat",
       "state": "Gujarat",
       "pincode": "395011",
-      "lastLogin": "2025-03-13T05:58:11.824Z",
+      "lastLogin": "2025-03-13T06:14:14.667Z",
       "gender": "male",
       "lastUpdated": "2025-02-28T09:11:36.514Z",
       "Bookings": [
@@ -3813,7 +4083,241 @@
       "city": "",
       "state": "",
       "pincode": "",
-      "lastLogin": "2025-03-11T12:04:53.132Z"
+      "lastLogin": "2025-03-13T06:42:06.265Z",
+      "Bookings": [
+        {
+          "busId": "dfa49",
+          "busName": "New Dharti travels",
+          "busType": "AC",
+          "busDateArrival": "20 march 2025",
+          "busdateDepature": "15 march 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Junagandh",
+          "dropTime": "6:00 PM",
+          "duration": "11h 00m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "30,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 30000,
+          "discount": 6120,
+          "gst": 5400,
+          "totalPrice": 35400,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Majevdi Gate",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "6:00 PM",
+          "totalPayableAmount": 29400,
+          "passengers": [
+            {
+              "name": "cdcvd",
+              "age": "23",
+              "gender": "Male",
+              "AadhaarCard": "343545223424",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "ghg@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "1232344565"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "30,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "cancelled",
+          "bookingId": "BKIASBHMML",
+          "cancellationDetails": {
+            "bookingId": "BKIASBHMML",
+            "busName": "New Dharti travels",
+            "pickupLocation": "Surat",
+            "dropLocation": "Junagandh",
+            "travelDate": "15 march 2025",
+            "reason": "You can't make it to the boarding point on time",
+            "description": "vgfrjhng",
+            "cancelDate": "2025-03-15T05:48:20.617Z",
+            "cancellationTime": "11:18:20 AM",
+            "selectedPassengers": [],
+            "cancellationCharge": 5880,
+            "refundAmount": 23520,
+            "totalPaid": 29400,
+            "originalFare": 29400,
+            "fullCancellation": false,
+            "status": "Cancelled",
+            "contactDetails": {
+              "email": "ghg@gmail.com",
+              "phone": {
+                "countryCode": "+91",
+                "number": "1232344565"
+              }
+            }
+          }
+        },
+        {
+          "busId": "dfa49",
+          "busName": "New Dharti travels",
+          "busType": "AC",
+          "busDateArrival": "20 march 2025",
+          "busdateDepature": "15 march 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Junagandh",
+          "dropTime": "6:00 PM",
+          "duration": "11h 00m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "30,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 30000,
+          "discount": 6120,
+          "gst": 5400,
+          "totalPrice": 35400,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Junagandh, Majevdi Gate",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "6:00 PM",
+          "totalPayableAmount": 29400,
+          "passengers": [
+            {
+              "name": "dvddv",
+              "age": "34",
+              "gender": "Male",
+              "AadhaarCard": "223345455653",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "gege@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "2323123344"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "30,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "cancelled",
+          "bookingId": "BKZJGNY927",
+          "cancellationDetails": {
+            "bookingId": "BKZJGNY927",
+            "busName": "New Dharti travels",
+            "pickupLocation": "Surat",
+            "dropLocation": "Junagandh",
+            "travelDate": "15 march 2025",
+            "reason": "You may need to pay a cancellation fee",
+            "description": "ertghrhrhrhrhrh",
+            "cancelDate": "2025-03-15T06:52:08.469Z",
+            "cancellationTime": "12:22:08 PM",
+            "selectedPassengers": [],
+            "cancellationCharge": 14700,
+            "refundAmount": 14700,
+            "totalPaid": 29400,
+            "originalFare": 29400,
+            "fullCancellation": false,
+            "status": "Cancelled",
+            "contactDetails": {
+              "email": "gege@gmail.com",
+              "phone": {
+                "countryCode": "+91",
+                "number": "2323123344"
+              }
+            }
+          }
+        }
+      ],
+      "payments": [
+        {
+          "id": "TXNHK5TH2JJ",
+          "paymentBy": "NetBanking",
+          "bank": "Capital One Bank",
+          "paidAmount": 29400,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-15T05:48:05.181Z"
+        },
+        {
+          "id": "TXNWDDL48LU",
+          "paymentBy": "NetBanking",
+          "bank": "Wells Fargo Bank",
+          "paidAmount": 14700,
+          "remainingAmount": 14700,
+          "timestamp": "2025-03-15T06:51:40.356Z"
+        }
+      ],
+      "cancellations": [
+        {
+          "bookingId": "BKIASBHMML",
+          "busName": "New Dharti travels",
+          "pickupLocation": "Surat",
+          "dropLocation": "Junagandh",
+          "travelDate": "15 march 2025",
+          "reason": "You can't make it to the boarding point on time",
+          "description": "vgfrjhng",
+          "cancelDate": "2025-03-15T05:48:20.617Z",
+          "cancellationTime": "11:18:20 AM",
+          "selectedPassengers": [],
+          "cancellationCharge": 5880,
+          "refundAmount": 23520,
+          "totalPaid": 29400,
+          "originalFare": 29400,
+          "fullCancellation": false,
+          "status": "Cancelled",
+          "contactDetails": {
+            "email": "ghg@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "1232344565"
+            }
+          }
+        },
+        {
+          "bookingId": "BKZJGNY927",
+          "busName": "New Dharti travels",
+          "pickupLocation": "Surat",
+          "dropLocation": "Junagandh",
+          "travelDate": "15 march 2025",
+          "reason": "You may need to pay a cancellation fee",
+          "description": "ertghrhrhrhrhrh",
+          "cancelDate": "2025-03-15T06:52:08.469Z",
+          "cancellationTime": "12:22:08 PM",
+          "selectedPassengers": [],
+          "cancellationCharge": 14700,
+          "refundAmount": 14700,
+          "totalPaid": 29400,
+          "originalFare": 29400,
+          "fullCancellation": false,
+          "status": "Cancelled",
+          "contactDetails": {
+            "email": "gege@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "2323123344"
+            }
+          }
+        }
+      ]
     },
     {
       "id": "6p7q8r",
@@ -3829,7 +4333,191 @@
       "state": "Gujarat",
       "pincode": "395010",
       "gender": "female",
-      "lastLogin": "2025-03-11T06:22:44.704Z"
+      "lastLogin": "2025-03-13T06:41:35.747Z",
+      "Bookings": [
+        {
+          "busId": "dfa48",
+          "busName": "Shree Nath Travels",
+          "busType": "Seater",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "40,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 40000,
+          "discount": 8120,
+          "gst": 7200,
+          "totalPrice": 47200,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Valiya Chokdi Ashirwad Hotel",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 39200,
+          "passengers": [
+            {
+              "name": "axscs",
+              "age": "23",
+              "gender": "Male",
+              "AadhaarCard": "213223222222",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "sds@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "2234334126"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "40,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BK73YPZ0E8"
+        },
+        {
+          "busId": "dfa49",
+          "busName": "New Dharti travels",
+          "busType": "AC",
+          "busDateArrival": "20 march 2025",
+          "busdateDepature": "15 march 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Junagandh",
+          "dropTime": "6:00 PM",
+          "duration": "11h 00m",
+          "selectedSeats": [],
+          "busPrice": {
+            "amount": "30,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 30000,
+          "discount": 6120,
+          "gst": 5400,
+          "totalPrice": 35400,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Ankleshwar, Majevdi Gate",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "6:00 PM",
+          "totalPayableAmount": 29400,
+          "passengers": [
+            {
+              "name": "sujal",
+              "age": "32",
+              "gender": "Male",
+              "AadhaarCard": "231234545655",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "bng@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "5259547412"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "30,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "cancelled",
+          "bookingId": "BK8HRXEAHI",
+          "cancellationDetails": {
+            "bookingId": "BK8HRXEAHI",
+            "busName": "New Dharti travels",
+            "pickupLocation": "Surat",
+            "dropLocation": "Junagandh",
+            "travelDate": "15 march 2025",
+            "reason": "The bus was delayed, didn't pick you up, or the service was canceled",
+            "description": "gswfdsdggrggeefeggggrgrgrgvvvvvvvvvrggg",
+            "cancelDate": "2025-03-15T06:50:09.782Z",
+            "cancellationTime": "12:20:09 PM",
+            "selectedPassengers": [],
+            "cancellationCharge": 5880,
+            "refundAmount": 23520,
+            "totalPaid": 29400,
+            "originalFare": 29400,
+            "fullCancellation": false,
+            "status": "Cancelled",
+            "contactDetails": {
+              "email": "bng@gmail.com",
+              "phone": {
+                "countryCode": "+91",
+                "number": "5259547412"
+              }
+            }
+          }
+        }
+      ],
+      "payments": [
+        {
+          "id": "TXNB7Z9T19Z",
+          "paymentBy": "NetBanking",
+          "bank": "Wells Fargo Bank",
+          "paidAmount": 39200,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-13T07:29:24.927Z"
+        },
+        {
+          "id": "TXNRXIQR7UQ",
+          "paymentBy": "NetBanking",
+          "bank": "Citi Bank",
+          "paidAmount": 29400,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-15T06:49:30.053Z"
+        }
+      ],
+      "cancellations": [
+        {
+          "bookingId": "BK8HRXEAHI",
+          "busName": "New Dharti travels",
+          "pickupLocation": "Surat",
+          "dropLocation": "Junagandh",
+          "travelDate": "15 march 2025",
+          "reason": "The bus was delayed, didn't pick you up, or the service was canceled",
+          "description": "gswfdsdggrggeefeggggrgrgrgvvvvvvvvvrggg",
+          "cancelDate": "2025-03-15T06:50:09.782Z",
+          "cancellationTime": "12:20:09 PM",
+          "selectedPassengers": [],
+          "cancellationCharge": 5880,
+          "refundAmount": 23520,
+          "totalPaid": 29400,
+          "originalFare": 29400,
+          "fullCancellation": false,
+          "status": "Cancelled",
+          "contactDetails": {
+            "email": "bng@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "5259547412"
+            }
+          }
+        }
+      ]
     },
     {
       "id": "g0dxi1",
@@ -4619,6 +5307,110 @@
       "paidAmount": 36260,
       "remainingAmount": 0,
       "timestamp": "2025-03-13T05:35:04.002Z"
+    },
+    {
+      "id": "TXNB7Z9T19Z",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 39200,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-13T07:29:24.927Z"
+    },
+    {
+      "id": "TXNUOMJZJEY",
+      "paymentBy": "NetBanking",
+      "bank": "TD Bank",
+      "paidAmount": 31360,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-13T07:31:09.628Z"
+    },
+    {
+      "id": "TXNG6YDGJJW",
+      "paymentBy": "NetBanking",
+      "bank": "TD Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-15T03:46:21.359Z"
+    },
+    {
+      "id": "TXNWFPUOKSP",
+      "paymentBy": "NetBanking",
+      "bank": "Citi Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-15T04:27:48.822Z"
+    },
+    {
+      "id": "TXN4L2RSCA6",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-15T04:35:02.999Z"
+    },
+    {
+      "id": "TXNPPOCJGAO",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-15T05:07:23.092Z"
+    },
+    {
+      "id": "TXN90XANWR8",
+      "paymentBy": "NetBanking",
+      "bank": "Capital One Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-15T05:12:38.849Z"
+    },
+    {
+      "id": "TXNDJLR18TF",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-15T05:19:25.229Z"
+    },
+    {
+      "id": "TXN45UVG7P2",
+      "paymentBy": "NetBanking",
+      "bank": "Capital One Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-15T05:30:18.557Z"
+    },
+    {
+      "id": "TXN43IYWXEF",
+      "paymentBy": "NetBanking",
+      "bank": "Capital One Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-15T05:44:52.784Z"
+    },
+    {
+      "id": "TXNHK5TH2JJ",
+      "paymentBy": "NetBanking",
+      "bank": "Capital One Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-15T05:48:05.181Z"
+    },
+    {
+      "id": "TXNRXIQR7UQ",
+      "paymentBy": "NetBanking",
+      "bank": "Citi Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-15T06:49:30.053Z"
+    },
+    {
+      "id": "TXNWDDL48LU",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 14700,
+      "remainingAmount": 14700,
+      "timestamp": "2025-03-15T06:51:40.356Z"
     }
   ]
 }

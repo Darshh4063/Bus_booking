@@ -87,7 +87,7 @@ function populateInvoiceDetails(booking) {
           booking.contactDetails.phone.number || "55555 55555"
         }`;
       } else {
-        phone = booking.contactDetails.phone;
+        phone = booking.contactDetails.phone.number;
       }
     } else if (booking.phone) {
       phone = booking.phone;
@@ -123,7 +123,6 @@ function populateInvoiceDetails(booking) {
     }
 
     // FARE DETAILS SECTION
-    // Handle different possible property names and formats
     const onwardFare = booking.onwardFare || booking.fareBreakup?.baseFare || 0;
     const gst = booking.gst || booking.fareBreakup?.gst || 0;
     const bookingCharges =
@@ -245,3 +244,431 @@ function addPrintButton() {
     container.appendChild(printButton);
   }
 }
+
+// Helper function to get current user ID
+function getCurrentUserId() {
+  try {
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    return currentUser?.id;
+  } catch (error) {
+    console.error("Error getting current user ID:", error);
+    return null;
+  }
+}
+
+// Update booking on the server
+async function updateBookingOnServer(userId, bookingId, cancellationDetails) {
+  try {
+    const response = await fetch(`http://localhost:3000/user/${userId}`);
+    if (!response.ok) return;
+
+    const userData = await response.json();
+
+    // Find and update the booking
+    if (userData.Bookings) {
+      userData.Bookings = userData.Bookings.map((booking) => {
+        if (booking.bookingId == bookingId) {
+          return {
+            ...booking,
+            status: "Cancelled",
+            cancellationDetails: cancellationDetails,
+          };
+        }
+        return booking;
+      });
+
+      // Add to cancellations array if it exists
+      if (!userData.cancellations) userData.cancellations = [];
+      userData.cancellations.push(cancellationDetails);
+
+      // Update on server
+      await fetch(`http://localhost:3000/user/${userId}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      });
+    }
+  } catch (error) {
+    console.error("Error updating booking on server:", error);
+  }
+}
+// Function to display cancellation details on the invoice
+function displayCancellationDetails(cancellationDetails) {
+  try {
+    // Show the cancellation fare details and hide the regular fare details
+    const fareDetails = document.querySelector(".fare-details");
+    const cancellationFareDetails = document.querySelector(
+      ".fare-details-cancelation"
+    );
+
+    if (fareDetails) {
+      fareDetails.style.display = "none";
+    }
+
+    if (cancellationFareDetails) {
+      cancellationFareDetails.style.display = "block";
+
+      // Update cancellation fare details
+      updateElementText(
+        ".fare-details-cancelation .fare-row:nth-child(1) span:last-child",
+        `₹${cancellationDetails.originalFare || 0}`
+      );
+
+      // Calculate GST and other charges
+      const otherCharges =
+        (cancellationDetails.totalPaid || 0) -
+        (cancellationDetails.originalFare || 0);
+
+      updateElementText(
+        ".fare-details-cancelation .fare-row:nth-child(2) span:last-child",
+        `₹${otherCharges}`
+      );
+
+      // Change labels for cancellation
+      updateElementText(
+        ".fare-details-cancelation .fare-row:nth-child(3) span:first-child",
+        "Cancellation Charge (20%)"
+      );
+
+      updateElementText(
+        ".fare-details-cancelation .fare-row:nth-child(3) span:last-child",
+        `₹${cancellationDetails.cancellationCharge || 0}`
+      );
+
+      updateElementText(
+        ".fare-details-cancelation .fare-row:nth-child(4) span:first-child",
+        "Refund Amount"
+      );
+
+      updateElementText(
+        ".fare-details-cancelation .fare-row:nth-child(4) span:last-child",
+        `₹${cancellationDetails.refundAmount || 0}`
+      );
+
+      updateElementText(
+        ".fare-details-cancelation .total-row span:first-child",
+        "Total Paid"
+      );
+
+      updateElementText(
+        ".fare-details-cancelation .total-row span:last-child",
+        `₹${cancellationDetails.totalPaid || 0}`
+      );
+
+      // Add cancellation status banner
+      const container = document.querySelector(".ticket-container");
+
+      // Check if banner already exists to avoid duplicates
+      if (!document.querySelector(".cancellation-banner")) {
+        const statusBanner = document.createElement("div");
+        statusBanner.className = "alert alert-danger mb-4 cancellation-banner";
+        statusBanner.innerHTML = `
+          <h5>CANCELLED</h5>
+          <p>Cancelled on: ${new Date(
+            cancellationDetails.cancelDate
+          ).toLocaleString()}</p>
+          <p>Reason: ${cancellationDetails.reason || "Not specified"}</p>
+          <p>Refund Amount: ₹${cancellationDetails.refundAmount || 0}</p>
+        `;
+
+        container.insertBefore(statusBanner, container.firstChild);
+      }
+    }
+  } catch (error) {
+    console.error("Error displaying cancellation details:", error);
+  }
+}
+// Function to send cancellation data to your JSON server
+function sendCancellationToServer(cancellationDetails) {
+  try {
+    const apiUrl = "http://localhost:3000/cancellations"; 
+    fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(cancellationDetails),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Cancellation saved to server:", data);
+      })
+      .catch((error) => {
+        console.error("Error saving cancellation to server:", error);
+      });
+  } catch (error) {
+    console.error("Error sending cancellation to server:", error);
+  }
+}
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Invoice page loaded");
+
+  // Get booking data from localStorage
+  const invoiceDataStr = localStorage.getItem("invoiceBookingData");
+  console.log("Raw invoice data from localStorage:", invoiceDataStr);
+
+  let invoiceData = null;
+
+  try {
+    invoiceData = JSON.parse(invoiceDataStr);
+    console.log("Parsed invoice data:", invoiceData);
+  } catch (error) {
+    console.error("Error parsing invoice data:", error);
+  }
+
+  if (invoiceData) {
+   
+    populateInvoiceDetails(invoiceData);
+
+    // Check if the booking is cancelled
+    console.log("Booking status:", invoiceData.status);
+    console.log("Cancellation details:", invoiceData.cancellationDetails);
+
+    if (invoiceData.status === "Cancelled" && invoiceData.cancellationDetails) {
+      console.log("Displaying cancellation details");
+      // Display cancellation details
+      displayCancellationDetails(invoiceData.cancellationDetails);
+    }
+  } else {
+    console.error("No invoice data found in localStorage");
+    displayErrorMessage(
+      "No invoice data found. Please return to your bookings."
+    );
+  }
+});
+
+// Function to display cancellation details on the invoice
+function displayCancellationDetails(bookingId) {
+  console.log("Displaying cancellation details for booking ID:", bookingId);
+
+  try {
+    let cancellationDetails = null;
+    const cancellationsStr = localStorage.getItem("cancellations");
+
+    if (cancellationsStr) {
+      const cancellations = JSON.parse(cancellationsStr);
+      console.log("Found cancellations in localStorage:", cancellations);
+
+      // Find the cancellation for this specific booking
+      if (Array.isArray(cancellations)) {
+        cancellationDetails = cancellations.find(
+          (c) => c.bookingId === bookingId
+        );
+      } else if (cancellations.bookingId === bookingId) {
+        // If it's a single object, check if it matches
+        cancellationDetails = cancellations;
+      }
+    }
+
+    // If not found in cancellations, fall back to the invoice data
+    if (!cancellationDetails) {
+      console.log(
+        "No matching cancellation found in localStorage, checking invoiceBookingData"
+      );
+      const invoiceDataStr = localStorage.getItem("invoiceBookingData");
+      if (invoiceDataStr) {
+        const invoiceData = JSON.parse(invoiceDataStr);
+        if (invoiceData && invoiceData.cancellationDetails) {
+          cancellationDetails = invoiceData.cancellationDetails;
+        }
+      }
+    }
+
+    console.log("Final cancellation details to display:", cancellationDetails);
+
+    // If no cancellation details found anywhere, exit
+    if (!cancellationDetails) {
+      console.error("No cancellation details found in localStorage");
+      return;
+    }
+
+    // Show the cancellation fare details and hide the regular fare details
+    const fareDetails = document.querySelector(".fare-details");
+    const cancellationFareDetails = document.querySelector(
+      ".fare-details-cancelation"
+    );
+
+    if (fareDetails) {
+      fareDetails.style.display = "none";
+    }
+
+    if (cancellationFareDetails) {
+      // Make sure the cancellation details are visible
+      cancellationFareDetails.style.display = "block";
+
+      // Get values with fallbacks to prevent undefined errors
+      const originalFare = cancellationDetails.originalFare || 0;
+      const totalPaid = cancellationDetails.totalPaid || 0;
+      const cancellationCharge = cancellationDetails.cancellationCharge || 0;
+      const refundAmount = cancellationDetails.refundAmount || 0;
+
+      // Format the cancellation date safely
+      let formattedCancelDate = "Unknown date";
+      if (cancellationDetails.cancelDate) {
+        try {
+          const cancelDate = new Date(cancellationDetails.cancelDate);
+          formattedCancelDate = cancelDate.toLocaleString();
+        } catch (e) {
+          console.error("Error formatting cancel date:", e);
+          formattedCancelDate = cancellationDetails.cancelDate.toString();
+        }
+      }
+
+      // Update all values in the fare breakdown
+      updateElementText(
+        ".fare-details-cancelation .fare-row:nth-child(1) span:last-child",
+        `₹${originalFare}`
+      );
+
+      updateElementText(
+        ".fare-details-cancelation .fare-row:nth-child(2) span:last-child",
+        `₹${cancellationCharge}`
+      );
+
+      updateElementText(
+        ".fare-details-cancelation .fare-row:nth-child(3) span:last-child",
+        `₹${refundAmount}`
+      );
+    } else {
+      console.error("Cancellation fare details container not found in the DOM");
+    }
+  } catch (error) {
+    console.error("Error displaying cancellation details:", error);
+    // Create an error alert
+    const container = document.querySelector(".ticket-container");
+    if (container) {
+      const errorAlert = document.createElement("div");
+      errorAlert.className = "alert alert-warning";
+      errorAlert.textContent =
+        "There was an error displaying cancellation details.";
+      container.insertBefore(errorAlert, container.firstChild);
+    }
+  }
+}
+
+// Update the document.addEventListener to include the cancellations from localStorage
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Invoice page loaded");
+
+  // Get booking data from localStorage
+  const invoiceDataStr = localStorage.getItem("invoiceBookingData");
+  console.log("Raw invoice data from localStorage:", invoiceDataStr);
+
+  let invoiceData = null;
+
+  try {
+    invoiceData = JSON.parse(invoiceDataStr);
+    console.log("Parsed invoice data:", invoiceData);
+  } catch (error) {
+    console.error("Error parsing invoice data:", error);
+  }
+
+  if (invoiceData) {
+    // First populate the basic invoice details
+    populateInvoiceDetails(invoiceData);
+
+    // Get the booking ID for looking up cancellation data
+    const bookingId = invoiceData.bookingId;
+    console.log("Booking ID for cancellation lookup:", bookingId);
+
+    // Check if the booking is cancelled in invoice data or has cancellation details
+    if (invoiceData.status === "Cancelled" || invoiceData.cancellationDetails) {
+      console.log("Booking is cancelled according to invoice data");
+     
+      displayCancellationDetails(bookingId);
+      
+    } else {
+      // Now check if there's cancellation info in the cancellations localStorage
+      try {
+        const cancellationsStr = localStorage.getItem("cancellations");
+        if (cancellationsStr) {
+          const cancellations = JSON.parse(cancellationsStr);
+
+          // Find if this booking has a cancellation
+          let hasCancellation = false;
+
+          if (Array.isArray(cancellations)) {
+            hasCancellation = cancellations.some(
+              (c) => c.bookingId === bookingId
+            );
+          } else if (cancellations.bookingId === bookingId) {
+            hasCancellation = true;
+          }
+
+          if (hasCancellation) {
+            console.log("Found cancellation in cancellations localStorage");
+            displayCancellationDetails(bookingId);
+          } else {
+            // Only add buttons if not showing cancellation details
+            addPrintButton();
+            addDownloadPdfButton();
+          }
+        } else {
+          // No cancellations in localStorage, add buttons
+          addPrintButton();
+          addDownloadPdfButton();
+        }
+      } catch (error) {
+        console.error("Error checking cancellations localStorage:", error);
+        // Default to adding buttons on error
+        addPrintButton();
+        addDownloadPdfButton();
+      }
+    }
+  } else {
+    console.error("No invoice data found in localStorage");
+    displayErrorMessage(
+      "No invoice data found. Please return to your bookings."
+    );
+  }
+});
+
+window.onload = function () {
+  // Get invoice data
+  const invoiceDataStr = localStorage.getItem("invoiceBookingData");
+
+  // Skip if the DOM content loaded handler has already done the work
+  // Just perform a quick check if cancellation banner exists
+  if (!document.querySelector(".cancellation-banner") && invoiceDataStr) {
+    try {
+      const invoiceData = JSON.parse(invoiceDataStr);
+
+      if (invoiceData) {
+        const bookingId = invoiceData.bookingId;
+
+        // Check cancellations in localStorage
+        const cancellationsStr = localStorage.getItem("cancellations");
+        if (cancellationsStr) {
+          const cancellations = JSON.parse(cancellationsStr);
+
+          // Check if this booking has a cancellation
+          let hasCancellation = false;
+
+          if (Array.isArray(cancellations)) {
+            hasCancellation = cancellations.some(
+              (c) => c.bookingId === bookingId
+            );
+          } else if (cancellations.bookingId === bookingId) {
+            hasCancellation = true;
+          }
+
+          if (hasCancellation) {
+            console.log(
+              "Window onload found cancellation in localStorage, displaying details"
+            );
+            displayCancellationDetails(bookingId);
+          }
+        }
+      }
+    } catch (error) {
+      console.error("Error in window.onload:", error);
+    }
+  }
+};
