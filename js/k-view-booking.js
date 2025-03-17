@@ -181,12 +181,9 @@ function populateBookingDetails(booking) {
 
     // Update seat and bus operator info
     if (booking.passengers && booking.passengers.length > 0) {
-      const seatNumbers = booking.passengers
-        .map((passenger) => passenger.seatNo)
-        .join(" • ");
       const seatInfoElement = document.querySelector(".seat-info");
       if (seatInfoElement) {
-        seatInfoElement.innerHTML = `Seat Selected: • ${seatNumbers} <span class="ms-4">Bus Operator: ${booking.busName}</span>`;
+        seatInfoElement.innerHTML = `<span>Bus Operator: ${booking.busName}</span>`;
       }
     }
 
@@ -203,7 +200,6 @@ function populateBookingDetails(booking) {
             <td>${passenger.name || ""}</td>
             <td>${passenger.gender || ""}</td>
             <td>${passenger.age || ""}</td>
-            <td>${passenger.seatNo || ""}</td>
           `;
         passengersTableBody.appendChild(row);
       });
@@ -421,25 +417,27 @@ function storeBookingForReview(booking) {
 // Update the displayCancellationDetails function to ensure it only shows for cancelled bookings
 function displayCancellationDetails(booking) {
   // Check if the booking status is cancelled
-  if (booking.status.toLowerCase() !== 'cancelled') {
+  if (booking.status.toLowerCase() !== "cancelled") {
     // Hide cancellation details section
-    const cancelDetailsSection = document.getElementById('k-cancel-details');
+    const cancelDetailsSection = document.getElementById("k-cancel-details");
     if (cancelDetailsSection) {
-      cancelDetailsSection.style.display = 'none';
+      cancelDetailsSection.style.display = "none";
     }
     return;
   }
 
   // Get or create the cancellation details section
-  let cancelDetailsSection = document.getElementById('k-cancel-details');
-  
+  let cancelDetailsSection = document.getElementById("k-cancel-details");
+
   if (!cancelDetailsSection) {
     // Create a new cancellation details section if it doesn't exist
-    cancelDetailsSection = document.createElement('div');
-    cancelDetailsSection.id = 'k-cancel-details';
-    
+    cancelDetailsSection = document.createElement("div");
+    cancelDetailsSection.id = "k-cancel-details";
+
     // Insert it after fare details section
-    const fareDetailsSection = document.querySelector('.fare-details').closest('.booking-section');
+    const fareDetailsSection = document
+      .querySelector(".fare-details")
+      .closest(".booking-section");
     if (fareDetailsSection) {
       fareDetailsSection.parentNode.insertBefore(
         cancelDetailsSection,
@@ -447,14 +445,14 @@ function displayCancellationDetails(booking) {
       );
     } else {
       // Fallback if fare details section is not found
-      const container = document.querySelector('.container.mt-4');
+      const container = document.querySelector(".container.mt-4");
       if (container) {
         container.appendChild(cancelDetailsSection);
       }
     }
   } else {
     // Show the section if it exists but was hidden
-    cancelDetailsSection.style.display = 'block';
+    cancelDetailsSection.style.display = "block";
   }
 
   // Get cancellation details from the booking object
@@ -470,7 +468,7 @@ function displayCancellationDetails(booking) {
 
   // Add passenger details
   if (booking.passengers && booking.passengers.length > 0) {
-    booking.passengers.forEach(passenger => {
+    booking.passengers.forEach((passenger) => {
       htmlContent += `
         <div class="d-flex align-items-center justify-content-between">
           <div>
@@ -497,7 +495,10 @@ function displayCancellationDetails(booking) {
       </div>
       <div>
         <p class="k-reason fw-semibold">
-          ${cancellationDetails.reason || "You booked a ticket for the wrong bus or time"}
+          ${
+            cancellationDetails.reason ||
+            "You booked a ticket for the wrong bus or time"
+          }
         </p>
       </div>
     </div>
@@ -511,7 +512,10 @@ function displayCancellationDetails(booking) {
       </div>
       <div>
           <p class="k-reason fw-semibold">
-          ${cancellationDetails.description || "Lorem Ipsum is simply dummy text of the printing and typesetting industry for demo."}
+          ${
+            cancellationDetails.description ||
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry for demo."
+          }
         </p>
       </div>
     </div>

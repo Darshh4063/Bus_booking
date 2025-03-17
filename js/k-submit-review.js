@@ -318,9 +318,6 @@ function loadBookingData() {
   const bookingDataJson = localStorage.getItem("currentReviewBooking");
 
   if (!bookingDataJson) {
-    // No booking data found, redirect to bookings page
-    // alert("No booking found to review");
-    // window.location.href = "mybooking.html";
     return;
   }
 
@@ -328,7 +325,6 @@ function loadBookingData() {
 
   // Make sure we have a busId for the review
   if (!bookingData.busId && bookingData.busName) {
-    // If no busId but we have a busName, try to find the bus
     const buses = JSON.parse(localStorage.getItem("busdata")) || [];
     const bus = buses.find(
       (b) =>
@@ -336,52 +332,26 @@ function loadBookingData() {
     );
     if (bus) {
       bookingData.busId = bus.id;
-      // Update in localStorage
       localStorage.setItem("currentReviewBooking", JSON.stringify(bookingData));
     }
   }
 
-  // Populate trip summary card with booking data
-  document.querySelector(".card-body .col-6:first-child strong").textContent =
-    bookingData.pickupLocation?.split(",")[0] || "Pickup Location";
-  document.querySelector(
-    ".card-body .col-6:first-child .text-muted"
-  ).textContent = bookingData.pickupLocation || "Details";
-
-  document.querySelector(".card-body .col-6:last-child strong").textContent =
-    bookingData.dropLocation?.split(",")[0] || "Drop Location";
-  document.querySelector(
-    ".card-body .col-6:last-child .text-muted"
-  ).textContent = bookingData.dropLocation || "Details";
-
-  document.querySelector(
-    ".card-body .pb-2:nth-of-type(1)"
-  ).innerHTML = `<strong>Booking ID:</strong> ${
-    bookingData.bookingId || "Not available"
-  }`;
-
-  document.querySelector(
-    ".card-body .pb-2:nth-of-type(2)"
-  ).innerHTML = `<strong>Date & Time:</strong> ${
-    bookingData.busdateDepature || "Not available"
-  } ${bookingData.pickupTime || ""}`;
-
-  document.querySelector(
-    ".card-body .mb-2"
-  ).innerHTML = `<strong>Bus Operator:</strong> ${
-    bookingData.busName || "Not available"
-  }`;
-
-  // Get seat numbers if available
-  let seatText = "Not available";
-  if (bookingData.passengers && bookingData.passengers.length > 0) {
-    seatText = bookingData.passengers
-      .map((passenger) => passenger.seatNo)
-      .join(" • ");
-  }
-  document.querySelector(
-    ".card-body div:last-child"
-  ).innerHTML = `<strong>Seat(s):</strong> ${seatText}`;
+  // Update source and destination in Trip Summary
+  document.querySelector(".source").textContent = bookingData.pickupLocation || "Source";
+  document.querySelector(".source-details").textContent = bookingData.pickupPoints || ""; 
+  
+  document.querySelector(".destination").textContent = bookingData.dropLocation || "Destination";
+  document.querySelector(".destination-details").textContent = bookingData.dropoffPoints || ""; 
+  
+  // Update booking details
+  document.querySelector(".booking-id").textContent = bookingData.bookingId || "BKZUYRGD11";
+  
+  // Update date and time
+  document.querySelector(".travel-date").textContent = bookingData.busdateDepature || "Date";
+  document.querySelector(".travel-time").textContent = bookingData.pickupTime || "Time";
+  
+  // Update bus operator
+  document.querySelector(".bus-operator").textContent = bookingData.busName || "Not available";
 }
 
 // Initialize when DOM is loaded

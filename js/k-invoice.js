@@ -114,7 +114,6 @@ function populateInvoiceDetails(booking) {
         const row = document.createElement("tr");
         row.innerHTML = `
             <td>${passenger.name || ""}</td>
-            <td>${passenger.seatNo || ""}</td>
             <td>${passenger.gender || ""}</td>
             <td>${passenger.age || ""}</td>
           `;
@@ -132,7 +131,7 @@ function populateInvoiceDetails(booking) {
       booking.totalPayableAmount ||
       booking.totalPrice ||
       booking.totalFare ||
-      0;
+      0;  
 
     updateElementText(
       ".fare-details .fare-row:nth-child(1) span:last-child",
@@ -356,25 +355,6 @@ function displayCancellationDetails(cancellationDetails) {
         ".fare-details-cancelation .total-row span:last-child",
         `₹${cancellationDetails.totalPaid || 0}`
       );
-
-      // Add cancellation status banner
-      const container = document.querySelector(".ticket-container");
-
-      // Check if banner already exists to avoid duplicates
-      if (!document.querySelector(".cancellation-banner")) {
-        const statusBanner = document.createElement("div");
-        statusBanner.className = "alert alert-danger mb-4 cancellation-banner";
-        statusBanner.innerHTML = `
-          <h5>CANCELLED</h5>
-          <p>Cancelled on: ${new Date(
-            cancellationDetails.cancelDate
-          ).toLocaleString()}</p>
-          <p>Reason: ${cancellationDetails.reason || "Not specified"}</p>
-          <p>Refund Amount: ₹${cancellationDetails.refundAmount || 0}</p>
-        `;
-
-        container.insertBefore(statusBanner, container.firstChild);
-      }
     }
   } catch (error) {
     console.error("Error displaying cancellation details:", error);
@@ -605,21 +585,10 @@ document.addEventListener("DOMContentLoaded", () => {
           if (hasCancellation) {
             console.log("Found cancellation in cancellations localStorage");
             displayCancellationDetails(bookingId);
-          } else {
-            // Only add buttons if not showing cancellation details
-            addPrintButton();
-            addDownloadPdfButton();
-          }
-        } else {
-          // No cancellations in localStorage, add buttons
-          addPrintButton();
-          addDownloadPdfButton();
+          } 
         }
       } catch (error) {
         console.error("Error checking cancellations localStorage:", error);
-        // Default to adding buttons on error
-        addPrintButton();
-        addDownloadPdfButton();
       }
     }
   } else {

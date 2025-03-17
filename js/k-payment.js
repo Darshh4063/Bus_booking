@@ -330,23 +330,6 @@ function showProcessingIndicator() {
       processingModal.style.display = "block";
       processingModal.classList.add("show");
     }
-  } else {
-    console.log("Creating simple processing indicator");
-    // Create a simple processing indicator if modal doesn't exist
-    const processingDiv = document.createElement("div");
-    processingDiv.id = "processingIndicator";
-    processingDiv.style.position = "fixed";
-    processingDiv.style.top = "50%";
-    processingDiv.style.left = "50%";
-    processingDiv.style.transform = "translate(-50%, -50%)";
-    processingDiv.style.padding = "20px";
-    processingDiv.style.background = "rgba(0,0,0,0.7)";
-    processingDiv.style.color = "white";
-    processingDiv.style.borderRadius = "5px";
-    processingDiv.style.zIndex = "9999";
-    processingDiv.textContent = "Processing payment...";
-
-    document.body.appendChild(processingDiv);
   }
 }
 
@@ -494,6 +477,7 @@ function completePayment(method) {
       console.log("Error sending payment data:", e);
       // Still show success modal even if server communication fails
       showSuccessModal();
+      window.location.replace("mybooking.html");
     }
   } else {
     const loginModal = new bootstrap.Modal(
@@ -855,8 +839,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add passengers from localStorage
     bookingDetails.passengers.forEach((passenger, index) => {
       const genderShort = passenger.gender === "Male" ? "M" : "F";
-      const seatNumber = bookingDetails.selectedSeats[index] || index + 32;
-
       const passengerNameElement = document.createElement("p");
       passengerNameElement.className = "col-8";
       passengerNameElement.innerHTML = `${passenger.name} <span>(${genderShort},${passenger.age})</span>`;

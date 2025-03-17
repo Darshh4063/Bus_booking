@@ -280,12 +280,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function setupLogout() {
-  const logoutBtns = document.querySelectorAll('a[href="/logout"], .k-update');
+  const logoutBtns = document.querySelectorAll('a[href="/logout"], .k-logout');
   logoutBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
       authService.logout();
-      window.location.href = "login.html";
+      window.location.href = "Home.html";
     });
   });
 }

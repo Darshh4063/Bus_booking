@@ -163,7 +163,7 @@
     padding: 0 !important;
     color: black;
     font-weight: 500;
-    font-size: 10px !important;
+    font-size: 16px !important;
   }
 }
 
@@ -645,7 +645,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .card img {
-  width: 100% !important;
+  width: 40% !important;
 }
 
 .owl-nav {
@@ -1404,4 +1404,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 body{
   overflow: scroll !important;
   padding-right: 0 !important;
+}
+
+.Travels {
+  width: 100%;
+}
+
+.Travels img {
+  width: 100% !important;
 }

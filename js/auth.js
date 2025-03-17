@@ -230,7 +230,7 @@ class AuthService {
   logout() {
     // window.location.replace("/home.html");
     localStorage.removeItem("currentUser");
-    window.location.href = "Home.html";
+    window.location.replace("/home.html");
   }
 
   // Get current user

@@ -210,3 +210,9 @@ header {
   z-index: 2;
   margin-right: 5px;
 }
+
+.form-control:focus {
+  background-color: #FFFFFF !important;
+  box-shadow: none !important;
+  border-color: #ced4da !important;
+}

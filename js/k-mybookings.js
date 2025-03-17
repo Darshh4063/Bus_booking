@@ -78,10 +78,11 @@ function createBookingCard(booking) {
         <div class="destination">
           <div class="destination-time">${booking.pickupTime}</div>
           <div class="destination-name">${booking.pickupLocation}</div>
-          <div class="destination-date">${booking.busDateArrival}</div>
+          <div class="destination-date">${booking.busdateDepature}</div>
         </div>
   
-        <div class="journey-line">
+        <div class="d-none d-md-block w-50">
+          <div class="journey-line">
           <div class="line">
             <div class="start-point"></div>
           </div>
@@ -92,11 +93,12 @@ function createBookingCard(booking) {
             <div class="end-point"></div>
           </div>
         </div>
+        </div>
   
         <div class="destination">
           <div class="destination-time">${booking.dropTime}</div>
           <div class="destination-name">${booking.dropLocation}</div>
-          <div class="destination-date">${booking.busdateDepature}</div>
+          <div class="destination-date">${booking.busDateArrival}</div>
         </div>
       </div>
   

@@ -343,8 +343,12 @@
   color: #6D6D6D;
 }
 
-.modal-dialog {
-  max-width: 800px !important;
+.k-pass .modal-dialog  {
+  max-width: 500px !important;
+}
+
+.register .modal-dialog {
+  max-width: 950px !important;
 }
 
 
@@ -374,4 +378,14 @@
     padding: 10px 30px;
     /* text-align: left; */
   } 
+}
+
+@media (min-width: 42px)  and (max-width: 768px) {
+  .k-acc .account-btn {
+    display: none !important;
+  }
+  
+  .navbar-nav .account-btn {
+    display: block !important;
+  }
 }

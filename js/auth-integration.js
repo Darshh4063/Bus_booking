@@ -2,35 +2,39 @@ import authService from "./auth.js";
 
 // Global function to update UI after successful login
 window.updateUIForLoggedInUser = function (user) {
-  const accountBtn = document.querySelector(".account-btn button");
-  if (accountBtn) {
-    // Create profile image element
-    const profileImage = `
-      <img 
-        src="${user.profileImage || authService.defaultProfileImage}" 
-        alt="${user.name}" 
-        style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover; margin-right: 8px;"
-      /> ${user.name}`;
+  // Update all account buttons (both in header and navbar)
+  const accountBtns = document.querySelectorAll(".account-btn button");
 
-    accountBtn.innerHTML = profileImage;
+  if (accountBtns.length > 0) {
+    accountBtns.forEach((accountBtn) => {
+      // Create profile image element
+      const profileImage = `
+        <img 
+          src="${user.profileImage || authService.defaultProfileImage}" 
+          alt="${user.name}" 
+          style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover; margin-right: 8px;"
+        /> ${user.name}`;
 
-    // Add CSS to the button for better alignment
-    accountBtn.style.display = "flex";
-    accountBtn.style.alignItems = "center";
-    accountBtn.style.justifyContent = "center";
+      accountBtn.innerHTML = profileImage;
 
-    // Remove any existing click listeners
-    const newAccountBtn = accountBtn.cloneNode(true);
-    accountBtn.parentNode.replaceChild(newAccountBtn, accountBtn);
+      // Add CSS to the button for better alignment
+      accountBtn.style.display = "flex";
+      accountBtn.style.alignItems = "center";
+      accountBtn.style.justifyContent = "center";
 
-    // Add logout functionality
-    newAccountBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      // Show logout confirmation dialog
-      if (confirm("Are you sure you want to logout?")) {
-        authService.logout();
-        window.location.reload();
-      }
+      // Remove any existing click listeners
+      const newAccountBtn = accountBtn.cloneNode(true);
+      accountBtn.parentNode.replaceChild(newAccountBtn, accountBtn);
+
+      // Add logout functionality
+      newAccountBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        // Show logout confirmation dialog
+        if (confirm("Are you sure you want to logout?")) {
+          authService.logout();
+          window.location.reload();
+        }
+      });
     });
   }
 };
@@ -173,15 +177,56 @@ window.initAuthListeners = function () {
     }
   }
 
-  // Add event listener for the Account button to open login modal
-  const accountBtn = document.querySelector(".account-btn button");
-  if (accountBtn && !authService.isLoggedIn()) {
-    accountBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      const loginModal = new bootstrap.Modal(
-        document.getElementById("loginModal")
-      );
-      loginModal.show();
+  // Add event listeners for all Account buttons to open login modal
+  const accountBtns = document.querySelectorAll(".account-btn button");
+  if (accountBtns.length > 0 && !authService.isLoggedIn()) {
+    accountBtns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const loginModal = new bootstrap.Modal(
+          document.getElementById("loginModal")
+        );
+        loginModal.show();
+      });
+    });
+  }
+};
+
+// Update the dropdown function to handle all account buttons
+window.updateUIForLoggedInUser = function (user) {
+  const accountBtnContainers = document.querySelectorAll(".account-btn");
+  if (accountBtnContainers.length > 0) {
+    accountBtnContainers.forEach((accountBtnContainer) => {
+      // Replace the button with a dropdown
+      accountBtnContainer.innerHTML = `
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="display: flex; align-items: center;">
+            <img 
+              src="${user.profileImage || authService.defaultProfileImage}" 
+              alt="${user.name}" 
+              style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover; margin-right: 8px;"
+            /> 
+            <span>Hi, ${user.name}</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
+            <li><a class="dropdown-item" href="mybooking.html">My Bookings</a></li>
+            <li><a class="dropdown-item" href="#" class="logoutBtn">Logout</a></li>
+          </ul>
+        </div>
+      `;
+    });
+
+    // Add logout functionality to all logout buttons
+    const logoutBtns = document.querySelectorAll(".logoutBtn");
+    logoutBtns.forEach((logoutBtn) => {
+      logoutBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (confirm("Are you sure you want to logout?")) {
+          authService.logout();
+          // window.location.reload();
+        }
+      });
     });
   }
 };
@@ -196,43 +241,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize auth listeners
   window.initAuthListeners();
+
+  // Show appropriate account buttons based on screen size
+  updateButtonVisibility();
+
+  // Update visibility on window resize
+  window.addEventListener("resize", updateButtonVisibility);
 });
 
-window.updateUIForLoggedInUser = function (user) {
-  const accountBtnContainer = document.querySelector(".account-btn");
-  if (accountBtnContainer) {
-    // Replace the button with a dropdown
-    accountBtnContainer.innerHTML = `
-      <div class="dropdown">
-        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="display: flex; align-items: center;">
-          <img 
-            src="${user.profileImage || authService.defaultProfileImage}" 
-            alt="${user.name}" 
-            style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover; margin-right: 8px;"
-          /> 
-          <span>Hi, ${user.name}</span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
-          <li><a class="dropdown-item" href="mybooking.html">My Bookings</a></li>
-          <li><a class="dropdown-item" href="#" id="logoutBtn">Logout</a></li>
-        </ul>
-      </div>
-    `;
+// Function to update button visibility based on screen width
+function updateButtonVisibility() {
+  const outerAccountBtn = document.querySelector(".d-flex .account-btn");
+  const navbarAccountBtn = document.querySelector(".navbar-nav .account-btn");
 
-    // Add logout functionality to the logout button
-    const logoutBtn = document.getElementById("logoutBtn");
-    if (logoutBtn) {
-      logoutBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        if (confirm("Are you sure you want to logout?")) {
-          authService.logout();
-          // window.location.reload();
-        }
-      });
-    }
+  if (window.innerWidth <= 425) {
+    if (outerAccountBtn) outerAccountBtn.classList.add("d-none");
+    if (navbarAccountBtn) navbarAccountBtn.classList.remove("d-none");
+  } else {
+    if (outerAccountBtn) outerAccountBtn.classList.remove("d-none");
+    if (navbarAccountBtn) navbarAccountBtn.classList.add("d-none");
   }
-};
+}
 
 // Export auth service to global scope
 window.authService = authService;

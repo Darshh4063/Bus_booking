@@ -98,11 +98,30 @@
     <section id="header">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
-            <div class="logo">
-              <h1>LOGO</h1>
+          <div class="w-100">
+           <div class="row align-items-center">
+            <div class="col-6 col-lg-3">
+              <div class="logo">
+                <h1>LOGO</h1>
+              </div>
             </div>
 
+          <div class="d-lg-none k-toggle col-6 d-flex justify-content-end">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <div class="col-4 col-lg-6">
+            
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -114,27 +133,25 @@
                 <li class="nav-item dropdown">
                   <a href="J_contact-us.html">Contact Us</a>
                 </li>
+                <li class="nav-item">
+                  <div class="account-btn d-none">
+                    <button><i class="fa-solid fa-user"></i> Account</button>
+                  </div>
+                </li>
               </ul>
             </div>
+          </div>
 
-            <div class="d-flex d-lg-flex flex-xl-column">
+           <div class="col-4 col-lg-3">
+            <div class="k-acc mx-auto d-flex justify-content-end">
               <div class="text-end">
                 <div class="account-btn">
                   <button><i class="fa-solid fa-user"></i> Account</button>
                 </div>
               </div>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
             </div>
+           </div>
+           </div>
           </div>
         </nav>
       </div>

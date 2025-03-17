@@ -22,7 +22,8 @@ body {
 }
 
 .k .modal-dialog {
-  max-width: 500px;
+  margin-top: 270px;
+  max-width: 500px !important;
 }
 
 /* Top Banner */
@@ -204,7 +205,6 @@ header {
   background-color: #fff5eb;
 }
 
-
 .profile-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -218,7 +218,6 @@ header {
 .profile-field label {
   color: #666;
   display: block;
-  margin-bottom: 0.25rem;
 }
 
 .profile-field p {
@@ -280,6 +279,13 @@ header {
   }
 }
 
+@media (min-width: 5px) and (max-width: 768px) {
+  .profile-grid {
+    gap: 0;
+  }
+
+}
+
 /* upcoming css */
 .k-no-upcoming {
   padding-top: 150px;
@@ -288,4 +294,32 @@ header {
 .form-control:focus {
   border-color: none;
   box-shadow: none !important;
+}
+
+/* password change btn css */
+
+.k-pass-btn {
+  background-color: #c16c49;
+  border: none;
+  width: 150;
+  height: 42;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.k-btn-cancel {
+  width: 150;
+  height: 42;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  border-width: 1px;
+  color: #C16C49;
+  border-color: #C16C49;
+  background-color: transparent;
 }

@@ -943,16 +943,7 @@ function renderBusList(buses) {
             <div class="amenities-container">
               <h2 class="amenities-title">Bus Amenities</h2>
               <div class="amenities-list">
-                ${bus.amenities
-                  .map((amenity, index) => `
-                  <div class="amenity-item">
-                    <div class="amenity-icon">
-                      <img style="width:20px" src="./image/u_images/${bus.amenitiesImg[index]}" alt="" />
-                    </div>
-                    <div class="amenity-text">${amenity}</div>
-                  </div>
-                `)
-                  .join("")}
+               
               </div>
             </div>
           </div>
