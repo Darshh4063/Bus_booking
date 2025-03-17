@@ -827,8 +827,7 @@ style.textContent = `
   }
 
   .link.active {
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
+    color: #C16C49;
   }
 
   .content-section {
@@ -945,22 +944,14 @@ function renderBusList(buses) {
               <h2 class="amenities-title">Bus Amenities</h2>
               <div class="amenities-list">
                 ${bus.amenities
-                  .map(
-                    (amenity) => `
+                  .map((amenity, index) => `
                   <div class="amenity-item">
                     <div class="amenity-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
-                      <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
-                      <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
-                      <line x1="12" y1="20" x2="12" y2="20"></line>
-                    </svg>
+                      <img style="width:20px" src="./image/u_images/${bus.amenitiesImg[index]}" alt="" />
                     </div>
                     <div class="amenity-text">${amenity}</div>
                   </div>
-                `
-                  )
+                `)
                   .join("")}
               </div>
             </div>
@@ -1080,7 +1071,7 @@ function renderBusList(buses) {
                     <div class="rating-value">
                       <span class="star">★</span>
                       <span>${bus.ratings.categories.punctuality}</span>
-                    </div>
+                    </div>  
                   </div>
                 </div>
               </div>
@@ -1411,7 +1402,7 @@ async function handleBookingDetail(bus) {
     dropLocation: bus.journey.arrival.location,
     dropTime: bus.journey.arrival.time,
     duration: bus.journey.duration,
-    selectedSeats: selectSeat,
+    // selectedSeats: selectSeat,
     busPrice: bus.price,
     onwardFare: onwardFare,
     discount: discount,
