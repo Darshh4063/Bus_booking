@@ -528,6 +528,7 @@ aria-hidden="true"
                     <div class="input-group">
                         <img src="./image/u_images/bus.png" alt="">
                         <input type="text" id="bus-name" placeholder="Bus Name (Opt)">
+                        <!-- <input type="text" id="searchInput" placeholder="Search by bus name or type..." class="search-input"> -->
                     </div>
                 </div>
 
@@ -540,25 +541,398 @@ aria-hidden="true"
             </div>
 
         </div>
-
+        <div class="d-flex justify-content-between align-items-center px-3 mx-3 d-md-none" style="border: 1px solid black;">
+          <span>Filter</span>
+          <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa-solid fa-filter"></i></button>
+        </div>
     </div>
 </section>
 
-<!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">sidebar</button>
 
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
   <div class="offcanvas-header">
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
+    <div class="filters-container">
+      <div class="filters-header">
+        <h2>Filters</h2>
+        <a href="#" class="remove-all">Remove All</a>
+      </div>
 
+    <section class="accordion filter-section">
+        <div class="tab">
+            <input type="checkbox" class="invisible" name="accordion-1" id="cb1">
+            <label for="cb1" class="tab__label">AC</label>
+            <div class="tab__content">
+                <div class="button-group">
+                    <button class="filter-btn" data-type="AC" onclick="toggleSelection(this)">
+                        <span class="icon">❄</span>
+                        AC
+                    </button>
+                    <button class="filter-btn selected" data-type="Non AC" onclick="toggleSelection(this)">
+                        <span class="icon">❄</span>
+                        Non AC
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <section class="accordion filter-section">
+        <div class="tab">
+          <input type="checkbox" class="invisible" name="accordion-1" id="cb2">
+          <label for="cb2" class="tab__label">Seat Type</label>
+          <div class="tab__content">
+            <div class="button-group">
+              <button class="filter-btn" onclick="toggleSelection(this)">
+                <span class="icon">💺</span>
+                Seater
+              </button>
+              <button class="filter-btn selected" onclick="toggleSelection(this)">
+                <span class="icon">🛏️</span>
+                Sleeper
+              </button>
+            </div>
+          </div>
+      </section>
+
+      <section class="accordion filter-section">
+        <div class="tab">
+          <input type="checkbox" class="invisible" name="accordion-1" id="cb3">
+          <label for="cb3" class="tab__label">Amenities</label>
+          <div class="tab__content">
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom"></span>
+                WiFi
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="checkbox-custom"></span>
+                Water Bottle
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom"></span>
+                Charging Point
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom"></span>
+                Live Tracking
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom"></span>
+                Blanket
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="checkbox-custom"></span>
+                Emergency Toilet
+              </label>
+            </div>
+          </div>
+      </section>
+
+      <section class="accordion filter-section">
+        <div class="tab">
+          <input type="checkbox" class="invisible" name="accordion-1" id="cb4">
+          <label for="cb4" class="tab__label">Price</label>
+          <div class="tab__content">
+            <div class="price-slider">
+              <input type="range" min="800" max="2500" value="1650" class="slider" />
+              <div class="price-range">
+                <span>₹800</span>
+                <span>₹2500</span>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <!-- <div class="filter-section">
+            <h3>Price</h3>
+            <div class="price-slider">
+                <input type="range" min="800" max="2500" value="1650" class="slider">
+                <div class="price-range">
+                    <span>₹800</span>
+                    <span>₹2500</span>
+                </div>
+            </div>
+        </div> -->
+
+      <section class="accordion filter-section">
+        <div class="tab">
+          <input type="checkbox" class="invisible" name="accordion-1" id="cb5">
+          <label for="cb5" class="tab__label">Pick-Up Time (Surat)</label>
+          <div class="tab__content">
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom"></span>
+                Before 6 AM
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="checkbox-custom"></span>
+                6 AM - 12 PM
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom"></span>
+                12 PM - 6 PM
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="checkbox-custom"></span>
+                After 6 PM
+              </label>
+            </div>
+          </div>
+      </section>
+
+      <section class="accordion filter-section">
+        <div class="tab">
+          <input type="checkbox" class="invisible" name="accordion-1" id="cb6">
+          <label for="cb6" class="tab__label text-start" style="font-size: 15px;">Drop-Off Time (Ankleshwar)</label>
+          <div class="tab__content">
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom"></span>
+                Before 6 AM
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="checkbox-custom"></span>
+                6 AM - 12 PM
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom"></span>
+                12 PM - 6 PM
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="checkbox-custom"></span>
+                After 6 PM
+              </label>
+            </div>
+          </div>
+      </section>
+
+      <section class="accordion filter-section">
+        <div class="tab">
+          <input type="checkbox" class="invisible" name="accordion-1" id="cb7">
+          <label for="cb7" class="tab__label text-start" style="font-size: 15px;">Drop-Off Time(Ankleshwar)</label>
+          <div class="tab__content">
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom"></span>
+               shivay
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="checkbox-custom"></span>
+                6 AM - 12 PM
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom"></span>
+                12 PM - 6 PM
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="checkbox-custom"></span>
+                After 6 PM
+              </label>
+            </div>
+          </div>
+      </section>
+
+      <section class="accordion filter-section">
+        <div class="tab">
+          <input type="checkbox" class="invisible" name="accordion-1" id="cb8">
+          <label for="cb8" class="tab__label">Bus Operator</label>
+          <div class="tab__content">
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom"></span>
+                Before 6 AM
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="checkbox-custom"></span>
+                6 AM - 12 PM
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom"></span>
+                12 PM - 6 PM
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="checkbox-custom"></span>
+                After 6 PM
+              </label>
+            </div>
+          </div>
+      </section>
+
+      <section class="accordion filter-section">
+        <div class="tab">
+          <input type="checkbox" class="invisible" name="accordion-1" id="cb9">
+          <label for="cb9" class="tab__label">Bus Operator</label>
+          <div class="tab__content">
+            <div class="search-box">
+              <input type="text" placeholder="Search Bus Operator" />
+              <span class="search-icon">🔍</span>
+            </div>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom"></span>
+                Amar Travels
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="checkbox-custom"></span>
+                B.R. Travels
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom"></span>
+                Ankur Travels
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="checkbox-custom"></span>
+                Bapashitaram Travels
+              </label>
+              <!-- Additional content to show/hide -->
+              <div class="additional-content" style="display: none;">
+                  <label class="checkbox-label mb-2">
+                      <input type="checkbox" />
+                      <span class="checkbox-custom"></span>
+                      New Travels
+                  </label>
+                  <label class="checkbox-label">
+                      <input type="checkbox" />
+                      <span class="checkbox-custom"></span>
+                      Another Travels
+                  </label>
+              </div>
+              <a href="#" class="show-more" id="toggleContent9">Show More</a>
+            </div>
+          </div>
+      </section>
+
+      <section class="accordion filter-section">
+        <div class="tab">
+          <input type="checkbox" class="invisible" name="accordion-1" id="cb10">
+          <label for="cb10" class="tab__label">Bus Operator</label>
+          <div class="tab__content">
+            <div class="search-box">
+              <input type="text" placeholder="Search Bus Operator" />
+              <span class="search-icon">🔍</span>
+            </div>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom"></span>
+                Amar Travels
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="checkbox-custom"></span>
+                B.R. Travels
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom"></span>
+                Ankur Travels
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="checkbox-custom"></span>
+                Bapashitaram Travels
+              </label>
+              <div class="additional-content" style="display: none;">
+                  <label class="checkbox-label mb-2">
+                      <input type="checkbox" />
+                      <span class="checkbox-custom"></span>
+                      New Travels
+                  </label>
+                  <label class="checkbox-label">
+                      <input type="checkbox" />
+                      <span class="checkbox-custom"></span>
+                      Another Travels
+                  </label>
+              </div>
+              <a href="#" class="show-more" id="toggleContent10">Show More</a>
+            </div>
+          </div>
+      </section>
+
+      <section class="accordion filter-section">
+        <div class="tab">
+          <input type="checkbox" class="invisible" name="accordion-1" id="cb11">
+          <label for="cb11" class="tab__label">Bus Operator</label>
+          <div class="tab__content">
+            <div class="search-box">
+              <input type="text" placeholder="Search Bus Operator" />
+              <span class="search-icon">🔍</span>
+            </div>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom"></span>
+                Amar Travels
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="checkbox-custom"></span>
+                B.R. Travels
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="checkbox-custom"></span>
+                Ankur Travels
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="checkbox-custom"></span>
+                Bapashitaram Travels
+              </label>
+              <div class="additional-content" style="display: none;">
+                  <label class="checkbox-label mb-2">
+                      <input type="checkbox" />
+                      <span class="checkbox-custom"></span>
+                      New Travels
+                  </label>
+                  <label class="checkbox-label">
+                      <input type="checkbox" />
+                      <span class="checkbox-custom"></span>
+                      Another Travels
+                  </label>
+              </div>
+              <a href="#" class="show-more" id="toggleContent11">Show More</a>
+            </div>
+          </div>
+      </section>
+
+    </div>
   </div>
-</div> -->
+</div>
 
   <section>
     <div class="container">
       <div class="d-flex">
-        <div class="filters-container">
+        <div class="filters-container" style="width: 350px;">
           <div class="filters-header">
             <h2>Filters</h2>
             <a href="#" class="remove-all">Remove All</a>
@@ -566,15 +940,15 @@ aria-hidden="true"
 
           <section class="accordion filter-section">
             <div class="tab">
-                <input type="checkbox" class="invisible" name="accordion-1" id="cb1">
-                <label for="cb1" class="tab__label">AC</label>
+                <input type="checkbox" class="invisible" name="accordion-1" id="menu1">
+                <label for="menu1" class="tab__label">AC</label>
                 <div class="tab__content">
                     <div class="button-group">
-                        <button class="filter-btn" data-type="AC" onclick="toggleSelection(this)">
+                        <button class="filter-btn" data-type="AC" onclick="toggleSelection(this);filterBusType('AC')">
                             <span class="icon">❄</span>
                             AC
                         </button>
-                        <button class="filter-btn selected" data-type="Non AC" onclick="toggleSelection(this)">
+                        <button class="filter-btn selected" data-type="Non AC" onclick="toggleSelection(this);filterBusType('Non AC')">
                             <span class="icon">❄</span>
                             Non AC
                         </button>
@@ -585,15 +959,15 @@ aria-hidden="true"
 
           <section class="accordion filter-section">
             <div class="tab">
-              <input type="checkbox" class="invisible" name="accordion-1" id="cb2">
-              <label for="cb2" class="tab__label">Seat Type</label>
+              <input type="checkbox" class="invisible" name="accordion-1" id="menu2">
+              <label for="menu2" class="tab__label">Seat Type</label>
               <div class="tab__content">
                 <div class="button-group">
-                  <button class="filter-btn" onclick="toggleSelection(this)">
+                  <button class="filter-btn" data-type="Seater" onclick="toggleSelection(this);filterSeatType('Seater')">
                     <span class="icon">💺</span>
                     Seater
                   </button>
-                  <button class="filter-btn selected" onclick="toggleSelection(this)">
+                  <button class="filter-btn selected" data-type="Sleeper" onclick="toggleSelection(this);filterSeatType('Sleeper')">
                     <span class="icon">🛏️</span>
                     Sleeper
                   </button>
@@ -603,37 +977,37 @@ aria-hidden="true"
 
           <section class="accordion filter-section">
             <div class="tab">
-              <input type="checkbox" class="invisible" name="accordion-1" id="cb3">
-              <label for="cb3" class="tab__label">Amenities</label>
+              <input type="checkbox" class="invisible" name="accordion-1" id="menu3">
+              <label for="menu3" class="tab__label">Amenities</label>
               <div class="tab__content">
                 <div class="checkbox-group">
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="WiFi" onchange="updateAmenitiesFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     WiFi
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" checked />
+                    <input type="checkbox"  value="Water Bottle" onchange="updateAmenitiesFilters(this)" />
                     <span class="checkbox-custom"></span>
                     Water Bottle
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="Charging Point" onchange="updateAmenitiesFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     Charging Point
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="Live Tracking" onchange="updateAmenitiesFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     Live Tracking
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="Blanket" onchange="updateAmenitiesFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     Blanket
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" checked />
+                    <input type="checkbox" value="Emergency Toilet" onchange="updateAmenitiesFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     Emergency Toilet
                   </label>
@@ -643,15 +1017,39 @@ aria-hidden="true"
 
           <section class="accordion filter-section">
             <div class="tab">
-              <input type="checkbox" class="invisible" name="accordion-1" id="cb4">
-              <label for="cb4" class="tab__label">Price</label>
+              <input type="checkbox" class="invisible" name="accordion-1" id="menu4">
+              <label for="menu4" class="tab__label">Price</label>
               <div class="tab__content">
-                <div class="price-slider">
+                <!-- <div class="price-slider">
                   <input type="range" min="800" max="2500" value="1650" class="slider" />
                   <div class="price-range">
                     <span>₹800</span>
                     <span>₹2500</span>
                   </div>
+                </div> -->
+
+                <div class="d-flex">
+                  <div class="wrapper">
+                    <div class="price-input">
+                      <div class="field">
+                        <span>Min</span>
+                        <input type="number" class="input-min" value="2500">
+                      </div>
+                      <div class="separator">-</div>
+                      <div class="field">
+                        <span>Max</span>
+                        <input type="number" class="input-max" value="7500">
+                      </div>
+                    </div>
+                    <div class="slider">
+                      <div class="progress"></div>
+                    </div>
+                    <div class="range-input">
+                      <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+                      <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+                    </div>
+                  </div>
+            
                 </div>
               </div>
           </section>
@@ -669,8 +1067,8 @@ aria-hidden="true"
 
           <section class="accordion filter-section">
             <div class="tab">
-              <input type="checkbox" class="invisible" name="accordion-1" id="cb5">
-              <label for="cb5" class="tab__label">Pick-Up Time (Surat)</label>
+              <input type="checkbox" class="invisible" name="accordion-1" id="menu5">
+              <label for="menu5" class="tab__label">Pick-Up Time (Surat)</label>
               <div class="tab__content">
                 <div class="checkbox-group">
                   <label class="checkbox-label">
@@ -699,8 +1097,8 @@ aria-hidden="true"
 
           <section class="accordion filter-section">
             <div class="tab">
-              <input type="checkbox" class="invisible" name="accordion-1" id="cb6">
-              <label for="cb6" class="tab__label">Drop-Off Time (Ankleshwar)</label>
+              <input type="checkbox" class="invisible" name="accordion-1" id="menu6">
+              <label for="menu6" class="tab__label text-start" style="font-size: 15px;">Drop-Off Time(Ankleshwar)</label>
               <div class="tab__content">
                 <div class="checkbox-group">
                   <label class="checkbox-label">
@@ -729,93 +1127,104 @@ aria-hidden="true"
 
           <section class="accordion filter-section">
             <div class="tab">
-              <input type="checkbox" class="invisible" name="accordion-1" id="cb7">
-              <label for="cb7" class="tab__label">Drop-Off Time (Ankleshwar)</label>
+              <input type="checkbox" class="invisible" name="accordion-1" id="menu7">
+              <label for="menu7" class="tab__label text-start" style="font-size: 15px;">Bus Operator</label>
               <div class="tab__content">
                 <div class="checkbox-group">
                   <label class="checkbox-label">
-                    <input type="checkbox" />
-                    <span class="checkbox-custom"></span>
-                    Before 6 AM
-                  </label>
-                  <label class="checkbox-label">
-                    <input type="checkbox" checked />
-                    <span class="checkbox-custom"></span>
-                    6 AM - 12 PM
-                  </label>
-                  <label class="checkbox-label">
-                    <input type="checkbox" />
-                    <span class="checkbox-custom"></span>
-                    12 PM - 6 PM
-                  </label>
-                  <label class="checkbox-label">
-                    <input type="checkbox" checked />
-                    <span class="checkbox-custom"></span>
-                    After 6 PM
-                  </label>
-                </div>
-              </div>
-          </section>
-
-          <section class="accordion filter-section">
-            <div class="tab">
-              <input type="checkbox" class="invisible" name="accordion-1" id="cb8">
-              <label for="cb8" class="tab__label">Bus Operator</label>
-              <div class="tab__content">
-                <div class="checkbox-group">
-                  <label class="checkbox-label">
-                    <input type="checkbox" />
-                    <span class="checkbox-custom"></span>
-                    Before 6 AM
-                  </label>
-                  <label class="checkbox-label">
-                    <input type="checkbox" checked />
-                    <span class="checkbox-custom"></span>
-                    6 AM - 12 PM
-                  </label>
-                  <label class="checkbox-label">
-                    <input type="checkbox" />
-                    <span class="checkbox-custom"></span>
-                    12 PM - 6 PM
-                  </label>
-                  <label class="checkbox-label">
-                    <input type="checkbox" checked />
-                    <span class="checkbox-custom"></span>
-                    After 6 PM
-                  </label>
-                </div>
-              </div>
-          </section>
-
-          <section class="accordion filter-section">
-            <div class="tab">
-              <input type="checkbox" class="invisible" name="accordion-1" id="cb9">
-              <label for="cb9" class="tab__label">Bus Operator</label>
-              <div class="tab__content">
-                <div class="search-box">
-                  <input type="text" placeholder="Search Bus Operator" />
-                  <span class="search-icon">🔍</span>
-                </div>
-                <div class="checkbox-group">
-                  <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="Amar Travels" onchange="updateBusOperatorFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     Amar Travels
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" checked />
+                    <input type="checkbox" value="B.R. Travels" onchange="updateBusOperatorFilters(this)"/>
                     <span class="checkbox-custom"></span>
-                    B.R. Travels
+                    B.R Travels
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox"  value="Ankur Travels" onchange="updateBusOperatorFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     Ankur Travels
                   </label>
                   <label class="checkbox-label">
+                    <input type="checkbox" value="Bapasitaram Travels" onchange="updateBusOperatorFilters(this)"/>
+                    <span class="checkbox-custom"></span>
+                    Bapasitaram Travels
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" value="Bharat Travels" onchange="updateBusOperatorFilters(this)"/>
+                    <span class="checkbox-custom"></span>
+                    Bharat Travels
+                  </label>
+                </div>
+              </div>
+          </section>
+
+          <section class="accordion filter-section">
+            <div class="tab">
+              <input type="checkbox" class="invisible" name="accordion-1" id="menu8">
+              <label for="menu8" class="tab__label">Pick Up Points</label>
+              <div class="tab__content">
+                <div class="checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" />
+                    <span class="checkbox-custom"></span>
+                    Abrama Chowk Motavarachha
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" />
+                    <span class="checkbox-custom"></span>
+                    Akshar Vadi
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" />
+                    <span class="checkbox-custom"></span>
+                    Balaji Bus Parking
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" />
+                    <span class="checkbox-custom"></span>
+                    Bhavani Mandir
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" />
+                    <span class="checkbox-custom"></span>
+                    Chopati Nanavarachha
+                  </label>
+                </div>
+               
+              </div>
+          </section>
+
+          <section class="accordion filter-section">
+            <div class="tab">
+              <input type="checkbox" class="invisible" name="accordion-1" id="menu9">
+              <label for="menu9" class="tab__label">Drop-Off Points</label>
+              <div class="tab__content">
+                <div class="search-box">
+                  <input type="text" placeholder="Search Bus Operator" />
+                  <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+                <div class="checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" />
+                    <span class="checkbox-custom"></span>
+                    Ankleshwar
+                  </label>
+                  <label class="checkbox-label">
                     <input type="checkbox" checked />
                     <span class="checkbox-custom"></span>
-                    Bapashitaram Travels
+                    Ankleshwar By Pass
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" />
+                    <span class="checkbox-custom"></span>
+                    Ankleshwar Highway
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" checked />
+                    <span class="checkbox-custom"></span>
+                    Panoli
                   </label>
                   <!-- Additional content to show/hide -->
                   <div class="additional-content" style="display: none;">
@@ -837,44 +1246,50 @@ aria-hidden="true"
 
           <section class="accordion filter-section">
             <div class="tab">
-              <input type="checkbox" class="invisible" name="accordion-1" id="cb10">
-              <label for="cb10" class="tab__label">Bus Operator</label>
+              <input type="checkbox" class="invisible" name="accordion-1" id="menu10">
+              <label for="menu10" class="tab__label">Top Rated Bus</label>
               <div class="tab__content">
                 <div class="search-box">
                   <input type="text" placeholder="Search Bus Operator" />
-                  <span class="search-icon">🔍</span>
+                  <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
                 </div>
                 <div class="checkbox-group">
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="2.5" onchange="updateRatingFilters(this)"/>
                     <span class="checkbox-custom"></span>
-                    Amar Travels
+                    <i class="fa-solid fa-star" style="color: #ffb800;"></i>
+                    2.5
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" checked />
+                    <input type="checkbox" value="3.5" onchange="updateRatingFilters(this)"/>
                     <span class="checkbox-custom"></span>
-                    B.R. Travels
+                    <i class="fa-solid fa-star" style="color: #ffb800;"></i>
+                    3.5
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="4.5" onchange="updateRatingFilters(this)"/>
                     <span class="checkbox-custom"></span>
-                    Ankur Travels
+                    <i class="fa-solid fa-star" style="color: #ffb800;"></i>
+                    4.5
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" checked />
+                    <input type="checkbox" value="5.0" onchange="updateRatingFilters(this)"/>
                     <span class="checkbox-custom"></span>
-                    Bapashitaram Travels
+                    <i class="fa-solid fa-star" style="color: #ffb800;"></i>
+                    5.0
                   </label>
                   <div class="additional-content" style="display: none;">
                       <label class="checkbox-label mb-2">
-                          <input type="checkbox" />
+                          <input type="checkbox" value="4.0" onchange="updateRatingFilters(this)"/>
                           <span class="checkbox-custom"></span>
-                          New Travels
+                          <i class="fa-solid fa-star" style="color: #ffb800;"></i>
+                          4.0
                       </label>
                       <label class="checkbox-label">
-                          <input type="checkbox" />
+                          <input type="checkbox" value="3.0" onchange="updateRatingFilters(this)"/>
                           <span class="checkbox-custom"></span>
-                          Another Travels
+                          <i class="fa-solid fa-star" style="color: #ffb800;"></i>
+                          3.0
                       </label>
                   </div>
                   <a href="#" class="show-more" id="toggleContent10">Show More</a>
@@ -884,44 +1299,44 @@ aria-hidden="true"
 
           <section class="accordion filter-section">
             <div class="tab">
-              <input type="checkbox" class="invisible" name="accordion-1" id="cb11">
-              <label for="cb11" class="tab__label">Bus Operator</label>
+              <input type="checkbox" class="invisible" name="accordion-1" id="menu11">
+              <label for="menu11" class="tab__label"> Best Deal</label>
               <div class="tab__content">
                 <div class="search-box">
                   <input type="text" placeholder="Search Bus Operator" />
-                  <span class="search-icon">🔍</span>
+                  <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
                 </div>
                 <div class="checkbox-group">
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="10" onchange="updateDiscountFilters(this)"/>
                     <span class="checkbox-custom"></span>
-                    Amar Travels
+                    Up to 10% Off
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" checked />
+                    <input type="checkbox" value="15" onchange="updateDiscountFilters(this)"/>
                     <span class="checkbox-custom"></span>
-                    B.R. Travels
+                    Up to 15% Off
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="20" onchange="updateDiscountFilters(this)"/>
                     <span class="checkbox-custom"></span>
-                    Ankur Travels
+                    Up to 20% Off
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" checked />
+                    <input type="checkbox" value="25" onchange="updateDiscountFilters(this)" />
                     <span class="checkbox-custom"></span>
-                    Bapashitaram Travels
+                    Up to 25% Off
                   </label>
                   <div class="additional-content" style="display: none;">
                       <label class="checkbox-label mb-2">
-                          <input type="checkbox" />
+                          <input type="checkbox" value="10" onchange="updateDiscountFilters(this)" />
                           <span class="checkbox-custom"></span>
-                          New Travels
+                          Up to 10% Off
                       </label>
                       <label class="checkbox-label">
-                          <input type="checkbox" />
+                          <input type="checkbox" value="30" onchange="updateDiscountFilters(this)"/>
                           <span class="checkbox-custom"></span>
-                          Another Travels
+                          Up to 30% Off
                       </label>
                   </div>
                   <a href="#" class="show-more" id="toggleContent11">Show More</a>
@@ -931,12 +1346,12 @@ aria-hidden="true"
 
           <section class="accordion filter-section">
             <div class="tab">
-                <input type="checkbox" class="invisible" name="accordion-1" id="cb12">
-                <label for="cb12" class="tab__label">Bus Operator</label>
+                <input type="checkbox" class="invisible" name="accordion-1" id="menu12">
+                <label for="menu12" class="tab__label">Bus Operator</label>
                 <div class="tab__content">
                     <div class="search-box">
                         <input type="text" placeholder="Search Bus Operator" />
-                        <span class="search-icon">🔍</span>
+                        <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
                     </div>
                     <div class="checkbox-group">
                         <label class="checkbox-label">
@@ -979,7 +1394,7 @@ aria-hidden="true"
             </div>
         </section>
         </div>
-        <div style="width: 75%;">
+        <div class="set-w">
           <div class="travel-list" id="buslist">
             <!-- <div class="travel-card">
               <div class="travel-info">
@@ -2153,6 +2568,52 @@ function toggleSelection(button) {
 }
 
    </script>
+
+
+<script>
+  const rangeInput = document.querySelectorAll(".range-input input"),
+priceInput = document.querySelectorAll(".price-input input"),
+range = document.querySelector(".slider .progress");
+let priceGap = 1000;
+
+priceInput.forEach((input) => {
+input.addEventListener("input", (e) => {
+  let minPrice = parseInt(priceInput[0].value),
+    maxPrice = parseInt(priceInput[1].value);
+
+  if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+    if (e.target.className === "input-min") {
+      rangeInput[0].value = minPrice;
+      range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+    } else {
+      rangeInput[1].value = maxPrice;
+      range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+    }
+  }
+});
+});
+
+rangeInput.forEach((input) => {
+input.addEventListener("input", (e) => {
+  let minVal = parseInt(rangeInput[0].value),
+    maxVal = parseInt(rangeInput[1].value);
+
+  if (maxVal - minVal < priceGap) {
+    if (e.target.className === "range-min") {
+      rangeInput[0].value = maxVal - priceGap;
+    } else {
+      rangeInput[1].value = minVal + priceGap;
+    }
+  } else {
+    priceInput[0].value = minVal;
+    priceInput[1].value = maxVal;
+    range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+    range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+  }
+});
+});
+
+</script>
 
 
 

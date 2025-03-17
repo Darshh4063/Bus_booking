@@ -1006,18 +1006,18 @@
   ],
   "busListings": [
     {
-      "companyName": "Shree Nath Travels",
-      "busType": "AC",
+      "companyName": "Amar Travels",
+      "busType": "AC Seater",
       "rating": "2.5",
       "journey": {
         "departure": {
           "location": "Vadodara",
-          "time": "10:00 AM",
+          "time": "6:00 AM",
           "date": "10 Feb 2025"
         },
         "arrival": {
           "location": "surat",
-          "time": "10:00 AM",
+          "time": "12:00 AM",
           "date": "10 Feb 2025"
         },
         "duration": "05h 30m"
@@ -1025,7 +1025,7 @@
       "price": {
         "amount": "30,000",
         "currency": "₹",
-        "discount": "Best deal 10% Off"
+        "discount": "Best deal 35% Off"
       },
       "travelLinks": [
         {
@@ -1114,37 +1114,37 @@
       "pickupPoints": [
         {
           "time": "10:00",
-          "location": "Navjivan Hotel"
+          "location": "Abrama Chowk Motavarachha"
         },
         {
           "time": "11:00",
-          "location": "Katargam, Unapani Road"
+          "location": "Akshar Vadi"
         },
         {
           "time": "01:00",
-          "location": "Kiram Hospital, Nanigam Circle"
+          "location": "Balaji Bus Parking"
         },
         {
           "time": "05:00",
-          "location": "Savera Complex, Udhana"
+          "location": "Bhavani Mandir"
         },
         {
           "time": "08:00",
-          "location": "Navjivan Hotel"
+          "location": "Chopati Nanavarachha"
         }
       ],
       "dropoffPoints": [
         {
           "time": "12:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "location": "Ankleshwar"
         },
         {
           "time": "2:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "location": "Ankleshwar By Pass"
         },
         {
           "time": "5:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "location": "Ankleshwar Highway"
         }
       ],
       "ratings": {
@@ -1297,18 +1297,18 @@
       "id": "dfa43"
     },
     {
-      "companyName": "Shivay Travels",
-      "busType": "Non AC",
+      "companyName": "B.R. Travels",
+      "busType": "Non AC Seater",
       "rating": "3.5",
       "journey": {
         "departure": {
           "location": "Ahmedabad",
-          "time": "10:00 AM",
+          "time": "12:00 AM",
           "date": "10 Feb 2025"
         },
         "arrival": {
           "location": "Ankleshwar",
-          "time": "10:00 AM",
+          "time": "06:00 AM",
           "date": "10 Feb 2025"
         },
         "duration": "05h 30m"
@@ -1316,7 +1316,7 @@
       "price": {
         "amount": "32,000",
         "currency": "₹",
-        "discount": "Best deal 10% Off"
+        "discount": "Best deal 15% Off"
       },
       "travelLinks": [
         {
@@ -1378,16 +1378,12 @@
         ]
       },
       "amenities": [
-        "WiFi",
-        "Water Bottle",
         "Charging Point",
         "Blanket",
         "Live Tracking",
         "Emergency Toilet"
       ],
       "amenitiesImg": [
-        "amenities_1.png",
-        "amenities_2.png",
         "amenities_3.png",
         "amenities_4.png",
         "amenities_5.png",
@@ -1404,37 +1400,37 @@
       "pickupPoints": [
         {
           "time": "10:00",
-          "location": "Navjivan Hotel"
+          "location": "Abrama Chowk Motavarachha"
         },
         {
           "time": "11:00",
-          "location": "Katargam, Unapani Road"
+          "location": "Akshar Vadi"
         },
         {
           "time": "01:00",
-          "location": "Kiram Hospital, Nanigam Circle"
+          "location": "Balaji Bus Parking"
         },
         {
           "time": "05:00",
-          "location": "Savera Complex, Udhana"
+          "location": "Bhavani Mandir"
         },
         {
           "time": "08:00",
-          "location": "Navjivan Hotel"
+          "location": "Chopati Nanavarachha"
         }
       ],
       "dropoffPoints": [
         {
-          "time": "3:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "time": "12:00",
+          "location": "Ankleshwar"
         },
         {
-          "time": "8:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "time": "2:00",
+          "location": "Ankleshwar By Pass"
         },
         {
-          "time": "11:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "time": "5:00",
+          "location": "Ankleshwar Highway"
         }
       ],
       "ratings": {
@@ -1586,8 +1582,8 @@
       "id": "dfa42"
     },
     {
-      "companyName": "Bhumi Travels",
-      "busType": "Sleeper",
+      "companyName": "Ankur Travels",
+      "busType": "AC Sleeper",
       "rating": "4.5",
       "journey": {
         "departure": {
@@ -1605,7 +1601,7 @@
       "price": {
         "amount": "35,000",
         "currency": "₹",
-        "discount": "Best deal 10% Off"
+        "discount": "Best deal 20% Off"
       },
       "travelLinks": [
         {
@@ -1669,16 +1665,12 @@
       "amenities": [
         "WiFi",
         "Water Bottle",
-        "Charging Point",
-        "Blanket",
         "Live Tracking",
         "Emergency Toilet"
       ],
       "amenitiesImg": [
         "amenities_1.png",
         "amenities_2.png",
-        "amenities_3.png",
-        "amenities_4.png",
         "amenities_5.png",
         "amenities_6.png"
       ],
@@ -1693,37 +1685,37 @@
       "pickupPoints": [
         {
           "time": "10:00",
-          "location": "Navjivan Hotel"
+          "location": "Abrama Chowk Motavarachha"
         },
         {
           "time": "11:00",
-          "location": "Katargam, Unapani Road"
+          "location": "Akshar Vadi"
         },
         {
           "time": "01:00",
-          "location": "Kiram Hospital, Nanigam Circle"
+          "location": "Balaji Bus Parking"
         },
         {
           "time": "05:00",
-          "location": "Savera Complex, Udhana"
+          "location": "Bhavani Mandir"
         },
         {
           "time": "08:00",
-          "location": "Navjivan Hotel"
+          "location": "Chopati Nanavarachha"
         }
       ],
       "dropoffPoints": [
         {
-          "time": "10:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "time": "12:00",
+          "location": "Ankleshwar"
         },
         {
-          "time": "11:30",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "time": "2:00",
+          "location": "Ankleshwar By Pass"
         },
         {
-          "time": "1:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "time": "5:00",
+          "location": "Ankleshwar Highway"
         }
       ],
       "ratings": {
@@ -1843,7 +1835,7 @@
           "pickupPoints": [
             {
               "time": "10:00 AM",
-              "location": "Shyamdham Mandir, Jakatnaka",
+              "location": "Chopati Nanavarachha",
               "selected": true
             },
             {
@@ -1876,8 +1868,8 @@
       "id": "dfa41"
     },
     {
-      "companyName": "Umiya Travels",
-      "busType": "Seater",
+      "companyName": "Bapashitaram Travels",
+      "busType": "Non AC Seater",
       "rating": "2.0",
       "journey": {
         "departure": {
@@ -1895,7 +1887,7 @@
       "price": {
         "amount": "37,000",
         "currency": "₹",
-        "discount": "Best deal 10% Off"
+        "discount": "Best deal 25% Off"
       },
       "travelLinks": [
         {
@@ -1957,20 +1949,16 @@
         ]
       },
       "amenities": [
-        "WiFi",
         "Water Bottle",
         "Charging Point",
         "Blanket",
-        "Live Tracking",
-        "Emergency Toilet"
+        "Live Tracking"
       ],
       "amenitiesImg": [
-        "amenities_1.png",
         "amenities_2.png",
         "amenities_3.png",
         "amenities_4.png",
-        "amenities_5.png",
-        "amenities_6.png"
+        "amenities_5.png"
       ],
       "photos": [
         "buslist_slider1.png",
@@ -1983,37 +1971,37 @@
       "pickupPoints": [
         {
           "time": "10:00",
-          "location": "Navjivan Hotel"
+          "location": "Abrama Chowk Motavarachha"
         },
         {
           "time": "11:00",
-          "location": "Katargam, Unapani Road"
+          "location": "Akshar Vadi"
         },
         {
           "time": "01:00",
-          "location": "Kiram Hospital, Nanigam Circle"
+          "location": "Balaji Bus Parking"
         },
         {
           "time": "05:00",
-          "location": "Savera Complex, Udhana"
+          "location": "Bhavani Mandir"
         },
         {
           "time": "08:00",
-          "location": "Navjivan Hotel"
+          "location": "Chopati Nanavarachha"
         }
       ],
       "dropoffPoints": [
         {
+          "time": "12:00",
+          "location": "Ankleshwar"
+        },
+        {
           "time": "2:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "location": "Ankleshwar By Pass"
         },
         {
-          "time": "4:30",
-          "location": "Valiya Chokdi Ashirwad Hotel"
-        },
-        {
-          "time": "6:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "time": "5:00",
+          "location": "Ankleshwar Highway"
         }
       ],
       "ratings": {
@@ -2168,7 +2156,7 @@
     },
     {
       "companyName": "Maruti Nandan Travels",
-      "busType": "Sleeper",
+      "busType": "Non AC Sleeper",
       "rating": "4.0",
       "journey": {
         "departure": {
@@ -2186,7 +2174,7 @@
       "price": {
         "amount": "28,000",
         "currency": "₹",
-        "discount": "Best deal 10% Off"
+        "discount": "Best deal 30% Off"
       },
       "travelLinks": [
         {
@@ -2249,17 +2237,13 @@
       },
       "amenities": [
         "WiFi",
-        "Water Bottle",
         "Charging Point",
         "Blanket",
-        "Live Tracking",
         "Emergency Toilet"
       ],
       "amenitiesImg": [
         "amenities_1.png",
-        "amenities_2.png",
         "amenities_3.png",
-        "amenities_4.png",
         "amenities_5.png",
         "amenities_6.png"
       ],
@@ -2274,37 +2258,37 @@
       "pickupPoints": [
         {
           "time": "10:00",
-          "location": "Navjivan Hotel"
+          "location": "Abrama Chowk Motavarachha"
         },
         {
           "time": "11:00",
-          "location": "Katargam, Unapani Road"
+          "location": "Akshar Vadi"
         },
         {
           "time": "01:00",
-          "location": "Kiram Hospital, Nanigam Circle"
+          "location": "Balaji Bus Parking"
         },
         {
           "time": "05:00",
-          "location": "Savera Complex, Udhana"
+          "location": "Bhavani Mandir"
         },
         {
           "time": "08:00",
-          "location": "Navjivan Hotel"
+          "location": "Chopati Nanavarachha"
         }
       ],
       "dropoffPoints": [
         {
-          "time": "9:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "time": "12:00",
+          "location": "Ankleshwar"
         },
         {
-          "time": "11:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "time": "2:00",
+          "location": "Ankleshwar By Pass"
         },
         {
-          "time": "12:30",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "time": "5:00",
+          "location": "Ankleshwar Highway"
         }
       ],
       "ratings": {
@@ -2457,7 +2441,7 @@
     },
     {
       "companyName": "Delux Travels",
-      "busType": "AC",
+      "busType": "AC Sleeper",
       "rating": "3.0",
       "journey": {
         "departure": {
@@ -2475,7 +2459,7 @@
       "price": {
         "amount": "35,000",
         "currency": "₹",
-        "discount": "Best deal 10% Off"
+        "discount": "Best deal 15% Off"
       },
       "travelLinks": [
         {
@@ -2538,19 +2522,13 @@
       },
       "amenities": [
         "WiFi",
-        "Water Bottle",
         "Charging Point",
-        "Blanket",
-        "Live Tracking",
-        "Emergency Toilet"
+        "Live Tracking"
       ],
       "amenitiesImg": [
         "amenities_1.png",
-        "amenities_2.png",
         "amenities_3.png",
-        "amenities_4.png",
-        "amenities_5.png",
-        "amenities_6.png"
+        "amenities_5.png"
       ],
       "photos": [
         "buslist_slider1.png",
@@ -2563,37 +2541,37 @@
       "pickupPoints": [
         {
           "time": "10:00",
-          "location": "Navjivan Hotel"
+          "location": "Abrama Chowk Motavarachha"
         },
         {
           "time": "11:00",
-          "location": "Katargam, Unapani Road"
+          "location": "Akshar Vadi"
         },
         {
           "time": "01:00",
-          "location": "Kiram Hospital, Nanigam Circle"
+          "location": "Balaji Bus Parking"
         },
         {
           "time": "05:00",
-          "location": "Savera Complex, Udhana"
+          "location": "Bhavani Mandir"
         },
         {
           "time": "08:00",
-          "location": "Navjivan Hotel"
+          "location": "Chopati Nanavarachha"
         }
       ],
       "dropoffPoints": [
         {
-          "time": "11:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "time": "12:00",
+          "location": "Ankleshwar"
         },
         {
-          "time": "10:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "time": "2:00",
+          "location": "Ankleshwar By Pass"
         },
         {
-          "time": "1:30",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "time": "5:00",
+          "location": "Ankleshwar Highway"
         }
       ],
       "ratings": {
@@ -2752,8 +2730,8 @@
       "id": "dfa46"
     },
     {
-      "companyName": "Shree Nath Travels",
-      "busType": "Sleeper",
+      "companyName": "Shivay Travels",
+      "busType": "AC Seater",
       "rating": "2.5",
       "journey": {
         "departure": {
@@ -2771,7 +2749,7 @@
       "price": {
         "amount": "33,000",
         "currency": "₹",
-        "discount": "Best deal 10% Off"
+        "discount": "Best deal 20% Off"
       },
       "travelLinks": [
         {
@@ -2833,19 +2811,15 @@
         ]
       },
       "amenities": [
-        "WiFi",
         "Water Bottle",
         "Charging Point",
         "Blanket",
-        "Live Tracking",
         "Emergency Toilet"
       ],
       "amenitiesImg": [
-        "amenities_1.png",
         "amenities_2.png",
         "amenities_3.png",
         "amenities_4.png",
-        "amenities_5.png",
         "amenities_6.png"
       ],
       "photos": [
@@ -2859,37 +2833,37 @@
       "pickupPoints": [
         {
           "time": "10:00",
-          "location": "Navjivan Hotel"
+          "location": "Abrama Chowk Motavarachha"
         },
         {
           "time": "11:00",
-          "location": "Katargam, Unapani Road"
+          "location": "Akshar Vadi"
         },
         {
           "time": "01:00",
-          "location": "Kiram Hospital, Nanigam Circle"
+          "location": "Balaji Bus Parking"
         },
         {
           "time": "05:00",
-          "location": "Savera Complex, Udhana"
+          "location": "Bhavani Mandir"
         },
         {
           "time": "08:00",
-          "location": "Navjivan Hotel"
+          "location": "Chopati Nanavarachha"
         }
       ],
       "dropoffPoints": [
         {
-          "time": "3:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "time": "12:00",
+          "location": "Ankleshwar"
         },
         {
-          "time": "4:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "time": "2:00",
+          "location": "Ankleshwar By Pass"
         },
         {
-          "time": "11:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "time": "5:00",
+          "location": "Ankleshwar Highway"
         }
       ],
       "ratings": {
@@ -3042,8 +3016,8 @@
       "id": "dfa47"
     },
     {
-      "companyName": "Shree Nath Travels",
-      "busType": "Seater",
+      "companyName": "Bharat Travels",
+      "busType": "AC Seater",
       "rating": "4.5",
       "journey": {
         "departure": {
@@ -3061,7 +3035,7 @@
       "price": {
         "amount": "40,000",
         "currency": "₹",
-        "discount": "Best deal 10% Off"
+        "discount": "Best deal 35% Off"
       },
       "travelLinks": [
         {
@@ -3124,18 +3098,12 @@
       },
       "amenities": [
         "WiFi",
-        "Water Bottle",
         "Charging Point",
-        "Blanket",
-        "Live Tracking",
         "Emergency Toilet"
       ],
       "amenitiesImg": [
         "amenities_1.png",
-        "amenities_2.png",
         "amenities_3.png",
-        "amenities_4.png",
-        "amenities_5.png",
         "amenities_6.png"
       ],
       "photos": [
@@ -3149,37 +3117,37 @@
       "pickupPoints": [
         {
           "time": "10:00",
-          "location": "Navjivan Hotel"
+          "location": "Abrama Chowk Motavarachha"
         },
         {
           "time": "11:00",
-          "location": "Katargam, Unapani Road"
+          "location": "Akshar Vadi"
         },
         {
           "time": "01:00",
-          "location": "Kiram Hospital, Nanigam Circle"
+          "location": "Balaji Bus Parking"
         },
         {
           "time": "05:00",
-          "location": "Savera Complex, Udhana"
+          "location": "Bhavani Mandir"
         },
         {
           "time": "08:00",
-          "location": "Navjivan Hotel"
+          "location": "Chopati Nanavarachha"
         }
       ],
       "dropoffPoints": [
         {
-          "time": "10:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "time": "12:00",
+          "location": "Ankleshwar"
         },
         {
-          "time": "12:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "time": "2:00",
+          "location": "Ankleshwar By Pass"
         },
         {
           "time": "5:00",
-          "location": "Valiya Chokdi Ashirwad Hotel"
+          "location": "Ankleshwar Highway"
         }
       ],
       "ratings": {
@@ -3322,7 +3290,7 @@
     },
     {
       "companyName": "New Dharti travels",
-      "busType": "AC",
+      "busType": "AC Seater",
       "rating": "4.5",
       "journey": {
         "departure": {
@@ -3340,7 +3308,7 @@
       "price": {
         "amount": "28,000",
         "currency": "₹",
-        "discount": "Best deal 10% Off"
+        "discount": "Best deal 25% Off"
       },
       "travelLinks": [
         {
@@ -3402,20 +3370,14 @@
         ]
       },
       "amenities": [
-        "WiFi",
         "Water Bottle",
         "Charging Point",
-        "Blanket",
-        "Live Tracking",
-        "Emergency Toilet"
+        "Live Tracking"
       ],
       "amenitiesImg": [
-        "amenities_1.png",
         "amenities_2.png",
         "amenities_3.png",
-        "amenities_4.png",
-        "amenities_5.png",
-        "amenities_6.png"
+        "amenities_5.png"
       ],
       "photos": [
         "buslist_slider1.png",
@@ -3427,37 +3389,37 @@
       "pickupPoints": [
         {
           "time": "10:00",
-          "location": "Navjivan Hotel"
+          "location": "Abrama Chowk Motavarachha"
         },
         {
           "time": "11:00",
-          "location": "Katargam, Unapani Road"
+          "location": "Akshar Vadi"
         },
         {
           "time": "01:00",
-          "location": "Kiram Hospital, Nanigam Circle"
+          "location": "Balaji Bus Parking"
         },
         {
           "time": "05:00",
-          "location": "Savera Complex, Udhana"
+          "location": "Bhavani Mandir"
         },
         {
           "time": "08:00",
-          "location": "Navjivan Hotel"
+          "location": "Chopati Nanavarachha"
         }
       ],
       "dropoffPoints": [
         {
-          "time": "10:00",
-          "location": "Majevdi Gate"
+          "time": "12:00",
+          "location": "Ankleshwar"
         },
         {
-          "time": "10:30",
-          "location": "Gandhi Chowk"
+          "time": "2:00",
+          "location": "Ankleshwar By Pass"
         },
         {
-          "time": "11:00",
-          "location": "Motibaug"
+          "time": "5:00",
+          "location": "Ankleshwar Highway"
         }
       ],
       "ratings": {
@@ -3599,8 +3561,8 @@
       "id": "dfa49"
     },
     {
-      "companyName": "New Dharti travels",
-      "busType": "AC",
+      "companyName": "Bapasitaram Travels",
+      "busType": "AC Seater",
       "rating": "4.5",
       "journey": {
         "departure": {
@@ -3618,7 +3580,7 @@
       "price": {
         "amount": "30,000",
         "currency": "₹",
-        "discount": "Best deal 10% Off"
+        "discount": "Best deal 30% Off"
       },
       "travelLinks": [
         {
@@ -3680,12 +3642,14 @@
         ]
       },
       "amenities": [
-        "WiFi",
         "Water Bottle",
         "Charging Point",
-        "Blanket",
-        "Live Tracking",
-        "Emergency Toilet"
+        "Live Tracking"
+      ],
+      "amenitiesImg": [
+        "amenities_2.png",
+        "amenities_3.png",
+        "amenities_5.png"
       ],
       "photos": [
         "buslist_slider1.png",
@@ -3697,37 +3661,37 @@
       "pickupPoints": [
         {
           "time": "10:00",
-          "location": "Navjivan Hotel"
+          "location": "Abrama Chowk Motavarachha"
         },
         {
           "time": "11:00",
-          "location": "Katargam, Unapani Road"
+          "location": "Akshar Vadi"
         },
         {
           "time": "01:00",
-          "location": "Kiram Hospital, Nanigam Circle"
+          "location": "Balaji Bus Parking"
         },
         {
           "time": "05:00",
-          "location": "Savera Complex, Udhana"
+          "location": "Bhavani Mandir"
         },
         {
           "time": "08:00",
-          "location": "Navjivan Hotel"
+          "location": "Chopati Nanavarachha"
         }
       ],
       "dropoffPoints": [
         {
-          "time": "10:00",
-          "location": "Majevdi Gate"
+          "time": "12:00",
+          "location": "Ankleshwar"
         },
         {
-          "time": "10:30",
-          "location": "Gandhi Chowk"
+          "time": "2:00",
+          "location": "Ankleshwar By Pass"
         },
         {
-          "time": "11:00",
-          "location": "Motibaug"
+          "time": "5:00",
+          "location": "Ankleshwar Highway"
         }
       ],
       "ratings": {

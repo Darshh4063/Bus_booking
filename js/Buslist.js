@@ -15,9 +15,10 @@ async function busListData() {
     let filteredBuses = [...data];
 
     const filterControls = `
-      <div class="filtersection">
+     <div class="container">
+       <div class="filtersection">
         <div class="search-filters">
-          <input type="text" id="searchInput" placeholder="Search by bus name or type..." class="search-input">
+          <input type="text" id="searchInput" placeholder="Search by bus name or type..." class="search-input flex-fill">
           
           <select id="priceFilter" class="filter-select">
             <option value="">Price Range</option>
@@ -41,9 +42,10 @@ async function busListData() {
             <option value="Seater">Seater</option>
           </select>
 
-          <button id="resetFilters" class="reset-btn">Reset Filters</button>
+          <button id="resetFilters" class="reset-btn ">Reset Filters</button>
         </div>
       </div>
+     </div>
     `;
 
     document
@@ -100,7 +102,25 @@ async function busListData() {
         return matchesSearch && matchesPrice && matchesRating && matchesBusType;
       });
 
-      renderBusList(filteredBuses);
+      if (filteredBuses.length === 0) {
+        document.getElementById("buslist").innerHTML = `
+      <div style="justify-items: center;" class="k-main w-100 align-content-center">
+        <div class="k-upcoming">
+          <div class="k-up-box">
+            <div class="k-no-upcoming">
+              <img src="k_images/No Upcoming Trips.svg" alt="No Upcoming" width="200px" />
+            </div>
+            <div class="k-no-details">
+              <p class="p-0 m-0">No Booking Found</p>
+              <p class="text-gray">Lorem Ipsum is simply dummy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+      } else {
+        renderBusList(filteredBuses);
+      }
     }
 
     function resetFilters() {
@@ -124,6 +144,7 @@ async function busListData() {
         display: flex;
         gap: 15px;
         flex-wrap: wrap;
+        justify-content: space-between;
       }
 
       .search-input {
@@ -605,6 +626,10 @@ async function busListData() {
 }
 
 let selectedSeats = [];
+let selectedOperators = [];
+let selectedAmenities = [];
+let selectedRatings = [];
+let selectedDiscounts = [];
 function initializeSeatSelection() {
   // Remove the single container query since we'll handle multiple buses
   const seatContainers = document.querySelectorAll(".seat-selection");
@@ -770,10 +795,6 @@ style.textContent = `
     transition: all 0.3s ease;
   }
   
-  .seat.selected {
-    // background-color: #4CAF50 !important;
-  }
-  
   .seat.booked-seat {
     cursor: not-allowed;
   }
@@ -900,7 +921,7 @@ function renderBusList(buses) {
         </div>
 
         <div id="policies-${busIndex}" class="content-section" style="display: none;">
-          <div class="container d-flex">
+          <div class="container flex">
             <div class="table-container">
               <table>
                 <thead>
@@ -944,14 +965,20 @@ function renderBusList(buses) {
               <h2 class="amenities-title">Bus Amenities</h2>
               <div class="amenities-list">
                 ${bus.amenities
-                  .map((amenity, index) => `
+                  .map(
+                    (amenity, index) => `
                   <div class="amenity-item">
                     <div class="amenity-icon">
-                      <img style="width:20px" src="./image/u_images/${bus.amenitiesImg[index]}" alt="" />
+                      <img style="width:20px" 
+                        src="./image/u_images/${
+                          bus.amenitiesImg?.[index] || "default.png"
+                        }" 
+                        alt="${amenity}" />
                     </div>
                     <div class="amenity-text">${amenity}</div>
                   </div>
-                `)
+                `
+                  )
                   .join("")}
               </div>
             </div>
@@ -1447,7 +1474,26 @@ function searchData() {
 
     return isCityMatch && isDateMatch && isBusMatch;
   });
-  renderBusList(busFilterData);
+
+  if (busFilterData.length === 0) {
+    document.getElementById("buslist").innerHTML = `
+      <div style="justify-items: center;" class="k-main w-100 align-content-center">
+        <div class="k-upcoming">
+          <div class="k-up-box">
+            <div class="k-no-upcoming">
+              <img src="k_images/No Upcoming Trips.svg" alt="No Upcoming" width="200px" />
+            </div>
+            <div class="k-no-details">
+              <p class="p-0 m-0">No Booking Found</p>
+              <p class="text-gray">Lorem Ipsum is simply dummy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  } else {
+    renderBusList(busFilterData);
+  }
   console.log(busFilterData);
 }
 
@@ -1513,3 +1559,99 @@ window.addEventListener("load", () => {
     localStorage.removeItem("filterData");
   }
 });
+
+function filterBusType(busType) {
+  const filteredBuses = data.filter((bus) => bus.busType.includes(busType));
+  renderBusList(filteredBuses);
+}
+
+function filterSeatType(seatType) {
+  const filteredBuses = data.filter((bus) => bus.busType.includes(seatType));
+  renderBusList(filteredBuses);
+}
+
+// Function to update the selected bus operators and filter the bus list
+function updateBusOperatorFilters(checkbox) {
+  if (checkbox.checked) {
+    selectedOperators.push(checkbox.value);
+  } else {
+    selectedOperators = selectedOperators.filter(
+      (operator) => operator !== checkbox.value
+    );
+  }
+  filterBusByOperators();
+}
+
+// Function to filter buses based on selected operators
+function filterBusByOperators() {
+  const filteredBuses = data.filter((bus) =>
+    selectedOperators.includes(bus.companyName)
+  );
+  renderBusList(filteredBuses);
+}
+
+function updateAmenitiesFilters(checkbox) {
+  if (checkbox.checked) {
+    selectedAmenities.push(checkbox.value);
+  } else {
+    selectedAmenities = selectedAmenities.filter(
+      (amenity) => amenity !== checkbox.value
+    );
+  }
+  filterBusesByAmenities();
+}
+
+// Function to filter buses based on selected amenities
+function filterBusesByAmenities() {
+  const filteredBuses = data.filter((bus) =>
+    selectedAmenities.every((amenity) => bus.amenities.includes(amenity))
+  );
+  renderBusList(filteredBuses);
+}
+
+// Function to update the selected ratings and filter the bus list
+function updateRatingFilters(checkbox) {
+  if (checkbox.checked) {
+    selectedRatings.push(checkbox.value);
+  } else {
+    selectedRatings = selectedRatings.filter(
+      (rating) => rating !== checkbox.value
+    );
+  }
+  filterBusesByRatings();
+}
+
+// Function to filter buses based on selected ratings
+function filterBusesByRatings() {
+  const filteredBuses = data.filter((bus) =>
+    selectedRatings.includes(bus.rating.toString())
+  );
+  renderBusList(filteredBuses);
+}
+
+// Function to update the selected discounts and filter the bus list
+function updateDiscountFilters(checkbox) {
+  if (checkbox.checked) {
+    selectedDiscounts.push(parseFloat(checkbox.value)); // Store as a number
+  } else {
+    selectedDiscounts = selectedDiscounts.filter(
+      (discount) => discount !== parseFloat(checkbox.value)
+    );
+  }
+  filterBusesByDiscounts();
+}
+
+// Function to filter buses based on selected discounts
+function filterBusesByDiscounts() {
+  const filteredBuses = data.filter((bus) => {
+    const busDiscount = parseFloat(bus.price.discount);
+    console.log(bus.price.discount);
+
+    console.log(busDiscount);
+
+    // Assuming bus.discount is a percentage value
+    return selectedDiscounts.some((discount) => busDiscount <= discount);
+  });
+  // console.log(filteredBuses);
+  renderBusList(filteredBuses);
+}
