@@ -1023,7 +1023,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .dummy img {
-  width: 60px;
+  width: 60px !important;
   height: 60px;
   border-radius: 50%;
   object-fit: cover;

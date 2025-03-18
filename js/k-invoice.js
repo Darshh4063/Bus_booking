@@ -533,6 +533,19 @@ function displayCancellationDetails(bookingId) {
   }
 }
 
+function showRegularFareDetails() {
+  const fareDetails = document.querySelector(".fare-details");
+  const cancellationFareDetails = document.querySelector(".fare-details-cancelation");
+
+  if (fareDetails) {
+    fareDetails.style.display = "block";
+  }
+
+  if (cancellationFareDetails) {
+    cancellationFareDetails.style.display = "none";
+  }
+}
+
 // Update the document.addEventListener to include the cancellations from localStorage
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Invoice page loaded");

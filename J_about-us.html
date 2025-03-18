@@ -3,21 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us</title>
-    <link rel="stylesheet" href="./css/J_about-us.css" />
-    <link rel="stylesheet" href="./css/media.css" />
-    <link rel="stylesheet" href="./css/Home.css" />
+    <link rel="stylesheet" href="/css/J_about-us.css" />
     <link rel="stylesheet" href="css/k-login.css" />
-
+    <link rel="stylesheet" href="css/home.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css "
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css"
+    />
+    <title>Document</title>
   </head>
 
   <body>
+    <!-- header section -->
+
     <section id="top-bar">
       <div class="container">
         <div class="row contact-info">
@@ -37,437 +45,579 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="w-100">
-           <div class="row align-items-center">
-            <div class="col-6 col-lg-3">
-              <div class="logo">
-                <h1>LOGO</h1>
+            <div class="row align-items-center">
+              <div class="col-6 col-lg-3">
+                <div class="logo">
+                  <h1>LOGO</h1>
+                </div>
               </div>
-            </div>
 
-          <div class="d-lg-none k-toggle col-6 d-flex justify-content-end">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
+              <div class="d-lg-none k-toggle col-6 d-flex justify-content-end">
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
 
-          <div class="col-4 col-lg-6">
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a href="Home.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a href="J_about-us.html">About Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a href="J_contact-us.html">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                  <div class="account-btn d-none">
-                    <button><i class="fa-solid fa-user"></i> Account</button>
+              <div class="col-4 col-lg-6">
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="J_about-us.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a href="J_contact-us.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <div class="account-btn d-none">
+                        <button>
+                          <i class="fa-solid fa-user"></i> Account
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-4 col-lg-3">
+                <div class="k-acc mx-auto d-flex justify-content-end">
+                  <div class="text-end">
+                    <div class="account-btn">
+                      <button><i class="fa-solid fa-user"></i> Account</button>
+                    </div>
                   </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-           <div class="col-4 col-lg-3">
-            <div class="k-acc mx-auto d-flex justify-content-end">
-              <div class="text-end">
-                <div class="account-btn">
-                  <button><i class="fa-solid fa-user"></i> Account</button>
                 </div>
               </div>
             </div>
-           </div>
-           </div>
           </div>
         </nav>
       </div>
     </section>
-   <!-- Login Modal -->
-   <div
-   class="ke modal fade"
-   id="loginModal"
-   tabindex="-1"
-   aria-labelledby="loginModalLabel"
-   aria-hidden="true"
- >
-   <div class="modal-dialog modal-dialog-centered">
-     <div class="modal-content">
-       <div class="modal-body p-0">
-         <div class="k-modal-content-login">
-           <!-- Left Side - Bus Image -->
-           <div class="k-modal-image">
-             <img src="k_images/register-bus.png" alt="AJ Express Bus" />
-           </div>
+    <!-- Login Modal -->
+    <div
+      class="ke modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="k-modal-content-login">
+              <!-- Left Side - Bus Image -->
+              <div class="k-modal-image">
+                <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+              </div>
 
-           <!-- Right Side - Sign In Form -->
-           <div class="k-modal-form">
-             <!-- Close Button -->
-             <button
-               type="button"
-               class="k-close-btn"
-               data-bs-dismiss="modal"
-               onclick="backdropClose()"
-             >
-               &times;
-             </button>
+              <!-- Right Side - Sign In Form -->
+              <div class="k-modal-form">
+                <!-- Close Button -->
+                <button
+                  type="button"
+                  class="k-close-btn"
+                  data-bs-dismiss="modal"
+                  onclick="backdropClose()"
+                >
+                  &times;
+                </button>
 
-             <!-- Form Header -->
-             <div class="k-form-header">
-               <h2 class="k-title">Sign In</h2>
-               <p class="k-subtitle">Login to an existing account</p>
-             </div>
+                <!-- Form Header -->
+                <div class="k-form-header">
+                  <h2 class="k-title">Sign In</h2>
+                  <p class="k-subtitle">Login to an existing account</p>
+                </div>
 
-             <!-- Form Fields -->
-             <form class="k-login-form inp">
-               <div class="k-form-group">
-                 <label for="mobile" class="k-label">Mobile No</label>
-                 <div class="k-input-group">
-                   <div class="k-country-code">+91</div>
-                   <input
-                     type="text"
-                     class="k-input"
-                     id="mobile"
-                     placeholder="Enter your mobile no"
-                   />
-                 </div>
-               </div>
+                <!-- Form Fields -->
+                <form class="k-login-form inp">
+                  <div class="k-form-group">
+                    <label for="mobile" class="k-label">Mobile No</label>
+                    <div class="k-input-group">
+                      <div class="k-country-code">+91</div>
+                      <input
+                        type="text"
+                        class="k-input"
+                        id="mobile"
+                        placeholder="Enter your mobile no"
+                      />
+                    </div>
+                  </div>
 
-               <button type="button" class="k-submit-btn">Continue</button>
+                  <button type="button" class="k-submit-btn">Continue</button>
 
-               <!-- OR Divider -->
-               <div class="k-divider">
-                 <span>OR</span>
-               </div>
+                  <!-- OR Divider -->
+                  <div class="k-divider">
+                    <span>OR</span>
+                  </div>
 
-               <!-- Social Login -->
-               <div class="k-social-login">
-                 <button type="button" class="k-social-btn k-google">
-                   <img
-                     src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                     alt="Google"
-                   />
-                 </button>
-                 <button type="button" class="k-social-btn k-facebook">
-                   <img
-                     src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                     alt="Facebook"
-                   />
-                 </button>
-                 <button type="button" class="k-social-btn k-apple">
-                   <img
-                     src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-                     alt="Apple"
-                   />
-                 </button>
-               </div>
+                  <!-- Social Login -->
+                  <div class="k-social-login">
+                    <button type="button" class="k-social-btn k-google">
+                      <img src="k_images/google.png" alt="Google" />
+                    </button>
+                    <button type="button" class="k-social-btn k-facebook">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                        alt="Facebook"
+                      />
+                    </button>
+                    <button type="button" class="k-social-btn k-apple">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                        alt="Apple"
+                      />
+                    </button>
+                  </div>
 
-               <!-- Sign Up Link -->
-               <div class="k-signup-link">
-                 Didn't have any account?
-                 <a href="#" id="showRegisterModal">Sign up</a>
-               </div>
-             </form>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+                  <!-- Sign Up Link -->
+                  <div class="k-signup-link">
+                    Didn't have any account?
+                    <a href="#" id="showRegisterModal">Sign up</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
- <!-- OTP Modal -->
- <div
-   class="modal fade"
-   id="otpModal"
-   tabindex="-1"
-   aria-labelledby="otpModalLabel"
-   aria-hidden="true"
- >
-   <div class="ke-otp modal-dialog modal-dialog-centered">
-     <div class="modal-content">
-       <div class="modal-body p-0">
-         <div class="k-modal-content-otp">
-           <!-- Right Side - OTP Form -->
-           <div class="k-modal-form">
-             <!-- Close Button -->
-             <button
-               type="button"
-               class="k-close-btn"
-               data-bs-dismiss="modal"
-               onclick="backdropClose()"
-             >
-               &times;
-             </button>
+    <!-- OTP Modal -->
+    <div
+      class="modal fade"
+      id="otpModal"
+      tabindex="-1"
+      aria-labelledby="otpModalLabel"
+      aria-hidden="true"
+    >
+      <div class="ke-otp modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="k-modal-content-otp">
+              <!-- Right Side - OTP Form -->
+              <div class="k-modal-form">
+                <!-- Close Button -->
+                <button
+                  type="button"
+                  class="k-close-btn"
+                  data-bs-dismiss="modal"
+                  onclick="backdropClose()"
+                >
+                  &times;
+                </button>
 
-             <!-- Form Header -->
-             <div class="k-form-header">
-               <h2 class="k-title">Verify OTP</h2>
-               <p class="k-subtitle">
-                 Enter the verification code sent to
-                 <span>+91 XXXXXXXXXX</span>
-               </p>
-             </div>
+                <!-- Form Header -->
+                <div class="k-form-header">
+                  <h2 class="k-title">Verify OTP</h2>
+                  <p class="k-subtitle">
+                    Enter the verification code sent to
+                    <span>+91 XXXXXXXXXX</span>
+                  </p>
+                </div>
 
-             <!-- OTP Fields -->
-             <div class="k">
-               <div class="otp-container">
-                 <input
-                   type="text"
-                   maxlength="1"
-                   class="otp-input"
-                   autofocus
-                 />
-                 <input type="text" maxlength="1" class="otp-input" />
-                 <input type="text" maxlength="1" class="otp-input" />
-                 <input type="text" maxlength="1" class="otp-input" />
-               </div>
+                <!-- OTP Fields -->
+                <div class="k">
+                  <div class="otp-container">
+                    <input
+                      type="text"
+                      maxlength="1"
+                      class="otp-input"
+                      autofocus
+                    />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                  </div>
 
-               <div class="k-verify">
-                 <button type="button" class="veri">Verify</button>
-               </div>
+                  <div class="k-verify">
+                    <button type="button" class="veri">Verify</button>
+                  </div>
 
-               <div class="undo k-resend d-flex align-items-center justify-content-center">
-                <p class="m-0 pe-2 ke-resend"> Didn't receive the code?</p><span>Resend</span>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+                  <div
+                    class="undo k-resend d-flex align-items-center justify-content-center"
+                  >
+                    <p class="m-0 pe-2 ke-resend">Didn't receive the code?</p>
+                    <span>Resend</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
- <!-- Register OTP Modal -->
- <div
-   class="modal fade"
-   id="RegisterOtpModel"
-   tabindex="-1"
-   aria-labelledby="registerOtpModalLabel"
-   aria-hidden="true"
- >
-   <div class="modal-dialog modal-dialog-centered">
-     <div class="modal-content">
-       <div class="modal-body p-0">
-         <div class="k-modal-content">
-           <!-- Left Side - Bus Image -->
-           <div class="k-modal-image">
-             <img src="k_images/register-bus.png" alt="AJ Express Bus" />
-           </div>
+    <!-- Register Modal -->
+    <div
+      class="register modal fade"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="registerModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="k-modal-content">
+              <!-- Left Side - Bus Image -->
+              <div class="k-modal-image">
+                <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+              </div>
 
-           <!-- Right Side - OTP Form -->
-           <div class="k-modal-form">
-             <!-- Close Button -->
-             <button
-               type="button"
-               class="k-close-btn"
-               data-bs-dismiss="modal"
-               onclick="backdropClose()"
-             >
-               &times;
-             </button>
+              <!-- Right Side - Register Form -->
+              <div class="k-modal-form">
+                <!-- Close Button -->
+                <button
+                  type="button"
+                  class="k-close-btn"
+                  data-bs-dismiss="modal"
+                  onclick="backdropClose()"
+                >
+                  &times;
+                </button>
 
-             <!-- Form Header -->
-             <div class="k-form-header">
-               <h2 class="k-title">Verify OTP</h2>
-               <p class="k-subtitle">
-                 Enter the verification code sent to
-                 <span class="register-phone">+91 XXXXXXXXXX</span>
-               </p>
-             </div>
+                <!-- Form Header -->
+                <div class="k-form-header">
+                  <h2 class="k-title">Sign Up</h2>
+                  <p class="k-subtitle">Create a new account</p>
+                </div>
 
-             <!-- OTP Fields -->
-             <div class="k">
-               <div class="otp-container">
-                 <input
-                   type="text"
-                   maxlength="1"
-                   class="otp-input"
-                   autofocus
-                 />
-                 <input type="text" maxlength="1" class="otp-input" />
-                 <input type="text" maxlength="1" class="otp-input" />
-                 <input type="text" maxlength="1" class="otp-input" />
-               </div>
+                <!-- Form Fields -->
+                <form class="k-login-form" id="registerForm">
+                  <div class="k-form-group">
+                    <label for="regName" class="k-label">Name</label>
+                    <input
+                      type="text"
+                      class="k-input"
+                      id="regName"
+                      placeholder="Enter your full name"
+                      required
+                    />
+                  </div>
 
-               <div class="k-verify">
-                 <button type="button">Verify</button>
-               </div>
+                  <div class="k-form-group">
+                    <label for="regEmail" class="k-label">Email</label>
+                    <input
+                      type="email"
+                      class="k-input"
+                      id="regEmail"
+                      placeholder="Enter your email"
+                    />
+                  </div>
 
-               <div class="k-resend">
-                 Didn't receive the code? <span>Resend</span>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+                  <div class="k-form-group">
+                    <label for="regPassword" class="k-label">Password</label>
+                    <input
+                      type="password"
+                      class="k-input"
+                      id="regPassword"
+                      placeholder="Enter your password"
+                      required
+                    />
+                  </div>
 
- <!-- Register Modal -->
- <div
-   class="modal fade"
-   id="registerModal"
-   tabindex="-1"
-   aria-labelledby="registerModalLabel"
-   aria-hidden="true"
- >
-   <div class="modal-dialog modal-dialog-centered">
-     <div class="modal-content">
-       <div class="modal-body p-0">
-         <div class="k-modal-content">
-           <!-- Left Side - Bus Image -->
-           <div class="k-modal-image">
-             <img src="k_images/register-bus.png" alt="AJ Express Bus" />
-           </div>
+                  <div class="k-form-group">
+                    <label for="regMobile" class="k-label">Mobile No</label>
+                    <div class="k-input-group">
+                      <div class="k-country-code">+91</div>
+                      <input
+                        type="tel"
+                        class="k-input"
+                        id="regMobile"
+                        placeholder="Enter your mobile no"
+                        required
+                      />
+                    </div>
+                  </div>
 
-           <!-- Right Side - Register Form -->
-           <div class="k-modal-form">
-             <!-- Close Button -->
-             <button
-               type="button"
-               class="k-close-btn"
-               data-bs-dismiss="modal"
-               onclick="backdropClose()"
-             >
-               &times;
-             </button>
+                  <button
+                    type="button"
+                    class="k-submit-btn"
+                    id="registerButton"
+                  >
+                    Register
+                  </button>
 
-             <!-- Form Header -->
-             <div class="k-form-header">
-               <h2 class="k-title">Sign Up</h2>
-               <p class="k-subtitle">Create a new account</p>
-             </div>
+                  <!-- OR Divider -->
+                  <div class="k-divider">
+                    <span>OR</span>
+                  </div>
 
-             <!-- Form Fields -->
-             <form class="k-login-form" id="registerForm">
-               <div class="k-form-group">
-                 <label for="regName" class="k-label">Name</label>
-                 <input
-                   type="text"
-                   class="k-input"
-                   id="regName"
-                   placeholder="Enter your full name"
-                   required
-                 />
-               </div>
+                  <!-- Social Login -->
+                  <div class="k-social-login">
+                    <button type="button" class="k-social-btn k-google">
+                      <img src="k_images/google.png" alt="Google" />
+                    </button>
+                    <button type="button" class="k-social-btn k-facebook">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                        alt="Facebook"
+                      />
+                    </button>
+                    <button type="button" class="k-social-btn k-apple">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                        alt="Apple"
+                      />
+                    </button>
+                  </div>
 
-               <div class="k-form-group">
-                 <label for="regEmail" class="k-label">Email</label>
-                 <input
-                   type="email"
-                   class="k-input"
-                   id="regEmail"
-                   placeholder="Enter your email"
-                 />
-               </div>
+                  <!-- Login Link -->
+                  <div class="k-signup-link">
+                    Already have an account?
+                    <a href="#" id="showLoginModal">Sign in</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-               <div class="k-form-group">
-                 <label for="regPassword" class="k-label">Password</label>
-                 <input
-                   type="password"
-                   class="k-input"
-                   id="regPassword"
-                   placeholder="Enter your password"
-                   required
-                 />
-               </div>
+    <!-- Register OTP Modal -->
+    <div
+      class="modal fade"
+      id="RegisterOtpModel"
+      tabindex="-1"
+      aria-labelledby="registerOtpModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="k-modal-content">
+              <!-- Left Side - Bus Image -->
+              <div class="k-modal-image">
+                <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+              </div>
 
-               <div class="k-form-group">
-                 <label for="regMobile" class="k-label">Mobile No</label>
-                 <div class="k-input-group">
-                   <div class="k-country-code">+91</div>
-                   <input
-                     type="tel"
-                     class="k-input"
-                     id="regMobile"
-                     placeholder="Enter your mobile no"
-                     required
-                   />
-                 </div>
-               </div>
+              <!-- Right Side - OTP Form -->
+              <div class="k-modal-form">
+                <!-- Close Button -->
+                <button
+                  type="button"
+                  class="k-close-btn"
+                  data-bs-dismiss="modal"
+                  onclick="backdropClose()"
+                >
+                  &times;
+                </button>
 
-               <button
-                 type="button"
-                 class="k-submit-btn"
-                 id="registerButton"
-               >
-                 Register
-               </button>
+                <!-- Form Header -->
+                <div class="k-form-header">
+                  <h2 class="k-title">Verify OTP</h2>
+                  <p class="k-subtitle">
+                    Enter the verification code sent to
+                    <span class="register-phone">+91 XXXXXXXXXX</span>
+                  </p>
+                </div>
 
-               <!-- OR Divider -->
-               <div class="k-divider">
-                 <span>OR</span>
-               </div>
+                <!-- OTP Fields -->
+                <div class="k">
+                  <div class="otp-container">
+                    <input
+                      type="text"
+                      maxlength="1"
+                      class="otp-input"
+                      autofocus
+                    />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                  </div>
 
-               <!-- Social Login -->
-               <div class="k-social-login">
-                 <button type="button" class="k-social-btn k-google">
-                   <img
-                     src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                     alt="Google"
-                   />
-                 </button>
-                 <button type="button" class="k-social-btn k-facebook">
-                   <img
-                     src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                     alt="Facebook"
-                   />
-                 </button>
-                 <button type="button" class="k-social-btn k-apple">
-                   <img
-                     src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-                     alt="Apple"
-                   />
-                 </button>
-               </div>
+                  <div class="k-verify">
+                    <button type="button">Verify</button>
+                  </div>
 
-               <!-- Login Link -->
-               <div class="k-signup-link">
-                 Already have an account?
-                 <a href="#" id="showLoginModal">Sign in</a>
-               </div>
-             </form>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+                  <div class="k-resend">
+                    Didn't receive the code? <span>Resend</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <!-- ---------------------------------About us--------------------------------- -->
+    <!-- ---------------------------------------------------------------------------- -->
 
-    <section id="J_About-us">
+    <section>
       <div class="container">
-        <div class="J_about">
-          <h4>About us</h4>
+        <div class="col-12 col-md-8 ky-title">
+          <h2>About us</h2>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s,
           </p>
         </div>
+      </div>
+    </section>
 
+    <!-- ---------------------------------------------------------------------------- -->
+
+    <section>
+      <div class="container">
         <div class="row">
-          <div class="col-6 J_booking-image">
-            <img src="./image/image 3269.png" alt="" />
+          <div class="col-xl-6">
+            <div class="ky-bus-part">
+              <img src="image/ab-1.png" alt="" />
+            </div>
           </div>
 
-          <div class="col-6 J_bus-booking">
-            <div class="J_booking-content">
-              <h4>WE ARE</h4>
-              <h2>BUS Booking</h2>
+          <div class="col-xl-6 Buses">
+            <div class="ky-Booking-details">
+              <div class="ky-heading">
+                <p class="ky-sub-title">WE ARE</p>
+                <h2 class="ky-main-title">BUS Booking</h2>
+              </div>
+
+              <div class="ky-tempor">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+
+              <div class="row ky-card">
+                <div class="col-6 col-md-6 col-lg-3 ky-experience">
+                  <h2>10+</h2>
+                  <p>experience</p>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-3 ky-experience">
+                  <h2>15k+</h2>
+                  <p>Happy travellers</p>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-3 ky-experience">
+                  <h2>200+</h2>
+                  <p>Buses</p>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-3 ky-experience">
+                  <h2>100+</h2>
+                  <p>Places visited</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------------------- -->
+
+    <section id="ky-Benefits">
+      <div class="container">
+        <div class="ky-heading">
+          <p class="ky-sub-title">BENFITS</p>
+          <h2 class="ky-main-title">What We Offer</h2>
+        </div>
+
+        <div class="row ky-Security">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="ky-Reservations">
+              <div class="ky-Routes">
+                <img src="image/Benefits1.png" alt="" />
+              </div>
+              <div class="ky-Fares">
+                <h2>More than 100,000 Bus Routesy</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ----- -->
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="ky-Reservations">
+              <div class="ky-Routes">
+                <img src="image/Benefits2.png" alt="" />
+              </div>
+              <div class="ky-Fares">
+                <h2>Reliable Payment Security</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ----- -->
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="ky-Reservations">
+              <div class="ky-Routes">
+                <img src="image/Benefits3.png" alt="" />
+              </div>
+              <div class="ky-Fares">
+                <h2>Reliable Payment Security</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ----- -->
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="ky-Reservations">
+              <div class="ky-Routes">
+                <img src="image/Benefits4.png" alt="" />
+              </div>
+              <div class="ky-Fares">
+                <h2>Reliable Payment Security</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------------------- -->
+
+    <section id="ky-Vision">
+      <div class="container">
+        <div class="row flex-lg-row flex-column-reverse ky-aliquip">
+          <div class="col" style="position: relative">
+            <div class="ky-Penatibus ky-aptent">
+              <h2>Our Vision</h2>
+              <p>
+                Penatibus sem vitae mollis luctus mi tellus. Maximus eu eleifend
+                aptent dapibus metus maecenas consequat. Elementum interdum a
+                semper. Netus nullam eros nisi volutpat nibh ex ultricies.
+                Pharetra sagittis sit aliquet at. Magna nam platea justo.
+              </p>
+
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -475,116 +625,20 @@
                 nisi ut aliquip ex ea commodo consequat.
               </p>
             </div>
+          </div>
 
-            <div class="row J_experience">
-              <div class="col-3 J_Travellers">
-                <h4>10+</h4>
-                <p>Experience</p>
-              </div>
-
-              <div class="col-3 J_Travellers">
-                <h4>15k+</h4>
-                <p>Happy Travellers</p>
-              </div>
-
-              <div class="col-3 J_Travellers">
-                <h4>200+</h4>
-                <p>Buses</p>
-              </div>
-
-              <div class="col-3 J_Travellers">
-                <h4>100+</h4>
-                <p>Places Visited</p>
-              </div>
+          <div
+            class="col-lg-9 col-12 h-100 w-100 d-flex align-items-center justify-content-end ky-consectetur"
+          >
+            <div class="ky-exercitation">
+              <img src="image/ab-2.png" alt="" />
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ---------------------------------What We Offer--------------------------------- -->
-
-    <section id="J_we-offer">
-      <div class="container">
-        <div class="J_BENEFITS">
-          <h4>BENEFITS</h4>
-          <h2>What We Offer</h2>
-        </div>
-
-        <div class="row J_what-we-offer">
-          <div class="col-2 J_offer">
-            <div class="J_benefits-image">
-              <img src="./image/Frame (1).png" alt="" />
-            </div>
-            <h4>More than 100,000 Bus Routes</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor.
-            </p>
-          </div>
-
-          <div class="col-2 J_offer">
-            <div class="J_benefits-image">
-              <img src="./image/Frame (2).png" alt="" />
-            </div>
-            <h4>Budget-Friendly Fares</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor.
-            </p>
-          </div>
-
-          <div class="col-2 J_offer">
-            <div class="J_benefits-image">
-              <img src="./image/Frame (3).png" alt="" />
-            </div>
-            <h4>Reliable Payment Security</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor.
-            </p>
-          </div>
-
-          <div class="col-2 J_offer">
-            <div class="J_benefits-image">
-              <img src="./image/Frame (4).png" alt="" />
-            </div>
-            <h4>Effortless Reservations</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ---------------------------------Our Vision--------------------------------- -->
-
-    <section id="J_our-vision">
-      <div class="container">
-        <div class="row J_Our">
-          <div class="col-9 J_vision-image">
-            <img src="./image/image 3268.png" alt="" />
-          </div>
-          <div class="col-5 J_vision-content">
-            <h2>Our Vision</h2>
-            <p>
-              Penatibus sem vitae mollis luctus mi tellus. Maximus eu eleifend
-              aptent dapibus metus maecenas consequat. Elementum interdum a
-              semper. Netus nullam eros nisi volutpat nibh ex ultricies.
-              Pharetra sagittis sit aliquet at. Magna nam platea justo.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- ---------------------------------------------------------------------------- -->
 
     <section id="foot">
       <div class="container">
@@ -615,10 +669,10 @@
               <ul>
                 <li class="text">Information</li>
                 <li>
-                  <a href="J_about-us.html"> About Us</a>
+                  <a href="#"> About Us</a>
                 </li>
                 <li>
-                  <a href="J_contact-us.html"> Contact Us</a>
+                  <a href="#"> Contact Us</a>
                 </li>
               </ul>
             </div>
@@ -628,13 +682,13 @@
               <ul>
                 <li class="text">Support</li>
                 <li>
-                  <a href="J_FAQs.html"> FAQ's</a>
+                  <a href="#"> FAQ's</a>
                 </li>
                 <li>
-                  <a href="J_terms-condition.html"> Terms & Condition</a>
+                  <a href="#"> Terms & Condition</a>
                 </li>
                 <li>
-                  <a href="J_Privacy-Policy.html "> Privacy Policy</a>
+                  <a href="#"> Privacy Policy</a>
                 </li>
               </ul>
             </div>
@@ -663,6 +717,9 @@
         <p>All right reserved @ 2025</p>
       </div>
     </section>
+
+    <!-- ----------------------------------------------------------------------------------------------------- -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="./js/global-auth.js"></script>
     <script src="js/k-otp.js"></script>
@@ -670,18 +727,15 @@
 
     <script>
       function backdropClose() {
-       let backdrops = document.querySelectorAll(".modal-backdrop");
-       backdrops.forEach(backdrop => {
-           backdrop.remove(); // Completely remove the backdrop from the DOM
-       });
-   
-       // Re-enable scrolling (Bootstrap modals typically disable scrolling when opened)
-       document.body.classList.remove("modal-open");
-       document.body.style.overflow = ""; // Reset overflow style
-   }
-   
-       </script>
-   
+        let backdrops = document.querySelectorAll(".modal-backdrop");
+        backdrops.forEach((backdrop) => {
+          backdrop.remove(); // Completely remove the backdrop from the DOM
+        });
 
+        // Re-enable scrolling (Bootstrap modals typically disable scrolling when opened)
+        document.body.classList.remove("modal-open");
+        document.body.style.overflow = ""; // Reset overflow style
+      }
+    </script>
   </body>
 </html>

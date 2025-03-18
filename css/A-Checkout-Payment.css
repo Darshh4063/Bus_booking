@@ -428,3 +428,8 @@
     padding: 0 !important;
   }
 }
+
+.k-scrolbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}

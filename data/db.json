@@ -2308,15 +2308,15 @@
         }
       ],
       "ratings": {
-        "overall": "3.3",
+        "overall": "4.2",
         "categories": {
-          "busQuality": "0.0",
-          "driving": "0.0",
-          "seatComfort": "0.0",
-          "safetyAndHygiene": "0.0",
-          "cleanliness": "4.0",
-          "femaleFriendly": "3.0",
-          "punctuality": "3.0"
+          "busQuality": "2.5",
+          "driving": "2.5",
+          "seatComfort": "2.5",
+          "safetyAndHygiene": "2.5",
+          "cleanliness": "4.5",
+          "femaleFriendly": "4.0",
+          "punctuality": "4.0"
         }
       },
       "reviews": [
@@ -2326,6 +2326,14 @@
           "rating": 3,
           "comment": "umang",
           "userId": "1a2b3c"
+        },
+        {
+          "name": "Emily Johnson",
+          "date": "18 Mar 2025",
+          "rating": 5,
+          "comment": "vfeswgerherjherhefsdegrdfrffg",
+          "userId": "0j1k2l",
+          "profileImage": "k_images/emily_johnson.jpg"
         }
       ],
       "seatInfo": {
@@ -4248,7 +4256,7 @@
       "city": "Rajkot",
       "state": "Gujarat",
       "pincode": "874510",
-      "lastLogin": "2025-03-17T10:05:58.947Z",
+      "lastLogin": "2025-03-18T07:13:00.785Z",
       "gender": "female",
       "lastUpdated": "2025-02-28T09:29:08.966Z",
       "Bookings": [
@@ -4496,6 +4504,361 @@
           },
           "status": "upcoming",
           "bookingId": "BKJ54DN9I3"
+        },
+        {
+          "busId": "dfa45",
+          "busName": "Maruti Nandan Travels",
+          "busType": "Non AC Sleeper",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "10:00 AM",
+          "duration": "05h 30m",
+          "busPrice": {
+            "amount": "28,000",
+            "currency": "₹",
+            "discount": "Best deal 30% Off"
+          },
+          "onwardFare": 28000,
+          "discount": 5720,
+          "gst": 5040,
+          "totalPrice": 33040,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Junagandh, Ankleshwar",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "10:00 AM",
+          "totalPayableAmount": 27440,
+          "passengers": [
+            {
+              "name": "dvdbdf",
+              "age": "34",
+              "gender": "Female",
+              "AadhaarCard": "232343546645",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "fhujl@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "2334456643"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "28,000",
+              "currency": "₹",
+              "discount": "Best deal 30% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKR5A8B2FJ"
+        },
+        {
+          "busId": "dfa411",
+          "busName": "Madhuram Travels",
+          "busType": "AC",
+          "busDateArrival": "28 march 2025",
+          "busdateDepature": "22 march 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Junagandh",
+          "dropTime": "6:00 PM",
+          "duration": "11h 00m",
+          "busPrice": {
+            "amount": "32,000",
+            "currency": "₹",
+            "discount": "Best deal 10% Off"
+          },
+          "onwardFare": 32000,
+          "discount": 6520,
+          "gst": 5760,
+          "totalPrice": 37760,
+          "pickupPoints": "Navjivan Hotel",
+          "dropoffPoints": "Ankleshwar, Majevdi Gate",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "6:00 PM",
+          "totalPayableAmount": 31360,
+          "passengers": [
+            {
+              "name": "vdv",
+              "age": "23",
+              "gender": "Female",
+              "AadhaarCard": "435567634544",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "gfg@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "7521154151"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "32,000",
+              "currency": "₹",
+              "discount": "Best deal 10% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "cancelled",
+          "bookingId": "BKZHVAXTYT",
+          "cancellationDetails": {
+            "bookingId": "BKZHVAXTYT",
+            "busName": "Madhuram Travels",
+            "pickupLocation": "Surat",
+            "dropLocation": "Junagandh",
+            "travelDate": "22 march 2025",
+            "reason": "You can't make it to the boarding point on time",
+            "description": "evdhrgtjmghmgh",
+            "cancelDate": "2025-03-18T12:08:27.129Z",
+            "cancellationTime": "5:38:27 PM",
+            "selectedPassengers": [],
+            "cancellationCharge": 6272,
+            "refundAmount": 25088,
+            "totalPaid": 31360,
+            "originalFare": 31360,
+            "fullCancellation": false,
+            "status": "Cancelled",
+            "contactDetails": {
+              "email": "gfg@gmail.com",
+              "phone": {
+                "countryCode": "+91",
+                "number": "7521154151"
+              }
+            }
+          }
+        },
+        {
+          "busId": "dfa410",
+          "busName": "Bapasitaram Travels",
+          "busType": "AC Seater",
+          "busDateArrival": "20 march 2025",
+          "busdateDepature": "16 march 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Junagandh",
+          "dropTime": "6:00 PM",
+          "duration": "11h 00m",
+          "busPrice": {
+            "amount": "30,000",
+            "currency": "₹",
+            "discount": "Best deal 30% Off"
+          },
+          "onwardFare": 30000,
+          "discount": 6120,
+          "gst": 5400,
+          "totalPrice": 35400,
+          "pickupPoints": "Abrama Chowk Motavarachha",
+          "dropoffPoints": "Junagandh, Ankleshwar",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "6:00 PM",
+          "totalPayableAmount": 29400,
+          "passengers": [
+            {
+              "name": "raj",
+              "age": "21",
+              "gender": "Male",
+              "AadhaarCard": "234344334545",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "raj@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "7458963210"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "30,000",
+              "currency": "₹",
+              "discount": "Best deal 30% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKMZTSDGHS"
+        },
+        {
+          "busId": "dfa410",
+          "busName": "Bapasitaram Travels",
+          "busType": "AC Seater",
+          "busDateArrival": "20 march 2025",
+          "busdateDepature": "16 march 2025",
+          "pickupLocation": "Surat",
+          "pickupTime": "10:00 AM",
+          "dropLocation": "Junagandh",
+          "dropTime": "6:00 PM",
+          "duration": "11h 00m",
+          "busPrice": {
+            "amount": "30,000",
+            "currency": "₹",
+            "discount": "Best deal 30% Off"
+          },
+          "onwardFare": 30000,
+          "discount": 6120,
+          "gst": 5400,
+          "totalPrice": 35400,
+          "pickupPoints": "Akshar Vadi",
+          "dropoffPoints": "Junagandh, Ankleshwar",
+          "pickupTimeData": "10:00 AM",
+          "dropTimeData": "6:00 PM",
+          "totalPayableAmount": 29400,
+          "passengers": [
+            {
+              "name": "luffy",
+              "age": "24",
+              "gender": "Male",
+              "AadhaarCard": "345666354442",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "luffy@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "5236984102"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "30,000",
+              "currency": "₹",
+              "discount": "Best deal 30% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKM17IFLTF"
+        },
+        {
+          "busId": "dfa42",
+          "busName": "B.R. Travels",
+          "busType": "Non AC Seater",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Ahmedabad",
+          "pickupTime": "12:00 AM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "06:00 AM",
+          "duration": "05h 30m",
+          "busPrice": {
+            "amount": "32,000",
+            "currency": "₹",
+            "discount": "Best deal 15% Off"
+          },
+          "onwardFare": 32000,
+          "discount": 6520,
+          "gst": 5760,
+          "totalPrice": 37760,
+          "pickupPoints": "Abrama Chowk Motavarachha",
+          "dropoffPoints": "Ankleshwar",
+          "pickupTimeData": "12:00 AM",
+          "dropTimeData": "06:00 AM",
+          "totalPayableAmount": 31360,
+          "passengers": [
+            {
+              "name": "dsd",
+              "age": "21",
+              "gender": "Female",
+              "AadhaarCard": "325456564344",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "fer@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "7521489630"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "32,000",
+              "currency": "₹",
+              "discount": "Best deal 15% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKLASALIZU"
+        },
+        {
+          "busId": "dfa43",
+          "busName": "Amar Travels",
+          "busType": "AC Seater",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Vadodara",
+          "pickupTime": "6:00 AM",
+          "dropLocation": "surat",
+          "dropTime": "12:00 AM",
+          "duration": "05h 30m",
+          "busPrice": {
+            "amount": "30,000",
+            "currency": "₹",
+            "discount": "Best deal 35% Off"
+          },
+          "onwardFare": 30000,
+          "discount": 6120,
+          "gst": 5400,
+          "totalPrice": 35400,
+          "pickupPoints": "Abrama Chowk Motavarachha",
+          "dropoffPoints": "surat, Ankleshwar",
+          "pickupTimeData": "6:00 AM",
+          "dropTimeData": "12:00 AM",
+          "totalPayableAmount": 29400,
+          "passengers": [
+            {
+              "name": "fgv",
+              "age": "23",
+              "gender": "Female",
+              "AadhaarCard": "243455656776",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "dfs@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "7589623140"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "30,000",
+              "currency": "₹",
+              "discount": "Best deal 35% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKJO3AGU0I"
         }
       ],
       "payments": [
@@ -4530,6 +4893,54 @@
           "paidAmount": 31360,
           "remainingAmount": 0,
           "timestamp": "2025-03-17T12:13:21.502Z"
+        },
+        {
+          "id": "TXNYPQT60M4",
+          "paymentBy": "NetBanking",
+          "bank": "Wells Fargo Bank",
+          "paidAmount": 27440,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-18T04:09:24.621Z"
+        },
+        {
+          "id": "TXNK2XN7W0H",
+          "paymentBy": "NetBanking",
+          "bank": "Wells Fargo Bank",
+          "paidAmount": 31360,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-18T04:11:26.262Z"
+        },
+        {
+          "id": "TXNYK7CDQQU",
+          "paymentBy": "NetBanking",
+          "bank": "TD Bank",
+          "paidAmount": 29400,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-18T04:32:30.614Z"
+        },
+        {
+          "id": "TXN94APOCKJ",
+          "paymentBy": "NetBanking",
+          "bank": "Wells Fargo Bank",
+          "paidAmount": 29400,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-18T04:41:37.734Z"
+        },
+        {
+          "id": "TXNI5WESH3E",
+          "paymentBy": "NetBanking",
+          "bank": "Capital One Bank",
+          "paidAmount": 31360,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-18T07:13:05.895Z"
+        },
+        {
+          "id": "TXNLRTJIFMI",
+          "paymentBy": "NetBanking",
+          "bank": "Capital One Bank",
+          "paidAmount": 29400,
+          "remainingAmount": 0,
+          "timestamp": "2025-03-18T11:42:41.004Z"
         }
       ],
       "cancellations": [
@@ -4555,6 +4966,31 @@
             "phone": {
               "countryCode": "+91",
               "number": "7521489630"
+            }
+          }
+        },
+        {
+          "bookingId": "BKZHVAXTYT",
+          "busName": "Madhuram Travels",
+          "pickupLocation": "Surat",
+          "dropLocation": "Junagandh",
+          "travelDate": "22 march 2025",
+          "reason": "You can't make it to the boarding point on time",
+          "description": "evdhrgtjmghmgh",
+          "cancelDate": "2025-03-18T12:08:27.129Z",
+          "cancellationTime": "5:38:27 PM",
+          "selectedPassengers": [],
+          "cancellationCharge": 6272,
+          "refundAmount": 25088,
+          "totalPaid": 31360,
+          "originalFare": 31360,
+          "fullCancellation": false,
+          "status": "Cancelled",
+          "contactDetails": {
+            "email": "gfg@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "7521154151"
             }
           }
         }
@@ -5595,6 +6031,54 @@
       "paidAmount": 31360,
       "remainingAmount": 0,
       "timestamp": "2025-03-17T12:13:21.502Z"
+    },
+    {
+      "id": "TXNYPQT60M4",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 27440,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-18T04:09:24.621Z"
+    },
+    {
+      "id": "TXNK2XN7W0H",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 31360,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-18T04:11:26.262Z"
+    },
+    {
+      "id": "TXNYK7CDQQU",
+      "paymentBy": "NetBanking",
+      "bank": "TD Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-18T04:32:30.614Z"
+    },
+    {
+      "id": "TXN94APOCKJ",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-18T04:41:37.734Z"
+    },
+    {
+      "id": "TXNI5WESH3E",
+      "paymentBy": "NetBanking",
+      "bank": "Capital One Bank",
+      "paidAmount": 31360,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-18T07:13:05.895Z"
+    },
+    {
+      "id": "TXNLRTJIFMI",
+      "paymentBy": "NetBanking",
+      "bank": "Capital One Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-03-18T11:42:41.004Z"
     }
   ]
 }

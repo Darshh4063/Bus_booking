@@ -1,209 +1,482 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Lexend Deca !important;
-    background-color: #FAFAFA;
+  font-family: sans-serif;
 }
 
-
-/* -------------we are bus bookimg------------- */
-
-#J_About-us{
- padding: 80px 0px 80px;
+.ky-title {
+  text-align: center;
+  margin: 0 auto;
+  padding: 3rem 1rem;
 }
 
-.J_about {
-    padding-bottom: 60px;
+.ky-title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.ky-title p {
+  font-size: 1.1rem;
+  color: grey;
+}
+
+/* --------------- */
+
+.ky-sub-title {
+  color: #c16c49 !important;
+  font-weight: 600;
+  font-size: 18px !important;
+  margin: 0 !important;
+  padding-bottom: 5px;
+}
+
+.ky-main-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 !important;
+}
+
+.ky-bus-part img {
+  width: 100%;
+}
+
+.Buses {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.ky-Booking-details {
+  padding-left: 35px;
+}
+
+.ky-tempor {
+  color: grey;
+  font-size: 20px;
+  padding: 15px 0;
+}
+
+.ky-tempor p {
+  margin: 0 !important;
+}
+
+.ky-card {
+  padding: 20px 20px;
+  background: white;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3);
+  display: flex;
+  margin: 0 auto !important;
+  border: none !important;
+  position: absolute;
+  left: -50px !important;
+  width: 100% !important;
+  justify-content: space-between !important;
+  justify-content: center !important;
+  row-gap: 20px;
+}
+
+.ky-experience h2 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.ky-experience p {
+  font-size: 16px;
+  margin: 0;
+  color: grey;
+}
+
+/* -------ky-Benefits-------- */
+
+#ky-Benefits {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.ky-Routes img {
+  height: 40px;
+  width: 50px;
+}
+
+.ky-Reservations {
+  padding: 28px 17px;
+}
+
+.ky-Security {
+  padding: 2rem 0;
+  row-gap: 20px;
+  justify-content: space-between !important;
+}
+
+.ky-Fares {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 15px !important;
+}
+
+.ky-Fares h2 {
+  font-size: 20px;
+  padding: 0 35px !important;
+}
+
+.ky-Fares p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ----------------ky-Vision------------- */
+
+#ky-Vision {
+  padding: 2rem 0;
+}
+
+.ky-aliquip {
+  row-gap: 50px !important;
+}
+
+.ky-aptent {
+  position: absolute;
+  text-align: start !important;
+  width: 700px;
+  top: 95px;
+  z-index: 999 !important;
+}
+
+.ky-consectetur {
+  position: relative;
+  text-align: end !important;
+}
+
+.ky-Penatibus {
+  padding: 3rem;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.ky-exercitation img {
+  width: 100% !important;
+  height: 526px;
+  object-fit: cover;
+}
+
+.ky-Penatibus h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.ky-Penatibus p {
+  color: grey;
+  font-size: 1.1rem;
+  margin: 0;
+  padding-top: 20px;
+}
+
+/* ----------------------------------------------------------*/
+
+@media screen and (max-width: 1024px) {
+  .ky-Booking-details {
+    padding-left: 0;
+    text-align: center;
+    justify-content: center !important;
+  }
+
+  .ky-card {
+    justify-content: space-around !important;
+    justify-content: center !important;
+    left: 0px !important;
+    padding-top: 30px;
+  }
+
+  .ky-bus-part {
+    width: 70%;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  .Buses {
+    width: 90% !important;
+    padding-top: 30px !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+  }
+
+  .ky-title {
     text-align: center;
     margin: 0 auto;
-}
+    padding: 20px 20px !important;
+  }
 
-.J_about h4 {
-    color: #000000;
-    font-size: 30px;
-    font-weight: 600;
-    margin: 0 !important;
-}
-
-.J_about p {
-    padding-top: 10px;
-    color: #6A6A6A;
-    font-size: 18px;
-    font-weight: 400;
-    width: 58%;
-    margin: 0 auto;
-}
-
-.J_bus-booking {
-    align-self: center;
-    text-align: start;
-}
-
-.J_booking-content{
-    padding-left: 50px;
-}
-
-.J_booking-content h4 {
-    line-height: 24px;
-    color: #C16C49;
-    font-size: 18px;
-    font-weight: 500;
-    padding-bottom: 5px;
-    margin: 0 !important;
-}
-
-.J_booking-content h2 {
-    line-height: 39px;
-    color: #000000;
-    font-size: 30px;
-    font-weight: 600;
-}
-
-.J_booking-content p {
-    width: 90%;
-    line-height: 28px;
-    color: #6A6A6A;
-    font-size: 18px;
-    font-weight: 300;
-}
-
-.J_experience {
-    width: 100%;
-    background-color: #FFFFFF;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.J_Travellers {
-    padding-left: 18px !important;
-}
-
-.J_Travellers h4 {
-    line-height: 40px;
-    color: #000000;
-    font-size: 30px;
-    font-weight: 500;
-}
-
-.J_Travellers p {
-    line-height: 20px;
-    color: #6A6A6A;
-    font-size: 16px;
-    font-weight: 400;
-}
-
-
-/* --------------What We Offer------------- */
-
-#J_we-offer {
-    padding: 80px 0;
-    background: #6A6A6A0A;
-
-}
-
-.J_BENEFITS {
-    text-align: center;
-}
-
-.J_BENEFITS h4 {
-    line-height: 25px;
-    color: #C16C49;
+  .ky-Fares h2 {
     font-size: 20px;
-    font-weight: 400;
-}
+    width: 100% !important;
+    padding: 0px 5px !important;
+  }
 
-.J_BENEFITS h2 {
-    line-height: 48px;
-    color: #000000;
-    font-size: 30px;
-    font-weight: 600;
-}
+  .ky-exercitation img {
+    width: 70% !important;
+  }
 
-.J_what-we-offer {
-    justify-content: center;
-    gap: 30px;
-    padding-top: 2rem;
-}
-
-.J_benefits-image {
-    padding: 20px 0px 15px 0px;
-}
-
-.J_benefits-image img {
-    width: 60px;
-    background-color: #FBF6F1;
-    padding: 8px 10px;
-    border: 1px solid #FBF6F1;
-}
-
-
-.J_offer {
-    width: 23% !important;
-    border: 1px solid #FFFFFF;
-    background-color: #FFFFFF;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.J_offer h4 {
-    width: 62%;
-    line-height: 26px;
-    color: #000000;
-    font-size: 20px;
-    font-weight: 500;
-    margin: 0 auto;
-}
-
-.J_offer p {
-    width: 90%;
-    line-height: 22px;
-    color: #6A6A6A;
-    font-size: 14px;
-    font-weight: 400;
-    margin: 0 auto;
-    padding: 10px 0px 20px 0px;
-}
-
-/* --------------Our Vision------------------ */
-
-#J_our-vision{
-    padding: 80px 0;
-}
-
-.J_Our {
-    justify-content: end;
-}
-
-.J_vision-image img{
-    width: 100%;
-    position: relative;
-} 
-
-
-.J_vision-content {
+  .ky-aptent {
     position: absolute;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    background-color: #FFFFFF;
-    padding: 30px 30px !important;
-    left: 10%;
-    align-self: center;
+    text-align: start !important;
+    /* width: 500px; */
+    top: 90px;
+    z-index: 999 !important;
+  }
 }
 
-.J_vision-content h2 {
-    line-height: 37.5px;
-    color: #000000;
-    font-size: 30px;
+@media screen and (max-width: 768px) {
+  .Buses {
+    padding: 2rem 0 !important;
+    width: 85% !important;
+    padding-top: 30px !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+  }
+
+  .ky-Booking-details {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .ky-card {
+    justify-content: space-around !important;
+    justify-content: center !important;
+    left: 0px !important;
+  }
+
+  .ky-title h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .ky-title p {
+    font-size: 1rem !important;
+    color: grey;
+  }
+
+  .ky-title {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 20px !important;
+  }
+
+  .ky-tempor p {
+    font-size: 1rem;
+  }
+
+  .ky-main-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 !important;
+  }
+
+  .ky-sub-title {
+    color: #c16c49 !important;
     font-weight: 600;
+    font-size: 14px !important;
+    margin: 0 !important;
+    padding-bottom: 5px;
+  }
+
+  #ky-Benefits {
+    text-align: center;
+    padding-top: 12rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .ky-Fares h2 {
+    font-size: 20px;
+    padding: 0px 40px !important;
+  }
+
+  .ky-exercitation{
+    display: flex;
+    justify-content: center !important;
+  }
+
+  .ky-exercitation img {
+    height: 100%;
+  }
+
+  .ky-aptent {
+    position: static;
+  }
 }
 
-.J_vision-content p { 
-    line-height: 28px;
-    color: #6A6A6A;
-    font-size: 18px;
-    font-weight: 300;
+@media screen and (max-width: 425px) {
+  .ky-sub-title {
+    font-size: 16px;
+  }
+
+  .ky-main-title {
+    font-size: 22px;
+  }
+
+  .ky-tempor {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  .ky-card {
+    align-items: center;
+  }
+
+  .ky-experience {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+  }
+  .ky-Security {
+    row-gap: 0 !important;
+  }
+
+  .ky-Reservations {
+    padding: 15px 17px !important;
+  }
+
+  .ky-aptent {
+    position: static;
+    width: 400px;
+    /* height: 100%; */
+    text-align: center !important;
+  }
+
+  .ky-exercitation img {
+    height: 100%;
+  }
+
+  .ky-exercitation{
+    display: flex;
+    justify-content: center !important;
+  }
+
+  .ky-aptent {
+    top: 0;
+  }
+
+  .ky-Penatibus h2 {
+    font-size: 1.6rem;
+  }
+
+  .ky-Penatibus {
+    padding: 1rem;
+  }
+
+  .ky-Penatibus p {
+    font-size: 0.8rem;
+  }
+
+  .ky-aliquip {
+    row-gap: 35px !important;
+  }
 }
 
-.J_booking-image{
+@media screen and (max-width: 375px) {
+  .ky-sub-title {
+    font-size: 14px;
+  }
+
+  .ky-main-title {
+    font-size: 20px;
+  }
+
+  .ky-tempor {
+    font-size: 14px;
+  }
+
+  .ky-card {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .ky-Security {
+    row-gap: 0 !important;
+  }
+
+  .ky-Reservations {
+    padding: 15px 17px !important;
+  }
+
+  .ky-aptent {
     width: 100%;
+    /* height: 100%; */
+    text-align: center !important;
+  }
+
+  .ky-exercitation img {
+    height: 100%;
+  }
+
+  .ky-exercitation{
+    display: flex;
+    justify-content: center !important;
+  }
+
+  .ky-aptent {
+    position: static;
+    top: 0;
+  }
+
+  .ky-Penatibus {
+    padding: 1rem;
+    font-size: 14px;
+  }
 }
-.J_booking-image image{
+
+@media screen and (max-width: 320px) {
+  .ky-card {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .ky-tempor {
+    font-size: 12px;
+  }
+
+  .ky-experience p {
+    font-size: 12px !important;
+    padding-top: 5px;
+    margin: 0px;
+    color: grey;
+  }
+
+  .ky-title {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 20px !important;
+  }
+
+  .ky-title p {
+    font-size: 0.9rem !important;
+    color: grey;
+  }
+
+  .Buses {
+    padding: 2rem 0 !important;
+  }
+
+  .ky-Security {
+    row-gap: 0 !important;
+  }
+
+  .ky-Reservations {
+    padding: 15px 17px !important;
+  }
+
+  .ky-aptent {
+    position: static;
     width: 100%;
+    /* height: 100%; */
+    text-align: center !important;
+  }
+
+  .ky-exercitation{
+    display: flex;
+    justify-content: center !important;
+  }
+
 }

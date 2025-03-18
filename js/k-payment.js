@@ -300,24 +300,73 @@ function processPayment(method) {
     el.textContent = "";
   });
 
-  // Show processing modal or indicator
+  // Show processing indicator
   showProcessingIndicator();
 
-  // Simulate payment processing (replace with actual payment processing)
-  setTimeout(() => {
-    hideProcessingIndicator();
+  // Gather payment data based on method
+  let paymentData = {};
+  let isValid = true;
 
-    const success = Math.random() > 0.3; // 70% success rate
-    console.log(`Payment ${success ? "succeeded" : "failed"}`);
+  try {
+    if (method === "Card") {
+      const cardHolder = document.getElementById("cardHolder").value.trim();
+      const cardNumber = document
+        .getElementById("cardNumber")
+        .value.replace(/\s/g, "");
+      const expiryDate = document.getElementById("expiryDate").value.trim();
+      const cvv = document.getElementById("cvv").value.trim();
 
-    if (success) {
-      completePayment(method);
-    } else {
-      showFailedModal("Payment failed. Please try again.");
+      if (
+        !cardHolder ||
+        !validateCardNumber(cardNumber) ||
+        !validateExpiryDate(expiryDate) ||
+        !/^\d{3}$/.test(cvv)
+      ) {
+        isValid = false;
+        hideProcessingIndicator();
+        showFailedModal("Invalid card details. Please check your information.");
+        return;
+      }
+
+      paymentData = { cardHolder, cardNumber, expiryDate };
+    } else if (method === "UPI") {
+      const upiId = document.getElementById("upi-id").value.trim();
+      const upiHandle = document.getElementById("upi-handle")?.value || "";
+
+      if (!upiId) {
+        isValid = false;
+        hideProcessingIndicator();
+        showFailedModal("Please enter a valid UPI ID");
+        return;
+      }
+
+      paymentData = { upiId, upiHandle };
+    } else if (method === "NetBanking") {
+      const selectedBank = document.getElementById("bank-select").value;
+
+      if (!selectedBank || selectedBank === "") {
+        isValid = false;
+        hideProcessingIndicator();
+        showFailedModal("Please select a bank");
+        return;
+      }
+
+      paymentData = { bank: selectedBank };
     }
-  }, 2000);
-}
 
+    if (isValid) {
+      // Simulate network delay for payment processing
+      setTimeout(() => {
+        // Always succeed if validation passes
+        completePayment(method);
+      }, 1500);
+    }
+  } catch (error) {
+    console.error("Payment processing error:", error);
+    hideProcessingIndicator();
+    showFailedModal("An unexpected error occurred. Please try again.");
+  }
+}
 // Show processing indicator
 function showProcessingIndicator() {
   const processingModal = document.getElementById("processingModal");
@@ -477,7 +526,7 @@ function completePayment(method) {
       console.log("Error sending payment data:", e);
       // Still show success modal even if server communication fails
       showSuccessModal();
-      window.location.replace("mybooking.html");
+      window.location.href = "mybooking.html";
     }
   } else {
     const loginModal = new bootstrap.Modal(
@@ -523,7 +572,8 @@ function completeCheckPayment(accountNumber) {
     sendPaymentData(data);
   } catch (e) {
     console.log("Error sending check payment data:", e);
-    showSuccessModal();
+    showSuccessModal();  
+    window.location.href = "mybooking.html";
   }
 }
 
@@ -545,28 +595,21 @@ function sendPaymentData(data) {
   console.log("User", user);
 
   // First, save the payment data
-  try {
-    fetch("http://localhost:3000/payments", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    })
-      .then((response) => {
-        console.log(
-          "Payment data server response:",
-          response.ok ? "Success" : "Failed"
-        );
-        localStorage.setItem("paymentData", JSON.stringify(data));
-      })
-      .catch((error) => {
-        console.log("Payment server error:", error);
-      });
-  } catch (e) {
-    console.log("Failed to connect to payment server, processing locally");
-  }
+  fetch("http://localhost:3000/payments", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  })
+    .then((response) => {
+      console.log(
+        "Payment data server response:",
+        response.ok ? "Success" : "Failed"
+      );
+      localStorage.setItem("paymentData", JSON.stringify(data));
 
-  // Now get existing user data and update it
-  fetch(`http://localhost:3000/user/${user.id}`)
+      // Continue with updating user data
+      return fetch(`http://localhost:3000/user/${user.id}`);
+    })
     .then((response) => {
       if (!response.ok) {
         throw new Error("Failed to fetch user data");
@@ -583,7 +626,7 @@ function sendPaymentData(data) {
       if (userData.Bookings && Array.isArray(userData.Bookings)) {
         updatedBookings = [...userData.Bookings];
       } else if (userData.Bookings) {
-        // If Bookings exists but isn't an array, convert it to an array with the existing booking
+        // If booking exists but isn't in a bookings array, add it
         updatedBookings = [userData.Bookings];
       }
 
@@ -622,15 +665,19 @@ function sendPaymentData(data) {
         throw new Error("Failed to update user data");
       }
       console.log("User update successful");
-      showSuccessModal();
+
+      // Skip showing success modal and redirect directly
+      console.log("Redirecting to mybooking.html");
+      window.location.href = "mybooking.html";
     })
     .catch((error) => {
       console.log("Error updating user data:", error);
-      // Still show success modal since we've processed the payment locally
-      showSuccessModal();
+
+      // Even if there's an error, redirect to mybooking page
+      console.log("Error occurred but still redirecting to mybooking.html");
+      window.location.href = "mybooking.html";
     });
 }
-
 // Show Error Message
 function showError(input, message) {
   if (!input) {
@@ -660,11 +707,22 @@ function showSuccessModal() {
     if (typeof bootstrap !== "undefined" && bootstrap.Modal) {
       const bsModal = new bootstrap.Modal(successModal);
       bsModal.show();
+
+      // Set up event listener for when modal is hidden
+      successModal.addEventListener("hidden.bs.modal", function () {
+        console.log("Success modal closed, redirecting to mybooking.html");
+        window.location.href = "mybooking.html";
+      });
+
+      // Also set a timeout as a fallback
+      setTimeout(() => {
+        window.location.href = "mybooking.html";
+      }, 3000); // Redirect after 3 seconds
     } else {
       successModal.style.display = "block";
       successModal.classList.add("show");
 
-      // Add a simple close functionality
+      // Add a simple close functionality with redirect
       const closeButtons = successModal.querySelectorAll(
         '[data-bs-dismiss="modal"]'
       );
@@ -672,23 +730,43 @@ function showSuccessModal() {
         button.addEventListener("click", () => {
           successModal.style.display = "none";
           successModal.classList.remove("show");
+          window.location.href = "mybooking.html";
         });
       });
+
+      // Also set a timeout as a fallback
+      setTimeout(() => {
+        window.location.href = "mybooking.html";
+      }, 3000); // Redirect after 3 seconds
     }
   } else {
     alert("Payment successful! Transaction ID: " + generateTransactionId());
+    // Redirect immediately if there's no modal
+    window.location.href = "mybooking.html";
   }
 }
-
 // Show Failed Modal
 function showFailedModal(message) {
   console.log(`Showing failed modal: ${message}`);
   const failedModal = document.getElementById("failedModal");
+
   if (failedModal) {
     const failedMessage = document.getElementById("failedMessage");
     if (failedMessage) {
       failedMessage.innerText = message;
     }
+
+    // Close any other open modals first
+    const allModals = document.querySelectorAll(".modal.show");
+    allModals.forEach((modal) => {
+      if (typeof bootstrap !== "undefined" && bootstrap.Modal) {
+        const bsModal = bootstrap.Modal.getInstance(modal);
+        if (bsModal) bsModal.hide();
+      } else {
+        modal.style.display = "none";
+        modal.classList.remove("show");
+      }
+    });
 
     if (typeof bootstrap !== "undefined" && bootstrap.Modal) {
       const bsModal = new bootstrap.Modal(failedModal);
@@ -697,7 +775,6 @@ function showFailedModal(message) {
       failedModal.style.display = "block";
       failedModal.classList.add("show");
 
-      // Add a simple close functionality
       const closeButtons = failedModal.querySelectorAll(
         '[data-bs-dismiss="modal"]'
       );

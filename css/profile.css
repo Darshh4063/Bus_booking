@@ -205,11 +205,7 @@ header {
   background-color: #fff5eb;
 }
 
-.profile-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
+
 
 .profile-field {
   margin-bottom: 1rem;

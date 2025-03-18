@@ -211,20 +211,17 @@ window.updateUIForLoggedInUser = function (user) {
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
             <li><a class="dropdown-item" href="mybooking.html">My Bookings</a></li>
-            <li><a class="dropdown-item" href="#" class="logoutBtn">Logout</a></li>
+            <li><a class="dropdown-item logout-btn" href="#">Logout</a></li>
           </ul>
         </div>
       `;
-    });
 
-    // Add logout functionality to all logout buttons
-    const logoutBtns = document.querySelectorAll(".logoutBtn");
-    logoutBtns.forEach((logoutBtn) => {
+      // Add logout functionality to dropdown menu's logout button
+      const logoutBtn = accountBtnContainer.querySelector(".logout-btn");
       logoutBtn.addEventListener("click", (e) => {
         e.preventDefault();
         if (confirm("Are you sure you want to logout?")) {
           authService.logout();
-          // window.location.reload();
         }
       });
     });
@@ -241,27 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize auth listeners
   window.initAuthListeners();
-
-  // Show appropriate account buttons based on screen size
-  updateButtonVisibility();
-
-  // Update visibility on window resize
-  window.addEventListener("resize", updateButtonVisibility);
 });
-
-// Function to update button visibility based on screen width
-function updateButtonVisibility() {
-  const outerAccountBtn = document.querySelector(".d-flex .account-btn");
-  const navbarAccountBtn = document.querySelector(".navbar-nav .account-btn");
-
-  if (window.innerWidth <= 425) {
-    if (outerAccountBtn) outerAccountBtn.classList.add("d-none");
-    if (navbarAccountBtn) navbarAccountBtn.classList.remove("d-none");
-  } else {
-    if (outerAccountBtn) outerAccountBtn.classList.remove("d-none");
-    if (navbarAccountBtn) navbarAccountBtn.classList.add("d-none");
-  }
-}
 
 // Export auth service to global scope
 window.authService = authService;

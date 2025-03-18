@@ -463,27 +463,27 @@
 
             <div class="card">
               <div class="Payment-Option">
-                <ul class="nav align-items-center">
-                  <li class="col nav-item">
+                <ul class="nav align-items-center justify-content-between flex-nowrap overflow-scroll gap-3 k-scrolbar-none">
+                  <li class="nav-item">
                     <a class="nav-link active text-nowrap" data-bs-toggle="tab" href="#card">Credit/Debit Card</a>
                   </li>
-                  <li class="col nav-item">
+                  <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="tab" href="#upi">UPI</a>
                   </li>
-                  <li class="col nav-item">
+                  <li class="nav-item">
                     <a class="nav-link text-nowrap" data-bs-toggle="tab" href="#netbanking">Net Banking</a>
                   </li>
-                  <li class="col nav-item">
+                  <li class="nav-item">
                     <a class="nav-link text-nowrap" data-bs-toggle="tab" href="#checkPaymentForm" id="check-pay-button">Pay via Check</a>
                   </li>
-                  <li class="col nav-item d-flex align-items-center">
-                    <input type="checkbox" name="pay-fifty" id="pay-fifty" class="pe-3"> <span class="fw-bold text-nowrap">pay 50% After</span>
+                  <li class="nav-item d-flex align-items-center">
+                    <input type="checkbox" name="pay-fifty" id="pay-fifty" class="pe-3 mt-1"> <span class="fw-bold text-nowrap ps-2">pay 50% After</span>
                   </li>
                 </ul>
             
                 <div class="tab-content mt-3">
                   <div id="card" class="tab-pane fade show active">
-                    <div class="row Card-holder">
+                    <div class="row Card-holder row-gap-3">
                       <form action="" id="paymentForm">
                         <div class="d-md-flex">
                           <div class="col-12 col-md-6 Credit-data me-2">
@@ -537,8 +537,8 @@
                     </div>
             
                     <div class="Pay-Amount">
-                      <div class="col-12 col-md-6">
-                        <button id="upi-pay-button" class="pay">Pay 6060</button>
+                      <div class="col-12 col-md-6 text-center">
+                        <button id="upi-pay-button" class="pay"></button>
                       </div>
                     </div>
                   </div>
@@ -560,7 +560,7 @@
             
                     <div class="Pay-Amount">
                       <div class="col-6">
-                        <button id="bank-pay-button" class="pay">Pay ₹6060</button>
+                        <button id="bank-pay-button" class="pay"></button>
                       </div>
                     </div>
                   </div>
@@ -573,7 +573,7 @@
                       <small class="error"></small>
                     </div>
             
-                    <button class="pay mt-3 text-center d-block" id="confirm-check-payment">Pay 6060</button>
+                    <button class="pay mt-3 text-center d-block" id="confirm-check-payment"></button>
                   </div>
                 </div>
               </div>
