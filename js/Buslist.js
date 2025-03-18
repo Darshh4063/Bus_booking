@@ -630,6 +630,8 @@ let selectedOperators = [];
 let selectedAmenities = [];
 let selectedRatings = [];
 let selectedDiscounts = [];
+let selectedPickupPoints = [];
+let selectedDropoffPoints = [];
 function initializeSeatSelection() {
   // Remove the single container query since we'll handle multiple buses
   const seatContainers = document.querySelectorAll(".seat-selection");
@@ -964,6 +966,22 @@ function renderBusList(buses) {
             <div class="amenities-container">
               <h2 class="amenities-title">Bus Amenities</h2>
               <div class="amenities-list">
+               ${bus.amenities
+                 .map(
+                   (amenity, index) => `
+                  <div class="amenity-item">
+                    <div class="amenity-icon">
+                      <img style="width:20px" 
+                        src="./image/u_images/${
+                          bus.amenitiesImg?.[index] || "default.png"
+                        }" 
+                        alt="${amenity}" />
+                    </div>
+                    <div class="amenity-text">${amenity}</div>
+                  </div>
+                `
+                 )
+                 .join("")}
                
               </div>
             </div>
@@ -1617,7 +1635,7 @@ function filterBusesByRatings() {
 // Function to update the selected discounts and filter the bus list
 function updateDiscountFilters(checkbox) {
   if (checkbox.checked) {
-    selectedDiscounts.push(parseFloat(checkbox.value)); // Store as a number
+    selectedDiscounts.push(parseFloat(checkbox.value));
   } else {
     selectedDiscounts = selectedDiscounts.filter(
       (discount) => discount !== parseFloat(checkbox.value)
@@ -1628,15 +1646,206 @@ function updateDiscountFilters(checkbox) {
 
 // Function to filter buses based on selected discounts
 function filterBusesByDiscounts() {
+  // const filteredBuses = data.filter((bus) => {
+  //   const busDiscount = parseFloat(bus.price.discount);
+  //   return selectedDiscounts.some((discount) => busDiscount <= discount);
+  // });
+  // renderBusList(filteredBuses);
+
+  // const filteredBuses = data.filter((bus) => {
+  //   const discountMatch = bus.price.discount.match(/(\d+)%/);
+  //   const busDiscount = discountMatch ? parseFloat(discountMatch[1]) : 0;
+  //   return selectedDiscounts.some((discount) => busDiscount <= discount);
+  // });
+  // renderBusList(filteredBuses);
+
+  if (selectedDiscounts.length === 0) {
+    renderBusList(data);
+    return;
+  }
+  const minSelectedDiscount = Math.min(...selectedDiscounts);
   const filteredBuses = data.filter((bus) => {
-    const busDiscount = parseFloat(bus.price.discount);
-    console.log(bus.price.discount);
-
-    console.log(busDiscount);
-
-    // Assuming bus.discount is a percentage value
-    return selectedDiscounts.some((discount) => busDiscount <= discount);
+    const discountMatch = bus.price.discount.match(/(\d+)%/);
+    const busDiscount = discountMatch ? parseFloat(discountMatch[1]) : 0;
+    return busDiscount >= minSelectedDiscount;
   });
-  // console.log(filteredBuses);
   renderBusList(filteredBuses);
+}
+
+// pickup and dropoff points
+function updatePickupFilters(checkbox) {
+  if (checkbox.checked) {
+    selectedPickupPoints.push(checkbox.value);
+  } else {
+    selectedPickupPoints = selectedPickupPoints.filter(
+      (point) => point !== checkbox.value
+    );
+  }
+  filterBusesByPickup();
+}
+
+function filterBusesByPickup() {
+  const filteredBuses = data.filter((bus) =>
+    bus.pickupPoints.some((pick) =>
+      selectedPickupPoints.includes(pick.location)
+    )
+  );
+  renderBusList(filteredBuses);
+}
+
+function updateDropoffFilters(checkbox) {
+  if (checkbox.checked) {
+    selectedDropoffPoints.push(checkbox.value);
+    console.log(selectedDropoffPoints);
+  } else {
+    selectedDropoffPoints = selectedDropoffPoints.filter(
+      (point) => point !== checkbox.value
+    );
+  }
+  filterBusesByDropoff();
+}
+
+function filterBusesByDropoff() {
+  const filteredBuses = data.filter((bus) =>
+    bus.dropoffPoints.some((dropoff) =>
+      selectedDropoffPoints.includes(dropoff.location)
+    )
+  );
+  const hello = data.filter((ele) =>
+    ele.dropoffPoints.some((hi) => hi.location)
+  );
+  renderBusList(filteredBuses);
+}
+
+function filterBusesByPriceRange(buses, minPrice, maxPrice) {
+  return buses.filter((bus) => {
+    // Convert price amount to number if it's a string
+    const priceAmount =
+      typeof bus.price.amount === "string"
+        ? parseFloat(bus.price.amount.replace(/,/g, ""))
+        : bus.price.amount;
+
+    return priceAmount >= minPrice && priceAmount <= maxPrice;
+  });
+}
+
+// Update the bus list display when price range changes
+function initPriceRangeFilter() {
+  const rangeInput = document.querySelectorAll(".range-input input");
+  const priceInput = document.querySelectorAll(".price-input input");
+  const progress = document.querySelector(".slider .progress");
+  const priceGap = 1000;
+
+  // Initialize original bus data
+  let allBuses = []; // Store all buses data
+
+  // Store original bus data when first loaded
+  function storeOriginalBusData(buses) {
+    allBuses = JSON.parse(JSON.stringify(buses)); // Deep copy to preserve original data
+  }
+
+  // Update the filtered bus list
+  function updateBusList() {
+    const minPrice = parseInt(priceInput[0].value);
+    const maxPrice = parseInt(priceInput[1].value);
+
+    // Filter buses based on price range
+    const filteredBuses = filterBusesByPriceRange(allBuses, minPrice, maxPrice);
+
+    // Render the filtered bus list
+    renderBusList(filteredBuses);
+
+    // Show message if no buses match the filter
+    const buslistElement = document.getElementById("buslist");
+    if (filteredBuses.length === 0) {
+      buslistElement.innerHTML = `
+        <div class="no-results">
+          <p>No buses available in the selected price range (${minPrice} - ${maxPrice}).</p>
+        </div>
+      `;
+    }
+  }
+
+  // Set up price input event listeners
+  priceInput.forEach((input) => {
+    input.addEventListener("input", (e) => {
+      // Get min and max values
+      let minVal = parseInt(priceInput[0].value);
+      let maxVal = parseInt(priceInput[1].value);
+
+      if (maxVal - minVal >= priceGap && maxVal <= rangeInput[1].max) {
+        if (e.target.className === "input-min") {
+          rangeInput[0].value = minVal;
+          progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+        } else {
+          rangeInput[1].value = maxVal;
+          progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+        }
+
+        updateBusList();
+      }
+    });
+  });
+
+  // Set up range slider event listeners
+  rangeInput.forEach((input) => {
+    input.addEventListener("input", (e) => {
+      // Get min and max values
+      let minVal = parseInt(rangeInput[0].value);
+      let maxVal = parseInt(rangeInput[1].value);
+
+      if (maxVal - minVal < priceGap) {
+        if (e.target.className === "range-min") {
+          rangeInput[0].value = maxVal - priceGap;
+        } else {
+          rangeInput[1].value = minVal + priceGap;
+        }
+      } else {
+        priceInput[0].value = minVal;
+        priceInput[1].value = maxVal;
+        // progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+        // progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+
+        updateBusList();
+      }
+    });
+  });
+
+  return {
+    storeOriginalBusData,
+    updateBusList,
+  };
+}
+
+// Modify the existing renderBusList function to work with filtering
+const originalRenderBusList = window.renderBusList || function () {};
+
+window.renderBusList = function (buses) {
+  // First time loading buses, store the original data
+  if (!window.priceFilterInitialized) {
+    const priceFilter = initPriceRangeFilter();
+    priceFilter.storeOriginalBusData(buses);
+    window.priceFilter = priceFilter;
+    window.priceFilterInitialized = true;
+  }
+
+  // Call the original renderBusList function with filtered buses
+  originalRenderBusList(buses);
+};
+
+// Function to load buses with the initial data
+function loadBuses(busesData) {
+  // Store the original data globally
+  window.originalBusesData = busesData;
+
+  // Render the initial bus list
+  renderBusList(busesData);
+
+  // Now initialize the price filter after buses are rendered
+  if (!window.priceFilterInitialized) {
+    const priceFilter = initPriceRangeFilter();
+    priceFilter.storeOriginalBusData(busesData);
+    window.priceFilter = priceFilter;
+    window.priceFilterInitialized = true;
+  }
 }

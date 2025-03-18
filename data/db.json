@@ -1017,7 +1017,7 @@
         },
         "arrival": {
           "location": "surat",
-          "time": "12:00 AM",
+          "time": "12:00 PM",
           "date": "10 Feb 2025"
         },
         "duration": "05h 30m"
@@ -1113,10 +1113,6 @@
       ],
       "pickupPoints": [
         {
-          "time": "10:00",
-          "location": "Abrama Chowk Motavarachha"
-        },
-        {
           "time": "11:00",
           "location": "Akshar Vadi"
         },
@@ -1125,19 +1121,11 @@
           "location": "Balaji Bus Parking"
         },
         {
-          "time": "05:00",
-          "location": "Bhavani Mandir"
-        },
-        {
           "time": "08:00",
           "location": "Chopati Nanavarachha"
         }
       ],
       "dropoffPoints": [
-        {
-          "time": "12:00",
-          "location": "Ankleshwar"
-        },
         {
           "time": "2:00",
           "location": "Ankleshwar By Pass"
@@ -1145,6 +1133,10 @@
         {
           "time": "5:00",
           "location": "Ankleshwar Highway"
+        },
+        {
+          "time": "5:00",
+          "location": "Panoli"
         }
       ],
       "ratings": {
@@ -1303,12 +1295,12 @@
       "journey": {
         "departure": {
           "location": "Ahmedabad",
-          "time": "12:00 AM",
+          "time": "12:00 PM",
           "date": "10 Feb 2025"
         },
         "arrival": {
           "location": "Ankleshwar",
-          "time": "06:00 AM",
+          "time": "06:00 PM",
           "date": "10 Feb 2025"
         },
         "duration": "05h 30m"
@@ -1403,27 +1395,16 @@
           "location": "Abrama Chowk Motavarachha"
         },
         {
-          "time": "11:00",
-          "location": "Akshar Vadi"
-        },
-        {
           "time": "01:00",
           "location": "Balaji Bus Parking"
         },
         {
           "time": "05:00",
           "location": "Bhavani Mandir"
-        },
-        {
-          "time": "08:00",
-          "location": "Chopati Nanavarachha"
         }
       ],
       "dropoffPoints": [
-        {
-          "time": "12:00",
-          "location": "Ankleshwar"
-        },
+
         {
           "time": "2:00",
           "location": "Ankleshwar By Pass"
@@ -1431,6 +1412,10 @@
         {
           "time": "5:00",
           "location": "Ankleshwar Highway"
+        },
+        {
+          "time": "6:00",
+          "location": "Panoli"
         }
       ],
       "ratings": {
@@ -1700,16 +1685,8 @@
       ],
       "pickupPoints": [
         {
-          "time": "10:00",
-          "location": "Abrama Chowk Motavarachha"
-        },
-        {
           "time": "11:00",
           "location": "Akshar Vadi"
-        },
-        {
-          "time": "01:00",
-          "location": "Balaji Bus Parking"
         },
         {
           "time": "05:00",
@@ -1725,13 +1702,14 @@
           "time": "12:00",
           "location": "Ankleshwar"
         },
-        {
-          "time": "2:00",
-          "location": "Ankleshwar By Pass"
-        },
+
         {
           "time": "5:00",
           "location": "Ankleshwar Highway"
+        },
+        {
+          "time": "6:00",
+          "location": "Panoli"
         }
       ],
       "ratings": {
@@ -1884,7 +1862,7 @@
       "id": "dfa41"
     },
     {
-      "companyName": "Bapashitaram Travels",
+      "companyName": "Bapasitaram Travels",
       "busType": "Non AC Seater",
       "rating": "2.0",
       "journey": {
@@ -1986,10 +1964,6 @@
       ],
       "pickupPoints": [
         {
-          "time": "10:00",
-          "location": "Abrama Chowk Motavarachha"
-        },
-        {
           "time": "11:00",
           "location": "Akshar Vadi"
         },
@@ -2000,10 +1974,6 @@
         {
           "time": "05:00",
           "location": "Bhavani Mandir"
-        },
-        {
-          "time": "08:00",
-          "location": "Chopati Nanavarachha"
         }
       ],
       "dropoffPoints": [
@@ -2016,12 +1986,12 @@
           "location": "Ankleshwar By Pass"
         },
         {
-          "time": "5:00",
-          "location": "Ankleshwar Highway"
+          "time": "6:00",
+          "location": "Panoli"
         }
       ],
       "ratings": {
-        "  ": "4.0",
+        "": "4.0",
         "categories": {
           "busQuality": "5.0",
           "driving": "5.0",
@@ -2283,21 +2253,9 @@
         {
           "time": "01:00",
           "location": "Balaji Bus Parking"
-        },
-        {
-          "time": "05:00",
-          "location": "Bhavani Mandir"
-        },
-        {
-          "time": "08:00",
-          "location": "Chopati Nanavarachha"
         }
       ],
       "dropoffPoints": [
-        {
-          "time": "12:00",
-          "location": "Ankleshwar"
-        },
         {
           "time": "2:00",
           "location": "Ankleshwar By Pass"
@@ -2305,6 +2263,10 @@
         {
           "time": "5:00",
           "location": "Ankleshwar Highway"
+        },
+        {
+          "time": "8:00",
+          "location": "Panoli"
         }
       ],
       "ratings": {
@@ -2556,10 +2518,6 @@
       ],
       "pickupPoints": [
         {
-          "time": "10:00",
-          "location": "Abrama Chowk Motavarachha"
-        },
-        {
           "time": "11:00",
           "location": "Akshar Vadi"
         },
@@ -2586,8 +2544,8 @@
           "location": "Ankleshwar By Pass"
         },
         {
-          "time": "5:00",
-          "location": "Ankleshwar Highway"
+          "time": "7:00",
+          "location": "Panoli"
         }
       ],
       "ratings": {
@@ -2860,19 +2818,12 @@
           "location": "Balaji Bus Parking"
         },
         {
-          "time": "05:00",
-          "location": "Bhavani Mandir"
-        },
-        {
           "time": "08:00",
           "location": "Chopati Nanavarachha"
         }
       ],
       "dropoffPoints": [
-        {
-          "time": "12:00",
-          "location": "Ankleshwar"
-        },
+
         {
           "time": "2:00",
           "location": "Ankleshwar By Pass"
@@ -2880,6 +2831,10 @@
         {
           "time": "5:00",
           "location": "Ankleshwar Highway"
+        },
+        {
+          "time": "4:00",
+          "location": "Panoli"
         }
       ],
       "ratings": {
@@ -3136,10 +3091,6 @@
           "location": "Abrama Chowk Motavarachha"
         },
         {
-          "time": "11:00",
-          "location": "Akshar Vadi"
-        },
-        {
           "time": "01:00",
           "location": "Balaji Bus Parking"
         },
@@ -3158,12 +3109,12 @@
           "location": "Ankleshwar"
         },
         {
-          "time": "2:00",
-          "location": "Ankleshwar By Pass"
-        },
-        {
           "time": "5:00",
           "location": "Ankleshwar Highway"
+        },
+        {
+          "time": "5:30",
+          "location": "Panoli"
         }
       ],
       "ratings": {
@@ -3406,10 +3357,6 @@
         {
           "time": "10:00",
           "location": "Abrama Chowk Motavarachha"
-        },
-        {
-          "time": "11:00",
-          "location": "Akshar Vadi"
         },
         {
           "time": "01:00",
@@ -3688,10 +3635,6 @@
           "location": "Balaji Bus Parking"
         },
         {
-          "time": "05:00",
-          "location": "Bhavani Mandir"
-        },
-        {
           "time": "08:00",
           "location": "Chopati Nanavarachha"
         }
@@ -3960,10 +3903,6 @@
         {
           "time": "05:00",
           "location": "Savera Complex, Udhana"
-        },
-        {
-          "time": "08:00",
-          "location": "Navjivan Hotel"
         }
       ],
       "dropoffPoints": [
