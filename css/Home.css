@@ -644,10 +644,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   justify-content: center !important;
 }
 
-.card img {
-  width: 40% !important;
-}
-
 .owl-nav {
   font-size: 4rem;
   padding: 0 !important;
@@ -1408,8 +1404,4 @@ body{
 
 .Travels {
   width: 100%;
-}
-
-.Travels img {
-  width: 100% !important;
 }

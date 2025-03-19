@@ -179,13 +179,6 @@ function populateBookingDetails(booking) {
     // Update journey duration
     updateElementText(".time-info", booking.duration);
 
-    // Update seat and bus operator info
-    if (booking.passengers && booking.passengers.length > 0) {
-      const seatInfoElement = document.querySelector(".seat-info");
-      if (seatInfoElement) {
-        seatInfoElement.innerHTML = `<span>Bus Operator: ${booking.busName}</span>`;
-      }
-    }
 
     // Update passenger details
     const passengersTableBody = document.querySelector(
@@ -475,11 +468,6 @@ function displayCancellationDetails(booking) {
             <p class="fw-bold">
               ${passenger.name}
               <span class="text-gray fw-normal ps-2">(${passenger.gender},${passenger.age})</span>
-            </p>
-          </div>
-          <div>
-            <p class="text-gray">
-              Seat : <b class="text-black">${passenger.seatNo}</b>
             </p>
           </div>
         </div>

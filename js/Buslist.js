@@ -1049,7 +1049,7 @@ function renderBusList(buses) {
               <div class="rating-summary">
                 <div class="overall-rating">
                   <span class="star">★</span>
-                  <span class="rating-number">${bus.ratings.overall}</span>
+                  <span class="rating-number">${bus.ratings.overall || 0}</span>
                   <span class="rating-text">Rating</span>
                 </div>
                 <div class="category-ratings">
@@ -1058,49 +1058,49 @@ function renderBusList(buses) {
                     <span class="category">Bus quality</span>
                     <div class="rating-value">
                       <span class="star">★</span>
-                      <span>${bus.ratings.categories.busQuality}</span>
+                      <span>${bus.ratings.categories.busQuality || 0}</span>
                     </div>
                   </div>
                   <div class="rating-item">
                     <span class="category">Driving</span>
                     <div class="rating-value">
                       <span class="star">★</span>
-                      <span>${bus.ratings.categories.driving}</span>
+                      <span>${bus.ratings.categories.driving || 0}</span>
                     </div>
                   </div>
                   <div class="rating-item">
                     <span class="category">Seat Comfort</span>
                     <div class="rating-value">
                       <span class="star">★</span>
-                      <span>${bus.ratings.categories.seatComfort}</span>
+                      <span>${bus.ratings.categories.seatComfort || 0}</span>
                     </div>
                   </div>
                   <div class="rating-item">
                     <span class="category">Safety and Hygiene</span>
                     <div class="rating-value">
                       <span class="star">★</span>
-                      <span>${bus.ratings.categories.safetyAndHygiene}</span>
+                      <span>${bus.ratings.categories.safetyAndHygiene || 0}</span>
                     </div>
                   </div>
                   <div class="rating-item">
                     <span class="category">Cleanliness</span>
                     <div class="rating-value">
                       <span class="star">★</span>
-                      <span>${bus.ratings.categories.cleanliness}</span>
+                      <span>${bus.ratings.categories.cleanliness || 0}</span>
                     </div>
                   </div>
                   <div class="rating-item">
                     <span class="category">Female Friendly</span>
                     <div class="rating-value">
                       <span class="star">★</span>
-                      <span>${bus.ratings.categories.femaleFriendly}</span>
+                      <span>${bus.ratings.categories.femaleFriendly || 0}</span>
                     </div>
                   </div>
                   <div class="rating-item">
                     <span class="category">Punctuality</span>
                     <div class="rating-value">
                       <span class="star">★</span>
-                      <span>${bus.ratings.categories.punctuality}</span>
+                      <span>${bus.ratings.categories.punctuality || 0}</span>
                     </div>  
                   </div>
                 </div>

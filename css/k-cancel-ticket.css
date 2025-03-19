@@ -5,104 +5,12 @@
 .text-gray {
   color: #6c757d;
 }
-
-#top-bar {
-  background-color: #b25d3c;
-  color: white;
-  padding: 10px 0;
-}
-
-.our {
-  text-align: start;
-}
-
-.info {
-  text-align: end;
-}
-
-.contact-info {
-  justify-content: space-between !important;
-  display: flex;
-  gap: 20px;
-}
-
-.contact-info span {
-  font-size: 14px;
-}
-
 .k-verify button {
   background-color: #c16c49;
   border: none;
   color: white;
   padding: 10px 30px;
 }
-
-@media (max-width: 768px) {
-  .contact-info {
-    text-align: center;
-    align-items: center;
-    row-gap: 5px;
-  }
-
-  #top-bar {
-    display: none;
-  }
-
-  .our,
-  .info {
-    text-align: center;
-    align-items: center;
-  }
-
-  .info {
-    flex-direction: column;
-  }
-}
-
-#header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f8f8f8;
-  padding: 10px 0;
-}
-
-.logo h1 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #b25d3c;
-  margin: 0;
-}
-
-.navbar-nav {
-  margin: 0 auto;
-  gap: 40px;
-}
-
-.navbar-nav li a {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-  font-size: 16px;
-}
-
-.navbar-nav li a:hover {
-  color: #b25d3c !important;
-  border-bottom: 1px solid #b25d3c;
-}
-
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.user-profile img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-}
-
 .main-content {
   max-width: 800px;
   margin: 40px auto;
@@ -176,10 +84,6 @@
 }
 
 @media (min-width: 3px) and (max-width: 768px) {
-  #top-bar {
-    display: none;
-  }
-
   .k-cancel-tikcet-btn {
     width: 220px;
   }
@@ -207,4 +111,14 @@
 
 .k-modal-padd{
   padding-top: 200px;
+}
+
+@media (min-width: 42px)  and (max-width: 768px) {
+  .k-acc .account-btn {
+    display: none !important;
+  }
+  
+  .navbar-nav .account-btn {
+    display: block !important;
+  }
 }
