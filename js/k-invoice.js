@@ -121,38 +121,61 @@ function populateInvoiceDetails(booking) {
       });
     }
 
-    // FARE DETAILS SECTION
-    const onwardFare = booking.onwardFare || booking.fareBreakup?.baseFare || 0;
-    const gst = booking.gst || booking.fareBreakup?.gst || 0;
-    const bookingCharges =
-      booking.fareBreakup?.bookingCharges || booking.bookingCharges || 0;
-    const discount = booking.discount || booking.fareBreakup?.discount || 0;
-    const totalAmount =
-      booking.totalPayableAmount ||
-      booking.totalPrice ||
-      booking.totalFare ||
-      0;  
+    const fareDetails = document.querySelector(".fare-details");
+    const cancellationFareDetails = document.querySelector(
+      ".fare-details-cancelation"
+    );
 
-    updateElementText(
-      ".fare-details .fare-row:nth-child(1) span:last-child",
-      `₹${onwardFare}`
-    );
-    updateElementText(
-      ".fare-details .fare-row:nth-child(2) span:last-child",
-      `₹${gst}`
-    );
-    updateElementText(
-      ".fare-details .fare-row:nth-child(3) span:last-child",
-      `₹${bookingCharges}`
-    );
-    updateElementText(
-      ".fare-details .fare-row:nth-child(4) span:last-child",
-      `-₹${discount}`
-    );
-    updateElementText(
-      ".fare-details .total-row span:last-child",
-      `₹${totalAmount}`
-    );
+    if (booking.status === "Cancelled") {
+      // Show cancellation fare details
+      if (fareDetails) fareDetails.style.display = "none";
+      if (cancellationFareDetails)
+        cancellationFareDetails.style.display = "block";
+
+      // If cancellation details exist, populate them
+      if (booking.cancellationDetails) {
+        displayCancellationDetails(booking.bookingId);
+      }
+    } else {
+      // Show regular fare details for "Complete" or "Upcoming" status
+      if (fareDetails) fareDetails.style.display = "block";
+      if (cancellationFareDetails)
+        cancellationFareDetails.style.display = "none";
+
+      // Update regular fare details
+      const onwardFare =
+        booking.onwardFare || booking.fareBreakup?.baseFare || 0;
+      const gst = booking.gst || booking.fareBreakup?.gst || 0;
+      const bookingCharges =
+        booking.fareBreakup?.bookingCharges || booking.bookingCharges || 0;
+      const discount = booking.discount || booking.fareBreakup?.discount || 0;
+      const totalAmount =
+        booking.totalPayableAmount ||
+        booking.totalPrice ||
+        booking.totalFare ||
+        0;
+
+      updateElementText(
+        ".fare-details .fare-row:nth-child(1) span:last-child",
+        `₹${onwardFare}`
+      );
+      updateElementText(
+        ".fare-details .fare-row:nth-child(2) span:last-child",
+        `₹${gst}`
+      );
+      updateElementText(
+        ".fare-details .fare-row:nth-child(3) span:last-child",
+        `₹${bookingCharges}`
+      );
+      updateElementText(
+        ".fare-details .fare-row:nth-child(4) span:last-child",
+        `-₹${discount}`
+      );
+      updateElementText(
+        ".fare-details .total-row span:last-child",
+        `₹${totalAmount}`
+      );
+    }
   } catch (error) {
     console.error("Error populating invoice details:", error);
     displayErrorMessage("Error displaying invoice details. Please try again.");
@@ -294,68 +317,75 @@ async function updateBookingOnServer(userId, bookingId, cancellationDetails) {
   }
 }
 // Function to display cancellation details on the invoice
-function displayCancellationDetails(cancellationDetails) {
+function displayCancellationDetails(bookingId) {
+  console.log("Displaying cancellation details for booking ID:", bookingId);
+
   try {
-    // Show the cancellation fare details and hide the regular fare details
-    const fareDetails = document.querySelector(".fare-details");
+    // Get cancellation details from various sources
+    let cancellationDetails = null;
+
+    // First check invoice data
+    const invoiceDataStr = localStorage.getItem("invoiceBookingData");
+    if (invoiceDataStr) {
+      const invoiceData = JSON.parse(invoiceDataStr);
+      if (invoiceData && invoiceData.cancellationDetails) {
+        cancellationDetails = invoiceData.cancellationDetails;
+      }
+    }
+
+    // If not found, check cancellations in localStorage
+    if (!cancellationDetails) {
+      const cancellationsStr = localStorage.getItem("cancellations");
+      if (cancellationsStr) {
+        const cancellations = JSON.parse(cancellationsStr);
+
+        if (Array.isArray(cancellations)) {
+          cancellationDetails = cancellations.find(
+            (c) => c.bookingId === bookingId
+          );
+        } else if (cancellations.bookingId === bookingId) {
+          cancellationDetails = cancellations;
+        }
+      }
+    }
+
+    // If no cancellation details found, exit
+    if (!cancellationDetails) {
+      console.error("No cancellation details found for this booking");
+      return;
+    }
+
+    // Get the cancellation fare details container
     const cancellationFareDetails = document.querySelector(
       ".fare-details-cancelation"
     );
-
-    if (fareDetails) {
-      fareDetails.style.display = "none";
+    if (!cancellationFareDetails) {
+      console.error("Cancellation fare details container not found");
+      return;
     }
 
-    if (cancellationFareDetails) {
-      cancellationFareDetails.style.display = "block";
+    // Update the cancellation details
+    const originalFare = cancellationDetails.originalFare || 0;
+    const cancellationCharge = cancellationDetails.cancellationCharge || 0;
+    const refundAmount = cancellationDetails.refundAmount || 0;
+    const totalPaid = cancellationDetails.totalPaid || 0;
 
-      // Update cancellation fare details
-      updateElementText(
-        ".fare-details-cancelation .fare-row:nth-child(1) span:last-child",
-        `₹${cancellationDetails.originalFare || 0}`
-      );
-
-      // Calculate GST and other charges
-      const otherCharges =
-        (cancellationDetails.totalPaid || 0) -
-        (cancellationDetails.originalFare || 0);
-
-      updateElementText(
-        ".fare-details-cancelation .fare-row:nth-child(2) span:last-child",
-        `₹${otherCharges}`
-      );
-
-      // Change labels for cancellation
-      updateElementText(
-        ".fare-details-cancelation .fare-row:nth-child(3) span:first-child",
-        "Cancellation Charge (20%)"
-      );
-
-      updateElementText(
-        ".fare-details-cancelation .fare-row:nth-child(3) span:last-child",
-        `₹${cancellationDetails.cancellationCharge || 0}`
-      );
-
-      updateElementText(
-        ".fare-details-cancelation .fare-row:nth-child(4) span:first-child",
-        "Refund Amount"
-      );
-
-      updateElementText(
-        ".fare-details-cancelation .fare-row:nth-child(4) span:last-child",
-        `₹${cancellationDetails.refundAmount || 0}`
-      );
-
-      updateElementText(
-        ".fare-details-cancelation .total-row span:first-child",
-        "Total Paid"
-      );
-
-      updateElementText(
-        ".fare-details-cancelation .total-row span:last-child",
-        `₹${cancellationDetails.totalPaid || 0}`
-      );
-    }
+    updateElementText(
+      ".fare-details-cancelation .fare-row:nth-child(1) span:last-child",
+      `₹${originalFare}`
+    );
+    updateElementText(
+      ".fare-details-cancelation .fare-row:nth-child(2) span:last-child",
+      `₹${cancellationCharge}`
+    );
+    updateElementText(
+      ".fare-details-cancelation .fare-row:nth-child(3) span:last-child",
+      `₹${refundAmount}`
+    );
+    updateElementText(
+      ".fare-details-cancelation .total-row span:last-child",
+      `₹${totalPaid}`
+    );
   } catch (error) {
     console.error("Error displaying cancellation details:", error);
   }
@@ -363,7 +393,7 @@ function displayCancellationDetails(cancellationDetails) {
 // Function to send cancellation data to your JSON server
 function sendCancellationToServer(cancellationDetails) {
   try {
-    const apiUrl = "http://localhost:3000/cancellations"; 
+    const apiUrl = "http://localhost:3000/cancellations";
     fetch(apiUrl, {
       method: "POST",
       headers: {
@@ -404,7 +434,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (invoiceData) {
-   
     populateInvoiceDetails(invoiceData);
 
     // Check if the booking is cancelled
@@ -535,7 +564,9 @@ function displayCancellationDetails(bookingId) {
 
 function showRegularFareDetails() {
   const fareDetails = document.querySelector(".fare-details");
-  const cancellationFareDetails = document.querySelector(".fare-details-cancelation");
+  const cancellationFareDetails = document.querySelector(
+    ".fare-details-cancelation"
+  );
 
   if (fareDetails) {
     fareDetails.style.display = "block";
@@ -574,9 +605,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Check if the booking is cancelled in invoice data or has cancellation details
     if (invoiceData.status === "Cancelled" || invoiceData.cancellationDetails) {
       console.log("Booking is cancelled according to invoice data");
-     
+
       displayCancellationDetails(bookingId);
-      
     } else {
       // Now check if there's cancellation info in the cancellations localStorage
       try {
@@ -598,7 +628,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if (hasCancellation) {
             console.log("Found cancellation in cancellations localStorage");
             displayCancellationDetails(bookingId);
-          } 
+          }
         }
       } catch (error) {
         console.error("Error checking cancellations localStorage:", error);

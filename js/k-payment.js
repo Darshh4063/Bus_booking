@@ -1,5 +1,5 @@
 const bookingDetailsString = localStorage.getItem("bookingDetails");
-
+const user = localStorage.getItem("currentUser");
 if (!bookingDetailsString) {
   console.error("No booking details found in localStorage");
 }
@@ -300,8 +300,11 @@ function processPayment(method) {
     el.textContent = "";
   });
 
-  // Show processing indicator
-  showProcessingIndicator();
+  /// Check if user is logged in before showing processing indicator
+  if (!showProcessingIndicator()) {
+    console.log("Payment processing aborted: User not logged in");
+    return; // Exit if user is not logged in
+  }
 
   // Gather payment data based on method
   let paymentData = {};
@@ -369,17 +372,35 @@ function processPayment(method) {
 }
 // Show processing indicator
 function showProcessingIndicator() {
-  const processingModal = document.getElementById("processingModal");
-  if (processingModal) {
-    console.log("Found processing modal, showing it");
-    if (typeof bootstrap !== "undefined" && bootstrap.Modal) {
-      const bsModal = new bootstrap.Modal(processingModal);
-      bsModal.show();
-    } else {
-      processingModal.style.display = "block";
-      processingModal.classList.add("show");
+  if (user) {
+    const processingModal = document.getElementById("processingModal");
+    if (processingModal) {
+      console.log("Found processing modal, showing it");
+      if (typeof bootstrap !== "undefined" && bootstrap.Modal) {
+        const bsModal = new bootstrap.Modal(processingModal);
+        bsModal.show();
+      } else {
+        processingModal.style.display = "block";
+        processingModal.classList.add("show");
+      }
     }
+  } else {
+    console.log("User not logged in, showing login modal");
+    // Show login modal instead
+    if (typeof bootstrap !== "undefined" && bootstrap.Modal) {
+      const loginModal = document.getElementById("loginModal");
+      if (loginModal) {
+        const bsModal = new bootstrap.Modal(loginModal);
+        bsModal.show();
+      } else {
+        alert("Please login to continue with payment");
+      }
+    } else {
+      alert("Please login to continue with payment");
+    }
+    return false; // Return false to indicate user is not logged in
   }
+  return true; // Return true to indicate user is logged in
 }
 
 // Hide processing indicator
@@ -417,7 +438,11 @@ function processCheckPayment() {
     return;
   }
 
-  showProcessingIndicator();
+  // Check if user is logged in before showing processing indicator
+  if (!showProcessingIndicator()) {
+    console.log("Check payment processing aborted: User not logged in");
+    return; // Exit if user is not logged in
+  }
 
   setTimeout(() => {
     hideProcessingIndicator();
@@ -572,7 +597,7 @@ function completeCheckPayment(accountNumber) {
     sendPaymentData(data);
   } catch (e) {
     console.log("Error sending check payment data:", e);
-    showSuccessModal();  
+    showSuccessModal();
     window.location.href = "mybooking.html";
   }
 }
