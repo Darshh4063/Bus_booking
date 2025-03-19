@@ -557,7 +557,7 @@ aria-hidden="true"
             </div>
 
         </div>
-        <div class="d-flex justify-content-between align-items-center px-3 mx-3 d-md-none" style="border: 1px solid black;">
+        <div class="d-flex justify-content-between align-items-center px-3 mx-3 d-lg-none" style="border: 1px solid black;">
           <span>Filter</span>
           <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa-solid fa-filter"></i></button>
         </div>
@@ -583,11 +583,11 @@ aria-hidden="true"
             <div class="tab__content">
                 <div class="button-group">
                     <button class="filter-btn" data-type="AC" onclick="toggleSelection(this)">
-                        <span class="icon">❄</span>
+                        <span class="icon"><img src="./image/u_images/sidebar_1.png" alt=""></span>
                         AC
                     </button>
                     <button class="filter-btn selected" data-type="Non AC" onclick="toggleSelection(this)">
-                        <span class="icon">❄</span>
+                        <span class="icon"><img src="./image/u_images/sidebar_2.png" alt=""></span>
                         Non AC
                     </button>
                 </div>
@@ -948,7 +948,7 @@ aria-hidden="true"
   <section>
     <div class="container">
       <div class="d-flex">
-        <div class="filters-container" style="width: 350px;">
+        <div class="filters-container" style="width: 30%;">
           <div class="filters-header">
             <h2>Filters</h2>
             <a href="#" class="remove-all">Remove All</a>
@@ -961,11 +961,11 @@ aria-hidden="true"
                 <div class="tab__content">
                     <div class="button-group">
                         <button class="filter-btn" data-type="AC" onclick="toggleSelection(this);filterBusType('AC')">
-                            <span class="icon">❄</span>
+                            <span class="icon"><img style="width: 25px;" src="./image/u_images/sidebar_1.png" alt=""></span>
                             AC
                         </button>
                         <button class="filter-btn selected" data-type="Non AC" onclick="toggleSelection(this);filterBusType('Non AC')">
-                            <span class="icon">❄</span>
+                            <span class="icon"><img style="width: 25px;" src="./image/u_images/sidebar_2.png" alt=""></span>
                             Non AC
                         </button>
                     </div>
@@ -980,11 +980,11 @@ aria-hidden="true"
               <div class="tab__content">
                 <div class="button-group">
                   <button class="filter-btn" data-type="Seater" onclick="toggleSelection(this);filterSeatType('Seater')">
-                    <span class="icon">💺</span>
+                    <span class="icon"><img style="width: 25px;" src="./image/u_images/sidebar_3.png" alt=""></span>
                     Seater
                   </button>
                   <button class="filter-btn selected" data-type="Sleeper" onclick="toggleSelection(this);filterSeatType('Sleeper')">
-                    <span class="icon">🛏️</span>
+                    <span class="icon"><img style="width: 25px;" src="./image/u_images/sidebar_4.png" alt=""></span>
                     Sleeper
                   </button>
                 </div>
@@ -1049,20 +1049,20 @@ aria-hidden="true"
                     <div class="price-input">
                       <div class="field">
                         <span>Min</span>
-                        <input type="number" class="input-min" value="2500">
+                        <input type="number" class="input-min" value="25000">
                       </div>
                       <div class="separator">-</div>
                       <div class="field">
                         <span>Max</span>
-                        <input type="number" class="input-max" value="7500">
+                        <input type="number" class="input-max" value="50000">
                       </div>
                     </div>
                     <div class="slider">
                       <div class="progress"></div>
                     </div>
                     <div class="range-input">
-                      <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
-                      <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+                      <input type="range" class="range-min" min="25000" max="50000" value="25000" step="100">
+                      <input type="range" class="range-max" min="25000" max="50000" value="50000" step="100">
                     </div>
                   </div>
             
@@ -1088,22 +1088,22 @@ aria-hidden="true"
               <div class="tab__content">
                 <div class="checkbox-group">
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="Before 6 AM" onchange="updatePickuptimeFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     Before 6 AM
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" checked />
+                    <input type="checkbox" value="6 AM - 12 PM" onchange="updatePickuptimeFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     6 AM - 12 PM
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="12 PM - 6 PM" onchange="updatePickuptimeFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     12 PM - 6 PM
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" checked />
+                    <input type="checkbox" value="After 6 PM" onchange="updatePickuptimeFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     After 6 PM
                   </label>
@@ -1118,22 +1118,22 @@ aria-hidden="true"
               <div class="tab__content">
                 <div class="checkbox-group">
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="Before 6 AM" onchange="updateDropofftimeFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     Before 6 AM
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" checked />
+                    <input type="checkbox" value="6 AM - 12 PM" onchange="updateDropofftimeFilters(this)" />
                     <span class="checkbox-custom"></span>
                     6 AM - 12 PM
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="12 PM - 6 PM" onchange="updateDropofftimeFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     12 PM - 6 PM
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" checked />
+                    <input type="checkbox" value=" After 6 PM" onchange="updateDropofftimeFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     After 6 PM
                   </label>
@@ -1183,27 +1183,27 @@ aria-hidden="true"
               <div class="tab__content">
                 <div class="checkbox-group">
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="Abrama Chowk Motavarachha" onchange="updatePickupFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     Abrama Chowk Motavarachha
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="Akshar Vadi" onchange="updatePickupFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     Akshar Vadi
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="Balaji Bus Parking" onchange="updatePickupFilters(this)" />
                     <span class="checkbox-custom"></span>
                     Balaji Bus Parking
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="Bhavani Mandir" onchange="updatePickupFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     Bhavani Mandir
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="Chopati Nanavarachha" onchange="updatePickupFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     Chopati Nanavarachha
                   </label>
@@ -1223,22 +1223,22 @@ aria-hidden="true"
                 </div>
                 <div class="checkbox-group">
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="Ankleshwar" onchange="updateDropoffFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     Ankleshwar
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" checked />
+                    <input type="checkbox" value="Ankleshwar By Pass" onchange="updateDropoffFilters(this)" />
                     <span class="checkbox-custom"></span>
                     Ankleshwar By Pass
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" />
+                    <input type="checkbox" value="Ankleshwar Highway" onchange="updateDropoffFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     Ankleshwar Highway
                   </label>
                   <label class="checkbox-label">
-                    <input type="checkbox" checked />
+                    <input type="checkbox"  value="Panoli" onchange="updateDropoffFilters(this)"/>
                     <span class="checkbox-custom"></span>
                     Panoli
                   </label>
@@ -2587,48 +2587,57 @@ function toggleSelection(button) {
 
 
 <script>
-  const rangeInput = document.querySelectorAll(".range-input input"),
-priceInput = document.querySelectorAll(".price-input input"),
-range = document.querySelector(".slider .progress");
-let priceGap = 1000;
+  const rangeInputs = document.querySelectorAll(".range-input input"),
+    priceInputs = document.querySelectorAll(".price-input input"),
+    progress = document.querySelector(".slider .progress");
+  let priceGap = 1000;
 
-priceInput.forEach((input) => {
-input.addEventListener("input", (e) => {
-  let minPrice = parseInt(priceInput[0].value),
-    maxPrice = parseInt(priceInput[1].value);
+  function updateProgress() {
+    let minVal = parseInt(rangeInputs[0].value),
+      maxVal = parseInt(rangeInputs[1].value),
+      minLimit = parseInt(rangeInputs[0].min),
+      maxLimit = parseInt(rangeInputs[0].max);
 
-  if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
-    if (e.target.className === "input-min") {
-      rangeInput[0].value = minPrice;
-      range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
-    } else {
-      rangeInput[1].value = maxPrice;
-      range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
-    }
+    progress.style.left = ((minVal - minLimit) / (maxLimit - minLimit)) * 100 + "%";
+    progress.style.right = 100 - ((maxVal - minLimit) / (maxLimit - minLimit)) * 100 + "%";
   }
-});
-});
 
-rangeInput.forEach((input) => {
-input.addEventListener("input", (e) => {
-  let minVal = parseInt(rangeInput[0].value),
-    maxVal = parseInt(rangeInput[1].value);
+  priceInputs.forEach((input) => {
+    input.addEventListener("input", (e) => {
+      let minPrice = parseInt(priceInputs[0].value),
+        maxPrice = parseInt(priceInputs[1].value);
 
-  if (maxVal - minVal < priceGap) {
-    if (e.target.className === "range-min") {
-      rangeInput[0].value = maxVal - priceGap;
-    } else {
-      rangeInput[1].value = minVal + priceGap;
-    }
-  } else {
-    priceInput[0].value = minVal;
-    priceInput[1].value = maxVal;
-    range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
-    range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
-  }
-});
-});
+      if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInputs[1].max) {
+        if (e.target.classList.contains("input-min")) {
+          rangeInputs[0].value = minPrice;
+        } else {
+          rangeInputs[1].value = maxPrice;
+        }
+        updateProgress();
+      }
+    });
+  });
 
+  rangeInputs.forEach((input) => {
+    input.addEventListener("input", (e) => {
+      let minVal = parseInt(rangeInputs[0].value),
+        maxVal = parseInt(rangeInputs[1].value);
+
+      if (maxVal - minVal < priceGap) {
+        if (e.target.classList.contains("range-min")) {
+          rangeInputs[0].value = maxVal - priceGap;
+        } else {
+          rangeInputs[1].value = minVal + priceGap;
+        }
+      } else {
+        priceInputs[0].value = minVal;
+        priceInputs[1].value = maxVal;
+        updateProgress();
+      }
+    });
+  });
+
+  updateProgress(); 
 </script>
 
 
