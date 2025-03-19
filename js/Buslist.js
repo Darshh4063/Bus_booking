@@ -632,6 +632,8 @@ let selectedRatings = [];
 let selectedDiscounts = [];
 let selectedPickupPoints = [];
 let selectedDropoffPoints = [];
+let selectedPickup = [];
+let selectedDropoff = [];
 function initializeSeatSelection() {
   // Remove the single container query since we'll handle multiple buses
   const seatContainers = document.querySelectorAll(".seat-selection");
@@ -1313,9 +1315,7 @@ function renderBusList(buses) {
                           .join("")
                   }
                   <div class="booking-summary">
-                    <div class="summary-title">Selected Seats</div>
-                    <div id="seatselected"></div>
-                    <div class="no-seats">No Seats Selected</div>
+
                       <button class="continue-btn" onclick='handleBookingDetail(${JSON.stringify(
                         bus
                       )})'>Continue</button>
@@ -1573,6 +1573,51 @@ function filterSeatType(seatType) {
   renderBusList(filteredBuses);
 }
 
+// pick and dropoff time
+// pickup
+function updatePickuptimeFilters(checkbox) {
+  if (checkbox.checked) {
+    selectedPickup.push(checkbox.value);
+  } else {
+    selectedPickup = selectedPickup.filter(
+      (operator) => operator !== checkbox.value
+    );
+  }
+  filterBusPickuptime();
+}
+
+function filterBusPickuptime() {
+  const filteredBuses = data.filter((bus) => {
+    const busArrivalTime = bus.journey.arrival.time; 
+    return selectedPickup.some((timeRange) =>
+      isTimeInRange(busArrivalTime, timeRange)
+    );
+  });
+  renderBusList(filteredBuses);
+  console.log("Filtered Buses:", filteredBuses);
+}
+
+// Function to check if a given time falls within a range
+function isTimeInRange(time, range) {
+  const [start, end] = range.split(" - ").map(convertTo24Hour);
+  const busTime = convertTo24Hour(time);
+
+  return busTime >= start && busTime <= end;
+}
+
+// Convert 12-hour time format to 24-hour format for comparison
+function convertTo24Hour(time) {
+  const [hour, period] = time.split(" ");
+  let hourNum = parseInt(hour, 10);
+
+  if (period === "PM" && hourNum !== 12) {
+    hourNum += 12;
+  } else if (period === "AM" && hourNum === 12) {
+    hourNum = 0;
+  }
+  return hourNum;
+}
+
 // Function to update the selected bus operators and filter the bus list
 function updateBusOperatorFilters(checkbox) {
   if (checkbox.checked) {
@@ -1821,7 +1866,6 @@ function initPriceRangeFilter() {
 const originalRenderBusList = window.renderBusList || function () {};
 
 window.renderBusList = function (buses) {
-  // First time loading buses, store the original data
   if (!window.priceFilterInitialized) {
     const priceFilter = initPriceRangeFilter();
     priceFilter.storeOriginalBusData(buses);
@@ -1829,19 +1873,15 @@ window.renderBusList = function (buses) {
     window.priceFilterInitialized = true;
   }
 
-  // Call the original renderBusList function with filtered buses
   originalRenderBusList(buses);
 };
 
 // Function to load buses with the initial data
 function loadBuses(busesData) {
-  // Store the original data globally
   window.originalBusesData = busesData;
 
-  // Render the initial bus list
   renderBusList(busesData);
 
-  // Now initialize the price filter after buses are rendered
   if (!window.priceFilterInitialized) {
     const priceFilter = initPriceRangeFilter();
     priceFilter.storeOriginalBusData(busesData);

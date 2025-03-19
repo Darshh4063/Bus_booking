@@ -47,7 +47,6 @@ body {
 }
 .tab__label {
   justify-content: space-between;
-  padding: 1rem;
   align-items: center;
 }
 .tab__label::after {
@@ -149,7 +148,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .input-group a {
   text-decoration: none !important;
   border: none;
-  padding: 3px 20px;
+  padding: 8px 35px;
   background-color: #c16c49;
   color: white !important;
   border-radius: 4px;
@@ -460,7 +459,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .filter-section {
   border-bottom: 1px solid #eee;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .filter-section:last-child {
@@ -490,6 +489,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+  padding: 15px;
 }
 
 .filter-btn {
@@ -515,6 +515,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  padding: 15px;
 }
 
 .checkbox-label {
@@ -1232,9 +1233,9 @@ tr:nth-child(even) td {
   background-color: #a34935 !important;
 }
 
-.owl-items img {
+/* .owl-items img {
   width: 200px !important;
-}
+} */
 
 /* offcanvas css */
 .set-w {
@@ -1252,11 +1253,12 @@ tr:nth-child(even) td {
   .filters-container {
     display: none;
   }
-  
-}
-.set-w {
+  .set-w {
   width: 100%;
 }
+  
+}
+
 .offcanvas .filters-container {
   display: block;
 }
