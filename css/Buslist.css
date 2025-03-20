@@ -415,7 +415,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display: initial !important;
   }
 }
-
+@media (min-width: 425px) and (max-width: 768px) {
+  .seat-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr) !important;
+  }
+}
 @media (max-width: 375px) {
   .legend {
     gap: 15px !important;
@@ -1254,9 +1259,8 @@ tr:nth-child(even) td {
     display: none;
   }
   .set-w {
-  width: 100%;
-}
-  
+    width: 100%;
+  }
 }
 
 .offcanvas .filters-container {
@@ -1361,8 +1365,11 @@ input[type="range"]::-moz-range-thumb {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
 }
 
-
 /* sidebar */
 input:focus-visible {
   outline: none;
+}
+
+.owl-nav {
+  font-size: 0rem;
 }
