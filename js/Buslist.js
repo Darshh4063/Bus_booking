@@ -914,7 +914,7 @@ function renderBusList(buses) {
         `
           )
           .join("")}
-        <div class="ms-auto">
+        <div class="ms-auto link">
           <button class="select-seat " data-tab="selectseat" data-bus="${busIndex}"> Select Bus </button>
         </div>
       </div>
