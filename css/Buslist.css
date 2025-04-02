@@ -361,7 +361,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .travel-links {
-  /* padding: 12px 20px; */
   display: flex;
   align-items: center;
   gap: 16px;
@@ -377,6 +376,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* .link:hover {
   color: #c15b3f;
 } */
+
+@media (max-width: 425px) {
+  .travel-links {
+    overflow-x: auto;
+    flex-wrap: nowrap !important;
+    white-space: nowrap;
+  }
+}
 
 @media (max-width: 768px) {
   .travel-card {
@@ -623,14 +630,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-weight: 500;
 }
 
+.show-more:hover {
+  color: initial;
+}
+
 /* cancel policy css */
 .travel-links {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  /* margin-bottom: 20px; */
-  /* border-bottom: 1px solid #e0e0e0; */
-  /* padding-bottom: 10px; */
 }
 
 .link {
@@ -641,9 +649,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   transition: all 0.3s ease;
 }
 
-/* .link:hover {
-  background-color: #f0f0f0;
-} */
+.link:hover {
+  color: #555;
+}
 
 /* .link.active {
   color: #007bff;
@@ -720,7 +728,7 @@ tr:nth-child(even) td {
   /* background-color: #f9f9f9; */
   border-radius: 5px;
   text-align: center;
-  font-size: 18px;
+  font-size: 15px;
   /* color: #777; */
 }
 
@@ -811,7 +819,7 @@ tr:nth-child(even) td {
 .point-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .point-item {
@@ -861,7 +869,7 @@ tr:nth-child(even) td {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 15px;
 }
 
 .overall-rating .star {
@@ -881,7 +889,6 @@ tr:nth-child(even) td {
 
 .category-ratings h4 {
   font-size: 20px;
-  margin-bottom: 16px;
   text-align: start;
   font-weight: 600;
 }
@@ -890,7 +897,6 @@ tr:nth-child(even) td {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
 }
 
 .category {
@@ -1311,7 +1317,7 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 .price-input .separator {
-  width: 130px;
+  width: 90px;
   display: flex;
   font-size: 19px;
   align-items: center;

@@ -964,7 +964,7 @@ aria-hidden="true"
                             <span class="icon"><img style="width: 25px;" src="./image/u_images/sidebar_1.png" alt=""></span>
                             AC
                         </button>
-                        <button class="filter-btn selected" data-type="Non AC" onclick="toggleSelection(this);filterBusType('Non AC')">
+                        <button class="filter-btn selected" data-type="Non AC" onclick="toggleSelection(this);filterBusType('Non')">
                             <span class="icon"><img style="width: 25px;" src="./image/u_images/sidebar_2.png" alt=""></span>
                             Non AC
                         </button>
@@ -2531,14 +2531,6 @@ function toggleSelection(button) {
 }
 </script>
 
-<!-- sidebar  -->
-<script>
-  function toggleSelection(button) {
-      let buttons = button.parentElement.querySelectorAll(".filter-btn");
-      buttons.forEach(btn => btn.classList.remove("selected"));
-      button.classList.add("selected");
-  }
-  </script>
 
 
 <script>
