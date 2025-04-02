@@ -873,7 +873,10 @@ function renderBusList(buses) {
           <span class="rating-value">${bus.ratings.overall}</span>
         </div>
         <div class="company-name">${bus.companyName}</div>
-        <div class="bus-type">${bus.busType}</div>  
+        <div class="d-flex">
+            <div class="bus-type me-1">${bus.busType}</div>  
+            <div class="bus-type">${bus.seatType}</div>  
+        </div>
       </div>
 
       <div class="journey-details">
@@ -1081,7 +1084,9 @@ function renderBusList(buses) {
                     <span class="category">Safety and Hygiene</span>
                     <div class="rating-value">
                       <span class="star">★</span>
-                      <span>${bus.ratings.categories.safetyAndHygiene || 0}</span>
+                      <span>${
+                        bus.ratings.categories.safetyAndHygiene || 0
+                      }</span>
                     </div>
                   </div>
                   <div class="rating-item">
@@ -1563,13 +1568,18 @@ window.addEventListener("load", () => {
   }
 });
 
+let filteredBuses = [...data];
 function filterBusType(busType) {
-  const filteredBuses = data.filter((bus) => bus.busType.includes(busType));
+  filteredBuses = data.filter((bus) => bus.busType.includes(busType));
   renderBusList(filteredBuses);
+  return filteredBuses;
 }
 
 function filterSeatType(seatType) {
-  const filteredBuses = data.filter((bus) => bus.busType.includes(seatType));
+  filteredBuses = filteredBuses.filter((bus) => {
+    return bus.seatType && bus.seatType.includes(seatType);
+    // return bus.seatType && bus.seatType.includes(seatType);
+  });
   renderBusList(filteredBuses);
 }
 
@@ -1588,7 +1598,7 @@ function updatePickuptimeFilters(checkbox) {
 
 function filterBusPickuptime() {
   const filteredBuses = data.filter((bus) => {
-    const busArrivalTime = bus.journey.arrival.time; 
+    const busArrivalTime = bus.journey.arrival.time;
     return selectedPickup.some((timeRange) =>
       isTimeInRange(busArrivalTime, timeRange)
     );

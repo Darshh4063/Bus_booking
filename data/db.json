@@ -1007,7 +1007,8 @@
   "busListings": [
     {
       "companyName": "Amar Travels",
-      "busType": "AC Seater",
+      "busType": "AC",
+      "seatType": "Seater",
       "rating": "2.5",
       "journey": {
         "departure": {
@@ -1330,7 +1331,8 @@
     },
     {
       "companyName": "B.R. Travels",
-      "busType": "Non AC Seater",
+      "busType": "Non",
+      "seatType": "Seater",
       "rating": "3.5",
       "journey": {
         "departure": {
@@ -1623,7 +1625,8 @@
     },
     {
       "companyName": "Ankur Travels",
-      "busType": "AC Sleeper",
+      "busType": "AC",
+      "seatType": "Sleeper",
       "rating": "4.5",
       "journey": {
         "departure": {
@@ -1901,7 +1904,8 @@
     },
     {
       "companyName": "Bapasitaram Travels",
-      "busType": "Non AC Seater",
+      "busType": "Non",
+      "seatType":"Seater",
       "rating": "2.0",
       "journey": {
         "departure": {
@@ -2180,7 +2184,8 @@
     },
     {
       "companyName": "Maruti Nandan Travels",
-      "busType": "Non AC Sleeper",
+      "busType": "Non",
+      "seatType":"Sleeper",
       "rating": "4.0",
       "journey": {
         "departure": {
@@ -2465,7 +2470,8 @@
     },
     {
       "companyName": "Delux Travels",
-      "busType": "AC Sleeper",
+      "busType": "AC",
+      "seatType":"Sleeper",
       "rating": "3.0",
       "journey": {
         "departure": {
@@ -2751,7 +2757,8 @@
     },
     {
       "companyName": "Shivay Travels",
-      "busType": "AC Seater",
+      "busType": "AC",
+      "seatType":"Seater",
       "rating": "2.5",
       "journey": {
         "departure": {
@@ -3033,7 +3040,8 @@
     },
     {
       "companyName": "Bharat Travels",
-      "busType": "AC Seater",
+      "busType": "AC",
+      "seatType":"Seater",
       "rating": "4.5",
       "journey": {
         "departure": {
@@ -3302,7 +3310,8 @@
     },
     {
       "companyName": "New Dharti travels",
-      "busType": "AC Seater",
+      "busType": "AC",
+      "seatType":"Seater",
       "rating": "4.5",
       "journey": {
         "departure": {
@@ -3570,7 +3579,8 @@
     },
     {
       "companyName": "Bapasitaram Travels",
-      "busType": "AC Seater",
+      "busType": "AC",
+      "seatType":"Seater",
       "rating": "4.5",
       "journey": {
         "departure": {
@@ -3839,6 +3849,7 @@
     {
       "companyName": "Madhuram Travels",
       "busType": "AC",
+      "seatType":"Sleeper",
       "rating": "4.5",
       "journey": {
         "departure": {
@@ -3918,12 +3929,14 @@
         ]
       },
       "amenities": [
-        "WiFi",
         "Water Bottle",
         "Charging Point",
-        "Blanket",
-        "Live Tracking",
-        "Emergency Toilet"
+        "Live Tracking"
+      ],
+      "amenitiesImg": [
+        "amenities_2.png",
+        "amenities_3.png",
+        "amenities_5.png"
       ],
       "photos": [
         "buslist_slider1.png",
