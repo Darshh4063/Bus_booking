@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terms and Conditions</title>
     <link rel="stylesheet" href="./css/J_terms-condition.css" />
-    <link rel="stylesheet" href="./css/Home.css">
+    <link rel="stylesheet" href="./css/Home.css" />
     <link rel="stylesheet" href="css/k-login.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css ">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
   </head>
 
   <body>
@@ -36,423 +36,459 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="w-100">
-           <div class="row align-items-center">
-            <div class="col-6 col-lg-3">
-              <div class="logo">
-                <h1>LOGO</h1>
+            <div class="row align-items-center">
+              <div class="col-6 col-lg-3">
+                <div class="logo">
+                  <h1>LOGO</h1>
+                </div>
               </div>
-            </div>
 
-          <div class="d-lg-none k-toggle col-6 d-flex justify-content-end">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
+              <div class="d-lg-none k-toggle col-6 d-flex justify-content-end">
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasRight"
+                  aria-controls="offcanvasRight"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
 
-          <div class="col-4 col-lg-6">
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a href="Home.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a href="J_about-us.html">About Us</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a href="J_contact-us.html">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                  <div class="account-btn d-none">
-                    <button><i class="fa-solid fa-user"></i> Account</button>
+              <div class="col-4 col-lg-6">
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a href="Home.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="J_about-us.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="J_contact-us.html" class="nav-link"
+                        >Contact Us</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <div class="account-btn d-none">
+                        <button>
+                          <i class="fa-solid fa-user"></i> Account
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-4 col-lg-3">
+                <div class="k-acc mx-auto d-flex justify-content-end">
+                  <div class="text-end">
+                    <div class="account-btn">
+                      <button><i class="fa-solid fa-user"></i> Account</button>
+                    </div>
                   </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-           <div class="col-4 col-lg-3">
-            <div class="k-acc mx-auto d-flex justify-content-end">
-              <div class="text-end">
-                <div class="account-btn">
-                  <button><i class="fa-solid fa-user"></i> Account</button>
                 </div>
               </div>
             </div>
-           </div>
-           </div>
           </div>
         </nav>
       </div>
     </section>
-   <!-- Login Modal -->
-   <div
-   class="ke modal fade"
-   id="loginModal"
-   tabindex="-1"
-   aria-labelledby="loginModalLabel"
-   aria-hidden="true"
- >
-   <div class="modal-dialog modal-dialog-centered">
-     <div class="modal-content">
-       <div class="modal-body p-0">
-         <div class="k-modal-content-login">
-           <!-- Left Side - Bus Image -->
-           <div class="k-modal-image">
-             <img src="k_images/register-bus.png" alt="AJ Express Bus" />
-           </div>
 
-           <!-- Right Side - Sign In Form -->
-           <div class="k-modal-form">
-             <!-- Close Button -->
-             <button
-               type="button"
-               class="k-close-btn"
-               data-bs-dismiss="modal"
-               onclick="backdropClose()"
-             >
-               &times;
-             </button>
+    <!-- responsive header -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">
+          Offcanvas right
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="Home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="J_about-us.html">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="J_contact-us.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <div class="account-btn d-none">
+              <button><i class="fa-solid fa-user"></i> Account</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Login Modal -->
+    <div
+      class="ke modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="k-modal-content-login">
+              <!-- Left Side - Bus Image -->
+              <div class="k-modal-image">
+                <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+              </div>
 
-             <!-- Form Header -->
-             <div class="k-form-header">
-               <h2 class="k-title">Sign In</h2>
-               <p class="k-subtitle">Login to an existing account</p>
-             </div>
+              <!-- Right Side - Sign In Form -->
+              <div class="k-modal-form">
+                <!-- Close Button -->
+                <button
+                  type="button"
+                  class="k-close-btn"
+                  data-bs-dismiss="modal"
+                  onclick="backdropClose()"
+                >
+                  &times;
+                </button>
 
-             <!-- Form Fields -->
-             <form class="k-login-form inp">
-               <div class="k-form-group">
-                 <label for="mobile" class="k-label">Mobile No</label>
-                 <div class="k-input-group">
-                   <div class="k-country-code">+91</div>
-                   <input
-                     type="text"
-                     class="k-input"
-                     id="mobile"
-                     placeholder="Enter your mobile no"
-                   />
-                 </div>
-               </div>
+                <!-- Form Header -->
+                <div class="k-form-header">
+                  <h2 class="k-title">Sign In</h2>
+                  <p class="k-subtitle">Login to an existing account</p>
+                </div>
 
-               <button type="button" class="k-submit-btn">Continue</button>
+                <!-- Form Fields -->
+                <form class="k-login-form inp">
+                  <div class="k-form-group">
+                    <label for="mobile" class="k-label">Mobile No</label>
+                    <div class="k-input-group">
+                      <div class="k-country-code">+91</div>
+                      <input
+                        type="text"
+                        class="k-input"
+                        id="mobile"
+                        placeholder="Enter your mobile no"
+                      />
+                    </div>
+                  </div>
 
-               <!-- OR Divider -->
-               <div class="k-divider">
-                 <span>OR</span>
-               </div>
+                  <button type="button" class="k-submit-btn">Continue</button>
 
-               <!-- Social Login -->
-               <div class="k-social-login">
-                 <button type="button" class="k-social-btn k-google">
-                   <img
-                     src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                     alt="Google"
-                   />
-                 </button>
-                 <button type="button" class="k-social-btn k-facebook">
-                   <img
-                     src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                     alt="Facebook"
-                   />
-                 </button>
-                 <button type="button" class="k-social-btn k-apple">
-                   <img
-                     src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-                     alt="Apple"
-                   />
-                 </button>
-               </div>
+                  <!-- OR Divider -->
+                  <div class="k-divider">
+                    <span>OR</span>
+                  </div>
 
-               <!-- Sign Up Link -->
-               <div class="k-signup-link">
-                 Didn't have any account?
-                 <a href="#" id="showRegisterModal">Sign up</a>
-               </div>
-             </form>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+                  <!-- Social Login -->
+                  <div class="k-social-login">
+                    <button type="button" class="k-social-btn k-google">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                        alt="Google"
+                      />
+                    </button>
 
- <!-- OTP Modal -->
- <div
-   class="modal fade"
-   id="otpModal"
-   tabindex="-1"
-   aria-labelledby="otpModalLabel"
-   aria-hidden="true"
- >
-   <div class="ke-otp modal-dialog modal-dialog-centered">
-     <div class="modal-content">
-       <div class="modal-body p-0">
-         <div class="k-modal-content-otp">
-           <!-- Right Side - OTP Form -->
-           <div class="k-modal-form">
-             <!-- Close Button -->
-             <button
-               type="button"
-               class="k-close-btn"
-               data-bs-dismiss="modal"
-               onclick="backdropClose()"
-             >
-               &times;
-             </button>
+                    <button type="button" class="k-social-btn k-apple">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                        alt="Apple"
+                      />
+                    </button>
+                  </div>
 
-             <!-- Form Header -->
-             <div class="k-form-header">
-               <h2 class="k-title">Verify OTP</h2>
-               <p class="k-subtitle">
-                 Enter the verification code sent to
-                 <span>+91 XXXXXXXXXX</span>
-               </p>
-             </div>
+                  <!-- Sign Up Link -->
+                  <div class="k-signup-link">
+                    Didn't have any account?
+                    <a href="#" id="showRegisterModal">Sign up</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-             <!-- OTP Fields -->
-             <div class="k">
-               <div class="otp-container">
-                 <input
-                   type="text"
-                   maxlength="1"
-                   class="otp-input"
-                   autofocus
-                 />
-                 <input type="text" maxlength="1" class="otp-input" />
-                 <input type="text" maxlength="1" class="otp-input" />
-                 <input type="text" maxlength="1" class="otp-input" />
-               </div>
+    <!-- OTP Modal -->
+    <div
+      class="modal fade"
+      id="otpModal"
+      tabindex="-1"
+      aria-labelledby="otpModalLabel"
+      aria-hidden="true"
+    >
+      <div class="ke-otp modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="k-modal-content-otp">
+              <!-- Right Side - OTP Form -->
+              <div class="k-modal-form">
+                <!-- Close Button -->
+                <button
+                  type="button"
+                  class="k-close-btn"
+                  data-bs-dismiss="modal"
+                  onclick="backdropClose()"
+                >
+                  &times;
+                </button>
 
-               <div class="k-verify">
-                 <button type="button" class="veri">Verify</button>
-               </div>
+                <!-- Form Header -->
+                <div class="k-form-header">
+                  <h2 class="k-title">Verify OTP</h2>
+                  <p class="k-subtitle">
+                    Enter the verification code sent to
+                    <span>+91 XXXXXXXXXX</span>
+                  </p>
+                </div>
 
-               <div class="undo k-resend d-flex align-items-center justify-content-center">
-                <p class="m-0 pe-2 ke-resend"> Didn't receive the code?</p><span>Resend</span>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+                <!-- OTP Fields -->
+                <div class="k">
+                  <div class="otp-container">
+                    <input
+                      type="text"
+                      maxlength="1"
+                      class="otp-input"
+                      autofocus
+                    />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                  </div>
 
- <!-- Register OTP Modal -->
- <div
-   class="modal fade"
-   id="RegisterOtpModel"
-   tabindex="-1"
-   aria-labelledby="registerOtpModalLabel"
-   aria-hidden="true"
- >
-   <div class="modal-dialog modal-dialog-centered">
-     <div class="modal-content">
-       <div class="modal-body p-0">
-         <div class="k-modal-content">
-           <!-- Left Side - Bus Image -->
-           <div class="k-modal-image">
-             <img src="k_images/register-bus.png" alt="AJ Express Bus" />
-           </div>
+                  <div class="k-verify">
+                    <button type="button" class="veri">Verify</button>
+                  </div>
 
-           <!-- Right Side - OTP Form -->
-           <div class="k-modal-form">
-             <!-- Close Button -->
-             <button
-               type="button"
-               class="k-close-btn"
-               data-bs-dismiss="modal"
-               onclick="backdropClose()"
-             >
-               &times;
-             </button>
+                  <div
+                    class="undo k-resend d-flex align-items-center justify-content-center"
+                  >
+                    <p class="m-0 pe-2 ke-resend">Didn't receive the code?</p>
+                    <span>Resend</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-             <!-- Form Header -->
-             <div class="k-form-header">
-               <h2 class="k-title">Verify OTP</h2>
-               <p class="k-subtitle">
-                 Enter the verification code sent to
-                 <span class="register-phone">+91 XXXXXXXXXX</span>
-               </p>
-             </div>
+    <!-- Register OTP Modal -->
+    <div
+      class="modal fade"
+      id="RegisterOtpModel"
+      tabindex="-1"
+      aria-labelledby="registerOtpModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="k-modal-content">
+              <!-- Left Side - Bus Image -->
+              <div class="k-modal-image">
+                <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+              </div>
 
-             <!-- OTP Fields -->
-             <div class="k">
-               <div class="otp-container">
-                 <input
-                   type="text"
-                   maxlength="1"
-                   class="otp-input"
-                   autofocus
-                 />
-                 <input type="text" maxlength="1" class="otp-input" />
-                 <input type="text" maxlength="1" class="otp-input" />
-                 <input type="text" maxlength="1" class="otp-input" />
-               </div>
+              <!-- Right Side - OTP Form -->
+              <div class="k-modal-form">
+                <!-- Close Button -->
+                <button
+                  type="button"
+                  class="k-close-btn"
+                  data-bs-dismiss="modal"
+                  onclick="backdropClose()"
+                >
+                  &times;
+                </button>
 
-               <div class="k-verify">
-                 <button type="button">Verify</button>
-               </div>
+                <!-- Form Header -->
+                <div class="k-form-header">
+                  <h2 class="k-title">Verify OTP</h2>
+                  <p class="k-subtitle">
+                    Enter the verification code sent to
+                    <span class="register-phone">+91 XXXXXXXXXX</span>
+                  </p>
+                </div>
 
-               <div class="k-resend">
-                 Didn't receive the code? <span>Resend</span>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+                <!-- OTP Fields -->
+                <div class="k">
+                  <div class="otp-container">
+                    <input
+                      type="text"
+                      maxlength="1"
+                      class="otp-input"
+                      autofocus
+                    />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                    <input type="text" maxlength="1" class="otp-input" />
+                  </div>
 
- <!-- Register Modal -->
- <div
-   class="modal fade"
-   id="registerModal"
-   tabindex="-1"
-   aria-labelledby="registerModalLabel"
-   aria-hidden="true"
- >
-   <div class="modal-dialog modal-dialog-centered">
-     <div class="modal-content">
-       <div class="modal-body p-0">
-         <div class="k-modal-content">
-           <!-- Left Side - Bus Image -->
-           <div class="k-modal-image">
-             <img src="k_images/register-bus.png" alt="AJ Express Bus" />
-           </div>
+                  <div class="k-verify">
+                    <button type="button">Verify</button>
+                  </div>
 
-           <!-- Right Side - Register Form -->
-           <div class="k-modal-form">
-             <!-- Close Button -->
-             <button
-               type="button"
-               class="k-close-btn"
-               data-bs-dismiss="modal"
-               onclick="backdropClose()"
-             >
-               &times;
-             </button>
+                  <div class="k-resend">
+                    Didn't receive the code? <span>Resend</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-             <!-- Form Header -->
-             <div class="k-form-header">
-               <h2 class="k-title">Sign Up</h2>
-               <p class="k-subtitle">Create a new account</p>
-             </div>
+    <!-- Register Modal -->
+    <div
+      class="modal fade"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="registerModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="k-modal-content">
+              <!-- Left Side - Bus Image -->
+              <div class="k-modal-image">
+                <img src="k_images/register-bus.png" alt="AJ Express Bus" />
+              </div>
 
-             <!-- Form Fields -->
-             <form class="k-login-form" id="registerForm">
-               <div class="k-form-group">
-                 <label for="regName" class="k-label">Name</label>
-                 <input
-                   type="text"
-                   class="k-input"
-                   id="regName"
-                   placeholder="Enter your full name"
-                   required
-                 />
-               </div>
+              <!-- Right Side - Register Form -->
+              <div class="k-modal-form">
+                <!-- Close Button -->
+                <button
+                  type="button"
+                  class="k-close-btn"
+                  data-bs-dismiss="modal"
+                  onclick="backdropClose()"
+                >
+                  &times;
+                </button>
 
-               <div class="k-form-group">
-                 <label for="regEmail" class="k-label">Email</label>
-                 <input
-                   type="email"
-                   class="k-input"
-                   id="regEmail"
-                   placeholder="Enter your email"
-                 />
-               </div>
+                <!-- Form Header -->
+                <div class="k-form-header">
+                  <h2 class="k-title">Sign Up</h2>
+                  <p class="k-subtitle">Create a new account</p>
+                </div>
 
-               <div class="k-form-group">
-                 <label for="regPassword" class="k-label">Password</label>
-                 <input
-                   type="password"
-                   class="k-input"
-                   id="regPassword"
-                   placeholder="Enter your password"
-                   required
-                 />
-               </div>
+                <!-- Form Fields -->
+                <form class="k-login-form" id="registerForm">
+                  <div class="k-form-group">
+                    <label for="regName" class="k-label">Name</label>
+                    <input
+                      type="text"
+                      class="k-input"
+                      id="regName"
+                      placeholder="Enter your full name"
+                      required
+                    />
+                  </div>
 
-               <div class="k-form-group">
-                 <label for="regMobile" class="k-label">Mobile No</label>
-                 <div class="k-input-group">
-                   <div class="k-country-code">+91</div>
-                   <input
-                     type="tel"
-                     class="k-input"
-                     id="regMobile"
-                     placeholder="Enter your mobile no"
-                     required
-                   />
-                 </div>
-               </div>
+                  <div class="k-form-group">
+                    <label for="regEmail" class="k-label">Email</label>
+                    <input
+                      type="email"
+                      class="k-input"
+                      id="regEmail"
+                      placeholder="Enter your email"
+                    />
+                  </div>
 
-               <button
-                 type="button"
-                 class="k-submit-btn"
-                 id="registerButton"
-               >
-                 Register
-               </button>
+                  <div class="k-form-group">
+                    <label for="regPassword" class="k-label">Password</label>
+                    <input
+                      type="password"
+                      class="k-input"
+                      id="regPassword"
+                      placeholder="Enter your password"
+                      required
+                    />
+                  </div>
 
-               <!-- OR Divider -->
-               <div class="k-divider">
-                 <span>OR</span>
-               </div>
+                  <div class="k-form-group">
+                    <label for="regMobile" class="k-label">Mobile No</label>
+                    <div class="k-input-group">
+                      <div class="k-country-code">+91</div>
+                      <input
+                        type="tel"
+                        class="k-input"
+                        id="regMobile"
+                        placeholder="Enter your mobile no"
+                        required
+                      />
+                    </div>
+                  </div>
 
-               <!-- Social Login -->
-               <div class="k-social-login">
-                 <button type="button" class="k-social-btn k-google">
-                   <img
-                     src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                     alt="Google"
-                   />
-                 </button>
-                 <button type="button" class="k-social-btn k-facebook">
-                   <img
-                     src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                     alt="Facebook"
-                   />
-                 </button>
-                 <button type="button" class="k-social-btn k-apple">
-                   <img
-                     src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-                     alt="Apple"
-                   />
-                 </button>
-               </div>
+                  <button
+                    type="button"
+                    class="k-submit-btn"
+                    id="registerButton"
+                  >
+                    Register
+                  </button>
 
-               <!-- Login Link -->
-               <div class="k-signup-link">
-                 Already have an account?
-                 <a href="#" id="showLoginModal">Sign in</a>
-               </div>
-             </form>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+                  <!-- OR Divider -->
+                  <div class="k-divider">
+                    <span>OR</span>
+                  </div>
+
+                  <!-- Social Login -->
+                  <div class="k-social-login">
+                    <button type="button" class="k-social-btn k-google">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                        alt="Google"
+                      />
+                    </button>
+
+                    <button type="button" class="k-social-btn k-apple">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                        alt="Apple"
+                      />
+                    </button>
+                  </div>
+
+                  <!-- Login Link -->
+                  <div class="k-signup-link">
+                    Already have an account?
+                    <a href="#" id="showLoginModal">Sign in</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section id="J_Terms-Condition">
       <div class="container">
         <div class="J_Condition">
           <h4>Terms & Condition</h4>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s,
+            By booking with us, you agree to our Terms & Conditions. Please
+            review them carefully to ensure a smooth travel experience.
           </p>
         </div>
 
@@ -460,51 +496,49 @@
           <div class="col-12 J_terms-content">
             <h2>Role</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Our bus booking platform serves as an intermediary between
+              travelers and bus operators, providing a seamless and convenient
+              way to book tickets online. We do not own, operate, or control the
+              buses listed on our platform; instead, we facilitate the booking
+              process by connecting passengers with various service providers.
+              Once a booking is completed, passengers receive a confirmation via
+              email or SMS, and the responsibility for service fulfillment lies
+              solely with the respective bus operator.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              While we strive to ensure a smooth booking experience, we are not
+              liable for any delays, cancellations, route changes, or service
+              disruptions caused by the operators. Fares, schedules, and seat
+              availability are determined by the bus operators and are subject
+              to change without prior notice.
             </p>
           </div>
 
           <div class="col-12 J_terms-content">
             <h2>Limitation Of Liability Bus Booking</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Our bus booking platform acts solely as an intermediary between
+              passengers and bus operators, facilitating the booking process. We
+              do not own, operate, or control the buses listed on our platform
+              and, therefore, are not responsible for the quality of service,
+              punctuality, safety, or any operational issues related to the bus
+              operators.
             </p>
             <ul>
               <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                We shall not be liable for any direct, indirect, incidental,
+                special, or consequential damages arising from delays,
+                cancellations, route changes, service disruptions, or any other
+                travel-related issues beyond our control. Any complaints or
+                disputes regarding the travel experience should be addressed
+                directly to the respective bus operator.
               </li>
               <li>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                While we strive to provide accurate information on fares,
+                schedules, and seat availability, we do not guarantee that the
+                data provided by operators is error-free or up to date. We are
+                also not responsible for losses due to technical issues, system
+                downtime, or unauthorized access to user accounts.
               </li>
             </ul>
           </div>
@@ -512,80 +546,60 @@
           <div class="col-12 J_terms-content">
             <h2>Responsibilities Of The Users</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Users of our bus booking platform must ensure that all information
+              provided during the booking process is accurate and complete,
+              including their name, contact details, and travel dates.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              Any mistakes resulting from incorrect details will be the user's
+              sole responsibility.
             </p>
             <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur.
+              Additionally, passengers are required to carry valid
+              identification as per the bus operator’s guidelines; failure to do
+              so may lead to denied boarding.
             </p>
             <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
+              It is the user's responsibility to carefully check their booking
+              details, such as travel dates, departure times, and boarding
+              locations, to prevent any last-minute issues.
             </p>
           </div>
 
           <div class="col-12 J_terms-content">
             <h2>Cancellation Of Ticket</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Passengers may cancel their bus tickets as per the cancellation
+              policy of the respective bus operator. The cancellation process
+              can be initiated through our platform, and refund eligibility will
+              depend on the operator's terms and conditions.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Refunds, if applicable, will be processed after deducting
+              cancellation charges as specified by the bus operator. The time
+              taken for the refund to reflect in the user’s account may vary
+              depending on the payment method and banking processes. Some
+              bookings may be non-refundable or have specific conditions for
+              cancellation, such as time limits before departure.
             </p>
           </div>
 
           <div class="col-12 J_terms-content">
             <h2>Payment</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Our bus booking platform provides a safe and efficient payment
+              system, ensuring a smooth and hassle-free experience for users. We
+              support multiple payment methods, including credit/debit cards,
+              net banking, UPI, and digital wallets, allowing for quick and easy
+              transactions.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              To protect user data and maintain security, all payments are
+              processed through encrypted and highly secure gateways. Users must
+              ensure that their payment is successfully completed for their
+              booking to be confirmed. In cases where a transaction fails or
+              remains incomplete, any deducted amount will be refunded according
+              to the banking process, which may take a few business days.
             </p>
           </div>
         </div>
@@ -599,10 +613,7 @@
           <div class="col-lg-4 col-md-6 head_logo">
             <img src="./image/LOGO.png" alt="" />
 
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum.
-            </p>
+            <p>Safe, Easy & Affordable Bus Travel!</p>
 
             <div class="foot_data">
               <h4>
@@ -678,18 +689,15 @@
 
     <script>
       function backdropClose() {
-       let backdrops = document.querySelectorAll(".modal-backdrop");
-       backdrops.forEach(backdrop => {
-           backdrop.remove(); // Completely remove the backdrop from the DOM
-       });
-   
-       // Re-enable scrolling (Bootstrap modals typically disable scrolling when opened)
-       document.body.classList.remove("modal-open");
-       document.body.style.overflow = ""; // Reset overflow style
-   }
-   
-       </script>
-   
+        let backdrops = document.querySelectorAll(".modal-backdrop");
+        backdrops.forEach((backdrop) => {
+          backdrop.remove(); // Completely remove the backdrop from the DOM
+        });
 
+        // Re-enable scrolling (Bootstrap modals typically disable scrolling when opened)
+        document.body.classList.remove("modal-open");
+        document.body.style.overflow = ""; // Reset overflow style
+      }
+    </script>
   </body>
 </html>

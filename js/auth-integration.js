@@ -29,11 +29,19 @@ window.updateUIForLoggedInUser = function (user) {
       // Add logout functionality
       newAccountBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        // Show logout confirmation dialog
-        if (confirm("Are you sure you want to logout?")) {
-          authService.logout();
-          window.location.reload();
-        }
+        // Show logout confirmation using Toastify
+        Toastify({
+          text: "Click to confirm logout",
+          duration: 5000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "#ff9800",
+          onClick: function () {
+            authService.logout();
+            window.location.reload();
+          },
+        }).showToast();
       });
     });
   }
@@ -50,7 +58,14 @@ window.initAuthListeners = function () {
       const phone = phoneInput.value.trim();
 
       if (!phone) {
-        // alert("Please enter a valid phone number");
+        Toastify({
+          text: "Please enter a valid phone number",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "#ff6b6b",
+        }).showToast();
         return;
       }
 
@@ -64,7 +79,14 @@ window.initAuthListeners = function () {
         const users = await response.json();
 
         if (users.length === 0) {
-          // alert("Phone number not registered. Please sign up.");
+          Toastify({
+            text: "Phone number not registered. Please sign up.",
+            duration: 3000,
+            close: true,
+            gravity: "top",
+            position: "right",
+            backgroundColor: "#ff6b6b",
+          }).showToast();
           return;
         }
 
@@ -88,9 +110,25 @@ window.initAuthListeners = function () {
 
         // For development - log the actual OTP from the database
         console.log("User OTP:", users[0].otp);
+
+        Toastify({
+          text: "OTP sent to your phone",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "#20c997",
+        }).showToast();
       } catch (error) {
         console.error("Error during login process:", error);
-        // alert("Connection error. Please try again later.");
+        Toastify({
+          text: "Connection error. Please try again later.",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "#ff6b6b",
+        }).showToast();
       }
     });
   }
@@ -107,13 +145,27 @@ window.initAuthListeners = function () {
 
       // Validate OTP input
       if (!otp || otp.length !== 4) {
-        // alert("Please enter a valid 4-digit OTP");
+        Toastify({
+          text: "Please enter a valid 4-digit OTP",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "#ff6b6b",
+        }).showToast();
         return;
       }
 
       const phone = sessionStorage.getItem("currentLoginPhone");
       if (!phone) {
-        // alert("Phone number not found. Please try again.");
+        Toastify({
+          text: "Phone number not found. Please try again.",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "#ff6b6b",
+        }).showToast();
         return;
       }
 
@@ -136,13 +188,34 @@ window.initAuthListeners = function () {
           otpInputs.forEach((input) => (input.value = ""));
 
           // Show success message
-          // alert("Login successful!");
+          Toastify({
+            text: "Login successful!",
+            duration: 3000,
+            close: true,
+            gravity: "top",
+            position: "right",
+            backgroundColor: "#20c997",
+          }).showToast();
         } else {
-          // alert(result.message || "Login failed. Please try again.");
+          Toastify({
+            text: result.message || "Login failed. Please try again.",
+            duration: 3000,
+            close: true,
+            gravity: "top",
+            position: "right",
+            backgroundColor: "#ff6b6b",
+          }).showToast();
         }
       } catch (error) {
         console.error("Error during OTP verification:", error);
-        // alert("Connection error. Please try again later.");
+        Toastify({
+          text: "Connection error. Please try again later.",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "#ff6b6b",
+        }).showToast();
       }
     });
 
@@ -152,7 +225,14 @@ window.initAuthListeners = function () {
       resendLink.addEventListener("click", async () => {
         const phone = sessionStorage.getItem("currentLoginPhone");
         if (!phone) {
-          // alert("Phone number not found. Please try again.");
+          Toastify({
+            text: "Phone number not found. Please try again.",
+            duration: 3000,
+            close: true,
+            gravity: "top",
+            position: "right",
+            backgroundColor: "#ff6b6b",
+          }).showToast();
           return;
         }
 
@@ -165,13 +245,34 @@ window.initAuthListeners = function () {
           const users = await response.json();
 
           if (users.length > 0) {
-            // alert(`For testing purposes, your OTP is: ${users[0].otp}`);
+            Toastify({
+              text: `For testing purposes, your OTP is: ${users[0].otp}`,
+              duration: 5000,
+              close: true,
+              gravity: "top",
+              position: "right",
+              backgroundColor: "#0d6efd",
+            }).showToast();
           } else {
-            // alert("User not found. Please try again.");
+            Toastify({
+              text: "User not found. Please try again.",
+              duration: 3000,
+              close: true,
+              gravity: "top",
+              position: "right",
+              backgroundColor: "#ff6b6b",
+            }).showToast();
           }
         } catch (error) {
           console.error("Error resending OTP:", error);
-          // alert("Connection error. Please try again later.");
+          Toastify({
+            text: "Connection error. Please try again later.",
+            duration: 3000,
+            close: true,
+            gravity: "top",
+            position: "right",
+            backgroundColor: "#ff6b6b",
+          }).showToast();
         }
       });
     }
@@ -200,7 +301,7 @@ window.updateUIForLoggedInUser = function (user) {
       // Replace the button with a dropdown
       accountBtnContainer.innerHTML = `
         <div class="dropdown">
-          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="display: flex; align-items: center;">
+          <button class="btn dropdown-toggle k-after-login" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="display: flex; align-items: center;">
             <img 
               src="${user.profileImage || authService.defaultProfileImage}" 
               alt="${user.name}" 
@@ -208,7 +309,7 @@ window.updateUIForLoggedInUser = function (user) {
             /> 
             <span>Hi, ${user.name}</span>
           </button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu k-responsive-btn">
             <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
             <li><a class="dropdown-item" href="mybooking.html">My Bookings</a></li>
             <li><a class="dropdown-item logout-btn" href="#">Logout</a></li>
@@ -220,9 +321,17 @@ window.updateUIForLoggedInUser = function (user) {
       const logoutBtn = accountBtnContainer.querySelector(".logout-btn");
       logoutBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        if (confirm("Are you sure you want to logout?")) {
-          authService.logout();
-        }
+        Toastify({
+          text: "Click to confirm logout",
+          duration: 5000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "#ff9800",
+          onClick: function () {
+            authService.logout();
+          },
+        }).showToast();
       });
     });
   }

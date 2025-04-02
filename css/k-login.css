@@ -16,7 +16,7 @@
 
 .account-btn button {
   background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
+  /* border: 1px solid #dee2e6; */
   padding: 8px 16px;
   border-radius: 4px;
   display: flex;
@@ -45,9 +45,8 @@
   text-align: center;
 }
 
-
 .k-verify button {
-  background-color: #C16C49;
+  background-color: #c16c49;
   color: white;
   border: none;
   padding: 10px 100px;
@@ -72,6 +71,23 @@
 }
 .ke .modal-dialog {
   max-width: 700px;
+}
+@media (max-width: 768px) {
+  .ke .modal-dialog {
+    max-width: 600px !important;
+  }
+}
+
+@media (min-width: 5px) and (max-width: 425px) {
+  .ke .modal-dialog {
+    max-width: 350px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .ke .modal-dialog {
+    max-width: 300px !important;
+  }
 }
 
 .k-container {
@@ -134,7 +150,7 @@
   height: 500px;
 }
 
-.k-modal-content-otp{
+.k-modal-content-otp {
   display: flex;
   height: 100%;
 }
@@ -339,18 +355,17 @@
   text-decoration: underline;
 }
 
-.ke-resend{
-  color: #6D6D6D;
+.ke-resend {
+  color: #6d6d6d;
 }
 
-.k-pass .modal-dialog  {
+.k-pass .modal-dialog {
   max-width: 500px !important;
 }
 
 .register .modal-dialog {
   max-width: 950px !important;
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -373,19 +388,31 @@
 }
 
 @media (min-width: 5px) and (max-width: 320px) {
-  .k-verify button{
+  .k-verify button {
     width: 100%;
     padding: 10px 30px;
     /* text-align: left; */
-  } 
+  }
 }
 
-@media (min-width: 42px)  and (max-width: 768px) {
+@media (min-width: 42px) and (max-width: 768px) {
   .k-acc .account-btn {
     display: none !important;
   }
-  
+
   .navbar-nav .account-btn {
     display: block !important;
   }
+
+  .k-responsive-btn {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    padding: 12px 12px !important;
+  }
+}
+
+.k-after-login {
+  border: none !important;
+  color: #000 !important;
 }

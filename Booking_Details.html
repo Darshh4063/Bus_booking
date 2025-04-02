@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="./css/Home.css">
     <link rel="stylesheet" href="./css/Booking_Details.css">
     <link rel="stylesheet" href="css/k-login.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <!-- Toastify CSS -->
+     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css ">
     <title>Document</title>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
@@ -95,68 +96,95 @@
           </div>
         </div>
       </section>
-      <!-- Header Section -->
-      <section id="header">
-        <div class="container">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="w-100">
-             <div class="row align-items-center">
-              <div class="col-6 col-lg-3">
-                <div class="logo">
-                  <h1>LOGO</h1>
-                </div>
+
+     <!-- Header Section -->
+    <section id="header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="w-100">
+          <div class="row align-items-center">
+            <div class="col-6 col-lg-3">
+              <div class="logo">
+                <h1>LOGO</h1>
               </div>
-  
-            <div class="d-lg-none k-toggle col-6 d-flex justify-content-end">
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
             </div>
 
-            <div class="col-4 col-lg-6">
-              
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a href="Home.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="J_about-us.html">About Us</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a href="J_contact-us.html">Contact Us</a>
-                  </li>
-                  <li class="nav-item">
+          <div class="d-lg-none k-toggle col-6 d-flex justify-content-end">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas" 
+              data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <div class="col-4 col-lg-6">
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="Home.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="J_about-us.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="J_contact-us.html" class="nav-link">Contact Us</a>
+                </li>
+                <li class="nav-item">
                     <div class="account-btn d-none">
-                      <button><i class="fa-solid fa-user"></i> Account</button>
+                        <button><i class="fa-solid fa-user"></i> Account</button>
                     </div>
-                  </li>
-                </ul>
-              </div>
+                </li>
+            </ul>
             </div>
-  
-             <div class="col-4 col-lg-3">
-              <div class="k-acc mx-auto d-flex justify-content-end">
-                <div class="text-end">
-                  <div class="account-btn">
-                    <button><i class="fa-solid fa-user"></i> Account</button>
-                  </div>
+          </div>
+
+          <div class="col-4 col-lg-3">
+            <div class="k-acc mx-auto d-flex justify-content-end">
+              <div class="text-end">
+                <div class="account-btn">
+                  <button><i class="fa-solid fa-user"></i> Account</button>
                 </div>
               </div>
-             </div>
-             </div>
             </div>
-          </nav>
-        </div>
-      </section>
+          </div>
+          </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <!-- responsive header -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="Home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="J_about-us.html">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="J_contact-us.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <div class="account-btn d-none">
+              <button><i class="fa-solid fa-user"></i> Account</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
      <!-- Login Modal -->
      <div
      class="ke modal fade"
@@ -222,12 +250,7 @@
                        alt="Google"
                      />
                    </button>
-                   <button type="button" class="k-social-btn k-facebook">
-                     <img
-                       src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                       alt="Facebook"
-                     />
-                   </button>
+                   
                    <button type="button" class="k-social-btn k-apple">
                      <img
                        src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
@@ -482,12 +505,7 @@
                        alt="Google"
                      />
                    </button>
-                   <button type="button" class="k-social-btn k-facebook">
-                     <img
-                       src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                       alt="Facebook"
-                     />
-                   </button>
+                   
                    <button type="button" class="k-social-btn k-apple">
                      <img
                        src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"

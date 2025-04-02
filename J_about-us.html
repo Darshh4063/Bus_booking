@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="css/k-login.css" />
     <link rel="stylesheet" href="css/home.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
     />
     <link
       rel="stylesheet"
@@ -56,9 +54,9 @@
                 <button
                   class="navbar-toggler"
                   type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasRight"
+                  aria-controls="offcanvasRight"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
                 >
@@ -71,15 +69,17 @@
                   class="collapse navbar-collapse"
                   id="navbarSupportedContent"
                 >
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <ul class="navbar-nav">
                     <li class="nav-item">
-                      <a href="Home.html">Home</a>
+                      <a href="Home.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a href="J_about-us.html">About Us</a>
+                      <a href="J_about-us.html" class="nav-link">About Us</a>
                     </li>
-                    <li class="nav-item dropdown">
-                      <a href="J_contact-us.html">Contact Us</a>
+                    <li class="nav-item">
+                      <a href="J_contact-us.html" class="nav-link"
+                        >Contact Us</a
+                      >
                     </li>
                     <li class="nav-item">
                       <div class="account-btn d-none">
@@ -106,6 +106,44 @@
         </nav>
       </div>
     </section>
+
+    <!-- responsive header -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">
+          Offcanvas right
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="Home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="J_about-us.html">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="J_contact-us.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <div class="account-btn d-none">
+              <button><i class="fa-solid fa-user"></i> Account</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
     <!-- Login Modal -->
     <div
       class="ke modal fade"
@@ -168,12 +206,7 @@
                     <button type="button" class="k-social-btn k-google">
                       <img src="k_images/google.png" alt="Google" />
                     </button>
-                    <button type="button" class="k-social-btn k-facebook">
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                        alt="Facebook"
-                      />
-                    </button>
+
                     <button type="button" class="k-social-btn k-apple">
                       <img
                         src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
@@ -361,12 +394,7 @@
                     <button type="button" class="k-social-btn k-google">
                       <img src="k_images/google.png" alt="Google" />
                     </button>
-                    <button type="button" class="k-social-btn k-facebook">
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                        alt="Facebook"
-                      />
-                    </button>
+
                     <button type="button" class="k-social-btn k-apple">
                       <img
                         src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
@@ -462,9 +490,10 @@
         <div class="col-12 col-md-8 ky-title">
           <h2>About us</h2>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s,
+            we make bus travel easy, affordable, and hassle-free. With a
+            seamless booking experience, multiple route options, and reliable
+            service, we ensure your journey is smooth and comfortable. Travel
+            with confidence—book your bus with us today!
           </p>
         </div>
       </div>
@@ -490,10 +519,11 @@
 
               <div class="ky-tempor">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  we are dedicated to providing a hassle-free, budget-friendly,
+                  and convenient bus travel experience for everyone. Our
+                  platform is designed for easy booking, offering a variety of
+                  routes and dependable services to ensure a smooth journey.
+                  Choose MLORE for a smarter and simpler way to book and ride!
                 </p>
               </div>
 
@@ -540,10 +570,13 @@
                 <img src="image/Benefits1.png" alt="" />
               </div>
               <div class="ky-Fares">
-                <h2>More than 100,000 Bus Routesy</h2>
+                <h2>
+                  More than 100,000 <br />
+                  Bus Routesy
+                </h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor.
+                  Explore over 100,000 bus routes for a seamless and convenient
+                  journey.
                 </p>
               </div>
             </div>
@@ -557,10 +590,13 @@
                 <img src="image/Benefits2.png" alt="" />
               </div>
               <div class="ky-Fares">
-                <h2>Reliable Payment Security</h2>
+                <h2>
+                  budget friendly <br />
+                  fares
+                </h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor.
+                  Travel more, spend less! Enjoy budget friendly fares on every
+                  bus booking.
                 </p>
               </div>
             </div>
@@ -574,10 +610,13 @@
                 <img src="image/Benefits3.png" alt="" />
               </div>
               <div class="ky-Fares">
-                <h2>Reliable Payment Security</h2>
+                <h2>
+                  Reliable Payment <br />
+                  Security
+                </h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor.
+                  Book with confidence secure and reliable payment options for a
+                  hassle-free bus booking experience!
                 </p>
               </div>
             </div>
@@ -591,10 +630,13 @@
                 <img src="image/Benefits4.png" alt="" />
               </div>
               <div class="ky-Fares">
-                <h2>Reliable Payment Security</h2>
+                <h2>
+                  Effortless <br />
+                  reservations
+                </h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor.
+                  Effortless reservations, seamless journeys book your bus in
+                  just a few clicks!
                 </p>
               </div>
             </div>
@@ -612,17 +654,18 @@
             <div class="ky-Penatibus ky-aptent">
               <h2>Our Vision</h2>
               <p>
-                Penatibus sem vitae mollis luctus mi tellus. Maximus eu eleifend
-                aptent dapibus metus maecenas consequat. Elementum interdum a
-                semper. Netus nullam eros nisi volutpat nibh ex ultricies.
-                Pharetra sagittis sit aliquet at. Magna nam platea justo.
+                Our goal is to create a digital ecosystem that transforms the
+                way people commute making it more efficient, affordable, and
+                convenient. By leveraging technology, we strive to provide
+                real-time updates, secure transactions, and a hassle-free
+                journey from booking to arrival.
               </p>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Customer satisfaction, safety, and innovation are at the core of
+                our vision. We are committed to building a trusted platform that
+                ensures smooth and comfortable travel, empowering people to
+                explore new destinations without stress.
               </p>
             </div>
           </div>
@@ -646,10 +689,7 @@
           <div class="col-lg-4 col-md-6 head_logo">
             <img src="./image/LOGO.png" alt="" />
 
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum.
-            </p>
+            <p>Safe, Easy & Affordable Bus Travel!</p>
 
             <div class="foot_data">
               <h4>
@@ -669,10 +709,10 @@
               <ul>
                 <li class="text">Information</li>
                 <li>
-                  <a href="#"> About Us</a>
+                  <a href="J_about-us.html"> About Us</a>
                 </li>
                 <li>
-                  <a href="#"> Contact Us</a>
+                  <a href="J_contact-us.html"> Contact Us</a>
                 </li>
               </ul>
             </div>
@@ -682,13 +722,13 @@
               <ul>
                 <li class="text">Support</li>
                 <li>
-                  <a href="#"> FAQ's</a>
+                  <a href="J_FAQs.html"> FAQ's</a>
                 </li>
                 <li>
-                  <a href="#"> Terms & Condition</a>
+                  <a href="J_terms-condition.html"> Terms & Condition</a>
                 </li>
                 <li>
-                  <a href="#"> Privacy Policy</a>
+                  <a href="J_Privacy-Policy.html"> Privacy Policy</a>
                 </li>
               </ul>
             </div>

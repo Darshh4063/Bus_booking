@@ -17,6 +17,14 @@ class AuthService {
       const users = await response.json();
 
       if (users.length === 0) {
+        Toastify({
+          text: "User not found",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "#ff6b6b",
+        }).showToast();
         return { success: false, message: "User not found" };
       }
 
@@ -24,6 +32,14 @@ class AuthService {
 
       // Verify OTP
       if (user.otp !== otp) {
+        Toastify({
+          text: "Invalid OTP",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "#ff6b6b",
+        }).showToast();
         return { success: false, message: "Invalid OTP" };
       }
 
@@ -54,9 +70,30 @@ class AuthService {
         (err) => console.error("Failed to update last login time:", err)
       );
 
+      // Show success toast
+      Toastify({
+        text: "Login successful!",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#20c997",
+      }).showToast();
+
       return { success: true, user: userData };
     } catch (error) {
       console.error("Login error:", error);
+
+      // Show error toast
+      Toastify({
+        text: "Login failed: " + error.message,
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#ff6b6b",
+      }).showToast();
+
       return { success: false, message: "Login failed: " + error.message };
     }
   }
@@ -64,7 +101,9 @@ class AuthService {
   // Register new user
   async register(userData) {
     try {
-      alert("Registering");
+      // Remove the alert as we'll use Toastify instead
+      // alert("Registering");
+
       // Check if user already exists
       const existingUserResponse = await fetch(
         `${this.baseUrl}/user?phone=${userData.phone}`
@@ -72,6 +111,14 @@ class AuthService {
       const existingUsers = await existingUserResponse.json();
 
       if (existingUsers.length > 0) {
+        Toastify({
+          text: "Phone number already registered",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "#ff6b6b",
+        }).showToast();
         return { success: false, message: "Phone number already registered" };
       }
 
@@ -121,6 +168,16 @@ class AuthService {
         })
       );
 
+      // Show success toast with OTP
+      Toastify({
+        text: `Registration successful! Your OTP is ${otp}`,
+        duration: 5000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#20c997",
+      }).showToast();
+
       return {
         success: true,
         user: newUser,
@@ -128,6 +185,17 @@ class AuthService {
       };
     } catch (error) {
       console.error("Registration error:", error);
+
+      // Show error toast
+      Toastify({
+        text: "Registration failed: " + error.message,
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#ff6b6b",
+      }).showToast();
+
       return {
         success: false,
         message: "Registration failed: " + error.message,
@@ -179,9 +247,30 @@ class AuthService {
         );
       }
 
+      // Show success toast for profile update
+      Toastify({
+        text: "Profile updated successfully",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#20c997",
+      }).showToast();
+
       return { success: true, user: updatedUser };
     } catch (error) {
       console.error("Update profile error:", error);
+
+      // Show error toast
+      Toastify({
+        text: "Failed to update profile: " + error.message,
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#ff6b6b",
+      }).showToast();
+
       return {
         success: false,
         message: "Failed to update profile: " + error.message,
@@ -206,6 +295,16 @@ class AuthService {
         localStorage.setItem("currentUser", JSON.stringify(currentUser));
       }
 
+      // Show success toast for image update
+      Toastify({
+        text: "Profile image updated successfully",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#20c997",
+      }).showToast();
+
       return {
         success: true,
         message: "Profile image updated successfully",
@@ -214,6 +313,17 @@ class AuthService {
       };
     } catch (error) {
       console.error("Update profile image error:", error);
+
+      // Show error toast
+      Toastify({
+        text: "Failed to update profile image: " + error.message,
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#ff6b6b",
+      }).showToast();
+
       return {
         success: false,
         message: "Failed to update profile image: " + error.message,
@@ -228,8 +338,18 @@ class AuthService {
 
   // Logout user
   logout() {
-    // window.location.replace("/home.html");
     localStorage.removeItem("currentUser");
+
+    // Show logout toast
+    Toastify({
+      text: "Logged out successfully",
+      duration: 3000,
+      close: true,
+      gravity: "top",
+      position: "right",
+      backgroundColor: "#20c997",
+    }).showToast();
+
     window.location.replace("/home.html");
   }
 

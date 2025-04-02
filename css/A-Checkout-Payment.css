@@ -47,7 +47,9 @@
 .nav-link:hover {
   border-bottom: 2px solid #b35e3a !important;
 }
-
+.nav-link.active {
+  border-bottom: 2px solid #b35e3a !important;
+}
 .Card-holder {
   row-gap: 10px;
   padding: 20px 0;

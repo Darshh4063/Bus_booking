@@ -303,6 +303,7 @@ function processPayment(method) {
   /// Check if user is logged in before showing processing indicator
   if (!showProcessingIndicator()) {
     console.log("Payment processing aborted: User not logged in");
+    showToast("Please log in to continue with payment", "error");
     return; // Exit if user is not logged in
   }
 
@@ -393,10 +394,10 @@ function showProcessingIndicator() {
         const bsModal = new bootstrap.Modal(loginModal);
         bsModal.show();
       } else {
-        alert("Please login to continue with payment");
+        // alert("Please login to continue with payment");
       }
     } else {
-      alert("Please login to continue with payment");
+      // alert("Please login to continue with payment");
     }
     return false; // Return false to indicate user is not logged in
   }
@@ -612,8 +613,7 @@ function sendPaymentData(data) {
   newBooking.status = "upcoming";
 
   // Generate and add a unique bookingId
-  newBooking.bookingId =
-    "BK" + Math.random().toString(36).substr(2, 8).toUpperCase();
+  newBooking.bookingId = "BK" + Math.random().toString(36).substr(2, 8).toUpperCase();
 
   console.log("New Booking with status and ID:", newBooking);
   const user = JSON.parse(localStorage.getItem("currentUser"));
@@ -626,17 +626,22 @@ function sendPaymentData(data) {
     body: JSON.stringify(data),
   })
     .then((response) => {
-      console.log(
-        "Payment data server response:",
-        response.ok ? "Success" : "Failed"
-      );
+      console.log("Payment data server response:", response.ok ? "Success" : "Failed");
+      
+      if (!response.ok) {
+        showToast("Payment failed. Please try again.", "error");
+        throw new Error("Failed to save payment data");
+      }
+      
       localStorage.setItem("paymentData", JSON.stringify(data));
+      showToast("Payment processed successfully!", "success");
 
       // Continue with updating user data
       return fetch(`http://localhost:3000/user/${user.id}`);
     })
     .then((response) => {
       if (!response.ok) {
+        showToast("Failed to update user data", "error");
         throw new Error("Failed to fetch user data");
       }
       return response.json();
@@ -687,9 +692,11 @@ function sendPaymentData(data) {
     })
     .then((response) => {
       if (!response.ok) {
+        showToast("Failed to update booking information", "error");
         throw new Error("Failed to update user data");
       }
       console.log("User update successful");
+      showToast("Booking confirmed! Redirecting to your bookings...", "success");
 
       // Skip showing success modal and redirect directly
       console.log("Redirecting to mybooking.html");
@@ -697,6 +704,7 @@ function sendPaymentData(data) {
     })
     .catch((error) => {
       console.log("Error updating user data:", error);
+      showToast("An error occurred, but your payment was processed", "error");
 
       // Even if there's an error, redirect to mybooking page
       console.log("Error occurred but still redirecting to mybooking.html");
@@ -722,11 +730,17 @@ function showError(input, message) {
     errorElement.innerText = message;
     input.insertAdjacentElement("afterend", errorElement);
   }
+
+  // Also show a toast notification
+  showToast(message, "error");
 }
 
 // Show Success Modal
 function showSuccessModal() {
   console.log("Showing success modal");
+
+  // Show success toast
+  showToast("Payment successful! Redirecting to your bookings...", "success");
   const successModal = document.getElementById("successModal");
   if (successModal) {
     if (typeof bootstrap !== "undefined" && bootstrap.Modal) {
@@ -765,7 +779,7 @@ function showSuccessModal() {
       }, 3000); // Redirect after 3 seconds
     }
   } else {
-    alert("Payment successful! Transaction ID: " + generateTransactionId());
+    // alert("Payment successful! Transaction ID: " + generateTransactionId());
     // Redirect immediately if there's no modal
     window.location.href = "mybooking.html";
   }
@@ -773,6 +787,8 @@ function showSuccessModal() {
 // Show Failed Modal
 function showFailedModal(message) {
   console.log(`Showing failed modal: ${message}`);
+  // Show error toast
+  showToast(message, "error");
   const failedModal = document.getElementById("failedModal");
 
   if (failedModal) {
@@ -811,7 +827,7 @@ function showFailedModal(message) {
       });
     }
   } else {
-    alert("Payment failed: " + message);
+    // alert("Payment failed: " + message);
   }
 }
 
@@ -864,7 +880,7 @@ function validateExpiryDate(expiry) {
   return isValid;
 }
 
-// k-payment-data.js
+
 document.addEventListener("DOMContentLoaded", function () {
   // Get booking details from localStorage
   const bookingDetailsString = localStorage.getItem("bookingDetails");
@@ -991,3 +1007,34 @@ document.addEventListener("DOMContentLoaded", function () {
     totalAmountElement.textContent = `₹${total.toLocaleString()}`;
   }
 });
+
+// Add this function at the top of your file or in a suitable location
+function showToast(message, type) {
+  // Check if Toastify is available
+  if (typeof Toastify === "undefined") {
+    console.error(
+      "Toastify is not loaded. Please include the Toastify library."
+    );
+    // alert(message); // Fallback to alert if Toastify is not available
+    return;
+  }
+
+  // Configure toast options
+  const toastOptions = {
+    text: message,
+    duration: 3000,
+    close: true,
+    gravity: "top",
+    position: "right",
+    stopOnFocus: true,
+    style: {
+      background:
+        type === "success"
+          ? "linear-gradient(to right, #00b09b, #96c93d)"
+          : "linear-gradient(to right, #ff5f6d, #ffc371)",
+    },
+  };
+
+  // Show the toast
+  Toastify(toastOptions).showToast();
+}

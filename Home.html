@@ -8,8 +8,9 @@
     <title>Home page</title>
     <link rel="stylesheet" href="./css/Home.css">
     <link rel="stylesheet" href="css/k-login.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Toastify CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css ">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
 
@@ -53,9 +54,9 @@
               <button
                 class="navbar-toggler"
                 type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
+                data-bs-toggle="offcanvas" 
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
@@ -66,22 +67,22 @@
             <div class="col-4 col-lg-6">
               
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a href="Home.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="J_about-us.html">About Us</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a href="J_contact-us.html">Contact Us</a>
+                      <a href="Home.html" class="nav-link">Home</a>
                   </li>
                   <li class="nav-item">
-                    <div class="account-btn d-none">
-                      <button><i class="fa-solid fa-user"></i> Account</button>
-                    </div>
+                      <a href="J_about-us.html" class="nav-link">About Us</a>
                   </li>
-                </ul>
+                  <li class="nav-item">
+                      <a href="J_contact-us.html" class="nav-link">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                      <div class="account-btn d-none">
+                          <button><i class="fa-solid fa-user"></i> Account</button>
+                      </div>
+                  </li>
+              </ul>
               </div>
             </div>
   
@@ -162,12 +163,6 @@
                         <img
                           src="k_images/google.png"
                           alt="Google"
-                        />
-                      </button>
-                      <button type="button" class="k-social-btn k-facebook">
-                        <img
-                          src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                          alt="Facebook"
                         />
                       </button>
                       <button type="button" class="k-social-btn k-apple">
@@ -357,11 +352,6 @@
                           alt="Google"
                         />
                       </button>
-                      <button type="button" class="k-social-btn k-facebook">
-                        <img
-                          src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                          alt="Facebook"
-                        />
                       </button>
                       <button type="button" class="k-social-btn k-apple">
                         <img
@@ -451,7 +441,33 @@
         </div>
       </div>
   
+      <!-- responsive header -->
+      <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button> -->
 
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="Home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="J_about-us.html">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="J_contact-us.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <div class="account-btn d-none">
+                <button><i class="fa-solid fa-user"></i> Account</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
   
     <!-- --------------------------hero section--------------------------- -->
 
@@ -461,41 +477,47 @@
 
                 <div class="hero-content">
                     <h2>Your next destination is just a few clicks away</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever.</p>
+                    <p>Book your bus in a click, travel smooth and quick!
+                      Hassle-free rides, anytime, anywhere!.</p>
                 </div>
 
-                <form class="col-8 search" id="searchForm">
-                    <div class="box">
-                        <img src="./image/lock.png" alt="">
-                        <input type="text" id="fromInput" placeholder="From">
-                        <img src="./image/Frame.png" alt="">
-                    </div>
-
-                    <div>
-                        <img src="./image/Group (1).png" alt="">
-                    </div>
-
-                    <div class="box">
-                        <img src="./image/lock.png" alt="">
-                        <input type="text" id="toInput" placeholder="To">
-                        <img src="./image/Frame.png" alt="">
-                    </div>
-
-                    <div class="box">
-                        <img src="./image/Group (3).png" alt="Calendar Icon" id="datePickerIconHome">
-                        <input type="date" id="dateInputField" placeholder="Date">
-                    </div>
-
-                    <div class="box">
-                        <img src="./image/Group (2).png" alt="">
-                        <input type="text" id="busNameInput" placeholder="Bus Name (Opt)">
-                    </div>
-
-                    <div style="background-color: chocolate; padding: 7px 30px; border-radius: 7px;" class="submit" id="searchButton" onclick="searchData()">
-                        Search
-                    </div>
-                </form>
+                <div class="k-search-box">
+                  <form class="col-8 search" id="searchForm" autocomplete="off">
+                      <div class="box">
+                          <img src="/image/city-location-1.svg" alt="">
+                          <input type="text" id="fromInput" placeholder="From">
+                          <img src="image/Frame.png" alt="">
+                      </div>
+              
+                      <!-- Swap Button -->
+                      <div>
+                          <button type="button" id="swipe" style="background: none; border: none; cursor: pointer;">
+                              <img src="./image/Group (1).png" alt="Swap Icon">
+                          </button>
+                      </div>
+              
+                      <div class="box">
+                          <img src="./image/city-location-1.svg" alt="">
+                          <input type="text" id="toInput" placeholder="To">
+                          <img src="./image/Frame.png" alt="">
+                      </div>
+              
+                      <div class="box">
+                          <img src="./image/Group (3).png" alt="Calendar Icon" id="datePickerIconHome">
+                          <input type="date" id="dateInputField" placeholder="Date">
+                      </div>
+              
+                      <div class="box">
+                          <img src="./image/Group (2).png" alt="">
+                          <input type="text" id="busNameInput" placeholder="Bus Name (Opt)">
+                      </div>
+              
+                      <div style="background-color: chocolate; padding: 7px 30px; border-radius: 7px; cursor: pointer;" 
+                           class="submit" id="searchButton" onclick="searchData()">
+                          Search
+                      </div>
+                  </form>
+              </div>
             </div>
         </div>
     </div>
@@ -516,28 +538,28 @@
                     <img src="k_images/hover-box.png" alt="" class="position-absolute k-hover-box" width="100px">
                     <img src="./image/feature1.png" alt="Relax Icon" />
                     <h3>Relax & Have Fun</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p>Sit back, relax, and let the journey begin fun starts with easy booking!</p>
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 feature position-relative">
                     <img src="k_images/hover-box.png" alt="" class="position-absolute k-hover-box" width="100px">
                     <img src="./image/feature2.png" alt="Relax Icon" />
                     <h3>Explore your destinations</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p>Explore your destinations with ease book, ride, and discover!</p>
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 feature position-relative">
                     <img src="k_images/hover-box.png" alt="" class="position-absolute k-hover-box" width="100px">
                     <img src="./image/feature3.png" alt="Relax Icon" />
                     <h3>24/7 Support</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p>Round-the-clock support, anytime you need travel worry-free!</p>
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 feature position-relative">
                     <img src="k_images/hover-box.png" alt="" class="position-absolute k-hover-box" width="100px">
                     <img src="./image/feature4.png" alt="Relax Icon" />
                     <h3>Enjoy at great price</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p>Enjoy your journey at unbeatable prices! Book your bus tickets now!</p>
                 </div>
 
             </div>
@@ -550,7 +572,8 @@
         <div class="container">
             <div class="Travel-content">
                 <h2>Are You Ready To Travel? Remember Us !!</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting dummy text of industry.</p>
+                <p>Plan your journey with ease, book your bus in seconds.
+                  Affordable fares, seamless travel wherever you go!</p>
             </div>
         </div>
     </section>
@@ -564,12 +587,12 @@
                 <h2>Best Offers This Month</h2>
             </div>
 
-            <div class="row owl-carousel friendly">
+            <div class="row owl-carousel friendly mx-0">
 
                 <div class="col-12 card">
                     <div class="offer-card">
                         <h2>Grab FLAT 8% OFF on Buses</h2>
-                        <p>From Junagadh, Delhi & more</p>
+                        <p style="color: gray;">From Junagadh, Delhi & more</p>
                         <div class="code">
                             <p>Valid till 10 Feb</p>
                             <p style="font-size: 20px;">Code: FIRST20</p>
@@ -577,14 +600,16 @@
                         <div class="bus-back">
                             <img src="./image/Blue.png" alt="">
                         </div>
+                        <div class="k-bus-img w-100">
                         <img src="./image/bus1.png" alt="Bus Image">
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-12 card">
                     <div class="offer-card-2">
                         <h2>Save up to ₹120 on bus tickets</h2>
-                        <p>From Mumbai, Delhi & more</p>
+                        <p style="color: gray;">From Mumbai, Delhi & more</p>
                         <div class="code">
                             <p>Valid till 10 Feb</p>
                             <p style="font-size: 20px;">Code: FIRST20</p>
@@ -592,14 +617,16 @@
                         <div class="bus-back">
                             <img src="./image/yellow.png" alt="">
                         </div>
-                        <img src="./image/bus2.png" alt="Bus Image">
+                        <div class="k-bus-img w-100">
+                          <img src="./image/bus2.png" alt="Bus Image">
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-12 card">
                     <div class="offer-card-3">
                         <h2>Grab FLAT 8% OFF on Buses</h2>
-                        <p>From Junagadh, Delhi & more</p>
+                        <p style="color: gray;">From Junagadh, Delhi & more</p>
                         <div class="code">
                             <p>Valid till 10 Feb</p>
                             <p style="font-size: 20px;">Code: FIRST20</p>
@@ -607,7 +634,9 @@
                         <div class="bus-back">
                             <img src="./image/Purple.png" alt="">
                         </div>
+                        <div class="k-bus-img w-100">
                         <img src="./image/bus1.png" alt="Bus Image">
+                        </div>
                     </div>
                 </div>
 
@@ -649,12 +678,12 @@
         <div class="container">
 
             <div class="sub-title">
-                <h4>Destinations</h4>
+                <h4 class="text-uppercase fw-semibold">Destinations</h4>
                 <h2>Popular Bus Routes</h2>
             </div>
 
             <div class="row Routes">
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 city">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 k-city">
                     <div>
                         <img src="./image/city1.png" alt="">
                     </div>
@@ -669,7 +698,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 city">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 k-city">
                     <div>
                         <img src="./image/city2.png" alt="">
                     </div>
@@ -684,7 +713,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 city">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 k-city">
                     <div>
                         <img src="./image/city3.png" alt="">
                     </div>
@@ -699,7 +728,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 city">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 k-city">
                     <div>
                         <img src="./image/city4.png" alt="">
                     </div>
@@ -714,7 +743,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 city">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 k-city">
                     <div>
                         <img src="./image/city5.png" alt="">
                     </div>
@@ -729,7 +758,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 city">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 k-city">
                     <div>
                         <img src="./image/city2.png" alt="">
                     </div>
@@ -745,7 +774,7 @@
                 </div>
 
 
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 city">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 k-city">
                     <div>
                         <img src="./image/city1.png" alt="">
                     </div>
@@ -760,7 +789,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 city">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 k-city">
                     <div>
                         <img src="./image/city2.png" alt="">
                     </div>
@@ -776,7 +805,7 @@
                 </div>
 
 
-                <div class="col-12 col-sm-6 col-md-6 col-lg-4 city">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 k-city">
                     <div>
                         <img src="./image/city3.png" alt="">
                     </div>
@@ -808,12 +837,11 @@
 
             <div class="box-data">
 
-                <div class="row owl-carousel">
+                <div class="row owl-carousel g-0">
 
                     <div class="col-12 card">
                         <div class="traveller">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is
-                                simply dummy text of the printing and typesetting industry.</p>
+                            <p>Fantastic experience! Booking was super easy, and the bus was clean and comfortable. The journey was smooth, and the staff was friendly. Highly recommend this service for hassle-free travel!</p>
 
                             <div class="f-star">
                                 <i class="fa-solid fa-star"></i>
@@ -824,7 +852,7 @@
                             </div>
 
                             <div class="dummy">
-                                <div class="col-2">
+                                <div class="col-2 k-slider-img">
                                     <img src="./image/Ellipse 25421.png" alt="">
                                 </div>
                                 <div class="dummy-data">
@@ -839,8 +867,7 @@
 
                     <div class="col-12 card">
                         <div class="traveller">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is
-                                simply dummy text of the printing and typesetting industry.</p>
+                            <p>The booking process was simple, and the bus arrived on time. However, the seats were not as comfortable as expected. It’s a decent service but could improve on seat quality and customer support.</p>
 
                             <div class="f-star">
                                 <i class="fa-solid fa-star"></i>
@@ -864,8 +891,7 @@
 
                     <div class="col-12 card">
                         <div class="traveller">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is
-                                simply dummy text of the printing and typesetting industry.</p>
+                            <p>I had a fantastic experience booking my bus ticket! The process was quick and hassle-free, with plenty of options to choose from. The bus was clean, comfortable, and arrived on time.</p>
 
                             <div class="f-star">
                                 <i class="fa-solid fa-star"></i>
@@ -921,7 +947,7 @@
                 <div class="col-lg-4 col-md-6  head_logo">
                     <img src="./image/LOGO.png" alt="">
 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.</p>
+                    <p>Safe, Easy & Affordable Bus Travel!</p>
 
                     <div class="foot_data">
                         <h4><img src="./image/Group.png" alt=""> <span>support.example@gmail.com</span></h4>
@@ -931,31 +957,31 @@
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-6  infor">
+                <div class="col-lg-2 col-md-3 col-6 infor">
                     <div class="widget_menu">
                         <ul>
                             <li class="text"> Information</li>
                             <li>
-                                <a href="#"> About Us</a>
+                                <a href="J_about-us.html"> About Us</a>
                             </li>
                             <li>
-                                <a href="#"> Contact Us</a>
+                                <a href="J_contact-us.html"> Contact Us</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 infor">
+                <div class="col-lg-3 col-md-3 col-6 infor">
                     <div class="widget_menu">
                         <ul>
                             <li class="text"> Support</li>
                             <li>
-                                <a href="#"> FAQ's</a>
+                                <a href="J_FAQs.html"> FAQ's</a>
                             </li>
                             <li>
-                                <a href="#"> Terms & Condition</a>
+                                <a href="J_terms-condition.html"> Terms & Condition</a>
                             </li>
                             <li>
-                                <a href="#"> Privacy Policy</a>
+                                <a href="J_Privacy-Policy.html"> Privacy Policy</a>
                             </li>
                         </ul>
                     </div>
@@ -986,7 +1012,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    
+    <!-- Toastify JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script type="module" src="./js/global-auth.js"></script>
     <script src="js/k-otp.js"></script>
     <script src="js/k-model-open.js"></script>
@@ -997,6 +1024,20 @@
             document.getElementById("dateInputField").showPicker();
         });
     </script>
+
+<script>
+ document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("swipe").addEventListener("click", function () {
+            let city1 = document.getElementById("fromInput");
+            let city2 = document.getElementById("toInput");
+
+            let temp = city1.value;
+            city1.value = city2.value;
+            city2.value = temp;
+        });
+    });
+  </script>
+
 
     <script>
         $(document).ready(function () {
@@ -1010,13 +1051,19 @@
                     0: {
                         items: 1,
                         autoplay: true,
-                        nav: false
+                        nav: false,
+                        dots: true
                     },
                     768: {
-                        items: 2
+                        items: 2,
+                        autoplay: true,
+                        nav: false,
+                        dots: true
                     },
                     1024: {
-                        items: 3
+                        items: 3,
+                        nav: true,
+                        dots: false
                     }
                 }
             });

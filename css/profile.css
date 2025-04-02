@@ -188,6 +188,14 @@ header {
   cursor: pointer;
 }
 
+.k-updated {
+  background-color: #C16C49;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+}
+
 .filter-button {
   padding: 0.5rem 1rem;
   border: 1px solid #f97316;
@@ -204,8 +212,6 @@ header {
 .filter-button:hover {
   background-color: #fff5eb;
 }
-
-
 
 .profile-field {
   margin-bottom: 1rem;
@@ -279,7 +285,6 @@ header {
   .profile-grid {
     gap: 0;
   }
-
 }
 
 /* upcoming css */
@@ -315,7 +320,7 @@ header {
   padding-bottom: 10px;
   padding-left: 20px;
   border-width: 1px;
-  color: #C16C49;
-  border-color: #C16C49;
+  color: #c16c49;
+  border-color: #c16c49;
   background-color: transparent;
 }

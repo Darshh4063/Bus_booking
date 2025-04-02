@@ -5,8 +5,8 @@ body {
 
 #J_contect {
     background: #6A6A6A0A;
-    padding-top: 80px;
-    padding-bottom: 120px;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 
@@ -217,5 +217,9 @@ body {
 
     .J_details {
         gap: 0px;
+    }
+
+    .J_contact-content p {
+        font-size: 12px;
     }
 } 

@@ -37,8 +37,10 @@
       console.error(
         "JSON Server is not running. Authentication will not work properly."
       );
-      console.log( "Authentication server is not available. Please start JSON Server.");
-    
+      console.log(
+        "Authentication server is not available. Please start JSON Server."
+      );
+
       return;
     }
 
@@ -63,3 +65,17 @@
     }
   });
 })();
+
+// Get the current page URL
+const currentPage = window.location.pathname.split("/").pop();
+console.log("Global auth script loaded",currentPage);
+
+// Select all nav links
+const navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach((link) => {
+  // Check if the link href matches the current page
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("active");
+  }
+});

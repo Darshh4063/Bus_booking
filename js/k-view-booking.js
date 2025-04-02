@@ -179,7 +179,6 @@ function populateBookingDetails(booking) {
     // Update journey duration
     updateElementText(".time-info", booking.duration);
 
-
     // Update passenger details
     const passengersTableBody = document.querySelector(
       ".booking-section:nth-of-type(2) tbody"
@@ -212,7 +211,7 @@ function populateBookingDetails(booking) {
 
     // Update fare details with specific breakdown
     updateFareDetails(booking);
-
+    busDetails(booking);
     // Update status (if applicable)
     updateBookingStatusUI(booking.status);
 
@@ -229,6 +228,33 @@ function populateBookingDetails(booking) {
     console.error("Error populating booking details:", error);
     // Continue execution despite errors in populating some fields
   }
+}
+
+function busDetails(booking) {
+  console.log(booking);
+  const busName = booking.busName;
+  const pickUpDate = booking.busDateArrival;
+  const DropDate = booking.busdateDepature;
+  const pickUpTime = booking.pickupTime;
+  const dropTime = booking.dropTime;
+  const dropPoints = booking.dropoffPoints;
+  const pickUpPoints = booking.pickupPoints;
+  const dropLocation = booking.dropLocation;
+  const PickUpLocation = booking.pickupLocation;
+
+  console.log(dropLocation);
+
+  // Update bus details in the HTML
+  BusDetailsText(".seat-info .k-busName", busName);
+  BusDetailsText(".journey-details time-label", pickUpDate);
+  BusDetailsText(".journey-details .time-label.pick-up-time", pickUpTime);
+  BusDetailsText(".journey-details .drop-date", DropDate);
+  BusDetailsText(".journey-details .drop-time", dropTime);
+  BusDetailsText(".journey-details .pick-up-points", pickUpPoints);
+  BusDetailsText(".journey-details .drop-points", dropPoints);
+
+  BusDetailsText(".journey-details .location", PickUpLocation);
+  BusDetailsText(".journey-details .drop-location", dropLocation);
 }
 
 function updateFareDetails(booking) {
@@ -257,6 +283,12 @@ function updateFareDetails(booking) {
 
 // Helper function to safely update element text
 function updateElementText(selector, text) {
+  const element = document.querySelector(selector);
+  if (element) {
+    element.textContent = text;
+  }
+}
+function BusDetailsText(selector, text) {
   const element = document.querySelector(selector);
   if (element) {
     element.textContent = text;

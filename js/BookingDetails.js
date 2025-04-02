@@ -68,7 +68,7 @@ async function bookingDetailsData() {
   
             <div class="col-12 accordion-item Passenger Details">
               <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                <button class="accordion-button p-2" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseOne">
                   Passenger Details
                 </button>
@@ -154,7 +154,7 @@ async function bookingDetailsData() {
   
             <div class="col-12 accordion-item Contact Details">
               <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                <button class="accordion-button p-2" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseTwo">
                   Contact Details
                 </button>

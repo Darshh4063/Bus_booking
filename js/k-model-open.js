@@ -9,6 +9,19 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("RegisterOtpModel")
   );
 
+  // Toast configuration function
+  function showToast(message, type) {
+    Toastify({
+      text: message,
+      duration: 3000,
+      gravity: "top",
+      position: "right",
+      backgroundColor: type === "success" ? "#4CAF50" : "#F44336",
+      stopOnFocus: true,
+      close: true,
+    }).showToast();
+  }
+
   // Account button opens login modal
   const accountBtn = document.querySelector(".account-btn button");
   accountBtn.addEventListener("click", function () {
@@ -40,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const phone = phoneInput.value.trim();
 
     if (!phone) {
-      alert("Please enter a valid phone number");
+      showToast("Please enter a valid phone number", "error");
       return;
     }
 
@@ -52,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const users = await response.json();
 
       if (users.length === 0) {
-        alert("Phone number not registered. Please sign up.");
+        showToast("Phone number not registered. Please sign up.", "error");
         return;
       }
 
@@ -66,12 +79,14 @@ document.addEventListener("DOMContentLoaded", function () {
       // For development - log the actual OTP from the database
       console.log("User OTP:", users[0].otp);
 
+      showToast("OTP sent to your phone", "success");
+
       // Show OTP modal and hide login modal
       loginModal.hide();
       otpModal.show();
     } catch (error) {
       console.error("Error during login process:", error);
-      alert("Connection error. Please try again later.");
+      showToast("Connection error. Please try again later.", "error");
     }
   });
 
@@ -87,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const phone = phoneInput.value.trim();
 
     if (!name || !phone) {
-      alert("Please fill in required fields");
+      showToast("Please fill in required fields", "error");
       return;
     }
 
@@ -97,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const users = await response.json();
 
       if (users.length > 0) {
-        alert("Phone number already registered. Please sign in.");
+        showToast("Phone number already registered. Please sign in.", "error");
         return;
       }
 
@@ -137,6 +152,8 @@ document.addEventListener("DOMContentLoaded", function () {
       // Show OTP in console for testing
       console.log("Registration OTP:", otp);
 
+      showToast("OTP sent to your phone", "success");
+
       // Update phone in Register OTP modal
       document.querySelector(".register-phone").textContent = `+91 ${phone}`;
 
@@ -145,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
       registerOtpModal.show();
     } catch (error) {
       console.error("Error during registration:", error);
-      alert("Registration failed. Please try again later.");
+      showToast("Registration failed. Please try again later.", "error");
     }
   });
 
@@ -158,13 +175,13 @@ document.addEventListener("DOMContentLoaded", function () {
       .join("");
 
     if (!otp || otp.length !== 4) {
-      alert("Please enter a valid 4-digit OTP");
+      showToast("Please enter a valid 4-digit OTP", "error");
       return;
     }
 
     const phone = sessionStorage.getItem("currentLoginPhone");
     if (!phone) {
-      alert("Phone number not found. Please try again.");
+      showToast("Phone number not found. Please try again.", "error");
       return;
     }
 
@@ -187,13 +204,13 @@ document.addEventListener("DOMContentLoaded", function () {
         otpInputs.forEach((input) => (input.value = ""));
 
         // Show success message
-        alert("Login successful!");
+        showToast("Login successful!", "success");
       } else {
-        alert(result.message || "Login failed. Please try again.");
+        showToast(result.message || "Login failed. Please try again.", "error");
       }
     } catch (error) {
       console.error("Error during OTP verification:", error);
-      alert("Verification failed. Please try again.");
+      showToast("Verification failed. Please try again.", "error");
     }
   });
 
@@ -208,7 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .join("");
 
     if (!enteredOtp || enteredOtp.length !== 4) {
-      alert("Please enter a valid 4-digit OTP");
+      showToast("Please enter a valid 4-digit OTP", "error");
       return;
     }
 
@@ -216,7 +233,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const correctOtp = sessionStorage.getItem("registerOtp");
 
     if (!phone || !correctOtp) {
-      alert("Registration information not found. Please try again.");
+      showToast(
+        "Registration information not found. Please try again.",
+        "error"
+      );
       return;
     }
 
@@ -249,15 +269,15 @@ document.addEventListener("DOMContentLoaded", function () {
             sessionStorage.removeItem("registerPhone");
             sessionStorage.removeItem("registerOtp");
 
-            alert("Registration successful!");
+            showToast("Registration successful!", "success");
           }
         })
         .catch((error) => {
           console.error("Error during auto-login:", error);
-          alert("Registration successful! Please login.");
+          showToast("Registration successful! Please login.", "success");
         });
     } else {
-      alert("Invalid OTP. Please try again.");
+      showToast("Invalid OTP. Please try again.", "error");
       // Clear inputs for retry
       otpInputs.forEach((input) => (input.value = ""));
     }

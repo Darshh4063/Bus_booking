@@ -102,7 +102,10 @@ function getCurrentUserName() {
 
 function getCurrentUserProfileImage() {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-  return currentUser?.profileImage || "default-profile.png"; // Return default if no image exists
+  return (
+    currentUser?.profileImage ||
+    "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+  ); // Return default if no image exists
 }
 
 // Function to save review to localStorage
@@ -200,7 +203,7 @@ async function updateBusOnServer(bus) {
 
     console.log("Bus updated on server successfully");
   } catch (error) {
-    console.error("Error updating bus on server:", error);
+    showToast("Server update failed, but your review was saved locally", false);
     // Continue with local storage updates even if server update fails
   }
 }
@@ -209,7 +212,7 @@ async function updateBusOnServer(bus) {
 function submitReview() {
   const bookingDataJson = localStorage.getItem("currentReviewBooking");
   if (!bookingDataJson) {
-    alert("Error: No booking data found");
+    showToast("Error: No booking data found", false);
     return;
   }
 
@@ -218,7 +221,7 @@ function submitReview() {
   const userName = getCurrentUserName();
 
   if (!userId) {
-    alert("You need to be logged in to submit a review");
+    showToast("You need to be logged in to submit a review", false);
     return;
   }
 
@@ -234,7 +237,7 @@ function submitReview() {
     if (bus) {
       bookingData.busId = bus.id;
     } else {
-      alert("Error: Could not identify which bus to review");
+      showToast("Error: Could not identify which bus to review", false);
       return;
     }
   }
@@ -285,7 +288,7 @@ function submitReview() {
     rating: Math.round(parseFloat(overallRating)),
     comment: document.querySelector("textarea").value || "No comment provided",
     userId: userId,
-    profileImage: getCurrentUserProfileImage()
+    profileImage: getCurrentUserProfileImage(),
   };
 
   // Create the complete review data in the desired format
@@ -306,7 +309,7 @@ function submitReview() {
   saveReviewToLocalStorage(reviewData);
   updateBusWithReview(reviewData);
 
-  alert("Thank you for your review!");
+  showToast("Thank you for your review!", true);
   // Clear the current review data
   localStorage.removeItem("currentReviewBooking");
   // Redirect to bookings page
@@ -337,21 +340,29 @@ function loadBookingData() {
   }
 
   // Update source and destination in Trip Summary
-  document.querySelector(".source").textContent = bookingData.pickupLocation || "Source";
-  document.querySelector(".source-details").textContent = bookingData.pickupPoints || ""; 
-  
-  document.querySelector(".destination").textContent = bookingData.dropLocation || "Destination";
-  document.querySelector(".destination-details").textContent = bookingData.dropoffPoints || ""; 
-  
+  document.querySelector(".source").textContent =
+    bookingData.pickupLocation || "Source";
+  document.querySelector(".source-details").textContent =
+    bookingData.pickupPoints || "";
+
+  document.querySelector(".destination").textContent =
+    bookingData.dropLocation || "Destination";
+  document.querySelector(".destination-details").textContent =
+    bookingData.dropoffPoints || "";
+
   // Update booking details
-  document.querySelector(".booking-id").textContent = bookingData.bookingId || "BKZUYRGD11";
-  
+  document.querySelector(".booking-id").textContent =
+    bookingData.bookingId || "BKZUYRGD11";
+
   // Update date and time
-  document.querySelector(".travel-date").textContent = bookingData.busdateDepature || "Date";
-  document.querySelector(".travel-time").textContent = bookingData.pickupTime || "Time";
-  
+  document.querySelector(".travel-date").textContent =
+    bookingData.busdateDepature || "Date";
+  document.querySelector(".travel-time").textContent =
+    bookingData.pickupTime || "Time";
+
   // Update bus operator
-  document.querySelector(".bus-operator").textContent = bookingData.busName || "Not available";
+  document.querySelector(".bus-operator").textContent =
+    bookingData.busName || "Not available";
 }
 
 // Initialize when DOM is loaded
@@ -374,3 +385,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+function showToast(message, isSuccess = true) {
+  Toastify({
+    text: message,
+    duration: 3000,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    backgroundColor: isSuccess ? "#4CAF50" : "#F44336", // Green for success, Red for error
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+  }).showToast();
+}
