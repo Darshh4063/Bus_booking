@@ -780,6 +780,25 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   padding: 3rem 0;
 }
 
+@media (max-width: 1024px) {
+  .code {
+    padding: 1rem 0;
+  }
+
+  #Offers .owl-nav .prev-slide {
+    left: -18px !important;
+  }
+
+  #Offers .owl-nav .next-slide {
+    right: -29px !important;
+  }
+
+  .dummy-data {
+    padding-left: 12px;
+  }
+
+}
+
 .code p {
   margin: 0;
   font-size: 14px;
@@ -1197,7 +1216,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-top: 20px;
 }
 
-.owl-dot {
+#Offers .owl-dot {
   width: 12px;
   height: 12px;
   background-color: #ccc;
@@ -1207,9 +1226,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
-.owl-dot.active {
-  background-color: #000 !important; /* Change color for active dot */
+#testimonial .owl-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
 }
+
 
 @media (max-width: 1024px) {
   .testimonial-data {
@@ -1417,13 +1443,23 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 
-.owl-carousel .owl-nav button.owl-next,
-.owl-carousel .owl-nav button.owl-prev,
-.owl-carousel button.owl-dot {
+#Offers .owl-carousel #Offers .owl-nav button.owl-next,
+#Offers .owl-carousel .owl-nav button.owl-prev,
+#Offers .owl-carousel button.owl-dot {
   background-color: gray !important;
 }
 
-.owl-dots .owl-dot.active {
+#testimonial .owl-carousel #testimonial .owl-nav button.owl-next,
+#testimonial .owl-carousel .owl-nav button.owl-prev,
+#testimonial .owl-carousel button.owl-dot {
+  background-color: gray !important;
+}
+
+#Offers .owl-dots .owl-dot.active {
+  background-color: #b25d3c !important;
+}
+
+#testimonial .owl-dots .owl-dot.active {
   background-color: #b25d3c !important;
 }
 

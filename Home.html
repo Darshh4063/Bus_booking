@@ -483,24 +483,22 @@
 
                 <div class="k-search-box">
                   <form class="col-8 search" id="searchForm" autocomplete="off">
-                      <div class="box">
-                          <img src="/image/city-location-1.svg" alt="">
-                          <input type="text" id="fromInput" placeholder="From">
-                          <img src="image/Frame.png" alt="">
-                      </div>
+                    <div class="box">
+                      <img src="/image/city-location-1.svg" alt="">
+                      <input type="text" id="val1" placeholder="From">
+                      <img src="image/Frame.png" alt="">
+                  </div>
               
-                      <!-- Swap Button -->
-                      <div>
-                          <button type="button" id="swipe" style="background: none; border: none; cursor: pointer;">
-                              <img src="./image/Group (1).png" alt="Swap Icon">
-                          </button>
-                      </div>
+                  <!-- Swap Button -->
+                  <div id="swipe" style="display: inline-block; cursor: pointer;" onclick="swap()">
+                      <img src="./image/Group (1).png" alt="Swap Icon">
+                  </div>
               
-                      <div class="box">
-                          <img src="./image/city-location-1.svg" alt="">
-                          <input type="text" id="toInput" placeholder="To">
-                          <img src="./image/Frame.png" alt="">
-                      </div>
+                  <div class="box">
+                      <img src="./image/city-location-1.svg" alt="">
+                      <input type="text" id="val2" placeholder="To">
+                      <img src="./image/Frame.png" alt="">
+                  </div>
               
                       <div class="box">
                           <img src="./image/Group (3).png" alt="Calendar Icon" id="datePickerIconHome">
@@ -595,7 +593,7 @@
                         <p style="color: gray;">From Junagadh, Delhi & more</p>
                         <div class="code">
                             <p>Valid till 10 Feb</p>
-                            <p style="font-size: 20px;">Code: FIRST20</p>
+                            <p style="font-size: 14px;">Code: FIRST20</p>
                         </div>
                         <div class="bus-back">
                             <img src="./image/Blue.png" alt="">
@@ -612,7 +610,7 @@
                         <p style="color: gray;">From Mumbai, Delhi & more</p>
                         <div class="code">
                             <p>Valid till 10 Feb</p>
-                            <p style="font-size: 20px;">Code: FIRST20</p>
+                            <p style="font-size: 14px;">Code: FIRST20</p>
                         </div>
                         <div class="bus-back">
                             <img src="./image/yellow.png" alt="">
@@ -629,7 +627,7 @@
                         <p style="color: gray;">From Junagadh, Delhi & more</p>
                         <div class="code">
                             <p>Valid till 10 Feb</p>
-                            <p style="font-size: 20px;">Code: FIRST20</p>
+                            <p style="font-size: 14px;">Code: FIRST20</p>
                         </div>
                         <div class="bus-back">
                             <img src="./image/Purple.png" alt="">
@@ -841,7 +839,7 @@
 
                     <div class="col-12 card">
                         <div class="traveller">
-                            <p>Fantastic experience! Booking was super easy, and the bus was clean and comfortable. The journey was smooth, and the staff was friendly. Highly recommend this service for hassle-free travel!</p>
+                            <p>Fantastic experience! Booking was super easy, and the bus was clean and comfortable. The journey was smooth, and the staff was friendly.  this service for hassle-free travel!</p>
 
                             <div class="f-star">
                                 <i class="fa-solid fa-star"></i>
@@ -1026,16 +1024,20 @@
     </script>
 
 <script>
- document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("swipe").addEventListener("click", function () {
-            let city1 = document.getElementById("fromInput");
-            let city2 = document.getElementById("toInput");
 
-            let temp = city1.value;
-            city1.value = city2.value;
-            city2.value = temp;
-        });
-    });
+function swap() { 
+    const fromInput1 = document.getElementById("val1");
+    const toInput1 = document.getElementById("val2");
+
+    if (fromInput1 && toInput1) {
+        const temp = fromInput1.value;
+        fromInput1.value = toInput1.value;
+        toInput1.value = temp;
+        console.log("Values swapped!");
+    } else {
+        console.error("Input fields not found");
+    }
+}
   </script>
 
 
