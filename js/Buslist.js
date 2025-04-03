@@ -1204,7 +1204,8 @@ function renderBusList(buses) {
               </div>
 
               <div class="seat-selection">
-                <div class="seat-section">
+            
+                    <div class="seat-section">
                   <div class="section-title">
                     Lower Seat
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -1276,6 +1277,7 @@ function renderBusList(buses) {
                     <div class="seat"></div>
                   </div>
                 </div>
+                
 
                 <div class="sidebar">
                   <div class="tabs">

@@ -383,6 +383,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     flex-wrap: nowrap !important;
     white-space: nowrap;
   }
+  .seat-selection {
+    display: initial !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -418,16 +421,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-bottom: 0;
   }
 
-  .seat-selection {
-    display: initial !important;
-  }
+
 }
-@media (min-width: 425px) and (max-width: 768px) {
+/* @media (min-width: 425px) and (max-width: 768px) {
   .seat-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr) !important;
+    grid-template-columns: repeat(3, 0fr) !important;
   }
-}
+} */
 @media (max-width: 375px) {
   .legend {
     gap: 15px !important;
