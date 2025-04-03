@@ -557,7 +557,7 @@ aria-hidden="true"
             </div>
 
         </div>
-        <div class="d-flex justify-content-between align-items-center px-3 mx-3 d-lg-none" style="border: 1px solid black;">
+        <div class="w-50 d-flex justify-content-between align-items-center px-3 mx-3 d-lg-none" style="border: 1px solid black;">
           <span>Filter</span>
           <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa-solid fa-filter"></i></button>
         </div>
@@ -625,7 +625,7 @@ aria-hidden="true"
                 WiFi
               </label>
               <label class="checkbox-label">
-                <input type="checkbox" checked />
+                <input type="checkbox" />
                 <span class="checkbox-custom"></span>
                 Water Bottle
               </label>
@@ -645,7 +645,7 @@ aria-hidden="true"
                 Blanket
               </label>
               <label class="checkbox-label">
-                <input type="checkbox" checked />
+                <input type="checkbox" />
                 <span class="checkbox-custom"></span>
                 Emergency Toilet
               </label>
@@ -701,7 +701,7 @@ aria-hidden="true"
                 12 PM - 6 PM
               </label>
               <label class="checkbox-label">
-                <input type="checkbox" checked />
+                <input type="checkbox" />
                 <span class="checkbox-custom"></span>
                 After 6 PM
               </label>
@@ -721,7 +721,7 @@ aria-hidden="true"
                 Before 6 AM
               </label>
               <label class="checkbox-label">
-                <input type="checkbox" checked />
+                <input type="checkbox" />
                 <span class="checkbox-custom"></span>
                 6 AM - 12 PM
               </label>
@@ -731,7 +731,7 @@ aria-hidden="true"
                 12 PM - 6 PM
               </label>
               <label class="checkbox-label">
-                <input type="checkbox" checked />
+                <input type="checkbox" />
                 <span class="checkbox-custom"></span>
                 After 6 PM
               </label>
@@ -825,7 +825,7 @@ aria-hidden="true"
                 Ankur Travels
               </label>
               <label class="checkbox-label">
-                <input type="checkbox" checked />
+                <input type="checkbox" />
                 <span class="checkbox-custom"></span>
                 Bapashitaram Travels
               </label>
@@ -951,7 +951,7 @@ aria-hidden="true"
         <div class="filters-container" style="width: 25%;">
           <div class="filters-header">
             <h2>Filters</h2>
-            <a href="#" class="remove-all">Remove All</a>
+            <a href="#" id="removeAll" class="remove-all">Remove All</a>
           </div>
 
           <section class="accordion filter-section">
@@ -2633,6 +2633,18 @@ function toggleSelection(button) {
 </script>
 
 
+<script>
+  document.getElementById("removeAll").addEventListener("click", function (event) {
+      event.preventDefault();
+      document.querySelectorAll("input[type='checkbox']").forEach(filter => {
+          filter.checked = false;
+      });
+      document.querySelectorAll("input[type='text'], input[type='date']").forEach(input => {
+          input.value = '';
+      });
+      renderBusList(data); 
+  });
+  </script>
 
 
 
