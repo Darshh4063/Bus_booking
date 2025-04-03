@@ -483,22 +483,24 @@
 
                 <div class="k-search-box">
                   <form class="col-8 search" id="searchForm" autocomplete="off">
-                    <div class="box">
-                      <img src="/image/city-location-1.svg" alt="">
-                      <input type="text" id="val1" placeholder="From">
-                      <img src="image/Frame.png" alt="">
-                  </div>
+                      <div class="box">
+                          <img src="/image/city-location-1.svg" alt="">
+                          <input type="text" id="fromInput" class="k-val1" placeholder="From">
+                          <img src="image/Frame.png" alt="">
+                      </div>
               
-                  <!-- Swap Button -->
-                  <div id="swipe" style="display: inline-block; cursor: pointer;" onclick="swap()">
-                      <img src="./image/Group (1).png" alt="Swap Icon">
-                  </div>
+                      <!-- Swap Button -->
+                      <div>
+                          <button type="button" id="swipe" style="background: none; border: none; cursor: pointer;">
+                              <img src="./image/Group (1).png" alt="Swap Icon">
+                          </button>
+                      </div>
               
-                  <div class="box">
-                      <img src="./image/city-location-1.svg" alt="">
-                      <input type="text" id="val2" placeholder="To">
-                      <img src="./image/Frame.png" alt="">
-                  </div>
+                      <div class="box">
+                          <img src="./image/city-location-1.svg" alt="">
+                          <input type="text" id="toInput" class="k-val2" placeholder="To">
+                          <img src="./image/Frame.png" alt="">
+                      </div>
               
                       <div class="box">
                           <img src="./image/Group (3).png" alt="Calendar Icon" id="datePickerIconHome">
@@ -507,7 +509,7 @@
               
                       <div class="box">
                           <img src="./image/Group (2).png" alt="">
-                          <input type="text" id="busNameInput" placeholder="Bus Name (Opt)">
+                          <input type="text" id="busNameInput"  placeholder="Bus Name (Opt)">
                       </div>
               
                       <div style="background-color: chocolate; padding: 7px 30px; border-radius: 7px; cursor: pointer;" 
@@ -1024,20 +1026,16 @@
     </script>
 
 <script>
+ document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("swipe").addEventListener("click", function () {
+            let city1 = document.getElementsByClassName("val1");
+            let city2 = document.getElementsByClassName("val2");
 
-function swap() { 
-    const fromInput1 = document.getElementById("val1");
-    const toInput1 = document.getElementById("val2");
-
-    if (fromInput1 && toInput1) {
-        const temp = fromInput1.value;
-        fromInput1.value = toInput1.value;
-        toInput1.value = temp;
-        console.log("Values swapped!");
-    } else {
-        console.error("Input fields not found");
-    }
-}
+            let temp = city1.value;
+            city1.value = city2.value;
+            city2.value = temp;
+        });
+    });
   </script>
 
 
