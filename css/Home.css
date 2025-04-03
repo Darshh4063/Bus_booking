@@ -973,7 +973,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   text-align: center;
 }
 
-
 @media (max-width: 425px) {
   .amazing h2 {
     font-size: 2rem;
@@ -983,7 +982,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-weight: 400;
     text-align: center;
     letter-spacing: 1px;
-}
+  }
 }
 
 .amazing p {
@@ -1045,6 +1044,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 @media (max-width: 425px) {
   #Destinations {
     padding: 3rem 0 !important;
+  }
+  #testimonial {
+    height: 300px !important;
   }
 }
 

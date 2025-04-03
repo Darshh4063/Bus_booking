@@ -1905,7 +1905,7 @@
     {
       "companyName": "Bapasitaram Travels",
       "busType": "Non",
-      "seatType":"Seater",
+      "seatType": "Seater",
       "rating": "2.0",
       "journey": {
         "departure": {
@@ -2185,7 +2185,7 @@
     {
       "companyName": "Maruti Nandan Travels",
       "busType": "Non",
-      "seatType":"Sleeper",
+      "seatType": "Sleeper",
       "rating": "4.0",
       "journey": {
         "departure": {
@@ -2471,7 +2471,7 @@
     {
       "companyName": "Delux Travels",
       "busType": "AC",
-      "seatType":"Sleeper",
+      "seatType": "Sleeper",
       "rating": "3.0",
       "journey": {
         "departure": {
@@ -2758,7 +2758,7 @@
     {
       "companyName": "Shivay Travels",
       "busType": "AC",
-      "seatType":"Seater",
+      "seatType": "Seater",
       "rating": "2.5",
       "journey": {
         "departure": {
@@ -3041,7 +3041,7 @@
     {
       "companyName": "Bharat Travels",
       "busType": "AC",
-      "seatType":"Seater",
+      "seatType": "Seater",
       "rating": "4.5",
       "journey": {
         "departure": {
@@ -3311,7 +3311,7 @@
     {
       "companyName": "New Dharti travels",
       "busType": "AC",
-      "seatType":"Seater",
+      "seatType": "Seater",
       "rating": "4.5",
       "journey": {
         "departure": {
@@ -3580,7 +3580,7 @@
     {
       "companyName": "Bapasitaram Travels",
       "busType": "AC",
-      "seatType":"Seater",
+      "seatType": "Seater",
       "rating": "4.5",
       "journey": {
         "departure": {
@@ -3849,7 +3849,7 @@
     {
       "companyName": "Madhuram Travels",
       "busType": "AC",
-      "seatType":"Sleeper",
+      "seatType": "Sleeper",
       "rating": "4.5",
       "journey": {
         "departure": {
@@ -4312,7 +4312,7 @@
       "city": "Rajkot",
       "state": "Gujarat",
       "pincode": "874510",
-      "lastLogin": "2025-04-01T04:28:33.008Z",
+      "lastLogin": "2025-04-03T03:50:20.418Z",
       "gender": "female",
       "lastUpdated": "2025-02-28T09:29:08.966Z",
       "Bookings": [

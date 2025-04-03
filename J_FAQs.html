@@ -981,12 +981,11 @@
     function backdropClose() {
       let backdrops = document.querySelectorAll(".modal-backdrop .show");
       backdrops.forEach((backdrop) => {
-        backdrop.remove(); // Completely remove the backdrop from the DOM
+        backdrop.remove();
       });
 
-      // Re-enable scrolling (Bootstrap modals typically disable scrolling when opened)
       document.body.classList.remove("modal-open");
-      document.body.style.overflow = ""; // Reset overflow style
+      document.body.style.overflow = "";
     }
   </script>
 </html>
