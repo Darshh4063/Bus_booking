@@ -443,9 +443,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 
+@media (min-width: 425px) and (max-width: 500px) {
+  .content-section {
+    padding: 0px !important;
+  }
+  .margin_left {
+    margin-left: 15px !important;
+  }
+}
+
 .filters-container {
   background: white;
-  /* width: 350px; */
+  width: 320px;
   padding: 20px;
   /* margin-right: 20px; */
   border-radius: 8px;
