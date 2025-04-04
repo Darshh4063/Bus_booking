@@ -4312,7 +4312,7 @@
       "city": "Rajkot",
       "state": "Gujarat",
       "pincode": "874510",
-      "lastLogin": "2025-04-03T03:50:20.418Z",
+      "lastLogin": "2025-04-04T06:34:05.646Z",
       "gender": "female",
       "lastUpdated": "2025-02-28T09:29:08.966Z",
       "Bookings": [
@@ -4860,6 +4860,171 @@
           },
           "status": "completed",
           "bookingId": "BK953U03TE"
+        },
+        {
+          "busId": "dfa43",
+          "busName": "Amar Travels",
+          "busType": "AC",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Vadodara",
+          "pickupTime": "6:00 AM",
+          "dropLocation": "surat",
+          "dropTime": "12:00 PM",
+          "duration": "05h 30m",
+          "busPrice": {
+            "amount": "30,000",
+            "currency": "₹",
+            "discount": "Best deal 35% Off"
+          },
+          "onwardFare": 30000,
+          "discount": 6120,
+          "gst": 5400,
+          "totalPrice": 35400,
+          "pickupPoints": "Akshar Vadi",
+          "dropoffPoints": "surat, Ankleshwar By Pass",
+          "pickupTimeData": "6:00 AM",
+          "dropTimeData": "12:00 PM",
+          "totalPayableAmount": 29400,
+          "passengers": [
+            {
+              "name": "qswvs",
+              "age": "12",
+              "gender": "Male",
+              "AadhaarCard": "122121212121",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "aa@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "7896541230"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "30,000",
+              "currency": "₹",
+              "discount": "Best deal 35% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "upcoming",
+          "bookingId": "BK2ZQ8X4T1"
+        },
+        {
+          "busId": "dfa43",
+          "busName": "Amar Travels",
+          "busType": "AC",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Vadodara",
+          "pickupTime": "6:00 AM",
+          "dropLocation": "surat",
+          "dropTime": "12:00 PM",
+          "duration": "05h 30m",
+          "busPrice": {
+            "amount": "30,000",
+            "currency": "₹",
+            "discount": "Best deal 35% Off"
+          },
+          "onwardFare": 30000,
+          "discount": 6120,
+          "gst": 5400,
+          "totalPrice": 35400,
+          "pickupPoints": "Akshar Vadi",
+          "dropoffPoints": "surat, Ankleshwar By Pass",
+          "pickupTimeData": "6:00 AM",
+          "dropTimeData": "12:00 PM",
+          "totalPayableAmount": 29400,
+          "passengers": [
+            {
+              "name": "bdfghfr",
+              "age": "12",
+              "gender": "Male",
+              "AadhaarCard": "123456789012",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "vv@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "752196320"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "30,000",
+              "currency": "₹",
+              "discount": "Best deal 35% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "completed",
+          "bookingId": "BKKV6U89Q0"
+        },
+        {
+          "busId": "dfa42",
+          "busName": "B.R. Travels",
+          "busType": "Non",
+          "busDateArrival": "10 Feb 2025",
+          "busdateDepature": "10 Feb 2025",
+          "pickupLocation": "Ahmedabad",
+          "pickupTime": "12:00 PM",
+          "dropLocation": "Ankleshwar",
+          "dropTime": "6:00 PM",
+          "duration": "05h 30m",
+          "busPrice": {
+            "amount": "32,000",
+            "currency": "₹",
+            "discount": "Best deal 15% Off"
+          },
+          "onwardFare": 32000,
+          "discount": 6520,
+          "gst": 5760,
+          "totalPrice": 37760,
+          "pickupPoints": "Akshar Vadi",
+          "dropoffPoints": "surat, Ankleshwar By Pass",
+          "pickupTimeData": "12:00 PM",
+          "dropTimeData": "6:00 PM",
+          "totalPayableAmount": 31360,
+          "passengers": [
+            {
+              "name": "vdvdsv",
+              "age": "21",
+              "gender": "Male",
+              "AadhaarCard": "132455555555",
+              "panCard": ""
+            }
+          ],
+          "contactDetails": {
+            "email": "ghbc@gmail.com",
+            "phone": {
+              "countryCode": "+91",
+              "number": "7412589630"
+            }
+          },
+          "fareBreakup": {
+            "onwardFare": {
+              "amount": "32,000",
+              "currency": "₹",
+              "discount": "Best deal 15% Off"
+            },
+            "gst": null,
+            "bookingCharges": 120,
+            "discount": 120,
+            "totalPayableAmount": null
+          },
+          "status": "upcoming",
+          "bookingId": "BKU0N1HRNK"
         }
       ],
       "payments": [
@@ -4934,6 +5099,30 @@
           "paidAmount": 36260,
           "remainingAmount": 0,
           "timestamp": "2025-03-31T10:16:50.341Z"
+        },
+        {
+          "id": "TXN8NNTPKI6",
+          "paymentBy": "NetBanking",
+          "bank": "Wells Fargo Bank",
+          "paidAmount": 29400,
+          "remainingAmount": 0,
+          "timestamp": "2025-04-04T05:56:10.493Z"
+        },
+        {
+          "id": "TXNGHT7C58P",
+          "paymentBy": "NetBanking",
+          "bank": "Wells Fargo Bank",
+          "paidAmount": 29400,
+          "remainingAmount": 0,
+          "timestamp": "2025-04-04T06:23:35.675Z"
+        },
+        {
+          "id": "TXNY0VYP3DU",
+          "paymentBy": "NetBanking",
+          "bank": "Capital One Bank",
+          "paidAmount": 31360,
+          "remainingAmount": 0,
+          "timestamp": "2025-04-04T06:34:36.260Z"
         }
       ],
       "cancellations": [
@@ -6194,6 +6383,30 @@
       "paidAmount": 36260,
       "remainingAmount": 0,
       "timestamp": "2025-03-31T10:16:50.341Z"
+    },
+    {
+      "id": "TXN8NNTPKI6",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-04-04T05:56:10.493Z"
+    },
+    {
+      "id": "TXNGHT7C58P",
+      "paymentBy": "NetBanking",
+      "bank": "Wells Fargo Bank",
+      "paidAmount": 29400,
+      "remainingAmount": 0,
+      "timestamp": "2025-04-04T06:23:35.675Z"
+    },
+    {
+      "id": "TXNY0VYP3DU",
+      "paymentBy": "NetBanking",
+      "bank": "Capital One Bank",
+      "paidAmount": 31360,
+      "remainingAmount": 0,
+      "timestamp": "2025-04-04T06:34:36.260Z"
     }
   ]
 }

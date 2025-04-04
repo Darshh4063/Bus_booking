@@ -423,7 +423,7 @@
 
 @media (min-width: 5px) and (max-width: 425px) {
   .pay {
-    width: 150px;
+    width: 100%;
   }
 
   #A-Checkout-Payment {

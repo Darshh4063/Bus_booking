@@ -951,16 +951,15 @@ function renderBusList(buses) {
                 </tbody>
               </table>
             </div>
-            <div class="info-container">
-              <h2 class="info-heading m-0 ps-4">Info</h2>
+            <div class="info-container ps-3">
+              <h2 class="info-heading m-0 ps-0">Info</h2>
               <ul class="info-list">
-                ${bus.policies.info
-                  .map(
-                    (info) => `
-                  <li>${info}</li>
-                `
-                  )
-                  .join("")}
+                  <li>Booking & Confirmation</li>
+                  <li>Cancellation & Refund</li>
+                  <li>Payment & Pricing</li>
+                  <li>Safety & Conduct</li>
+                  <li>Contact & Support</li>
+                  <li>Travel Policies & Passenger Responsibilities</li>
               </ul>
             </div>
           </div>
