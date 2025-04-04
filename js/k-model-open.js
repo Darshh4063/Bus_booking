@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
     .getElementById("showRegisterModal")
     .addEventListener("click", function (e) {
       e.preventDefault();
+      var text =document.getElementById("loginModal");
+      text.classList.remove("show");
       loginModal.hide();
       registerModal.show();
     });
